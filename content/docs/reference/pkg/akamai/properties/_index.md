@@ -34,6 +34,6 @@ Explore the resources and functions of the akamai.properties module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.1.1</dd>
+	<dd>1.2.0</dd>
 </dl>
 
