@@ -784,3 +784,4 @@ The following state arguments are supported:
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).{{% /md %}}</dd>
 </dl>
+
