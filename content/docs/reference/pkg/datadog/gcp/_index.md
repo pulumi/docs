@@ -23,6 +23,6 @@ Explore the resources and functions of the datadog.gcp module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.16.1</dd>
+	<dd>2.17.0</dd>
 </dl>
 
