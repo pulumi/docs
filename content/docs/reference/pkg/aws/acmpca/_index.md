@@ -11,11 +11,14 @@ Explore the resources and functions of the aws.acmpca module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="certificateauthority" title="CertificateAuthority"><span class="symbol resource"></span>CertificateAuthority</a></li>
+    <li><a href="certificateauthoritycertificate" title="CertificateAuthorityCertificate"><span class="symbol resource"></span>CertificateAuthorityCertificate</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getcertificateauthority" title="GetCertificateAuthority"><span class="symbol function"></span>GetCertificateAuthority</a></li>
 </ul>
 
@@ -28,6 +31,6 @@ Explore the resources and functions of the aws.acmpca module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.32.2</dd>
+	<dd>3.33.0</dd>
 </dl>
 

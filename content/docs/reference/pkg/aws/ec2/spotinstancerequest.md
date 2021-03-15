@@ -378,8 +378,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableapitermination_csharp">
 <a href="#disableapitermination_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
@@ -784,8 +783,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
     </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableapitermination_go">
 <a href="#disableapitermination_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
@@ -1190,8 +1188,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
     </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableapitermination_nodejs">
 <a href="#disableapitermination_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Api<wbr>Termination</a>
@@ -1596,8 +1593,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_api_termination_python">
 <a href="#disable_api_termination_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>api_<wbr>termination</a>
@@ -2587,8 +2583,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableapitermination_csharp">
 <a href="#state_disableapitermination_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
@@ -3095,8 +3090,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
     </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableapitermination_go">
 <a href="#state_disableapitermination_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
@@ -3603,8 +3597,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
     </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableapitermination_nodejs">
 <a href="#state_disableapitermination_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Api<wbr>Termination</a>
@@ -4111,8 +4104,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_api_termination_python">
 <a href="#state_disable_api_termination_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>api_<wbr>termination</a>
