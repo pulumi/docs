@@ -1311,6 +1311,14 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfig_csharp">
+<a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gkecluster_csharp">
 <a href="#gkecluster_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
 </span>
@@ -1402,6 +1410,14 @@ will be used to run this environment.
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionconfig_go">
+<a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_go">
 <a href="#gkecluster_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
@@ -1495,6 +1511,14 @@ will be used to run this environment.
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfig_nodejs">
+<a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gkecluster_nodejs">
 <a href="#gkecluster_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
 </span>
@@ -1586,6 +1610,14 @@ will be used to run this environment.
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryption_config_python">
+<a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gke_cluster_python">
 <a href="#gke_cluster_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster</a>
@@ -1714,6 +1746,68 @@ manually changed to a non-standard values.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_csharp">
+<a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Customer-managed Encryption Key available through Google's Key Management Service. It must
+be the fully qualified resource name,
+i.e. projects/project-id/locations/location/keyRings/keyring/cryptoKeys/key. Cannot be updated.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_go">
+<a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Customer-managed Encryption Key available through Google's Key Management Service. It must
+be the fully qualified resource name,
+i.e. projects/project-id/locations/location/keyRings/keyring/cryptoKeys/key. Cannot be updated.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_nodejs">
+<a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Customer-managed Encryption Key available through Google's Key Management Service. It must
+be the fully qualified resource name,
+i.e. projects/project-id/locations/location/keyRings/keyring/cryptoKeys/key. Cannot be updated.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kms_key_name_python">
+<a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Customer-managed Encryption Key available through Google's Key Management Service. It must
+be the fully qualified resource name,
+i.e. projects/project-id/locations/location/keyRings/keyring/cryptoKeys/key. Cannot be updated.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

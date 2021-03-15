@@ -47,6 +47,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="endpoints/" title="endpoints"><span class="symbol module"></span>endpoints</a></li>
     <li><a href="essentialcontacts/" title="essentialcontacts"><span class="symbol module"></span>essentialcontacts</a></li>
+    <li><a href="eventarc/" title="eventarc"><span class="symbol module"></span>eventarc</a></li>
     <li><a href="filestore/" title="filestore"><span class="symbol module"></span>filestore</a></li>
     <li><a href="firebase/" title="firebase"><span class="symbol module"></span>firebase</a></li>
     <li><a href="firestore/" title="firestore"><span class="symbol module"></span>firestore</a></li>
@@ -100,6 +101,6 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.13.0</dd>
+	<dd>4.14.0</dd>
 </dl>
 

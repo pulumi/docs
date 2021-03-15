@@ -20,6 +20,7 @@ Explore the resources and functions of the gcp.dataproc module.
     <li><a href="jobiambinding" title="JobIAMBinding"><span class="symbol resource"></span>JobIAMBinding</a></li>
     <li><a href="jobiammember" title="JobIAMMember"><span class="symbol resource"></span>JobIAMMember</a></li>
     <li><a href="jobiampolicy" title="JobIAMPolicy"><span class="symbol resource"></span>JobIAMPolicy</a></li>
+    <li><a href="metastoreservice" title="MetastoreService"><span class="symbol resource"></span>MetastoreService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,6 +32,6 @@ Explore the resources and functions of the gcp.dataproc module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.13.0</dd>
+	<dd>4.14.0</dd>
 </dl>
 
