@@ -91,6 +91,6 @@ A Pulumi package for creating vsphere resources
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.12.2</dd>
+	<dd>2.13.0</dd>
 </dl>
 
