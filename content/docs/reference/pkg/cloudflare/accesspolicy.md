@@ -418,6 +418,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="precedence_csharp">
+<a href="#precedence_csharp" style="color: inherit; text-decoration: inherit;">Precedence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_csharp">
@@ -436,15 +445,6 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="precedence_csharp">
-<a href="#precedence_csharp" style="color: inherit; text-decoration: inherit;">Precedence</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_csharp">
@@ -504,6 +504,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="precedence_go">
+<a href="#precedence_go" style="color: inherit; text-decoration: inherit;">Precedence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_go">
@@ -522,15 +531,6 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">[]Access<wbr>Policy<wbr>Exclude</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="precedence_go">
-<a href="#precedence_go" style="color: inherit; text-decoration: inherit;">Precedence</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_go">
@@ -590,6 +590,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="precedence_nodejs">
+<a href="#precedence_nodejs" style="color: inherit; text-decoration: inherit;">precedence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_nodejs">
@@ -608,15 +617,6 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">Access<wbr>Policy<wbr>Exclude[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="precedence_nodejs">
-<a href="#precedence_nodejs" style="color: inherit; text-decoration: inherit;">precedence</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_nodejs">
@@ -676,6 +676,15 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="precedence_python">
+<a href="#precedence_python" style="color: inherit; text-decoration: inherit;">precedence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_id_python">
@@ -694,15 +703,6 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="precedence_python">
-<a href="#precedence_python" style="color: inherit; text-decoration: inherit;">precedence</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_python">
@@ -4293,13 +4293,17 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 ## Import
 
 
-Access Policies can be imported using a composite ID formed of zone ID, application ID and policy ID.
+Access Policies can be imported using a composite ID formed of identifier type (`zone` or `account`), identifier ID (`zone_id` or `account_id`), application ID and policy ID. # import a zone level Access policy
 
 ```sh
- $ pulumi import cloudflare:index/accessPolicy:AccessPolicy staging cb029e245cfdd66dc8d2e570d5dd3322/d41d8cd98f00b204e9800998ecf8427e/67ea780ce4982c1cfbe6b7293afc765d
+ $ pulumi import cloudflare:index/accessPolicy:AccessPolicy staging zone/cb029e245cfdd66dc8d2e570d5dd3322/d41d8cd98f00b204e9800998ecf8427e/67ea780ce4982c1cfbe6b7293afc765d
 ```
 
- where * `cb029e245cfdd66dc8d2e570d5dd3322` - Zone ID * `d41d8cd98f00b204e9800998ecf8427e` - Access Application ID * `67ea780ce4982c1cfbe6b7293afc765d` - Access Policy ID
+# import an account level Access policy
+
+```sh
+ $ pulumi import cloudflare:index/accessPolicy:AccessPolicy production account/0d599f0ec05c3bda8c3b8a68c32a1b47/d41d8cd98f00b204e9800998ecf8427e/67ea780ce4982c1cfbe6b7293afc765d
+```
 
 
 

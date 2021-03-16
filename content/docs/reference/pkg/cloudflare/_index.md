@@ -17,6 +17,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="accessapplication" title="AccessApplication"><span class="symbol resource"></span>AccessApplication</a></li>
     <li><a href="accessgroup" title="AccessGroup"><span class="symbol resource"></span>AccessGroup</a></li>
     <li><a href="accessidentityprovider" title="AccessIdentityProvider"><span class="symbol resource"></span>AccessIdentityProvider</a></li>
+    <li><a href="accessmutualtlscertificate" title="AccessMutualTlsCertificate"><span class="symbol resource"></span>AccessMutualTlsCertificate</a></li>
     <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
     <li><a href="accessrule" title="AccessRule"><span class="symbol resource"></span>AccessRule</a></li>
     <li><a href="accessservicetoken" title="AccessServiceToken"><span class="symbol resource"></span>AccessServiceToken</a></li>
@@ -84,6 +85,6 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.13.1</dd>
+	<dd>2.14.0</dd>
 </dl>
 

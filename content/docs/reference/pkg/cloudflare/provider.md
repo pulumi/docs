@@ -175,7 +175,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configure API client to always use that account.
+    <dd>{{% md %}}Configure API client to always use that account
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiclientlogging_csharp">
@@ -211,7 +211,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
+    <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
@@ -220,7 +220,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A registered Cloudflare email address.
+    <dd>{{% md %}}A registered Cloudflare email address
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_csharp">
@@ -269,7 +269,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configure API client to always use that account.
+    <dd>{{% md %}}Configure API client to always use that account
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiclientlogging_go">
@@ -305,7 +305,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
+    <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_go">
@@ -314,7 +314,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A registered Cloudflare email address.
+    <dd>{{% md %}}A registered Cloudflare email address
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_go">
@@ -363,7 +363,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configure API client to always use that account.
+    <dd>{{% md %}}Configure API client to always use that account
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiclientlogging_nodejs">
@@ -399,7 +399,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
+    <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
@@ -408,7 +408,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A registered Cloudflare email address.
+    <dd>{{% md %}}A registered Cloudflare email address
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_nodejs">
@@ -457,7 +457,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configure API client to always use that account.
+    <dd>{{% md %}}Configure API client to always use that account
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_client_logging_python">
@@ -493,7 +493,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
+    <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_python">
@@ -502,7 +502,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A registered Cloudflare email address.
+    <dd>{{% md %}}A registered Cloudflare email address
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_backoff_python">
