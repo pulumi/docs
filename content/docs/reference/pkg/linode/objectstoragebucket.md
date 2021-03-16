@@ -12,7 +12,6 @@ meta_desc: "Documentation for the linode.ObjectStorageBucket resource with examp
 
 Provides a Linode Object Storage Bucket resource. This can be used to create, modify, and delete Linodes Object Storage Buckets.
 
-
 {{% examples %}}
 
 ## Example Usage
@@ -795,6 +794,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The private key associated with the TLS/SSL certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+Linodes Object Storage Buckets can be imported using the resource `id` which is made of `cluster:label`, e.g.
+
+```sh
+ $ pulumi import linode:index/objectStorageBucket:ObjectStorageBucket mybucket us-east-1:foobar
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

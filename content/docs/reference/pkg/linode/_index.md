@@ -32,6 +32,7 @@ A Pulumi package for creating and managing linode cloud resources.
     <li><a href="sshkey" title="SshKey"><span class="symbol resource"></span>SshKey</a></li>
     <li><a href="stackscript" title="StackScript"><span class="symbol resource"></span>StackScript</a></li>
     <li><a href="token" title="Token"><span class="symbol resource"></span>Token</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
     <li><a href="vlan" title="Vlan"><span class="symbol resource"></span>Vlan</a></li>
     <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
 </ul>
@@ -43,6 +44,7 @@ A Pulumi package for creating and managing linode cloud resources.
     <li><a href="getdomainrecord" title="GetDomainRecord"><span class="symbol function"></span>GetDomainRecord</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
     <li><a href="getinstancetype" title="GetInstanceType"><span class="symbol function"></span>GetInstanceType</a></li>
+    <li><a href="getlkecluster" title="GetLkeCluster"><span class="symbol function"></span>GetLkeCluster</a></li>
     <li><a href="getnetworkingip" title="GetNetworkingIp"><span class="symbol function"></span>GetNetworkingIp</a></li>
     <li><a href="getobjectstoragecluster" title="GetObjectStorageCluster"><span class="symbol function"></span>GetObjectStorageCluster</a></li>
     <li><a href="getprofile" title="GetProfile"><span class="symbol function"></span>GetProfile</a></li>
@@ -62,6 +64,6 @@ A Pulumi package for creating and managing linode cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.9.1</dd>
+	<dd>2.10.0</dd>
 </dl>
 
