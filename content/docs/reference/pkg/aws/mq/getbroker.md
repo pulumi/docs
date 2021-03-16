@@ -355,6 +355,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="authenticationstrategy_csharp">
+<a href="#authenticationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="autominorversionupgrade_csharp">
 <a href="#autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
 </span>
@@ -444,6 +452,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ldapservermetadatas_csharp">
+<a href="#ldapservermetadatas_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Server<wbr>Metadatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbrokerldapservermetadata">List&lt;Get<wbr>Broker<wbr>Ldap<wbr>Server<wbr>Metadata&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="maintenancewindowstarttime_csharp">
 <a href="#maintenancewindowstarttime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
@@ -465,6 +481,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storagetype_csharp">
+<a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -506,6 +530,14 @@ The following output properties are available:
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="authenticationstrategy_go">
+<a href="#authenticationstrategy_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -601,6 +633,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ldapservermetadatas_go">
+<a href="#ldapservermetadatas_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Server<wbr>Metadatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbrokerldapservermetadata">[]Get<wbr>Broker<wbr>Ldap<wbr>Server<wbr>Metadata</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="maintenancewindowstarttime_go">
 <a href="#maintenancewindowstarttime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
@@ -622,6 +662,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storagetype_go">
+<a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -663,6 +711,14 @@ The following output properties are available:
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="authenticationstrategy_nodejs">
+<a href="#authenticationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -758,6 +814,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ldapservermetadatas_nodejs">
+<a href="#ldapservermetadatas_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Server<wbr>Metadatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbrokerldapservermetadata">Get<wbr>Broker<wbr>Ldap<wbr>Server<wbr>Metadata[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="maintenancewindowstarttime_nodejs">
 <a href="#maintenancewindowstarttime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
@@ -779,6 +843,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storagetype_nodejs">
+<a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -820,6 +892,14 @@ The following output properties are available:
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="authentication_strategy_python">
+<a href="#authentication_strategy_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -915,6 +995,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ldap_server_metadatas_python">
+<a href="#ldap_server_metadatas_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>server_<wbr>metadatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbrokerldapservermetadata">Sequence[Get<wbr>Broker<wbr>Ldap<wbr>Server<wbr>Metadata]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="maintenance_window_start_time_python">
 <a href="#maintenance_window_start_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>start_<wbr>time</a>
 </span>
@@ -936,6 +1024,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storage_type_python">
+<a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1258,6 +1354,378 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getbrokerldapservermetadata">Get<wbr>Broker<wbr>Ldap<wbr>Server<wbr>Metadata</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="hosts_csharp">
+<a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolebase_csharp">
+<a href="#rolebase_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolename_csharp">
+<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolesearchmatching_csharp">
+<a href="#rolesearchmatching_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Search<wbr>Matching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolesearchsubtree_csharp">
+<a href="#rolesearchsubtree_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Search<wbr>Subtree</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="serviceaccountpassword_csharp">
+<a href="#serviceaccountpassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="serviceaccountusername_csharp">
+<a href="#serviceaccountusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userbase_csharp">
+<a href="#userbase_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userrolename_csharp">
+<a href="#userrolename_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="usersearchmatching_csharp">
+<a href="#usersearchmatching_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Matching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="usersearchsubtree_csharp">
+<a href="#usersearchsubtree_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Subtree</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="hosts_go">
+<a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolebase_go">
+<a href="#rolebase_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolename_go">
+<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolesearchmatching_go">
+<a href="#rolesearchmatching_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Search<wbr>Matching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolesearchsubtree_go">
+<a href="#rolesearchsubtree_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Search<wbr>Subtree</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="serviceaccountpassword_go">
+<a href="#serviceaccountpassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="serviceaccountusername_go">
+<a href="#serviceaccountusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userbase_go">
+<a href="#userbase_go" style="color: inherit; text-decoration: inherit;">User<wbr>Base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userrolename_go">
+<a href="#userrolename_go" style="color: inherit; text-decoration: inherit;">User<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="usersearchmatching_go">
+<a href="#usersearchmatching_go" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Matching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="usersearchsubtree_go">
+<a href="#usersearchsubtree_go" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Subtree</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="hosts_nodejs">
+<a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolebase_nodejs">
+<a href="#rolebase_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolename_nodejs">
+<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolesearchmatching_nodejs">
+<a href="#rolesearchmatching_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Search<wbr>Matching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolesearchsubtree_nodejs">
+<a href="#rolesearchsubtree_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Search<wbr>Subtree</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="serviceaccountpassword_nodejs">
+<a href="#serviceaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="serviceaccountusername_nodejs">
+<a href="#serviceaccountusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userbase_nodejs">
+<a href="#userbase_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userrolename_nodejs">
+<a href="#userrolename_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="usersearchmatching_nodejs">
+<a href="#usersearchmatching_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Search<wbr>Matching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="usersearchsubtree_nodejs">
+<a href="#usersearchsubtree_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Search<wbr>Subtree</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="hosts_python">
+<a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="role_base_python">
+<a href="#role_base_python" style="color: inherit; text-decoration: inherit;">role_<wbr>base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="role_name_python">
+<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="role_search_matching_python">
+<a href="#role_search_matching_python" style="color: inherit; text-decoration: inherit;">role_<wbr>search_<wbr>matching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="role_search_subtree_python">
+<a href="#role_search_subtree_python" style="color: inherit; text-decoration: inherit;">role_<wbr>search_<wbr>subtree</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="service_account_password_python">
+<a href="#service_account_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="service_account_username_python">
+<a href="#service_account_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_base_python">
+<a href="#user_base_python" style="color: inherit; text-decoration: inherit;">user_<wbr>base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_role_name_python">
+<a href="#user_role_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>role_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_search_matching_python">
+<a href="#user_search_matching_python" style="color: inherit; text-decoration: inherit;">user_<wbr>search_<wbr>matching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_search_subtree_python">
+<a href="#user_search_subtree_python" style="color: inherit; text-decoration: inherit;">user_<wbr>search_<wbr>subtree</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

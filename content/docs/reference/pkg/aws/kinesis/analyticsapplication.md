@@ -24,7 +24,7 @@ For more details, see the [Amazon Kinesis Analytics Documentation](https://docs.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
+### Kinesis Stream Input
 
 
 {{< example csharp >}}
@@ -229,6 +229,336 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
 
 
 
+### Starting An Application
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
+        {
+        });
+        var exampleLogStream = new Aws.CloudWatch.LogStream("exampleLogStream", new Aws.CloudWatch.LogStreamArgs
+        {
+            LogGroupName = exampleLogGroup.Name,
+        });
+        var exampleStream = new Aws.Kinesis.Stream("exampleStream", new Aws.Kinesis.StreamArgs
+        {
+            ShardCount = 1,
+        });
+        var exampleFirehoseDeliveryStream = new Aws.Kinesis.FirehoseDeliveryStream("exampleFirehoseDeliveryStream", new Aws.Kinesis.FirehoseDeliveryStreamArgs
+        {
+            Destination = "extended_s3",
+            ExtendedS3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationArgs
+            {
+                BucketArn = aws_s3_bucket.Example.Arn,
+                RoleArn = aws_iam_role.Example.Arn,
+            },
+        });
+        var test = new Aws.Kinesis.AnalyticsApplication("test", new Aws.Kinesis.AnalyticsApplicationArgs
+        {
+            CloudwatchLoggingOptions = new Aws.Kinesis.Inputs.AnalyticsApplicationCloudwatchLoggingOptionsArgs
+            {
+                LogStreamArn = exampleLogStream.Arn,
+                RoleArn = aws_iam_role.Example.Arn,
+            },
+            Inputs = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsArgs
+            {
+                NamePrefix = "example_prefix",
+                Schema = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaArgs
+                {
+                    RecordColumns = 
+                    {
+                        new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordColumnArgs
+                        {
+                            Name = "COLUMN_1",
+                            SqlType = "INTEGER",
+                        },
+                    },
+                    RecordFormat = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatArgs
+                    {
+                        MappingParameters = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs
+                        {
+                            Csv = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvArgs
+                            {
+                                RecordColumnDelimiter = ",",
+                                RecordRowDelimiter = "|",
+                            },
+                        },
+                    },
+                },
+                KinesisStream = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsKinesisStreamArgs
+                {
+                    ResourceArn = exampleStream.Arn,
+                    RoleArn = aws_iam_role.Example.Arn,
+                },
+                StartingPositionConfigurations = 
+                {
+                    new Aws.Kinesis.Inputs.AnalyticsApplicationInputsStartingPositionConfigurationArgs
+                    {
+                        StartingPosition = "NOW",
+                    },
+                },
+            },
+            Outputs = 
+            {
+                new Aws.Kinesis.Inputs.AnalyticsApplicationOutputArgs
+                {
+                    Name = "OUTPUT_1",
+                    Schema = new Aws.Kinesis.Inputs.AnalyticsApplicationOutputSchemaArgs
+                    {
+                        RecordFormatType = "CSV",
+                    },
+                    KinesisFirehose = new Aws.Kinesis.Inputs.AnalyticsApplicationOutputKinesisFirehoseArgs
+                    {
+                        ResourceArn = exampleFirehoseDeliveryStream.Arn,
+                        RoleArn = aws_iam_role.Example.Arn,
+                    },
+                },
+            },
+            StartApplication = true,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", nil)
+		if err != nil {
+			return err
+		}
+		exampleLogStream, err := cloudwatch.NewLogStream(ctx, "exampleLogStream", &cloudwatch.LogStreamArgs{
+			LogGroupName: exampleLogGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleStream, err := kinesis.NewStream(ctx, "exampleStream", &kinesis.StreamArgs{
+			ShardCount: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		exampleFirehoseDeliveryStream, err := kinesis.NewFirehoseDeliveryStream(ctx, "exampleFirehoseDeliveryStream", &kinesis.FirehoseDeliveryStreamArgs{
+			Destination: pulumi.String("extended_s3"),
+			ExtendedS3Configuration: &kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationArgs{
+				BucketArn: pulumi.Any(aws_s3_bucket.Example.Arn),
+				RoleArn:   pulumi.Any(aws_iam_role.Example.Arn),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = kinesis.NewAnalyticsApplication(ctx, "test", &kinesis.AnalyticsApplicationArgs{
+			CloudwatchLoggingOptions: &kinesis.AnalyticsApplicationCloudwatchLoggingOptionsArgs{
+				LogStreamArn: exampleLogStream.Arn,
+				RoleArn:      pulumi.Any(aws_iam_role.Example.Arn),
+			},
+			Inputs: &kinesis.AnalyticsApplicationInputsArgs{
+				NamePrefix: pulumi.String("example_prefix"),
+				Schema: &kinesis.AnalyticsApplicationInputsSchemaArgs{
+					RecordColumns: kinesis.AnalyticsApplicationInputsSchemaRecordColumnArray{
+						&kinesis.AnalyticsApplicationInputsSchemaRecordColumnArgs{
+							Name:    pulumi.String("COLUMN_1"),
+							SqlType: pulumi.String("INTEGER"),
+						},
+					},
+					RecordFormat: &kinesis.AnalyticsApplicationInputsSchemaRecordFormatArgs{
+						MappingParameters: &kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs{
+							Csv: &kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvArgs{
+								RecordColumnDelimiter: pulumi.String(","),
+								RecordRowDelimiter:    pulumi.String("|"),
+							},
+						},
+					},
+				},
+				KinesisStream: &kinesis.AnalyticsApplicationInputsKinesisStreamArgs{
+					ResourceArn: exampleStream.Arn,
+					RoleArn:     pulumi.Any(aws_iam_role.Example.Arn),
+				},
+				StartingPositionConfigurations: kinesis.AnalyticsApplicationInputsStartingPositionConfigurationArray{
+					&kinesis.AnalyticsApplicationInputsStartingPositionConfigurationArgs{
+						StartingPosition: pulumi.String("NOW"),
+					},
+				},
+			},
+			Outputs: kinesis.AnalyticsApplicationOutputArray{
+				&kinesis.AnalyticsApplicationOutputArgs{
+					Name: pulumi.String("OUTPUT_1"),
+					Schema: &kinesis.AnalyticsApplicationOutputSchemaArgs{
+						RecordFormatType: pulumi.String("CSV"),
+					},
+					KinesisFirehose: &kinesis.AnalyticsApplicationOutputKinesisFirehoseArgs{
+						ResourceArn: exampleFirehoseDeliveryStream.Arn,
+						RoleArn:     pulumi.Any(aws_iam_role.Example.Arn),
+					},
+				},
+			},
+			StartApplication: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup")
+example_log_stream = aws.cloudwatch.LogStream("exampleLogStream", log_group_name=example_log_group.name)
+example_stream = aws.kinesis.Stream("exampleStream", shard_count=1)
+example_firehose_delivery_stream = aws.kinesis.FirehoseDeliveryStream("exampleFirehoseDeliveryStream",
+    destination="extended_s3",
+    extended_s3_configuration=aws.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationArgs(
+        bucket_arn=aws_s3_bucket["example"]["arn"],
+        role_arn=aws_iam_role["example"]["arn"],
+    ))
+test = aws.kinesis.AnalyticsApplication("test",
+    cloudwatch_logging_options=aws.kinesis.AnalyticsApplicationCloudwatchLoggingOptionsArgs(
+        log_stream_arn=example_log_stream.arn,
+        role_arn=aws_iam_role["example"]["arn"],
+    ),
+    inputs=aws.kinesis.AnalyticsApplicationInputsArgs(
+        name_prefix="example_prefix",
+        schema=aws.kinesis.AnalyticsApplicationInputsSchemaArgs(
+            record_columns=[aws.kinesis.AnalyticsApplicationInputsSchemaRecordColumnArgs(
+                name="COLUMN_1",
+                sql_type="INTEGER",
+            )],
+            record_format=aws.kinesis.AnalyticsApplicationInputsSchemaRecordFormatArgs(
+                mapping_parameters=aws.kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs(
+                    csv=aws.kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvArgs(
+                        record_column_delimiter=",",
+                        record_row_delimiter="|",
+                    ),
+                ),
+            ),
+        ),
+        kinesis_stream=aws.kinesis.AnalyticsApplicationInputsKinesisStreamArgs(
+            resource_arn=example_stream.arn,
+            role_arn=aws_iam_role["example"]["arn"],
+        ),
+        starting_position_configurations=[aws.kinesis.AnalyticsApplicationInputsStartingPositionConfigurationArgs(
+            starting_position="NOW",
+        )],
+    ),
+    outputs=[aws.kinesis.AnalyticsApplicationOutputArgs(
+        name="OUTPUT_1",
+        schema=aws.kinesis.AnalyticsApplicationOutputSchemaArgs(
+            record_format_type="CSV",
+        ),
+        kinesis_firehose=aws.kinesis.AnalyticsApplicationOutputKinesisFirehoseArgs(
+            resource_arn=example_firehose_delivery_stream.arn,
+            role_arn=aws_iam_role["example"]["arn"],
+        ),
+    )],
+    start_application=True)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleLogGroup = new aws.cloudwatch.LogGroup("exampleLogGroup", {});
+const exampleLogStream = new aws.cloudwatch.LogStream("exampleLogStream", {logGroupName: exampleLogGroup.name});
+const exampleStream = new aws.kinesis.Stream("exampleStream", {shardCount: 1});
+const exampleFirehoseDeliveryStream = new aws.kinesis.FirehoseDeliveryStream("exampleFirehoseDeliveryStream", {
+    destination: "extended_s3",
+    extendedS3Configuration: {
+        bucketArn: aws_s3_bucket.example.arn,
+        roleArn: aws_iam_role.example.arn,
+    },
+});
+const test = new aws.kinesis.AnalyticsApplication("test", {
+    cloudwatchLoggingOptions: {
+        logStreamArn: exampleLogStream.arn,
+        roleArn: aws_iam_role.example.arn,
+    },
+    inputs: {
+        namePrefix: "example_prefix",
+        schema: {
+            recordColumns: [{
+                name: "COLUMN_1",
+                sqlType: "INTEGER",
+            }],
+            recordFormat: {
+                mappingParameters: {
+                    csv: {
+                        recordColumnDelimiter: ",",
+                        recordRowDelimiter: "|",
+                    },
+                },
+            },
+        },
+        kinesisStream: {
+            resourceArn: exampleStream.arn,
+            roleArn: aws_iam_role.example.arn,
+        },
+        startingPositionConfigurations: [{
+            startingPosition: "NOW",
+        }],
+    },
+    outputs: [{
+        name: "OUTPUT_1",
+        schema: {
+            recordFormatType: "CSV",
+        },
+        kinesisFirehose: {
+            resourceArn: exampleFirehoseDeliveryStream.arn,
+            roleArn: aws_iam_role.example.arn,
+        },
+    }],
+    startApplication: true,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -244,7 +574,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AnalyticsApplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationInputsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AnalyticsApplicationOutputArgs]]</span> = None<span class="p">, </span><span class="nx">reference_data_sources</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationReferenceDataSourcesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AnalyticsApplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationInputsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AnalyticsApplicationOutputArgs]]</span> = None<span class="p">, </span><span class="nx">reference_data_sources</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationReferenceDataSourcesArgs]</span> = None<span class="p">, </span><span class="nx">start_application</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -451,6 +781,16 @@ See CloudWatch Logging Options below for more details.
 See Reference Data Sources below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="startapplication_csharp">
+<a href="#startapplication_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
+To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -527,6 +867,16 @@ See CloudWatch Logging Options below for more details.
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startapplication_go">
+<a href="#startapplication_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
+To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -607,6 +957,16 @@ See CloudWatch Logging Options below for more details.
 See Reference Data Sources below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="startapplication_nodejs">
+<a href="#startapplication_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
+To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -683,6 +1043,16 @@ See CloudWatch Logging Options below for more details.
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_application_python">
+<a href="#start_application_python" style="color: inherit; text-decoration: inherit;">start_<wbr>application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
+To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -943,7 +1313,7 @@ Get an existing AnalyticsApplication resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationInputsArgs]</span> = None<span class="p">, </span><span class="nx">last_update_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AnalyticsApplicationOutputArgs]]</span> = None<span class="p">, </span><span class="nx">reference_data_sources</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationReferenceDataSourcesArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> AnalyticsApplication</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationInputsArgs]</span> = None<span class="p">, </span><span class="nx">last_update_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AnalyticsApplicationOutputArgs]]</span> = None<span class="p">, </span><span class="nx">reference_data_sources</span><span class="p">:</span> <span class="nx">Optional[AnalyticsApplicationReferenceDataSourcesArgs]</span> = None<span class="p">, </span><span class="nx">start_application</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> AnalyticsApplication</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1148,6 +1518,16 @@ See CloudWatch Logging Options below for more details.
 See Reference Data Sources below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_startapplication_csharp">
+<a href="#state_startapplication_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
+To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -1269,6 +1649,16 @@ See CloudWatch Logging Options below for more details.
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_startapplication_go">
+<a href="#state_startapplication_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
+To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
@@ -1394,6 +1784,16 @@ See CloudWatch Logging Options below for more details.
 See Reference Data Sources below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_startapplication_nodejs">
+<a href="#state_startapplication_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
+To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -1515,6 +1915,16 @@ See CloudWatch Logging Options below for more details.
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_start_application_python">
+<a href="#state_start_application_python" style="color: inherit; text-decoration: inherit;">start_<wbr>application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
+To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
@@ -1758,7 +2168,9 @@ See Processing Configuration below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
+See Starting Position Configuration below for more details.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streamnames_csharp">
 <a href="#streamnames_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Names</a>
@@ -1845,7 +2257,9 @@ See Processing Configuration below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">[]Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
+See Starting Position Configuration below for more details.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streamnames_go">
 <a href="#streamnames_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Names</a>
@@ -1932,7 +2346,9 @@ See Processing Configuration below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
+See Starting Position Configuration below for more details.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streamnames_nodejs">
 <a href="#streamnames_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Names</a>
@@ -2019,7 +2435,9 @@ See Processing Configuration below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">Sequence[Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
+See Starting Position Configuration below for more details.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stream_names_python">
 <a href="#stream_names_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>names</a>
@@ -3015,7 +3433,8 @@ See JSON Mapping Parameters below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3027,7 +3446,8 @@ See JSON Mapping Parameters below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3039,7 +3459,8 @@ See JSON Mapping Parameters below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3051,7 +3472,8 @@ See JSON Mapping Parameters below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output</h4>
@@ -3569,8 +3991,8 @@ See Kinesis Stream below for more details.
 <h4 id="analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="recordformattype_csharp">
 <a href="#recordformattype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Format<wbr>Type</a>
 </span>
@@ -3582,8 +4004,8 @@ See Kinesis Stream below for more details.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="recordformattype_go">
 <a href="#recordformattype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Format<wbr>Type</a>
 </span>
@@ -3595,8 +4017,8 @@ See Kinesis Stream below for more details.
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="recordformattype_nodejs">
 <a href="#recordformattype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format<wbr>Type</a>
 </span>
@@ -3608,8 +4030,8 @@ See Kinesis Stream below for more details.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="record_format_type_python">
 <a href="#record_format_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format_<wbr>type</a>
 </span>

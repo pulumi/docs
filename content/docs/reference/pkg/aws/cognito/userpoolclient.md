@@ -488,7 +488,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UserPoolClient</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows_user_pool_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">analytics_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolClientAnalyticsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">callback_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_redirect_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">explicit_auth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">generate_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prevent_user_existence_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">refresh_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">supported_identity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">write_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UserPoolClient</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows_user_pool_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">analytics_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolClientAnalyticsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">callback_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_redirect_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">explicit_auth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">generate_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">id_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prevent_user_existence_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">refresh_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">supported_identity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_validity_units</span><span class="p">:</span> <span class="nx">Optional[UserPoolClientTokenValidityUnitsArgs]</span> = None<span class="p">, </span><span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">write_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -636,7 +636,16 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
+    <dd>{{% md %}}User pool the client belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accesstokenvalidity_csharp">
+<a href="#accesstokenvalidity_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedoauthflows_csharp">
@@ -672,7 +681,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
+    <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callbackurls_csharp">
@@ -690,7 +699,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
+    <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicitauthflows_csharp">
@@ -699,7 +708,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatesecret_csharp">
@@ -709,6 +718,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idtokenvalidity_csharp">
+<a href="#idtokenvalidity_csharp" style="color: inherit; text-decoration: inherit;">Id<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouturls_csharp">
@@ -726,7 +744,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the application client.
+    <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preventuserexistenceerrors_csharp">
@@ -753,7 +771,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
+    <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedidentityproviders_csharp">
@@ -763,6 +781,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenvalidityunits_csharp">
+<a href="#tokenvalidityunits_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Validity<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writeattributes_csharp">
@@ -784,7 +811,16 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
+    <dd>{{% md %}}User pool the client belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accesstokenvalidity_go">
+<a href="#accesstokenvalidity_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedoauthflows_go">
@@ -820,7 +856,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
+    <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callbackurls_go">
@@ -838,7 +874,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
+    <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicitauthflows_go">
@@ -847,7 +883,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatesecret_go">
@@ -857,6 +893,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idtokenvalidity_go">
+<a href="#idtokenvalidity_go" style="color: inherit; text-decoration: inherit;">Id<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouturls_go">
@@ -874,7 +919,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the application client.
+    <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preventuserexistenceerrors_go">
@@ -901,7 +946,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
+    <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedidentityproviders_go">
@@ -911,6 +956,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenvalidityunits_go">
+<a href="#tokenvalidityunits_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Validity<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writeattributes_go">
@@ -932,7 +986,16 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
+    <dd>{{% md %}}User pool the client belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accesstokenvalidity_nodejs">
+<a href="#accesstokenvalidity_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedoauthflows_nodejs">
@@ -968,7 +1031,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
+    <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callbackurls_nodejs">
@@ -986,7 +1049,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
+    <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicitauthflows_nodejs">
@@ -995,7 +1058,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatesecret_nodejs">
@@ -1005,6 +1068,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idtokenvalidity_nodejs">
+<a href="#idtokenvalidity_nodejs" style="color: inherit; text-decoration: inherit;">id<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouturls_nodejs">
@@ -1022,7 +1094,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the application client.
+    <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preventuserexistenceerrors_nodejs">
@@ -1049,7 +1121,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
+    <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedidentityproviders_nodejs">
@@ -1059,6 +1131,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenvalidityunits_nodejs">
+<a href="#tokenvalidityunits_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Validity<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writeattributes_nodejs">
@@ -1080,7 +1161,16 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
+    <dd>{{% md %}}User pool the client belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="access_token_validity_python">
+<a href="#access_token_validity_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_oauth_flows_python">
@@ -1116,7 +1206,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
+    <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callback_urls_python">
@@ -1134,7 +1224,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
+    <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicit_auth_flows_python">
@@ -1143,7 +1233,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generate_secret_python">
@@ -1153,6 +1243,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_token_validity_python">
+<a href="#id_token_validity_python" style="color: inherit; text-decoration: inherit;">id_<wbr>token_<wbr>validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logout_urls_python">
@@ -1170,7 +1269,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the application client.
+    <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prevent_user_existence_errors_python">
@@ -1197,7 +1296,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
+    <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supported_identity_providers_python">
@@ -1207,6 +1306,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="token_validity_units_python">
+<a href="#token_validity_units_python" style="color: inherit; text-decoration: inherit;">token_<wbr>validity_<wbr>units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_attributes_python">
@@ -1235,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client secret of the user pool client.
+    <dd>{{% md %}}Client secret of the user pool client.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1256,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client secret of the user pool client.
+    <dd>{{% md %}}Client secret of the user pool client.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -1277,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client secret of the user pool client.
+    <dd>{{% md %}}Client secret of the user pool client.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1298,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client secret of the user pool client.
+    <dd>{{% md %}}Client secret of the user pool client.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -1323,7 +1431,7 @@ Get an existing UserPoolClient resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows_user_pool_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">analytics_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolClientAnalyticsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">callback_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_redirect_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">explicit_auth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">generate_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prevent_user_existence_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">refresh_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">supported_identity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">write_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> UserPoolClient</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_flows_user_pool_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_oauth_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">analytics_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolClientAnalyticsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">callback_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_redirect_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">explicit_auth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">generate_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">id_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prevent_user_existence_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">refresh_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">supported_identity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_validity_units</span><span class="p">:</span> <span class="nx">Optional[UserPoolClientTokenValidityUnitsArgs]</span> = None<span class="p">, </span><span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">write_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> UserPoolClient</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1436,6 +1544,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accesstokenvalidity_csharp">
+<a href="#state_accesstokenvalidity_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_allowedoauthflows_csharp">
 <a href="#state_allowedoauthflows_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Oauth<wbr>Flows</a>
 </span>
@@ -1469,7 +1586,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
+    <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_callbackurls_csharp">
@@ -1487,7 +1604,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client secret of the user pool client.
+    <dd>{{% md %}}Client secret of the user pool client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultredirecturi_csharp">
@@ -1496,7 +1613,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
+    <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_explicitauthflows_csharp">
@@ -1505,7 +1622,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_generatesecret_csharp">
@@ -1515,6 +1632,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_idtokenvalidity_csharp">
+<a href="#state_idtokenvalidity_csharp" style="color: inherit; text-decoration: inherit;">Id<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouturls_csharp">
@@ -1532,7 +1658,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the application client.
+    <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preventuserexistenceerrors_csharp">
@@ -1559,7 +1685,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
+    <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportedidentityproviders_csharp">
@@ -1571,13 +1697,22 @@ The following state arguments are supported:
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tokenvalidityunits_csharp">
+<a href="#state_tokenvalidityunits_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Validity<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userpoolid_csharp">
 <a href="#state_userpoolid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
+    <dd>{{% md %}}User pool the client belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writeattributes_csharp">
@@ -1592,6 +1727,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_accesstokenvalidity_go">
+<a href="#state_accesstokenvalidity_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedoauthflows_go">
 <a href="#state_allowedoauthflows_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Oauth<wbr>Flows</a>
@@ -1626,7 +1770,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
+    <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_callbackurls_go">
@@ -1644,7 +1788,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client secret of the user pool client.
+    <dd>{{% md %}}Client secret of the user pool client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultredirecturi_go">
@@ -1653,7 +1797,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
+    <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_explicitauthflows_go">
@@ -1662,7 +1806,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_generatesecret_go">
@@ -1672,6 +1816,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_idtokenvalidity_go">
+<a href="#state_idtokenvalidity_go" style="color: inherit; text-decoration: inherit;">Id<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouturls_go">
@@ -1689,7 +1842,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the application client.
+    <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preventuserexistenceerrors_go">
@@ -1716,7 +1869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
+    <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportedidentityproviders_go">
@@ -1728,13 +1881,22 @@ The following state arguments are supported:
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tokenvalidityunits_go">
+<a href="#state_tokenvalidityunits_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Validity<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userpoolid_go">
 <a href="#state_userpoolid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
+    <dd>{{% md %}}User pool the client belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writeattributes_go">
@@ -1749,6 +1911,15 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_accesstokenvalidity_nodejs">
+<a href="#state_accesstokenvalidity_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedoauthflows_nodejs">
 <a href="#state_allowedoauthflows_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Oauth<wbr>Flows</a>
@@ -1783,7 +1954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
+    <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_callbackurls_nodejs">
@@ -1801,7 +1972,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client secret of the user pool client.
+    <dd>{{% md %}}Client secret of the user pool client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultredirecturi_nodejs">
@@ -1810,7 +1981,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
+    <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_explicitauthflows_nodejs">
@@ -1819,7 +1990,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_generatesecret_nodejs">
@@ -1829,6 +2000,15 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_idtokenvalidity_nodejs">
+<a href="#state_idtokenvalidity_nodejs" style="color: inherit; text-decoration: inherit;">id<wbr>Token<wbr>Validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouturls_nodejs">
@@ -1846,7 +2026,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the application client.
+    <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preventuserexistenceerrors_nodejs">
@@ -1873,7 +2053,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
+    <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportedidentityproviders_nodejs">
@@ -1885,13 +2065,22 @@ The following state arguments are supported:
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tokenvalidityunits_nodejs">
+<a href="#state_tokenvalidityunits_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Validity<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userpoolid_nodejs">
 <a href="#state_userpoolid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
+    <dd>{{% md %}}User pool the client belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writeattributes_nodejs">
@@ -1906,6 +2095,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_access_token_validity_python">
+<a href="#state_access_token_validity_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_oauth_flows_python">
 <a href="#state_allowed_oauth_flows_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>oauth_<wbr>flows</a>
@@ -1940,7 +2138,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
+    <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_callback_urls_python">
@@ -1958,7 +2156,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client secret of the user pool client.
+    <dd>{{% md %}}Client secret of the user pool client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_redirect_uri_python">
@@ -1967,7 +2165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
+    <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_explicit_auth_flows_python">
@@ -1976,7 +2174,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_generate_secret_python">
@@ -1986,6 +2184,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_id_token_validity_python">
+<a href="#state_id_token_validity_python" style="color: inherit; text-decoration: inherit;">id_<wbr>token_<wbr>validity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logout_urls_python">
@@ -2003,7 +2210,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the application client.
+    <dd>{{% md %}}Name of the application client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prevent_user_existence_errors_python">
@@ -2030,7 +2237,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
+    <dd>{{% md %}}Time limit in days refresh tokens are valid for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supported_identity_providers_python">
@@ -2042,13 +2249,22 @@ The following state arguments are supported:
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_token_validity_units_python">
+<a href="#state_token_validity_units_python" style="color: inherit; text-decoration: inherit;">token_<wbr>validity_<wbr>units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_user_pool_id_python">
 <a href="#state_user_pool_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
+    <dd>{{% md %}}User pool the client belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_write_attributes_python">
@@ -2081,7 +2297,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+    <dd>{{% md %}}Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_csharp">
@@ -2090,7 +2306,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID for an Amazon Pinpoint application.
+    <dd>{{% md %}}Application ID for an Amazon Pinpoint application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_csharp">
@@ -2099,7 +2315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An ID for the Analytics Configuration. Conflicts with `application_arn`.
+    <dd>{{% md %}}ID for the Analytics Configuration. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_csharp">
@@ -2108,7 +2324,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
+    <dd>{{% md %}}ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatashared_csharp">
@@ -2130,7 +2346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+    <dd>{{% md %}}Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_go">
@@ -2139,7 +2355,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID for an Amazon Pinpoint application.
+    <dd>{{% md %}}Application ID for an Amazon Pinpoint application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_go">
@@ -2148,7 +2364,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An ID for the Analytics Configuration. Conflicts with `application_arn`.
+    <dd>{{% md %}}ID for the Analytics Configuration. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_go">
@@ -2157,7 +2373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
+    <dd>{{% md %}}ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatashared_go">
@@ -2179,7 +2395,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+    <dd>{{% md %}}Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_nodejs">
@@ -2188,7 +2404,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID for an Amazon Pinpoint application.
+    <dd>{{% md %}}Application ID for an Amazon Pinpoint application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_nodejs">
@@ -2197,7 +2413,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An ID for the Analytics Configuration. Conflicts with `application_arn`.
+    <dd>{{% md %}}ID for the Analytics Configuration. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_nodejs">
@@ -2206,7 +2422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
+    <dd>{{% md %}}ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatashared_nodejs">
@@ -2228,7 +2444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+    <dd>{{% md %}}Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_id_python">
@@ -2237,7 +2453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application ID for an Amazon Pinpoint application.
+    <dd>{{% md %}}Application ID for an Amazon Pinpoint application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_id_python">
@@ -2246,7 +2462,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An ID for the Analytics Configuration. Conflicts with `application_arn`.
+    <dd>{{% md %}}ID for the Analytics Configuration. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_arn_python">
@@ -2255,7 +2471,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
+    <dd>{{% md %}}ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_shared_python">
@@ -2265,6 +2481,132 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_csharp">
+<a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `access_token_validity`, defaults to `hours`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idtoken_csharp">
+<a href="#idtoken_csharp" style="color: inherit; text-decoration: inherit;">Id<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `id_token_validity`, defaults to `hours`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="refreshtoken_csharp">
+<a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `refresh_token_validity`, defaults to `days`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_go">
+<a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `access_token_validity`, defaults to `hours`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idtoken_go">
+<a href="#idtoken_go" style="color: inherit; text-decoration: inherit;">Id<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `id_token_validity`, defaults to `hours`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="refreshtoken_go">
+<a href="#refreshtoken_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `refresh_token_validity`, defaults to `days`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_nodejs">
+<a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `access_token_validity`, defaults to `hours`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idtoken_nodejs">
+<a href="#idtoken_nodejs" style="color: inherit; text-decoration: inherit;">id<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `id_token_validity`, defaults to `hours`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="refreshtoken_nodejs">
+<a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `refresh_token_validity`, defaults to `days`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="access_token_python">
+<a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `access_token_validity`, defaults to `hours`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_token_python">
+<a href="#id_token_python" style="color: inherit; text-decoration: inherit;">id_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `id_token_validity`, defaults to `hours`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time unit in for the value in `refresh_token_validity`, defaults to `days`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
