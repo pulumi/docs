@@ -61,6 +61,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="getdroplet" title="GetDroplet"><span class="symbol function"></span>GetDroplet</a></li>
     <li><a href="getdropletsnapshot" title="GetDropletSnapshot"><span class="symbol function"></span>GetDropletSnapshot</a></li>
     <li><a href="getdroplets" title="GetDroplets"><span class="symbol function"></span>GetDroplets</a></li>
+    <li><a href="getfirewall" title="GetFirewall"><span class="symbol function"></span>GetFirewall</a></li>
     <li><a href="getfloatingip" title="GetFloatingIp"><span class="symbol function"></span>GetFloatingIp</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
     <li><a href="getimages" title="GetImages"><span class="symbol function"></span>GetImages</a></li>
@@ -96,6 +97,6 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.5.2</dd>
+	<dd>3.6.0</dd>
 </dl>
 
