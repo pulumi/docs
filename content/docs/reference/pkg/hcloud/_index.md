@@ -15,6 +15,7 @@ A Pulumi package for creating and managing hcloud cloud resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
     <li><a href="floatingip" title="FloatingIp"><span class="symbol resource"></span>FloatingIp</a></li>
     <li><a href="floatingipassignment" title="FloatingIpAssignment"><span class="symbol resource"></span>FloatingIpAssignment</a></li>
     <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
@@ -28,6 +29,7 @@ A Pulumi package for creating and managing hcloud cloud resources.
     <li><a href="rdns" title="Rdns"><span class="symbol resource"></span>Rdns</a></li>
     <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
     <li><a href="servernetwork" title="ServerNetwork"><span class="symbol resource"></span>ServerNetwork</a></li>
+    <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
     <li><a href="sshkey" title="SshKey"><span class="symbol resource"></span>SshKey</a></li>
     <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
     <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
@@ -38,6 +40,7 @@ A Pulumi package for creating and managing hcloud cloud resources.
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getdatacenter" title="GetDatacenter"><span class="symbol function"></span>GetDatacenter</a></li>
     <li><a href="getdatacenters" title="GetDatacenters"><span class="symbol function"></span>GetDatacenters</a></li>
+    <li><a href="getfirewall" title="GetFirewall"><span class="symbol function"></span>GetFirewall</a></li>
     <li><a href="getfloatingip" title="GetFloatingIp"><span class="symbol function"></span>GetFloatingIp</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
     <li><a href="getloadbalancer" title="GetLoadBalancer"><span class="symbol function"></span>GetLoadBalancer</a></li>
@@ -61,6 +64,6 @@ A Pulumi package for creating and managing hcloud cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.6.2</dd>
+	<dd>0.7.0</dd>
 </dl>
 
