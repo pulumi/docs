@@ -340,15 +340,6 @@ The OriginCaCertificate resource accepts the following [input]({{< relref "/docs
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="csr_csharp">
-<a href="#csr_csharp" style="color: inherit; text-decoration: inherit;">Csr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Certificate Signing Request. Must be newline-encoded.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="hostnames_csharp">
 <a href="#hostnames_csharp" style="color: inherit; text-decoration: inherit;">Hostnames</a>
 </span>
@@ -367,6 +358,15 @@ The OriginCaCertificate resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The signature type desired on the certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="csr_csharp">
+<a href="#csr_csharp" style="color: inherit; text-decoration: inherit;">Csr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Certificate Signing Request. Must be newline-encoded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestedvalidity_csharp">
 <a href="#requestedvalidity_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Validity</a>
 </span>
@@ -379,15 +379,6 @@ The OriginCaCertificate resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="csr_go">
-<a href="#csr_go" style="color: inherit; text-decoration: inherit;">Csr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Certificate Signing Request. Must be newline-encoded.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostnames_go">
 <a href="#hostnames_go" style="color: inherit; text-decoration: inherit;">Hostnames</a>
@@ -407,6 +398,15 @@ The OriginCaCertificate resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The signature type desired on the certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="csr_go">
+<a href="#csr_go" style="color: inherit; text-decoration: inherit;">Csr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Certificate Signing Request. Must be newline-encoded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestedvalidity_go">
 <a href="#requestedvalidity_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Validity</a>
 </span>
@@ -419,15 +419,6 @@ The OriginCaCertificate resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="csr_nodejs">
-<a href="#csr_nodejs" style="color: inherit; text-decoration: inherit;">csr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Certificate Signing Request. Must be newline-encoded.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostnames_nodejs">
 <a href="#hostnames_nodejs" style="color: inherit; text-decoration: inherit;">hostnames</a>
@@ -447,6 +438,15 @@ The OriginCaCertificate resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The signature type desired on the certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="csr_nodejs">
+<a href="#csr_nodejs" style="color: inherit; text-decoration: inherit;">csr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Certificate Signing Request. Must be newline-encoded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestedvalidity_nodejs">
 <a href="#requestedvalidity_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Validity</a>
 </span>
@@ -459,15 +459,6 @@ The OriginCaCertificate resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="csr_python">
-<a href="#csr_python" style="color: inherit; text-decoration: inherit;">csr</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Certificate Signing Request. Must be newline-encoded.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostnames_python">
 <a href="#hostnames_python" style="color: inherit; text-decoration: inherit;">hostnames</a>
@@ -485,6 +476,15 @@ The OriginCaCertificate resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The signature type desired on the certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="csr_python">
+<a href="#csr_python" style="color: inherit; text-decoration: inherit;">csr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Certificate Signing Request. Must be newline-encoded.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requested_validity_python">
