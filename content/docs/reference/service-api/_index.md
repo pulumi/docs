@@ -968,7 +968,6 @@ PATCH https://api.pulumi.com/api/orgs/{organization}/teams/{team}
 | `memberAction` | string | body | **Required.** The action for the user and team - possible values are `add` or `remove` |
 | `member` | string | body | **Required.** user name |
 
-
 #### Example
 
 ```bash
