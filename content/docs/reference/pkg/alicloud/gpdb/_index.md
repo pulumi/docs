@@ -30,6 +30,6 @@ Explore the resources and functions of the alicloud.gpdb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.36.0</dd>
+	<dd>2.37.0</dd>
 </dl>
 
