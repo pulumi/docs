@@ -9,12 +9,10 @@ on:
 jobs:
   buildSite:
     env:
-      GOPATH: ${{ github.workspace }}
+      GOPATH: /home/runner/go
     name: Install deps and build site
     runs-on: ubuntu-18.04
     steps:
-
-      - uses: actions/checkout@v2
 
       - uses: actions/setup-node@v1
         with:
@@ -22,27 +20,43 @@ jobs:
 
       - uses: actions/setup-go@v2
         with:
-          go-version: 1.13.x
+          go-version: 1.16.x
+
+      - name: Install assume-role
+        run: go get -u github.com/remind101/assume-role
 
       - uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.81.0'
           extended: true
 
-      - name: Install assume-role
-        run: go get -u github.com/remind101/assume-role
+      - uses: actions/checkout@v2
 
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v1.0.1
 
+      - name: Grant access to the themes repository
+        run: |
+          git config --global url."https://${{ secrets.PULUMI_BOT_TOKEN }}:x-oauth-basic@github.com/pulumi/pulumi-hugo".insteadOf "https://github.com/pulumi/pulumi-hugo"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+          role-to-assume: arn:aws:iam::058607598222:role/ContinuousIntegrationRole
+          role-session-name: PullRequestPreviewSession
+
       - name: Build and deploy
-        run: make ci_${GITHUB_EVENT_NAME}
+        run: make ci_pull_request
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUGO_THEME: github.com/pulumi/pulumi-hugo/themes/current
 
       - name: Archive test results
         uses: actions/upload-artifact@v2

@@ -1,0 +1,93 @@
+# -------------------------------------
+# Command Line Menu
+# -------------------------------------
+reference:
+  - name: cancel
+    parent: cli
+    url: /docs/reference/cli/pulumi_cancel/
+    weight: 1
+
+  - name: config
+    parent: cli
+    url: /docs/reference/cli/pulumi_config/
+    weight: 2
+
+  - name: console
+    parent: cli
+    url: /docs/reference/cli/pulumi_console/
+    weight: 3
+
+  - name: destroy
+    parent: cli
+    url: /docs/reference/cli/pulumi_destroy/
+    weight: 4
+
+  - name: import
+    parent: cli
+    url: /docs/reference/cli/pulumi_import/
+    weight: 5
+
+  - name: login
+    parent: cli
+    url: /docs/reference/cli/pulumi_login/
+    weight: 6
+
+  - name: logout
+    parent: cli
+    url: /docs/reference/cli/pulumi_logout/
+    weight: 7
+
+  - name: logs
+    parent: cli
+    url: /docs/reference/cli/pulumi_logs/
+    weight: 8
+
+  - name: new
+    parent: cli
+    url: /docs/reference/cli/pulumi_new/
+    weight: 9
+
+  - name: plugin
+    parent: cli
+    url: /docs/reference/cli/pulumi_plugin/
+    weight: 10
+
+  - name: policy
+    parent: cli
+    url: /docs/reference/cli/pulumi_policy/
+    weight: 11
+
+  - name: preview
+    parent: cli
+    url: /docs/reference/cli/pulumi_preview/
+    weight: 12
+
+  - name: refresh
+    parent: cli
+    url: /docs/reference/cli/pulumi_refresh/
+    weight: 13
+
+  - name: stack
+    parent: cli
+    url: /docs/reference/cli/pulumi_stack/
+    weight: 14
+
+  - name: state
+    parent: cli
+    url: /docs/reference/cli/pulumi_state/
+    weight: 15
+
+  - name: up
+    parent: cli
+    url: /docs/reference/cli/pulumi_up/
+    weight: 16
+
+  - name: version
+    parent: cli
+    url: /docs/reference/cli/pulumi_version/
+    weight: 17
+
+  - name: whoami
+    parent: cli
+    url: /docs/reference/cli/pulumi_whoami/
+    weight: 18

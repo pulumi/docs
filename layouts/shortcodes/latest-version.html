@@ -1,7 +1,0 @@
-{{- $latestVersionFile := "/static/latest-version" -}}
-{{- $latestVersion := readFile $latestVersionFile -}}
-{{/* The file must not contain whitespace or newlines, as dependencies may not be resilient. */}}
-{{- if gt (len (findRE "\\s" $latestVersion)) 0 -}}
-    {{- errorf "%q must not contain whitespace or newlines" $latestVersionFile -}}
-{{- end -}}
-{{- $latestVersion -}}

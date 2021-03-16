@@ -1,6 +1,6 @@
 # Pulumi Documentation Site
 
-[![Build Status](https://travis-ci.com/pulumi/docs.svg?token=eHg7Zp5zdDDJfTjY8ejq&branch=master)](https://travis-ci.com/pulumi/docs)
+![Deployment Status](https://github.com/github/docs/actions/workflows/build-and-deploy.yml/badge.svg?branch=master)
 
 ## Contributing
 
@@ -8,7 +8,7 @@
 
 ## Toolchain
 
-The website is statically built using [Hugo](https://gohugo.io). So we have basic templating
+The website is statically built using [Hugo](https://gohugo.io). We have basic templating
 for generating HTML and the ability to write most files in Markdown.
 
 TypeScript documentation is generated directly from source using [TYPEDOC](http://typedoc.org/). We
@@ -157,18 +157,6 @@ Add a new folder under `content/docs/intro/cloud-providers` with instructions on
 
 When changes are merged into `master`, https://www.pulumi.com/ is automatically deployed. You can use the [Travis UI](https://travis-ci.com/pulumi/docs) to check on the status of the deployment.
 
-## Design Reference
-
-Web design is hard. Documentation is hard. Good web design for documentation is harder.
-
-Examples of other sites and their docs as inspiration:
-
-- https://kubernetes.github.io/
-- https://devcenter.heroku.com/
-- https://stripe.com/docs/api/curl#authentication
-- http://developer.mailchimp.com/documentation/mailchimp/
-- http://ionicframework.com/docs/
-- https://www.twilio.com/docs/
 
 ## Troubleshooting
 
