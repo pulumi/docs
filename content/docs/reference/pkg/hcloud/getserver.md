@@ -278,6 +278,14 @@ The following output properties are available:
     <dd>{{% md %}}(string) The datacenter name.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="firewallids_csharp">
+<a href="#firewallids_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -439,6 +447,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(string) The datacenter name.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="firewallids_go">
+<a href="#firewallids_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -602,6 +618,14 @@ The following output properties are available:
     <dd>{{% md %}}(string) The datacenter name.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="firewallids_nodejs">
+<a href="#firewallids_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -763,6 +787,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(string) The datacenter name.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="firewall_ids_python">
+<a href="#firewall_ids_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
