@@ -60,6 +60,7 @@ const exampleVolume = new azure.netapp.Volume("exampleVolume", {
     subnetId: exampleSubnet.id,
     protocols: ["NFSv4.1"],
     storageQuotaInGb: 100,
+    createFromSnapshotResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/snapshots/snapshot1",
     dataProtectionReplication: {
         endpointType: "dst",
         remoteVolumeLocation: azurerm_resource_group.example_primary.location,
@@ -110,6 +111,7 @@ example_volume = azure.netapp.Volume("exampleVolume",
     subnet_id=example_subnet.id,
     protocols=["NFSv4.1"],
     storage_quota_in_gb=100,
+    create_from_snapshot_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/snapshots/snapshot1",
     data_protection_replication=azure.netapp.VolumeDataProtectionReplicationArgs(
         endpoint_type="dst",
         remote_volume_location=azurerm_resource_group["example_primary"]["location"],
@@ -190,6 +192,7 @@ class MyStack : Stack
                 "NFSv4.1",
             },
             StorageQuotaInGb = 100,
+            CreateFromSnapshotResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/snapshots/snapshot1",
             DataProtectionReplication = new Azure.NetApp.Inputs.VolumeDataProtectionReplicationArgs
             {
                 EndpointType = "dst",
@@ -280,7 +283,8 @@ func main() {
 			Protocols: pulumi.StringArray{
 				pulumi.String("NFSv4.1"),
 			},
-			StorageQuotaInGb: pulumi.Int(100),
+			StorageQuotaInGb:             pulumi.Int(100),
+			CreateFromSnapshotResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/snapshots/snapshot1"),
 			DataProtectionReplication: &netapp.VolumeDataProtectionReplicationArgs{
 				EndpointType:           pulumi.String("dst"),
 				RemoteVolumeLocation:   pulumi.Any(azurerm_resource_group.Example_primary.Location),
@@ -307,7 +311,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection_replication</span><span class="p">:</span> <span class="nx">Optional[VolumeDataProtectionReplicationArgs]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_from_snapshot_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection_replication</span><span class="p">:</span> <span class="nx">Optional[VolumeDataProtectionReplicationArgs]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -512,6 +516,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="createfromsnapshotresourceid_csharp">
+<a href="#createfromsnapshotresourceid_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Snapshot<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dataprotectionreplication_csharp">
 <a href="#dataprotectionreplication_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection<wbr>Replication</a>
 </span>
@@ -630,6 +643,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createfromsnapshotresourceid_go">
+<a href="#createfromsnapshotresourceid_go" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Snapshot<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataprotectionreplication_go">
@@ -752,6 +774,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="createfromsnapshotresourceid_nodejs">
+<a href="#createfromsnapshotresourceid_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>From<wbr>Snapshot<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dataprotectionreplication_nodejs">
 <a href="#dataprotectionreplication_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Protection<wbr>Replication</a>
 </span>
@@ -870,6 +901,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="create_from_snapshot_resource_id_python">
+<a href="#create_from_snapshot_resource_id_python" style="color: inherit; text-decoration: inherit;">create_<wbr>from_<wbr>snapshot_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_protection_replication_python">
@@ -1030,7 +1070,7 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection_replication</span><span class="p">:</span> <span class="nx">Optional[VolumeDataProtectionReplicationArgs]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_from_snapshot_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection_replication</span><span class="p">:</span> <span class="nx">Optional[VolumeDataProtectionReplicationArgs]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1150,6 +1190,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_createfromsnapshotresourceid_csharp">
+<a href="#state_createfromsnapshotresourceid_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Snapshot<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataprotectionreplication_csharp">
@@ -1281,6 +1330,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_createfromsnapshotresourceid_go">
+<a href="#state_createfromsnapshotresourceid_go" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Snapshot<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dataprotectionreplication_go">
 <a href="#state_dataprotectionreplication_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection<wbr>Replication</a>
 </span>
@@ -1410,6 +1468,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_createfromsnapshotresourceid_nodejs">
+<a href="#state_createfromsnapshotresourceid_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>From<wbr>Snapshot<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dataprotectionreplication_nodejs">
 <a href="#state_dataprotectionreplication_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Protection<wbr>Replication</a>
 </span>
@@ -1537,6 +1604,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_create_from_snapshot_resource_id_python">
+<a href="#state_create_from_snapshot_resource_id_python" style="color: inherit; text-decoration: inherit;">create_<wbr>from_<wbr>snapshot_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: `protocols`, `subnet_id`, `location`, `service_level`, `resource_group_name`, `account_name` and `pool_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_protection_replication_python">

@@ -581,7 +581,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
+    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
@@ -972,7 +972,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
+    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
@@ -1363,7 +1363,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
+    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
@@ -1754,7 +1754,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
+    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
@@ -2314,7 +2314,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
+    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_csharp">
@@ -2714,7 +2714,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
+    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_go">
@@ -3114,7 +3114,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
+    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_nodejs">
@@ -3514,7 +3514,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
+    <dd>{{% md %}}The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_python">
@@ -6279,7 +6279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxunhealthyinstancepercent_csharp">
@@ -6288,7 +6288,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxunhealthyupgradedinstancepercent_csharp">
@@ -6297,7 +6297,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pausetimebetweenbatches_csharp">
@@ -6306,7 +6306,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6319,7 +6319,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxunhealthyinstancepercent_go">
@@ -6328,7 +6328,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxunhealthyupgradedinstancepercent_go">
@@ -6337,7 +6337,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pausetimebetweenbatches_go">
@@ -6346,7 +6346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6359,7 +6359,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxunhealthyinstancepercent_nodejs">
@@ -6368,7 +6368,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxunhealthyupgradedinstancepercent_nodejs">
@@ -6377,7 +6377,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pausetimebetweenbatches_nodejs">
@@ -6386,7 +6386,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6399,7 +6399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_unhealthy_instance_percent_python">
@@ -6408,7 +6408,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_unhealthy_upgraded_instance_percent_python">
@@ -6417,7 +6417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pause_time_between_batches_python">
@@ -6426,7 +6426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

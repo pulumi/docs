@@ -90,6 +90,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="privatedns/" title="privatedns"><span class="symbol module"></span>privatedns</a></li>
     <li><a href="privatelink/" title="privatelink"><span class="symbol module"></span>privatelink</a></li>
     <li><a href="proximity/" title="proximity"><span class="symbol module"></span>proximity</a></li>
+    <li><a href="purview/" title="purview"><span class="symbol module"></span>purview</a></li>
     <li><a href="recoveryservices/" title="recoveryservices"><span class="symbol module"></span>recoveryservices</a></li>
     <li><a href="redis/" title="redis"><span class="symbol module"></span>redis</a></li>
     <li><a href="relay/" title="relay"><span class="symbol module"></span>relay</a></li>
@@ -124,6 +125,6 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.50.0</dd>
+	<dd>3.51.0</dd>
 </dl>
 

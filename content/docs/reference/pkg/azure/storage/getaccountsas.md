@@ -71,8 +71,8 @@ class MyStack : Stack
                 Table = false,
                 File = false,
             },
-            Start = "2018-03-21",
-            Expiry = "2020-03-21",
+            Start = "2018-03-21T00:00:00Z",
+            Expiry = "2020-03-21T00:00:00Z",
             Permissions = new Azure.Storage.Inputs.GetAccountSASPermissionsArgs
             {
                 Read = true,
@@ -169,8 +169,8 @@ example_account_sas = example_account.primary_connection_string.apply(lambda pri
         table=False,
         file=False,
     ),
-    start="2018-03-21",
-    expiry="2020-03-21",
+    start="2018-03-21T00:00:00Z",
+    expiry="2020-03-21T00:00:00Z",
     permissions=azure.storage.GetAccountSASPermissionsArgs(
         read=True,
         write=True,
@@ -220,8 +220,8 @@ const exampleAccountSAS = exampleAccount.primaryConnectionString.apply(primaryCo
         table: false,
         file: false,
     },
-    start: "2018-03-21",
-    expiry: "2020-03-21",
+    start: "2018-03-21T00:00:00Z",
+    expiry: "2020-03-21T00:00:00Z",
     permissions: {
         read: true,
         write: true,
