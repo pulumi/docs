@@ -7,8 +7,15 @@
             <div class="w-full order-last mt-8 lg:mt-0 lg:order-first lg:w-1/2 px-5">
                 <p class="mr-4">{{ .Params.hero.description }}</p>
                 <div class="flex flex-col lg:flex-row mt-5">
-                    <a class="btn btn-lg text-center mb-4 lg:mb-0 lg:mr-4" href="{{ relref . "/docs/get-started/aws" }}">Get Started</a>
-                    <a class="btn btn-lg btn-orange-translucent text-center" href="{{ relref . "/resources#upcoming" }}">Join a Workshop</a>
+                    <div class="flex items-start mb-4 lg:mb-0 lg:mr-4">
+                        <a class="btn btn-lg text-center" href="{{ relref . "/docs/get-started/aws" }}">Get Started</a>
+                    </div>
+                    <div class="flex items-start">
+                        <a class="btn btn-lg btn-orange-translucent text-center" href="{{ relref . "/resources#upcoming" }}">Watch a Workshop</a>
+                    </div>
+                    <div class="flex-grow flex mt-4 lg:mt-0 lg:justify-center">
+                        <img class="w-32" src="/images/partners/aws-devops-badge.png" alt="AWS Devops Badge" />
+                    </div>
                 </div>
             </div>
             <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
@@ -249,7 +256,7 @@
 
     <!-- Start AWS re:Invent takeover content -->
     <section id="workshops" class="container mx-auto text-center mb-12">
-        <h3 class="text-3xl font-bold">JOIN A WORKSHOP</h3>
+        <h3 class="text-3xl font-bold">WATCH A WORKSHOP</h3>
         <ul class="flex flex-col px-0 lg:flex-row list-none text-left items-center">
             {{ $webinars := (where $.Site.Pages "Type" "webinars") }}
 
