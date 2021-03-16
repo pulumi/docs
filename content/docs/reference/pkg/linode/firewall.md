@@ -54,32 +54,40 @@ class MyStack : Stack
             {
                 new Linode.Inputs.FirewallInboundArgs
                 {
+                    Label = "allow-them",
+                    Action = "ACCEPT",
                     Protocol = "TCP",
-                    Ports = 
-                    {
-                        "80",
-                    },
-                    Addresses = 
+                    Ports = "80",
+                    Ipv4s = 
                     {
                         "0.0.0.0/0",
                     },
+                    Ipv6s = 
+                    {
+                        "ff00::/8",
+                    },
                 },
             },
+            InboundPolicy = "DROP",
             Outbounds = 
             {
                 new Linode.Inputs.FirewallOutboundArgs
                 {
+                    Label = "reject-them",
+                    Action = "DROP",
                     Protocol = "TCP",
-                    Ports = 
-                    {
-                        "80",
-                    },
-                    Addresses = 
+                    Ports = "80",
+                    Ipv4s = 
                     {
                         "0.0.0.0/0",
                     },
+                    Ipv6s = 
+                    {
+                        "ff00::/8",
+                    },
                 },
             },
+            OutboundPolicy = "ACCEPT",
             Linodes = 
             {
                 myInstance.Id,
@@ -96,68 +104,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		myInstance, err := linode.NewInstance(ctx, "myInstance", &linode.InstanceArgs{
-			Label:    pulumi.String("my_instance"),
-			Image:    pulumi.String("linode/ubuntu18.04"),
-			Region:   pulumi.String("us-east"),
-			Type:     pulumi.String("g6-standard-1"),
-			RootPass: pulumi.String(fmt.Sprintf("%v%v", "bogusPassword", "$")),
-			SwapSize: pulumi.Int(256),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = linode.NewFirewall(ctx, "myFirewall", &linode.FirewallArgs{
-			Label: pulumi.String("my_firewall"),
-			Tags: pulumi.StringArray{
-				pulumi.String("test"),
-			},
-			Inbounds: linode.FirewallInboundArray{
-				&linode.FirewallInboundArgs{
-					Protocol: pulumi.String("TCP"),
-					Ports: pulumi.StringArray{
-						pulumi.String("80"),
-					},
-					Addresses: pulumi.StringArray{
-						pulumi.String("0.0.0.0/0"),
-					},
-				},
-			},
-			Outbounds: linode.FirewallOutboundArray{
-				&linode.FirewallOutboundArgs{
-					Protocol: pulumi.String("TCP"),
-					Ports: pulumi.StringArray{
-						pulumi.String("80"),
-					},
-					Addresses: pulumi.StringArray{
-						pulumi.String("0.0.0.0/0"),
-					},
-				},
-			},
-			Linodes: pulumi.IntArray{
-				myInstance.ID(),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -179,15 +126,23 @@ my_firewall = linode.Firewall("myFirewall",
     label="my_firewall",
     tags=["test"],
     inbounds=[linode.FirewallInboundArgs(
+        label="allow-them",
+        action="ACCEPT",
         protocol="TCP",
-        ports=["80"],
-        addresses=["0.0.0.0/0"],
+        ports="80",
+        ipv4s=["0.0.0.0/0"],
+        ipv6s=["ff00::/8"],
     )],
+    inbound_policy="DROP",
     outbounds=[linode.FirewallOutboundArgs(
+        label="reject-them",
+        action="DROP",
         protocol="TCP",
-        ports=["80"],
-        addresses=["0.0.0.0/0"],
+        ports="80",
+        ipv4s=["0.0.0.0/0"],
+        ipv6s=["ff00::/8"],
     )],
+    outbound_policy="ACCEPT",
     linodes=[my_instance.id])
 ```
 
@@ -214,15 +169,23 @@ const myFirewall = new linode.Firewall("myFirewall", {
     label: "my_firewall",
     tags: ["test"],
     inbounds: [{
+        label: "allow-them",
+        action: "ACCEPT",
         protocol: "TCP",
-        ports: ["80"],
-        addresses: ["0.0.0.0/0"],
+        ports: "80",
+        ipv4s: ["0.0.0.0/0"],
+        ipv6s: ["ff00::/8"],
     }],
+    inboundPolicy: "DROP",
     outbounds: [{
+        label: "reject-them",
+        action: "DROP",
         protocol: "TCP",
-        ports: ["80"],
-        addresses: ["0.0.0.0/0"],
+        ports: "80",
+        ipv4s: ["0.0.0.0/0"],
+        ipv6s: ["ff00::/8"],
     }],
+    outboundPolicy: "ACCEPT",
     linodes: [myInstance.id],
 });
 ```
@@ -248,7 +211,7 @@ const myFirewall = new linode.Firewall("myFirewall", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbound_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">outbound_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -390,13 +353,31 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="linodes_csharp">
-<a href="#linodes_csharp" style="color: inherit; text-decoration: inherit;">Linodes</a>
+        <span id="inboundpolicy_csharp">
+<a href="#inboundpolicy_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;int&gt;</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
+    <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="outboundpolicy_csharp">
+<a href="#outboundpolicy_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
@@ -417,13 +398,13 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="label_csharp">
-<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+        <span id="linodes_csharp">
+<a href="#linodes_csharp" style="color: inherit; text-decoration: inherit;">Linodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outbounds_csharp">
@@ -448,13 +429,31 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="linodes_go">
-<a href="#linodes_go" style="color: inherit; text-decoration: inherit;">Linodes</a>
+        <span id="inboundpolicy_go">
+<a href="#inboundpolicy_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
+    <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="outboundpolicy_go">
+<a href="#outboundpolicy_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
@@ -475,13 +474,13 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="label_go">
-<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+        <span id="linodes_go">
+<a href="#linodes_go" style="color: inherit; text-decoration: inherit;">Linodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outbounds_go">
@@ -506,13 +505,31 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="linodes_nodejs">
-<a href="#linodes_nodejs" style="color: inherit; text-decoration: inherit;">linodes</a>
+        <span id="inboundpolicy_nodejs">
+<a href="#inboundpolicy_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
+    <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="outboundpolicy_nodejs">
+<a href="#outboundpolicy_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
@@ -533,13 +550,13 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="label_nodejs">
-<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+        <span id="linodes_nodejs">
+<a href="#linodes_nodejs" style="color: inherit; text-decoration: inherit;">linodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outbounds_nodejs">
@@ -564,13 +581,31 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="linodes_python">
-<a href="#linodes_python" style="color: inherit; text-decoration: inherit;">linodes</a>
+        <span id="inbound_policy_python">
+<a href="#inbound_policy_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
+    <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="outbound_policy_python">
+<a href="#outbound_policy_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
@@ -591,13 +626,13 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="label_python">
-<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+        <span id="linodes_python">
+<a href="#linodes_python" style="color: inherit; text-decoration: inherit;">linodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outbounds_python">
@@ -759,7 +794,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbound_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">outbound_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -890,6 +925,15 @@ The following state arguments are supported:
     <dd>{{% md %}}If `true`, the Firewall's rules are not enforced (defaults to `false`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_inboundpolicy_csharp">
+<a href="#state_inboundpolicy_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inbounds_csharp">
 <a href="#state_inbounds_csharp" style="color: inherit; text-decoration: inherit;">Inbounds</a>
 </span>
@@ -905,7 +949,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linodes_csharp">
@@ -915,6 +959,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_outboundpolicy_csharp">
+<a href="#state_outboundpolicy_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outbounds_csharp">
@@ -966,6 +1019,15 @@ The following state arguments are supported:
     <dd>{{% md %}}If `true`, the Firewall's rules are not enforced (defaults to `false`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_inboundpolicy_go">
+<a href="#state_inboundpolicy_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inbounds_go">
 <a href="#state_inbounds_go" style="color: inherit; text-decoration: inherit;">Inbounds</a>
 </span>
@@ -981,7 +1043,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linodes_go">
@@ -991,6 +1053,15 @@ The following state arguments are supported:
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_outboundpolicy_go">
+<a href="#state_outboundpolicy_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outbounds_go">
@@ -1042,6 +1113,15 @@ The following state arguments are supported:
     <dd>{{% md %}}If `true`, the Firewall's rules are not enforced (defaults to `false`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_inboundpolicy_nodejs">
+<a href="#state_inboundpolicy_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inbounds_nodejs">
 <a href="#state_inbounds_nodejs" style="color: inherit; text-decoration: inherit;">inbounds</a>
 </span>
@@ -1057,7 +1137,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linodes_nodejs">
@@ -1067,6 +1147,15 @@ The following state arguments are supported:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_outboundpolicy_nodejs">
+<a href="#state_outboundpolicy_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outbounds_nodejs">
@@ -1118,6 +1207,15 @@ The following state arguments are supported:
     <dd>{{% md %}}If `true`, the Firewall's rules are not enforced (defaults to `false`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_inbound_policy_python">
+<a href="#state_inbound_policy_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for inbound traffic. This setting can be overridden by updating the inbound.action property of the Firewall Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inbounds_python">
 <a href="#state_inbounds_python" style="color: inherit; text-decoration: inherit;">inbounds</a>
 </span>
@@ -1133,7 +1231,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linodes_python">
@@ -1143,6 +1241,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_outbound_policy_python">
+<a href="#state_outbound_policy_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the action property for an individual Firewall Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outbounds_python">
@@ -1211,7 +1318,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -1259,7 +1366,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -1307,7 +1414,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -1355,7 +1462,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This Firewall's unique label.
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
@@ -1381,22 +1488,22 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addresses_csharp">
-<a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
+    <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="ports_csharp">
-<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of ports and/or port ranges (i.e. "443" or "80-90").
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
@@ -1406,28 +1513,55 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4s_csharp">
+<a href="#ipv4s_csharp" style="color: inherit; text-decoration: inherit;">Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6s_csharp">
+<a href="#ipv6s_csharp" style="color: inherit; text-decoration: inherit;">Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ports_csharp">
+<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addresses_go">
-<a href="#addresses_go" style="color: inherit; text-decoration: inherit;">Addresses</a>
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
+    <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="ports_go">
-<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of ports and/or port ranges (i.e. "443" or "80-90").
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
@@ -1437,28 +1571,55 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4s_go">
+<a href="#ipv4s_go" style="color: inherit; text-decoration: inherit;">Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6s_go">
+<a href="#ipv6s_go" style="color: inherit; text-decoration: inherit;">Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ports_go">
+<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addresses_nodejs">
-<a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
+    <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="ports_nodejs">
-<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of ports and/or port ranges (i.e. "443" or "80-90").
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
@@ -1468,28 +1629,55 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4s_nodejs">
+<a href="#ipv4s_nodejs" style="color: inherit; text-decoration: inherit;">ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6s_nodejs">
+<a href="#ipv6s_nodejs" style="color: inherit; text-decoration: inherit;">ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ports_nodejs">
+<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addresses_python">
-<a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
+    <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="ports_python">
-<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A list of ports and/or port ranges (i.e. "443" or "80-90").
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
@@ -1499,6 +1687,33 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4s_python">
+<a href="#ipv4s_python" style="color: inherit; text-decoration: inherit;">ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6s_python">
+<a href="#ipv6s_python" style="color: inherit; text-decoration: inherit;">ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ports_python">
+<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1507,22 +1722,22 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addresses_csharp">
-<a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
+    <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="ports_csharp">
-<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of ports and/or port ranges (i.e. "443" or "80-90").
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
@@ -1532,28 +1747,55 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4s_csharp">
+<a href="#ipv4s_csharp" style="color: inherit; text-decoration: inherit;">Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6s_csharp">
+<a href="#ipv6s_csharp" style="color: inherit; text-decoration: inherit;">Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ports_csharp">
+<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addresses_go">
-<a href="#addresses_go" style="color: inherit; text-decoration: inherit;">Addresses</a>
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
+    <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="ports_go">
-<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of ports and/or port ranges (i.e. "443" or "80-90").
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
@@ -1563,28 +1805,55 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4s_go">
+<a href="#ipv4s_go" style="color: inherit; text-decoration: inherit;">Ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6s_go">
+<a href="#ipv6s_go" style="color: inherit; text-decoration: inherit;">Ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ports_go">
+<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addresses_nodejs">
-<a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
+    <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="ports_nodejs">
-<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of ports and/or port ranges (i.e. "443" or "80-90").
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
@@ -1594,28 +1863,55 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4s_nodejs">
+<a href="#ipv4s_nodejs" style="color: inherit; text-decoration: inherit;">ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6s_nodejs">
+<a href="#ipv6s_nodejs" style="color: inherit; text-decoration: inherit;">ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ports_nodejs">
+<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addresses_python">
-<a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
+    <dd>{{% md %}}Controls whether traffic is accepted or dropped by this rule. Overrides the Firewall’s inbound_policy if this is an inbound rule, or the outbound_policy if this is an outbound rule.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="ports_python">
-<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A list of ports and/or port ranges (i.e. "443" or "80-90").
+    <dd>{{% md %}}Used to identify this rule. For display purposes only.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
@@ -1625,6 +1921,33 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network protocol this rule controls.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4s_python">
+<a href="#ipv4s_python" style="color: inherit; text-decoration: inherit;">ipv4s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv4 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6s_python">
+<a href="#ipv6s_python" style="color: inherit; text-decoration: inherit;">ipv6s</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of IPv6 addresses or networks. Must be in IP/mask format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ports_python">
+<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A string representation of ports and/or port ranges (i.e. "443" or "80-90, 91").
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
