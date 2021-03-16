@@ -45,6 +45,6 @@ Explore the resources and functions of the okta.deprecated module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.11.1</dd>
+	<dd>2.12.0</dd>
 </dl>
 

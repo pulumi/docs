@@ -25,93 +25,21 @@ Use this data source to retrieve a users from Okta.
 
 {{< example csharp >}}
 
-```csharp
-using Pulumi;
-using Okta = Pulumi.Okta;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = Output.Create(Okta.User.GetUser.InvokeAsync(new Okta.User.GetUserArgs
-        {
-            Searches = 
-            {
-                new Okta.User.Inputs.GetUserSearchArgs
-                {
-                    Name = "profile.firstName",
-                    Value = "John",
-                },
-                new Okta.User.Inputs.GetUserSearchArgs
-                {
-                    Name = "profile.lastName",
-                    Value = "Doe",
-                },
-            },
-        }));
-    }
-
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := user.LookupUser(ctx, &user.LookupUserArgs{
-			Searches: []user.GetUserSearch{
-				user.GetUserSearch{
-					Name:  "profile.firstName",
-					Value: "John",
-				},
-				user.GetUserSearch{
-					Name:  "profile.lastName",
-					Value: "Doe",
-				},
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-```python
-import pulumi
-import pulumi_okta as okta
-
-example = okta.user.get_user(searches=[
-    okta.user.GetUserSearchArgs(
-        name="profile.firstName",
-        value="John",
-    ),
-    okta.user.GetUserSearchArgs(
-        name="profile.lastName",
-        value="Doe",
-    ),
-])
-```
-
+Coming soon!
 
 {{< /example >}}
 
