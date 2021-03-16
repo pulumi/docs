@@ -374,7 +374,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
+    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 1576800000, or roughly 50 years. Must be greater than 0 and less than 1576800000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_csharp">
@@ -405,7 +405,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
+    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 1576800000, or roughly 50 years. Must be greater than 0 and less than 1576800000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_go">
@@ -436,7 +436,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
+    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 1576800000, or roughly 50 years. Must be greater than 0 and less than 1576800000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_nodejs">
@@ -467,7 +467,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
+    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 1576800000, or roughly 50 years. Must be greater than 0 and less than 1576800000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_python">
@@ -747,7 +747,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
+    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 1576800000, or roughly 50 years. Must be greater than 0 and less than 1576800000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registryname_csharp">
@@ -794,7 +794,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
+    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 1576800000, or roughly 50 years. Must be greater than 0 and less than 1576800000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registryname_go">
@@ -841,7 +841,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
+    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 1576800000, or roughly 50 years. Must be greater than 0 and less than 1576800000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registryname_nodejs">
@@ -888,7 +888,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
+    <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 1576800000, or roughly 50 years. Must be greater than 0 and less than 1576800000.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registry_name_python">
