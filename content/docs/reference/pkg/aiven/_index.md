@@ -19,6 +19,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="accountteam" title="AccountTeam"><span class="symbol resource"></span>AccountTeam</a></li>
     <li><a href="accountteammember" title="AccountTeamMember"><span class="symbol resource"></span>AccountTeamMember</a></li>
     <li><a href="accountteamproject" title="AccountTeamProject"><span class="symbol resource"></span>AccountTeamProject</a></li>
+    <li><a href="awsprivatelink" title="AwsPrivatelink"><span class="symbol resource"></span>AwsPrivatelink</a></li>
     <li><a href="billinggroup" title="BillingGroup"><span class="symbol resource"></span>BillingGroup</a></li>
     <li><a href="cassandra" title="Cassandra"><span class="symbol resource"></span>Cassandra</a></li>
     <li><a href="connectionpool" title="ConnectionPool"><span class="symbol resource"></span>ConnectionPool</a></li>
@@ -60,6 +61,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="getaccountteam" title="GetAccountTeam"><span class="symbol function"></span>GetAccountTeam</a></li>
     <li><a href="getaccountteammember" title="GetAccountTeamMember"><span class="symbol function"></span>GetAccountTeamMember</a></li>
     <li><a href="getaccountteamproject" title="GetAccountTeamProject"><span class="symbol function"></span>GetAccountTeamProject</a></li>
+    <li><a href="getawsprivatelink" title="GetAwsPrivatelink"><span class="symbol function"></span>GetAwsPrivatelink</a></li>
     <li><a href="getcassanda" title="GetCassanda"><span class="symbol function"></span>GetCassanda</a></li>
     <li><a href="getconnectionpool" title="GetConnectionPool"><span class="symbol function"></span>GetConnectionPool</a></li>
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
@@ -102,6 +104,6 @@ A Pulumi package for creating and managing Aiven cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.5</dd>
+	<dd>3.5.0</dd>
 </dl>
 
