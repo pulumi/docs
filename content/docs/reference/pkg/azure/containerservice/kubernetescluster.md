@@ -501,7 +501,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, or `System` to have AKS manage this.
+    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, `System` to have AKS manage this or `None`. In case of `None` you will need to bring your own DNS server and set up resolving, otherwise cluster will have issues after provisioning.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="privatelinkenabled_csharp">
@@ -719,7 +719,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, or `System` to have AKS manage this.
+    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, `System` to have AKS manage this or `None`. In case of `None` you will need to bring your own DNS server and set up resolving, otherwise cluster will have issues after provisioning.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="privatelinkenabled_go">
@@ -937,7 +937,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, or `System` to have AKS manage this.
+    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, `System` to have AKS manage this or `None`. In case of `None` you will need to bring your own DNS server and set up resolving, otherwise cluster will have issues after provisioning.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="privatelinkenabled_nodejs">
@@ -1155,7 +1155,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, or `System` to have AKS manage this.
+    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, `System` to have AKS manage this or `None`. In case of `None` you will need to bring your own DNS server and set up resolving, otherwise cluster will have issues after provisioning.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="private_link_enabled_python">
@@ -1848,7 +1848,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, or `System` to have AKS manage this.
+    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, `System` to have AKS manage this or `None`. In case of `None` you will need to bring your own DNS server and set up resolving, otherwise cluster will have issues after provisioning.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatefqdn_csharp">
@@ -2129,7 +2129,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, or `System` to have AKS manage this.
+    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, `System` to have AKS manage this or `None`. In case of `None` you will need to bring your own DNS server and set up resolving, otherwise cluster will have issues after provisioning.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatefqdn_go">
@@ -2410,7 +2410,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, or `System` to have AKS manage this.
+    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, `System` to have AKS manage this or `None`. In case of `None` you will need to bring your own DNS server and set up resolving, otherwise cluster will have issues after provisioning.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatefqdn_nodejs">
@@ -2691,7 +2691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, or `System` to have AKS manage this.
+    <dd>{{% md %}}Either the ID of Private DNS Zone which should be delegated to this Cluster, `System` to have AKS manage this or `None`. In case of `None` you will need to bring your own DNS server and set up resolving, otherwise cluster will have issues after provisioning.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_fqdn_python">
@@ -3527,6 +3527,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expander_csharp">
+<a href="#expander_csharp" style="color: inherit; text-decoration: inherit;">Expander</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `max-pods` and `random`. Defaults to `random`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxgracefulterminationsec_csharp">
 <a href="#maxgracefulterminationsec_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
 </span>
@@ -3637,6 +3646,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expander_go">
+<a href="#expander_go" style="color: inherit; text-decoration: inherit;">Expander</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `max-pods` and `random`. Defaults to `random`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxgracefulterminationsec_go">
@@ -3751,6 +3769,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expander_nodejs">
+<a href="#expander_nodejs" style="color: inherit; text-decoration: inherit;">expander</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `max-pods` and `random`. Defaults to `random`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxgracefulterminationsec_nodejs">
 <a href="#maxgracefulterminationsec_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
 </span>
@@ -3861,6 +3888,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expander_python">
+<a href="#expander_python" style="color: inherit; text-decoration: inherit;">expander</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `max-pods` and `random`. Defaults to `random`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_graceful_termination_sec_python">

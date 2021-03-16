@@ -12,6 +12,216 @@ meta_desc: "Documentation for the azure.eventgrid.SystemTopicEventSubscription r
 
 Manages an EventGrid System Topic Event Subscription.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+            Tags = 
+            {
+                { "environment", "staging" },
+            },
+        });
+        var exampleQueue = new Azure.Storage.Queue("exampleQueue", new Azure.Storage.QueueArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+        });
+        var exampleSystemTopic = new Azure.EventGrid.SystemTopic("exampleSystemTopic", new Azure.EventGrid.SystemTopicArgs
+        {
+            Location = "Global",
+            ResourceGroupName = exampleResourceGroup.Name,
+            SourceArmResourceId = exampleResourceGroup.Id,
+            TopicType = "Microsoft.Resources.ResourceGroups",
+        });
+        var exampleSystemTopicEventSubscription = new Azure.EventGrid.SystemTopicEventSubscription("exampleSystemTopicEventSubscription", new Azure.EventGrid.SystemTopicEventSubscriptionArgs
+        {
+            SystemTopic = azurerm_system_topic.Example.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            StorageQueueEndpoint = new Azure.EventGrid.Inputs.SystemTopicEventSubscriptionStorageQueueEndpointArgs
+            {
+                StorageAccountId = exampleAccount.Id,
+                QueueName = exampleQueue.Name,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("staging"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleQueue, err := storage.NewQueue(ctx, "exampleQueue", &storage.QueueArgs{
+			StorageAccountName: exampleAccount.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = eventgrid.NewSystemTopic(ctx, "exampleSystemTopic", &eventgrid.SystemTopicArgs{
+			Location:            pulumi.String("Global"),
+			ResourceGroupName:   exampleResourceGroup.Name,
+			SourceArmResourceId: exampleResourceGroup.ID(),
+			TopicType:           pulumi.String("Microsoft.Resources.ResourceGroups"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = eventgrid.NewSystemTopicEventSubscription(ctx, "exampleSystemTopicEventSubscription", &eventgrid.SystemTopicEventSubscriptionArgs{
+			SystemTopic:       pulumi.Any(azurerm_system_topic.Example.Name),
+			ResourceGroupName: exampleResourceGroup.Name,
+			StorageQueueEndpoint: &eventgrid.SystemTopicEventSubscriptionStorageQueueEndpointArgs{
+				StorageAccountId: exampleAccount.ID(),
+				QueueName:        exampleQueue.Name,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS",
+    tags={
+        "environment": "staging",
+    })
+example_queue = azure.storage.Queue("exampleQueue", storage_account_name=example_account.name)
+example_system_topic = azure.eventgrid.SystemTopic("exampleSystemTopic",
+    location="Global",
+    resource_group_name=example_resource_group.name,
+    source_arm_resource_id=example_resource_group.id,
+    topic_type="Microsoft.Resources.ResourceGroups")
+example_system_topic_event_subscription = azure.eventgrid.SystemTopicEventSubscription("exampleSystemTopicEventSubscription",
+    system_topic=azurerm_system_topic["example"]["name"],
+    resource_group_name=example_resource_group.name,
+    storage_queue_endpoint=azure.eventgrid.SystemTopicEventSubscriptionStorageQueueEndpointArgs(
+        storage_account_id=example_account.id,
+        queue_name=example_queue.name,
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+    tags: {
+        environment: "staging",
+    },
+});
+const exampleQueue = new azure.storage.Queue("exampleQueue", {storageAccountName: exampleAccount.name});
+const exampleSystemTopic = new azure.eventgrid.SystemTopic("exampleSystemTopic", {
+    location: "Global",
+    resourceGroupName: exampleResourceGroup.name,
+    sourceArmResourceId: exampleResourceGroup.id,
+    topicType: "Microsoft.Resources.ResourceGroups",
+});
+const exampleSystemTopicEventSubscription = new azure.eventgrid.SystemTopicEventSubscription("exampleSystemTopicEventSubscription", {
+    systemTopic: azurerm_system_topic.example.name,
+    resourceGroupName: exampleResourceGroup.name,
+    storageQueueEndpoint: {
+        storageAccountId: exampleAccount.id,
+        queueName: exampleQueue.name,
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a SystemTopicEventSubscription Resource {#create}
