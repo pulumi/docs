@@ -116,7 +116,7 @@ webbrowser.open(url)
 
 In this simple example, we demonstrated how to create a static website from an S3 bucket, write content into the bucket, and set the access policy as a Python function. We called the function, which created a stack for the website. The stack is returned as a Python object with the site URL as an output. You can manage the site and view updates using the Pulumi console.
 
-Because it's code, you can create a separate module containing all the functions to create your infrastructure, import it into your notebooks, and reuse it. Pulumi lets you perform analysis and build models within a familiar environment while reducing the burden of managing infrastructure. You can find the complete example on [Github](https://github.com/pulumi/automation-api-examples/tree/main/python/pulumi_via_jupyter) including a Jupyter notebook for [database migration](https://github.com/pulumi/automation-api-examples/blob/main/python/pulumi_via_jupyter/database_migration.ipynb).
+Because it's code, you can create a separate module containing all the functions to create your infrastructure, import it into your notebooks, and reuse it. Pulumi lets you perform analysis and build models within a familiar environment while reducing the burden of managing infrastructure. You can find the complete example on [GitHub](https://github.com/pulumi/automation-api-examples/tree/main/python/pulumi_via_jupyter) including a Jupyter notebook for [database migration](https://github.com/pulumi/automation-api-examples/blob/main/python/pulumi_via_jupyter/database_migration.ipynb).
 
 Be sure to watch our video that explains the code in greater detail.
 
