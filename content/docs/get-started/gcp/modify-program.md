@@ -72,6 +72,8 @@ To accomplish this, we will take advantage of your chosen programming language's
 
 {{% choosable language javascript %}}
 
+In `index.js`, add the following:
+
 ```javascript
 const fs = require("fs");
 ```
@@ -88,6 +90,8 @@ const bucketObject = new gcp.storage.BucketObject("index.html", {
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
+
+In `index.ts`, add the following:
 
 ```typescript
 import * as fs from "fs";
@@ -106,7 +110,7 @@ const bucketObject = new gcp.storage.BucketObject("index.html", {
 
 {{% choosable language python %}}
 
-Next you will create a new bucket object on the lines right after creating the bucket itself.
+In `__main__.py`, create a new bucket object by adding the following right after creating the bucket itself:
 
 ```python
 bucketObject = storage.BucketObject(
@@ -119,6 +123,8 @@ bucketObject = storage.BucketObject(
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
+In `main.go`, add the following:
 
 ```go
 import (
@@ -147,6 +153,8 @@ if err != nil {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
+In `MyStack.cs`, add the following:
 
 ```csharp
 using System.IO;
