@@ -20,7 +20,7 @@ Data scientists typically work locally, but they often store data for analyses a
 - They need to be able to store large data sets cheaply.
 - They need large capacity swings available on-demand.
 
-SDKs like AWS’ Python library, `boto3`, can create resources, but they still require domain expertise to manage and properly architect a solution. The Pulumi Automation API improves raw SDKs by providing high-level abstractions for creating and managing cloud services, letting data scientists concentrate on analyses and models without being well-versed in cloud APIs.
+SDKs like AWS’ Python library, `boto3`, can create resources, but they still require domain expertise to manage and properly architect a solution. The Pulumi Automation API improves on raw SDKs by providing high-level abstractions for creating and managing cloud services, letting data scientists concentrate on analyses and models without being well-versed in cloud APIs.
 
 <!--more-->
 
