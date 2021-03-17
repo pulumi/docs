@@ -1,6 +1,6 @@
 ---
 title: "Data Science in the Cloud"
-date: 2021-03-16
+date: 2021-03-18
 meta_desc: "With Pulumi Automation API, deploy and manage infrastructure such as websites, storage, and databases within a Jupyter notebook."
 meta_image: data_science.png
 authors:
