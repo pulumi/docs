@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.ec2.LocalGatewayRoute resource with exampl
 Manages an EC2 Local Gateway Route. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -43,12 +37,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -72,12 +63,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -88,12 +76,9 @@ example = aws.ec2.LocalGatewayRoute("example",
     local_gateway_virtual_interface_group_id=data["aws_ec2_local_gateway_virtual_interface_group"]["example"]["id"])
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -106,16 +91,9 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a LocalGatewayRoute Resource {#create}
@@ -140,7 +118,9 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -148,7 +128,9 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -156,7 +138,9 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -164,7 +148,10 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -190,7 +177,9 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -198,7 +187,9 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -206,7 +197,9 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -214,7 +207,9 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -222,13 +217,18 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -236,7 +236,9 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -244,7 +246,9 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -252,7 +256,10 @@ const example = new aws.ec2.LocalGatewayRoute("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -267,7 +274,9 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destinationcidrblock_csharp">
 <a href="#destinationcidrblock_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
@@ -276,7 +285,8 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="localgatewayroutetableid_csharp">
 <a href="#localgatewayroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -285,7 +295,8 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Route Table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="localgatewayvirtualinterfacegroupid_csharp">
 <a href="#localgatewayvirtualinterfacegroupid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Group<wbr>Id</a>
@@ -294,11 +305,14 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Virtual Interface Group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destinationcidrblock_go">
 <a href="#destinationcidrblock_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
@@ -307,7 +321,8 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="localgatewayroutetableid_go">
 <a href="#localgatewayroutetableid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -316,7 +331,8 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Route Table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="localgatewayvirtualinterfacegroupid_go">
 <a href="#localgatewayvirtualinterfacegroupid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Group<wbr>Id</a>
@@ -325,11 +341,14 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Virtual Interface Group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destinationcidrblock_nodejs">
 <a href="#destinationcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Block</a>
@@ -338,7 +357,8 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="localgatewayroutetableid_nodejs">
 <a href="#localgatewayroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -347,7 +367,8 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Route Table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="localgatewayvirtualinterfacegroupid_nodejs">
 <a href="#localgatewayvirtualinterfacegroupid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Group<wbr>Id</a>
@@ -356,11 +377,14 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Virtual Interface Group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destination_cidr_block_python">
 <a href="#destination_cidr_block_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>block</a>
@@ -369,7 +393,8 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="local_gateway_route_table_id_python">
 <a href="#local_gateway_route_table_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>gateway_<wbr>route_<wbr>table_<wbr>id</a>
@@ -378,7 +403,8 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Route Table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="local_gateway_virtual_interface_group_id_python">
 <a href="#local_gateway_virtual_interface_group_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>gateway_<wbr>virtual_<wbr>interface_<wbr>group_<wbr>id</a>
@@ -387,7 +413,8 @@ The LocalGatewayRoute resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Virtual Interface Group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -398,7 +425,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -406,11 +435,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -418,11 +450,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -430,11 +465,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -442,7 +480,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -569,7 +608,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_destinationcidrblock_csharp">
 <a href="#state_destinationcidrblock_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
@@ -578,7 +619,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_localgatewayroutetableid_csharp">
 <a href="#state_localgatewayroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -587,7 +629,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Route Table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_localgatewayvirtualinterfacegroupid_csharp">
 <a href="#state_localgatewayvirtualinterfacegroupid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Group<wbr>Id</a>
@@ -596,11 +639,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Virtual Interface Group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_destinationcidrblock_go">
 <a href="#state_destinationcidrblock_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
@@ -609,7 +655,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_localgatewayroutetableid_go">
 <a href="#state_localgatewayroutetableid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -618,7 +665,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Route Table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_localgatewayvirtualinterfacegroupid_go">
 <a href="#state_localgatewayvirtualinterfacegroupid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Group<wbr>Id</a>
@@ -627,11 +675,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Virtual Interface Group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_destinationcidrblock_nodejs">
 <a href="#state_destinationcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Block</a>
@@ -640,7 +691,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_localgatewayroutetableid_nodejs">
 <a href="#state_localgatewayroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -649,7 +701,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Route Table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_localgatewayvirtualinterfacegroupid_nodejs">
 <a href="#state_localgatewayvirtualinterfacegroupid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Group<wbr>Id</a>
@@ -658,11 +711,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Virtual Interface Group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_destination_cidr_block_python">
 <a href="#state_destination_cidr_block_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>block</a>
@@ -671,7 +727,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_local_gateway_route_table_id_python">
 <a href="#state_local_gateway_route_table_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>gateway_<wbr>route_<wbr>table_<wbr>id</a>
@@ -680,7 +737,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Route Table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_local_gateway_virtual_interface_group_id_python">
 <a href="#state_local_gateway_virtual_interface_group_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>gateway_<wbr>virtual_<wbr>interface_<wbr>group_<wbr>id</a>
@@ -689,7 +747,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Local Gateway Virtual Interface Group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -715,6 +774,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

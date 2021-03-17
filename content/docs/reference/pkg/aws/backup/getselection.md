@@ -14,17 +14,11 @@ Use this data source to get information on an existing backup selection.
 
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -43,12 +37,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -71,12 +62,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -85,12 +73,9 @@ example = aws.backup.get_selection(plan_id=data["aws_backup_plan"]["example"]["i
     selection_id="selection-id-example")
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -102,16 +87,9 @@ const example = aws.backup.getSelection({
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Using getSelection {#using}
@@ -149,7 +127,9 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="planid_csharp">
 <a href="#planid_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
@@ -158,7 +138,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup plan ID associated with the selection of resources.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="selectionid_csharp">
 <a href="#selectionid_csharp" style="color: inherit; text-decoration: inherit;">Selection<wbr>Id</a>
@@ -167,11 +148,14 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup selection ID.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="planid_go">
 <a href="#planid_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
@@ -180,7 +164,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup plan ID associated with the selection of resources.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="selectionid_go">
 <a href="#selectionid_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Id</a>
@@ -189,11 +174,14 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup selection ID.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="planid_nodejs">
 <a href="#planid_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Id</a>
@@ -202,7 +190,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup plan ID associated with the selection of resources.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="selectionid_nodejs">
 <a href="#selectionid_nodejs" style="color: inherit; text-decoration: inherit;">selection<wbr>Id</a>
@@ -211,11 +200,14 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup selection ID.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="plan_id_python">
 <a href="#plan_id_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>id</a>
@@ -224,7 +216,8 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backup plan ID associated with the selection of resources.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="selection_id_python">
 <a href="#selection_id_python" style="color: inherit; text-decoration: inherit;">selection_<wbr>id</a>
@@ -233,7 +226,8 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backup selection ID.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -246,7 +240,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="iamrolearn_csharp">
 <a href="#iamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -255,7 +251,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -264,7 +261,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -273,7 +271,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="planid_csharp">
 <a href="#planid_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
@@ -281,7 +280,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -290,7 +290,8 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="selectionid_csharp">
 <a href="#selectionid_csharp" style="color: inherit; text-decoration: inherit;">Selection<wbr>Id</a>
@@ -298,11 +299,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="iamrolearn_go">
 <a href="#iamrolearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -311,7 +315,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -320,7 +325,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -329,7 +335,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="planid_go">
 <a href="#planid_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
@@ -337,7 +344,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -346,7 +354,8 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="selectionid_go">
 <a href="#selectionid_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Id</a>
@@ -354,11 +363,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="iamrolearn_nodejs">
 <a href="#iamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Arn</a>
@@ -367,7 +379,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -376,7 +389,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -385,7 +399,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="planid_nodejs">
 <a href="#planid_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Id</a>
@@ -393,7 +408,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -402,7 +418,8 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="selectionid_nodejs">
 <a href="#selectionid_nodejs" style="color: inherit; text-decoration: inherit;">selection<wbr>Id</a>
@@ -410,11 +427,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="iam_role_arn_python">
 <a href="#iam_role_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>arn</a>
@@ -423,7 +443,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -432,7 +453,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -441,7 +463,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="plan_id_python">
 <a href="#plan_id_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>id</a>
@@ -449,7 +472,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -458,7 +482,8 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="selection_id_python">
 <a href="#selection_id_python" style="color: inherit; text-decoration: inherit;">selection_<wbr>id</a>
@@ -466,7 +491,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -480,6 +506,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

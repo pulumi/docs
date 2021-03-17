@@ -186,17 +186,11 @@ class MyStack : Stack
 ```
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -251,12 +245,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -317,12 +308,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -356,12 +344,9 @@ my_demo_integration = aws.apigateway.Integration("myDemoIntegration",
     })
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -399,16 +384,9 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a Integration Resource {#create}
@@ -433,7 +411,9 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -441,7 +421,9 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -449,7 +431,9 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -457,7 +441,10 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -483,7 +470,9 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -491,7 +480,9 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -499,7 +490,9 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -507,7 +500,9 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -515,13 +510,18 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -529,7 +529,9 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -537,7 +539,9 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -545,7 +549,10 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -560,7 +567,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="httpmethod_csharp">
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -570,7 +579,8 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
 when calling the associated resource.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -579,7 +589,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="restapi_csharp">
 <a href="#restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -588,7 +599,8 @@ when calling the associated resource.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -597,7 +609,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cachekeyparameters_csharp">
 <a href="#cachekeyparameters_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Parameters</a>
@@ -606,7 +619,8 @@ when calling the associated resource.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of cache key parameters for the integration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cachenamespace_csharp">
 <a href="#cachenamespace_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Namespace</a>
@@ -615,7 +629,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's cache namespace.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="connectionid_csharp">
 <a href="#connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -624,7 +639,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="connectiontype_csharp">
 <a href="#connectiontype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
@@ -633,7 +649,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="contenthandling_csharp">
 <a href="#contenthandling_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
@@ -642,7 +659,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -651,7 +669,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="integrationhttpmethod_csharp">
 <a href="#integrationhttpmethod_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Http<wbr>Method</a>
@@ -664,7 +683,8 @@ when calling the associated resource.
 **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 Not all methods are compatible with all `AWS` integrations.
 e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="passthroughbehavior_csharp">
 <a href="#passthroughbehavior_csharp" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Behavior</a>
@@ -673,7 +693,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="requestparameters_csharp">
 <a href="#requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -683,7 +704,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
     </dt>
     <dd>{{% md %}}A map of request query string parameters and headers that should be passed to the backend responder.
 For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="requesttemplates_csharp">
 <a href="#requesttemplates_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
@@ -692,7 +714,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of the integration's request templates.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeoutmilliseconds_csharp">
 <a href="#timeoutmilliseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Milliseconds</a>
@@ -701,7 +724,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tlsconfig_csharp">
 <a href="#tlsconfig_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -710,7 +734,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block specifying the TLS configuration for an integration. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -721,11 +746,14 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
     <dd>{{% md %}}The input's URI. **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form `arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}`. `region`, `subdomain` and `service` are used to determine the right endpoint.
 e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="httpmethod_go">
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -735,7 +763,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
 when calling the associated resource.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -744,7 +773,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="restapi_go">
 <a href="#restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -753,7 +783,8 @@ when calling the associated resource.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -762,7 +793,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cachekeyparameters_go">
 <a href="#cachekeyparameters_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Parameters</a>
@@ -771,7 +803,8 @@ when calling the associated resource.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of cache key parameters for the integration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cachenamespace_go">
 <a href="#cachenamespace_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Namespace</a>
@@ -780,7 +813,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's cache namespace.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="connectionid_go">
 <a href="#connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -789,7 +823,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="connectiontype_go">
 <a href="#connectiontype_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
@@ -798,7 +833,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="contenthandling_go">
 <a href="#contenthandling_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
@@ -807,7 +843,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -816,7 +853,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="integrationhttpmethod_go">
 <a href="#integrationhttpmethod_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Http<wbr>Method</a>
@@ -829,7 +867,8 @@ when calling the associated resource.
 **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 Not all methods are compatible with all `AWS` integrations.
 e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="passthroughbehavior_go">
 <a href="#passthroughbehavior_go" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Behavior</a>
@@ -838,7 +877,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="requestparameters_go">
 <a href="#requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -848,7 +888,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
     </dt>
     <dd>{{% md %}}A map of request query string parameters and headers that should be passed to the backend responder.
 For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="requesttemplates_go">
 <a href="#requesttemplates_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
@@ -857,7 +898,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of the integration's request templates.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeoutmilliseconds_go">
 <a href="#timeoutmilliseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Milliseconds</a>
@@ -866,7 +908,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tlsconfig_go">
 <a href="#tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -875,7 +918,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block specifying the TLS configuration for an integration. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -886,11 +930,14 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
     <dd>{{% md %}}The input's URI. **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form `arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}`. `region`, `subdomain` and `service` are used to determine the right endpoint.
 e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="httpmethod_nodejs">
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -900,7 +947,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
 when calling the associated resource.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -909,7 +957,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="restapi_nodejs">
 <a href="#restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
@@ -918,7 +967,8 @@ when calling the associated resource.
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -927,7 +977,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cachekeyparameters_nodejs">
 <a href="#cachekeyparameters_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Parameters</a>
@@ -936,7 +987,8 @@ when calling the associated resource.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of cache key parameters for the integration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cachenamespace_nodejs">
 <a href="#cachenamespace_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Namespace</a>
@@ -945,7 +997,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's cache namespace.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="connectionid_nodejs">
 <a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
@@ -954,7 +1007,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="connectiontype_nodejs">
 <a href="#connectiontype_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Type</a>
@@ -963,7 +1017,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="contenthandling_nodejs">
 <a href="#contenthandling_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling</a>
@@ -972,7 +1027,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -981,7 +1037,8 @@ when calling the associated resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="integrationhttpmethod_nodejs">
 <a href="#integrationhttpmethod_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Http<wbr>Method</a>
@@ -994,7 +1051,8 @@ when calling the associated resource.
 **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 Not all methods are compatible with all `AWS` integrations.
 e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="passthroughbehavior_nodejs">
 <a href="#passthroughbehavior_nodejs" style="color: inherit; text-decoration: inherit;">passthrough<wbr>Behavior</a>
@@ -1003,7 +1061,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="requestparameters_nodejs">
 <a href="#requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
@@ -1013,7 +1072,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
     </dt>
     <dd>{{% md %}}A map of request query string parameters and headers that should be passed to the backend responder.
 For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="requesttemplates_nodejs">
 <a href="#requesttemplates_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Templates</a>
@@ -1022,7 +1082,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of the integration's request templates.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeoutmilliseconds_nodejs">
 <a href="#timeoutmilliseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Milliseconds</a>
@@ -1031,7 +1092,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tlsconfig_nodejs">
 <a href="#tlsconfig_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Config</a>
@@ -1040,7 +1102,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block specifying the TLS configuration for an integration. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1051,11 +1114,14 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
     <dd>{{% md %}}The input's URI. **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form `arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}`. `region`, `subdomain` and `service` are used to determine the right endpoint.
 e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="http_method_python">
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -1065,7 +1131,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
 when calling the associated resource.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1074,7 +1141,8 @@ when calling the associated resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API resource ID.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="rest_api_python">
 <a href="#rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
@@ -1083,7 +1151,8 @@ when calling the associated resource.
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1092,7 +1161,8 @@ when calling the associated resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cache_key_parameters_python">
 <a href="#cache_key_parameters_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>parameters</a>
@@ -1101,7 +1171,8 @@ when calling the associated resource.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of cache key parameters for the integration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cache_namespace_python">
 <a href="#cache_namespace_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>namespace</a>
@@ -1110,7 +1181,8 @@ when calling the associated resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration's cache namespace.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="connection_id_python">
 <a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
@@ -1119,7 +1191,8 @@ when calling the associated resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="connection_type_python">
 <a href="#connection_type_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>type</a>
@@ -1128,7 +1201,8 @@ when calling the associated resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="content_handling_python">
 <a href="#content_handling_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling</a>
@@ -1137,7 +1211,8 @@ when calling the associated resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1146,7 +1221,8 @@ when calling the associated resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="integration_http_method_python">
 <a href="#integration_http_method_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>http_<wbr>method</a>
@@ -1159,7 +1235,8 @@ when calling the associated resource.
 **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 Not all methods are compatible with all `AWS` integrations.
 e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="passthrough_behavior_python">
 <a href="#passthrough_behavior_python" style="color: inherit; text-decoration: inherit;">passthrough_<wbr>behavior</a>
@@ -1168,7 +1245,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="request_parameters_python">
 <a href="#request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
@@ -1178,7 +1256,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
     </dt>
     <dd>{{% md %}}A map of request query string parameters and headers that should be passed to the backend responder.
 For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="request_templates_python">
 <a href="#request_templates_python" style="color: inherit; text-decoration: inherit;">request_<wbr>templates</a>
@@ -1187,7 +1266,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the integration's request templates.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeout_milliseconds_python">
 <a href="#timeout_milliseconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>milliseconds</a>
@@ -1196,7 +1276,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tls_config_python">
 <a href="#tls_config_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>config</a>
@@ -1205,7 +1286,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block specifying the TLS configuration for an integration. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1216,7 +1298,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
     <dd>{{% md %}}The input's URI. **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form `arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}`. `region`, `subdomain` and `service` are used to determine the right endpoint.
 e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1227,7 +1310,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1235,11 +1320,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1247,11 +1335,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1259,11 +1350,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1271,7 +1365,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1398,7 +1493,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cachekeyparameters_csharp">
 <a href="#state_cachekeyparameters_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Parameters</a>
@@ -1407,7 +1504,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of cache key parameters for the integration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cachenamespace_csharp">
 <a href="#state_cachenamespace_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Namespace</a>
@@ -1416,7 +1514,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's cache namespace.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_connectionid_csharp">
 <a href="#state_connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -1425,7 +1524,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_connectiontype_csharp">
 <a href="#state_connectiontype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
@@ -1434,7 +1534,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_contenthandling_csharp">
 <a href="#state_contenthandling_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
@@ -1443,7 +1544,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_credentials_csharp">
 <a href="#state_credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1452,7 +1554,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_csharp">
 <a href="#state_httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -1462,7 +1565,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
 when calling the associated resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_integrationhttpmethod_csharp">
 <a href="#state_integrationhttpmethod_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Http<wbr>Method</a>
@@ -1475,7 +1579,8 @@ when calling the associated resource.
 **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 Not all methods are compatible with all `AWS` integrations.
 e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_passthroughbehavior_csharp">
 <a href="#state_passthroughbehavior_csharp" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Behavior</a>
@@ -1484,7 +1589,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_requestparameters_csharp">
 <a href="#state_requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -1494,7 +1600,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
     </dt>
     <dd>{{% md %}}A map of request query string parameters and headers that should be passed to the backend responder.
 For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_requesttemplates_csharp">
 <a href="#state_requesttemplates_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
@@ -1503,7 +1610,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of the integration's request templates.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_csharp">
 <a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1512,7 +1620,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_restapi_csharp">
 <a href="#state_restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -1521,7 +1630,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmilliseconds_csharp">
 <a href="#state_timeoutmilliseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Milliseconds</a>
@@ -1530,7 +1640,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tlsconfig_csharp">
 <a href="#state_tlsconfig_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -1539,7 +1650,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block specifying the TLS configuration for an integration. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1548,7 +1660,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_uri_csharp">
 <a href="#state_uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1559,11 +1672,14 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
     <dd>{{% md %}}The input's URI. **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form `arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}`. `region`, `subdomain` and `service` are used to determine the right endpoint.
 e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cachekeyparameters_go">
 <a href="#state_cachekeyparameters_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Parameters</a>
@@ -1572,7 +1688,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of cache key parameters for the integration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cachenamespace_go">
 <a href="#state_cachenamespace_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Namespace</a>
@@ -1581,7 +1698,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's cache namespace.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_connectionid_go">
 <a href="#state_connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -1590,7 +1708,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_connectiontype_go">
 <a href="#state_connectiontype_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
@@ -1599,7 +1718,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_contenthandling_go">
 <a href="#state_contenthandling_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
@@ -1608,7 +1728,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_credentials_go">
 <a href="#state_credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1617,7 +1738,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_go">
 <a href="#state_httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -1627,7 +1749,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
 when calling the associated resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_integrationhttpmethod_go">
 <a href="#state_integrationhttpmethod_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Http<wbr>Method</a>
@@ -1640,7 +1763,8 @@ when calling the associated resource.
 **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 Not all methods are compatible with all `AWS` integrations.
 e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_passthroughbehavior_go">
 <a href="#state_passthroughbehavior_go" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Behavior</a>
@@ -1649,7 +1773,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_requestparameters_go">
 <a href="#state_requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -1659,7 +1784,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
     </dt>
     <dd>{{% md %}}A map of request query string parameters and headers that should be passed to the backend responder.
 For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_requesttemplates_go">
 <a href="#state_requesttemplates_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
@@ -1668,7 +1794,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of the integration's request templates.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_go">
 <a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1677,7 +1804,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_restapi_go">
 <a href="#state_restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -1686,7 +1814,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmilliseconds_go">
 <a href="#state_timeoutmilliseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Milliseconds</a>
@@ -1695,7 +1824,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tlsconfig_go">
 <a href="#state_tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -1704,7 +1834,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block specifying the TLS configuration for an integration. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1713,7 +1844,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_uri_go">
 <a href="#state_uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1724,11 +1856,14 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
     <dd>{{% md %}}The input's URI. **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form `arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}`. `region`, `subdomain` and `service` are used to determine the right endpoint.
 e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cachekeyparameters_nodejs">
 <a href="#state_cachekeyparameters_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Parameters</a>
@@ -1737,7 +1872,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of cache key parameters for the integration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cachenamespace_nodejs">
 <a href="#state_cachenamespace_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Namespace</a>
@@ -1746,7 +1882,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's cache namespace.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_connectionid_nodejs">
 <a href="#state_connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
@@ -1755,7 +1892,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_connectiontype_nodejs">
 <a href="#state_connectiontype_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Type</a>
@@ -1764,7 +1902,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_contenthandling_nodejs">
 <a href="#state_contenthandling_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling</a>
@@ -1773,7 +1912,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_credentials_nodejs">
 <a href="#state_credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1782,7 +1922,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_nodejs">
 <a href="#state_httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -1792,7 +1933,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
 when calling the associated resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_integrationhttpmethod_nodejs">
 <a href="#state_integrationhttpmethod_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Http<wbr>Method</a>
@@ -1805,7 +1947,8 @@ when calling the associated resource.
 **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 Not all methods are compatible with all `AWS` integrations.
 e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_passthroughbehavior_nodejs">
 <a href="#state_passthroughbehavior_nodejs" style="color: inherit; text-decoration: inherit;">passthrough<wbr>Behavior</a>
@@ -1814,7 +1957,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_requestparameters_nodejs">
 <a href="#state_requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
@@ -1824,7 +1968,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
     </dt>
     <dd>{{% md %}}A map of request query string parameters and headers that should be passed to the backend responder.
 For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_requesttemplates_nodejs">
 <a href="#state_requesttemplates_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Templates</a>
@@ -1833,7 +1978,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of the integration's request templates.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_nodejs">
 <a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1842,7 +1988,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_restapi_nodejs">
 <a href="#state_restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
@@ -1851,7 +1998,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmilliseconds_nodejs">
 <a href="#state_timeoutmilliseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Milliseconds</a>
@@ -1860,7 +2008,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tlsconfig_nodejs">
 <a href="#state_tlsconfig_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Config</a>
@@ -1869,7 +2018,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block specifying the TLS configuration for an integration. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1878,7 +2028,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_uri_nodejs">
 <a href="#state_uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1889,11 +2040,14 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
     <dd>{{% md %}}The input's URI. **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form `arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}`. `region`, `subdomain` and `service` are used to determine the right endpoint.
 e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cache_key_parameters_python">
 <a href="#state_cache_key_parameters_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>parameters</a>
@@ -1902,7 +2056,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of cache key parameters for the integration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cache_namespace_python">
 <a href="#state_cache_namespace_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>namespace</a>
@@ -1911,7 +2066,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration's cache namespace.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_connection_id_python">
 <a href="#state_connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
@@ -1920,7 +2076,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_connection_type_python">
 <a href="#state_connection_type_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>type</a>
@@ -1929,7 +2086,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_content_handling_python">
 <a href="#state_content_handling_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling</a>
@@ -1938,7 +2096,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_credentials_python">
 <a href="#state_credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1947,7 +2106,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_http_method_python">
 <a href="#state_http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -1957,7 +2117,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
 when calling the associated resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_integration_http_method_python">
 <a href="#state_integration_http_method_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>http_<wbr>method</a>
@@ -1970,7 +2131,8 @@ when calling the associated resource.
 **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 Not all methods are compatible with all `AWS` integrations.
 e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_passthrough_behavior_python">
 <a href="#state_passthrough_behavior_python" style="color: inherit; text-decoration: inherit;">passthrough_<wbr>behavior</a>
@@ -1979,7 +2141,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_request_parameters_python">
 <a href="#state_request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
@@ -1989,7 +2152,8 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
     </dt>
     <dd>{{% md %}}A map of request query string parameters and headers that should be passed to the backend responder.
 For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_request_templates_python">
 <a href="#state_request_templates_python" style="color: inherit; text-decoration: inherit;">request_<wbr>templates</a>
@@ -1998,7 +2162,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the integration's request templates.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_resource_id_python">
 <a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -2007,7 +2172,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API resource ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_rest_api_python">
 <a href="#state_rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
@@ -2016,7 +2182,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_milliseconds_python">
 <a href="#state_timeout_milliseconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>milliseconds</a>
@@ -2025,7 +2192,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tls_config_python">
 <a href="#state_tls_config_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>config</a>
@@ -2034,7 +2202,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block specifying the TLS configuration for an integration. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2043,7 +2212,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_uri_python">
 <a href="#state_uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -2054,7 +2224,8 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
     <dd>{{% md %}}The input's URI. **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form `arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}`. `region`, `subdomain` and `service` are used to determine the right endpoint.
 e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -2069,7 +2240,9 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
 <h4 id="integrationtlsconfig">Integration<wbr>Tls<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="insecureskipverification_csharp">
 <a href="#insecureskipverification_csharp" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Skip<wbr>Verification</a>
@@ -2078,11 +2251,14 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not API Gateway skips verification that the certificate for an integration endpoint is issued by a [supported certificate authority](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-supported-certificate-authorities-for-http-endpoints.html). This isn’t recommended, but it enables you to use certificates that are signed by private certificate authorities, or certificates that are self-signed. If enabled, API Gateway still performs basic certificate validation, which includes checking the certificate's expiration date, hostname, and presence of a root certificate authority. Supported only for `HTTP` and `HTTP_PROXY` integrations.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="insecureskipverification_go">
 <a href="#insecureskipverification_go" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Skip<wbr>Verification</a>
@@ -2091,11 +2267,14 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not API Gateway skips verification that the certificate for an integration endpoint is issued by a [supported certificate authority](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-supported-certificate-authorities-for-http-endpoints.html). This isn’t recommended, but it enables you to use certificates that are signed by private certificate authorities, or certificates that are self-signed. If enabled, API Gateway still performs basic certificate validation, which includes checking the certificate's expiration date, hostname, and presence of a root certificate authority. Supported only for `HTTP` and `HTTP_PROXY` integrations.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="insecureskipverification_nodejs">
 <a href="#insecureskipverification_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Skip<wbr>Verification</a>
@@ -2104,11 +2283,14 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not API Gateway skips verification that the certificate for an integration endpoint is issued by a [supported certificate authority](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-supported-certificate-authorities-for-http-endpoints.html). This isn’t recommended, but it enables you to use certificates that are signed by private certificate authorities, or certificates that are self-signed. If enabled, API Gateway still performs basic certificate validation, which includes checking the certificate's expiration date, hostname, and presence of a root certificate authority. Supported only for `HTTP` and `HTTP_PROXY` integrations.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="insecure_skip_verification_python">
 <a href="#insecure_skip_verification_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>skip_<wbr>verification</a>
@@ -2117,7 +2299,8 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not API Gateway skips verification that the certificate for an integration endpoint is issued by a [supported certificate authority](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-supported-certificate-authorities-for-http-endpoints.html). This isn’t recommended, but it enables you to use certificates that are signed by private certificate authorities, or certificates that are self-signed. If enabled, API Gateway still performs basic certificate validation, which includes checking the certificate's expiration date, hostname, and presence of a root certificate authority. Supported only for `HTTP` and `HTTP_PROXY` integrations.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -2138,6 +2321,6 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

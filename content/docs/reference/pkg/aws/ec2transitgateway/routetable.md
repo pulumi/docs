@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.ec2transitgateway.RouteTable resource with
 Manages an EC2 Transit Gateway Route Table.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -41,12 +35,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -68,12 +59,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -81,12 +69,9 @@ import pulumi_aws as aws
 example = aws.ec2transitgateway.RouteTable("example", transit_gateway_id=aws_ec2_transit_gateway["example"]["id"])
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -95,16 +80,9 @@ import * as aws from "@pulumi/aws";
 const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayId: aws_ec2_transit_gateway.example.id});
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a RouteTable Resource {#create}
@@ -129,7 +107,9 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -137,7 +117,9 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -145,7 +127,9 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -153,7 +137,10 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -179,7 +166,9 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -187,7 +176,9 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -195,7 +186,9 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -203,7 +196,9 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -211,13 +206,18 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -225,7 +225,9 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -233,7 +235,9 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -241,7 +245,10 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -256,7 +263,9 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="transitgatewayid_csharp">
 <a href="#transitgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
@@ -265,7 +274,8 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -274,11 +284,14 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Route Table.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="transitgatewayid_go">
 <a href="#transitgatewayid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
@@ -287,7 +300,8 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -296,11 +310,14 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Route Table.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="transitgatewayid_nodejs">
 <a href="#transitgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Id</a>
@@ -309,7 +326,8 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -318,11 +336,14 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Route Table.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="transit_gateway_id_python">
 <a href="#transit_gateway_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>id</a>
@@ -331,7 +352,8 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -340,7 +362,8 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Route Table.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -351,7 +374,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -360,7 +385,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultassociationroutetable_csharp">
 <a href="#defaultassociationroutetable_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Association<wbr>Route<wbr>Table</a>
@@ -369,7 +395,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default association route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultpropagationroutetable_csharp">
 <a href="#defaultpropagationroutetable_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Propagation<wbr>Route<wbr>Table</a>
@@ -378,7 +405,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -386,11 +414,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -399,7 +430,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultassociationroutetable_go">
 <a href="#defaultassociationroutetable_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Association<wbr>Route<wbr>Table</a>
@@ -408,7 +440,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default association route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultpropagationroutetable_go">
 <a href="#defaultpropagationroutetable_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Propagation<wbr>Route<wbr>Table</a>
@@ -417,7 +450,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -425,11 +459,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -438,7 +475,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultassociationroutetable_nodejs">
 <a href="#defaultassociationroutetable_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Association<wbr>Route<wbr>Table</a>
@@ -447,7 +485,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default association route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultpropagationroutetable_nodejs">
 <a href="#defaultpropagationroutetable_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Propagation<wbr>Route<wbr>Table</a>
@@ -456,7 +495,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -464,11 +504,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -477,7 +520,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="default_association_route_table_python">
 <a href="#default_association_route_table_python" style="color: inherit; text-decoration: inherit;">default_<wbr>association_<wbr>route_<wbr>table</a>
@@ -486,7 +530,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default association route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="default_propagation_route_table_python">
 <a href="#default_propagation_route_table_python" style="color: inherit; text-decoration: inherit;">default_<wbr>propagation_<wbr>route_<wbr>table</a>
@@ -495,7 +540,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -503,7 +549,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -630,7 +677,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -639,7 +688,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultassociationroutetable_csharp">
 <a href="#state_defaultassociationroutetable_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Association<wbr>Route<wbr>Table</a>
@@ -648,7 +698,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default association route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultpropagationroutetable_csharp">
 <a href="#state_defaultpropagationroutetable_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Propagation<wbr>Route<wbr>Table</a>
@@ -657,7 +708,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -666,7 +718,8 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Route Table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayid_csharp">
 <a href="#state_transitgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
@@ -675,11 +728,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -688,7 +744,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultassociationroutetable_go">
 <a href="#state_defaultassociationroutetable_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Association<wbr>Route<wbr>Table</a>
@@ -697,7 +754,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default association route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultpropagationroutetable_go">
 <a href="#state_defaultpropagationroutetable_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Propagation<wbr>Route<wbr>Table</a>
@@ -706,7 +764,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -715,7 +774,8 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Route Table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayid_go">
 <a href="#state_transitgatewayid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
@@ -724,11 +784,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -737,7 +800,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultassociationroutetable_nodejs">
 <a href="#state_defaultassociationroutetable_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Association<wbr>Route<wbr>Table</a>
@@ -746,7 +810,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default association route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultpropagationroutetable_nodejs">
 <a href="#state_defaultpropagationroutetable_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Propagation<wbr>Route<wbr>Table</a>
@@ -755,7 +820,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -764,7 +830,8 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Route Table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayid_nodejs">
 <a href="#state_transitgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Id</a>
@@ -773,11 +840,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -786,7 +856,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_default_association_route_table_python">
 <a href="#state_default_association_route_table_python" style="color: inherit; text-decoration: inherit;">default_<wbr>association_<wbr>route_<wbr>table</a>
@@ -795,7 +866,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default association route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_default_propagation_route_table_python">
 <a href="#state_default_propagation_route_table_python" style="color: inherit; text-decoration: inherit;">default_<wbr>propagation_<wbr>route_<wbr>table</a>
@@ -804,7 +876,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -813,7 +886,8 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Route Table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_transit_gateway_id_python">
 <a href="#state_transit_gateway_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>id</a>
@@ -822,7 +896,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -848,6 +923,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

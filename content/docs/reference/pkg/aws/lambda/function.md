@@ -43,7 +43,9 @@ Lambda Functions can be imported using the `function_name`, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -51,7 +53,9 @@ Lambda Functions can be imported using the `function_name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -59,7 +63,9 @@ Lambda Functions can be imported using the `function_name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -67,7 +73,10 @@ Lambda Functions can be imported using the `function_name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -93,7 +102,9 @@ Lambda Functions can be imported using the `function_name`, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -101,7 +112,9 @@ Lambda Functions can be imported using the `function_name`, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -109,7 +122,9 @@ Lambda Functions can be imported using the `function_name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -117,7 +132,9 @@ Lambda Functions can be imported using the `function_name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -125,13 +142,18 @@ Lambda Functions can be imported using the `function_name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -139,7 +161,9 @@ Lambda Functions can be imported using the `function_name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -147,7 +171,9 @@ Lambda Functions can be imported using the `function_name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -155,7 +181,10 @@ Lambda Functions can be imported using the `function_name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -170,7 +199,9 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -179,7 +210,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -188,7 +220,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Archive</span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="codesigningconfigarn_csharp">
 <a href="#codesigningconfigarn_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Config<wbr>Arn</a>
@@ -197,7 +230,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="deadletterconfig_csharp">
 <a href="#deadletterconfig_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
@@ -206,7 +240,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -215,7 +250,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="environment_csharp">
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -224,7 +260,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filesystemconfig_csharp">
 <a href="#filesystemconfig_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
@@ -233,7 +270,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="handler_csharp">
 <a href="#handler_csharp" style="color: inherit; text-decoration: inherit;">Handler</a>
@@ -242,7 +280,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="imageconfig_csharp">
 <a href="#imageconfig_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
@@ -251,7 +290,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="imageuri_csharp">
 <a href="#imageuri_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
@@ -260,7 +300,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_csharp">
 <a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -268,7 +309,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="layers_csharp">
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
@@ -277,7 +319,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="memorysize_csharp">
 <a href="#memorysize_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -286,7 +329,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -295,7 +339,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="packagetype_csharp">
 <a href="#packagetype_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
@@ -304,7 +349,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="publish_csharp">
 <a href="#publish_csharp" style="color: inherit; text-decoration: inherit;">Publish</a>
@@ -313,7 +359,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="reservedconcurrentexecutions_csharp">
 <a href="#reservedconcurrentexecutions_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Concurrent<wbr>Executions</a>
@@ -322,7 +369,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="runtime_csharp">
 <a href="#runtime_csharp" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -331,7 +379,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string | <a href="#runtime">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Runtime</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3bucket_csharp">
 <a href="#s3bucket_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket</a>
@@ -340,7 +389,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3key_csharp">
 <a href="#s3key_csharp" style="color: inherit; text-decoration: inherit;">S3Key</a>
@@ -349,7 +399,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3objectversion_csharp">
 <a href="#s3objectversion_csharp" style="color: inherit; text-decoration: inherit;">S3Object<wbr>Version</a>
@@ -358,7 +409,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sourcecodehash_csharp">
 <a href="#sourcecodehash_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Hash</a>
@@ -366,7 +418,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -375,7 +428,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -384,7 +438,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tracingconfig_csharp">
 <a href="#tracingconfig_csharp" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Config</a>
@@ -393,7 +448,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_csharp">
 <a href="#vpcconfig_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
@@ -402,11 +458,14 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -415,7 +474,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -424,7 +484,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="codesigningconfigarn_go">
 <a href="#codesigningconfigarn_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Config<wbr>Arn</a>
@@ -433,7 +494,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="deadletterconfig_go">
 <a href="#deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
@@ -442,7 +504,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -451,7 +514,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="environment_go">
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -460,7 +524,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filesystemconfig_go">
 <a href="#filesystemconfig_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
@@ -469,7 +534,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="handler_go">
 <a href="#handler_go" style="color: inherit; text-decoration: inherit;">Handler</a>
@@ -478,7 +544,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="imageconfig_go">
 <a href="#imageconfig_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
@@ -487,7 +554,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="imageuri_go">
 <a href="#imageuri_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
@@ -496,7 +564,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_go">
 <a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -504,7 +573,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="layers_go">
 <a href="#layers_go" style="color: inherit; text-decoration: inherit;">Layers</a>
@@ -513,7 +583,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="memorysize_go">
 <a href="#memorysize_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -522,7 +593,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -531,7 +603,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="packagetype_go">
 <a href="#packagetype_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
@@ -540,7 +613,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="publish_go">
 <a href="#publish_go" style="color: inherit; text-decoration: inherit;">Publish</a>
@@ -549,7 +623,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="reservedconcurrentexecutions_go">
 <a href="#reservedconcurrentexecutions_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Concurrent<wbr>Executions</a>
@@ -558,7 +633,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="runtime_go">
 <a href="#runtime_go" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -567,7 +643,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string | <a href="#runtime">Runtime</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3bucket_go">
 <a href="#s3bucket_go" style="color: inherit; text-decoration: inherit;">S3Bucket</a>
@@ -576,7 +653,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3key_go">
 <a href="#s3key_go" style="color: inherit; text-decoration: inherit;">S3Key</a>
@@ -585,7 +663,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3objectversion_go">
 <a href="#s3objectversion_go" style="color: inherit; text-decoration: inherit;">S3Object<wbr>Version</a>
@@ -594,7 +673,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sourcecodehash_go">
 <a href="#sourcecodehash_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Hash</a>
@@ -602,7 +682,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -611,7 +692,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -620,7 +702,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tracingconfig_go">
 <a href="#tracingconfig_go" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Config</a>
@@ -629,7 +712,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_go">
 <a href="#vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
@@ -638,11 +722,14 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -651,7 +738,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -660,7 +748,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">pulumi.asset.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="codesigningconfigarn_nodejs">
 <a href="#codesigningconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing<wbr>Config<wbr>Arn</a>
@@ -669,7 +758,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="deadletterconfig_nodejs">
 <a href="#deadletterconfig_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Config</a>
@@ -678,7 +768,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -687,7 +778,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="environment_nodejs">
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -696,7 +788,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filesystemconfig_nodejs">
 <a href="#filesystemconfig_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Config</a>
@@ -705,7 +798,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="handler_nodejs">
 <a href="#handler_nodejs" style="color: inherit; text-decoration: inherit;">handler</a>
@@ -714,7 +808,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="imageconfig_nodejs">
 <a href="#imageconfig_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Config</a>
@@ -723,7 +818,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="imageuri_nodejs">
 <a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
@@ -732,7 +828,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_nodejs">
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
@@ -740,7 +837,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="layers_nodejs">
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
@@ -749,7 +847,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="memorysize_nodejs">
 <a href="#memorysize_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
@@ -758,7 +857,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -767,7 +867,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="packagetype_nodejs">
 <a href="#packagetype_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Type</a>
@@ -776,7 +877,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="publish_nodejs">
 <a href="#publish_nodejs" style="color: inherit; text-decoration: inherit;">publish</a>
@@ -785,7 +887,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="reservedconcurrentexecutions_nodejs">
 <a href="#reservedconcurrentexecutions_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Concurrent<wbr>Executions</a>
@@ -794,7 +897,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="runtime_nodejs">
 <a href="#runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -803,7 +907,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string | <a href="#runtime">Runtime</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3bucket_nodejs">
 <a href="#s3bucket_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket</a>
@@ -812,7 +917,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3key_nodejs">
 <a href="#s3key_nodejs" style="color: inherit; text-decoration: inherit;">s3Key</a>
@@ -821,7 +927,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3objectversion_nodejs">
 <a href="#s3objectversion_nodejs" style="color: inherit; text-decoration: inherit;">s3Object<wbr>Version</a>
@@ -830,7 +937,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sourcecodehash_nodejs">
 <a href="#sourcecodehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Hash</a>
@@ -838,7 +946,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -847,7 +956,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -856,7 +966,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tracingconfig_nodejs">
 <a href="#tracingconfig_nodejs" style="color: inherit; text-decoration: inherit;">tracing<wbr>Config</a>
@@ -865,7 +976,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_nodejs">
 <a href="#vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
@@ -874,11 +986,14 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -887,7 +1002,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -896,7 +1012,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="code_signing_config_arn_python">
 <a href="#code_signing_config_arn_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing_<wbr>config_<wbr>arn</a>
@@ -905,7 +1022,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dead_letter_config_python">
 <a href="#dead_letter_config_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>config</a>
@@ -914,7 +1032,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -923,7 +1042,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="environment_python">
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -932,7 +1052,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="file_system_config_python">
 <a href="#file_system_config_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>config</a>
@@ -941,7 +1062,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="handler_python">
 <a href="#handler_python" style="color: inherit; text-decoration: inherit;">handler</a>
@@ -950,7 +1072,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="image_config_python">
 <a href="#image_config_python" style="color: inherit; text-decoration: inherit;">image_<wbr>config</a>
@@ -959,7 +1082,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="image_uri_python">
 <a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
@@ -968,7 +1092,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kms_key_arn_python">
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
@@ -976,7 +1101,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="layers_python">
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
@@ -985,7 +1111,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="memory_size_python">
 <a href="#memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
@@ -994,7 +1121,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1003,7 +1131,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="package_type_python">
 <a href="#package_type_python" style="color: inherit; text-decoration: inherit;">package_<wbr>type</a>
@@ -1012,7 +1141,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="publish_python">
 <a href="#publish_python" style="color: inherit; text-decoration: inherit;">publish</a>
@@ -1021,7 +1151,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="reserved_concurrent_executions_python">
 <a href="#reserved_concurrent_executions_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>concurrent_<wbr>executions</a>
@@ -1030,7 +1161,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="runtime_python">
 <a href="#runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -1039,7 +1171,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str | <a href="#runtime">Runtime</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3_bucket_python">
 <a href="#s3_bucket_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket</a>
@@ -1048,7 +1181,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3_key_python">
 <a href="#s3_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key</a>
@@ -1057,7 +1191,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3_object_version_python">
 <a href="#s3_object_version_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>object_<wbr>version</a>
@@ -1066,7 +1201,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="source_code_hash_python">
 <a href="#source_code_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>code_<wbr>hash</a>
@@ -1074,7 +1210,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1083,7 +1220,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1092,7 +1230,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tracing_config_python">
 <a href="#tracing_config_python" style="color: inherit; text-decoration: inherit;">tracing_<wbr>config</a>
@@ -1101,7 +1240,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpc_config_python">
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
@@ -1110,7 +1250,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1121,7 +1262,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1130,7 +1273,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1138,7 +1282,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="invokearn_csharp">
 <a href="#invokearn_csharp" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Arn</a>
@@ -1147,7 +1292,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="lastmodified_csharp">
 <a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1156,7 +1302,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date this resource was last modified.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="qualifiedarn_csharp">
 <a href="#qualifiedarn_csharp" style="color: inherit; text-decoration: inherit;">Qualified<wbr>Arn</a>
@@ -1165,7 +1312,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="signingjobarn_csharp">
 <a href="#signingjobarn_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Job<wbr>Arn</a>
@@ -1174,7 +1322,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing job.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="signingprofileversionarn_csharp">
 <a href="#signingprofileversionarn_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Profile<wbr>Version<wbr>Arn</a>
@@ -1183,7 +1332,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing profile version.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="sourcecodesize_csharp">
 <a href="#sourcecodesize_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Size</a>
@@ -1192,7 +1342,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size in bytes of the function .zip file.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1202,11 +1353,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 * `vpc_config.vpc_id` - ID of the VPC.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1215,7 +1369,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1223,7 +1378,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="invokearn_go">
 <a href="#invokearn_go" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Arn</a>
@@ -1232,7 +1388,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="lastmodified_go">
 <a href="#lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1241,7 +1398,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date this resource was last modified.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="qualifiedarn_go">
 <a href="#qualifiedarn_go" style="color: inherit; text-decoration: inherit;">Qualified<wbr>Arn</a>
@@ -1250,7 +1408,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="signingjobarn_go">
 <a href="#signingjobarn_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Job<wbr>Arn</a>
@@ -1259,7 +1418,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing job.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="signingprofileversionarn_go">
 <a href="#signingprofileversionarn_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Profile<wbr>Version<wbr>Arn</a>
@@ -1268,7 +1428,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing profile version.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="sourcecodesize_go">
 <a href="#sourcecodesize_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Size</a>
@@ -1277,7 +1438,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size in bytes of the function .zip file.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1287,11 +1449,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 * `vpc_config.vpc_id` - ID of the VPC.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1300,7 +1465,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1308,7 +1474,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="invokearn_nodejs">
 <a href="#invokearn_nodejs" style="color: inherit; text-decoration: inherit;">invoke<wbr>Arn</a>
@@ -1317,7 +1484,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="lastmodified_nodejs">
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -1326,7 +1494,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date this resource was last modified.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="qualifiedarn_nodejs">
 <a href="#qualifiedarn_nodejs" style="color: inherit; text-decoration: inherit;">qualified<wbr>Arn</a>
@@ -1335,7 +1504,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="signingjobarn_nodejs">
 <a href="#signingjobarn_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Job<wbr>Arn</a>
@@ -1344,7 +1514,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing job.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="signingprofileversionarn_nodejs">
 <a href="#signingprofileversionarn_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Profile<wbr>Version<wbr>Arn</a>
@@ -1353,7 +1524,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing profile version.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="sourcecodesize_nodejs">
 <a href="#sourcecodesize_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Size</a>
@@ -1362,7 +1534,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size in bytes of the function .zip file.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1372,11 +1545,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 * `vpc_config.vpc_id` - ID of the VPC.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1385,7 +1561,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1393,7 +1570,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="invoke_arn_python">
 <a href="#invoke_arn_python" style="color: inherit; text-decoration: inherit;">invoke_<wbr>arn</a>
@@ -1402,7 +1580,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="last_modified_python">
 <a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -1411,7 +1590,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date this resource was last modified.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="qualified_arn_python">
 <a href="#qualified_arn_python" style="color: inherit; text-decoration: inherit;">qualified_<wbr>arn</a>
@@ -1420,7 +1600,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="signing_job_arn_python">
 <a href="#signing_job_arn_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>job_<wbr>arn</a>
@@ -1429,7 +1610,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the signing job.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="signing_profile_version_arn_python">
 <a href="#signing_profile_version_arn_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>profile_<wbr>version_<wbr>arn</a>
@@ -1438,7 +1620,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the signing profile version.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="source_code_size_python">
 <a href="#source_code_size_python" style="color: inherit; text-decoration: inherit;">source_<wbr>code_<wbr>size</a>
@@ -1447,7 +1630,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size in bytes of the function .zip file.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1457,7 +1641,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 * `vpc_config.vpc_id` - ID of the VPC.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1584,7 +1769,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1593,7 +1780,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_code_csharp">
 <a href="#state_code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1602,7 +1790,8 @@ The following state arguments are supported:
         <span class="property-type">Archive</span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_codesigningconfigarn_csharp">
 <a href="#state_codesigningconfigarn_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Config<wbr>Arn</a>
@@ -1611,7 +1800,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_deadletterconfig_csharp">
 <a href="#state_deadletterconfig_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
@@ -1620,7 +1810,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1629,7 +1820,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_environment_csharp">
 <a href="#state_environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -1638,7 +1830,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_filesystemconfig_csharp">
 <a href="#state_filesystemconfig_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
@@ -1647,7 +1840,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_handler_csharp">
 <a href="#state_handler_csharp" style="color: inherit; text-decoration: inherit;">Handler</a>
@@ -1656,7 +1850,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_imageconfig_csharp">
 <a href="#state_imageconfig_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
@@ -1665,7 +1860,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_imageuri_csharp">
 <a href="#state_imageuri_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
@@ -1674,7 +1870,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_invokearn_csharp">
 <a href="#state_invokearn_csharp" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Arn</a>
@@ -1683,7 +1880,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_csharp">
 <a href="#state_kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -1691,7 +1889,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_csharp">
 <a href="#state_lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1700,7 +1899,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date this resource was last modified.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_layers_csharp">
 <a href="#state_layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
@@ -1709,7 +1909,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_memorysize_csharp">
 <a href="#state_memorysize_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -1718,7 +1919,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1727,7 +1929,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_packagetype_csharp">
 <a href="#state_packagetype_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
@@ -1736,7 +1939,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_publish_csharp">
 <a href="#state_publish_csharp" style="color: inherit; text-decoration: inherit;">Publish</a>
@@ -1745,7 +1949,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_qualifiedarn_csharp">
 <a href="#state_qualifiedarn_csharp" style="color: inherit; text-decoration: inherit;">Qualified<wbr>Arn</a>
@@ -1754,7 +1959,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_reservedconcurrentexecutions_csharp">
 <a href="#state_reservedconcurrentexecutions_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Concurrent<wbr>Executions</a>
@@ -1763,7 +1969,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1772,7 +1979,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_csharp">
 <a href="#state_runtime_csharp" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -1781,7 +1989,8 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#runtime">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Runtime</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3bucket_csharp">
 <a href="#state_s3bucket_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket</a>
@@ -1790,7 +1999,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3key_csharp">
 <a href="#state_s3key_csharp" style="color: inherit; text-decoration: inherit;">S3Key</a>
@@ -1799,7 +2009,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3objectversion_csharp">
 <a href="#state_s3objectversion_csharp" style="color: inherit; text-decoration: inherit;">S3Object<wbr>Version</a>
@@ -1808,7 +2019,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_signingjobarn_csharp">
 <a href="#state_signingjobarn_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Job<wbr>Arn</a>
@@ -1817,7 +2029,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing job.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_signingprofileversionarn_csharp">
 <a href="#state_signingprofileversionarn_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Profile<wbr>Version<wbr>Arn</a>
@@ -1826,7 +2039,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing profile version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourcecodehash_csharp">
 <a href="#state_sourcecodehash_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Hash</a>
@@ -1834,7 +2048,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourcecodesize_csharp">
 <a href="#state_sourcecodesize_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Size</a>
@@ -1843,7 +2058,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size in bytes of the function .zip file.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1852,7 +2068,8 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1861,7 +2078,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tracingconfig_csharp">
 <a href="#state_tracingconfig_csharp" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Config</a>
@@ -1870,7 +2088,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1880,7 +2099,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 * `vpc_config.vpc_id` - ID of the VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcconfig_csharp">
 <a href="#state_vpcconfig_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
@@ -1889,11 +2109,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1902,7 +2125,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_code_go">
 <a href="#state_code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1911,7 +2135,8 @@ The following state arguments are supported:
         <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_codesigningconfigarn_go">
 <a href="#state_codesigningconfigarn_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Config<wbr>Arn</a>
@@ -1920,7 +2145,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_deadletterconfig_go">
 <a href="#state_deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
@@ -1929,7 +2155,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1938,7 +2165,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_environment_go">
 <a href="#state_environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -1947,7 +2175,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_filesystemconfig_go">
 <a href="#state_filesystemconfig_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
@@ -1956,7 +2185,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_handler_go">
 <a href="#state_handler_go" style="color: inherit; text-decoration: inherit;">Handler</a>
@@ -1965,7 +2195,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_imageconfig_go">
 <a href="#state_imageconfig_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
@@ -1974,7 +2205,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_imageuri_go">
 <a href="#state_imageuri_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
@@ -1983,7 +2215,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_invokearn_go">
 <a href="#state_invokearn_go" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Arn</a>
@@ -1992,7 +2225,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_go">
 <a href="#state_kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -2000,7 +2234,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_go">
 <a href="#state_lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -2009,7 +2244,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date this resource was last modified.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_layers_go">
 <a href="#state_layers_go" style="color: inherit; text-decoration: inherit;">Layers</a>
@@ -2018,7 +2254,8 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_memorysize_go">
 <a href="#state_memorysize_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -2027,7 +2264,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2036,7 +2274,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_packagetype_go">
 <a href="#state_packagetype_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
@@ -2045,7 +2284,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_publish_go">
 <a href="#state_publish_go" style="color: inherit; text-decoration: inherit;">Publish</a>
@@ -2054,7 +2294,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_qualifiedarn_go">
 <a href="#state_qualifiedarn_go" style="color: inherit; text-decoration: inherit;">Qualified<wbr>Arn</a>
@@ -2063,7 +2304,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_reservedconcurrentexecutions_go">
 <a href="#state_reservedconcurrentexecutions_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Concurrent<wbr>Executions</a>
@@ -2072,7 +2314,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -2081,7 +2324,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_go">
 <a href="#state_runtime_go" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -2090,7 +2334,8 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#runtime">Runtime</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3bucket_go">
 <a href="#state_s3bucket_go" style="color: inherit; text-decoration: inherit;">S3Bucket</a>
@@ -2099,7 +2344,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3key_go">
 <a href="#state_s3key_go" style="color: inherit; text-decoration: inherit;">S3Key</a>
@@ -2108,7 +2354,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3objectversion_go">
 <a href="#state_s3objectversion_go" style="color: inherit; text-decoration: inherit;">S3Object<wbr>Version</a>
@@ -2117,7 +2364,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_signingjobarn_go">
 <a href="#state_signingjobarn_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Job<wbr>Arn</a>
@@ -2126,7 +2374,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing job.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_signingprofileversionarn_go">
 <a href="#state_signingprofileversionarn_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Profile<wbr>Version<wbr>Arn</a>
@@ -2135,7 +2384,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing profile version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourcecodehash_go">
 <a href="#state_sourcecodehash_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Hash</a>
@@ -2143,7 +2393,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourcecodesize_go">
 <a href="#state_sourcecodesize_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Size</a>
@@ -2152,7 +2403,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size in bytes of the function .zip file.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2161,7 +2413,8 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -2170,7 +2423,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tracingconfig_go">
 <a href="#state_tracingconfig_go" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Config</a>
@@ -2179,7 +2433,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2189,7 +2444,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 * `vpc_config.vpc_id` - ID of the VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcconfig_go">
 <a href="#state_vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
@@ -2198,11 +2454,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2211,7 +2470,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_code_nodejs">
 <a href="#state_code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2220,7 +2480,8 @@ The following state arguments are supported:
         <span class="property-type">pulumi.asset.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_codesigningconfigarn_nodejs">
 <a href="#state_codesigningconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing<wbr>Config<wbr>Arn</a>
@@ -2229,7 +2490,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_deadletterconfig_nodejs">
 <a href="#state_deadletterconfig_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Config</a>
@@ -2238,7 +2500,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2247,7 +2510,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_environment_nodejs">
 <a href="#state_environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -2256,7 +2520,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_filesystemconfig_nodejs">
 <a href="#state_filesystemconfig_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Config</a>
@@ -2265,7 +2530,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_handler_nodejs">
 <a href="#state_handler_nodejs" style="color: inherit; text-decoration: inherit;">handler</a>
@@ -2274,7 +2540,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_imageconfig_nodejs">
 <a href="#state_imageconfig_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Config</a>
@@ -2283,7 +2550,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_imageuri_nodejs">
 <a href="#state_imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
@@ -2292,7 +2560,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_invokearn_nodejs">
 <a href="#state_invokearn_nodejs" style="color: inherit; text-decoration: inherit;">invoke<wbr>Arn</a>
@@ -2301,7 +2570,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_nodejs">
 <a href="#state_kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
@@ -2309,7 +2579,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_nodejs">
 <a href="#state_lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -2318,7 +2589,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date this resource was last modified.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_layers_nodejs">
 <a href="#state_layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
@@ -2327,7 +2599,8 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_memorysize_nodejs">
 <a href="#state_memorysize_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
@@ -2336,7 +2609,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2345,7 +2619,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_packagetype_nodejs">
 <a href="#state_packagetype_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Type</a>
@@ -2354,7 +2629,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_publish_nodejs">
 <a href="#state_publish_nodejs" style="color: inherit; text-decoration: inherit;">publish</a>
@@ -2363,7 +2639,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_qualifiedarn_nodejs">
 <a href="#state_qualifiedarn_nodejs" style="color: inherit; text-decoration: inherit;">qualified<wbr>Arn</a>
@@ -2372,7 +2649,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_reservedconcurrentexecutions_nodejs">
 <a href="#state_reservedconcurrentexecutions_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Concurrent<wbr>Executions</a>
@@ -2381,7 +2659,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -2390,7 +2669,8 @@ The following state arguments are supported:
         <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_nodejs">
 <a href="#state_runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -2399,7 +2679,8 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#runtime">Runtime</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3bucket_nodejs">
 <a href="#state_s3bucket_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket</a>
@@ -2408,7 +2689,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3key_nodejs">
 <a href="#state_s3key_nodejs" style="color: inherit; text-decoration: inherit;">s3Key</a>
@@ -2417,7 +2699,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3objectversion_nodejs">
 <a href="#state_s3objectversion_nodejs" style="color: inherit; text-decoration: inherit;">s3Object<wbr>Version</a>
@@ -2426,7 +2709,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_signingjobarn_nodejs">
 <a href="#state_signingjobarn_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Job<wbr>Arn</a>
@@ -2435,7 +2719,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing job.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_signingprofileversionarn_nodejs">
 <a href="#state_signingprofileversionarn_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Profile<wbr>Version<wbr>Arn</a>
@@ -2444,7 +2729,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the signing profile version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourcecodehash_nodejs">
 <a href="#state_sourcecodehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Hash</a>
@@ -2452,7 +2738,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourcecodesize_nodejs">
 <a href="#state_sourcecodesize_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Size</a>
@@ -2461,7 +2748,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size in bytes of the function .zip file.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2470,7 +2758,8 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -2479,7 +2768,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tracingconfig_nodejs">
 <a href="#state_tracingconfig_nodejs" style="color: inherit; text-decoration: inherit;">tracing<wbr>Config</a>
@@ -2488,7 +2778,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2498,7 +2789,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 * `vpc_config.vpc_id` - ID of the VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcconfig_nodejs">
 <a href="#state_vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
@@ -2507,11 +2799,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2520,7 +2815,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_code_python">
 <a href="#state_code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2529,7 +2825,8 @@ The following state arguments are supported:
         <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_code_signing_config_arn_python">
 <a href="#state_code_signing_config_arn_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing_<wbr>config_<wbr>arn</a>
@@ -2538,7 +2835,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dead_letter_config_python">
 <a href="#state_dead_letter_config_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>config</a>
@@ -2547,7 +2845,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2556,7 +2855,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_environment_python">
 <a href="#state_environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -2565,7 +2865,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_file_system_config_python">
 <a href="#state_file_system_config_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>config</a>
@@ -2574,7 +2875,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_handler_python">
 <a href="#state_handler_python" style="color: inherit; text-decoration: inherit;">handler</a>
@@ -2583,7 +2885,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_image_config_python">
 <a href="#state_image_config_python" style="color: inherit; text-decoration: inherit;">image_<wbr>config</a>
@@ -2592,7 +2895,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_image_uri_python">
 <a href="#state_image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
@@ -2601,7 +2905,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_invoke_arn_python">
 <a href="#state_invoke_arn_python" style="color: inherit; text-decoration: inherit;">invoke_<wbr>arn</a>
@@ -2610,7 +2915,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_arn_python">
 <a href="#state_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
@@ -2618,7 +2924,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_last_modified_python">
 <a href="#state_last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -2627,7 +2934,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date this resource was last modified.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_layers_python">
 <a href="#state_layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
@@ -2636,7 +2944,8 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_memory_size_python">
 <a href="#state_memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
@@ -2645,7 +2954,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2654,7 +2964,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name for your Lambda Function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_package_type_python">
 <a href="#state_package_type_python" style="color: inherit; text-decoration: inherit;">package_<wbr>type</a>
@@ -2663,7 +2974,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_publish_python">
 <a href="#state_publish_python" style="color: inherit; text-decoration: inherit;">publish</a>
@@ -2672,7 +2984,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_qualified_arn_python">
 <a href="#state_qualified_arn_python" style="color: inherit; text-decoration: inherit;">qualified_<wbr>arn</a>
@@ -2681,7 +2994,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_reserved_concurrent_executions_python">
 <a href="#state_reserved_concurrent_executions_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>concurrent_<wbr>executions</a>
@@ -2690,7 +3004,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -2699,7 +3014,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_python">
 <a href="#state_runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -2708,7 +3024,8 @@ The following state arguments are supported:
         <span class="property-type">str | <a href="#runtime">Runtime</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3_bucket_python">
 <a href="#state_s3_bucket_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket</a>
@@ -2717,7 +3034,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3_key_python">
 <a href="#state_s3_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key</a>
@@ -2726,7 +3044,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3_object_version_python">
 <a href="#state_s3_object_version_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>object_<wbr>version</a>
@@ -2735,7 +3054,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_signing_job_arn_python">
 <a href="#state_signing_job_arn_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>job_<wbr>arn</a>
@@ -2744,7 +3064,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the signing job.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_signing_profile_version_arn_python">
 <a href="#state_signing_profile_version_arn_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>profile_<wbr>version_<wbr>arn</a>
@@ -2753,7 +3074,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the signing profile version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_source_code_hash_python">
 <a href="#state_source_code_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>code_<wbr>hash</a>
@@ -2761,7 +3083,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_source_code_size_python">
 <a href="#state_source_code_size_python" style="color: inherit; text-decoration: inherit;">source_<wbr>code_<wbr>size</a>
@@ -2770,7 +3093,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size in bytes of the function .zip file.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2779,7 +3103,8 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the object.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -2788,7 +3113,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tracing_config_python">
 <a href="#state_tracing_config_python" style="color: inherit; text-decoration: inherit;">tracing_<wbr>config</a>
@@ -2797,7 +3123,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2807,7 +3134,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 * `vpc_config.vpc_id` - ID of the VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpc_config_python">
 <a href="#state_vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
@@ -2816,7 +3144,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -2831,7 +3160,9 @@ The following state arguments are supported:
 <h4 id="functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="targetarn_csharp">
 <a href="#targetarn_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Arn</a>
@@ -2840,11 +3171,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on which service is targeted.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="targetarn_go">
 <a href="#targetarn_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Arn</a>
@@ -2853,11 +3187,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on which service is targeted.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="targetarn_nodejs">
 <a href="#targetarn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Arn</a>
@@ -2866,11 +3203,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on which service is targeted.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="target_arn_python">
 <a href="#target_arn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>arn</a>
@@ -2879,13 +3219,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on which service is targeted.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="functionenvironment">Function<wbr>Environment</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="variables_csharp">
 <a href="#variables_csharp" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -2894,11 +3237,14 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of environment variables that are accessible from the function code during execution.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="variables_go">
 <a href="#variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -2907,11 +3253,14 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of environment variables that are accessible from the function code during execution.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="variables_nodejs">
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -2920,11 +3269,14 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of environment variables that are accessible from the function code during execution.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="variables_python">
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -2933,13 +3285,16 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of environment variables that are accessible from the function code during execution.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2948,7 +3303,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="localmountpath_csharp">
 <a href="#localmountpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Mount<wbr>Path</a>
@@ -2957,11 +3313,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path where the function can access the file system, starting with /mnt/.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2970,7 +3329,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="localmountpath_go">
 <a href="#localmountpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Mount<wbr>Path</a>
@@ -2979,11 +3339,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path where the function can access the file system, starting with /mnt/.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2992,7 +3355,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="localmountpath_nodejs">
 <a href="#localmountpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Mount<wbr>Path</a>
@@ -3001,11 +3365,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path where the function can access the file system, starting with /mnt/.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -3014,7 +3381,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="local_mount_path_python">
 <a href="#local_mount_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>mount_<wbr>path</a>
@@ -3023,13 +3391,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path where the function can access the file system, starting with /mnt/.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="functionimageconfig">Function<wbr>Image<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="commands_csharp">
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
@@ -3038,7 +3409,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters that you want to pass in with `entry_point`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="entrypoints_csharp">
 <a href="#entrypoints_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Points</a>
@@ -3047,7 +3419,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Entry point to your application, which is typically the location of the runtime executable.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="workingdirectory_csharp">
 <a href="#workingdirectory_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Directory</a>
@@ -3056,11 +3429,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Working directory.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="commands_go">
 <a href="#commands_go" style="color: inherit; text-decoration: inherit;">Commands</a>
@@ -3069,7 +3445,8 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Parameters that you want to pass in with `entry_point`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="entrypoints_go">
 <a href="#entrypoints_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Points</a>
@@ -3078,7 +3455,8 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Entry point to your application, which is typically the location of the runtime executable.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="workingdirectory_go">
 <a href="#workingdirectory_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Directory</a>
@@ -3087,11 +3465,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Working directory.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="commands_nodejs">
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
@@ -3100,7 +3481,8 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Parameters that you want to pass in with `entry_point`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="entrypoints_nodejs">
 <a href="#entrypoints_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Points</a>
@@ -3109,7 +3491,8 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Entry point to your application, which is typically the location of the runtime executable.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="workingdirectory_nodejs">
 <a href="#workingdirectory_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Directory</a>
@@ -3118,11 +3501,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Working directory.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="commands_python">
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
@@ -3131,7 +3517,8 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Parameters that you want to pass in with `entry_point`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="entry_points_python">
 <a href="#entry_points_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>points</a>
@@ -3140,7 +3527,8 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Entry point to your application, which is typically the location of the runtime executable.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="working_directory_python">
 <a href="#working_directory_python" style="color: inherit; text-decoration: inherit;">working_<wbr>directory</a>
@@ -3149,13 +3537,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Working directory.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="functiontracingconfig">Function<wbr>Tracing<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -3164,11 +3555,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are `PassThrough` and `Active`. If `PassThrough`, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If `Active`, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -3177,11 +3571,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are `PassThrough` and `Active`. If `PassThrough`, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If `Active`, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -3190,11 +3587,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are `PassThrough` and `Active`. If `PassThrough`, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If `Active`, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -3203,13 +3603,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are `PassThrough` and `Active`. If `PassThrough`, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If `Active`, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="functionvpcconfig">Function<wbr>Vpc<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -3218,7 +3621,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of security group IDs associated with the Lambda function.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -3227,7 +3631,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of subnet IDs associated with the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -3235,11 +3640,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -3248,7 +3656,8 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of security group IDs associated with the Lambda function.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -3257,7 +3666,8 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of subnet IDs associated with the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -3265,11 +3675,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -3278,7 +3691,8 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of security group IDs associated with the Lambda function.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -3287,7 +3701,8 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of subnet IDs associated with the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -3295,11 +3710,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -3308,7 +3726,8 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of security group IDs associated with the Lambda function.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -3317,7 +3736,8 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of subnet IDs associated with the Lambda function.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -3325,93 +3745,166 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="runtime">Runtime</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular"><dt>Dotnet<wbr>Core2d1</dt>
-    <dd>dotnetcore2.1</dd><dt>Dotnet<wbr>Core3d1</dt>
-    <dd>dotnetcore3.1</dd><dt>Go1dx</dt>
-    <dd>go1.x</dd><dt>Java8</dt>
-    <dd>java8</dd><dt>Java8AL2</dt>
-    <dd>java8.al2</dd><dt>Java11</dt>
-    <dd>java11</dd><dt>Ruby2d5</dt>
-    <dd>ruby2.5</dd><dt>Ruby2d7</dt>
-    <dd>ruby2.7</dd><dt>Node<wbr>JS10d<wbr>X</dt>
-    <dd>nodejs10.x</dd><dt>Node<wbr>JS12d<wbr>X</dt>
-    <dd>nodejs12.x</dd><dt>Node<wbr>JS14d<wbr>X</dt>
-    <dd>nodejs14.x</dd><dt>Python2d7</dt>
-    <dd>python2.7</dd><dt>Python3d6</dt>
-    <dd>python3.6</dd><dt>Python3d7</dt>
-    <dd>python3.7</dd><dt>Python3d8</dt>
-    <dd>python3.8</dd><dt>Custom</dt>
-    <dd>provided</dd><dt>Custom<wbr>AL2</dt>
-    <dd>provided.al2</dd></dl>
+<dl class="tabular">
+    <dt>Dotnet<wbr>Core2d1</dt>
+    <dd>dotnetcore2.1</dd>
+    <dt>Dotnet<wbr>Core3d1</dt>
+    <dd>dotnetcore3.1</dd>
+    <dt>Go1dx</dt>
+    <dd>go1.x</dd>
+    <dt>Java8</dt>
+    <dd>java8</dd>
+    <dt>Java8AL2</dt>
+    <dd>java8.al2</dd>
+    <dt>Java11</dt>
+    <dd>java11</dd>
+    <dt>Ruby2d5</dt>
+    <dd>ruby2.5</dd>
+    <dt>Ruby2d7</dt>
+    <dd>ruby2.7</dd>
+    <dt>Node<wbr>JS10d<wbr>X</dt>
+    <dd>nodejs10.x</dd>
+    <dt>Node<wbr>JS12d<wbr>X</dt>
+    <dd>nodejs12.x</dd>
+    <dt>Node<wbr>JS14d<wbr>X</dt>
+    <dd>nodejs14.x</dd>
+    <dt>Python2d7</dt>
+    <dd>python2.7</dd>
+    <dt>Python3d6</dt>
+    <dd>python3.6</dd>
+    <dt>Python3d7</dt>
+    <dd>python3.7</dd>
+    <dt>Python3d8</dt>
+    <dd>python3.8</dd>
+    <dt>Custom</dt>
+    <dd>provided</dd>
+    <dt>Custom<wbr>AL2</dt>
+    <dd>provided.al2</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Runtime<wbr>Dotnet<wbr>Core2d1</dt>
-    <dd>dotnetcore2.1</dd><dt>Runtime<wbr>Dotnet<wbr>Core3d1</dt>
-    <dd>dotnetcore3.1</dd><dt>Runtime<wbr>Go1dx</dt>
-    <dd>go1.x</dd><dt>Runtime<wbr>Java8</dt>
-    <dd>java8</dd><dt>Runtime<wbr>Java8AL2</dt>
-    <dd>java8.al2</dd><dt>Runtime<wbr>Java11</dt>
-    <dd>java11</dd><dt>Runtime<wbr>Ruby2d5</dt>
-    <dd>ruby2.5</dd><dt>Runtime<wbr>Ruby2d7</dt>
-    <dd>ruby2.7</dd><dt>Runtime<wbr>Node<wbr>JS10d<wbr>X</dt>
-    <dd>nodejs10.x</dd><dt>Runtime<wbr>Node<wbr>JS12d<wbr>X</dt>
-    <dd>nodejs12.x</dd><dt>Runtime<wbr>Node<wbr>JS14d<wbr>X</dt>
-    <dd>nodejs14.x</dd><dt>Runtime<wbr>Python2d7</dt>
-    <dd>python2.7</dd><dt>Runtime<wbr>Python3d6</dt>
-    <dd>python3.6</dd><dt>Runtime<wbr>Python3d7</dt>
-    <dd>python3.7</dd><dt>Runtime<wbr>Python3d8</dt>
-    <dd>python3.8</dd><dt>Runtime<wbr>Custom</dt>
-    <dd>provided</dd><dt>Runtime<wbr>Custom<wbr>AL2</dt>
-    <dd>provided.al2</dd></dl>
+<dl class="tabular">
+    <dt>Runtime<wbr>Dotnet<wbr>Core2d1</dt>
+    <dd>dotnetcore2.1</dd>
+    <dt>Runtime<wbr>Dotnet<wbr>Core3d1</dt>
+    <dd>dotnetcore3.1</dd>
+    <dt>Runtime<wbr>Go1dx</dt>
+    <dd>go1.x</dd>
+    <dt>Runtime<wbr>Java8</dt>
+    <dd>java8</dd>
+    <dt>Runtime<wbr>Java8AL2</dt>
+    <dd>java8.al2</dd>
+    <dt>Runtime<wbr>Java11</dt>
+    <dd>java11</dd>
+    <dt>Runtime<wbr>Ruby2d5</dt>
+    <dd>ruby2.5</dd>
+    <dt>Runtime<wbr>Ruby2d7</dt>
+    <dd>ruby2.7</dd>
+    <dt>Runtime<wbr>Node<wbr>JS10d<wbr>X</dt>
+    <dd>nodejs10.x</dd>
+    <dt>Runtime<wbr>Node<wbr>JS12d<wbr>X</dt>
+    <dd>nodejs12.x</dd>
+    <dt>Runtime<wbr>Node<wbr>JS14d<wbr>X</dt>
+    <dd>nodejs14.x</dd>
+    <dt>Runtime<wbr>Python2d7</dt>
+    <dd>python2.7</dd>
+    <dt>Runtime<wbr>Python3d6</dt>
+    <dd>python3.6</dd>
+    <dt>Runtime<wbr>Python3d7</dt>
+    <dd>python3.7</dd>
+    <dt>Runtime<wbr>Python3d8</dt>
+    <dd>python3.8</dd>
+    <dt>Runtime<wbr>Custom</dt>
+    <dd>provided</dd>
+    <dt>Runtime<wbr>Custom<wbr>AL2</dt>
+    <dd>provided.al2</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular"><dt>Dotnet<wbr>Core2d1</dt>
-    <dd>dotnetcore2.1</dd><dt>Dotnet<wbr>Core3d1</dt>
-    <dd>dotnetcore3.1</dd><dt>Go1dx</dt>
-    <dd>go1.x</dd><dt>Java8</dt>
-    <dd>java8</dd><dt>Java8AL2</dt>
-    <dd>java8.al2</dd><dt>Java11</dt>
-    <dd>java11</dd><dt>Ruby2d5</dt>
-    <dd>ruby2.5</dd><dt>Ruby2d7</dt>
-    <dd>ruby2.7</dd><dt>Node<wbr>JS10d<wbr>X</dt>
-    <dd>nodejs10.x</dd><dt>Node<wbr>JS12d<wbr>X</dt>
-    <dd>nodejs12.x</dd><dt>Node<wbr>JS14d<wbr>X</dt>
-    <dd>nodejs14.x</dd><dt>Python2d7</dt>
-    <dd>python2.7</dd><dt>Python3d6</dt>
-    <dd>python3.6</dd><dt>Python3d7</dt>
-    <dd>python3.7</dd><dt>Python3d8</dt>
-    <dd>python3.8</dd><dt>Custom</dt>
-    <dd>provided</dd><dt>Custom<wbr>AL2</dt>
-    <dd>provided.al2</dd></dl>
+<dl class="tabular">
+    <dt>Dotnet<wbr>Core2d1</dt>
+    <dd>dotnetcore2.1</dd>
+    <dt>Dotnet<wbr>Core3d1</dt>
+    <dd>dotnetcore3.1</dd>
+    <dt>Go1dx</dt>
+    <dd>go1.x</dd>
+    <dt>Java8</dt>
+    <dd>java8</dd>
+    <dt>Java8AL2</dt>
+    <dd>java8.al2</dd>
+    <dt>Java11</dt>
+    <dd>java11</dd>
+    <dt>Ruby2d5</dt>
+    <dd>ruby2.5</dd>
+    <dt>Ruby2d7</dt>
+    <dd>ruby2.7</dd>
+    <dt>Node<wbr>JS10d<wbr>X</dt>
+    <dd>nodejs10.x</dd>
+    <dt>Node<wbr>JS12d<wbr>X</dt>
+    <dd>nodejs12.x</dd>
+    <dt>Node<wbr>JS14d<wbr>X</dt>
+    <dd>nodejs14.x</dd>
+    <dt>Python2d7</dt>
+    <dd>python2.7</dd>
+    <dt>Python3d6</dt>
+    <dd>python3.6</dd>
+    <dt>Python3d7</dt>
+    <dd>python3.7</dd>
+    <dt>Python3d8</dt>
+    <dd>python3.8</dd>
+    <dt>Custom</dt>
+    <dd>provided</dd>
+    <dt>Custom<wbr>AL2</dt>
+    <dd>provided.al2</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular"><dt>DOTNET_CORE2D1</dt>
-    <dd>dotnetcore2.1</dd><dt>DOTNET_CORE3D1</dt>
-    <dd>dotnetcore3.1</dd><dt>GO1DX</dt>
-    <dd>go1.x</dd><dt>JAVA8</dt>
-    <dd>java8</dd><dt>JAVA8_AL2</dt>
-    <dd>java8.al2</dd><dt>JAVA11</dt>
-    <dd>java11</dd><dt>RUBY2D5</dt>
-    <dd>ruby2.5</dd><dt>RUBY2D7</dt>
-    <dd>ruby2.7</dd><dt>NODE_JS10D_X</dt>
-    <dd>nodejs10.x</dd><dt>NODE_JS12D_X</dt>
-    <dd>nodejs12.x</dd><dt>NODE_JS14D_X</dt>
-    <dd>nodejs14.x</dd><dt>PYTHON2D7</dt>
-    <dd>python2.7</dd><dt>PYTHON3D6</dt>
-    <dd>python3.6</dd><dt>PYTHON3D7</dt>
-    <dd>python3.7</dd><dt>PYTHON3D8</dt>
-    <dd>python3.8</dd><dt>CUSTOM</dt>
-    <dd>provided</dd><dt>CUSTOM_AL2</dt>
-    <dd>provided.al2</dd></dl>
+<dl class="tabular">
+    <dt>DOTNET_CORE2D1</dt>
+    <dd>dotnetcore2.1</dd>
+    <dt>DOTNET_CORE3D1</dt>
+    <dd>dotnetcore3.1</dd>
+    <dt>GO1DX</dt>
+    <dd>go1.x</dd>
+    <dt>JAVA8</dt>
+    <dd>java8</dd>
+    <dt>JAVA8_AL2</dt>
+    <dd>java8.al2</dd>
+    <dt>JAVA11</dt>
+    <dd>java11</dd>
+    <dt>RUBY2D5</dt>
+    <dd>ruby2.5</dd>
+    <dt>RUBY2D7</dt>
+    <dd>ruby2.7</dd>
+    <dt>NODE_JS10D_X</dt>
+    <dd>nodejs10.x</dd>
+    <dt>NODE_JS12D_X</dt>
+    <dd>nodejs12.x</dd>
+    <dt>NODE_JS14D_X</dt>
+    <dd>nodejs14.x</dd>
+    <dt>PYTHON2D7</dt>
+    <dd>python2.7</dd>
+    <dt>PYTHON3D6</dt>
+    <dd>python3.6</dd>
+    <dt>PYTHON3D7</dt>
+    <dd>python3.7</dd>
+    <dt>PYTHON3D8</dt>
+    <dd>python3.8</dd>
+    <dt>CUSTOM</dt>
+    <dd>provided</dd>
+    <dt>CUSTOM_AL2</dt>
+    <dd>provided.al2</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -3422,6 +3915,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

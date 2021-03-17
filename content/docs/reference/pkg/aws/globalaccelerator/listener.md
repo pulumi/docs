@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.globalaccelerator.Listener resource with e
 Provides a Global Accelerator listener.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -62,12 +56,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -109,12 +100,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -137,12 +125,9 @@ example_listener = aws.globalaccelerator.Listener("exampleListener",
     )])
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -168,16 +153,9 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a Listener Resource {#create}
@@ -202,7 +180,9 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -210,7 +190,9 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -218,7 +200,9 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -226,7 +210,10 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -252,7 +239,9 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -260,7 +249,9 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -268,7 +259,9 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -276,7 +269,9 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -284,13 +279,18 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -298,7 +298,9 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -306,7 +308,9 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -314,7 +318,10 @@ const exampleListener = new aws.globalaccelerator.Listener("exampleListener", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -329,7 +336,9 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="acceleratorarn_csharp">
 <a href="#acceleratorarn_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Arn</a>
@@ -338,7 +347,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your accelerator.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="portranges_csharp">
 <a href="#portranges_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Ranges</a>
@@ -347,7 +357,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenerportrange">List&lt;Listener<wbr>Port<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -356,7 +367,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clientaffinity_csharp">
 <a href="#clientaffinity_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity</a>
@@ -365,11 +377,14 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="acceleratorarn_go">
 <a href="#acceleratorarn_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Arn</a>
@@ -378,7 +393,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your accelerator.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="portranges_go">
 <a href="#portranges_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Ranges</a>
@@ -387,7 +403,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenerportrange">[]Listener<wbr>Port<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -396,7 +413,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clientaffinity_go">
 <a href="#clientaffinity_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity</a>
@@ -405,11 +423,14 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="acceleratorarn_nodejs">
 <a href="#acceleratorarn_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Arn</a>
@@ -418,7 +439,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your accelerator.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="portranges_nodejs">
 <a href="#portranges_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Ranges</a>
@@ -427,7 +449,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenerportrange">Listener<wbr>Port<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -436,7 +459,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clientaffinity_nodejs">
 <a href="#clientaffinity_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Affinity</a>
@@ -445,11 +469,14 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="accelerator_arn_python">
 <a href="#accelerator_arn_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>arn</a>
@@ -458,7 +485,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your accelerator.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="port_ranges_python">
 <a href="#port_ranges_python" style="color: inherit; text-decoration: inherit;">port_<wbr>ranges</a>
@@ -467,7 +495,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenerportrange">Sequence[Listener<wbr>Port<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -476,7 +505,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="client_affinity_python">
 <a href="#client_affinity_python" style="color: inherit; text-decoration: inherit;">client_<wbr>affinity</a>
@@ -485,7 +515,8 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -496,7 +527,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -504,11 +537,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -516,11 +552,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -528,11 +567,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -540,7 +582,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -667,7 +710,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_acceleratorarn_csharp">
 <a href="#state_acceleratorarn_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Arn</a>
@@ -676,7 +721,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clientaffinity_csharp">
 <a href="#state_clientaffinity_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity</a>
@@ -685,7 +731,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_portranges_csharp">
 <a href="#state_portranges_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Ranges</a>
@@ -694,7 +741,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenerportrange">List&lt;Listener<wbr>Port<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -703,11 +751,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_acceleratorarn_go">
 <a href="#state_acceleratorarn_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Arn</a>
@@ -716,7 +767,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clientaffinity_go">
 <a href="#state_clientaffinity_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity</a>
@@ -725,7 +777,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_portranges_go">
 <a href="#state_portranges_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Ranges</a>
@@ -734,7 +787,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenerportrange">[]Listener<wbr>Port<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -743,11 +797,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_acceleratorarn_nodejs">
 <a href="#state_acceleratorarn_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Arn</a>
@@ -756,7 +813,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clientaffinity_nodejs">
 <a href="#state_clientaffinity_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Affinity</a>
@@ -765,7 +823,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_portranges_nodejs">
 <a href="#state_portranges_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Ranges</a>
@@ -774,7 +833,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenerportrange">Listener<wbr>Port<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -783,11 +843,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_accelerator_arn_python">
 <a href="#state_accelerator_arn_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>arn</a>
@@ -796,7 +859,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of your accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_client_affinity_python">
 <a href="#state_client_affinity_python" style="color: inherit; text-decoration: inherit;">client_<wbr>affinity</a>
@@ -805,7 +869,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_port_ranges_python">
 <a href="#state_port_ranges_python" style="color: inherit; text-decoration: inherit;">port_<wbr>ranges</a>
@@ -814,7 +879,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenerportrange">Sequence[Listener<wbr>Port<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -823,7 +889,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -838,7 +905,9 @@ The following state arguments are supported:
 <h4 id="listenerportrange">Listener<wbr>Port<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="fromport_csharp">
 <a href="#fromport_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
@@ -847,7 +916,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The first port in the range of ports, inclusive.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="toport_csharp">
 <a href="#toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -856,11 +926,14 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The last port in the range of ports, inclusive.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="fromport_go">
 <a href="#fromport_go" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
@@ -869,7 +942,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The first port in the range of ports, inclusive.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="toport_go">
 <a href="#toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -878,11 +952,14 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The last port in the range of ports, inclusive.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="fromport_nodejs">
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
@@ -891,7 +968,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The first port in the range of ports, inclusive.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="toport_nodejs">
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
@@ -900,11 +978,14 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The last port in the range of ports, inclusive.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="from_port_python">
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
@@ -913,7 +994,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The first port in the range of ports, inclusive.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="to_port_python">
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
@@ -922,7 +1004,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The last port in the range of ports, inclusive.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -943,6 +1026,6 @@ Global Accelerator listeners can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

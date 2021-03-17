@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.sagemaker.AppImageConfig resource with exa
 Provides a Sagemaker App Image Config resource.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-
 ### Basic usage
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -48,12 +42,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -80,12 +71,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -99,12 +87,9 @@ test = aws.sagemaker.AppImageConfig("test",
     ))
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -120,17 +105,10 @@ const test = new aws.sagemaker.AppImageConfig("test", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
+{{% /example %}}
 
 ### Default File System Config
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -156,12 +134,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -189,12 +164,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -209,12 +181,9 @@ test = aws.sagemaker.AppImageConfig("test",
     ))
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -231,16 +200,9 @@ const test = new aws.sagemaker.AppImageConfig("test", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a AppImageConfig Resource {#create}
@@ -265,7 +227,9 @@ const test = new aws.sagemaker.AppImageConfig("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,7 +237,9 @@ const test = new aws.sagemaker.AppImageConfig("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -281,7 +247,9 @@ const test = new aws.sagemaker.AppImageConfig("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -289,7 +257,10 @@ const test = new aws.sagemaker.AppImageConfig("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -315,7 +286,9 @@ const test = new aws.sagemaker.AppImageConfig("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -323,7 +296,9 @@ const test = new aws.sagemaker.AppImageConfig("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -331,7 +306,9 @@ const test = new aws.sagemaker.AppImageConfig("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -339,7 +316,9 @@ const test = new aws.sagemaker.AppImageConfig("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -347,13 +326,18 @@ const test = new aws.sagemaker.AppImageConfig("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -361,7 +345,9 @@ const test = new aws.sagemaker.AppImageConfig("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -369,7 +355,9 @@ const test = new aws.sagemaker.AppImageConfig("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -377,7 +365,10 @@ const test = new aws.sagemaker.AppImageConfig("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -392,7 +383,9 @@ The AppImageConfig resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="appimageconfigname_csharp">
 <a href="#appimageconfigname_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Image<wbr>Config<wbr>Name</a>
@@ -401,7 +394,8 @@ The AppImageConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kernelgatewayimageconfig_csharp">
 <a href="#kernelgatewayimageconfig_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Gateway<wbr>Image<wbr>Config</a>
@@ -410,11 +404,14 @@ The AppImageConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="appimageconfigname_go">
 <a href="#appimageconfigname_go" style="color: inherit; text-decoration: inherit;">App<wbr>Image<wbr>Config<wbr>Name</a>
@@ -423,7 +420,8 @@ The AppImageConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kernelgatewayimageconfig_go">
 <a href="#kernelgatewayimageconfig_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Gateway<wbr>Image<wbr>Config</a>
@@ -432,11 +430,14 @@ The AppImageConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="appimageconfigname_nodejs">
 <a href="#appimageconfigname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Image<wbr>Config<wbr>Name</a>
@@ -445,7 +446,8 @@ The AppImageConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kernelgatewayimageconfig_nodejs">
 <a href="#kernelgatewayimageconfig_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Gateway<wbr>Image<wbr>Config</a>
@@ -454,11 +456,14 @@ The AppImageConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="app_image_config_name_python">
 <a href="#app_image_config_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>image_<wbr>config_<wbr>name</a>
@@ -467,7 +472,8 @@ The AppImageConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kernel_gateway_image_config_python">
 <a href="#kernel_gateway_image_config_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>gateway_<wbr>image_<wbr>config</a>
@@ -476,7 +482,8 @@ The AppImageConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -487,7 +494,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -496,7 +505,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -504,11 +514,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -517,7 +530,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -525,11 +539,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -538,7 +555,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -546,11 +564,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -559,7 +580,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -567,7 +589,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -694,7 +717,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_appimageconfigname_csharp">
 <a href="#state_appimageconfigname_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Image<wbr>Config<wbr>Name</a>
@@ -703,7 +728,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -712,7 +738,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kernelgatewayimageconfig_csharp">
 <a href="#state_kernelgatewayimageconfig_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Gateway<wbr>Image<wbr>Config</a>
@@ -721,11 +748,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_appimageconfigname_go">
 <a href="#state_appimageconfigname_go" style="color: inherit; text-decoration: inherit;">App<wbr>Image<wbr>Config<wbr>Name</a>
@@ -734,7 +764,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -743,7 +774,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kernelgatewayimageconfig_go">
 <a href="#state_kernelgatewayimageconfig_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Gateway<wbr>Image<wbr>Config</a>
@@ -752,11 +784,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_appimageconfigname_nodejs">
 <a href="#state_appimageconfigname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Image<wbr>Config<wbr>Name</a>
@@ -765,7 +800,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -774,7 +810,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kernelgatewayimageconfig_nodejs">
 <a href="#state_kernelgatewayimageconfig_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Gateway<wbr>Image<wbr>Config</a>
@@ -783,11 +820,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_app_image_config_name_python">
 <a href="#state_app_image_config_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>image_<wbr>config_<wbr>name</a>
@@ -796,7 +836,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -805,7 +846,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kernel_gateway_image_config_python">
 <a href="#state_kernel_gateway_image_config_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>gateway_<wbr>image_<wbr>config</a>
@@ -814,7 +856,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -829,7 +872,9 @@ The following state arguments are supported:
 <h4 id="appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="kernelspec_csharp">
 <a href="#kernelspec_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Spec</a>
@@ -838,7 +883,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigkernelspec">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Kernel<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the Git repository. See Kernel Spec details below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filesystemconfig_csharp">
 <a href="#filesystemconfig_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
@@ -847,11 +893,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigfilesystemconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URL where the Git repository is located. See File System Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="kernelspec_go">
 <a href="#kernelspec_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Spec</a>
@@ -860,7 +909,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigkernelspec">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Kernel<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the Git repository. See Kernel Spec details below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filesystemconfig_go">
 <a href="#filesystemconfig_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
@@ -869,11 +919,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigfilesystemconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The URL where the Git repository is located. See File System Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="kernelspec_nodejs">
 <a href="#kernelspec_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Spec</a>
@@ -882,7 +935,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigkernelspec">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Kernel<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the Git repository. See Kernel Spec details below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filesystemconfig_nodejs">
 <a href="#filesystemconfig_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Config</a>
@@ -891,11 +945,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigfilesystemconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The URL where the Git repository is located. See File System Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="kernel_spec_python">
 <a href="#kernel_spec_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>spec</a>
@@ -904,7 +961,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigkernelspec">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Kernel<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the Git repository. See Kernel Spec details below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="file_system_config_python">
 <a href="#file_system_config_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>config</a>
@@ -913,13 +971,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigfilesystemconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URL where the Git repository is located. See File System Config details below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="appimageconfigkernelgatewayimageconfigfilesystemconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>File<wbr>System<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultgid_csharp">
 <a href="#defaultgid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Gid</a>
@@ -928,7 +989,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default POSIX group ID (GID). If not specified, defaults to `100`. Valid values are `0` and `100`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultuid_csharp">
 <a href="#defaultuid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Uid</a>
@@ -937,7 +999,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default POSIX user ID (UID). If not specified, defaults to `1000`. Valid values are `0` and `1000`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mountpath_csharp">
 <a href="#mountpath_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
@@ -946,11 +1009,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path within the image to mount the user's EFS home directory. The directory should be empty. If not specified, defaults to `/home/sagemaker-user`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultgid_go">
 <a href="#defaultgid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Gid</a>
@@ -959,7 +1025,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default POSIX group ID (GID). If not specified, defaults to `100`. Valid values are `0` and `100`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultuid_go">
 <a href="#defaultuid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Uid</a>
@@ -968,7 +1035,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default POSIX user ID (UID). If not specified, defaults to `1000`. Valid values are `0` and `1000`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mountpath_go">
 <a href="#mountpath_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
@@ -977,11 +1045,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path within the image to mount the user's EFS home directory. The directory should be empty. If not specified, defaults to `/home/sagemaker-user`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultgid_nodejs">
 <a href="#defaultgid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Gid</a>
@@ -990,7 +1061,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default POSIX group ID (GID). If not specified, defaults to `100`. Valid values are `0` and `100`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultuid_nodejs">
 <a href="#defaultuid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Uid</a>
@@ -999,7 +1071,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default POSIX user ID (UID). If not specified, defaults to `1000`. Valid values are `0` and `1000`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mountpath_nodejs">
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
@@ -1008,11 +1081,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path within the image to mount the user's EFS home directory. The directory should be empty. If not specified, defaults to `/home/sagemaker-user`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="default_gid_python">
 <a href="#default_gid_python" style="color: inherit; text-decoration: inherit;">default_<wbr>gid</a>
@@ -1021,7 +1097,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default POSIX group ID (GID). If not specified, defaults to `100`. Valid values are `0` and `100`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_uid_python">
 <a href="#default_uid_python" style="color: inherit; text-decoration: inherit;">default_<wbr>uid</a>
@@ -1030,7 +1107,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default POSIX user ID (UID). If not specified, defaults to `1000`. Valid values are `0` and `1000`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mount_path_python">
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
@@ -1039,13 +1117,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path within the image to mount the user's EFS home directory. The directory should be empty. If not specified, defaults to `/home/sagemaker-user`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="appimageconfigkernelgatewayimageconfigkernelspec">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Kernel<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1054,7 +1135,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the kernel.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1063,11 +1145,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the kernel.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1076,7 +1161,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the kernel.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1085,11 +1171,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the kernel.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1098,7 +1187,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the kernel.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1107,11 +1197,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the kernel.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1120,7 +1213,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the kernel.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1129,7 +1223,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the kernel.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -1150,6 +1245,6 @@ Sagemaker App Image Configs can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

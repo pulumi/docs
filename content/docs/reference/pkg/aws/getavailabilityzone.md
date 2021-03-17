@@ -60,7 +60,9 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="allavailabilityzones_csharp">
 <a href="#allavailabilityzones_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Availability<wbr>Zones</a>
@@ -69,7 +71,8 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -78,7 +81,8 @@ The following arguments are supported:
         <span class="property-type"><a href="#getavailabilityzonefilter">List&lt;Get<wbr>Availability<wbr>Zone<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -87,7 +91,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -96,7 +101,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specific availability zone state to require. May be any of `"available"`, `"information"` or `"impaired"`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -105,11 +111,14 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID of the availability zone to select.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="allavailabilityzones_go">
 <a href="#allavailabilityzones_go" style="color: inherit; text-decoration: inherit;">All<wbr>Availability<wbr>Zones</a>
@@ -118,7 +127,8 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -127,7 +137,8 @@ The following arguments are supported:
         <span class="property-type"><a href="#getavailabilityzonefilter">[]Get<wbr>Availability<wbr>Zone<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -136,7 +147,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -145,7 +157,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specific availability zone state to require. May be any of `"available"`, `"information"` or `"impaired"`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -154,11 +167,14 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID of the availability zone to select.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="allavailabilityzones_nodejs">
 <a href="#allavailabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Availability<wbr>Zones</a>
@@ -167,7 +183,8 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -176,7 +193,8 @@ The following arguments are supported:
         <span class="property-type"><a href="#getavailabilityzonefilter">Get<wbr>Availability<wbr>Zone<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -185,7 +203,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -194,7 +213,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specific availability zone state to require. May be any of `"available"`, `"information"` or `"impaired"`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -203,11 +223,14 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID of the availability zone to select.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="all_availability_zones_python">
 <a href="#all_availability_zones_python" style="color: inherit; text-decoration: inherit;">all_<wbr>availability_<wbr>zones</a>
@@ -216,7 +239,8 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -225,7 +249,8 @@ The following arguments are supported:
         <span class="property-type"><a href="#getavailabilityzonefilter">Sequence[Get<wbr>Availability<wbr>Zone<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -234,7 +259,8 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -243,7 +269,8 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A specific availability zone state to require. May be any of `"available"`, `"information"` or `"impaired"`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -252,7 +279,8 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone ID of the availability zone to select.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -265,7 +293,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="groupname_csharp">
 <a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -274,7 +304,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this is the same value as the Region name. For Local Zones, the name of the associated group, for example `us-west-2-lax-1`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -283,7 +314,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -291,7 +323,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="namesuffix_csharp">
 <a href="#namesuffix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Suffix</a>
@@ -302,7 +335,8 @@ The following output properties are available:
     <dd>{{% md %}}The part of the AZ name that appears after the region name, uniquely identifying the AZ within its region.
 For Availability Zones this is usually a single letter, for example `a` for the `us-west-2a` zone.
 For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz-1` for the `us-west-2-wl1-sfo-wlz-1` zone.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="networkbordergroup_csharp">
 <a href="#networkbordergroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Border<wbr>Group</a>
@@ -311,7 +345,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the location from which the address is advertised.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="optinstatus_csharp">
 <a href="#optinstatus_csharp" style="color: inherit; text-decoration: inherit;">Opt<wbr>In<wbr>Status</a>
@@ -320,7 +355,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this always has the value of `opt-in-not-required`. For Local Zones, this is the opt in status. The possible values are `opted-in` and `not-opted-in`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parentzoneid_csharp">
 <a href="#parentzoneid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Zone<wbr>Id</a>
@@ -329,7 +365,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parentzonename_csharp">
 <a href="#parentzonename_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Zone<wbr>Name</a>
@@ -338,7 +375,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -347,7 +385,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the selected availability zone resides. This is always the region selected on the provider, since this data source searches only within that region.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -355,7 +394,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -363,7 +403,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zonetype_csharp">
 <a href="#zonetype_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Type</a>
@@ -372,7 +413,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of zone. Values are `availability-zone`, `local-zone`, and `wavelength-zone`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="allavailabilityzones_csharp">
 <a href="#allavailabilityzones_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Availability<wbr>Zones</a>
@@ -380,7 +422,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -388,11 +431,14 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getavailabilityzonefilter">List&lt;Get<wbr>Availability<wbr>Zone<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="groupname_go">
 <a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -401,7 +447,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this is the same value as the Region name. For Local Zones, the name of the associated group, for example `us-west-2-lax-1`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -410,7 +457,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -418,7 +466,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="namesuffix_go">
 <a href="#namesuffix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Suffix</a>
@@ -429,7 +478,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
     <dd>{{% md %}}The part of the AZ name that appears after the region name, uniquely identifying the AZ within its region.
 For Availability Zones this is usually a single letter, for example `a` for the `us-west-2a` zone.
 For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz-1` for the `us-west-2-wl1-sfo-wlz-1` zone.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="networkbordergroup_go">
 <a href="#networkbordergroup_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Border<wbr>Group</a>
@@ -438,7 +488,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the location from which the address is advertised.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="optinstatus_go">
 <a href="#optinstatus_go" style="color: inherit; text-decoration: inherit;">Opt<wbr>In<wbr>Status</a>
@@ -447,7 +498,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this always has the value of `opt-in-not-required`. For Local Zones, this is the opt in status. The possible values are `opted-in` and `not-opted-in`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parentzoneid_go">
 <a href="#parentzoneid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Zone<wbr>Id</a>
@@ -456,7 +508,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parentzonename_go">
 <a href="#parentzonename_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Zone<wbr>Name</a>
@@ -465,7 +518,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -474,7 +528,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the selected availability zone resides. This is always the region selected on the provider, since this data source searches only within that region.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -482,7 +537,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -490,7 +546,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zonetype_go">
 <a href="#zonetype_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Type</a>
@@ -499,7 +556,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of zone. Values are `availability-zone`, `local-zone`, and `wavelength-zone`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="allavailabilityzones_go">
 <a href="#allavailabilityzones_go" style="color: inherit; text-decoration: inherit;">All<wbr>Availability<wbr>Zones</a>
@@ -507,7 +565,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -515,11 +574,14 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getavailabilityzonefilter">[]Get<wbr>Availability<wbr>Zone<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="groupname_nodejs">
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
@@ -528,7 +590,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this is the same value as the Region name. For Local Zones, the name of the associated group, for example `us-west-2-lax-1`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -537,7 +600,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -545,7 +609,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="namesuffix_nodejs">
 <a href="#namesuffix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Suffix</a>
@@ -556,7 +621,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
     <dd>{{% md %}}The part of the AZ name that appears after the region name, uniquely identifying the AZ within its region.
 For Availability Zones this is usually a single letter, for example `a` for the `us-west-2a` zone.
 For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz-1` for the `us-west-2-wl1-sfo-wlz-1` zone.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="networkbordergroup_nodejs">
 <a href="#networkbordergroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Border<wbr>Group</a>
@@ -565,7 +631,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the location from which the address is advertised.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="optinstatus_nodejs">
 <a href="#optinstatus_nodejs" style="color: inherit; text-decoration: inherit;">opt<wbr>In<wbr>Status</a>
@@ -574,7 +641,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this always has the value of `opt-in-not-required`. For Local Zones, this is the opt in status. The possible values are `opted-in` and `not-opted-in`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parentzoneid_nodejs">
 <a href="#parentzoneid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Zone<wbr>Id</a>
@@ -583,7 +651,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parentzonename_nodejs">
 <a href="#parentzonename_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Zone<wbr>Name</a>
@@ -592,7 +661,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -601,7 +671,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the selected availability zone resides. This is always the region selected on the provider, since this data source searches only within that region.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -609,7 +680,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -617,7 +689,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zonetype_nodejs">
 <a href="#zonetype_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Type</a>
@@ -626,7 +699,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of zone. Values are `availability-zone`, `local-zone`, and `wavelength-zone`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="allavailabilityzones_nodejs">
 <a href="#allavailabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Availability<wbr>Zones</a>
@@ -634,7 +708,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -642,11 +717,14 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getavailabilityzonefilter">Get<wbr>Availability<wbr>Zone<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="group_name_python">
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
@@ -655,7 +733,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this is the same value as the Region name. For Local Zones, the name of the associated group, for example `us-west-2-lax-1`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -664,7 +743,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -672,7 +752,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_suffix_python">
 <a href="#name_suffix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>suffix</a>
@@ -683,7 +764,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
     <dd>{{% md %}}The part of the AZ name that appears after the region name, uniquely identifying the AZ within its region.
 For Availability Zones this is usually a single letter, for example `a` for the `us-west-2a` zone.
 For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz-1` for the `us-west-2-wl1-sfo-wlz-1` zone.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="network_border_group_python">
 <a href="#network_border_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>border_<wbr>group</a>
@@ -692,7 +774,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the location from which the address is advertised.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="opt_in_status_python">
 <a href="#opt_in_status_python" style="color: inherit; text-decoration: inherit;">opt_<wbr>in_<wbr>status</a>
@@ -701,7 +784,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this always has the value of `opt-in-not-required`. For Local Zones, this is the opt in status. The possible values are `opted-in` and `not-opted-in`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parent_zone_id_python">
 <a href="#parent_zone_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>zone_<wbr>id</a>
@@ -710,7 +794,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parent_zone_name_python">
 <a href="#parent_zone_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>zone_<wbr>name</a>
@@ -719,7 +804,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -728,7 +814,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the selected availability zone resides. This is always the region selected on the provider, since this data source searches only within that region.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -736,7 +823,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -744,7 +832,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zone_type_python">
 <a href="#zone_type_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>type</a>
@@ -753,7 +842,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of zone. Values are `availability-zone`, `local-zone`, and `wavelength-zone`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="all_availability_zones_python">
 <a href="#all_availability_zones_python" style="color: inherit; text-decoration: inherit;">all_<wbr>availability_<wbr>zones</a>
@@ -761,7 +851,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -769,7 +860,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getavailabilityzonefilter">Sequence[Get<wbr>Availability<wbr>Zone<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -783,7 +875,9 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -792,7 +886,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -801,11 +896,14 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -814,7 +912,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -823,11 +922,14 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -836,7 +938,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -845,11 +948,14 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -858,7 +964,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -867,7 +974,8 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -881,6 +989,6 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

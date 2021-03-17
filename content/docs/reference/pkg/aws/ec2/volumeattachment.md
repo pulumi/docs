@@ -16,17 +16,11 @@ detach volumes from AWS Instances.
 > **NOTE on EBS block devices:** If you use `ebs_block_device` on an `aws.ec2.Instance`, this provider will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, `ebs_block_device` cannot be mixed with external `aws.ebs.Volume` + `aws_ebs_volume_attachment` resources for a given instance.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -61,12 +55,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -109,12 +100,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -135,12 +123,9 @@ ebs_att = aws.ec2.VolumeAttachment("ebsAtt",
     instance_id=web.id)
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -165,16 +150,9 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a VolumeAttachment Resource {#create}
@@ -199,7 +177,9 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -207,7 +187,9 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -215,7 +197,9 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -223,7 +207,10 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -249,7 +236,9 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -257,7 +246,9 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -265,7 +256,9 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,7 +266,9 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -281,13 +276,18 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -295,7 +295,9 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -303,7 +305,9 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -311,7 +315,10 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -326,7 +333,9 @@ The VolumeAttachment resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -336,7 +345,8 @@ The VolumeAttachment resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -345,7 +355,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -354,7 +365,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="forcedetach_csharp">
 <a href="#forcedetach_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach</a>
@@ -366,7 +378,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
 [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="skipdestroy_csharp">
 <a href="#skipdestroy_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Destroy</a>
@@ -379,11 +392,14 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -393,7 +409,8 @@ means attached.
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -402,7 +419,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="volumeid_go">
 <a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -411,7 +429,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="forcedetach_go">
 <a href="#forcedetach_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach</a>
@@ -423,7 +442,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
 [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="skipdestroy_go">
 <a href="#skipdestroy_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Destroy</a>
@@ -436,11 +456,14 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -450,7 +473,8 @@ means attached.
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -459,7 +483,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -468,7 +493,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="forcedetach_nodejs">
 <a href="#forcedetach_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Detach</a>
@@ -480,7 +506,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
 [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="skipdestroy_nodejs">
 <a href="#skipdestroy_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Destroy</a>
@@ -493,11 +520,14 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -507,7 +537,8 @@ means attached.
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -516,7 +547,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -525,7 +557,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="force_detach_python">
 <a href="#force_detach_python" style="color: inherit; text-decoration: inherit;">force_<wbr>detach</a>
@@ -537,7 +570,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
 [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="skip_destroy_python">
 <a href="#skip_destroy_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>destroy</a>
@@ -550,7 +584,8 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -561,7 +596,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -569,11 +606,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -581,11 +621,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -593,11 +636,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -605,7 +651,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -732,7 +779,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_devicename_csharp">
 <a href="#state_devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -742,7 +791,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_forcedetach_csharp">
 <a href="#state_forcedetach_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach</a>
@@ -754,7 +804,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
 [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
 <a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -763,7 +814,8 @@ as a last resort, as this can result in **data loss**. See
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_skipdestroy_csharp">
 <a href="#state_skipdestroy_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Destroy</a>
@@ -776,7 +828,8 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_csharp">
 <a href="#state_volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -785,11 +838,14 @@ means attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_devicename_go">
 <a href="#state_devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -799,7 +855,8 @@ means attached.
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_forcedetach_go">
 <a href="#state_forcedetach_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach</a>
@@ -811,7 +868,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
 [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
 <a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -820,7 +878,8 @@ as a last resort, as this can result in **data loss**. See
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_skipdestroy_go">
 <a href="#state_skipdestroy_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Destroy</a>
@@ -833,7 +892,8 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_go">
 <a href="#state_volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -842,11 +902,14 @@ means attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_devicename_nodejs">
 <a href="#state_devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -856,7 +919,8 @@ means attached.
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_forcedetach_nodejs">
 <a href="#state_forcedetach_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Detach</a>
@@ -868,7 +932,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
 [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -877,7 +942,8 @@ as a last resort, as this can result in **data loss**. See
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_skipdestroy_nodejs">
 <a href="#state_skipdestroy_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Destroy</a>
@@ -890,7 +956,8 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_nodejs">
 <a href="#state_volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -899,11 +966,14 @@ means attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_device_name_python">
 <a href="#state_device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -913,7 +983,8 @@ means attached.
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_force_detach_python">
 <a href="#state_force_detach_python" style="color: inherit; text-decoration: inherit;">force_<wbr>detach</a>
@@ -925,7 +996,8 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
 [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -934,7 +1006,8 @@ as a last resort, as this can result in **data loss**. See
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_skip_destroy_python">
 <a href="#state_skip_destroy_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>destroy</a>
@@ -947,7 +1020,8 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_volume_id_python">
 <a href="#state_volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -956,7 +1030,8 @@ means attached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -984,6 +1059,6 @@ EBS Volume Attachments can be imported using `DEVICE_NAME:VOLUME_ID:INSTANCE_ID`
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

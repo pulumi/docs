@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.s3.BucketOwnershipControls resource with e
 Provides a resource to manage S3 Bucket Ownership Controls. For more information, see the [S3 Developer Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html).
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -48,12 +42,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -82,12 +73,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -100,12 +88,9 @@ example_bucket_ownership_controls = aws.s3.BucketOwnershipControls("exampleBucke
     ))
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -120,16 +105,9 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a BucketOwnershipControls Resource {#create}
@@ -154,7 +132,9 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -162,7 +142,9 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -170,7 +152,9 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,7 +162,10 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -204,7 +191,9 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -212,7 +201,9 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -220,7 +211,9 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -228,7 +221,9 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -236,13 +231,18 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -250,7 +250,9 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -258,7 +260,9 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -266,7 +270,10 @@ const exampleBucketOwnershipControls = new aws.s3.BucketOwnershipControls("examp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -281,7 +288,9 @@ The BucketOwnershipControls resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -290,7 +299,8 @@ The BucketOwnershipControls resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="rule_csharp">
 <a href="#rule_csharp" style="color: inherit; text-decoration: inherit;">Rule</a>
@@ -299,11 +309,14 @@ The BucketOwnershipControls resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Ownership Controls rules. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -312,7 +325,8 @@ The BucketOwnershipControls resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="rule_go">
 <a href="#rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
@@ -321,11 +335,14 @@ The BucketOwnershipControls resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Ownership Controls rules. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -334,7 +351,8 @@ The BucketOwnershipControls resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="rule_nodejs">
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
@@ -343,11 +361,14 @@ The BucketOwnershipControls resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Ownership Controls rules. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -356,7 +377,8 @@ The BucketOwnershipControls resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="rule_python">
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
@@ -365,7 +387,8 @@ The BucketOwnershipControls resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Ownership Controls rules. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -376,7 +399,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -384,11 +409,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -396,11 +424,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -408,11 +439,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -420,7 +454,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -547,7 +582,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bucket_csharp">
 <a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -556,7 +593,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_rule_csharp">
 <a href="#state_rule_csharp" style="color: inherit; text-decoration: inherit;">Rule</a>
@@ -565,11 +603,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Ownership Controls rules. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bucket_go">
 <a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -578,7 +619,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_rule_go">
 <a href="#state_rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
@@ -587,11 +629,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Ownership Controls rules. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bucket_nodejs">
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -600,7 +645,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_rule_nodejs">
 <a href="#state_rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
@@ -609,11 +655,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Ownership Controls rules. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bucket_python">
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -622,7 +671,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_rule_python">
 <a href="#state_rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
@@ -631,7 +681,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Ownership Controls rules. Detailed below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -646,7 +697,9 @@ The following state arguments are supported:
 <h4 id="bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="objectownership_csharp">
 <a href="#objectownership_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ownership</a>
@@ -655,11 +708,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object ownership. Valid values: `BucketOwnerPreferred` or `ObjectWriter`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="objectownership_go">
 <a href="#objectownership_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ownership</a>
@@ -668,11 +724,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object ownership. Valid values: `BucketOwnerPreferred` or `ObjectWriter`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="objectownership_nodejs">
 <a href="#objectownership_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ownership</a>
@@ -681,11 +740,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object ownership. Valid values: `BucketOwnerPreferred` or `ObjectWriter`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="object_ownership_python">
 <a href="#object_ownership_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ownership</a>
@@ -694,7 +756,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object ownership. Valid values: `BucketOwnerPreferred` or `ObjectWriter`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -715,6 +778,6 @@ S3 Bucket Ownership Controls can be imported using S3 Bucket name, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

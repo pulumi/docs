@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.kms.Grant resource with examples, input pr
 Provides a resource-based access control mechanism for a KMS customer master key.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -78,12 +72,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -131,12 +122,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -171,12 +159,9 @@ grant = aws.kms.Grant("grant",
     )])
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -213,16 +198,9 @@ const grant = new aws.kms.Grant("grant", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a Grant Resource {#create}
@@ -247,7 +225,9 @@ const grant = new aws.kms.Grant("grant", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -255,7 +235,9 @@ const grant = new aws.kms.Grant("grant", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -263,7 +245,9 @@ const grant = new aws.kms.Grant("grant", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -271,7 +255,10 @@ const grant = new aws.kms.Grant("grant", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -297,7 +284,9 @@ const grant = new aws.kms.Grant("grant", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -305,7 +294,9 @@ const grant = new aws.kms.Grant("grant", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -313,7 +304,9 @@ const grant = new aws.kms.Grant("grant", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -321,7 +314,9 @@ const grant = new aws.kms.Grant("grant", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -329,13 +324,18 @@ const grant = new aws.kms.Grant("grant", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -343,7 +343,9 @@ const grant = new aws.kms.Grant("grant", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -351,7 +353,9 @@ const grant = new aws.kms.Grant("grant", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -359,7 +363,10 @@ const grant = new aws.kms.Grant("grant", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -374,7 +381,9 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="granteeprincipal_csharp">
 <a href="#granteeprincipal_csharp" style="color: inherit; text-decoration: inherit;">Grantee<wbr>Principal</a>
@@ -383,7 +392,8 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="keyid_csharp">
 <a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -392,7 +402,8 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="operations_csharp">
 <a href="#operations_csharp" style="color: inherit; text-decoration: inherit;">Operations</a>
@@ -401,7 +412,8 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of operations that the grant permits. The permitted values are: `Decrypt`, `Encrypt`, `GenerateDataKey`, `GenerateDataKeyWithoutPlaintext`, `ReEncryptFrom`, `ReEncryptTo`, `Sign`, `Verify`, `GetPublicKey`, `CreateGrant`, `RetireGrant`, `DescribeKey`, `GenerateDataKeyPair`, or `GenerateDataKeyPairWithoutPlaintext`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="constraints_csharp">
 <a href="#constraints_csharp" style="color: inherit; text-decoration: inherit;">Constraints</a>
@@ -410,7 +422,8 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#grantconstraint">List&lt;Grant<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="grantcreationtokens_csharp">
 <a href="#grantcreationtokens_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Creation<wbr>Tokens</a>
@@ -419,7 +432,8 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -428,7 +442,8 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for identifying the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retireondelete_csharp">
 <a href="#retireondelete_csharp" style="color: inherit; text-decoration: inherit;">Retire<wbr>On<wbr>Delete</a>
@@ -438,7 +453,8 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}-(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retiringprincipal_csharp">
 <a href="#retiringprincipal_csharp" style="color: inherit; text-decoration: inherit;">Retiring<wbr>Principal</a>
@@ -447,11 +463,14 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="granteeprincipal_go">
 <a href="#granteeprincipal_go" style="color: inherit; text-decoration: inherit;">Grantee<wbr>Principal</a>
@@ -460,7 +479,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="keyid_go">
 <a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -469,7 +489,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="operations_go">
 <a href="#operations_go" style="color: inherit; text-decoration: inherit;">Operations</a>
@@ -478,7 +499,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of operations that the grant permits. The permitted values are: `Decrypt`, `Encrypt`, `GenerateDataKey`, `GenerateDataKeyWithoutPlaintext`, `ReEncryptFrom`, `ReEncryptTo`, `Sign`, `Verify`, `GetPublicKey`, `CreateGrant`, `RetireGrant`, `DescribeKey`, `GenerateDataKeyPair`, or `GenerateDataKeyPairWithoutPlaintext`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="constraints_go">
 <a href="#constraints_go" style="color: inherit; text-decoration: inherit;">Constraints</a>
@@ -487,7 +509,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type"><a href="#grantconstraint">[]Grant<wbr>Constraint</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="grantcreationtokens_go">
 <a href="#grantcreationtokens_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Creation<wbr>Tokens</a>
@@ -496,7 +519,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -505,7 +529,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for identifying the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retireondelete_go">
 <a href="#retireondelete_go" style="color: inherit; text-decoration: inherit;">Retire<wbr>On<wbr>Delete</a>
@@ -515,7 +540,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
     </dt>
     <dd>{{% md %}}-(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retiringprincipal_go">
 <a href="#retiringprincipal_go" style="color: inherit; text-decoration: inherit;">Retiring<wbr>Principal</a>
@@ -524,11 +550,14 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="granteeprincipal_nodejs">
 <a href="#granteeprincipal_nodejs" style="color: inherit; text-decoration: inherit;">grantee<wbr>Principal</a>
@@ -537,7 +566,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="keyid_nodejs">
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
@@ -546,7 +576,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="operations_nodejs">
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
@@ -555,7 +586,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of operations that the grant permits. The permitted values are: `Decrypt`, `Encrypt`, `GenerateDataKey`, `GenerateDataKeyWithoutPlaintext`, `ReEncryptFrom`, `ReEncryptTo`, `Sign`, `Verify`, `GetPublicKey`, `CreateGrant`, `RetireGrant`, `DescribeKey`, `GenerateDataKeyPair`, or `GenerateDataKeyPairWithoutPlaintext`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="constraints_nodejs">
 <a href="#constraints_nodejs" style="color: inherit; text-decoration: inherit;">constraints</a>
@@ -564,7 +596,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type"><a href="#grantconstraint">Grant<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="grantcreationtokens_nodejs">
 <a href="#grantcreationtokens_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Creation<wbr>Tokens</a>
@@ -573,7 +606,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -582,7 +616,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for identifying the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retireondelete_nodejs">
 <a href="#retireondelete_nodejs" style="color: inherit; text-decoration: inherit;">retire<wbr>On<wbr>Delete</a>
@@ -592,7 +627,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
     </dt>
     <dd>{{% md %}}-(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retiringprincipal_nodejs">
 <a href="#retiringprincipal_nodejs" style="color: inherit; text-decoration: inherit;">retiring<wbr>Principal</a>
@@ -601,11 +637,14 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="grantee_principal_python">
 <a href="#grantee_principal_python" style="color: inherit; text-decoration: inherit;">grantee_<wbr>principal</a>
@@ -614,7 +653,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="key_id_python">
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
@@ -623,7 +663,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="operations_python">
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
@@ -632,7 +673,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of operations that the grant permits. The permitted values are: `Decrypt`, `Encrypt`, `GenerateDataKey`, `GenerateDataKeyWithoutPlaintext`, `ReEncryptFrom`, `ReEncryptTo`, `Sign`, `Verify`, `GetPublicKey`, `CreateGrant`, `RetireGrant`, `DescribeKey`, `GenerateDataKeyPair`, or `GenerateDataKeyPairWithoutPlaintext`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="constraints_python">
 <a href="#constraints_python" style="color: inherit; text-decoration: inherit;">constraints</a>
@@ -641,7 +683,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type"><a href="#grantconstraint">Sequence[Grant<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="grant_creation_tokens_python">
 <a href="#grant_creation_tokens_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>creation_<wbr>tokens</a>
@@ -650,7 +693,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -659,7 +703,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name for identifying the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retire_on_delete_python">
 <a href="#retire_on_delete_python" style="color: inherit; text-decoration: inherit;">retire_<wbr>on_<wbr>delete</a>
@@ -669,7 +714,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
     </dt>
     <dd>{{% md %}}-(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retiring_principal_python">
 <a href="#retiring_principal_python" style="color: inherit; text-decoration: inherit;">retiring_<wbr>principal</a>
@@ -678,7 +724,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -689,7 +736,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="grantid_csharp">
 <a href="#grantid_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Id</a>
@@ -698,7 +747,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the grant.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="granttoken_csharp">
 <a href="#granttoken_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Token</a>
@@ -707,7 +757,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -715,11 +766,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="grantid_go">
 <a href="#grantid_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Id</a>
@@ -728,7 +782,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the grant.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="granttoken_go">
 <a href="#granttoken_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Token</a>
@@ -737,7 +792,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -745,11 +801,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="grantid_nodejs">
 <a href="#grantid_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Id</a>
@@ -758,7 +817,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the grant.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="granttoken_nodejs">
 <a href="#granttoken_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Token</a>
@@ -767,7 +827,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -775,11 +836,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="grant_id_python">
 <a href="#grant_id_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>id</a>
@@ -788,7 +852,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the grant.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="grant_token_python">
 <a href="#grant_token_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>token</a>
@@ -797,7 +862,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -805,7 +871,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -932,7 +999,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_constraints_csharp">
 <a href="#state_constraints_csharp" style="color: inherit; text-decoration: inherit;">Constraints</a>
@@ -941,7 +1010,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#grantconstraint">List&lt;Grant<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_grantcreationtokens_csharp">
 <a href="#state_grantcreationtokens_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Creation<wbr>Tokens</a>
@@ -950,7 +1020,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_grantid_csharp">
 <a href="#state_grantid_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Id</a>
@@ -959,7 +1030,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_granttoken_csharp">
 <a href="#state_granttoken_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Token</a>
@@ -968,7 +1040,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_granteeprincipal_csharp">
 <a href="#state_granteeprincipal_csharp" style="color: inherit; text-decoration: inherit;">Grantee<wbr>Principal</a>
@@ -977,7 +1050,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_keyid_csharp">
 <a href="#state_keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -986,7 +1060,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -995,7 +1070,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for identifying the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_operations_csharp">
 <a href="#state_operations_csharp" style="color: inherit; text-decoration: inherit;">Operations</a>
@@ -1004,7 +1080,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of operations that the grant permits. The permitted values are: `Decrypt`, `Encrypt`, `GenerateDataKey`, `GenerateDataKeyWithoutPlaintext`, `ReEncryptFrom`, `ReEncryptTo`, `Sign`, `Verify`, `GetPublicKey`, `CreateGrant`, `RetireGrant`, `DescribeKey`, `GenerateDataKeyPair`, or `GenerateDataKeyPairWithoutPlaintext`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retireondelete_csharp">
 <a href="#state_retireondelete_csharp" style="color: inherit; text-decoration: inherit;">Retire<wbr>On<wbr>Delete</a>
@@ -1014,7 +1091,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}-(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retiringprincipal_csharp">
 <a href="#state_retiringprincipal_csharp" style="color: inherit; text-decoration: inherit;">Retiring<wbr>Principal</a>
@@ -1023,11 +1101,14 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_constraints_go">
 <a href="#state_constraints_go" style="color: inherit; text-decoration: inherit;">Constraints</a>
@@ -1036,7 +1117,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type"><a href="#grantconstraint">[]Grant<wbr>Constraint</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_grantcreationtokens_go">
 <a href="#state_grantcreationtokens_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Creation<wbr>Tokens</a>
@@ -1045,7 +1127,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_grantid_go">
 <a href="#state_grantid_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Id</a>
@@ -1054,7 +1137,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_granttoken_go">
 <a href="#state_granttoken_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Token</a>
@@ -1063,7 +1147,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_granteeprincipal_go">
 <a href="#state_granteeprincipal_go" style="color: inherit; text-decoration: inherit;">Grantee<wbr>Principal</a>
@@ -1072,7 +1157,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_keyid_go">
 <a href="#state_keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -1081,7 +1167,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1090,7 +1177,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for identifying the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_operations_go">
 <a href="#state_operations_go" style="color: inherit; text-decoration: inherit;">Operations</a>
@@ -1099,7 +1187,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of operations that the grant permits. The permitted values are: `Decrypt`, `Encrypt`, `GenerateDataKey`, `GenerateDataKeyWithoutPlaintext`, `ReEncryptFrom`, `ReEncryptTo`, `Sign`, `Verify`, `GetPublicKey`, `CreateGrant`, `RetireGrant`, `DescribeKey`, `GenerateDataKeyPair`, or `GenerateDataKeyPairWithoutPlaintext`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retireondelete_go">
 <a href="#state_retireondelete_go" style="color: inherit; text-decoration: inherit;">Retire<wbr>On<wbr>Delete</a>
@@ -1109,7 +1198,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
     </dt>
     <dd>{{% md %}}-(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retiringprincipal_go">
 <a href="#state_retiringprincipal_go" style="color: inherit; text-decoration: inherit;">Retiring<wbr>Principal</a>
@@ -1118,11 +1208,14 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_constraints_nodejs">
 <a href="#state_constraints_nodejs" style="color: inherit; text-decoration: inherit;">constraints</a>
@@ -1131,7 +1224,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type"><a href="#grantconstraint">Grant<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_grantcreationtokens_nodejs">
 <a href="#state_grantcreationtokens_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Creation<wbr>Tokens</a>
@@ -1140,7 +1234,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_grantid_nodejs">
 <a href="#state_grantid_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Id</a>
@@ -1149,7 +1244,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_granttoken_nodejs">
 <a href="#state_granttoken_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Token</a>
@@ -1158,7 +1254,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_granteeprincipal_nodejs">
 <a href="#state_granteeprincipal_nodejs" style="color: inherit; text-decoration: inherit;">grantee<wbr>Principal</a>
@@ -1167,7 +1264,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_keyid_nodejs">
 <a href="#state_keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
@@ -1176,7 +1274,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1185,7 +1284,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for identifying the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_operations_nodejs">
 <a href="#state_operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
@@ -1194,7 +1294,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of operations that the grant permits. The permitted values are: `Decrypt`, `Encrypt`, `GenerateDataKey`, `GenerateDataKeyWithoutPlaintext`, `ReEncryptFrom`, `ReEncryptTo`, `Sign`, `Verify`, `GetPublicKey`, `CreateGrant`, `RetireGrant`, `DescribeKey`, `GenerateDataKeyPair`, or `GenerateDataKeyPairWithoutPlaintext`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retireondelete_nodejs">
 <a href="#state_retireondelete_nodejs" style="color: inherit; text-decoration: inherit;">retire<wbr>On<wbr>Delete</a>
@@ -1204,7 +1305,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
     </dt>
     <dd>{{% md %}}-(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retiringprincipal_nodejs">
 <a href="#state_retiringprincipal_nodejs" style="color: inherit; text-decoration: inherit;">retiring<wbr>Principal</a>
@@ -1213,11 +1315,14 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_constraints_python">
 <a href="#state_constraints_python" style="color: inherit; text-decoration: inherit;">constraints</a>
@@ -1226,7 +1331,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type"><a href="#grantconstraint">Sequence[Grant<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_grant_creation_tokens_python">
 <a href="#state_grant_creation_tokens_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>creation_<wbr>tokens</a>
@@ -1235,7 +1341,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_grant_id_python">
 <a href="#state_grant_id_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>id</a>
@@ -1244,7 +1351,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_grant_token_python">
 <a href="#state_grant_token_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>token</a>
@@ -1253,7 +1361,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_grantee_principal_python">
 <a href="#state_grantee_principal_python" style="color: inherit; text-decoration: inherit;">grantee_<wbr>principal</a>
@@ -1262,7 +1371,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_key_id_python">
 <a href="#state_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
@@ -1271,7 +1381,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1280,7 +1391,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name for identifying the grant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_operations_python">
 <a href="#state_operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
@@ -1289,7 +1401,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of operations that the grant permits. The permitted values are: `Decrypt`, `Encrypt`, `GenerateDataKey`, `GenerateDataKeyWithoutPlaintext`, `ReEncryptFrom`, `ReEncryptTo`, `Sign`, `Verify`, `GetPublicKey`, `CreateGrant`, `RetireGrant`, `DescribeKey`, `GenerateDataKeyPair`, or `GenerateDataKeyPairWithoutPlaintext`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retire_on_delete_python">
 <a href="#state_retire_on_delete_python" style="color: inherit; text-decoration: inherit;">retire_<wbr>on_<wbr>delete</a>
@@ -1299,7 +1412,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
     </dt>
     <dd>{{% md %}}-(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retiring_principal_python">
 <a href="#state_retiring_principal_python" style="color: inherit; text-decoration: inherit;">retiring_<wbr>principal</a>
@@ -1308,7 +1422,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1323,7 +1438,9 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <h4 id="grantconstraint">Grant<wbr>Constraint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="encryptioncontextequals_csharp">
 <a href="#encryptioncontextequals_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Context<wbr>Equals</a>
@@ -1332,7 +1449,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with `encryption_context_subset`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="encryptioncontextsubset_csharp">
 <a href="#encryptioncontextsubset_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Context<wbr>Subset</a>
@@ -1341,11 +1459,14 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with `encryption_context_equals`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="encryptioncontextequals_go">
 <a href="#encryptioncontextequals_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Context<wbr>Equals</a>
@@ -1354,7 +1475,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with `encryption_context_subset`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="encryptioncontextsubset_go">
 <a href="#encryptioncontextsubset_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Context<wbr>Subset</a>
@@ -1363,11 +1485,14 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with `encryption_context_equals`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="encryptioncontextequals_nodejs">
 <a href="#encryptioncontextequals_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Context<wbr>Equals</a>
@@ -1376,7 +1501,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with `encryption_context_subset`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="encryptioncontextsubset_nodejs">
 <a href="#encryptioncontextsubset_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Context<wbr>Subset</a>
@@ -1385,11 +1511,14 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with `encryption_context_equals`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="encryption_context_equals_python">
 <a href="#encryption_context_equals_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>context_<wbr>equals</a>
@@ -1398,7 +1527,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with `encryption_context_subset`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="encryption_context_subset_python">
 <a href="#encryption_context_subset_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>context_<wbr>subset</a>
@@ -1407,7 +1537,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with `encryption_context_equals`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -1428,6 +1559,6 @@ KMS Grants can be imported using the Key ID and Grant ID separated by a colon (`
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

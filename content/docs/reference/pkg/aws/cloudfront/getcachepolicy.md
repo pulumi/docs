@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.cloudfront.getCachePolicy function with ex
 
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -41,12 +35,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -69,12 +60,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -82,12 +70,9 @@ import pulumi_aws as aws
 example = aws.cloudfront.get_cache_policy(name="example-policy")
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -98,16 +83,9 @@ const example = pulumi.output(aws.cloudfront.getCachePolicy({
 }, { async: true }));
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Using getCachePolicy {#using}
@@ -145,7 +123,9 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -154,7 +134,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the cache policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -163,11 +144,14 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to identify the cache policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -176,7 +160,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the cache policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -185,11 +170,14 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to identify the cache policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -198,7 +186,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the cache policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -207,11 +196,14 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to identify the cache policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -220,7 +212,8 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the cache policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -229,7 +222,8 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name to identify the cache policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -242,7 +236,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -251,7 +247,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comment to describe the cache policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultttl_csharp">
 <a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -260,7 +257,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -269,7 +267,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the cache policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -278,7 +277,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="minttl_csharp">
 <a href="#minttl_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
@@ -287,7 +287,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parametersincachekeyandforwardedtoorigins_csharp">
 <a href="#parametersincachekeyandforwardedtoorigins_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origins</a>
@@ -296,7 +297,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigin">List&lt;Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin&gt;</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -304,7 +306,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -312,11 +315,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -325,7 +331,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comment to describe the cache policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultttl_go">
 <a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -334,7 +341,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -343,7 +351,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the cache policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -352,7 +361,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="minttl_go">
 <a href="#minttl_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
@@ -361,7 +371,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parametersincachekeyandforwardedtoorigins_go">
 <a href="#parametersincachekeyandforwardedtoorigins_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origins</a>
@@ -370,7 +381,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigin">[]Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -378,7 +390,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -386,11 +399,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -399,7 +415,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comment to describe the cache policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultttl_nodejs">
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
@@ -408,7 +425,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -417,7 +435,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the cache policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -426,7 +445,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="minttl_nodejs">
 <a href="#minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
@@ -435,7 +455,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parametersincachekeyandforwardedtoorigins_nodejs">
 <a href="#parametersincachekeyandforwardedtoorigins_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origins</a>
@@ -444,7 +465,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigin">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin[]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -452,7 +474,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -460,11 +483,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -473,7 +499,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comment to describe the cache policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="default_ttl_python">
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
@@ -482,7 +509,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -491,7 +519,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the cache policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -500,7 +529,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="min_ttl_python">
 <a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
@@ -509,7 +539,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="parameters_in_cache_key_and_forwarded_to_origins_python">
 <a href="#parameters_in_cache_key_and_forwarded_to_origins_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>in_<wbr>cache_<wbr>key_<wbr>and_<wbr>forwarded_<wbr>to_<wbr>origins</a>
@@ -518,7 +549,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigin">Sequence[Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -526,7 +558,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -534,7 +567,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -548,7 +582,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cookiesconfigs_csharp">
 <a href="#cookiesconfigs_csharp" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Configs</a>
@@ -557,7 +593,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">List&lt;Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="enableacceptencodingbrotli_csharp">
 <a href="#enableacceptencodingbrotli_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accept<wbr>Encoding<wbr>Brotli</a>
@@ -566,7 +603,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="enableacceptencodinggzip_csharp">
 <a href="#enableacceptencodinggzip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accept<wbr>Encoding<wbr>Gzip</a>
@@ -575,7 +613,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="headersconfigs_csharp">
 <a href="#headersconfigs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>Configs</a>
@@ -584,7 +623,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginheadersconfig">List&lt;Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="querystringsconfigs_csharp">
 <a href="#querystringsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings<wbr>Configs</a>
@@ -593,11 +633,14 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">List&lt;Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cookiesconfigs_go">
 <a href="#cookiesconfigs_go" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Configs</a>
@@ -606,7 +649,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">[]Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="enableacceptencodingbrotli_go">
 <a href="#enableacceptencodingbrotli_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accept<wbr>Encoding<wbr>Brotli</a>
@@ -615,7 +659,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="enableacceptencodinggzip_go">
 <a href="#enableacceptencodinggzip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accept<wbr>Encoding<wbr>Gzip</a>
@@ -624,7 +669,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="headersconfigs_go">
 <a href="#headersconfigs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>Configs</a>
@@ -633,7 +679,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginheadersconfig">[]Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="querystringsconfigs_go">
 <a href="#querystringsconfigs_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings<wbr>Configs</a>
@@ -642,11 +689,14 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">[]Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cookiesconfigs_nodejs">
 <a href="#cookiesconfigs_nodejs" style="color: inherit; text-decoration: inherit;">cookies<wbr>Configs</a>
@@ -655,7 +705,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="enableacceptencodingbrotli_nodejs">
 <a href="#enableacceptencodingbrotli_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Accept<wbr>Encoding<wbr>Brotli</a>
@@ -664,7 +715,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="enableacceptencodinggzip_nodejs">
 <a href="#enableacceptencodinggzip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Accept<wbr>Encoding<wbr>Gzip</a>
@@ -673,7 +725,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="headersconfigs_nodejs">
 <a href="#headersconfigs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>Configs</a>
@@ -682,7 +735,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="querystringsconfigs_nodejs">
 <a href="#querystringsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings<wbr>Configs</a>
@@ -691,11 +745,14 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cookies_configs_python">
 <a href="#cookies_configs_python" style="color: inherit; text-decoration: inherit;">cookies_<wbr>configs</a>
@@ -704,7 +761,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Sequence[Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="enable_accept_encoding_brotli_python">
 <a href="#enable_accept_encoding_brotli_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>accept_<wbr>encoding_<wbr>brotli</a>
@@ -713,7 +771,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="enable_accept_encoding_gzip_python">
 <a href="#enable_accept_encoding_gzip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>accept_<wbr>encoding_<wbr>gzip</a>
@@ -722,7 +781,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="headers_configs_python">
 <a href="#headers_configs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>configs</a>
@@ -731,7 +791,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Sequence[Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="query_strings_configs_python">
 <a href="#query_strings_configs_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings_<wbr>configs</a>
@@ -740,7 +801,8 @@ The following output properties are available:
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Sequence[Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="getcachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config</h4>
@@ -748,7 +810,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cookiebehavior_csharp">
 <a href="#cookiebehavior_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Behavior</a>
@@ -756,7 +820,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="cookies_csharp">
 <a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
@@ -764,11 +829,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookie">List&lt;Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookie<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cookiebehavior_go">
 <a href="#cookiebehavior_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Behavior</a>
@@ -776,7 +844,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="cookies_go">
 <a href="#cookies_go" style="color: inherit; text-decoration: inherit;">Cookies</a>
@@ -784,11 +853,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookie">[]Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookie</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cookiebehavior_nodejs">
 <a href="#cookiebehavior_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Behavior</a>
@@ -796,7 +868,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="cookies_nodejs">
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
@@ -804,11 +877,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookie">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookie[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cookie_behavior_python">
 <a href="#cookie_behavior_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>behavior</a>
@@ -816,7 +892,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="cookies_python">
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
@@ -824,7 +901,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookie">Sequence[Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookie<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="getcachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookie">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookie</h4>
@@ -832,7 +910,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -840,11 +920,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -852,11 +935,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -864,11 +950,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -876,7 +965,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="getcachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config</h4>
@@ -884,7 +974,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="headerbehavior_csharp">
 <a href="#headerbehavior_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Behavior</a>
@@ -892,7 +984,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -900,11 +993,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginheadersconfigheader">List&lt;Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="headerbehavior_go">
 <a href="#headerbehavior_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Behavior</a>
@@ -912,7 +1008,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -920,11 +1017,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginheadersconfigheader">[]Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Header</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="headerbehavior_nodejs">
 <a href="#headerbehavior_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Behavior</a>
@@ -932,7 +1032,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -940,11 +1041,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginheadersconfigheader">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Header[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="header_behavior_python">
 <a href="#header_behavior_python" style="color: inherit; text-decoration: inherit;">header_<wbr>behavior</a>
@@ -952,7 +1056,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -960,7 +1065,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginheadersconfigheader">Sequence[Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Header<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="getcachepolicyparametersincachekeyandforwardedtooriginheadersconfigheader">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Header</h4>
@@ -968,7 +1074,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -976,11 +1084,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -988,11 +1099,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1000,11 +1114,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1012,7 +1129,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="getcachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config</h4>
@@ -1020,7 +1138,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="querystringbehavior_csharp">
 <a href="#querystringbehavior_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Behavior</a>
@@ -1028,7 +1148,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="querystrings_csharp">
 <a href="#querystrings_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings</a>
@@ -1036,11 +1157,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystring">List&lt;Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>String<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="querystringbehavior_go">
 <a href="#querystringbehavior_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Behavior</a>
@@ -1048,7 +1172,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="querystrings_go">
 <a href="#querystrings_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings</a>
@@ -1056,11 +1181,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystring">[]Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>String</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="querystringbehavior_nodejs">
 <a href="#querystringbehavior_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Behavior</a>
@@ -1068,7 +1196,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="querystrings_nodejs">
 <a href="#querystrings_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings</a>
@@ -1076,11 +1205,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystring">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>String[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="query_string_behavior_python">
 <a href="#query_string_behavior_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>behavior</a>
@@ -1088,7 +1220,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="query_strings_python">
 <a href="#query_strings_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings</a>
@@ -1096,7 +1229,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystring">Sequence[Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>String<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="getcachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystring">Get<wbr>Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>String</h4>
@@ -1104,7 +1238,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1112,11 +1248,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1124,11 +1263,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1136,11 +1278,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1148,7 +1293,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1162,6 +1308,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

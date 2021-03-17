@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.ses.ReceiptRule resource with examples, in
 Provides an SES receipt rule resource
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -65,12 +59,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -110,12 +101,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -137,12 +125,9 @@ store = aws.ses.ReceiptRule("store",
     scan_enabled=True)
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -166,16 +151,9 @@ const store = new aws.ses.ReceiptRule("store", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a ReceiptRule Resource {#create}
@@ -200,7 +178,9 @@ const store = new aws.ses.ReceiptRule("store", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -208,7 +188,9 @@ const store = new aws.ses.ReceiptRule("store", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -216,7 +198,9 @@ const store = new aws.ses.ReceiptRule("store", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -224,7 +208,10 @@ const store = new aws.ses.ReceiptRule("store", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -250,7 +237,9 @@ const store = new aws.ses.ReceiptRule("store", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -258,7 +247,9 @@ const store = new aws.ses.ReceiptRule("store", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -266,7 +257,9 @@ const store = new aws.ses.ReceiptRule("store", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -274,7 +267,9 @@ const store = new aws.ses.ReceiptRule("store", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -282,13 +277,18 @@ const store = new aws.ses.ReceiptRule("store", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -296,7 +296,9 @@ const store = new aws.ses.ReceiptRule("store", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -304,7 +306,9 @@ const store = new aws.ses.ReceiptRule("store", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -312,7 +316,10 @@ const store = new aws.ses.ReceiptRule("store", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -327,7 +334,9 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="rulesetname_csharp">
 <a href="#rulesetname_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Name</a>
@@ -336,7 +345,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="addheaderactions_csharp">
 <a href="#addheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Header<wbr>Actions</a>
@@ -345,7 +355,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptruleaddheaderaction">List&lt;Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="after_csharp">
 <a href="#after_csharp" style="color: inherit; text-decoration: inherit;">After</a>
@@ -354,7 +365,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="bounceactions_csharp">
 <a href="#bounceactions_csharp" style="color: inherit; text-decoration: inherit;">Bounce<wbr>Actions</a>
@@ -363,7 +375,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulebounceaction">List&lt;Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -372,7 +385,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="lambdaactions_csharp">
 <a href="#lambdaactions_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Actions</a>
@@ -381,7 +395,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulelambdaaction">List&lt;Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -390,7 +405,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="recipients_csharp">
 <a href="#recipients_csharp" style="color: inherit; text-decoration: inherit;">Recipients</a>
@@ -399,7 +415,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3actions_csharp">
 <a href="#s3actions_csharp" style="color: inherit; text-decoration: inherit;">S3Actions</a>
@@ -408,7 +425,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrules3action">List&lt;Receipt<wbr>Rule<wbr>S3Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="scanenabled_csharp">
 <a href="#scanenabled_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Enabled</a>
@@ -417,7 +435,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="snsactions_csharp">
 <a href="#snsactions_csharp" style="color: inherit; text-decoration: inherit;">Sns<wbr>Actions</a>
@@ -426,7 +445,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulesnsaction">List&lt;Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="stopactions_csharp">
 <a href="#stopactions_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Actions</a>
@@ -435,7 +455,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulestopaction">List&lt;Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tlspolicy_csharp">
 <a href="#tlspolicy_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Policy</a>
@@ -444,7 +465,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="workmailactions_csharp">
 <a href="#workmailactions_csharp" style="color: inherit; text-decoration: inherit;">Workmail<wbr>Actions</a>
@@ -453,11 +475,14 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptruleworkmailaction">List&lt;Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="rulesetname_go">
 <a href="#rulesetname_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Name</a>
@@ -466,7 +491,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="addheaderactions_go">
 <a href="#addheaderactions_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Header<wbr>Actions</a>
@@ -475,7 +501,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptruleaddheaderaction">[]Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="after_go">
 <a href="#after_go" style="color: inherit; text-decoration: inherit;">After</a>
@@ -484,7 +511,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="bounceactions_go">
 <a href="#bounceactions_go" style="color: inherit; text-decoration: inherit;">Bounce<wbr>Actions</a>
@@ -493,7 +521,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulebounceaction">[]Receipt<wbr>Rule<wbr>Bounce<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -502,7 +531,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="lambdaactions_go">
 <a href="#lambdaactions_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Actions</a>
@@ -511,7 +541,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulelambdaaction">[]Receipt<wbr>Rule<wbr>Lambda<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -520,7 +551,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="recipients_go">
 <a href="#recipients_go" style="color: inherit; text-decoration: inherit;">Recipients</a>
@@ -529,7 +561,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3actions_go">
 <a href="#s3actions_go" style="color: inherit; text-decoration: inherit;">S3Actions</a>
@@ -538,7 +571,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrules3action">[]Receipt<wbr>Rule<wbr>S3Action</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="scanenabled_go">
 <a href="#scanenabled_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Enabled</a>
@@ -547,7 +581,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="snsactions_go">
 <a href="#snsactions_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Actions</a>
@@ -556,7 +591,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulesnsaction">[]Receipt<wbr>Rule<wbr>Sns<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="stopactions_go">
 <a href="#stopactions_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Actions</a>
@@ -565,7 +601,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulestopaction">[]Receipt<wbr>Rule<wbr>Stop<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tlspolicy_go">
 <a href="#tlspolicy_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Policy</a>
@@ -574,7 +611,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="workmailactions_go">
 <a href="#workmailactions_go" style="color: inherit; text-decoration: inherit;">Workmail<wbr>Actions</a>
@@ -583,11 +621,14 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptruleworkmailaction">[]Receipt<wbr>Rule<wbr>Workmail<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="rulesetname_nodejs">
 <a href="#rulesetname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Name</a>
@@ -596,7 +637,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="addheaderactions_nodejs">
 <a href="#addheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Header<wbr>Actions</a>
@@ -605,7 +647,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptruleaddheaderaction">Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="after_nodejs">
 <a href="#after_nodejs" style="color: inherit; text-decoration: inherit;">after</a>
@@ -614,7 +657,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="bounceactions_nodejs">
 <a href="#bounceactions_nodejs" style="color: inherit; text-decoration: inherit;">bounce<wbr>Actions</a>
@@ -623,7 +667,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulebounceaction">Receipt<wbr>Rule<wbr>Bounce<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -632,7 +677,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="lambdaactions_nodejs">
 <a href="#lambdaactions_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Actions</a>
@@ -641,7 +687,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulelambdaaction">Receipt<wbr>Rule<wbr>Lambda<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -650,7 +697,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="recipients_nodejs">
 <a href="#recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
@@ -659,7 +707,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3actions_nodejs">
 <a href="#s3actions_nodejs" style="color: inherit; text-decoration: inherit;">s3Actions</a>
@@ -668,7 +717,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrules3action">Receipt<wbr>Rule<wbr>S3Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="scanenabled_nodejs">
 <a href="#scanenabled_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Enabled</a>
@@ -677,7 +727,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="snsactions_nodejs">
 <a href="#snsactions_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Actions</a>
@@ -686,7 +737,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulesnsaction">Receipt<wbr>Rule<wbr>Sns<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="stopactions_nodejs">
 <a href="#stopactions_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Actions</a>
@@ -695,7 +747,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulestopaction">Receipt<wbr>Rule<wbr>Stop<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tlspolicy_nodejs">
 <a href="#tlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Policy</a>
@@ -704,7 +757,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="workmailactions_nodejs">
 <a href="#workmailactions_nodejs" style="color: inherit; text-decoration: inherit;">workmail<wbr>Actions</a>
@@ -713,11 +767,14 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptruleworkmailaction">Receipt<wbr>Rule<wbr>Workmail<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="rule_set_name_python">
 <a href="#rule_set_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>name</a>
@@ -726,7 +783,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="add_header_actions_python">
 <a href="#add_header_actions_python" style="color: inherit; text-decoration: inherit;">add_<wbr>header_<wbr>actions</a>
@@ -735,7 +793,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptruleaddheaderaction">Sequence[Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="after_python">
 <a href="#after_python" style="color: inherit; text-decoration: inherit;">after</a>
@@ -744,7 +803,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="bounce_actions_python">
 <a href="#bounce_actions_python" style="color: inherit; text-decoration: inherit;">bounce_<wbr>actions</a>
@@ -753,7 +813,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulebounceaction">Sequence[Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -762,7 +823,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="lambda_actions_python">
 <a href="#lambda_actions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>actions</a>
@@ -771,7 +833,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulelambdaaction">Sequence[Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -780,7 +843,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="recipients_python">
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
@@ -789,7 +853,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="s3_actions_python">
 <a href="#s3_actions_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>actions</a>
@@ -798,7 +863,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrules3action">Sequence[Receipt<wbr>Rule<wbr>S3Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="scan_enabled_python">
 <a href="#scan_enabled_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>enabled</a>
@@ -807,7 +873,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sns_actions_python">
 <a href="#sns_actions_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>actions</a>
@@ -816,7 +883,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulesnsaction">Sequence[Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="stop_actions_python">
 <a href="#stop_actions_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>actions</a>
@@ -825,7 +893,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptrulestopaction">Sequence[Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tls_policy_python">
 <a href="#tls_policy_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>policy</a>
@@ -834,7 +903,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="workmail_actions_python">
 <a href="#workmail_actions_python" style="color: inherit; text-decoration: inherit;">workmail_<wbr>actions</a>
@@ -843,7 +913,8 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#receiptruleworkmailaction">Sequence[Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -854,7 +925,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -863,7 +936,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SES receipt rule ARN.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -871,11 +945,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -884,7 +961,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SES receipt rule ARN.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -892,11 +970,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -905,7 +986,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SES receipt rule ARN.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -913,11 +995,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -926,7 +1011,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SES receipt rule ARN.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -934,7 +1020,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1061,7 +1148,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_addheaderactions_csharp">
 <a href="#state_addheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Header<wbr>Actions</a>
@@ -1070,7 +1159,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptruleaddheaderaction">List&lt;Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_after_csharp">
 <a href="#state_after_csharp" style="color: inherit; text-decoration: inherit;">After</a>
@@ -1079,7 +1169,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1088,7 +1179,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SES receipt rule ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bounceactions_csharp">
 <a href="#state_bounceactions_csharp" style="color: inherit; text-decoration: inherit;">Bounce<wbr>Actions</a>
@@ -1097,7 +1189,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulebounceaction">List&lt;Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1106,7 +1199,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_lambdaactions_csharp">
 <a href="#state_lambdaactions_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Actions</a>
@@ -1115,7 +1209,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulelambdaaction">List&lt;Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1124,7 +1219,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_recipients_csharp">
 <a href="#state_recipients_csharp" style="color: inherit; text-decoration: inherit;">Recipients</a>
@@ -1133,7 +1229,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_rulesetname_csharp">
 <a href="#state_rulesetname_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Name</a>
@@ -1142,7 +1239,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3actions_csharp">
 <a href="#state_s3actions_csharp" style="color: inherit; text-decoration: inherit;">S3Actions</a>
@@ -1151,7 +1249,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrules3action">List&lt;Receipt<wbr>Rule<wbr>S3Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_scanenabled_csharp">
 <a href="#state_scanenabled_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Enabled</a>
@@ -1160,7 +1259,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_snsactions_csharp">
 <a href="#state_snsactions_csharp" style="color: inherit; text-decoration: inherit;">Sns<wbr>Actions</a>
@@ -1169,7 +1269,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulesnsaction">List&lt;Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stopactions_csharp">
 <a href="#state_stopactions_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Actions</a>
@@ -1178,7 +1279,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulestopaction">List&lt;Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tlspolicy_csharp">
 <a href="#state_tlspolicy_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Policy</a>
@@ -1187,7 +1289,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_workmailactions_csharp">
 <a href="#state_workmailactions_csharp" style="color: inherit; text-decoration: inherit;">Workmail<wbr>Actions</a>
@@ -1196,11 +1299,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptruleworkmailaction">List&lt;Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_addheaderactions_go">
 <a href="#state_addheaderactions_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Header<wbr>Actions</a>
@@ -1209,7 +1315,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptruleaddheaderaction">[]Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_after_go">
 <a href="#state_after_go" style="color: inherit; text-decoration: inherit;">After</a>
@@ -1218,7 +1325,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1227,7 +1335,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SES receipt rule ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bounceactions_go">
 <a href="#state_bounceactions_go" style="color: inherit; text-decoration: inherit;">Bounce<wbr>Actions</a>
@@ -1236,7 +1345,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulebounceaction">[]Receipt<wbr>Rule<wbr>Bounce<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1245,7 +1355,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_lambdaactions_go">
 <a href="#state_lambdaactions_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Actions</a>
@@ -1254,7 +1365,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulelambdaaction">[]Receipt<wbr>Rule<wbr>Lambda<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1263,7 +1375,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_recipients_go">
 <a href="#state_recipients_go" style="color: inherit; text-decoration: inherit;">Recipients</a>
@@ -1272,7 +1385,8 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_rulesetname_go">
 <a href="#state_rulesetname_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Name</a>
@@ -1281,7 +1395,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3actions_go">
 <a href="#state_s3actions_go" style="color: inherit; text-decoration: inherit;">S3Actions</a>
@@ -1290,7 +1405,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrules3action">[]Receipt<wbr>Rule<wbr>S3Action</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_scanenabled_go">
 <a href="#state_scanenabled_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Enabled</a>
@@ -1299,7 +1415,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_snsactions_go">
 <a href="#state_snsactions_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Actions</a>
@@ -1308,7 +1425,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulesnsaction">[]Receipt<wbr>Rule<wbr>Sns<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stopactions_go">
 <a href="#state_stopactions_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Actions</a>
@@ -1317,7 +1435,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulestopaction">[]Receipt<wbr>Rule<wbr>Stop<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tlspolicy_go">
 <a href="#state_tlspolicy_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Policy</a>
@@ -1326,7 +1445,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_workmailactions_go">
 <a href="#state_workmailactions_go" style="color: inherit; text-decoration: inherit;">Workmail<wbr>Actions</a>
@@ -1335,11 +1455,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptruleworkmailaction">[]Receipt<wbr>Rule<wbr>Workmail<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_addheaderactions_nodejs">
 <a href="#state_addheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Header<wbr>Actions</a>
@@ -1348,7 +1471,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptruleaddheaderaction">Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_after_nodejs">
 <a href="#state_after_nodejs" style="color: inherit; text-decoration: inherit;">after</a>
@@ -1357,7 +1481,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1366,7 +1491,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SES receipt rule ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bounceactions_nodejs">
 <a href="#state_bounceactions_nodejs" style="color: inherit; text-decoration: inherit;">bounce<wbr>Actions</a>
@@ -1375,7 +1501,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulebounceaction">Receipt<wbr>Rule<wbr>Bounce<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1384,7 +1511,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_lambdaactions_nodejs">
 <a href="#state_lambdaactions_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Actions</a>
@@ -1393,7 +1521,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulelambdaaction">Receipt<wbr>Rule<wbr>Lambda<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1402,7 +1531,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_recipients_nodejs">
 <a href="#state_recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
@@ -1411,7 +1541,8 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_rulesetname_nodejs">
 <a href="#state_rulesetname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Name</a>
@@ -1420,7 +1551,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3actions_nodejs">
 <a href="#state_s3actions_nodejs" style="color: inherit; text-decoration: inherit;">s3Actions</a>
@@ -1429,7 +1561,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrules3action">Receipt<wbr>Rule<wbr>S3Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_scanenabled_nodejs">
 <a href="#state_scanenabled_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Enabled</a>
@@ -1438,7 +1571,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_snsactions_nodejs">
 <a href="#state_snsactions_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Actions</a>
@@ -1447,7 +1581,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulesnsaction">Receipt<wbr>Rule<wbr>Sns<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stopactions_nodejs">
 <a href="#state_stopactions_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Actions</a>
@@ -1456,7 +1591,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulestopaction">Receipt<wbr>Rule<wbr>Stop<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tlspolicy_nodejs">
 <a href="#state_tlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Policy</a>
@@ -1465,7 +1601,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_workmailactions_nodejs">
 <a href="#state_workmailactions_nodejs" style="color: inherit; text-decoration: inherit;">workmail<wbr>Actions</a>
@@ -1474,11 +1611,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptruleworkmailaction">Receipt<wbr>Rule<wbr>Workmail<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_add_header_actions_python">
 <a href="#state_add_header_actions_python" style="color: inherit; text-decoration: inherit;">add_<wbr>header_<wbr>actions</a>
@@ -1487,7 +1627,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptruleaddheaderaction">Sequence[Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_after_python">
 <a href="#state_after_python" style="color: inherit; text-decoration: inherit;">after</a>
@@ -1496,7 +1637,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1505,7 +1647,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SES receipt rule ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bounce_actions_python">
 <a href="#state_bounce_actions_python" style="color: inherit; text-decoration: inherit;">bounce_<wbr>actions</a>
@@ -1514,7 +1657,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulebounceaction">Sequence[Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1523,7 +1667,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_lambda_actions_python">
 <a href="#state_lambda_actions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>actions</a>
@@ -1532,7 +1677,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulelambdaaction">Sequence[Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1541,7 +1687,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_recipients_python">
 <a href="#state_recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
@@ -1550,7 +1697,8 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_rule_set_name_python">
 <a href="#state_rule_set_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>name</a>
@@ -1559,7 +1707,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_s3_actions_python">
 <a href="#state_s3_actions_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>actions</a>
@@ -1568,7 +1717,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrules3action">Sequence[Receipt<wbr>Rule<wbr>S3Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_scan_enabled_python">
 <a href="#state_scan_enabled_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>enabled</a>
@@ -1577,7 +1727,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sns_actions_python">
 <a href="#state_sns_actions_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>actions</a>
@@ -1586,7 +1737,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulesnsaction">Sequence[Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stop_actions_python">
 <a href="#state_stop_actions_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>actions</a>
@@ -1595,7 +1747,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptrulestopaction">Sequence[Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tls_policy_python">
 <a href="#state_tls_policy_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>policy</a>
@@ -1604,7 +1757,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_workmail_actions_python">
 <a href="#state_workmail_actions_python" style="color: inherit; text-decoration: inherit;">workmail_<wbr>actions</a>
@@ -1613,7 +1767,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#receiptruleworkmailaction">Sequence[Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1628,7 +1783,9 @@ The following state arguments are supported:
 <h4 id="receiptruleaddheaderaction">Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -1637,7 +1794,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -1646,7 +1804,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_csharp">
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -1655,11 +1814,14 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -1668,7 +1830,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -1677,7 +1840,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_go">
 <a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -1686,11 +1850,14 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -1699,7 +1866,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -1708,7 +1876,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_nodejs">
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -1717,11 +1886,14 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -1730,7 +1902,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -1739,7 +1912,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_python">
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
@@ -1748,13 +1922,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="receiptrulebounceaction">Receipt<wbr>Rule<wbr>Bounce<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1763,7 +1940,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The message to send
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_csharp">
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -1772,7 +1950,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sender_csharp">
 <a href="#sender_csharp" style="color: inherit; text-decoration: inherit;">Sender</a>
@@ -1781,7 +1960,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the sender
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="smtpreplycode_csharp">
 <a href="#smtpreplycode_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Reply<wbr>Code</a>
@@ -1790,7 +1970,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 5321 SMTP reply code
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statuscode_csharp">
 <a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -1799,7 +1980,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_csharp">
 <a href="#topicarn_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -1808,11 +1990,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1821,7 +2006,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The message to send
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_go">
 <a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -1830,7 +2016,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sender_go">
 <a href="#sender_go" style="color: inherit; text-decoration: inherit;">Sender</a>
@@ -1839,7 +2026,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the sender
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="smtpreplycode_go">
 <a href="#smtpreplycode_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Reply<wbr>Code</a>
@@ -1848,7 +2036,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 5321 SMTP reply code
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statuscode_go">
 <a href="#statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -1857,7 +2046,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_go">
 <a href="#topicarn_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -1866,11 +2056,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1879,7 +2072,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The message to send
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_nodejs">
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -1888,7 +2082,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sender_nodejs">
 <a href="#sender_nodejs" style="color: inherit; text-decoration: inherit;">sender</a>
@@ -1897,7 +2092,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the sender
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="smtpreplycode_nodejs">
 <a href="#smtpreplycode_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Reply<wbr>Code</a>
@@ -1906,7 +2102,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 5321 SMTP reply code
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statuscode_nodejs">
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
@@ -1915,7 +2112,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_nodejs">
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
@@ -1924,11 +2122,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1937,7 +2138,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The message to send
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_python">
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
@@ -1946,7 +2148,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sender_python">
 <a href="#sender_python" style="color: inherit; text-decoration: inherit;">sender</a>
@@ -1955,7 +2158,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of the sender
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="smtp_reply_code_python">
 <a href="#smtp_reply_code_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>reply_<wbr>code</a>
@@ -1964,7 +2168,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC 5321 SMTP reply code
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="status_code_python">
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
@@ -1973,7 +2178,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topic_arn_python">
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
@@ -1982,13 +2188,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="receiptrulelambdaaction">Receipt<wbr>Rule<wbr>Lambda<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="functionarn_csharp">
 <a href="#functionarn_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Arn</a>
@@ -1997,7 +2206,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function to invoke
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_csharp">
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -2006,7 +2216,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="invocationtype_csharp">
 <a href="#invocationtype_csharp" style="color: inherit; text-decoration: inherit;">Invocation<wbr>Type</a>
@@ -2015,7 +2226,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Event or RequestResponse
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_csharp">
 <a href="#topicarn_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2024,11 +2236,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="functionarn_go">
 <a href="#functionarn_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Arn</a>
@@ -2037,7 +2252,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function to invoke
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_go">
 <a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -2046,7 +2262,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="invocationtype_go">
 <a href="#invocationtype_go" style="color: inherit; text-decoration: inherit;">Invocation<wbr>Type</a>
@@ -2055,7 +2272,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Event or RequestResponse
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_go">
 <a href="#topicarn_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2064,11 +2282,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="functionarn_nodejs">
 <a href="#functionarn_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Arn</a>
@@ -2077,7 +2298,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function to invoke
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_nodejs">
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -2086,7 +2308,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="invocationtype_nodejs">
 <a href="#invocationtype_nodejs" style="color: inherit; text-decoration: inherit;">invocation<wbr>Type</a>
@@ -2095,7 +2318,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Event or RequestResponse
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_nodejs">
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
@@ -2104,11 +2328,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="function_arn_python">
 <a href="#function_arn_python" style="color: inherit; text-decoration: inherit;">function_<wbr>arn</a>
@@ -2117,7 +2344,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function to invoke
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_python">
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
@@ -2126,7 +2354,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="invocation_type_python">
 <a href="#invocation_type_python" style="color: inherit; text-decoration: inherit;">invocation_<wbr>type</a>
@@ -2135,7 +2364,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Event or RequestResponse
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topic_arn_python">
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
@@ -2144,13 +2374,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="receiptrules3action">Receipt<wbr>Rule<wbr>S3Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -2159,7 +2392,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_csharp">
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -2168,7 +2402,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_csharp">
 <a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -2177,7 +2412,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the KMS key
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="objectkeyprefix_csharp">
 <a href="#objectkeyprefix_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Key<wbr>Prefix</a>
@@ -2186,7 +2422,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key prefix of the S3 bucket
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_csharp">
 <a href="#topicarn_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2195,11 +2432,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -2208,7 +2448,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_go">
 <a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -2217,7 +2458,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_go">
 <a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -2226,7 +2468,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the KMS key
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="objectkeyprefix_go">
 <a href="#objectkeyprefix_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Key<wbr>Prefix</a>
@@ -2235,7 +2478,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key prefix of the S3 bucket
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_go">
 <a href="#topicarn_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2244,11 +2488,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -2257,7 +2504,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_nodejs">
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -2266,7 +2514,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_nodejs">
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
@@ -2275,7 +2524,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the KMS key
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="objectkeyprefix_nodejs">
 <a href="#objectkeyprefix_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Key<wbr>Prefix</a>
@@ -2284,7 +2534,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key prefix of the S3 bucket
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_nodejs">
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
@@ -2293,11 +2544,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -2306,7 +2560,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_python">
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
@@ -2315,7 +2570,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kms_key_arn_python">
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
@@ -2324,7 +2580,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the KMS key
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="object_key_prefix_python">
 <a href="#object_key_prefix_python" style="color: inherit; text-decoration: inherit;">object_<wbr>key_<wbr>prefix</a>
@@ -2333,7 +2590,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key prefix of the S3 bucket
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topic_arn_python">
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
@@ -2342,13 +2600,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="receiptrulesnsaction">Receipt<wbr>Rule<wbr>Sns<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="position_csharp">
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -2357,7 +2618,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="topicarn_csharp">
 <a href="#topicarn_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2366,11 +2628,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="position_go">
 <a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -2379,7 +2644,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="topicarn_go">
 <a href="#topicarn_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2388,11 +2654,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="position_nodejs">
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -2401,7 +2670,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="topicarn_nodejs">
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
@@ -2410,11 +2680,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="position_python">
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
@@ -2423,7 +2696,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="topic_arn_python">
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
@@ -2432,13 +2706,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="receiptrulestopaction">Receipt<wbr>Rule<wbr>Stop<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="position_csharp">
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -2447,7 +2724,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2456,7 +2734,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope to apply
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_csharp">
 <a href="#topicarn_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2465,11 +2744,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="position_go">
 <a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -2478,7 +2760,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2487,7 +2770,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope to apply
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_go">
 <a href="#topicarn_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2496,11 +2780,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="position_nodejs">
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -2509,7 +2796,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2518,7 +2806,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope to apply
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_nodejs">
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
@@ -2527,11 +2816,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="position_python">
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
@@ -2540,7 +2832,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2549,7 +2842,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scope to apply
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topic_arn_python">
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
@@ -2558,13 +2852,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="receiptruleworkmailaction">Receipt<wbr>Rule<wbr>Workmail<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="organizationarn_csharp">
 <a href="#organizationarn_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Arn</a>
@@ -2573,7 +2870,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the WorkMail organization
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_csharp">
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -2582,7 +2880,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_csharp">
 <a href="#topicarn_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2591,11 +2890,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="organizationarn_go">
 <a href="#organizationarn_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Arn</a>
@@ -2604,7 +2906,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the WorkMail organization
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_go">
 <a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -2613,7 +2916,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_go">
 <a href="#topicarn_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2622,11 +2926,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="organizationarn_nodejs">
 <a href="#organizationarn_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Arn</a>
@@ -2635,7 +2942,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the WorkMail organization
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_nodejs">
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -2644,7 +2952,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topicarn_nodejs">
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
@@ -2653,11 +2962,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="organization_arn_python">
 <a href="#organization_arn_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>arn</a>
@@ -2666,7 +2978,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the WorkMail organization
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="position_python">
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
@@ -2675,7 +2988,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="topic_arn_python">
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
@@ -2684,7 +2998,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -2705,6 +3020,6 @@ SES receipt rules can be imported using the ruleset name and rule name separated
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

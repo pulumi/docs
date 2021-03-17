@@ -147,17 +147,11 @@ class MyStack : Stack
 ```
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-
 ### Basic Example
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using System.Collections.Generic;
 using System.Text.Json;
@@ -215,19 +209,13 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 Coming soon!
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import json
@@ -261,12 +249,9 @@ allow_cloudwatch = aws.lambda_.Permission("allowCloudwatch",
     qualifier=test_alias.name)
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -303,17 +288,10 @@ const allowCloudwatch = new aws.lambda.Permission("allowCloudwatch", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
+{{% /example %}}
 
 ### Usage with SNS
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using System.Collections.Generic;
 using System.Text.Json;
@@ -373,19 +351,13 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 Coming soon!
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import json
@@ -419,12 +391,9 @@ lambda_ = aws.sns.TopicSubscription("lambda",
     endpoint=func.arn)
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -461,17 +430,10 @@ const lambda = new aws.sns.TopicSubscription("lambda", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
+{{% /example %}}
 
 ### Specify Lambda permissions for API Gateway REST API
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -496,12 +458,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -537,12 +496,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -555,12 +511,9 @@ lambda_permission = aws.lambda_.Permission("lambdaPermission",
     source_arn=my_demo_api.execution_arn.apply(lambda execution_arn: f"{execution_arn}/*/*/*"))
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -577,16 +530,9 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a Permission Resource {#create}
@@ -611,7 +557,9 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -619,7 +567,9 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -627,7 +577,9 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -635,7 +587,10 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -661,7 +616,9 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -669,7 +626,9 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -677,7 +636,9 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -685,7 +646,9 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -693,13 +656,18 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -707,7 +675,9 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -715,7 +685,9 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -723,7 +695,10 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -738,7 +713,9 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -747,7 +724,8 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="function_csharp">
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -756,7 +734,8 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="principal_csharp">
 <a href="#principal_csharp" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -765,7 +744,8 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="eventsourcetoken_csharp">
 <a href="#eventsourcetoken_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source<wbr>Token</a>
@@ -774,7 +754,8 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="qualifier_csharp">
 <a href="#qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -783,7 +764,8 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sourceaccount_csharp">
 <a href="#sourceaccount_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Account</a>
@@ -792,7 +774,8 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sourcearn_csharp">
 <a href="#sourcearn_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Arn</a>
@@ -805,7 +788,8 @@ Without this, any resource from `principal` will be granted permission – even 
 For S3, this should be the ARN of the S3 Bucket.
 For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
 For API Gateway, this should be the ARN of the API, as described [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statementid_csharp">
 <a href="#statementid_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Id</a>
@@ -814,7 +798,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statementidprefix_csharp">
 <a href="#statementidprefix_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Id<wbr>Prefix</a>
@@ -823,11 +808,14 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -836,7 +824,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="function_go">
 <a href="#function_go" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -845,7 +834,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="principal_go">
 <a href="#principal_go" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -854,7 +844,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="eventsourcetoken_go">
 <a href="#eventsourcetoken_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source<wbr>Token</a>
@@ -863,7 +854,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="qualifier_go">
 <a href="#qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -872,7 +864,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sourceaccount_go">
 <a href="#sourceaccount_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Account</a>
@@ -881,7 +874,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sourcearn_go">
 <a href="#sourcearn_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Arn</a>
@@ -894,7 +888,8 @@ Without this, any resource from `principal` will be granted permission – even 
 For S3, this should be the ARN of the S3 Bucket.
 For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
 For API Gateway, this should be the ARN of the API, as described [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statementid_go">
 <a href="#statementid_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Id</a>
@@ -903,7 +898,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statementidprefix_go">
 <a href="#statementidprefix_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Id<wbr>Prefix</a>
@@ -912,11 +908,14 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -925,7 +924,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="function_nodejs">
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
@@ -934,7 +934,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string | Function</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="principal_nodejs">
 <a href="#principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -943,7 +944,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="eventsourcetoken_nodejs">
 <a href="#eventsourcetoken_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source<wbr>Token</a>
@@ -952,7 +954,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="qualifier_nodejs">
 <a href="#qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -961,7 +964,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sourceaccount_nodejs">
 <a href="#sourceaccount_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Account</a>
@@ -970,7 +974,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sourcearn_nodejs">
 <a href="#sourcearn_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arn</a>
@@ -983,7 +988,8 @@ Without this, any resource from `principal` will be granted permission – even 
 For S3, this should be the ARN of the S3 Bucket.
 For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
 For API Gateway, this should be the ARN of the API, as described [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statementid_nodejs">
 <a href="#statementid_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Id</a>
@@ -992,7 +998,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statementidprefix_nodejs">
 <a href="#statementidprefix_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Id<wbr>Prefix</a>
@@ -1001,11 +1008,14 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1014,7 +1024,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="function_python">
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
@@ -1023,7 +1034,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="principal_python">
 <a href="#principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -1032,7 +1044,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="event_source_token_python">
 <a href="#event_source_token_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source_<wbr>token</a>
@@ -1041,7 +1054,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="qualifier_python">
 <a href="#qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -1050,7 +1064,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="source_account_python">
 <a href="#source_account_python" style="color: inherit; text-decoration: inherit;">source_<wbr>account</a>
@@ -1059,7 +1074,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="source_arn_python">
 <a href="#source_arn_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arn</a>
@@ -1072,7 +1088,8 @@ Without this, any resource from `principal` will be granted permission – even 
 For S3, this should be the ARN of the S3 Bucket.
 For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
 For API Gateway, this should be the ARN of the API, as described [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statement_id_python">
 <a href="#statement_id_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>id</a>
@@ -1081,7 +1098,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statement_id_prefix_python">
 <a href="#statement_id_prefix_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>id_<wbr>prefix</a>
@@ -1090,7 +1108,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1101,7 +1120,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1109,11 +1130,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1121,11 +1145,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1133,11 +1160,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1145,7 +1175,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1272,7 +1303,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_action_csharp">
 <a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1281,7 +1314,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_eventsourcetoken_csharp">
 <a href="#state_eventsourcetoken_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source<wbr>Token</a>
@@ -1290,7 +1324,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_function_csharp">
 <a href="#state_function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -1299,7 +1334,8 @@ The following state arguments are supported:
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_principal_csharp">
 <a href="#state_principal_csharp" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -1308,7 +1344,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_csharp">
 <a href="#state_qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -1317,7 +1354,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourceaccount_csharp">
 <a href="#state_sourceaccount_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Account</a>
@@ -1326,7 +1364,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourcearn_csharp">
 <a href="#state_sourcearn_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Arn</a>
@@ -1339,7 +1378,8 @@ Without this, any resource from `principal` will be granted permission – even 
 For S3, this should be the ARN of the S3 Bucket.
 For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
 For API Gateway, this should be the ARN of the API, as described [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_statementid_csharp">
 <a href="#state_statementid_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Id</a>
@@ -1348,7 +1388,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_statementidprefix_csharp">
 <a href="#state_statementidprefix_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Id<wbr>Prefix</a>
@@ -1357,11 +1398,14 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_action_go">
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1370,7 +1414,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_eventsourcetoken_go">
 <a href="#state_eventsourcetoken_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source<wbr>Token</a>
@@ -1379,7 +1424,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_function_go">
 <a href="#state_function_go" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -1388,7 +1434,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_principal_go">
 <a href="#state_principal_go" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -1397,7 +1444,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_go">
 <a href="#state_qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -1406,7 +1454,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourceaccount_go">
 <a href="#state_sourceaccount_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Account</a>
@@ -1415,7 +1464,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourcearn_go">
 <a href="#state_sourcearn_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Arn</a>
@@ -1428,7 +1478,8 @@ Without this, any resource from `principal` will be granted permission – even 
 For S3, this should be the ARN of the S3 Bucket.
 For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
 For API Gateway, this should be the ARN of the API, as described [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_statementid_go">
 <a href="#state_statementid_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Id</a>
@@ -1437,7 +1488,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_statementidprefix_go">
 <a href="#state_statementidprefix_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Id<wbr>Prefix</a>
@@ -1446,11 +1498,14 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_action_nodejs">
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1459,7 +1514,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_eventsourcetoken_nodejs">
 <a href="#state_eventsourcetoken_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source<wbr>Token</a>
@@ -1468,7 +1524,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_function_nodejs">
 <a href="#state_function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
@@ -1477,7 +1534,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string | Function</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_principal_nodejs">
 <a href="#state_principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -1486,7 +1544,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_nodejs">
 <a href="#state_qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -1495,7 +1554,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourceaccount_nodejs">
 <a href="#state_sourceaccount_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Account</a>
@@ -1504,7 +1564,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_sourcearn_nodejs">
 <a href="#state_sourcearn_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arn</a>
@@ -1517,7 +1578,8 @@ Without this, any resource from `principal` will be granted permission – even 
 For S3, this should be the ARN of the S3 Bucket.
 For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
 For API Gateway, this should be the ARN of the API, as described [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_statementid_nodejs">
 <a href="#state_statementid_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Id</a>
@@ -1526,7 +1588,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_statementidprefix_nodejs">
 <a href="#state_statementidprefix_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Id<wbr>Prefix</a>
@@ -1535,11 +1598,14 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_action_python">
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1548,7 +1614,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_event_source_token_python">
 <a href="#state_event_source_token_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source_<wbr>token</a>
@@ -1557,7 +1624,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_function_python">
 <a href="#state_function_python" style="color: inherit; text-decoration: inherit;">function</a>
@@ -1566,7 +1634,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_principal_python">
 <a href="#state_principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -1575,7 +1644,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_python">
 <a href="#state_qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -1584,7 +1654,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_source_account_python">
 <a href="#state_source_account_python" style="color: inherit; text-decoration: inherit;">source_<wbr>account</a>
@@ -1593,7 +1664,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_source_arn_python">
 <a href="#state_source_arn_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arn</a>
@@ -1606,7 +1678,8 @@ Without this, any resource from `principal` will be granted permission – even 
 For S3, this should be the ARN of the S3 Bucket.
 For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
 For API Gateway, this should be the ARN of the API, as described [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_statement_id_python">
 <a href="#state_statement_id_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>id</a>
@@ -1615,7 +1688,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_statement_id_prefix_python">
 <a href="#state_statement_id_prefix_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>id_<wbr>prefix</a>
@@ -1624,7 +1698,8 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1654,6 +1729,6 @@ Lambda permission statements can be imported using function_name/statement_id, w
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

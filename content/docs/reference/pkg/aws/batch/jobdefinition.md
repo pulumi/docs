@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.batch.JobDefinition resource with examples
 Provides a Batch Job Definition resource.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -74,12 +68,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -104,12 +95,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -151,12 +139,9 @@ test = aws.batch.JobDefinition("test",
     type="container")
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -199,16 +184,9 @@ const test = new aws.batch.JobDefinition("test", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a JobDefinition Resource {#create}
@@ -233,7 +211,9 @@ const test = new aws.batch.JobDefinition("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -241,7 +221,9 @@ const test = new aws.batch.JobDefinition("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -249,7 +231,9 @@ const test = new aws.batch.JobDefinition("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,7 +241,10 @@ const test = new aws.batch.JobDefinition("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -283,7 +270,9 @@ const test = new aws.batch.JobDefinition("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -291,7 +280,9 @@ const test = new aws.batch.JobDefinition("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -299,7 +290,9 @@ const test = new aws.batch.JobDefinition("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -307,7 +300,9 @@ const test = new aws.batch.JobDefinition("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -315,13 +310,18 @@ const test = new aws.batch.JobDefinition("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -329,7 +329,9 @@ const test = new aws.batch.JobDefinition("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -337,7 +339,9 @@ const test = new aws.batch.JobDefinition("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -345,7 +349,10 @@ const test = new aws.batch.JobDefinition("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -360,7 +367,9 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -369,7 +378,8 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of job definition.  Must be `container`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="containerproperties_csharp">
 <a href="#containerproperties_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Properties</a>
@@ -379,7 +389,8 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -388,7 +399,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -397,7 +409,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retrystrategy_csharp">
 <a href="#retrystrategy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Strategy</a>
@@ -407,7 +420,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -416,7 +430,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -425,11 +440,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -438,7 +456,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of job definition.  Must be `container`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="containerproperties_go">
 <a href="#containerproperties_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Properties</a>
@@ -448,7 +467,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -457,7 +477,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -466,7 +487,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retrystrategy_go">
 <a href="#retrystrategy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Strategy</a>
@@ -476,7 +498,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -485,7 +508,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -494,11 +518,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -507,7 +534,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of job definition.  Must be `container`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="containerproperties_nodejs">
 <a href="#containerproperties_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Properties</a>
@@ -517,7 +545,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -526,7 +555,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -535,7 +565,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retrystrategy_nodejs">
 <a href="#retrystrategy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Strategy</a>
@@ -545,7 +576,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -554,7 +586,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -563,11 +596,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -576,7 +612,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of job definition.  Must be `container`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="container_properties_python">
 <a href="#container_properties_python" style="color: inherit; text-decoration: inherit;">container_<wbr>properties</a>
@@ -586,7 +623,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -595,7 +633,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -604,7 +643,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="retry_strategy_python">
 <a href="#retry_strategy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>strategy</a>
@@ -614,7 +654,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -623,7 +664,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -632,7 +674,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -643,7 +686,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -652,7 +697,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job definition.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -660,7 +706,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="revision_csharp">
 <a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -669,11 +716,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -682,7 +732,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job definition.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -690,7 +741,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="revision_go">
 <a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -699,11 +751,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -712,7 +767,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job definition.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -720,7 +776,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="revision_nodejs">
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -729,11 +786,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -742,7 +802,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job definition.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -750,7 +811,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="revision_python">
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -759,7 +821,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -886,7 +949,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -895,7 +960,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_containerproperties_csharp">
 <a href="#state_containerproperties_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Properties</a>
@@ -905,7 +971,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -914,7 +981,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -923,7 +991,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retrystrategy_csharp">
 <a href="#state_retrystrategy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Strategy</a>
@@ -933,7 +1002,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_revision_csharp">
 <a href="#state_revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -942,7 +1012,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -951,7 +1022,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -960,7 +1032,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -969,11 +1042,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of job definition.  Must be `container`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -982,7 +1058,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_containerproperties_go">
 <a href="#state_containerproperties_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Properties</a>
@@ -992,7 +1069,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1001,7 +1079,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1010,7 +1089,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retrystrategy_go">
 <a href="#state_retrystrategy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Strategy</a>
@@ -1020,7 +1100,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_revision_go">
 <a href="#state_revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -1029,7 +1110,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1038,7 +1120,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1047,7 +1130,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1056,11 +1140,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of job definition.  Must be `container`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1069,7 +1156,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_containerproperties_nodejs">
 <a href="#state_containerproperties_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Properties</a>
@@ -1079,7 +1167,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1088,7 +1177,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1097,7 +1187,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retrystrategy_nodejs">
 <a href="#state_retrystrategy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Strategy</a>
@@ -1107,7 +1198,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_revision_nodejs">
 <a href="#state_revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -1116,7 +1208,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1125,7 +1218,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1134,7 +1228,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1143,11 +1238,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of job definition.  Must be `container`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1156,7 +1254,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_container_properties_python">
 <a href="#state_container_properties_python" style="color: inherit; text-decoration: inherit;">container_<wbr>properties</a>
@@ -1166,7 +1265,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1175,7 +1275,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1184,7 +1285,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_retry_strategy_python">
 <a href="#state_retry_strategy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>strategy</a>
@@ -1194,7 +1296,8 @@ provided as a single valid JSON document. This parameter is required if the `typ
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_revision_python">
 <a href="#state_revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -1203,7 +1306,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1212,7 +1316,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1221,7 +1326,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1230,7 +1336,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of job definition.  Must be `container`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1245,7 +1352,9 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 <h4 id="jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="attempts_csharp">
 <a href="#attempts_csharp" style="color: inherit; text-decoration: inherit;">Attempts</a>
@@ -1254,11 +1363,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="attempts_go">
 <a href="#attempts_go" style="color: inherit; text-decoration: inherit;">Attempts</a>
@@ -1267,11 +1379,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="attempts_nodejs">
 <a href="#attempts_nodejs" style="color: inherit; text-decoration: inherit;">attempts</a>
@@ -1280,11 +1395,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="attempts_python">
 <a href="#attempts_python" style="color: inherit; text-decoration: inherit;">attempts</a>
@@ -1293,13 +1411,16 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="attemptdurationseconds_csharp">
 <a href="#attemptdurationseconds_csharp" style="color: inherit; text-decoration: inherit;">Attempt<wbr>Duration<wbr>Seconds</a>
@@ -1308,11 +1429,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="attemptdurationseconds_go">
 <a href="#attemptdurationseconds_go" style="color: inherit; text-decoration: inherit;">Attempt<wbr>Duration<wbr>Seconds</a>
@@ -1321,11 +1445,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="attemptdurationseconds_nodejs">
 <a href="#attemptdurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">attempt<wbr>Duration<wbr>Seconds</a>
@@ -1334,11 +1461,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="attempt_duration_seconds_python">
 <a href="#attempt_duration_seconds_python" style="color: inherit; text-decoration: inherit;">attempt_<wbr>duration_<wbr>seconds</a>
@@ -1347,7 +1477,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -1368,6 +1499,6 @@ Batch Job Definition can be imported using the `arn`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

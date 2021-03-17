@@ -14,17 +14,11 @@ Manages an Amazon API Gateway Version 2 stage.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-
 ### Basic
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -42,12 +36,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -69,12 +60,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -82,12 +70,9 @@ import pulumi_aws as aws
 example = aws.apigatewayv2.Stage("example", api_id=aws_apigatewayv2_api["example"]["id"])
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -96,16 +81,9 @@ import * as aws from "@pulumi/aws";
 const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_api.example.id});
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a Stage Resource {#create}
@@ -130,7 +108,9 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -138,7 +118,9 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -146,7 +128,9 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -154,7 +138,10 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -180,7 +167,9 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -188,7 +177,9 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -196,7 +187,9 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -204,7 +197,9 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -212,13 +207,18 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -226,7 +226,9 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,7 +236,9 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -242,7 +246,10 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -257,7 +264,9 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -266,7 +275,8 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="accesslogsettings_csharp">
 <a href="#accesslogsettings_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Log<wbr>Settings</a>
@@ -276,7 +286,8 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autodeploy_csharp">
 <a href="#autodeploy_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Deploy</a>
@@ -285,7 +296,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clientcertificateid_csharp">
 <a href="#clientcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
@@ -295,7 +307,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
     </dt>
     <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultroutesettings_csharp">
 <a href="#defaultroutesettings_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Settings</a>
@@ -304,7 +317,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="deploymentid_csharp">
 <a href="#deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -313,7 +327,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -322,7 +337,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the stage. Must be less than or equal to 1024 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -331,7 +347,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stage. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="routesettings_csharp">
 <a href="#routesettings_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Settings</a>
@@ -340,7 +357,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stageroutesetting">List&lt;Stage<wbr>Route<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="stagevariables_csharp">
 <a href="#stagevariables_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Variables</a>
@@ -349,7 +367,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -358,11 +377,14 @@ Supported only for WebSocket APIs.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the stage.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -371,7 +393,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="accesslogsettings_go">
 <a href="#accesslogsettings_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Log<wbr>Settings</a>
@@ -381,7 +404,8 @@ Supported only for WebSocket APIs.
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autodeploy_go">
 <a href="#autodeploy_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Deploy</a>
@@ -390,7 +414,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clientcertificateid_go">
 <a href="#clientcertificateid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
@@ -400,7 +425,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
     </dt>
     <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultroutesettings_go">
 <a href="#defaultroutesettings_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Settings</a>
@@ -409,7 +435,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="deploymentid_go">
 <a href="#deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -418,7 +445,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -427,7 +455,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the stage. Must be less than or equal to 1024 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -436,7 +465,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stage. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="routesettings_go">
 <a href="#routesettings_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Settings</a>
@@ -445,7 +475,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stageroutesetting">[]Stage<wbr>Route<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="stagevariables_go">
 <a href="#stagevariables_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Variables</a>
@@ -454,7 +485,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -463,11 +495,14 @@ Supported only for WebSocket APIs.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the stage.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -476,7 +511,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="accesslogsettings_nodejs">
 <a href="#accesslogsettings_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Log<wbr>Settings</a>
@@ -486,7 +522,8 @@ Supported only for WebSocket APIs.
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autodeploy_nodejs">
 <a href="#autodeploy_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Deploy</a>
@@ -495,7 +532,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clientcertificateid_nodejs">
 <a href="#clientcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Id</a>
@@ -505,7 +543,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
     </dt>
     <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultroutesettings_nodejs">
 <a href="#defaultroutesettings_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Settings</a>
@@ -514,7 +553,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="deploymentid_nodejs">
 <a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
@@ -523,7 +563,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -532,7 +573,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the stage. Must be less than or equal to 1024 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -541,7 +583,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stage. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="routesettings_nodejs">
 <a href="#routesettings_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Settings</a>
@@ -550,7 +593,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stageroutesetting">Stage<wbr>Route<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="stagevariables_nodejs">
 <a href="#stagevariables_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Variables</a>
@@ -559,7 +603,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -568,11 +613,14 @@ Supported only for WebSocket APIs.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the stage.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -581,7 +629,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="access_log_settings_python">
 <a href="#access_log_settings_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log_<wbr>settings</a>
@@ -591,7 +640,8 @@ Supported only for WebSocket APIs.
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="auto_deploy_python">
 <a href="#auto_deploy_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>deploy</a>
@@ -600,7 +650,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="client_certificate_id_python">
 <a href="#client_certificate_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>id</a>
@@ -610,7 +661,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
     </dt>
     <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_route_settings_python">
 <a href="#default_route_settings_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>settings</a>
@@ -619,7 +671,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="deployment_id_python">
 <a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
@@ -628,7 +681,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -637,7 +691,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description for the stage. Must be less than or equal to 1024 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -646,7 +701,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the stage. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="route_settings_python">
 <a href="#route_settings_python" style="color: inherit; text-decoration: inherit;">route_<wbr>settings</a>
@@ -655,7 +711,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stageroutesetting">Sequence[Stage<wbr>Route<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="stage_variables_python">
 <a href="#stage_variables_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>variables</a>
@@ -664,7 +721,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -673,7 +731,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the stage.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -684,7 +743,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -693,7 +754,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the stage.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="executionarn_csharp">
 <a href="#executionarn_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
@@ -704,7 +766,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
 For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -712,7 +775,8 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="invokeurl_csharp">
 <a href="#invokeurl_csharp" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Url</a>
@@ -722,11 +786,14 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -735,7 +802,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the stage.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="executionarn_go">
 <a href="#executionarn_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
@@ -746,7 +814,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
     <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
 For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -754,7 +823,8 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="invokeurl_go">
 <a href="#invokeurl_go" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Url</a>
@@ -764,11 +834,14 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -777,7 +850,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the stage.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="executionarn_nodejs">
 <a href="#executionarn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Arn</a>
@@ -788,7 +862,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
     <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
 For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -796,7 +871,8 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="invokeurl_nodejs">
 <a href="#invokeurl_nodejs" style="color: inherit; text-decoration: inherit;">invoke<wbr>Url</a>
@@ -806,11 +882,14 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -819,7 +898,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the stage.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="execution_arn_python">
 <a href="#execution_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>arn</a>
@@ -830,7 +910,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
     <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
 For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -838,7 +919,8 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="invoke_url_python">
 <a href="#invoke_url_python" style="color: inherit; text-decoration: inherit;">invoke_<wbr>url</a>
@@ -848,7 +930,8 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -975,7 +1058,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_accesslogsettings_csharp">
 <a href="#state_accesslogsettings_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Log<wbr>Settings</a>
@@ -985,7 +1070,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_apiid_csharp">
 <a href="#state_apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -994,7 +1080,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1003,7 +1090,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autodeploy_csharp">
 <a href="#state_autodeploy_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Deploy</a>
@@ -1012,7 +1100,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clientcertificateid_csharp">
 <a href="#state_clientcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
@@ -1022,7 +1111,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
     </dt>
     <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultroutesettings_csharp">
 <a href="#state_defaultroutesettings_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Settings</a>
@@ -1031,7 +1121,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_csharp">
 <a href="#state_deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -1040,7 +1131,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1049,7 +1141,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the stage. Must be less than or equal to 1024 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_executionarn_csharp">
 <a href="#state_executionarn_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
@@ -1060,7 +1153,8 @@ Supported only for WebSocket APIs.
     <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
 For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_invokeurl_csharp">
 <a href="#state_invokeurl_csharp" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Url</a>
@@ -1070,7 +1164,8 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1079,7 +1174,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stage. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_routesettings_csharp">
 <a href="#state_routesettings_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Settings</a>
@@ -1088,7 +1184,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type"><a href="#stageroutesetting">List&lt;Stage<wbr>Route<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stagevariables_csharp">
 <a href="#state_stagevariables_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Variables</a>
@@ -1097,7 +1194,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1106,11 +1204,14 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the stage.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_accesslogsettings_go">
 <a href="#state_accesslogsettings_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Log<wbr>Settings</a>
@@ -1120,7 +1221,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_apiid_go">
 <a href="#state_apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -1129,7 +1231,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1138,7 +1241,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autodeploy_go">
 <a href="#state_autodeploy_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Deploy</a>
@@ -1147,7 +1251,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clientcertificateid_go">
 <a href="#state_clientcertificateid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
@@ -1157,7 +1262,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
     </dt>
     <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultroutesettings_go">
 <a href="#state_defaultroutesettings_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Settings</a>
@@ -1166,7 +1272,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_go">
 <a href="#state_deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -1175,7 +1282,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1184,7 +1292,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the stage. Must be less than or equal to 1024 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_executionarn_go">
 <a href="#state_executionarn_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
@@ -1195,7 +1304,8 @@ Supported only for WebSocket APIs.
     <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
 For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_invokeurl_go">
 <a href="#state_invokeurl_go" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Url</a>
@@ -1205,7 +1315,8 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1214,7 +1325,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stage. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_routesettings_go">
 <a href="#state_routesettings_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Settings</a>
@@ -1223,7 +1335,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type"><a href="#stageroutesetting">[]Stage<wbr>Route<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stagevariables_go">
 <a href="#state_stagevariables_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Variables</a>
@@ -1232,7 +1345,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1241,11 +1355,14 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the stage.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_accesslogsettings_nodejs">
 <a href="#state_accesslogsettings_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Log<wbr>Settings</a>
@@ -1255,7 +1372,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_apiid_nodejs">
 <a href="#state_apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -1264,7 +1382,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1273,7 +1392,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autodeploy_nodejs">
 <a href="#state_autodeploy_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Deploy</a>
@@ -1282,7 +1402,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clientcertificateid_nodejs">
 <a href="#state_clientcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Id</a>
@@ -1292,7 +1413,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
     </dt>
     <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultroutesettings_nodejs">
 <a href="#state_defaultroutesettings_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Settings</a>
@@ -1301,7 +1423,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_nodejs">
 <a href="#state_deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
@@ -1310,7 +1433,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1319,7 +1443,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the stage. Must be less than or equal to 1024 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_executionarn_nodejs">
 <a href="#state_executionarn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Arn</a>
@@ -1330,7 +1455,8 @@ Supported only for WebSocket APIs.
     <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
 For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_invokeurl_nodejs">
 <a href="#state_invokeurl_nodejs" style="color: inherit; text-decoration: inherit;">invoke<wbr>Url</a>
@@ -1340,7 +1466,8 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1349,7 +1476,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stage. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_routesettings_nodejs">
 <a href="#state_routesettings_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Settings</a>
@@ -1358,7 +1486,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type"><a href="#stageroutesetting">Stage<wbr>Route<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stagevariables_nodejs">
 <a href="#state_stagevariables_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Variables</a>
@@ -1367,7 +1496,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1376,11 +1506,14 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the stage.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_access_log_settings_python">
 <a href="#state_access_log_settings_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log_<wbr>settings</a>
@@ -1390,7 +1523,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_api_id_python">
 <a href="#state_api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -1399,7 +1533,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1408,7 +1543,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_auto_deploy_python">
 <a href="#state_auto_deploy_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>deploy</a>
@@ -1417,7 +1553,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_client_certificate_id_python">
 <a href="#state_client_certificate_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>id</a>
@@ -1427,7 +1564,8 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
     </dt>
     <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_default_route_settings_python">
 <a href="#state_default_route_settings_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>settings</a>
@@ -1436,7 +1574,8 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_deployment_id_python">
 <a href="#state_deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
@@ -1445,7 +1584,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1454,7 +1594,8 @@ Supported only for WebSocket APIs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description for the stage. Must be less than or equal to 1024 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_execution_arn_python">
 <a href="#state_execution_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>arn</a>
@@ -1465,7 +1606,8 @@ Supported only for WebSocket APIs.
     <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
 For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_invoke_url_python">
 <a href="#state_invoke_url_python" style="color: inherit; text-decoration: inherit;">invoke_<wbr>url</a>
@@ -1475,7 +1617,8 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1484,7 +1627,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the stage. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_route_settings_python">
 <a href="#state_route_settings_python" style="color: inherit; text-decoration: inherit;">route_<wbr>settings</a>
@@ -1493,7 +1637,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type"><a href="#stageroutesetting">Sequence[Stage<wbr>Route<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stage_variables_python">
 <a href="#state_stage_variables_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>variables</a>
@@ -1502,7 +1647,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables for the stage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1511,7 +1657,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the stage.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1526,7 +1673,9 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
 <h4 id="stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destinationarn_csharp">
 <a href="#destinationarn_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Arn</a>
@@ -1535,7 +1684,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the CloudWatch Logs log group to receive access logs. Any trailing `:*` is trimmed from the ARN.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -1544,11 +1694,14 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A single line [format](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats) of the access logs of data, as specified by [selected $context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destinationarn_go">
 <a href="#destinationarn_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Arn</a>
@@ -1557,7 +1710,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the CloudWatch Logs log group to receive access logs. Any trailing `:*` is trimmed from the ARN.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -1566,11 +1720,14 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A single line [format](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats) of the access logs of data, as specified by [selected $context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destinationarn_nodejs">
 <a href="#destinationarn_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Arn</a>
@@ -1579,7 +1736,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the CloudWatch Logs log group to receive access logs. Any trailing `:*` is trimmed from the ARN.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -1588,11 +1746,14 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A single line [format](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats) of the access logs of data, as specified by [selected $context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destination_arn_python">
 <a href="#destination_arn_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>arn</a>
@@ -1601,7 +1762,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the CloudWatch Logs log group to receive access logs. Any trailing `:*` is trimmed from the ARN.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -1610,13 +1772,16 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A single line [format](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats) of the access logs of data, as specified by [selected $context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_csharp">
 <a href="#datatraceenabled_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Trace<wbr>Enabled</a>
@@ -1626,7 +1791,8 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
     </dt>
     <dd>{{% md %}}Whether data trace logging is enabled for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="detailedmetricsenabled_csharp">
 <a href="#detailedmetricsenabled_csharp" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Metrics<wbr>Enabled</a>
@@ -1635,7 +1801,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether detailed metrics are enabled for the default route. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="logginglevel_csharp">
 <a href="#logginglevel_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Level</a>
@@ -1645,7 +1812,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
     </dt>
     <dd>{{% md %}}The logging level for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_csharp">
 <a href="#throttlingburstlimit_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Burst<wbr>Limit</a>
@@ -1654,7 +1822,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throttling burst limit for the default route.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_csharp">
 <a href="#throttlingratelimit_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Rate<wbr>Limit</a>
@@ -1663,11 +1832,14 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The throttling rate limit for the default route.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_go">
 <a href="#datatraceenabled_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Trace<wbr>Enabled</a>
@@ -1677,7 +1849,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
     </dt>
     <dd>{{% md %}}Whether data trace logging is enabled for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="detailedmetricsenabled_go">
 <a href="#detailedmetricsenabled_go" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Metrics<wbr>Enabled</a>
@@ -1686,7 +1859,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether detailed metrics are enabled for the default route. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="logginglevel_go">
 <a href="#logginglevel_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Level</a>
@@ -1696,7 +1870,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
     </dt>
     <dd>{{% md %}}The logging level for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_go">
 <a href="#throttlingburstlimit_go" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Burst<wbr>Limit</a>
@@ -1705,7 +1880,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throttling burst limit for the default route.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_go">
 <a href="#throttlingratelimit_go" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Rate<wbr>Limit</a>
@@ -1714,11 +1890,14 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The throttling rate limit for the default route.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_nodejs">
 <a href="#datatraceenabled_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Trace<wbr>Enabled</a>
@@ -1728,7 +1907,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
     </dt>
     <dd>{{% md %}}Whether data trace logging is enabled for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="detailedmetricsenabled_nodejs">
 <a href="#detailedmetricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">detailed<wbr>Metrics<wbr>Enabled</a>
@@ -1737,7 +1917,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether detailed metrics are enabled for the default route. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="logginglevel_nodejs">
 <a href="#logginglevel_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Level</a>
@@ -1747,7 +1928,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
     </dt>
     <dd>{{% md %}}The logging level for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_nodejs">
 <a href="#throttlingburstlimit_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>Burst<wbr>Limit</a>
@@ -1756,7 +1938,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throttling burst limit for the default route.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_nodejs">
 <a href="#throttlingratelimit_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>Rate<wbr>Limit</a>
@@ -1765,11 +1948,14 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throttling rate limit for the default route.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="data_trace_enabled_python">
 <a href="#data_trace_enabled_python" style="color: inherit; text-decoration: inherit;">data_<wbr>trace_<wbr>enabled</a>
@@ -1779,7 +1965,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
     </dt>
     <dd>{{% md %}}Whether data trace logging is enabled for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="detailed_metrics_enabled_python">
 <a href="#detailed_metrics_enabled_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>metrics_<wbr>enabled</a>
@@ -1788,7 +1975,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether detailed metrics are enabled for the default route. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="logging_level_python">
 <a href="#logging_level_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>level</a>
@@ -1798,7 +1986,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
     </dt>
     <dd>{{% md %}}The logging level for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttling_burst_limit_python">
 <a href="#throttling_burst_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>burst_<wbr>limit</a>
@@ -1807,7 +1996,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throttling burst limit for the default route.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttling_rate_limit_python">
 <a href="#throttling_rate_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>rate_<wbr>limit</a>
@@ -1816,13 +2006,16 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The throttling rate limit for the default route.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="stageroutesetting">Stage<wbr>Route<wbr>Setting</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="routekey_csharp">
 <a href="#routekey_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Key</a>
@@ -1831,7 +2024,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Route key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_csharp">
 <a href="#datatraceenabled_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Trace<wbr>Enabled</a>
@@ -1841,7 +2035,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
     </dt>
     <dd>{{% md %}}Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="detailedmetricsenabled_csharp">
 <a href="#detailedmetricsenabled_csharp" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Metrics<wbr>Enabled</a>
@@ -1850,7 +2045,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether detailed metrics are enabled for the route. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="logginglevel_csharp">
 <a href="#logginglevel_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Level</a>
@@ -1860,7 +2056,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
     </dt>
     <dd>{{% md %}}The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_csharp">
 <a href="#throttlingburstlimit_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Burst<wbr>Limit</a>
@@ -1869,7 +2066,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throttling burst limit for the route.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_csharp">
 <a href="#throttlingratelimit_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Rate<wbr>Limit</a>
@@ -1878,11 +2076,14 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The throttling rate limit for the route.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="routekey_go">
 <a href="#routekey_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Key</a>
@@ -1891,7 +2092,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Route key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_go">
 <a href="#datatraceenabled_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Trace<wbr>Enabled</a>
@@ -1901,7 +2103,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
     </dt>
     <dd>{{% md %}}Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="detailedmetricsenabled_go">
 <a href="#detailedmetricsenabled_go" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Metrics<wbr>Enabled</a>
@@ -1910,7 +2113,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether detailed metrics are enabled for the route. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="logginglevel_go">
 <a href="#logginglevel_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Level</a>
@@ -1920,7 +2124,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
     </dt>
     <dd>{{% md %}}The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_go">
 <a href="#throttlingburstlimit_go" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Burst<wbr>Limit</a>
@@ -1929,7 +2134,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throttling burst limit for the route.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_go">
 <a href="#throttlingratelimit_go" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Rate<wbr>Limit</a>
@@ -1938,11 +2144,14 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The throttling rate limit for the route.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="routekey_nodejs">
 <a href="#routekey_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Key</a>
@@ -1951,7 +2160,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Route key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_nodejs">
 <a href="#datatraceenabled_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Trace<wbr>Enabled</a>
@@ -1961,7 +2171,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
     </dt>
     <dd>{{% md %}}Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="detailedmetricsenabled_nodejs">
 <a href="#detailedmetricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">detailed<wbr>Metrics<wbr>Enabled</a>
@@ -1970,7 +2181,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether detailed metrics are enabled for the route. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="logginglevel_nodejs">
 <a href="#logginglevel_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Level</a>
@@ -1980,7 +2192,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
     </dt>
     <dd>{{% md %}}The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_nodejs">
 <a href="#throttlingburstlimit_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>Burst<wbr>Limit</a>
@@ -1989,7 +2202,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throttling burst limit for the route.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_nodejs">
 <a href="#throttlingratelimit_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>Rate<wbr>Limit</a>
@@ -1998,11 +2212,14 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throttling rate limit for the route.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="route_key_python">
 <a href="#route_key_python" style="color: inherit; text-decoration: inherit;">route_<wbr>key</a>
@@ -2011,7 +2228,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Route key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="data_trace_enabled_python">
 <a href="#data_trace_enabled_python" style="color: inherit; text-decoration: inherit;">data_<wbr>trace_<wbr>enabled</a>
@@ -2021,7 +2239,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
     </dt>
     <dd>{{% md %}}Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="detailed_metrics_enabled_python">
 <a href="#detailed_metrics_enabled_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>metrics_<wbr>enabled</a>
@@ -2030,7 +2249,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether detailed metrics are enabled for the route. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="logging_level_python">
 <a href="#logging_level_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>level</a>
@@ -2040,7 +2260,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
     </dt>
     <dd>{{% md %}}The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
 Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttling_burst_limit_python">
 <a href="#throttling_burst_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>burst_<wbr>limit</a>
@@ -2049,7 +2270,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throttling burst limit for the route.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="throttling_rate_limit_python">
 <a href="#throttling_rate_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>rate_<wbr>limit</a>
@@ -2058,7 +2280,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The throttling rate limit for the route.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -2079,6 +2302,6 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

@@ -43,7 +43,9 @@ Auto Scaling Groups can be imported using the `name`, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -51,7 +53,9 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -59,7 +63,9 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -67,7 +73,10 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -93,7 +102,9 @@ Auto Scaling Groups can be imported using the `name`, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -101,7 +112,9 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -109,7 +122,9 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -117,7 +132,9 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -125,13 +142,18 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -139,7 +161,9 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -147,7 +171,9 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -155,7 +181,10 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -170,7 +199,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="maxsize_csharp">
 <a href="#maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -179,7 +210,8 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of the Auto Scaling Group.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="minsize_csharp">
 <a href="#minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -189,7 +221,8 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -198,7 +231,8 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="capacityrebalance_csharp">
 <a href="#capacityrebalance_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
@@ -207,7 +241,8 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultcooldown_csharp">
 <a href="#defaultcooldown_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cooldown</a>
@@ -216,7 +251,8 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_csharp">
 <a href="#desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -227,7 +263,8 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabledmetrics_csharp">
 <a href="#enabledmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Metrics</a>
@@ -236,7 +273,8 @@ Capacity below.)
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="forcedelete_csharp">
 <a href="#forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -249,7 +287,8 @@ for all instances in the pool to terminate.  You can force an Auto Scaling Group
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_csharp">
 <a href="#healthcheckgraceperiod_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -258,7 +297,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) after instance comes into service before checking health.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_csharp">
 <a href="#healthchecktype_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
@@ -267,7 +307,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"EC2" or "ELB". Controls how health checking is done.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="initiallifecyclehooks_csharp">
 <a href="#initiallifecyclehooks_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Lifecycle<wbr>Hooks</a>
@@ -282,7 +323,8 @@ syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instancerefresh_csharp">
 <a href="#instancerefresh_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Refresh</a>
@@ -293,7 +335,8 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
 when this Auto Scaling Group is updated. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchconfiguration_csharp">
 <a href="#launchconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configuration</a>
@@ -302,7 +345,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplate_csharp">
 <a href="#launchtemplate_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
@@ -311,7 +355,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_csharp">
 <a href="#loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -321,7 +366,8 @@ when this Auto Scaling Group is updated. Defined below.
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="maxinstancelifetime_csharp">
 <a href="#maxinstancelifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Lifetime</a>
@@ -330,7 +376,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="metricsgranularity_csharp">
 <a href="#metricsgranularity_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Granularity</a>
@@ -339,7 +386,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string | <a href="#metricsgranularity">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Metrics<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="minelbcapacity_csharp">
 <a href="#minelbcapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Elb<wbr>Capacity</a>
@@ -347,7 +395,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mixedinstancespolicy_csharp">
 <a href="#mixedinstancespolicy_csharp" style="color: inherit; text-decoration: inherit;">Mixed<wbr>Instances<wbr>Policy</a>
@@ -356,7 +405,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -365,7 +415,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
 <a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -375,7 +426,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="placementgroup_csharp">
 <a href="#placementgroup_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
@@ -384,7 +436,8 @@ prefix. Conflicts with `name`.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="protectfromscalein_csharp">
 <a href="#protectfromscalein_csharp" style="color: inherit; text-decoration: inherit;">Protect<wbr>From<wbr>Scale<wbr>In</a>
@@ -395,7 +448,8 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Allows setting instance protection. The
 Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="servicelinkedrolearn_csharp">
 <a href="#servicelinkedrolearn_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Linked<wbr>Role<wbr>Arn</a>
@@ -404,7 +458,8 @@ during scale in events.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the service-linked role that the ASG will use to call other AWS services
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="suspendedprocesses_csharp">
 <a href="#suspendedprocesses_csharp" style="color: inherit; text-decoration: inherit;">Suspended<wbr>Processes</a>
@@ -414,7 +469,8 @@ during scale in events.
     </dt>
     <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -423,7 +479,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type"><a href="#grouptag">List&lt;Group<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tagscollection_csharp">
 <a href="#tagscollection_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>Collection</a>
@@ -432,7 +489,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="targetgrouparns_csharp">
 <a href="#targetgrouparns_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -441,7 +499,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="terminationpolicies_csharp">
 <a href="#terminationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Policies</a>
@@ -450,7 +509,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpczoneidentifiers_csharp">
 <a href="#vpczoneidentifiers_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Zone<wbr>Identifiers</a>
@@ -459,7 +519,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="waitforcapacitytimeout_csharp">
 <a href="#waitforcapacitytimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -472,7 +533,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 wait for ASG instances to be healthy before timing out.  (See also Waiting
 for Capacity below.) Setting this to "0" causes
 this provider to skip all Capacity Waiting behavior.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="waitforelbcapacity_csharp">
 <a href="#waitforelbcapacity_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Elb<wbr>Capacity</a>
@@ -480,11 +542,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="maxsize_go">
 <a href="#maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -493,7 +558,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of the Auto Scaling Group.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="minsize_go">
 <a href="#minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -503,7 +569,8 @@ this provider to skip all Capacity Waiting behavior.
     </dt>
     <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -512,7 +579,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="capacityrebalance_go">
 <a href="#capacityrebalance_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
@@ -521,7 +589,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultcooldown_go">
 <a href="#defaultcooldown_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cooldown</a>
@@ -530,7 +599,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_go">
 <a href="#desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -541,7 +611,8 @@ this provider to skip all Capacity Waiting behavior.
     <dd>{{% md %}}The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabledmetrics_go">
 <a href="#enabledmetrics_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Metrics</a>
@@ -550,7 +621,8 @@ Capacity below.)
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="forcedelete_go">
 <a href="#forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -563,7 +635,8 @@ for all instances in the pool to terminate.  You can force an Auto Scaling Group
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_go">
 <a href="#healthcheckgraceperiod_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -572,7 +645,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) after instance comes into service before checking health.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_go">
 <a href="#healthchecktype_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
@@ -581,7 +655,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"EC2" or "ELB". Controls how health checking is done.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="initiallifecyclehooks_go">
 <a href="#initiallifecyclehooks_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Lifecycle<wbr>Hooks</a>
@@ -596,7 +671,8 @@ syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instancerefresh_go">
 <a href="#instancerefresh_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Refresh</a>
@@ -607,7 +683,8 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
 when this Auto Scaling Group is updated. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchconfiguration_go">
 <a href="#launchconfiguration_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configuration</a>
@@ -616,7 +693,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplate_go">
 <a href="#launchtemplate_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
@@ -625,7 +703,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_go">
 <a href="#loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -635,7 +714,8 @@ when this Auto Scaling Group is updated. Defined below.
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="maxinstancelifetime_go">
 <a href="#maxinstancelifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Lifetime</a>
@@ -644,7 +724,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="metricsgranularity_go">
 <a href="#metricsgranularity_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Granularity</a>
@@ -653,7 +734,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string | <a href="#metricsgranularity">Metrics<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="minelbcapacity_go">
 <a href="#minelbcapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Elb<wbr>Capacity</a>
@@ -661,7 +743,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mixedinstancespolicy_go">
 <a href="#mixedinstancespolicy_go" style="color: inherit; text-decoration: inherit;">Mixed<wbr>Instances<wbr>Policy</a>
@@ -670,7 +753,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -679,7 +763,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
 <a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -689,7 +774,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="placementgroup_go">
 <a href="#placementgroup_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
@@ -698,7 +784,8 @@ prefix. Conflicts with `name`.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="protectfromscalein_go">
 <a href="#protectfromscalein_go" style="color: inherit; text-decoration: inherit;">Protect<wbr>From<wbr>Scale<wbr>In</a>
@@ -709,7 +796,8 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Allows setting instance protection. The
 Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="servicelinkedrolearn_go">
 <a href="#servicelinkedrolearn_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Linked<wbr>Role<wbr>Arn</a>
@@ -718,7 +806,8 @@ during scale in events.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the service-linked role that the ASG will use to call other AWS services
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="suspendedprocesses_go">
 <a href="#suspendedprocesses_go" style="color: inherit; text-decoration: inherit;">Suspended<wbr>Processes</a>
@@ -728,7 +817,8 @@ during scale in events.
     </dt>
     <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -737,7 +827,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type"><a href="#grouptag">[]Group<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tagscollection_go">
 <a href="#tagscollection_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>Collection</a>
@@ -746,7 +837,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">[]map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="targetgrouparns_go">
 <a href="#targetgrouparns_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -755,7 +847,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="terminationpolicies_go">
 <a href="#terminationpolicies_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Policies</a>
@@ -764,7 +857,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpczoneidentifiers_go">
 <a href="#vpczoneidentifiers_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Zone<wbr>Identifiers</a>
@@ -773,7 +867,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="waitforcapacitytimeout_go">
 <a href="#waitforcapacitytimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -786,7 +881,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 wait for ASG instances to be healthy before timing out.  (See also Waiting
 for Capacity below.) Setting this to "0" causes
 this provider to skip all Capacity Waiting behavior.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="waitforelbcapacity_go">
 <a href="#waitforelbcapacity_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Elb<wbr>Capacity</a>
@@ -794,11 +890,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="maxsize_nodejs">
 <a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
@@ -807,7 +906,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum size of the Auto Scaling Group.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="minsize_nodejs">
 <a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
@@ -817,7 +917,8 @@ this provider to skip all Capacity Waiting behavior.
     </dt>
     <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -826,7 +927,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="capacityrebalance_nodejs">
 <a href="#capacityrebalance_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Rebalance</a>
@@ -835,7 +937,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultcooldown_nodejs">
 <a href="#defaultcooldown_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cooldown</a>
@@ -844,7 +947,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_nodejs">
 <a href="#desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
@@ -855,7 +959,8 @@ this provider to skip all Capacity Waiting behavior.
     <dd>{{% md %}}The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabledmetrics_nodejs">
 <a href="#enabledmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Metrics</a>
@@ -864,7 +969,8 @@ Capacity below.)
         <span class="property-type">Metric[]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="forcedelete_nodejs">
 <a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
@@ -877,7 +983,8 @@ for all instances in the pool to terminate.  You can force an Auto Scaling Group
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_nodejs">
 <a href="#healthcheckgraceperiod_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -886,7 +993,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) after instance comes into service before checking health.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_nodejs">
 <a href="#healthchecktype_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Type</a>
@@ -895,7 +1003,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"EC2" or "ELB". Controls how health checking is done.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="initiallifecyclehooks_nodejs">
 <a href="#initiallifecyclehooks_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Lifecycle<wbr>Hooks</a>
@@ -910,7 +1019,8 @@ syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instancerefresh_nodejs">
 <a href="#instancerefresh_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Refresh</a>
@@ -921,7 +1031,8 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
 when this Auto Scaling Group is updated. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchconfiguration_nodejs">
 <a href="#launchconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Configuration</a>
@@ -930,7 +1041,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type">string | Launch<wbr>Configuration</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplate_nodejs">
 <a href="#launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
@@ -939,7 +1051,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_nodejs">
 <a href="#loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
@@ -949,7 +1062,8 @@ when this Auto Scaling Group is updated. Defined below.
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="maxinstancelifetime_nodejs">
 <a href="#maxinstancelifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Lifetime</a>
@@ -958,7 +1072,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="metricsgranularity_nodejs">
 <a href="#metricsgranularity_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Granularity</a>
@@ -967,7 +1082,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string | <a href="#metricsgranularity">Metrics<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="minelbcapacity_nodejs">
 <a href="#minelbcapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Elb<wbr>Capacity</a>
@@ -975,7 +1091,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mixedinstancespolicy_nodejs">
 <a href="#mixedinstancespolicy_nodejs" style="color: inherit; text-decoration: inherit;">mixed<wbr>Instances<wbr>Policy</a>
@@ -984,7 +1101,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -993,7 +1111,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -1003,7 +1122,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="placementgroup_nodejs">
 <a href="#placementgroup_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group</a>
@@ -1012,7 +1132,8 @@ prefix. Conflicts with `name`.
         <span class="property-type">string | Placement<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="protectfromscalein_nodejs">
 <a href="#protectfromscalein_nodejs" style="color: inherit; text-decoration: inherit;">protect<wbr>From<wbr>Scale<wbr>In</a>
@@ -1023,7 +1144,8 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Allows setting instance protection. The
 Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="servicelinkedrolearn_nodejs">
 <a href="#servicelinkedrolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Linked<wbr>Role<wbr>Arn</a>
@@ -1032,7 +1154,8 @@ during scale in events.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the service-linked role that the ASG will use to call other AWS services
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="suspendedprocesses_nodejs">
 <a href="#suspendedprocesses_nodejs" style="color: inherit; text-decoration: inherit;">suspended<wbr>Processes</a>
@@ -1042,7 +1165,8 @@ during scale in events.
     </dt>
     <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1051,7 +1175,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type"><a href="#grouptag">Group<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tagscollection_nodejs">
 <a href="#tagscollection_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Collection</a>
@@ -1060,7 +1185,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="targetgrouparns_nodejs">
 <a href="#targetgrouparns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arns</a>
@@ -1069,7 +1195,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="terminationpolicies_nodejs">
 <a href="#terminationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Policies</a>
@@ -1078,7 +1205,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpczoneidentifiers_nodejs">
 <a href="#vpczoneidentifiers_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Zone<wbr>Identifiers</a>
@@ -1087,7 +1215,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="waitforcapacitytimeout_nodejs">
 <a href="#waitforcapacitytimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -1100,7 +1229,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 wait for ASG instances to be healthy before timing out.  (See also Waiting
 for Capacity below.) Setting this to "0" causes
 this provider to skip all Capacity Waiting behavior.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="waitforelbcapacity_nodejs">
 <a href="#waitforelbcapacity_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Elb<wbr>Capacity</a>
@@ -1108,11 +1238,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="max_size_python">
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
@@ -1121,7 +1254,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of the Auto Scaling Group.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="min_size_python">
 <a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
@@ -1131,7 +1265,8 @@ this provider to skip all Capacity Waiting behavior.
     </dt>
     <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -1140,7 +1275,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="capacity_rebalance_python">
 <a href="#capacity_rebalance_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>rebalance</a>
@@ -1149,7 +1285,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_cooldown_python">
 <a href="#default_cooldown_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cooldown</a>
@@ -1158,7 +1295,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="desired_capacity_python">
 <a href="#desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
@@ -1169,7 +1307,8 @@ this provider to skip all Capacity Waiting behavior.
     <dd>{{% md %}}The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_metrics_python">
 <a href="#enabled_metrics_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>metrics</a>
@@ -1178,7 +1317,8 @@ Capacity below.)
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="force_delete_python">
 <a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
@@ -1191,7 +1331,8 @@ for all instances in the pool to terminate.  You can force an Auto Scaling Group
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="health_check_grace_period_python">
 <a href="#health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
@@ -1200,7 +1341,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) after instance comes into service before checking health.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="health_check_type_python">
 <a href="#health_check_type_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>type</a>
@@ -1209,7 +1351,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"EC2" or "ELB". Controls how health checking is done.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="initial_lifecycle_hooks_python">
 <a href="#initial_lifecycle_hooks_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>lifecycle_<wbr>hooks</a>
@@ -1224,7 +1367,8 @@ syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instance_refresh_python">
 <a href="#instance_refresh_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>refresh</a>
@@ -1235,7 +1379,8 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
 when this Auto Scaling Group is updated. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launch_configuration_python">
 <a href="#launch_configuration_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>configuration</a>
@@ -1244,7 +1389,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launch_template_python">
 <a href="#launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
@@ -1253,7 +1399,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="load_balancers_python">
 <a href="#load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
@@ -1263,7 +1410,8 @@ when this Auto Scaling Group is updated. Defined below.
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="max_instance_lifetime_python">
 <a href="#max_instance_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instance_<wbr>lifetime</a>
@@ -1272,7 +1420,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="metrics_granularity_python">
 <a href="#metrics_granularity_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>granularity</a>
@@ -1281,7 +1430,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">str | <a href="#metricsgranularity">Metrics<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="min_elb_capacity_python">
 <a href="#min_elb_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>elb_<wbr>capacity</a>
@@ -1289,7 +1439,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mixed_instances_policy_python">
 <a href="#mixed_instances_policy_python" style="color: inherit; text-decoration: inherit;">mixed_<wbr>instances_<wbr>policy</a>
@@ -1298,7 +1449,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1307,7 +1459,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -1317,7 +1470,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="placement_group_python">
 <a href="#placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
@@ -1326,7 +1480,8 @@ prefix. Conflicts with `name`.
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="protect_from_scale_in_python">
 <a href="#protect_from_scale_in_python" style="color: inherit; text-decoration: inherit;">protect_<wbr>from_<wbr>scale_<wbr>in</a>
@@ -1337,7 +1492,8 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Allows setting instance protection. The
 Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="service_linked_role_arn_python">
 <a href="#service_linked_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>linked_<wbr>role_<wbr>arn</a>
@@ -1346,7 +1502,8 @@ during scale in events.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the service-linked role that the ASG will use to call other AWS services
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="suspended_processes_python">
 <a href="#suspended_processes_python" style="color: inherit; text-decoration: inherit;">suspended_<wbr>processes</a>
@@ -1356,7 +1513,8 @@ during scale in events.
     </dt>
     <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1365,7 +1523,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type"><a href="#grouptag">Sequence[Group<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_collection_python">
 <a href="#tags_collection_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>collection</a>
@@ -1374,7 +1533,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="target_group_arns_python">
 <a href="#target_group_arns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arns</a>
@@ -1383,7 +1543,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="termination_policies_python">
 <a href="#termination_policies_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>policies</a>
@@ -1392,7 +1553,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpc_zone_identifiers_python">
 <a href="#vpc_zone_identifiers_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>zone_<wbr>identifiers</a>
@@ -1401,7 +1563,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="wait_for_capacity_timeout_python">
 <a href="#wait_for_capacity_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>capacity_<wbr>timeout</a>
@@ -1414,7 +1577,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 wait for ASG instances to be healthy before timing out.  (See also Waiting
 for Capacity below.) Setting this to "0" causes
 this provider to skip all Capacity Waiting behavior.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="wait_for_elb_capacity_python">
 <a href="#wait_for_elb_capacity_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>elb_<wbr>capacity</a>
@@ -1422,7 +1586,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1433,7 +1598,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1442,7 +1609,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for this Auto Scaling Group
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1450,11 +1618,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1463,7 +1634,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for this Auto Scaling Group
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1471,11 +1643,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1484,7 +1659,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for this Auto Scaling Group
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1492,11 +1668,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1505,7 +1684,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for this Auto Scaling Group
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1513,7 +1693,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1640,7 +1821,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1649,7 +1832,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for this Auto Scaling Group
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_csharp">
 <a href="#state_availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1658,7 +1842,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_capacityrebalance_csharp">
 <a href="#state_capacityrebalance_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
@@ -1667,7 +1852,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultcooldown_csharp">
 <a href="#state_defaultcooldown_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cooldown</a>
@@ -1676,7 +1862,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_csharp">
 <a href="#state_desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -1687,7 +1874,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabledmetrics_csharp">
 <a href="#state_enabledmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Metrics</a>
@@ -1696,7 +1884,8 @@ Capacity below.)
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_csharp">
 <a href="#state_forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -1709,7 +1898,8 @@ for all instances in the pool to terminate.  You can force an Auto Scaling Group
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_csharp">
 <a href="#state_healthcheckgraceperiod_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -1718,7 +1908,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) after instance comes into service before checking health.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_csharp">
 <a href="#state_healthchecktype_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
@@ -1727,7 +1918,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"EC2" or "ELB". Controls how health checking is done.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_initiallifecyclehooks_csharp">
 <a href="#state_initiallifecyclehooks_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Lifecycle<wbr>Hooks</a>
@@ -1742,7 +1934,8 @@ syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instancerefresh_csharp">
 <a href="#state_instancerefresh_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Refresh</a>
@@ -1753,7 +1946,8 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
 when this Auto Scaling Group is updated. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_launchconfiguration_csharp">
 <a href="#state_launchconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configuration</a>
@@ -1762,7 +1956,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplate_csharp">
 <a href="#state_launchtemplate_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
@@ -1771,7 +1966,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_csharp">
 <a href="#state_loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -1781,7 +1977,8 @@ when this Auto Scaling Group is updated. Defined below.
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_maxinstancelifetime_csharp">
 <a href="#state_maxinstancelifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Lifetime</a>
@@ -1790,7 +1987,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_csharp">
 <a href="#state_maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -1799,7 +1997,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of the Auto Scaling Group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_metricsgranularity_csharp">
 <a href="#state_metricsgranularity_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Granularity</a>
@@ -1808,7 +2007,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string | <a href="#metricsgranularity">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Metrics<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_minelbcapacity_csharp">
 <a href="#state_minelbcapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Elb<wbr>Capacity</a>
@@ -1816,7 +2016,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_minsize_csharp">
 <a href="#state_minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -1826,7 +2027,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_mixedinstancespolicy_csharp">
 <a href="#state_mixedinstancespolicy_csharp" style="color: inherit; text-decoration: inherit;">Mixed<wbr>Instances<wbr>Policy</a>
@@ -1835,7 +2037,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1844,7 +2047,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_csharp">
 <a href="#state_nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -1854,7 +2058,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_placementgroup_csharp">
 <a href="#state_placementgroup_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
@@ -1863,7 +2068,8 @@ prefix. Conflicts with `name`.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_protectfromscalein_csharp">
 <a href="#state_protectfromscalein_csharp" style="color: inherit; text-decoration: inherit;">Protect<wbr>From<wbr>Scale<wbr>In</a>
@@ -1874,7 +2080,8 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Allows setting instance protection. The
 Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_servicelinkedrolearn_csharp">
 <a href="#state_servicelinkedrolearn_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Linked<wbr>Role<wbr>Arn</a>
@@ -1883,7 +2090,8 @@ during scale in events.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the service-linked role that the ASG will use to call other AWS services
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_suspendedprocesses_csharp">
 <a href="#state_suspendedprocesses_csharp" style="color: inherit; text-decoration: inherit;">Suspended<wbr>Processes</a>
@@ -1893,7 +2101,8 @@ during scale in events.
     </dt>
     <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1902,7 +2111,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type"><a href="#grouptag">List&lt;Group<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tagscollection_csharp">
 <a href="#state_tagscollection_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>Collection</a>
@@ -1911,7 +2121,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_targetgrouparns_csharp">
 <a href="#state_targetgrouparns_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -1920,7 +2131,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_terminationpolicies_csharp">
 <a href="#state_terminationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Policies</a>
@@ -1929,7 +2141,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpczoneidentifiers_csharp">
 <a href="#state_vpczoneidentifiers_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Zone<wbr>Identifiers</a>
@@ -1938,7 +2151,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_waitforcapacitytimeout_csharp">
 <a href="#state_waitforcapacitytimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -1951,7 +2165,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 wait for ASG instances to be healthy before timing out.  (See also Waiting
 for Capacity below.) Setting this to "0" causes
 this provider to skip all Capacity Waiting behavior.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_waitforelbcapacity_csharp">
 <a href="#state_waitforelbcapacity_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Elb<wbr>Capacity</a>
@@ -1959,11 +2174,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1972,7 +2190,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for this Auto Scaling Group
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_go">
 <a href="#state_availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1981,7 +2200,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_capacityrebalance_go">
 <a href="#state_capacityrebalance_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
@@ -1990,7 +2210,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultcooldown_go">
 <a href="#state_defaultcooldown_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cooldown</a>
@@ -1999,7 +2220,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_go">
 <a href="#state_desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -2010,7 +2232,8 @@ this provider to skip all Capacity Waiting behavior.
     <dd>{{% md %}}The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabledmetrics_go">
 <a href="#state_enabledmetrics_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Metrics</a>
@@ -2019,7 +2242,8 @@ Capacity below.)
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_go">
 <a href="#state_forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -2032,7 +2256,8 @@ for all instances in the pool to terminate.  You can force an Auto Scaling Group
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_go">
 <a href="#state_healthcheckgraceperiod_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -2041,7 +2266,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) after instance comes into service before checking health.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_go">
 <a href="#state_healthchecktype_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
@@ -2050,7 +2276,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"EC2" or "ELB". Controls how health checking is done.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_initiallifecyclehooks_go">
 <a href="#state_initiallifecyclehooks_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Lifecycle<wbr>Hooks</a>
@@ -2065,7 +2292,8 @@ syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instancerefresh_go">
 <a href="#state_instancerefresh_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Refresh</a>
@@ -2076,7 +2304,8 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
 when this Auto Scaling Group is updated. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_launchconfiguration_go">
 <a href="#state_launchconfiguration_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configuration</a>
@@ -2085,7 +2314,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplate_go">
 <a href="#state_launchtemplate_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
@@ -2094,7 +2324,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_go">
 <a href="#state_loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -2104,7 +2335,8 @@ when this Auto Scaling Group is updated. Defined below.
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_maxinstancelifetime_go">
 <a href="#state_maxinstancelifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Lifetime</a>
@@ -2113,7 +2345,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_go">
 <a href="#state_maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -2122,7 +2355,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of the Auto Scaling Group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_metricsgranularity_go">
 <a href="#state_metricsgranularity_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Granularity</a>
@@ -2131,7 +2365,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string | <a href="#metricsgranularity">Metrics<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_minelbcapacity_go">
 <a href="#state_minelbcapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Elb<wbr>Capacity</a>
@@ -2139,7 +2374,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_minsize_go">
 <a href="#state_minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -2149,7 +2385,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_mixedinstancespolicy_go">
 <a href="#state_mixedinstancespolicy_go" style="color: inherit; text-decoration: inherit;">Mixed<wbr>Instances<wbr>Policy</a>
@@ -2158,7 +2395,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2167,7 +2405,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_go">
 <a href="#state_nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -2177,7 +2416,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_placementgroup_go">
 <a href="#state_placementgroup_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
@@ -2186,7 +2426,8 @@ prefix. Conflicts with `name`.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_protectfromscalein_go">
 <a href="#state_protectfromscalein_go" style="color: inherit; text-decoration: inherit;">Protect<wbr>From<wbr>Scale<wbr>In</a>
@@ -2197,7 +2438,8 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Allows setting instance protection. The
 Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_servicelinkedrolearn_go">
 <a href="#state_servicelinkedrolearn_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Linked<wbr>Role<wbr>Arn</a>
@@ -2206,7 +2448,8 @@ during scale in events.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the service-linked role that the ASG will use to call other AWS services
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_suspendedprocesses_go">
 <a href="#state_suspendedprocesses_go" style="color: inherit; text-decoration: inherit;">Suspended<wbr>Processes</a>
@@ -2216,7 +2459,8 @@ during scale in events.
     </dt>
     <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2225,7 +2469,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type"><a href="#grouptag">[]Group<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tagscollection_go">
 <a href="#state_tagscollection_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>Collection</a>
@@ -2234,7 +2479,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">[]map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_targetgrouparns_go">
 <a href="#state_targetgrouparns_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -2243,7 +2489,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_terminationpolicies_go">
 <a href="#state_terminationpolicies_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Policies</a>
@@ -2252,7 +2499,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpczoneidentifiers_go">
 <a href="#state_vpczoneidentifiers_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Zone<wbr>Identifiers</a>
@@ -2261,7 +2509,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_waitforcapacitytimeout_go">
 <a href="#state_waitforcapacitytimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -2274,7 +2523,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 wait for ASG instances to be healthy before timing out.  (See also Waiting
 for Capacity below.) Setting this to "0" causes
 this provider to skip all Capacity Waiting behavior.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_waitforelbcapacity_go">
 <a href="#state_waitforelbcapacity_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Elb<wbr>Capacity</a>
@@ -2282,11 +2532,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2295,7 +2548,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for this Auto Scaling Group
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_nodejs">
 <a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -2304,7 +2558,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_capacityrebalance_nodejs">
 <a href="#state_capacityrebalance_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Rebalance</a>
@@ -2313,7 +2568,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultcooldown_nodejs">
 <a href="#state_defaultcooldown_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cooldown</a>
@@ -2322,7 +2578,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_nodejs">
 <a href="#state_desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
@@ -2333,7 +2590,8 @@ this provider to skip all Capacity Waiting behavior.
     <dd>{{% md %}}The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabledmetrics_nodejs">
 <a href="#state_enabledmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Metrics</a>
@@ -2342,7 +2600,8 @@ Capacity below.)
         <span class="property-type">Metric[]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_nodejs">
 <a href="#state_forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
@@ -2355,7 +2614,8 @@ for all instances in the pool to terminate.  You can force an Auto Scaling Group
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_nodejs">
 <a href="#state_healthcheckgraceperiod_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -2364,7 +2624,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) after instance comes into service before checking health.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_nodejs">
 <a href="#state_healthchecktype_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Type</a>
@@ -2373,7 +2634,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"EC2" or "ELB". Controls how health checking is done.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_initiallifecyclehooks_nodejs">
 <a href="#state_initiallifecyclehooks_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Lifecycle<wbr>Hooks</a>
@@ -2388,7 +2650,8 @@ syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instancerefresh_nodejs">
 <a href="#state_instancerefresh_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Refresh</a>
@@ -2399,7 +2662,8 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
 when this Auto Scaling Group is updated. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_launchconfiguration_nodejs">
 <a href="#state_launchconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Configuration</a>
@@ -2408,7 +2672,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type">string | Launch<wbr>Configuration</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplate_nodejs">
 <a href="#state_launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
@@ -2417,7 +2682,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_nodejs">
 <a href="#state_loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
@@ -2427,7 +2693,8 @@ when this Auto Scaling Group is updated. Defined below.
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_maxinstancelifetime_nodejs">
 <a href="#state_maxinstancelifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Lifetime</a>
@@ -2436,7 +2703,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_nodejs">
 <a href="#state_maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
@@ -2445,7 +2713,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum size of the Auto Scaling Group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_metricsgranularity_nodejs">
 <a href="#state_metricsgranularity_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Granularity</a>
@@ -2454,7 +2723,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string | <a href="#metricsgranularity">Metrics<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_minelbcapacity_nodejs">
 <a href="#state_minelbcapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Elb<wbr>Capacity</a>
@@ -2462,7 +2732,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_minsize_nodejs">
 <a href="#state_minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
@@ -2472,7 +2743,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_mixedinstancespolicy_nodejs">
 <a href="#state_mixedinstancespolicy_nodejs" style="color: inherit; text-decoration: inherit;">mixed<wbr>Instances<wbr>Policy</a>
@@ -2481,7 +2753,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2490,7 +2763,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_nodejs">
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -2500,7 +2774,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_placementgroup_nodejs">
 <a href="#state_placementgroup_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group</a>
@@ -2509,7 +2784,8 @@ prefix. Conflicts with `name`.
         <span class="property-type">string | Placement<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_protectfromscalein_nodejs">
 <a href="#state_protectfromscalein_nodejs" style="color: inherit; text-decoration: inherit;">protect<wbr>From<wbr>Scale<wbr>In</a>
@@ -2520,7 +2796,8 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Allows setting instance protection. The
 Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_servicelinkedrolearn_nodejs">
 <a href="#state_servicelinkedrolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Linked<wbr>Role<wbr>Arn</a>
@@ -2529,7 +2806,8 @@ during scale in events.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the service-linked role that the ASG will use to call other AWS services
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_suspendedprocesses_nodejs">
 <a href="#state_suspendedprocesses_nodejs" style="color: inherit; text-decoration: inherit;">suspended<wbr>Processes</a>
@@ -2539,7 +2817,8 @@ during scale in events.
     </dt>
     <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2548,7 +2827,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type"><a href="#grouptag">Group<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tagscollection_nodejs">
 <a href="#state_tagscollection_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Collection</a>
@@ -2557,7 +2837,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_targetgrouparns_nodejs">
 <a href="#state_targetgrouparns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arns</a>
@@ -2566,7 +2847,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_terminationpolicies_nodejs">
 <a href="#state_terminationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Policies</a>
@@ -2575,7 +2857,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpczoneidentifiers_nodejs">
 <a href="#state_vpczoneidentifiers_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Zone<wbr>Identifiers</a>
@@ -2584,7 +2867,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_waitforcapacitytimeout_nodejs">
 <a href="#state_waitforcapacitytimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -2597,7 +2881,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 wait for ASG instances to be healthy before timing out.  (See also Waiting
 for Capacity below.) Setting this to "0" causes
 this provider to skip all Capacity Waiting behavior.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_waitforelbcapacity_nodejs">
 <a href="#state_waitforelbcapacity_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Elb<wbr>Capacity</a>
@@ -2605,11 +2890,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2618,7 +2906,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for this Auto Scaling Group
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availability_zones_python">
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -2627,7 +2916,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_capacity_rebalance_python">
 <a href="#state_capacity_rebalance_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>rebalance</a>
@@ -2636,7 +2926,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_default_cooldown_python">
 <a href="#state_default_cooldown_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cooldown</a>
@@ -2645,7 +2936,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_desired_capacity_python">
 <a href="#state_desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
@@ -2656,7 +2948,8 @@ this provider to skip all Capacity Waiting behavior.
     <dd>{{% md %}}The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_metrics_python">
 <a href="#state_enabled_metrics_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>metrics</a>
@@ -2665,7 +2958,8 @@ Capacity below.)
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_force_delete_python">
 <a href="#state_force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
@@ -2678,7 +2972,8 @@ for all instances in the pool to terminate.  You can force an Auto Scaling Group
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_health_check_grace_period_python">
 <a href="#state_health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
@@ -2687,7 +2982,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (in seconds) after instance comes into service before checking health.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_health_check_type_python">
 <a href="#state_health_check_type_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>type</a>
@@ -2696,7 +2992,8 @@ behavior and potentially leaves resources dangling.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"EC2" or "ELB". Controls how health checking is done.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_initial_lifecycle_hooks_python">
 <a href="#state_initial_lifecycle_hooks_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>lifecycle_<wbr>hooks</a>
@@ -2711,7 +3008,8 @@ syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instance_refresh_python">
 <a href="#state_instance_refresh_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>refresh</a>
@@ -2722,7 +3020,8 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
 when this Auto Scaling Group is updated. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_launch_configuration_python">
 <a href="#state_launch_configuration_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>configuration</a>
@@ -2731,7 +3030,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_launch_template_python">
 <a href="#state_launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
@@ -2740,7 +3040,8 @@ when this Auto Scaling Group is updated. Defined below.
         <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_load_balancers_python">
 <a href="#state_load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
@@ -2750,7 +3051,8 @@ when this Auto Scaling Group is updated. Defined below.
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_max_instance_lifetime_python">
 <a href="#state_max_instance_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instance_<wbr>lifetime</a>
@@ -2759,7 +3061,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_max_size_python">
 <a href="#state_max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
@@ -2768,7 +3071,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of the Auto Scaling Group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_metrics_granularity_python">
 <a href="#state_metrics_granularity_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>granularity</a>
@@ -2777,7 +3081,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">str | <a href="#metricsgranularity">Metrics<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_min_elb_capacity_python">
 <a href="#state_min_elb_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>elb_<wbr>capacity</a>
@@ -2785,7 +3090,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_min_size_python">
 <a href="#state_min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
@@ -2795,7 +3101,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_mixed_instances_policy_python">
 <a href="#state_mixed_instances_policy_python" style="color: inherit; text-decoration: inherit;">mixed_<wbr>instances_<wbr>policy</a>
@@ -2804,7 +3111,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2813,7 +3121,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_prefix_python">
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -2823,7 +3132,8 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_placement_group_python">
 <a href="#state_placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
@@ -2832,7 +3142,8 @@ prefix. Conflicts with `name`.
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The name of the placement group into which you'll launch your instances, if any.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_protect_from_scale_in_python">
 <a href="#state_protect_from_scale_in_python" style="color: inherit; text-decoration: inherit;">protect_<wbr>from_<wbr>scale_<wbr>in</a>
@@ -2843,7 +3154,8 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Allows setting instance protection. The
 Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_service_linked_role_arn_python">
 <a href="#state_service_linked_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>linked_<wbr>role_<wbr>arn</a>
@@ -2852,7 +3164,8 @@ during scale in events.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the service-linked role that the ASG will use to call other AWS services
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_suspended_processes_python">
 <a href="#state_suspended_processes_python" style="color: inherit; text-decoration: inherit;">suspended_<wbr>processes</a>
@@ -2862,7 +3175,8 @@ during scale in events.
     </dt>
     <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2871,7 +3185,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type"><a href="#grouptag">Sequence[Group<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_collection_python">
 <a href="#state_tags_collection_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>collection</a>
@@ -2880,7 +3195,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_target_group_arns_python">
 <a href="#state_target_group_arns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arns</a>
@@ -2889,7 +3205,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_termination_policies_python">
 <a href="#state_termination_policies_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>policies</a>
@@ -2898,7 +3215,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpc_zone_identifiers_python">
 <a href="#state_vpc_zone_identifiers_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>zone_<wbr>identifiers</a>
@@ -2907,7 +3225,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_capacity_timeout_python">
 <a href="#state_wait_for_capacity_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>capacity_<wbr>timeout</a>
@@ -2920,7 +3239,8 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 wait for ASG instances to be healthy before timing out.  (See also Waiting
 for Capacity below.) Setting this to "0" causes
 this provider to skip all Capacity Waiting behavior.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_elb_capacity_python">
 <a href="#state_wait_for_elb_capacity_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>elb_<wbr>capacity</a>
@@ -2928,7 +3248,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -2943,7 +3264,9 @@ this provider to skip all Capacity Waiting behavior.
 <h4 id="groupinitiallifecyclehook">Group<wbr>Initial<wbr>Lifecycle<wbr>Hook</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="lifecycletransition_csharp">
 <a href="#lifecycletransition_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Transition</a>
@@ -2951,7 +3274,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2960,7 +3284,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultresult_csharp">
 <a href="#defaultresult_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Result</a>
@@ -2968,7 +3293,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="heartbeattimeout_csharp">
 <a href="#heartbeattimeout_csharp" style="color: inherit; text-decoration: inherit;">Heartbeat<wbr>Timeout</a>
@@ -2976,7 +3302,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="notificationmetadata_csharp">
 <a href="#notificationmetadata_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Metadata</a>
@@ -2984,7 +3311,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="notificationtargetarn_csharp">
 <a href="#notificationtargetarn_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Target<wbr>Arn</a>
@@ -2992,7 +3320,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -3000,11 +3329,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="lifecycletransition_go">
 <a href="#lifecycletransition_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Transition</a>
@@ -3012,7 +3344,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3021,7 +3354,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultresult_go">
 <a href="#defaultresult_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Result</a>
@@ -3029,7 +3363,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="heartbeattimeout_go">
 <a href="#heartbeattimeout_go" style="color: inherit; text-decoration: inherit;">Heartbeat<wbr>Timeout</a>
@@ -3037,7 +3372,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="notificationmetadata_go">
 <a href="#notificationmetadata_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Metadata</a>
@@ -3045,7 +3381,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="notificationtargetarn_go">
 <a href="#notificationtargetarn_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Target<wbr>Arn</a>
@@ -3053,7 +3390,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -3061,11 +3399,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="lifecycletransition_nodejs">
 <a href="#lifecycletransition_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Transition</a>
@@ -3073,7 +3414,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3082,7 +3424,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultresult_nodejs">
 <a href="#defaultresult_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Result</a>
@@ -3090,7 +3433,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="heartbeattimeout_nodejs">
 <a href="#heartbeattimeout_nodejs" style="color: inherit; text-decoration: inherit;">heartbeat<wbr>Timeout</a>
@@ -3098,7 +3442,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="notificationmetadata_nodejs">
 <a href="#notificationmetadata_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Metadata</a>
@@ -3106,7 +3451,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="notificationtargetarn_nodejs">
 <a href="#notificationtargetarn_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Target<wbr>Arn</a>
@@ -3114,7 +3460,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -3122,11 +3469,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="lifecycle_transition_python">
 <a href="#lifecycle_transition_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>transition</a>
@@ -3134,7 +3484,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3143,7 +3494,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_result_python">
 <a href="#default_result_python" style="color: inherit; text-decoration: inherit;">default_<wbr>result</a>
@@ -3151,7 +3503,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="heartbeat_timeout_python">
 <a href="#heartbeat_timeout_python" style="color: inherit; text-decoration: inherit;">heartbeat_<wbr>timeout</a>
@@ -3159,7 +3512,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="notification_metadata_python">
 <a href="#notification_metadata_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>metadata</a>
@@ -3167,7 +3521,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="notification_target_arn_python">
 <a href="#notification_target_arn_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>target_<wbr>arn</a>
@@ -3175,7 +3530,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -3183,13 +3539,16 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="groupinstancerefresh">Group<wbr>Instance<wbr>Refresh</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="strategy_csharp">
 <a href="#strategy_csharp" style="color: inherit; text-decoration: inherit;">Strategy</a>
@@ -3198,7 +3557,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strategy to use for instance refresh. The only allowed value is `Rolling`. See [StartInstanceRefresh Action](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StartInstanceRefresh.html#API_StartInstanceRefresh_RequestParameters) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferences_csharp">
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -3207,7 +3567,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override default parameters for Instance Refresh.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="triggers_csharp">
 <a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -3216,11 +3577,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of additional property names that will trigger an Instance Refresh. A refresh will always be triggered by a change in any of `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="strategy_go">
 <a href="#strategy_go" style="color: inherit; text-decoration: inherit;">Strategy</a>
@@ -3229,7 +3593,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strategy to use for instance refresh. The only allowed value is `Rolling`. See [StartInstanceRefresh Action](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StartInstanceRefresh.html#API_StartInstanceRefresh_RequestParameters) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferences_go">
 <a href="#preferences_go" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -3238,7 +3603,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences</a></span>
     </dt>
     <dd>{{% md %}}Override default parameters for Instance Refresh.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="triggers_go">
 <a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -3247,11 +3613,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of additional property names that will trigger an Instance Refresh. A refresh will always be triggered by a change in any of `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="strategy_nodejs">
 <a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
@@ -3260,7 +3629,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strategy to use for instance refresh. The only allowed value is `Rolling`. See [StartInstanceRefresh Action](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StartInstanceRefresh.html#API_StartInstanceRefresh_RequestParameters) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferences_nodejs">
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -3269,7 +3639,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences</a></span>
     </dt>
     <dd>{{% md %}}Override default parameters for Instance Refresh.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="triggers_nodejs">
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -3278,11 +3649,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of additional property names that will trigger an Instance Refresh. A refresh will always be triggered by a change in any of `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="strategy_python">
 <a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
@@ -3291,7 +3665,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The strategy to use for instance refresh. The only allowed value is `Rolling`. See [StartInstanceRefresh Action](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StartInstanceRefresh.html#API_StartInstanceRefresh_RequestParameters) for more information.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferences_python">
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -3300,7 +3675,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override default parameters for Instance Refresh.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="triggers_python">
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -3309,13 +3685,16 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of additional property names that will trigger an Instance Refresh. A refresh will always be triggered by a change in any of `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="instancewarmup_csharp">
 <a href="#instancewarmup_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Warmup</a>
@@ -3324,7 +3703,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="minhealthypercentage_csharp">
 <a href="#minhealthypercentage_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Healthy<wbr>Percentage</a>
@@ -3333,11 +3713,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to `90`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="instancewarmup_go">
 <a href="#instancewarmup_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Warmup</a>
@@ -3346,7 +3729,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="minhealthypercentage_go">
 <a href="#minhealthypercentage_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Healthy<wbr>Percentage</a>
@@ -3355,11 +3739,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to `90`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="instancewarmup_nodejs">
 <a href="#instancewarmup_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Warmup</a>
@@ -3368,7 +3755,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="minhealthypercentage_nodejs">
 <a href="#minhealthypercentage_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Healthy<wbr>Percentage</a>
@@ -3377,11 +3765,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to `90`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="instance_warmup_python">
 <a href="#instance_warmup_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>warmup</a>
@@ -3390,7 +3781,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="min_healthy_percentage_python">
 <a href="#min_healthy_percentage_python" style="color: inherit; text-decoration: inherit;">min_<wbr>healthy_<wbr>percentage</a>
@@ -3399,13 +3791,16 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to `90`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="grouplaunchtemplate">Group<wbr>Launch<wbr>Template</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3414,7 +3809,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3423,7 +3819,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -3432,11 +3829,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3445,7 +3845,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3454,7 +3855,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -3463,11 +3865,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3476,7 +3881,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3485,7 +3891,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3494,11 +3901,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3507,7 +3917,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3516,7 +3927,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3525,13 +3937,16 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="launchtemplate_csharp">
 <a href="#launchtemplate_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
@@ -3540,7 +3955,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instancesdistribution_csharp">
 <a href="#instancesdistribution_csharp" style="color: inherit; text-decoration: inherit;">Instances<wbr>Distribution</a>
@@ -3549,11 +3965,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="launchtemplate_go">
 <a href="#launchtemplate_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
@@ -3562,7 +3981,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instancesdistribution_go">
 <a href="#instancesdistribution_go" style="color: inherit; text-decoration: inherit;">Instances<wbr>Distribution</a>
@@ -3571,11 +3991,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="launchtemplate_nodejs">
 <a href="#launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
@@ -3584,7 +4007,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instancesdistribution_nodejs">
 <a href="#instancesdistribution_nodejs" style="color: inherit; text-decoration: inherit;">instances<wbr>Distribution</a>
@@ -3593,11 +4017,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="launch_template_python">
 <a href="#launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
@@ -3606,7 +4033,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instances_distribution_python">
 <a href="#instances_distribution_python" style="color: inherit; text-decoration: inherit;">instances_<wbr>distribution</a>
@@ -3615,13 +4043,16 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="ondemandallocationstrategy_csharp">
 <a href="#ondemandallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Allocation<wbr>Strategy</a>
@@ -3630,7 +4061,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Strategy to use when launching on-demand instances. Valid values: `prioritized`. Default: `prioritized`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ondemandbasecapacity_csharp">
 <a href="#ondemandbasecapacity_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Base<wbr>Capacity</a>
@@ -3639,7 +4071,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Absolute minimum amount of desired capacity that must be fulfilled by on-demand instances. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ondemandpercentageabovebasecapacity_csharp">
 <a href="#ondemandpercentageabovebasecapacity_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Percentage<wbr>Above<wbr>Base<wbr>Capacity</a>
@@ -3648,7 +4081,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spotallocationstrategy_csharp">
 <a href="#spotallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Allocation<wbr>Strategy</a>
@@ -3657,7 +4091,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`. Default: `lowest-price`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spotinstancepools_csharp">
 <a href="#spotinstancepools_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Pools</a>
@@ -3666,7 +4101,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: `2`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_csharp">
 <a href="#spotmaxprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price</a>
@@ -3675,11 +4111,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum price per unit hour that the user is willing to pay for the Spot instances. Default: an empty string which means the on-demand price.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="ondemandallocationstrategy_go">
 <a href="#ondemandallocationstrategy_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Allocation<wbr>Strategy</a>
@@ -3688,7 +4127,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Strategy to use when launching on-demand instances. Valid values: `prioritized`. Default: `prioritized`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ondemandbasecapacity_go">
 <a href="#ondemandbasecapacity_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Base<wbr>Capacity</a>
@@ -3697,7 +4137,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Absolute minimum amount of desired capacity that must be fulfilled by on-demand instances. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ondemandpercentageabovebasecapacity_go">
 <a href="#ondemandpercentageabovebasecapacity_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Percentage<wbr>Above<wbr>Base<wbr>Capacity</a>
@@ -3706,7 +4147,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spotallocationstrategy_go">
 <a href="#spotallocationstrategy_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Allocation<wbr>Strategy</a>
@@ -3715,7 +4157,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`. Default: `lowest-price`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spotinstancepools_go">
 <a href="#spotinstancepools_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Pools</a>
@@ -3724,7 +4167,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: `2`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_go">
 <a href="#spotmaxprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price</a>
@@ -3733,11 +4177,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum price per unit hour that the user is willing to pay for the Spot instances. Default: an empty string which means the on-demand price.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="ondemandallocationstrategy_nodejs">
 <a href="#ondemandallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Allocation<wbr>Strategy</a>
@@ -3746,7 +4193,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Strategy to use when launching on-demand instances. Valid values: `prioritized`. Default: `prioritized`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ondemandbasecapacity_nodejs">
 <a href="#ondemandbasecapacity_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Base<wbr>Capacity</a>
@@ -3755,7 +4203,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Absolute minimum amount of desired capacity that must be fulfilled by on-demand instances. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ondemandpercentageabovebasecapacity_nodejs">
 <a href="#ondemandpercentageabovebasecapacity_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Percentage<wbr>Above<wbr>Base<wbr>Capacity</a>
@@ -3764,7 +4213,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spotallocationstrategy_nodejs">
 <a href="#spotallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Allocation<wbr>Strategy</a>
@@ -3773,7 +4223,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`. Default: `lowest-price`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spotinstancepools_nodejs">
 <a href="#spotinstancepools_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Pools</a>
@@ -3782,7 +4233,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: `2`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_nodejs">
 <a href="#spotmaxprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Max<wbr>Price</a>
@@ -3791,11 +4243,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum price per unit hour that the user is willing to pay for the Spot instances. Default: an empty string which means the on-demand price.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="on_demand_allocation_strategy_python">
 <a href="#on_demand_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>allocation_<wbr>strategy</a>
@@ -3804,7 +4259,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Strategy to use when launching on-demand instances. Valid values: `prioritized`. Default: `prioritized`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="on_demand_base_capacity_python">
 <a href="#on_demand_base_capacity_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>base_<wbr>capacity</a>
@@ -3813,7 +4269,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Absolute minimum amount of desired capacity that must be fulfilled by on-demand instances. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="on_demand_percentage_above_base_capacity_python">
 <a href="#on_demand_percentage_above_base_capacity_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>percentage_<wbr>above_<wbr>base_<wbr>capacity</a>
@@ -3822,7 +4279,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: `0`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spot_allocation_strategy_python">
 <a href="#spot_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>allocation_<wbr>strategy</a>
@@ -3831,7 +4289,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`. Default: `lowest-price`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spot_instance_pools_python">
 <a href="#spot_instance_pools_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>pools</a>
@@ -3840,7 +4299,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: `2`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="spot_max_price_python">
 <a href="#spot_max_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>max_<wbr>price</a>
@@ -3849,13 +4309,16 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum price per unit hour that the user is willing to pay for the Spot instances. Default: an empty string which means the on-demand price.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="launchtemplatespecification_csharp">
 <a href="#launchtemplatespecification_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
@@ -3864,7 +4327,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="overrides_csharp">
 <a href="#overrides_csharp" style="color: inherit; text-decoration: inherit;">Overrides</a>
@@ -3873,11 +4337,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">List&lt;Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="launchtemplatespecification_go">
 <a href="#launchtemplatespecification_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
@@ -3886,7 +4353,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="overrides_go">
 <a href="#overrides_go" style="color: inherit; text-decoration: inherit;">Overrides</a>
@@ -3895,11 +4363,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">[]Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="launchtemplatespecification_nodejs">
 <a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
@@ -3908,7 +4379,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="overrides_nodejs">
 <a href="#overrides_nodejs" style="color: inherit; text-decoration: inherit;">overrides</a>
@@ -3917,11 +4389,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="launch_template_specification_python">
 <a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
@@ -3930,7 +4405,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="overrides_python">
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
@@ -3939,13 +4415,16 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">Sequence[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_csharp">
 <a href="#launchtemplateid_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
@@ -3954,7 +4433,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplatename_csharp">
 <a href="#launchtemplatename_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Name</a>
@@ -3963,7 +4443,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -3972,11 +4453,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_go">
 <a href="#launchtemplateid_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
@@ -3985,7 +4469,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplatename_go">
 <a href="#launchtemplatename_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Name</a>
@@ -3994,7 +4479,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -4003,11 +4489,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_nodejs">
 <a href="#launchtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
@@ -4016,7 +4505,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplatename_nodejs">
 <a href="#launchtemplatename_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Name</a>
@@ -4025,7 +4515,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -4034,11 +4525,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="launch_template_id_python">
 <a href="#launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
@@ -4047,7 +4541,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launch_template_name_python">
 <a href="#launch_template_name_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>name</a>
@@ -4056,7 +4551,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -4065,13 +4561,16 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="groupmixedinstancespolicylaunchtemplateoverride">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -4080,7 +4579,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Override the instance type in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplatespecification_csharp">
 <a href="#launchtemplatespecification_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
@@ -4089,7 +4589,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="weightedcapacity_csharp">
 <a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
@@ -4098,11 +4599,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of capacity units, which gives the instance type a proportional weight to other instance types.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -4111,7 +4615,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Override the instance type in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplatespecification_go">
 <a href="#launchtemplatespecification_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
@@ -4120,7 +4625,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="weightedcapacity_go">
 <a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
@@ -4129,11 +4635,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of capacity units, which gives the instance type a proportional weight to other instance types.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -4142,7 +4651,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Override the instance type in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplatespecification_nodejs">
 <a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
@@ -4151,7 +4661,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="weightedcapacity_nodejs">
 <a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
@@ -4160,11 +4671,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of capacity units, which gives the instance type a proportional weight to other instance types.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -4173,7 +4687,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Override the instance type in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launch_template_specification_python">
 <a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
@@ -4182,7 +4697,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="weighted_capacity_python">
 <a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
@@ -4191,13 +4707,16 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of capacity units, which gives the instance type a proportional weight to other instance types.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_csharp">
 <a href="#launchtemplateid_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
@@ -4206,7 +4725,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplatename_csharp">
 <a href="#launchtemplatename_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Name</a>
@@ -4215,7 +4735,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -4224,11 +4745,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_go">
 <a href="#launchtemplateid_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
@@ -4237,7 +4761,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplatename_go">
 <a href="#launchtemplatename_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Name</a>
@@ -4246,7 +4771,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -4255,11 +4781,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_nodejs">
 <a href="#launchtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
@@ -4268,7 +4797,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launchtemplatename_nodejs">
 <a href="#launchtemplatename_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Name</a>
@@ -4277,7 +4807,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -4286,11 +4817,14 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="launch_template_id_python">
 <a href="#launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
@@ -4299,7 +4833,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="launch_template_name_python">
 <a href="#launch_template_name_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>name</a>
@@ -4308,7 +4843,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -4317,13 +4853,16 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="grouptag">Group<wbr>Tag</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -4332,7 +4871,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="propagateatlaunch_csharp">
 <a href="#propagateatlaunch_csharp" style="color: inherit; text-decoration: inherit;">Propagate<wbr>At<wbr>Launch</a>
@@ -4342,7 +4882,8 @@ this provider to skip all Capacity Waiting behavior.
     </dt>
     <dd>{{% md %}}Enables propagation of the tag to
 Amazon EC2 instances launched via this ASG
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4351,11 +4892,14 @@ Amazon EC2 instances launched via this ASG
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -4364,7 +4908,8 @@ Amazon EC2 instances launched via this ASG
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="propagateatlaunch_go">
 <a href="#propagateatlaunch_go" style="color: inherit; text-decoration: inherit;">Propagate<wbr>At<wbr>Launch</a>
@@ -4374,7 +4919,8 @@ Amazon EC2 instances launched via this ASG
     </dt>
     <dd>{{% md %}}Enables propagation of the tag to
 Amazon EC2 instances launched via this ASG
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4383,11 +4929,14 @@ Amazon EC2 instances launched via this ASG
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -4396,7 +4945,8 @@ Amazon EC2 instances launched via this ASG
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="propagateatlaunch_nodejs">
 <a href="#propagateatlaunch_nodejs" style="color: inherit; text-decoration: inherit;">propagate<wbr>At<wbr>Launch</a>
@@ -4406,7 +4956,8 @@ Amazon EC2 instances launched via this ASG
     </dt>
     <dd>{{% md %}}Enables propagation of the tag to
 Amazon EC2 instances launched via this ASG
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4415,11 +4966,14 @@ Amazon EC2 instances launched via this ASG
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -4428,7 +4982,8 @@ Amazon EC2 instances launched via this ASG
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="propagate_at_launch_python">
 <a href="#propagate_at_launch_python" style="color: inherit; text-decoration: inherit;">propagate_<wbr>at_<wbr>launch</a>
@@ -4438,7 +4993,8 @@ Amazon EC2 instances launched via this ASG
     </dt>
     <dd>{{% md %}}Enables propagation of the tag to
 Amazon EC2 instances launched via this ASG
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4447,29 +5003,38 @@ Amazon EC2 instances launched via this ASG
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="metricsgranularity">Metrics<wbr>Granularity</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular"><dt>One<wbr>Minute</dt>
-    <dd>1Minute</dd></dl>
+<dl class="tabular">
+    <dt>One<wbr>Minute</dt>
+    <dd>1Minute</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Metrics<wbr>Granularity<wbr>One<wbr>Minute</dt>
-    <dd>1Minute</dd></dl>
+<dl class="tabular">
+    <dt>Metrics<wbr>Granularity<wbr>One<wbr>Minute</dt>
+    <dd>1Minute</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular"><dt>One<wbr>Minute</dt>
-    <dd>1Minute</dd></dl>
+<dl class="tabular">
+    <dt>One<wbr>Minute</dt>
+    <dd>1Minute</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular"><dt>ONE_MINUTE</dt>
-    <dd>1Minute</dd></dl>
+<dl class="tabular">
+    <dt>ONE_MINUTE</dt>
+    <dd>1Minute</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -4480,6 +5045,6 @@ Amazon EC2 instances launched via this ASG
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

@@ -23,17 +23,11 @@ phase because a modification has not yet taken place. You can use the
 **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -57,12 +51,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -90,12 +81,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -110,12 +98,9 @@ docdb = aws.docdb.Cluster("docdb",
     skip_final_snapshot=True)
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -132,16 +117,9 @@ const docdb = new aws.docdb.Cluster("docdb", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a Cluster Resource {#create}
@@ -166,7 +144,9 @@ const docdb = new aws.docdb.Cluster("docdb", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -174,7 +154,9 @@ const docdb = new aws.docdb.Cluster("docdb", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -182,7 +164,9 @@ const docdb = new aws.docdb.Cluster("docdb", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -190,7 +174,10 @@ const docdb = new aws.docdb.Cluster("docdb", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -216,7 +203,9 @@ const docdb = new aws.docdb.Cluster("docdb", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -224,7 +213,9 @@ const docdb = new aws.docdb.Cluster("docdb", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -232,7 +223,9 @@ const docdb = new aws.docdb.Cluster("docdb", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -240,7 +233,9 @@ const docdb = new aws.docdb.Cluster("docdb", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -248,13 +243,18 @@ const docdb = new aws.docdb.Cluster("docdb", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -262,7 +262,9 @@ const docdb = new aws.docdb.Cluster("docdb", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -270,7 +272,9 @@ const docdb = new aws.docdb.Cluster("docdb", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -278,7 +282,10 @@ const docdb = new aws.docdb.Cluster("docdb", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -293,7 +300,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_csharp">
 <a href="#applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -304,7 +313,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -314,7 +324,8 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="backupretentionperiod_csharp">
 <a href="#backupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
@@ -323,7 +334,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clusteridentifier_csharp">
 <a href="#clusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -332,7 +344,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clusteridentifierprefix_csharp">
 <a href="#clusteridentifierprefix_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier<wbr>Prefix</a>
@@ -341,7 +354,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clustermembers_csharp">
 <a href="#clustermembers_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Members</a>
@@ -350,7 +364,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dbclusterparametergroupname_csharp">
 <a href="#dbclusterparametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -359,7 +374,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dbsubnetgroupname_csharp">
 <a href="#dbsubnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -368,7 +384,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_csharp">
 <a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -377,7 +394,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabledcloudwatchlogsexports_csharp">
 <a href="#enabledcloudwatchlogsexports_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
@@ -387,7 +405,8 @@ instances in the DB cluster can be created in.
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -396,7 +415,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -405,7 +425,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_csharp">
 <a href="#finalsnapshotidentifier_csharp" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
@@ -416,7 +437,8 @@ The following log types are supported: `audit`, `profiler`.
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -425,7 +447,8 @@ made.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="masterpassword_csharp">
 <a href="#masterpassword_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Password</a>
@@ -435,7 +458,8 @@ made.
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="masterusername_csharp">
 <a href="#masterusername_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Username</a>
@@ -444,7 +468,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -453,7 +478,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferredbackupwindow_csharp">
 <a href="#preferredbackupwindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -463,7 +489,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_csharp">
 <a href="#preferredmaintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -472,7 +499,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="skipfinalsnapshot_csharp">
 <a href="#skipfinalsnapshot_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Final<wbr>Snapshot</a>
@@ -481,7 +509,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="snapshotidentifier_csharp">
 <a href="#snapshotidentifier_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Identifier</a>
@@ -490,7 +519,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="storageencrypted_csharp">
 <a href="#storageencrypted_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -499,7 +529,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -508,7 +539,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupids_csharp">
 <a href="#vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -518,11 +550,14 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_go">
 <a href="#applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -533,7 +568,8 @@ with the Cluster
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -543,7 +579,8 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="backupretentionperiod_go">
 <a href="#backupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
@@ -552,7 +589,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clusteridentifier_go">
 <a href="#clusteridentifier_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -561,7 +599,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clusteridentifierprefix_go">
 <a href="#clusteridentifierprefix_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier<wbr>Prefix</a>
@@ -570,7 +609,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clustermembers_go">
 <a href="#clustermembers_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Members</a>
@@ -579,7 +619,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dbclusterparametergroupname_go">
 <a href="#dbclusterparametergroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -588,7 +629,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dbsubnetgroupname_go">
 <a href="#dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -597,7 +639,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_go">
 <a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -606,7 +649,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabledcloudwatchlogsexports_go">
 <a href="#enabledcloudwatchlogsexports_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
@@ -616,7 +660,8 @@ instances in the DB cluster can be created in.
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -625,7 +670,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -634,7 +680,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_go">
 <a href="#finalsnapshotidentifier_go" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
@@ -645,7 +692,8 @@ The following log types are supported: `audit`, `profiler`.
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -654,7 +702,8 @@ made.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="masterpassword_go">
 <a href="#masterpassword_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Password</a>
@@ -664,7 +713,8 @@ made.
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="masterusername_go">
 <a href="#masterusername_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Username</a>
@@ -673,7 +723,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -682,7 +733,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferredbackupwindow_go">
 <a href="#preferredbackupwindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -692,7 +744,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_go">
 <a href="#preferredmaintenancewindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -701,7 +754,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="skipfinalsnapshot_go">
 <a href="#skipfinalsnapshot_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Final<wbr>Snapshot</a>
@@ -710,7 +764,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="snapshotidentifier_go">
 <a href="#snapshotidentifier_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Identifier</a>
@@ -719,7 +774,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="storageencrypted_go">
 <a href="#storageencrypted_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -728,7 +784,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -737,7 +794,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupids_go">
 <a href="#vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -747,11 +805,14 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_nodejs">
 <a href="#applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -762,7 +823,8 @@ with the Cluster
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -772,7 +834,8 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="backupretentionperiod_nodejs">
 <a href="#backupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Period</a>
@@ -781,7 +844,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clusteridentifier_nodejs">
 <a href="#clusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
@@ -790,7 +854,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clusteridentifierprefix_nodejs">
 <a href="#clusteridentifierprefix_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier<wbr>Prefix</a>
@@ -799,7 +864,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="clustermembers_nodejs">
 <a href="#clustermembers_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Members</a>
@@ -808,7 +874,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dbclusterparametergroupname_nodejs">
 <a href="#dbclusterparametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -817,7 +884,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dbsubnetgroupname_nodejs">
 <a href="#dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -826,7 +894,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_nodejs">
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -835,7 +904,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabledcloudwatchlogsexports_nodejs">
 <a href="#enabledcloudwatchlogsexports_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
@@ -845,7 +915,8 @@ instances in the DB cluster can be created in.
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -854,7 +925,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -863,7 +935,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_nodejs">
 <a href="#finalsnapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Snapshot<wbr>Identifier</a>
@@ -874,7 +947,8 @@ The following log types are supported: `audit`, `profiler`.
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -883,7 +957,8 @@ made.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="masterpassword_nodejs">
 <a href="#masterpassword_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Password</a>
@@ -893,7 +968,8 @@ made.
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="masterusername_nodejs">
 <a href="#masterusername_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Username</a>
@@ -902,7 +978,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -911,7 +988,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferredbackupwindow_nodejs">
 <a href="#preferredbackupwindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Window</a>
@@ -921,7 +999,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_nodejs">
 <a href="#preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
@@ -930,7 +1009,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="skipfinalsnapshot_nodejs">
 <a href="#skipfinalsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Final<wbr>Snapshot</a>
@@ -939,7 +1019,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="snapshotidentifier_nodejs">
 <a href="#snapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Identifier</a>
@@ -948,7 +1029,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="storageencrypted_nodejs">
 <a href="#storageencrypted_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Encrypted</a>
@@ -957,7 +1039,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -966,7 +1049,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupids_nodejs">
 <a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -976,11 +1060,14 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="apply_immediately_python">
 <a href="#apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -991,7 +1078,8 @@ with the Cluster
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -1001,7 +1089,8 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="backup_retention_period_python">
 <a href="#backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
@@ -1010,7 +1099,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cluster_identifier_python">
 <a href="#cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
@@ -1019,7 +1109,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cluster_identifier_prefix_python">
 <a href="#cluster_identifier_prefix_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier_<wbr>prefix</a>
@@ -1028,7 +1119,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cluster_members_python">
 <a href="#cluster_members_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>members</a>
@@ -1037,7 +1129,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="db_cluster_parameter_group_name_python">
 <a href="#db_cluster_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>parameter_<wbr>group_<wbr>name</a>
@@ -1046,7 +1139,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="db_subnet_group_name_python">
 <a href="#db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
@@ -1055,7 +1149,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="deletion_protection_python">
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -1064,7 +1159,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_cloudwatch_logs_exports_python">
 <a href="#enabled_cloudwatch_logs_exports_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</a>
@@ -1074,7 +1170,8 @@ instances in the DB cluster can be created in.
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1083,7 +1180,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -1092,7 +1190,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="final_snapshot_identifier_python">
 <a href="#final_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">final_<wbr>snapshot_<wbr>identifier</a>
@@ -1103,7 +1202,8 @@ The following log types are supported: `audit`, `profiler`.
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -1112,7 +1212,8 @@ made.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="master_password_python">
 <a href="#master_password_python" style="color: inherit; text-decoration: inherit;">master_<wbr>password</a>
@@ -1122,7 +1223,8 @@ made.
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="master_username_python">
 <a href="#master_username_python" style="color: inherit; text-decoration: inherit;">master_<wbr>username</a>
@@ -1131,7 +1233,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1140,7 +1243,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferred_backup_window_python">
 <a href="#preferred_backup_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>window</a>
@@ -1150,7 +1254,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="preferred_maintenance_window_python">
 <a href="#preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
@@ -1159,7 +1264,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="skip_final_snapshot_python">
 <a href="#skip_final_snapshot_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>final_<wbr>snapshot</a>
@@ -1168,7 +1274,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="snapshot_identifier_python">
 <a href="#snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>identifier</a>
@@ -1177,7 +1284,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="storage_encrypted_python">
 <a href="#storage_encrypted_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>encrypted</a>
@@ -1186,7 +1294,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1195,7 +1304,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpc_security_group_ids_python">
 <a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -1205,7 +1315,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1216,7 +1327,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1225,7 +1338,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="clusterresourceid_csharp">
 <a href="#clusterresourceid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
@@ -1234,7 +1348,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1243,7 +1358,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hostedzoneid_csharp">
 <a href="#hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -1252,7 +1368,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1260,7 +1377,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="readerendpoint_csharp">
 <a href="#readerendpoint_csharp" style="color: inherit; text-decoration: inherit;">Reader<wbr>Endpoint</a>
@@ -1269,11 +1387,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1282,7 +1403,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="clusterresourceid_go">
 <a href="#clusterresourceid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
@@ -1291,7 +1413,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1300,7 +1423,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hostedzoneid_go">
 <a href="#hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -1309,7 +1433,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1317,7 +1442,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="readerendpoint_go">
 <a href="#readerendpoint_go" style="color: inherit; text-decoration: inherit;">Reader<wbr>Endpoint</a>
@@ -1326,11 +1452,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1339,7 +1468,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="clusterresourceid_nodejs">
 <a href="#clusterresourceid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Id</a>
@@ -1348,7 +1478,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1357,7 +1488,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hostedzoneid_nodejs">
 <a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
@@ -1366,7 +1498,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1374,7 +1507,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="readerendpoint_nodejs">
 <a href="#readerendpoint_nodejs" style="color: inherit; text-decoration: inherit;">reader<wbr>Endpoint</a>
@@ -1383,11 +1517,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1396,7 +1533,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cluster_resource_id_python">
 <a href="#cluster_resource_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>id</a>
@@ -1405,7 +1543,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1414,7 +1553,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hosted_zone_id_python">
 <a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
@@ -1423,7 +1563,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1431,7 +1572,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="reader_endpoint_python">
 <a href="#reader_endpoint_python" style="color: inherit; text-decoration: inherit;">reader_<wbr>endpoint</a>
@@ -1440,7 +1582,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1567,7 +1710,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_csharp">
 <a href="#state_applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -1578,7 +1723,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1587,7 +1733,8 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_csharp">
 <a href="#state_availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1597,7 +1744,8 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_backupretentionperiod_csharp">
 <a href="#state_backupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
@@ -1606,7 +1754,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifier_csharp">
 <a href="#state_clusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -1615,7 +1764,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifierprefix_csharp">
 <a href="#state_clusteridentifierprefix_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier<wbr>Prefix</a>
@@ -1624,7 +1774,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clustermembers_csharp">
 <a href="#state_clustermembers_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Members</a>
@@ -1633,7 +1784,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusterresourceid_csharp">
 <a href="#state_clusterresourceid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
@@ -1642,7 +1794,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dbclusterparametergroupname_csharp">
 <a href="#state_dbclusterparametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -1651,7 +1804,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dbsubnetgroupname_csharp">
 <a href="#state_dbsubnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -1660,7 +1814,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_csharp">
 <a href="#state_deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -1669,7 +1824,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabledcloudwatchlogsexports_csharp">
 <a href="#state_enabledcloudwatchlogsexports_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
@@ -1679,7 +1835,8 @@ instances in the DB cluster can be created in.
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_csharp">
 <a href="#state_endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1688,7 +1845,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engine_csharp">
 <a href="#state_engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -1697,7 +1855,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_csharp">
 <a href="#state_engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1706,7 +1865,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_csharp">
 <a href="#state_finalsnapshotidentifier_csharp" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
@@ -1717,7 +1877,8 @@ The following log types are supported: `audit`, `profiler`.
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_csharp">
 <a href="#state_hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -1726,7 +1887,8 @@ made.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_csharp">
 <a href="#state_kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1735,7 +1897,8 @@ made.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_masterpassword_csharp">
 <a href="#state_masterpassword_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Password</a>
@@ -1745,7 +1908,8 @@ made.
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_masterusername_csharp">
 <a href="#state_masterusername_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Username</a>
@@ -1754,7 +1918,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1763,7 +1928,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupwindow_csharp">
 <a href="#state_preferredbackupwindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -1773,7 +1939,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_csharp">
 <a href="#state_preferredmaintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -1782,7 +1949,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_csharp">
 <a href="#state_readerendpoint_csharp" style="color: inherit; text-decoration: inherit;">Reader<wbr>Endpoint</a>
@@ -1791,7 +1959,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_skipfinalsnapshot_csharp">
 <a href="#state_skipfinalsnapshot_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Final<wbr>Snapshot</a>
@@ -1800,7 +1969,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_snapshotidentifier_csharp">
 <a href="#state_snapshotidentifier_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Identifier</a>
@@ -1809,7 +1979,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_storageencrypted_csharp">
 <a href="#state_storageencrypted_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -1818,7 +1989,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1827,7 +1999,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcsecuritygroupids_csharp">
 <a href="#state_vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1837,11 +2010,14 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_go">
 <a href="#state_applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -1852,7 +2028,8 @@ with the Cluster
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1861,7 +2038,8 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_go">
 <a href="#state_availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1871,7 +2049,8 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_backupretentionperiod_go">
 <a href="#state_backupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
@@ -1880,7 +2059,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifier_go">
 <a href="#state_clusteridentifier_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -1889,7 +2069,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifierprefix_go">
 <a href="#state_clusteridentifierprefix_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier<wbr>Prefix</a>
@@ -1898,7 +2079,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clustermembers_go">
 <a href="#state_clustermembers_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Members</a>
@@ -1907,7 +2089,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusterresourceid_go">
 <a href="#state_clusterresourceid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
@@ -1916,7 +2099,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dbclusterparametergroupname_go">
 <a href="#state_dbclusterparametergroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -1925,7 +2109,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dbsubnetgroupname_go">
 <a href="#state_dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -1934,7 +2119,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_go">
 <a href="#state_deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -1943,7 +2129,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabledcloudwatchlogsexports_go">
 <a href="#state_enabledcloudwatchlogsexports_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
@@ -1953,7 +2140,8 @@ instances in the DB cluster can be created in.
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_go">
 <a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1962,7 +2150,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engine_go">
 <a href="#state_engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -1971,7 +2160,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_go">
 <a href="#state_engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1980,7 +2170,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_go">
 <a href="#state_finalsnapshotidentifier_go" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
@@ -1991,7 +2182,8 @@ The following log types are supported: `audit`, `profiler`.
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_go">
 <a href="#state_hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -2000,7 +2192,8 @@ made.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_go">
 <a href="#state_kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -2009,7 +2202,8 @@ made.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_masterpassword_go">
 <a href="#state_masterpassword_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Password</a>
@@ -2019,7 +2213,8 @@ made.
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_masterusername_go">
 <a href="#state_masterusername_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Username</a>
@@ -2028,7 +2223,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2037,7 +2233,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupwindow_go">
 <a href="#state_preferredbackupwindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -2047,7 +2244,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_go">
 <a href="#state_preferredmaintenancewindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -2056,7 +2254,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_go">
 <a href="#state_readerendpoint_go" style="color: inherit; text-decoration: inherit;">Reader<wbr>Endpoint</a>
@@ -2065,7 +2264,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_skipfinalsnapshot_go">
 <a href="#state_skipfinalsnapshot_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Final<wbr>Snapshot</a>
@@ -2074,7 +2274,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_snapshotidentifier_go">
 <a href="#state_snapshotidentifier_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Identifier</a>
@@ -2083,7 +2284,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_storageencrypted_go">
 <a href="#state_storageencrypted_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -2092,7 +2294,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2101,7 +2304,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcsecuritygroupids_go">
 <a href="#state_vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -2111,11 +2315,14 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_nodejs">
 <a href="#state_applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -2126,7 +2333,8 @@ with the Cluster
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2135,7 +2343,8 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_nodejs">
 <a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -2145,7 +2354,8 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_backupretentionperiod_nodejs">
 <a href="#state_backupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Period</a>
@@ -2154,7 +2364,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifier_nodejs">
 <a href="#state_clusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
@@ -2163,7 +2374,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifierprefix_nodejs">
 <a href="#state_clusteridentifierprefix_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier<wbr>Prefix</a>
@@ -2172,7 +2384,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clustermembers_nodejs">
 <a href="#state_clustermembers_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Members</a>
@@ -2181,7 +2394,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusterresourceid_nodejs">
 <a href="#state_clusterresourceid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Id</a>
@@ -2190,7 +2404,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dbclusterparametergroupname_nodejs">
 <a href="#state_dbclusterparametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -2199,7 +2414,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dbsubnetgroupname_nodejs">
 <a href="#state_dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -2208,7 +2424,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_nodejs">
 <a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -2217,7 +2434,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabledcloudwatchlogsexports_nodejs">
 <a href="#state_enabledcloudwatchlogsexports_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
@@ -2227,7 +2445,8 @@ instances in the DB cluster can be created in.
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_nodejs">
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -2236,7 +2455,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engine_nodejs">
 <a href="#state_engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -2245,7 +2465,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_nodejs">
 <a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -2254,7 +2475,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_nodejs">
 <a href="#state_finalsnapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Snapshot<wbr>Identifier</a>
@@ -2265,7 +2487,8 @@ The following log types are supported: `audit`, `profiler`.
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_nodejs">
 <a href="#state_hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
@@ -2274,7 +2497,8 @@ made.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_nodejs">
 <a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -2283,7 +2507,8 @@ made.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_masterpassword_nodejs">
 <a href="#state_masterpassword_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Password</a>
@@ -2293,7 +2518,8 @@ made.
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_masterusername_nodejs">
 <a href="#state_masterusername_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Username</a>
@@ -2302,7 +2528,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2311,7 +2538,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupwindow_nodejs">
 <a href="#state_preferredbackupwindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Window</a>
@@ -2321,7 +2549,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_nodejs">
 <a href="#state_preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
@@ -2330,7 +2559,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_nodejs">
 <a href="#state_readerendpoint_nodejs" style="color: inherit; text-decoration: inherit;">reader<wbr>Endpoint</a>
@@ -2339,7 +2569,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_skipfinalsnapshot_nodejs">
 <a href="#state_skipfinalsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Final<wbr>Snapshot</a>
@@ -2348,7 +2579,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_snapshotidentifier_nodejs">
 <a href="#state_snapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Identifier</a>
@@ -2357,7 +2589,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_storageencrypted_nodejs">
 <a href="#state_storageencrypted_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Encrypted</a>
@@ -2366,7 +2599,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2375,7 +2609,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcsecuritygroupids_nodejs">
 <a href="#state_vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -2385,11 +2620,14 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_apply_immediately_python">
 <a href="#state_apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -2400,7 +2638,8 @@ with the Cluster
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2409,7 +2648,8 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availability_zones_python">
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -2419,7 +2659,8 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_backup_retention_period_python">
 <a href="#state_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
@@ -2428,7 +2669,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cluster_identifier_python">
 <a href="#state_cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
@@ -2437,7 +2679,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cluster_identifier_prefix_python">
 <a href="#state_cluster_identifier_prefix_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier_<wbr>prefix</a>
@@ -2446,7 +2689,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cluster_members_python">
 <a href="#state_cluster_members_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>members</a>
@@ -2455,7 +2699,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cluster_resource_id_python">
 <a href="#state_cluster_resource_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>id</a>
@@ -2464,7 +2709,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_db_cluster_parameter_group_name_python">
 <a href="#state_db_cluster_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>parameter_<wbr>group_<wbr>name</a>
@@ -2473,7 +2719,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_db_subnet_group_name_python">
 <a href="#state_db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
@@ -2482,7 +2729,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_deletion_protection_python">
 <a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -2491,7 +2739,8 @@ instances in the DB cluster can be created in.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_cloudwatch_logs_exports_python">
 <a href="#state_enabled_cloudwatch_logs_exports_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</a>
@@ -2501,7 +2750,8 @@ instances in the DB cluster can be created in.
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_python">
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -2510,7 +2760,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engine_python">
 <a href="#state_engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -2519,7 +2770,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engine_version_python">
 <a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -2528,7 +2780,8 @@ The following log types are supported: `audit`, `profiler`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_final_snapshot_identifier_python">
 <a href="#state_final_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">final_<wbr>snapshot_<wbr>identifier</a>
@@ -2539,7 +2792,8 @@ The following log types are supported: `audit`, `profiler`.
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_hosted_zone_id_python">
 <a href="#state_hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
@@ -2548,7 +2802,8 @@ made.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_id_python">
 <a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -2557,7 +2812,8 @@ made.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_master_password_python">
 <a href="#state_master_password_python" style="color: inherit; text-decoration: inherit;">master_<wbr>password</a>
@@ -2567,7 +2823,8 @@ made.
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_master_username_python">
 <a href="#state_master_username_python" style="color: inherit; text-decoration: inherit;">master_<wbr>username</a>
@@ -2576,7 +2833,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2585,7 +2843,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_preferred_backup_window_python">
 <a href="#state_preferred_backup_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>window</a>
@@ -2595,7 +2854,8 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_preferred_maintenance_window_python">
 <a href="#state_preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
@@ -2604,7 +2864,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_reader_endpoint_python">
 <a href="#state_reader_endpoint_python" style="color: inherit; text-decoration: inherit;">reader_<wbr>endpoint</a>
@@ -2613,7 +2874,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_skip_final_snapshot_python">
 <a href="#state_skip_final_snapshot_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>final_<wbr>snapshot</a>
@@ -2622,7 +2884,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_identifier_python">
 <a href="#state_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>identifier</a>
@@ -2631,7 +2894,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_storage_encrypted_python">
 <a href="#state_storage_encrypted_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>encrypted</a>
@@ -2640,7 +2904,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2649,7 +2914,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpc_security_group_ids_python">
 <a href="#state_vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -2659,7 +2925,8 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -2685,6 +2952,6 @@ DocDB Clusters can be imported using the `cluster_identifier`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

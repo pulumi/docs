@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.backup.RegionSettings resource with exampl
 Provides an AWS Backup Region Settings resource.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -51,12 +45,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -87,12 +78,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -109,12 +97,9 @@ test = aws.backup.RegionSettings("test", resource_type_opt_in_preference={
 })
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -134,16 +119,9 @@ const test = new aws.backup.RegionSettings("test", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a RegionSettings Resource {#create}
@@ -168,7 +146,9 @@ const test = new aws.backup.RegionSettings("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -176,7 +156,9 @@ const test = new aws.backup.RegionSettings("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -184,7 +166,9 @@ const test = new aws.backup.RegionSettings("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -192,7 +176,10 @@ const test = new aws.backup.RegionSettings("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -218,7 +205,9 @@ const test = new aws.backup.RegionSettings("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -226,7 +215,9 @@ const test = new aws.backup.RegionSettings("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -234,7 +225,9 @@ const test = new aws.backup.RegionSettings("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -242,7 +235,9 @@ const test = new aws.backup.RegionSettings("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -250,13 +245,18 @@ const test = new aws.backup.RegionSettings("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -264,7 +264,9 @@ const test = new aws.backup.RegionSettings("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -272,7 +274,9 @@ const test = new aws.backup.RegionSettings("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -280,7 +284,10 @@ const test = new aws.backup.RegionSettings("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -295,7 +302,9 @@ The RegionSettings resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcetypeoptinpreference_csharp">
 <a href="#resourcetypeoptinpreference_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
@@ -304,11 +313,14 @@ The RegionSettings resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Dictionary&lt;string, bool&gt;</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcetypeoptinpreference_go">
 <a href="#resourcetypeoptinpreference_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
@@ -317,11 +329,14 @@ The RegionSettings resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">map[string]bool</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcetypeoptinpreference_nodejs">
 <a href="#resourcetypeoptinpreference_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
@@ -330,11 +345,14 @@ The RegionSettings resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">{[key: string]: boolean}</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resource_type_opt_in_preference_python">
 <a href="#resource_type_opt_in_preference_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type_<wbr>opt_<wbr>in_<wbr>preference</a>
@@ -343,7 +361,8 @@ The RegionSettings resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Mapping[str, bool]</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -354,7 +373,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -362,11 +383,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -374,11 +398,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -386,11 +413,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -398,7 +428,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -525,7 +556,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_resourcetypeoptinpreference_csharp">
 <a href="#state_resourcetypeoptinpreference_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
@@ -534,11 +567,14 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, bool&gt;</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_resourcetypeoptinpreference_go">
 <a href="#state_resourcetypeoptinpreference_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
@@ -547,11 +583,14 @@ The following state arguments are supported:
         <span class="property-type">map[string]bool</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_resourcetypeoptinpreference_nodejs">
 <a href="#state_resourcetypeoptinpreference_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type<wbr>Opt<wbr>In<wbr>Preference</a>
@@ -560,11 +599,14 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: boolean}</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_resource_type_opt_in_preference_python">
 <a href="#state_resource_type_opt_in_preference_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type_<wbr>opt_<wbr>in_<wbr>preference</a>
@@ -573,7 +615,8 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, bool]</span>
     </dt>
     <dd>{{% md %}}A map of services along with the opt-in preferences for the Region.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -599,6 +642,6 @@ Backup Region Settings can be imported using the `region`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

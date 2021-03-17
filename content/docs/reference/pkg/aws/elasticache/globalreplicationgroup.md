@@ -43,7 +43,9 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -51,7 +53,9 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -59,7 +63,9 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -67,7 +73,10 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -93,7 +102,9 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -101,7 +112,9 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -109,7 +122,9 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -117,7 +132,9 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -125,13 +142,18 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -139,7 +161,9 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -147,7 +171,9 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -155,7 +181,10 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -170,7 +199,9 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="globalreplicationgroupidsuffix_csharp">
 <a href="#globalreplicationgroupidsuffix_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Id<wbr>Suffix</a>
@@ -179,7 +210,8 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="primaryreplicationgroupid_csharp">
 <a href="#primaryreplicationgroupid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -188,7 +220,8 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="globalreplicationgroupdescription_csharp">
 <a href="#globalreplicationgroupdescription_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Description</a>
@@ -197,11 +230,14 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-created description for the global replication group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="globalreplicationgroupidsuffix_go">
 <a href="#globalreplicationgroupidsuffix_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Id<wbr>Suffix</a>
@@ -210,7 +246,8 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="primaryreplicationgroupid_go">
 <a href="#primaryreplicationgroupid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -219,7 +256,8 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="globalreplicationgroupdescription_go">
 <a href="#globalreplicationgroupdescription_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Description</a>
@@ -228,11 +266,14 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-created description for the global replication group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="globalreplicationgroupidsuffix_nodejs">
 <a href="#globalreplicationgroupidsuffix_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Replication<wbr>Group<wbr>Id<wbr>Suffix</a>
@@ -241,7 +282,8 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="primaryreplicationgroupid_nodejs">
 <a href="#primaryreplicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -250,7 +292,8 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="globalreplicationgroupdescription_nodejs">
 <a href="#globalreplicationgroupdescription_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Replication<wbr>Group<wbr>Description</a>
@@ -259,11 +302,14 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-created description for the global replication group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="global_replication_group_id_suffix_python">
 <a href="#global_replication_group_id_suffix_python" style="color: inherit; text-decoration: inherit;">global_<wbr>replication_<wbr>group_<wbr>id_<wbr>suffix</a>
@@ -272,7 +318,8 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="primary_replication_group_id_python">
 <a href="#primary_replication_group_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>replication_<wbr>group_<wbr>id</a>
@@ -281,7 +328,8 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="global_replication_group_description_python">
 <a href="#global_replication_group_description_python" style="color: inherit; text-decoration: inherit;">global_<wbr>replication_<wbr>group_<wbr>description</a>
@@ -290,7 +338,8 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-created description for the global replication group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -301,7 +350,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="actualengineversion_csharp">
 <a href="#actualengineversion_csharp" style="color: inherit; text-decoration: inherit;">Actual<wbr>Engine<wbr>Version</a>
@@ -310,7 +361,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -319,7 +371,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ElastiCache Global Replication Group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="atrestencryptionenabled_csharp">
 <a href="#atrestencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">At<wbr>Rest<wbr>Encryption<wbr>Enabled</a>
@@ -328,7 +381,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether the encryption at rest is enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="authtokenenabled_csharp">
 <a href="#authtokenenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token<wbr>Enabled</a>
@@ -337,7 +391,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether AuthToken (password) is enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cachenodetype_csharp">
 <a href="#cachenodetype_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Node<wbr>Type</a>
@@ -346,7 +401,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="clusterenabled_csharp">
 <a href="#clusterenabled_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Enabled</a>
@@ -355,7 +411,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Global Datastore is cluster enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -364,7 +421,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="globalreplicationgroupid_csharp">
 <a href="#globalreplicationgroupid_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -373,7 +431,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full ID of the global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -381,7 +440,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="transitencryptionenabled_csharp">
 <a href="#transitencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Enabled</a>
@@ -390,11 +450,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicates whether the encryption in transit is enabled.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="actualengineversion_go">
 <a href="#actualengineversion_go" style="color: inherit; text-decoration: inherit;">Actual<wbr>Engine<wbr>Version</a>
@@ -403,7 +466,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -412,7 +476,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ElastiCache Global Replication Group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="atrestencryptionenabled_go">
 <a href="#atrestencryptionenabled_go" style="color: inherit; text-decoration: inherit;">At<wbr>Rest<wbr>Encryption<wbr>Enabled</a>
@@ -421,7 +486,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether the encryption at rest is enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="authtokenenabled_go">
 <a href="#authtokenenabled_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token<wbr>Enabled</a>
@@ -430,7 +496,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether AuthToken (password) is enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cachenodetype_go">
 <a href="#cachenodetype_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Node<wbr>Type</a>
@@ -439,7 +506,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="clusterenabled_go">
 <a href="#clusterenabled_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Enabled</a>
@@ -448,7 +516,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Global Datastore is cluster enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -457,7 +526,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="globalreplicationgroupid_go">
 <a href="#globalreplicationgroupid_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -466,7 +536,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full ID of the global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -474,7 +545,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="transitencryptionenabled_go">
 <a href="#transitencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Enabled</a>
@@ -483,11 +555,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicates whether the encryption in transit is enabled.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="actualengineversion_nodejs">
 <a href="#actualengineversion_nodejs" style="color: inherit; text-decoration: inherit;">actual<wbr>Engine<wbr>Version</a>
@@ -496,7 +571,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -505,7 +581,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ElastiCache Global Replication Group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="atrestencryptionenabled_nodejs">
 <a href="#atrestencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">at<wbr>Rest<wbr>Encryption<wbr>Enabled</a>
@@ -514,7 +591,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether the encryption at rest is enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="authtokenenabled_nodejs">
 <a href="#authtokenenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token<wbr>Enabled</a>
@@ -523,7 +601,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether AuthToken (password) is enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cachenodetype_nodejs">
 <a href="#cachenodetype_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Node<wbr>Type</a>
@@ -532,7 +611,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="clusterenabled_nodejs">
 <a href="#clusterenabled_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Enabled</a>
@@ -541,7 +621,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Global Datastore is cluster enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -550,7 +631,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="globalreplicationgroupid_nodejs">
 <a href="#globalreplicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -559,7 +641,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full ID of the global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -567,7 +650,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="transitencryptionenabled_nodejs">
 <a href="#transitencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption<wbr>Enabled</a>
@@ -576,11 +660,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that indicates whether the encryption in transit is enabled.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="actual_engine_version_python">
 <a href="#actual_engine_version_python" style="color: inherit; text-decoration: inherit;">actual_<wbr>engine_<wbr>version</a>
@@ -589,7 +676,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -598,7 +686,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the ElastiCache Global Replication Group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="at_rest_encryption_enabled_python">
 <a href="#at_rest_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">at_<wbr>rest_<wbr>encryption_<wbr>enabled</a>
@@ -607,7 +696,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether the encryption at rest is enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="auth_token_enabled_python">
 <a href="#auth_token_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token_<wbr>enabled</a>
@@ -616,7 +706,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether AuthToken (password) is enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cache_node_type_python">
 <a href="#cache_node_type_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>node_<wbr>type</a>
@@ -625,7 +716,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cluster_enabled_python">
 <a href="#cluster_enabled_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>enabled</a>
@@ -634,7 +726,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Global Datastore is cluster enabled.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -643,7 +736,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="global_replication_group_id_python">
 <a href="#global_replication_group_id_python" style="color: inherit; text-decoration: inherit;">global_<wbr>replication_<wbr>group_<wbr>id</a>
@@ -652,7 +746,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full ID of the global replication group.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -660,7 +755,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="transit_encryption_enabled_python">
 <a href="#transit_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>enabled</a>
@@ -669,7 +765,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicates whether the encryption in transit is enabled.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -796,7 +893,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_actualengineversion_csharp">
 <a href="#state_actualengineversion_csharp" style="color: inherit; text-decoration: inherit;">Actual<wbr>Engine<wbr>Version</a>
@@ -805,7 +904,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -814,7 +914,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ElastiCache Global Replication Group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_atrestencryptionenabled_csharp">
 <a href="#state_atrestencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">At<wbr>Rest<wbr>Encryption<wbr>Enabled</a>
@@ -823,7 +924,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether the encryption at rest is enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_authtokenenabled_csharp">
 <a href="#state_authtokenenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token<wbr>Enabled</a>
@@ -832,7 +934,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether AuthToken (password) is enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cachenodetype_csharp">
 <a href="#state_cachenodetype_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Node<wbr>Type</a>
@@ -841,7 +944,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusterenabled_csharp">
 <a href="#state_clusterenabled_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Enabled</a>
@@ -850,7 +954,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Global Datastore is cluster enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engine_csharp">
 <a href="#state_engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -859,7 +964,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_globalreplicationgroupdescription_csharp">
 <a href="#state_globalreplicationgroupdescription_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Description</a>
@@ -868,7 +974,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-created description for the global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_globalreplicationgroupid_csharp">
 <a href="#state_globalreplicationgroupid_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -877,7 +984,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full ID of the global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_globalreplicationgroupidsuffix_csharp">
 <a href="#state_globalreplicationgroupidsuffix_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Id<wbr>Suffix</a>
@@ -886,7 +994,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_primaryreplicationgroupid_csharp">
 <a href="#state_primaryreplicationgroupid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -895,7 +1004,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_transitencryptionenabled_csharp">
 <a href="#state_transitencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Enabled</a>
@@ -904,11 +1014,14 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicates whether the encryption in transit is enabled.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_actualengineversion_go">
 <a href="#state_actualengineversion_go" style="color: inherit; text-decoration: inherit;">Actual<wbr>Engine<wbr>Version</a>
@@ -917,7 +1030,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -926,7 +1040,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ElastiCache Global Replication Group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_atrestencryptionenabled_go">
 <a href="#state_atrestencryptionenabled_go" style="color: inherit; text-decoration: inherit;">At<wbr>Rest<wbr>Encryption<wbr>Enabled</a>
@@ -935,7 +1050,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether the encryption at rest is enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_authtokenenabled_go">
 <a href="#state_authtokenenabled_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token<wbr>Enabled</a>
@@ -944,7 +1060,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether AuthToken (password) is enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cachenodetype_go">
 <a href="#state_cachenodetype_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Node<wbr>Type</a>
@@ -953,7 +1070,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusterenabled_go">
 <a href="#state_clusterenabled_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Enabled</a>
@@ -962,7 +1080,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Global Datastore is cluster enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engine_go">
 <a href="#state_engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -971,7 +1090,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_globalreplicationgroupdescription_go">
 <a href="#state_globalreplicationgroupdescription_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Description</a>
@@ -980,7 +1100,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-created description for the global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_globalreplicationgroupid_go">
 <a href="#state_globalreplicationgroupid_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -989,7 +1110,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full ID of the global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_globalreplicationgroupidsuffix_go">
 <a href="#state_globalreplicationgroupidsuffix_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Replication<wbr>Group<wbr>Id<wbr>Suffix</a>
@@ -998,7 +1120,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_primaryreplicationgroupid_go">
 <a href="#state_primaryreplicationgroupid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -1007,7 +1130,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_transitencryptionenabled_go">
 <a href="#state_transitencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Enabled</a>
@@ -1016,11 +1140,14 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicates whether the encryption in transit is enabled.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_actualengineversion_nodejs">
 <a href="#state_actualengineversion_nodejs" style="color: inherit; text-decoration: inherit;">actual<wbr>Engine<wbr>Version</a>
@@ -1029,7 +1156,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1038,7 +1166,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ElastiCache Global Replication Group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_atrestencryptionenabled_nodejs">
 <a href="#state_atrestencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">at<wbr>Rest<wbr>Encryption<wbr>Enabled</a>
@@ -1047,7 +1176,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether the encryption at rest is enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_authtokenenabled_nodejs">
 <a href="#state_authtokenenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token<wbr>Enabled</a>
@@ -1056,7 +1186,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether AuthToken (password) is enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cachenodetype_nodejs">
 <a href="#state_cachenodetype_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Node<wbr>Type</a>
@@ -1065,7 +1196,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_clusterenabled_nodejs">
 <a href="#state_clusterenabled_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Enabled</a>
@@ -1074,7 +1206,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Global Datastore is cluster enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engine_nodejs">
 <a href="#state_engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1083,7 +1216,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_globalreplicationgroupdescription_nodejs">
 <a href="#state_globalreplicationgroupdescription_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Replication<wbr>Group<wbr>Description</a>
@@ -1092,7 +1226,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-created description for the global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_globalreplicationgroupid_nodejs">
 <a href="#state_globalreplicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -1101,7 +1236,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full ID of the global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_globalreplicationgroupidsuffix_nodejs">
 <a href="#state_globalreplicationgroupidsuffix_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Replication<wbr>Group<wbr>Id<wbr>Suffix</a>
@@ -1110,7 +1246,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_primaryreplicationgroupid_nodejs">
 <a href="#state_primaryreplicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Replication<wbr>Group<wbr>Id</a>
@@ -1119,7 +1256,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_transitencryptionenabled_nodejs">
 <a href="#state_transitencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption<wbr>Enabled</a>
@@ -1128,11 +1266,14 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that indicates whether the encryption in transit is enabled.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_actual_engine_version_python">
 <a href="#state_actual_engine_version_python" style="color: inherit; text-decoration: inherit;">actual_<wbr>engine_<wbr>version</a>
@@ -1141,7 +1282,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full version number of the cache engine running on the members of this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1150,7 +1292,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the ElastiCache Global Replication Group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_at_rest_encryption_enabled_python">
 <a href="#state_at_rest_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">at_<wbr>rest_<wbr>encryption_<wbr>enabled</a>
@@ -1159,7 +1302,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether the encryption at rest is enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_auth_token_enabled_python">
 <a href="#state_auth_token_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token_<wbr>enabled</a>
@@ -1168,7 +1312,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicate whether AuthToken (password) is enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cache_node_type_python">
 <a href="#state_cache_node_type_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>node_<wbr>type</a>
@@ -1177,7 +1322,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cluster_enabled_python">
 <a href="#state_cluster_enabled_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>enabled</a>
@@ -1186,7 +1332,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Global Datastore is cluster enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_engine_python">
 <a href="#state_engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1195,7 +1342,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_global_replication_group_description_python">
 <a href="#state_global_replication_group_description_python" style="color: inherit; text-decoration: inherit;">global_<wbr>replication_<wbr>group_<wbr>description</a>
@@ -1204,7 +1352,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-created description for the global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_global_replication_group_id_python">
 <a href="#state_global_replication_group_id_python" style="color: inherit; text-decoration: inherit;">global_<wbr>replication_<wbr>group_<wbr>id</a>
@@ -1213,7 +1362,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full ID of the global replication group.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_global_replication_group_id_suffix_python">
 <a href="#state_global_replication_group_id_suffix_python" style="color: inherit; text-decoration: inherit;">global_<wbr>replication_<wbr>group_<wbr>id_<wbr>suffix</a>
@@ -1222,7 +1372,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_primary_replication_group_id_python">
 <a href="#state_primary_replication_group_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>replication_<wbr>group_<wbr>id</a>
@@ -1231,7 +1382,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_transit_encryption_enabled_python">
 <a href="#state_transit_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>enabled</a>
@@ -1240,7 +1392,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicates whether the encryption in transit is enabled.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1256,6 +1409,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

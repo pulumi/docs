@@ -15,17 +15,11 @@ Provides a Load Balancer resource.
 > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-
 ### Application Load Balancer
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using System.Linq;
 using Pulumi;
@@ -61,19 +55,13 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 Coming soon!
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -94,12 +82,9 @@ test = aws.lb.LoadBalancer("test",
     })
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -122,17 +107,10 @@ const test = new aws.lb.LoadBalancer("test", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
+{{% /example %}}
 
 ### Network Load Balancer
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using System.Linq;
 using Pulumi;
@@ -158,19 +136,13 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 Coming soon!
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -185,12 +157,9 @@ test = aws.lb.LoadBalancer("test",
     })
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -207,17 +176,10 @@ const test = new aws.lb.LoadBalancer("test", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
+{{% /example %}}
 
 ### Specifying Elastic IPs
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -248,12 +210,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -285,12 +244,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -309,12 +265,9 @@ example = aws.lb.LoadBalancer("example",
     ])
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -335,17 +288,10 @@ const example = new aws.lb.LoadBalancer("example", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
+{{% /example %}}
 
 ### Specifying private IP addresses for an internal-facing load balancer
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -376,12 +322,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -413,12 +356,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -437,12 +377,9 @@ example = aws.lb.LoadBalancer("example",
     ])
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -463,16 +400,9 @@ const example = new aws.lb.LoadBalancer("example", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a LoadBalancer Resource {#create}
@@ -497,7 +427,9 @@ const example = new aws.lb.LoadBalancer("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -505,7 +437,9 @@ const example = new aws.lb.LoadBalancer("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -513,7 +447,9 @@ const example = new aws.lb.LoadBalancer("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -521,7 +457,10 @@ const example = new aws.lb.LoadBalancer("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -547,7 +486,9 @@ const example = new aws.lb.LoadBalancer("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -555,7 +496,9 @@ const example = new aws.lb.LoadBalancer("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -563,7 +506,9 @@ const example = new aws.lb.LoadBalancer("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -571,7 +516,9 @@ const example = new aws.lb.LoadBalancer("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -579,13 +526,18 @@ const example = new aws.lb.LoadBalancer("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -593,7 +545,9 @@ const example = new aws.lb.LoadBalancer("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -601,7 +555,9 @@ const example = new aws.lb.LoadBalancer("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -609,7 +565,10 @@ const example = new aws.lb.LoadBalancer("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -624,7 +583,9 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="accesslogs_csharp">
 <a href="#accesslogs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
@@ -633,7 +594,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_csharp">
 <a href="#customerownedipv4pool_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -642,7 +604,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dropinvalidheaderfields_csharp">
 <a href="#dropinvalidheaderfields_csharp" style="color: inherit; text-decoration: inherit;">Drop<wbr>Invalid<wbr>Header<wbr>Fields</a>
@@ -651,7 +614,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enablecrosszoneloadbalancing_csharp">
 <a href="#enablecrosszoneloadbalancing_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing</a>
@@ -661,7 +625,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabledeletionprotection_csharp">
 <a href="#enabledeletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Deletion<wbr>Protection</a>
@@ -671,7 +636,8 @@ This is a `network` load balancer feature. Defaults to `false`.
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enablehttp2_csharp">
 <a href="#enablehttp2_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Http2</a>
@@ -680,7 +646,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="idletimeout_csharp">
 <a href="#idletimeout_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout</a>
@@ -689,7 +656,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="internal_csharp">
 <a href="#internal_csharp" style="color: inherit; text-decoration: inherit;">Internal</a>
@@ -698,7 +666,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ipaddresstype_csharp">
 <a href="#ipaddresstype_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address<wbr>Type</a>
@@ -707,7 +676,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="loadbalancertype_csharp">
 <a href="#loadbalancertype_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
@@ -716,7 +686,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -727,7 +698,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
 this provider will autogenerate a name beginning with `tf-lb`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
 <a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -736,7 +708,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -745,7 +718,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="subnetmappings_csharp">
 <a href="#subnetmappings_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
@@ -754,7 +728,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type"><a href="#loadbalancersubnetmapping">List&lt;Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="subnets_csharp">
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -765,7 +740,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
 for load balancers of type `network` will force a recreation of the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -774,11 +750,14 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="accesslogs_go">
 <a href="#accesslogs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
@@ -787,7 +766,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_go">
 <a href="#customerownedipv4pool_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -796,7 +776,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dropinvalidheaderfields_go">
 <a href="#dropinvalidheaderfields_go" style="color: inherit; text-decoration: inherit;">Drop<wbr>Invalid<wbr>Header<wbr>Fields</a>
@@ -805,7 +786,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enablecrosszoneloadbalancing_go">
 <a href="#enablecrosszoneloadbalancing_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing</a>
@@ -815,7 +797,8 @@ for load balancers of type `network` will force a recreation of the resource.
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabledeletionprotection_go">
 <a href="#enabledeletionprotection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Deletion<wbr>Protection</a>
@@ -825,7 +808,8 @@ This is a `network` load balancer feature. Defaults to `false`.
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enablehttp2_go">
 <a href="#enablehttp2_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Http2</a>
@@ -834,7 +818,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="idletimeout_go">
 <a href="#idletimeout_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout</a>
@@ -843,7 +828,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="internal_go">
 <a href="#internal_go" style="color: inherit; text-decoration: inherit;">Internal</a>
@@ -852,7 +838,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ipaddresstype_go">
 <a href="#ipaddresstype_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address<wbr>Type</a>
@@ -861,7 +848,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="loadbalancertype_go">
 <a href="#loadbalancertype_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
@@ -870,7 +858,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -881,7 +870,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
 this provider will autogenerate a name beginning with `tf-lb`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
 <a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -890,7 +880,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -899,7 +890,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="subnetmappings_go">
 <a href="#subnetmappings_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
@@ -908,7 +900,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type"><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="subnets_go">
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -919,7 +912,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
 for load balancers of type `network` will force a recreation of the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -928,11 +922,14 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="accesslogs_nodejs">
 <a href="#accesslogs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Logs</a>
@@ -941,7 +938,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_nodejs">
 <a href="#customerownedipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -950,7 +948,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dropinvalidheaderfields_nodejs">
 <a href="#dropinvalidheaderfields_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Invalid<wbr>Header<wbr>Fields</a>
@@ -959,7 +958,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enablecrosszoneloadbalancing_nodejs">
 <a href="#enablecrosszoneloadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing</a>
@@ -969,7 +969,8 @@ for load balancers of type `network` will force a recreation of the resource.
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabledeletionprotection_nodejs">
 <a href="#enabledeletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Deletion<wbr>Protection</a>
@@ -979,7 +980,8 @@ This is a `network` load balancer feature. Defaults to `false`.
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enablehttp2_nodejs">
 <a href="#enablehttp2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http2</a>
@@ -988,7 +990,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="idletimeout_nodejs">
 <a href="#idletimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
@@ -997,7 +1000,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="internal_nodejs">
 <a href="#internal_nodejs" style="color: inherit; text-decoration: inherit;">internal</a>
@@ -1006,7 +1010,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ipaddresstype_nodejs">
 <a href="#ipaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Type</a>
@@ -1015,7 +1020,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">Ip<wbr>Address<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="loadbalancertype_nodejs">
 <a href="#loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
@@ -1024,7 +1030,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">Load<wbr>Balancer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1035,7 +1042,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
 this provider will autogenerate a name beginning with `tf-lb`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -1044,7 +1052,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -1053,7 +1062,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="subnetmappings_nodejs">
 <a href="#subnetmappings_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Mappings</a>
@@ -1062,7 +1072,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type"><a href="#loadbalancersubnetmapping">Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="subnets_nodejs">
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -1073,7 +1084,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
 for load balancers of type `network` will force a recreation of the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1082,11 +1094,14 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="access_logs_python">
 <a href="#access_logs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>logs</a>
@@ -1095,7 +1110,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customer_owned_ipv4_pool_python">
 <a href="#customer_owned_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ipv4_<wbr>pool</a>
@@ -1104,7 +1120,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="drop_invalid_header_fields_python">
 <a href="#drop_invalid_header_fields_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>invalid_<wbr>header_<wbr>fields</a>
@@ -1113,7 +1130,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enable_cross_zone_load_balancing_python">
 <a href="#enable_cross_zone_load_balancing_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cross_<wbr>zone_<wbr>load_<wbr>balancing</a>
@@ -1123,7 +1141,8 @@ for load balancers of type `network` will force a recreation of the resource.
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enable_deletion_protection_python">
 <a href="#enable_deletion_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>deletion_<wbr>protection</a>
@@ -1133,7 +1152,8 @@ This is a `network` load balancer feature. Defaults to `false`.
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enable_http2_python">
 <a href="#enable_http2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http2</a>
@@ -1142,7 +1162,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="idle_timeout_python">
 <a href="#idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
@@ -1151,7 +1172,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="internal_python">
 <a href="#internal_python" style="color: inherit; text-decoration: inherit;">internal</a>
@@ -1160,7 +1182,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ip_address_type_python">
 <a href="#ip_address_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>type</a>
@@ -1169,7 +1192,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="load_balancer_type_python">
 <a href="#load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
@@ -1178,7 +1202,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1189,7 +1214,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
 this provider will autogenerate a name beginning with `tf-lb`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -1198,7 +1224,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -1207,7 +1234,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="subnet_mappings_python">
 <a href="#subnet_mappings_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>mappings</a>
@@ -1216,7 +1244,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type"><a href="#loadbalancersubnetmapping">Sequence[Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="subnets_python">
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -1227,7 +1256,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
 for load balancers of type `network` will force a recreation of the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1236,7 +1266,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1247,7 +1278,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1256,7 +1289,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the load balancer (matches `id`).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="arnsuffix_csharp">
 <a href="#arnsuffix_csharp" style="color: inherit; text-decoration: inherit;">Arn<wbr>Suffix</a>
@@ -1265,7 +1299,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -1274,7 +1309,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the load balancer.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1282,7 +1318,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1290,7 +1327,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1300,11 +1338,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
 * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1313,7 +1354,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the load balancer (matches `id`).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="arnsuffix_go">
 <a href="#arnsuffix_go" style="color: inherit; text-decoration: inherit;">Arn<wbr>Suffix</a>
@@ -1322,7 +1364,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dnsname_go">
 <a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -1331,7 +1374,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the load balancer.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1339,7 +1383,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1347,7 +1392,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1357,11 +1403,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
 * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1370,7 +1419,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the load balancer (matches `id`).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="arnsuffix_nodejs">
 <a href="#arnsuffix_nodejs" style="color: inherit; text-decoration: inherit;">arn<wbr>Suffix</a>
@@ -1379,7 +1429,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dnsname_nodejs">
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -1388,7 +1439,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the load balancer.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1396,7 +1448,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -1404,7 +1457,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -1414,11 +1468,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
 * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1427,7 +1484,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the load balancer (matches `id`).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="arn_suffix_python">
 <a href="#arn_suffix_python" style="color: inherit; text-decoration: inherit;">arn_<wbr>suffix</a>
@@ -1436,7 +1494,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dns_name_python">
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -1445,7 +1504,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name of the load balancer.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1453,7 +1513,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -1461,7 +1522,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1471,7 +1533,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
 * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1598,7 +1661,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_accesslogs_csharp">
 <a href="#state_accesslogs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
@@ -1607,7 +1672,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1616,7 +1682,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the load balancer (matches `id`).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arnsuffix_csharp">
 <a href="#state_arnsuffix_csharp" style="color: inherit; text-decoration: inherit;">Arn<wbr>Suffix</a>
@@ -1625,7 +1692,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customerownedipv4pool_csharp">
 <a href="#state_customerownedipv4pool_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -1634,7 +1702,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_csharp">
 <a href="#state_dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -1643,7 +1712,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dropinvalidheaderfields_csharp">
 <a href="#state_dropinvalidheaderfields_csharp" style="color: inherit; text-decoration: inherit;">Drop<wbr>Invalid<wbr>Header<wbr>Fields</a>
@@ -1652,7 +1722,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enablecrosszoneloadbalancing_csharp">
 <a href="#state_enablecrosszoneloadbalancing_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing</a>
@@ -1662,7 +1733,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabledeletionprotection_csharp">
 <a href="#state_enabledeletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Deletion<wbr>Protection</a>
@@ -1672,7 +1744,8 @@ This is a `network` load balancer feature. Defaults to `false`.
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enablehttp2_csharp">
 <a href="#state_enablehttp2_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Http2</a>
@@ -1681,7 +1754,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_idletimeout_csharp">
 <a href="#state_idletimeout_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout</a>
@@ -1690,7 +1764,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_internal_csharp">
 <a href="#state_internal_csharp" style="color: inherit; text-decoration: inherit;">Internal</a>
@@ -1699,7 +1774,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresstype_csharp">
 <a href="#state_ipaddresstype_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address<wbr>Type</a>
@@ -1708,7 +1784,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancertype_csharp">
 <a href="#state_loadbalancertype_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
@@ -1717,7 +1794,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1728,7 +1806,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
 this provider will autogenerate a name beginning with `tf-lb`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_csharp">
 <a href="#state_nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -1737,7 +1816,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_csharp">
 <a href="#state_securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -1746,7 +1826,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_subnetmappings_csharp">
 <a href="#state_subnetmappings_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
@@ -1755,7 +1836,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type"><a href="#loadbalancersubnetmapping">List&lt;Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_subnets_csharp">
 <a href="#state_subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -1766,7 +1848,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
 for load balancers of type `network` will force a recreation of the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1775,7 +1858,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
 <a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1783,7 +1867,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1793,11 +1878,14 @@ for load balancers of type `network` will force a recreation of the resource.
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
 * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_accesslogs_go">
 <a href="#state_accesslogs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
@@ -1806,7 +1894,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1815,7 +1904,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the load balancer (matches `id`).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arnsuffix_go">
 <a href="#state_arnsuffix_go" style="color: inherit; text-decoration: inherit;">Arn<wbr>Suffix</a>
@@ -1824,7 +1914,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customerownedipv4pool_go">
 <a href="#state_customerownedipv4pool_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -1833,7 +1924,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_go">
 <a href="#state_dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -1842,7 +1934,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dropinvalidheaderfields_go">
 <a href="#state_dropinvalidheaderfields_go" style="color: inherit; text-decoration: inherit;">Drop<wbr>Invalid<wbr>Header<wbr>Fields</a>
@@ -1851,7 +1944,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enablecrosszoneloadbalancing_go">
 <a href="#state_enablecrosszoneloadbalancing_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing</a>
@@ -1861,7 +1955,8 @@ for load balancers of type `network` will force a recreation of the resource.
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabledeletionprotection_go">
 <a href="#state_enabledeletionprotection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Deletion<wbr>Protection</a>
@@ -1871,7 +1966,8 @@ This is a `network` load balancer feature. Defaults to `false`.
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enablehttp2_go">
 <a href="#state_enablehttp2_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Http2</a>
@@ -1880,7 +1976,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_idletimeout_go">
 <a href="#state_idletimeout_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout</a>
@@ -1889,7 +1986,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_internal_go">
 <a href="#state_internal_go" style="color: inherit; text-decoration: inherit;">Internal</a>
@@ -1898,7 +1996,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresstype_go">
 <a href="#state_ipaddresstype_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address<wbr>Type</a>
@@ -1907,7 +2006,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancertype_go">
 <a href="#state_loadbalancertype_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
@@ -1916,7 +2016,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1927,7 +2028,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
 this provider will autogenerate a name beginning with `tf-lb`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_go">
 <a href="#state_nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -1936,7 +2038,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_go">
 <a href="#state_securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -1945,7 +2048,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_subnetmappings_go">
 <a href="#state_subnetmappings_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
@@ -1954,7 +2058,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type"><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_subnets_go">
 <a href="#state_subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -1965,7 +2070,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
 for load balancers of type `network` will force a recreation of the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1974,7 +2080,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
 <a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1982,7 +2089,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1992,11 +2100,14 @@ for load balancers of type `network` will force a recreation of the resource.
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
 * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_accesslogs_nodejs">
 <a href="#state_accesslogs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Logs</a>
@@ -2005,7 +2116,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2014,7 +2126,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the load balancer (matches `id`).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arnsuffix_nodejs">
 <a href="#state_arnsuffix_nodejs" style="color: inherit; text-decoration: inherit;">arn<wbr>Suffix</a>
@@ -2023,7 +2136,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customerownedipv4pool_nodejs">
 <a href="#state_customerownedipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -2032,7 +2146,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_nodejs">
 <a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -2041,7 +2156,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dropinvalidheaderfields_nodejs">
 <a href="#state_dropinvalidheaderfields_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Invalid<wbr>Header<wbr>Fields</a>
@@ -2050,7 +2166,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enablecrosszoneloadbalancing_nodejs">
 <a href="#state_enablecrosszoneloadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing</a>
@@ -2060,7 +2177,8 @@ for load balancers of type `network` will force a recreation of the resource.
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabledeletionprotection_nodejs">
 <a href="#state_enabledeletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Deletion<wbr>Protection</a>
@@ -2070,7 +2188,8 @@ This is a `network` load balancer feature. Defaults to `false`.
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enablehttp2_nodejs">
 <a href="#state_enablehttp2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http2</a>
@@ -2079,7 +2198,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_idletimeout_nodejs">
 <a href="#state_idletimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
@@ -2088,7 +2208,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_internal_nodejs">
 <a href="#state_internal_nodejs" style="color: inherit; text-decoration: inherit;">internal</a>
@@ -2097,7 +2218,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresstype_nodejs">
 <a href="#state_ipaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Type</a>
@@ -2106,7 +2228,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">Ip<wbr>Address<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancertype_nodejs">
 <a href="#state_loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
@@ -2115,7 +2238,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">Load<wbr>Balancer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2126,7 +2250,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
 this provider will autogenerate a name beginning with `tf-lb`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_nodejs">
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -2135,7 +2260,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_nodejs">
 <a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -2144,7 +2270,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_subnetmappings_nodejs">
 <a href="#state_subnetmappings_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Mappings</a>
@@ -2153,7 +2280,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type"><a href="#loadbalancersubnetmapping">Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_subnets_nodejs">
 <a href="#state_subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -2164,7 +2292,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
 for load balancers of type `network` will force a recreation of the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2173,7 +2302,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -2181,7 +2311,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -2191,11 +2322,14 @@ for load balancers of type `network` will force a recreation of the resource.
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
 * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_access_logs_python">
 <a href="#state_access_logs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>logs</a>
@@ -2204,7 +2338,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2213,7 +2348,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the load balancer (matches `id`).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_suffix_python">
 <a href="#state_arn_suffix_python" style="color: inherit; text-decoration: inherit;">arn_<wbr>suffix</a>
@@ -2222,7 +2358,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customer_owned_ipv4_pool_python">
 <a href="#state_customer_owned_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ipv4_<wbr>pool</a>
@@ -2231,7 +2368,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_dns_name_python">
 <a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -2240,7 +2378,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name of the load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_drop_invalid_header_fields_python">
 <a href="#state_drop_invalid_header_fields_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>invalid_<wbr>header_<wbr>fields</a>
@@ -2249,7 +2388,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enable_cross_zone_load_balancing_python">
 <a href="#state_enable_cross_zone_load_balancing_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cross_<wbr>zone_<wbr>load_<wbr>balancing</a>
@@ -2259,7 +2399,8 @@ for load balancers of type `network` will force a recreation of the resource.
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enable_deletion_protection_python">
 <a href="#state_enable_deletion_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>deletion_<wbr>protection</a>
@@ -2269,7 +2410,8 @@ This is a `network` load balancer feature. Defaults to `false`.
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enable_http2_python">
 <a href="#state_enable_http2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http2</a>
@@ -2278,7 +2420,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_idle_timeout_python">
 <a href="#state_idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
@@ -2287,7 +2430,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_internal_python">
 <a href="#state_internal_python" style="color: inherit; text-decoration: inherit;">internal</a>
@@ -2296,7 +2440,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_type_python">
 <a href="#state_ip_address_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>type</a>
@@ -2305,7 +2450,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_type_python">
 <a href="#state_load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
@@ -2314,7 +2460,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2325,7 +2472,8 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
 this provider will autogenerate a name beginning with `tf-lb`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_prefix_python">
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -2334,7 +2482,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_security_groups_python">
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -2343,7 +2492,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_subnet_mappings_python">
 <a href="#state_subnet_mappings_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>mappings</a>
@@ -2352,7 +2502,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
         <span class="property-type"><a href="#loadbalancersubnetmapping">Sequence[Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_subnets_python">
 <a href="#state_subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -2363,7 +2514,8 @@ this provider will autogenerate a name beginning with `tf-lb`.
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
 for load balancers of type `network` will force a recreation of the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2372,7 +2524,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -2380,7 +2533,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -2390,7 +2544,8 @@ for load balancers of type `network` will force a recreation of the resource.
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
 * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -2405,7 +2560,9 @@ for load balancers of type `network` will force a recreation of the resource.
 <h4 id="loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2414,7 +2571,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket name to store the logs in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2423,7 +2581,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to enable / disable `access_logs`. Defaults to `false`, even when `bucket` is specified.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -2432,11 +2591,14 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2445,7 +2607,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket name to store the logs in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2454,7 +2617,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to enable / disable `access_logs`. Defaults to `false`, even when `bucket` is specified.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -2463,11 +2627,14 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2476,7 +2643,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket name to store the logs in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2485,7 +2653,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean to enable / disable `access_logs`. Defaults to `false`, even when `bucket` is specified.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -2494,11 +2663,14 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2507,7 +2679,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The S3 bucket name to store the logs in.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2516,7 +2689,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to enable / disable `access_logs`. Defaults to `false`, even when `bucket` is specified.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -2525,13 +2699,16 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="loadbalancersubnetmapping">Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -2540,7 +2717,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="allocationid_csharp">
 <a href="#allocationid_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
@@ -2549,7 +2727,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ipv6address_csharp">
 <a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -2558,7 +2737,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ipv6 address within the subnet to assign to the internet-facing load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outpostid_csharp">
 <a href="#outpostid_csharp" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Id</a>
@@ -2566,7 +2746,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="privateipv4address_csharp">
 <a href="#privateipv4address_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv4Address</a>
@@ -2575,11 +2756,14 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A private ipv4 address within the subnet to assign to the internal-facing load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -2588,7 +2772,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="allocationid_go">
 <a href="#allocationid_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
@@ -2597,7 +2782,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ipv6address_go">
 <a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -2606,7 +2792,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ipv6 address within the subnet to assign to the internet-facing load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outpostid_go">
 <a href="#outpostid_go" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Id</a>
@@ -2614,7 +2801,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="privateipv4address_go">
 <a href="#privateipv4address_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv4Address</a>
@@ -2623,11 +2811,14 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A private ipv4 address within the subnet to assign to the internal-facing load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -2636,7 +2827,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="allocationid_nodejs">
 <a href="#allocationid_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Id</a>
@@ -2645,7 +2837,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ipv6address_nodejs">
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
@@ -2654,7 +2847,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ipv6 address within the subnet to assign to the internet-facing load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outpostid_nodejs">
 <a href="#outpostid_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Id</a>
@@ -2662,7 +2856,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="privateipv4address_nodejs">
 <a href="#privateipv4address_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv4Address</a>
@@ -2671,11 +2866,14 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A private ipv4 address within the subnet to assign to the internal-facing load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -2684,7 +2882,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="allocation_id_python">
 <a href="#allocation_id_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>id</a>
@@ -2693,7 +2892,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ipv6_address_python">
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
@@ -2702,7 +2902,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An ipv6 address within the subnet to assign to the internet-facing load balancer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outpost_id_python">
 <a href="#outpost_id_python" style="color: inherit; text-decoration: inherit;">outpost_<wbr>id</a>
@@ -2710,7 +2911,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="private_ipv4_address_python">
 <a href="#private_ipv4_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv4_<wbr>address</a>
@@ -2719,7 +2921,8 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A private ipv4 address within the subnet to assign to the internal-facing load balancer.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -2740,6 +2943,6 @@ LBs can be imported using their ARN, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

@@ -150,17 +150,11 @@ func main() {
 ```
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -201,12 +195,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -245,12 +236,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -270,12 +258,9 @@ example = aws.networkfirewall.FirewallPolicy("example",
     })
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -297,16 +282,9 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a FirewallPolicy Resource {#create}
@@ -331,7 +309,9 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -339,7 +319,9 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -347,7 +329,9 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -355,7 +339,10 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -381,7 +368,9 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -389,7 +378,9 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -397,7 +388,9 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -405,7 +398,9 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -413,13 +408,18 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -427,7 +427,9 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -435,7 +437,9 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -443,7 +447,10 @@ const example = new aws.networkfirewall.FirewallPolicy("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -458,7 +465,9 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="firewallpolicyconfiguration_csharp">
 <a href="#firewallpolicyconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Configuration</a>
@@ -467,7 +476,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -476,7 +486,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -485,7 +496,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -494,11 +506,14 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="firewallpolicy_go">
 <a href="#firewallpolicy_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
@@ -507,7 +522,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -516,7 +532,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -525,7 +542,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -534,11 +552,14 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="firewallpolicy_nodejs">
 <a href="#firewallpolicy_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy</a>
@@ -547,7 +568,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -556,7 +578,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -565,7 +588,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -574,11 +598,14 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="firewall_policy_python">
 <a href="#firewall_policy_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy</a>
@@ -587,7 +614,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -596,7 +624,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -605,7 +634,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -614,7 +644,8 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -625,7 +656,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -634,7 +667,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -642,7 +676,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="updatetoken_csharp">
 <a href="#updatetoken_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
@@ -651,11 +686,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -664,7 +702,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -672,7 +711,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="updatetoken_go">
 <a href="#updatetoken_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
@@ -681,11 +721,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -694,7 +737,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -702,7 +746,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="updatetoken_nodejs">
 <a href="#updatetoken_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Token</a>
@@ -711,11 +756,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -724,7 +772,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall policy.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -732,7 +781,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="update_token_python">
 <a href="#update_token_python" style="color: inherit; text-decoration: inherit;">update_<wbr>token</a>
@@ -741,7 +791,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -868,7 +919,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -877,7 +930,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -886,7 +940,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicyconfiguration_csharp">
 <a href="#state_firewallpolicyconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Configuration</a>
@@ -895,7 +950,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -904,7 +960,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -913,7 +970,8 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_updatetoken_csharp">
 <a href="#state_updatetoken_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
@@ -922,11 +980,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -935,7 +996,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -944,7 +1006,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicy_go">
 <a href="#state_firewallpolicy_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
@@ -953,7 +1016,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -962,7 +1026,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -971,7 +1036,8 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_updatetoken_go">
 <a href="#state_updatetoken_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
@@ -980,11 +1046,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -993,7 +1062,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1002,7 +1072,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicy_nodejs">
 <a href="#state_firewallpolicy_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy</a>
@@ -1011,7 +1082,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1020,7 +1092,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1029,7 +1102,8 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_updatetoken_nodejs">
 <a href="#state_updatetoken_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Token</a>
@@ -1038,11 +1112,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1051,7 +1128,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1060,7 +1138,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_firewall_policy_python">
 <a href="#state_firewall_policy_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy</a>
@@ -1069,7 +1148,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1078,7 +1158,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall policy.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1087,7 +1168,8 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_update_token_python">
 <a href="#state_update_token_python" style="color: inherit; text-decoration: inherit;">update_<wbr>token</a>
@@ -1096,7 +1178,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall policy.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1111,7 +1194,9 @@ The following state arguments are supported:
 <h4 id="firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="statelessdefaultactions_csharp">
 <a href="#statelessdefaultactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Default<wbr>Actions</a>
@@ -1121,7 +1206,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Set of actions to take on a packet if it does not match any of the stateless rules in the policy. You must specify one of the standard actions including: `aws:drop`, `aws:pass`, or `aws:forward_to_sfe`.
 In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify `aws:forward_to_sfe`.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="statelessfragmentdefaultactions_csharp">
 <a href="#statelessfragmentdefaultactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Fragment<wbr>Default<wbr>Actions</a>
@@ -1131,7 +1217,8 @@ In addition, you can specify custom actions that are compatible with your standa
     </dt>
     <dd>{{% md %}}Set of actions to take on a fragmented packet if it does not match any of the stateless rules in the policy. You must specify one of the standard actions including: `aws:drop`, `aws:pass`, or `aws:forward_to_sfe`.
 In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify `aws:forward_to_sfe`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statefulrulegroupreferences_csharp">
 <a href="#statefulrulegroupreferences_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rule<wbr>Group<wbr>References</a>
@@ -1140,7 +1227,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatefulrulegroupreference">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statelesscustomactions_csharp">
 <a href="#statelesscustomactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Custom<wbr>Actions</a>
@@ -1149,7 +1237,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomaction">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy's `stateless_default_actions`. See Stateless Custom Action below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statelessrulegroupreferences_csharp">
 <a href="#statelessrulegroupreferences_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rule<wbr>Group<wbr>References</a>
@@ -1158,11 +1247,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelessrulegroupreference">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateless rule groups that are used in the policy. See Stateless Rule Group Reference below for details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="statelessdefaultactions_go">
 <a href="#statelessdefaultactions_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Default<wbr>Actions</a>
@@ -1172,7 +1264,8 @@ In addition, you can specify custom actions that are compatible with your standa
     </dt>
     <dd>{{% md %}}Set of actions to take on a packet if it does not match any of the stateless rules in the policy. You must specify one of the standard actions including: `aws:drop`, `aws:pass`, or `aws:forward_to_sfe`.
 In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify `aws:forward_to_sfe`.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="statelessfragmentdefaultactions_go">
 <a href="#statelessfragmentdefaultactions_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Fragment<wbr>Default<wbr>Actions</a>
@@ -1182,7 +1275,8 @@ In addition, you can specify custom actions that are compatible with your standa
     </dt>
     <dd>{{% md %}}Set of actions to take on a fragmented packet if it does not match any of the stateless rules in the policy. You must specify one of the standard actions including: `aws:drop`, `aws:pass`, or `aws:forward_to_sfe`.
 In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify `aws:forward_to_sfe`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statefulrulegroupreferences_go">
 <a href="#statefulrulegroupreferences_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rule<wbr>Group<wbr>References</a>
@@ -1191,7 +1285,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatefulrulegroupreference">[]Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statelesscustomactions_go">
 <a href="#statelesscustomactions_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Custom<wbr>Actions</a>
@@ -1200,7 +1295,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomaction">[]Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy's `stateless_default_actions`. See Stateless Custom Action below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statelessrulegroupreferences_go">
 <a href="#statelessrulegroupreferences_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rule<wbr>Group<wbr>References</a>
@@ -1209,11 +1305,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelessrulegroupreference">[]Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateless rule groups that are used in the policy. See Stateless Rule Group Reference below for details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="statelessdefaultactions_nodejs">
 <a href="#statelessdefaultactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Default<wbr>Actions</a>
@@ -1223,7 +1322,8 @@ In addition, you can specify custom actions that are compatible with your standa
     </dt>
     <dd>{{% md %}}Set of actions to take on a packet if it does not match any of the stateless rules in the policy. You must specify one of the standard actions including: `aws:drop`, `aws:pass`, or `aws:forward_to_sfe`.
 In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify `aws:forward_to_sfe`.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="statelessfragmentdefaultactions_nodejs">
 <a href="#statelessfragmentdefaultactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Fragment<wbr>Default<wbr>Actions</a>
@@ -1233,7 +1333,8 @@ In addition, you can specify custom actions that are compatible with your standa
     </dt>
     <dd>{{% md %}}Set of actions to take on a fragmented packet if it does not match any of the stateless rules in the policy. You must specify one of the standard actions including: `aws:drop`, `aws:pass`, or `aws:forward_to_sfe`.
 In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify `aws:forward_to_sfe`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statefulrulegroupreferences_nodejs">
 <a href="#statefulrulegroupreferences_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Rule<wbr>Group<wbr>References</a>
@@ -1242,7 +1343,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatefulrulegroupreference">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statelesscustomactions_nodejs">
 <a href="#statelesscustomactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Custom<wbr>Actions</a>
@@ -1251,7 +1353,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy's `stateless_default_actions`. See Stateless Custom Action below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="statelessrulegroupreferences_nodejs">
 <a href="#statelessrulegroupreferences_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rule<wbr>Group<wbr>References</a>
@@ -1260,11 +1363,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelessrulegroupreference">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateless rule groups that are used in the policy. See Stateless Rule Group Reference below for details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="stateless_default_actions_python">
 <a href="#stateless_default_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>default_<wbr>actions</a>
@@ -1274,7 +1380,8 @@ In addition, you can specify custom actions that are compatible with your standa
     </dt>
     <dd>{{% md %}}Set of actions to take on a packet if it does not match any of the stateless rules in the policy. You must specify one of the standard actions including: `aws:drop`, `aws:pass`, or `aws:forward_to_sfe`.
 In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify `aws:forward_to_sfe`.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="stateless_fragment_default_actions_python">
 <a href="#stateless_fragment_default_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>fragment_<wbr>default_<wbr>actions</a>
@@ -1284,7 +1391,8 @@ In addition, you can specify custom actions that are compatible with your standa
     </dt>
     <dd>{{% md %}}Set of actions to take on a fragmented packet if it does not match any of the stateless rules in the policy. You must specify one of the standard actions including: `aws:drop`, `aws:pass`, or `aws:forward_to_sfe`.
 In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify `aws:forward_to_sfe`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="stateful_rule_group_references_python">
 <a href="#stateful_rule_group_references_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>rule_<wbr>group_<wbr>references</a>
@@ -1293,7 +1401,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatefulrulegroupreference">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="stateless_custom_actions_python">
 <a href="#stateless_custom_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>custom_<wbr>actions</a>
@@ -1302,7 +1411,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomaction">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy's `stateless_default_actions`. See Stateless Custom Action below for details.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="stateless_rule_group_references_python">
 <a href="#stateless_rule_group_references_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>rule_<wbr>group_<wbr>references</a>
@@ -1311,13 +1421,16 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelessrulegroupreference">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateless rule groups that are used in the policy. See Stateless Rule Group Reference below for details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyfirewallpolicystatefulrulegroupreference">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
 <a href="#resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -1326,11 +1439,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the stateful rule group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
 <a href="#resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -1339,11 +1455,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the stateful rule group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
 <a href="#resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
@@ -1352,11 +1471,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the stateful rule group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
 <a href="#resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
@@ -1365,13 +1487,16 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the stateful rule group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyfirewallpolicystatelesscustomaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="actiondefinition_csharp">
 <a href="#actiondefinition_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Definition</a>
@@ -1380,7 +1505,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinition">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="actionname_csharp">
 <a href="#actionname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Name</a>
@@ -1389,11 +1515,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the custom action.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="actiondefinition_go">
 <a href="#actiondefinition_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Definition</a>
@@ -1402,7 +1531,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinition">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="actionname_go">
 <a href="#actionname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Name</a>
@@ -1411,11 +1541,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the custom action.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="actiondefinition_nodejs">
 <a href="#actiondefinition_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Definition</a>
@@ -1424,7 +1557,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinition">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="actionname_nodejs">
 <a href="#actionname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
@@ -1433,11 +1567,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the custom action.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="action_definition_python">
 <a href="#action_definition_python" style="color: inherit; text-decoration: inherit;">action_<wbr>definition</a>
@@ -1446,7 +1583,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinition">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="action_name_python">
 <a href="#action_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>name</a>
@@ -1455,13 +1593,16 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name of the custom action.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyfirewallpolicystatelesscustomactionactiondefinition">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="publishmetricaction_csharp">
 <a href="#publishmetricaction_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Metric<wbr>Action</a>
@@ -1470,11 +1611,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="publishmetricaction_go">
 <a href="#publishmetricaction_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Metric<wbr>Action</a>
@@ -1483,11 +1627,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="publishmetricaction_nodejs">
 <a href="#publishmetricaction_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Metric<wbr>Action</a>
@@ -1496,11 +1643,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="publish_metric_action_python">
 <a href="#publish_metric_action_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>metric_<wbr>action</a>
@@ -1509,13 +1659,16 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -1524,11 +1677,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricactiondimension">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for more details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -1537,11 +1693,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricactiondimension">[]Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for more details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -1550,11 +1709,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricactiondimension">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for more details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -1563,13 +1725,16 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricactiondimension">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for more details.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricactiondimension">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1578,11 +1743,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string value to use in the custom metric dimension.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1591,11 +1759,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string value to use in the custom metric dimension.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1604,11 +1775,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string value to use in the custom metric dimension.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1617,13 +1791,16 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string value to use in the custom metric dimension.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyfirewallpolicystatelessrulegroupreference">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1632,7 +1809,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer setting that indicates the order in which to run the stateless rule groups in a single policy. AWS Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
 <a href="#resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -1641,11 +1819,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the stateless rule group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1654,7 +1835,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer setting that indicates the order in which to run the stateless rule groups in a single policy. AWS Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
 <a href="#resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -1663,11 +1845,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the stateless rule group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1676,7 +1861,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer setting that indicates the order in which to run the stateless rule groups in a single policy. AWS Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
 <a href="#resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
@@ -1685,11 +1871,14 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the stateless rule group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1698,7 +1887,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer setting that indicates the order in which to run the stateless rule groups in a single policy. AWS Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
 <a href="#resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
@@ -1707,7 +1897,8 @@ In addition, you can specify custom actions that are compatible with your standa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the stateless rule group.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -1728,6 +1919,6 @@ Network Firewall Policies can be imported using their `ARN`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

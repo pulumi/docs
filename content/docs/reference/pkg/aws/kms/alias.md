@@ -15,17 +15,11 @@ but API (hence this provider too) allows you to create as many aliases as
 the [account limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html) allow you.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -46,12 +40,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -77,12 +68,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -91,12 +79,9 @@ key = aws.kms.Key("key")
 alias = aws.kms.Alias("alias", target_key_id=key.key_id)
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -106,16 +91,9 @@ const key = new aws.kms.Key("key", {});
 const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a Alias Resource {#create}
@@ -140,7 +118,9 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -148,7 +128,9 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -156,7 +138,9 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -164,7 +148,10 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -190,7 +177,9 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -198,7 +187,9 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -206,7 +197,9 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -214,7 +207,9 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -222,13 +217,18 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -236,7 +236,9 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -244,7 +246,9 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -252,7 +256,10 @@ const alias = new aws.kms.Alias("alias", {targetKeyId: key.keyId});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -267,7 +274,9 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="targetkeyid_csharp">
 <a href="#targetkeyid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Key<wbr>Id</a>
@@ -276,7 +285,8 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the key for which the alias is for, can be either an ARN or key_id.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -285,7 +295,8 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
 <a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -295,11 +306,14 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Creates an unique alias beginning with the specified prefix.
 The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="targetkeyid_go">
 <a href="#targetkeyid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Key<wbr>Id</a>
@@ -308,7 +322,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the key for which the alias is for, can be either an ARN or key_id.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -317,7 +332,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
 <a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -327,11 +343,14 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
     </dt>
     <dd>{{% md %}}Creates an unique alias beginning with the specified prefix.
 The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="targetkeyid_nodejs">
 <a href="#targetkeyid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Key<wbr>Id</a>
@@ -340,7 +359,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the key for which the alias is for, can be either an ARN or key_id.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -349,7 +369,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -359,11 +380,14 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
     </dt>
     <dd>{{% md %}}Creates an unique alias beginning with the specified prefix.
 The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="target_key_id_python">
 <a href="#target_key_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>key_<wbr>id</a>
@@ -372,7 +396,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the key for which the alias is for, can be either an ARN or key_id.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -381,7 +406,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -391,7 +417,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
     </dt>
     <dd>{{% md %}}Creates an unique alias beginning with the specified prefix.
 The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -402,7 +429,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -411,7 +440,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key alias.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -419,7 +449,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="targetkeyarn_csharp">
 <a href="#targetkeyarn_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Key<wbr>Arn</a>
@@ -428,11 +459,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target key identifier.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -441,7 +475,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key alias.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -449,7 +484,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="targetkeyarn_go">
 <a href="#targetkeyarn_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Key<wbr>Arn</a>
@@ -458,11 +494,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target key identifier.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -471,7 +510,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key alias.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -479,7 +519,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="targetkeyarn_nodejs">
 <a href="#targetkeyarn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Key<wbr>Arn</a>
@@ -488,11 +529,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target key identifier.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -501,7 +545,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key alias.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -509,7 +554,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="target_key_arn_python">
 <a href="#target_key_arn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>key_<wbr>arn</a>
@@ -518,7 +564,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target key identifier.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -645,7 +692,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -654,7 +703,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key alias.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -663,7 +713,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_csharp">
 <a href="#state_nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -673,7 +724,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Creates an unique alias beginning with the specified prefix.
 The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_targetkeyarn_csharp">
 <a href="#state_targetkeyarn_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Key<wbr>Arn</a>
@@ -682,7 +734,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target key identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_targetkeyid_csharp">
 <a href="#state_targetkeyid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Key<wbr>Id</a>
@@ -691,11 +744,14 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the key for which the alias is for, can be either an ARN or key_id.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -704,7 +760,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key alias.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -713,7 +770,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_go">
 <a href="#state_nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -723,7 +781,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
     </dt>
     <dd>{{% md %}}Creates an unique alias beginning with the specified prefix.
 The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_targetkeyarn_go">
 <a href="#state_targetkeyarn_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Key<wbr>Arn</a>
@@ -732,7 +791,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target key identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_targetkeyid_go">
 <a href="#state_targetkeyid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Key<wbr>Id</a>
@@ -741,11 +801,14 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the key for which the alias is for, can be either an ARN or key_id.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -754,7 +817,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key alias.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -763,7 +827,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_nodejs">
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -773,7 +838,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
     </dt>
     <dd>{{% md %}}Creates an unique alias beginning with the specified prefix.
 The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_targetkeyarn_nodejs">
 <a href="#state_targetkeyarn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Key<wbr>Arn</a>
@@ -782,7 +848,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target key identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_targetkeyid_nodejs">
 <a href="#state_targetkeyid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Key<wbr>Id</a>
@@ -791,11 +858,14 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the key for which the alias is for, can be either an ARN or key_id.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -804,7 +874,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key alias.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -813,7 +884,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_prefix_python">
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -823,7 +895,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
     </dt>
     <dd>{{% md %}}Creates an unique alias beginning with the specified prefix.
 The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_target_key_arn_python">
 <a href="#state_target_key_arn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>key_<wbr>arn</a>
@@ -832,7 +905,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target key identifier.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_target_key_id_python">
 <a href="#state_target_key_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>key_<wbr>id</a>
@@ -841,7 +915,8 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the key for which the alias is for, can be either an ARN or key_id.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -867,6 +942,6 @@ KMS aliases can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

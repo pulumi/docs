@@ -22,17 +22,11 @@ the `main_route_table_association` delete to work properly.
 
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -51,12 +45,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -79,12 +70,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -94,12 +82,9 @@ main_route_table_association = aws.ec2.MainRouteTableAssociation("mainRouteTable
     route_table_id=aws_route_table["bar"]["id"])
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -111,16 +96,9 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a MainRouteTableAssociation Resource {#create}
@@ -145,7 +123,9 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,7 +133,9 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -161,7 +143,9 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -169,7 +153,10 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -195,7 +182,9 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -203,7 +192,9 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -211,7 +202,9 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -219,7 +212,9 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -227,13 +222,18 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -241,7 +241,9 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -249,7 +251,9 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,7 +261,10 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("mainRou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -272,7 +279,9 @@ The MainRouteTableAssociation resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="routetableid_csharp">
 <a href="#routetableid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
@@ -282,7 +291,8 @@ The MainRouteTableAssociation resource accepts the following [input]({{< relref 
     </dt>
     <dd>{{% md %}}The ID of the Route Table to set as the new
 main route table for the target VPC
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -291,11 +301,14 @@ main route table for the target VPC
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC whose main route table should be set
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="routetableid_go">
 <a href="#routetableid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
@@ -305,7 +318,8 @@ main route table for the target VPC
     </dt>
     <dd>{{% md %}}The ID of the Route Table to set as the new
 main route table for the target VPC
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -314,11 +328,14 @@ main route table for the target VPC
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC whose main route table should be set
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="routetableid_nodejs">
 <a href="#routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
@@ -328,7 +345,8 @@ main route table for the target VPC
     </dt>
     <dd>{{% md %}}The ID of the Route Table to set as the new
 main route table for the target VPC
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -337,11 +355,14 @@ main route table for the target VPC
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC whose main route table should be set
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="route_table_id_python">
 <a href="#route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
@@ -351,7 +372,8 @@ main route table for the target VPC
     </dt>
     <dd>{{% md %}}The ID of the Route Table to set as the new
 main route table for the target VPC
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -360,7 +382,8 @@ main route table for the target VPC
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC whose main route table should be set
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -371,7 +394,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -379,7 +404,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="originalroutetableid_csharp">
 <a href="#originalroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Original<wbr>Route<wbr>Table<wbr>Id</a>
@@ -388,11 +414,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used internally, see __Notes__ below
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -400,7 +429,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="originalroutetableid_go">
 <a href="#originalroutetableid_go" style="color: inherit; text-decoration: inherit;">Original<wbr>Route<wbr>Table<wbr>Id</a>
@@ -409,11 +439,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used internally, see __Notes__ below
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -421,7 +454,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="originalroutetableid_nodejs">
 <a href="#originalroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Route<wbr>Table<wbr>Id</a>
@@ -430,11 +464,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used internally, see __Notes__ below
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -442,7 +479,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="original_route_table_id_python">
 <a href="#original_route_table_id_python" style="color: inherit; text-decoration: inherit;">original_<wbr>route_<wbr>table_<wbr>id</a>
@@ -451,7 +489,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used internally, see __Notes__ below
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -578,7 +617,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_originalroutetableid_csharp">
 <a href="#state_originalroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Original<wbr>Route<wbr>Table<wbr>Id</a>
@@ -587,7 +628,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used internally, see __Notes__ below
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_routetableid_csharp">
 <a href="#state_routetableid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
@@ -597,7 +639,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the Route Table to set as the new
 main route table for the target VPC
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
 <a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -606,11 +649,14 @@ main route table for the target VPC
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC whose main route table should be set
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_originalroutetableid_go">
 <a href="#state_originalroutetableid_go" style="color: inherit; text-decoration: inherit;">Original<wbr>Route<wbr>Table<wbr>Id</a>
@@ -619,7 +665,8 @@ main route table for the target VPC
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used internally, see __Notes__ below
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_routetableid_go">
 <a href="#state_routetableid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
@@ -629,7 +676,8 @@ main route table for the target VPC
     </dt>
     <dd>{{% md %}}The ID of the Route Table to set as the new
 main route table for the target VPC
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
 <a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -638,11 +686,14 @@ main route table for the target VPC
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC whose main route table should be set
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_originalroutetableid_nodejs">
 <a href="#state_originalroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Route<wbr>Table<wbr>Id</a>
@@ -651,7 +702,8 @@ main route table for the target VPC
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used internally, see __Notes__ below
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_routetableid_nodejs">
 <a href="#state_routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
@@ -661,7 +713,8 @@ main route table for the target VPC
     </dt>
     <dd>{{% md %}}The ID of the Route Table to set as the new
 main route table for the target VPC
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -670,11 +723,14 @@ main route table for the target VPC
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC whose main route table should be set
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_original_route_table_id_python">
 <a href="#state_original_route_table_id_python" style="color: inherit; text-decoration: inherit;">original_<wbr>route_<wbr>table_<wbr>id</a>
@@ -683,7 +739,8 @@ main route table for the target VPC
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used internally, see __Notes__ below
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_route_table_id_python">
 <a href="#state_route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
@@ -693,7 +750,8 @@ main route table for the target VPC
     </dt>
     <dd>{{% md %}}The ID of the Route Table to set as the new
 main route table for the target VPC
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -702,7 +760,8 @@ main route table for the target VPC
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC whose main route table should be set
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -718,6 +777,6 @@ main route table for the target VPC
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

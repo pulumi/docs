@@ -15,17 +15,11 @@ Provides a Pinpoint APNs Sandbox Channel resource.
 > **Note:** All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using System.IO;
 using Pulumi;
@@ -49,19 +43,13 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 Coming soon!
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -73,12 +61,9 @@ apns_sandbox = aws.pinpoint.ApnsSandboxChannel("apnsSandbox",
     private_key=(lambda path: open(path).read())("./private_key.key"))
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -93,16 +78,9 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a ApnsSandboxChannel Resource {#create}
@@ -127,7 +105,9 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -135,7 +115,9 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -143,7 +125,9 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -151,7 +135,10 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -177,7 +164,9 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -185,7 +174,9 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -193,7 +184,9 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -201,7 +194,9 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -209,13 +204,18 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -223,7 +223,9 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -231,7 +233,9 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -239,7 +243,10 @@ const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apnsSandbox", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -254,7 +261,9 @@ The ApnsSandboxChannel resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -263,7 +272,8 @@ The ApnsSandboxChannel resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="bundleid_csharp">
 <a href="#bundleid_csharp" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
@@ -272,7 +282,8 @@ The ApnsSandboxChannel resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -281,7 +292,8 @@ The ApnsSandboxChannel resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pem encoded TLS Certificate from Apple.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultauthenticationmethod_csharp">
 <a href="#defaultauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Authentication<wbr>Method</a>
@@ -293,7 +305,8 @@ The ApnsSandboxChannel resource accepts the following [input]({{< relref "/docs/
 __NOTE__: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
 You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -302,7 +315,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -311,7 +325,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate Private Key file (ie. `.key` file).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="teamid_csharp">
 <a href="#teamid_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -320,7 +335,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your Apple developer account team. This value is provided on the Membership page.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tokenkey_csharp">
 <a href="#tokenkey_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Key</a>
@@ -329,7 +345,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tokenkeyid_csharp">
 <a href="#tokenkeyid_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Key<wbr>Id</a>
@@ -338,11 +355,14 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -351,7 +371,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="bundleid_go">
 <a href="#bundleid_go" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
@@ -360,7 +381,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -369,7 +391,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pem encoded TLS Certificate from Apple.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultauthenticationmethod_go">
 <a href="#defaultauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Authentication<wbr>Method</a>
@@ -381,7 +404,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 __NOTE__: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
 You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -390,7 +414,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -399,7 +424,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate Private Key file (ie. `.key` file).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="teamid_go">
 <a href="#teamid_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -408,7 +434,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your Apple developer account team. This value is provided on the Membership page.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tokenkey_go">
 <a href="#tokenkey_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Key</a>
@@ -417,7 +444,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tokenkeyid_go">
 <a href="#tokenkeyid_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Key<wbr>Id</a>
@@ -426,11 +454,14 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -439,7 +470,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="bundleid_nodejs">
 <a href="#bundleid_nodejs" style="color: inherit; text-decoration: inherit;">bundle<wbr>Id</a>
@@ -448,7 +480,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -457,7 +490,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pem encoded TLS Certificate from Apple.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultauthenticationmethod_nodejs">
 <a href="#defaultauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Authentication<wbr>Method</a>
@@ -469,7 +503,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 __NOTE__: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
 You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -478,7 +513,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -487,7 +523,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate Private Key file (ie. `.key` file).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="teamid_nodejs">
 <a href="#teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
@@ -496,7 +533,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your Apple developer account team. This value is provided on the Membership page.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tokenkey_nodejs">
 <a href="#tokenkey_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Key</a>
@@ -505,7 +543,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tokenkeyid_nodejs">
 <a href="#tokenkeyid_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Key<wbr>Id</a>
@@ -514,11 +553,14 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -527,7 +569,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="bundle_id_python">
 <a href="#bundle_id_python" style="color: inherit; text-decoration: inherit;">bundle_<wbr>id</a>
@@ -536,7 +579,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -545,7 +589,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pem encoded TLS Certificate from Apple.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_authentication_method_python">
 <a href="#default_authentication_method_python" style="color: inherit; text-decoration: inherit;">default_<wbr>authentication_<wbr>method</a>
@@ -557,7 +602,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 __NOTE__: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
 You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -566,7 +612,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -575,7 +622,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Certificate Private Key file (ie. `.key` file).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="team_id_python">
 <a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
@@ -584,7 +632,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your Apple developer account team. This value is provided on the Membership page.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="token_key_python">
 <a href="#token_key_python" style="color: inherit; text-decoration: inherit;">token_<wbr>key</a>
@@ -593,7 +642,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="token_key_id_python">
 <a href="#token_key_id_python" style="color: inherit; text-decoration: inherit;">token_<wbr>key_<wbr>id</a>
@@ -602,7 +652,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -613,7 +664,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -621,11 +674,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -633,11 +689,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -645,11 +704,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -657,7 +719,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -784,7 +847,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_csharp">
 <a href="#state_applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -793,7 +858,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bundleid_csharp">
 <a href="#state_bundleid_csharp" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
@@ -802,7 +868,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_certificate_csharp">
 <a href="#state_certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -811,7 +878,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pem encoded TLS Certificate from Apple.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultauthenticationmethod_csharp">
 <a href="#state_defaultauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Authentication<wbr>Method</a>
@@ -823,7 +891,8 @@ The following state arguments are supported:
 __NOTE__: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
 You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -832,7 +901,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_csharp">
 <a href="#state_privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -841,7 +911,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate Private Key file (ie. `.key` file).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_teamid_csharp">
 <a href="#state_teamid_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -850,7 +921,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your Apple developer account team. This value is provided on the Membership page.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tokenkey_csharp">
 <a href="#state_tokenkey_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Key</a>
@@ -859,7 +931,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tokenkeyid_csharp">
 <a href="#state_tokenkeyid_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Key<wbr>Id</a>
@@ -868,11 +941,14 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_go">
 <a href="#state_applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -881,7 +957,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bundleid_go">
 <a href="#state_bundleid_go" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
@@ -890,7 +967,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_certificate_go">
 <a href="#state_certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -899,7 +977,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pem encoded TLS Certificate from Apple.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultauthenticationmethod_go">
 <a href="#state_defaultauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Authentication<wbr>Method</a>
@@ -911,7 +990,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 __NOTE__: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
 You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -920,7 +1000,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_go">
 <a href="#state_privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -929,7 +1010,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate Private Key file (ie. `.key` file).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_teamid_go">
 <a href="#state_teamid_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -938,7 +1020,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your Apple developer account team. This value is provided on the Membership page.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tokenkey_go">
 <a href="#state_tokenkey_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Key</a>
@@ -947,7 +1030,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tokenkeyid_go">
 <a href="#state_tokenkeyid_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Key<wbr>Id</a>
@@ -956,11 +1040,14 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_nodejs">
 <a href="#state_applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -969,7 +1056,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bundleid_nodejs">
 <a href="#state_bundleid_nodejs" style="color: inherit; text-decoration: inherit;">bundle<wbr>Id</a>
@@ -978,7 +1066,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_certificate_nodejs">
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -987,7 +1076,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pem encoded TLS Certificate from Apple.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultauthenticationmethod_nodejs">
 <a href="#state_defaultauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Authentication<wbr>Method</a>
@@ -999,7 +1089,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 __NOTE__: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
 You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1008,7 +1099,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_nodejs">
 <a href="#state_privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -1017,7 +1109,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate Private Key file (ie. `.key` file).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_teamid_nodejs">
 <a href="#state_teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
@@ -1026,7 +1119,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your Apple developer account team. This value is provided on the Membership page.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tokenkey_nodejs">
 <a href="#state_tokenkey_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Key</a>
@@ -1035,7 +1129,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tokenkeyid_nodejs">
 <a href="#state_tokenkeyid_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Key<wbr>Id</a>
@@ -1044,11 +1139,14 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_application_id_python">
 <a href="#state_application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -1057,7 +1155,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_bundle_id_python">
 <a href="#state_bundle_id_python" style="color: inherit; text-decoration: inherit;">bundle_<wbr>id</a>
@@ -1066,7 +1165,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_certificate_python">
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1075,7 +1175,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pem encoded TLS Certificate from Apple.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_default_authentication_method_python">
 <a href="#state_default_authentication_method_python" style="color: inherit; text-decoration: inherit;">default_<wbr>authentication_<wbr>method</a>
@@ -1087,7 +1188,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 __NOTE__: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
 You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
 If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1096,7 +1198,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_private_key_python">
 <a href="#state_private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -1105,7 +1208,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Certificate Private Key file (ie. `.key` file).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_team_id_python">
 <a href="#state_team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
@@ -1114,7 +1218,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your Apple developer account team. This value is provided on the Membership page.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_token_key_python">
 <a href="#state_token_key_python" style="color: inherit; text-decoration: inherit;">token_<wbr>key</a>
@@ -1123,7 +1228,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_token_key_id_python">
 <a href="#state_token_key_id_python" style="color: inherit; text-decoration: inherit;">token_<wbr>key_<wbr>id</a>
@@ -1132,7 +1238,8 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1158,6 +1265,6 @@ Pinpoint APNs Sandbox Channel can be imported using the `application-id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

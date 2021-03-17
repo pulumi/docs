@@ -16,17 +16,11 @@ This resource can be used to manage both Kinesis Data Analytics for SQL applicat
 > **Note:** Kinesis Data Analytics for SQL applications created using this resource cannot currently be viewed in the AWS Console. To manage Kinesis Data Analytics for SQL applications that can also be viewed in the AWS Console, use the [`aws.kinesis.AnalyticsApplication`](https://www.terraform.io/docs/providers/aws/r/kinesis_analytics_application.html) resource.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-
 ### Apache Flink Application
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -116,12 +110,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -204,12 +195,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -271,12 +259,9 @@ example_application = aws.kinesisanalyticsv2.Application("exampleApplication",
     })
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -341,17 +326,10 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 });
 ```
 
-
-{{< /example >}}
-
-
-
+{{% /example %}}
 
 ### SQL Application
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -497,12 +475,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -624,12 +599,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -727,12 +699,9 @@ example_application = aws.kinesisanalyticsv2.Application("exampleApplication",
     ))
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -832,17 +801,10 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 });
 ```
 
-
-{{< /example >}}
-
-
-
+{{% /example %}}
 
 ### VPC Configuration
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -897,19 +859,13 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 Coming soon!
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -942,12 +898,9 @@ example_application = aws.kinesisanalyticsv2.Application("exampleApplication",
     ))
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -983,16 +936,9 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a Application Resource {#create}
@@ -1017,7 +963,9 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1025,7 +973,9 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1033,7 +983,9 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1041,7 +993,10 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -1067,7 +1022,9 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -1075,7 +1032,9 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1083,7 +1042,9 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1091,7 +1052,9 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1099,13 +1062,18 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1113,7 +1081,9 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1121,7 +1091,9 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1129,7 +1101,10 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -1144,7 +1119,9 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="runtimeenvironment_csharp">
 <a href="#runtimeenvironment_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Environment</a>
@@ -1153,7 +1130,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime environment for the application. Valid values: `SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, `FLINK-1_11`.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="serviceexecutionrole_csharp">
 <a href="#serviceexecutionrole_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Execution<wbr>Role</a>
@@ -1162,7 +1140,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="applicationconfiguration_csharp">
 <a href="#applicationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Configuration</a>
@@ -1171,7 +1150,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggingoptions_csharp">
 <a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
@@ -1180,7 +1160,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1189,7 +1170,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A summary description of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1198,7 +1180,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1207,11 +1190,14 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="runtimeenvironment_go">
 <a href="#runtimeenvironment_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Environment</a>
@@ -1220,7 +1206,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime environment for the application. Valid values: `SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, `FLINK-1_11`.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="serviceexecutionrole_go">
 <a href="#serviceexecutionrole_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Execution<wbr>Role</a>
@@ -1229,7 +1216,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="applicationconfiguration_go">
 <a href="#applicationconfiguration_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Configuration</a>
@@ -1238,7 +1226,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggingoptions_go">
 <a href="#cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
@@ -1247,7 +1236,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1256,7 +1246,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A summary description of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1265,7 +1256,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1274,11 +1266,14 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="runtimeenvironment_nodejs">
 <a href="#runtimeenvironment_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Environment</a>
@@ -1287,7 +1282,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime environment for the application. Valid values: `SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, `FLINK-1_11`.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="serviceexecutionrole_nodejs">
 <a href="#serviceexecutionrole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Execution<wbr>Role</a>
@@ -1296,7 +1292,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="applicationconfiguration_nodejs">
 <a href="#applicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Configuration</a>
@@ -1305,7 +1302,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggingoptions_nodejs">
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
@@ -1314,7 +1312,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1323,7 +1322,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A summary description of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1332,7 +1332,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1341,11 +1342,14 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="runtime_environment_python">
 <a href="#runtime_environment_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>environment</a>
@@ -1354,7 +1358,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The runtime environment for the application. Valid values: `SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, `FLINK-1_11`.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="service_execution_role_python">
 <a href="#service_execution_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>execution_<wbr>role</a>
@@ -1363,7 +1368,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="application_configuration_python">
 <a href="#application_configuration_python" style="color: inherit; text-decoration: inherit;">application_<wbr>configuration</a>
@@ -1372,7 +1378,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cloudwatch_logging_options_python">
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
@@ -1381,7 +1388,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1390,7 +1398,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A summary description of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1399,7 +1408,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1408,7 +1418,8 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1419,7 +1430,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1428,7 +1441,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the application.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="createtimestamp_csharp">
 <a href="#createtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Timestamp</a>
@@ -1437,7 +1451,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was created.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1445,7 +1460,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="lastupdatetimestamp_csharp">
 <a href="#lastupdatetimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Timestamp</a>
@@ -1454,7 +1470,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was last updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1463,7 +1480,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="versionid_csharp">
 <a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -1472,11 +1490,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The current application version. Kinesis Data Analytics updates the `version_id` each time the application is updated.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1485,7 +1506,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the application.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="createtimestamp_go">
 <a href="#createtimestamp_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Timestamp</a>
@@ -1494,7 +1516,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was created.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1502,7 +1525,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="lastupdatetimestamp_go">
 <a href="#lastupdatetimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Timestamp</a>
@@ -1511,7 +1535,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was last updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1520,7 +1545,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="versionid_go">
 <a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -1529,11 +1555,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The current application version. Kinesis Data Analytics updates the `version_id` each time the application is updated.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1542,7 +1571,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the application.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="createtimestamp_nodejs">
 <a href="#createtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Timestamp</a>
@@ -1551,7 +1581,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was created.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1559,7 +1590,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="lastupdatetimestamp_nodejs">
 <a href="#lastupdatetimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Timestamp</a>
@@ -1568,7 +1600,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was last updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1577,7 +1610,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="versionid_nodejs">
 <a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
@@ -1586,11 +1620,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The current application version. Kinesis Data Analytics updates the `version_id` each time the application is updated.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1599,7 +1636,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the application.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="create_timestamp_python">
 <a href="#create_timestamp_python" style="color: inherit; text-decoration: inherit;">create_<wbr>timestamp</a>
@@ -1608,7 +1646,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was created.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1616,7 +1655,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="last_update_timestamp_python">
 <a href="#last_update_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update_<wbr>timestamp</a>
@@ -1625,7 +1665,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was last updated.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1634,7 +1675,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the application.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="version_id_python">
 <a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
@@ -1643,7 +1685,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The current application version. Kinesis Data Analytics updates the `version_id` each time the application is updated.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1770,7 +1813,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_applicationconfiguration_csharp">
 <a href="#state_applicationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Configuration</a>
@@ -1779,7 +1824,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1788,7 +1834,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchloggingoptions_csharp">
 <a href="#state_cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
@@ -1797,7 +1844,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_createtimestamp_csharp">
 <a href="#state_createtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Timestamp</a>
@@ -1806,7 +1854,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1815,7 +1864,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A summary description of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdatetimestamp_csharp">
 <a href="#state_lastupdatetimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Timestamp</a>
@@ -1824,7 +1874,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was last updated.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1833,7 +1884,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_runtimeenvironment_csharp">
 <a href="#state_runtimeenvironment_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Environment</a>
@@ -1842,7 +1894,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime environment for the application. Valid values: `SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, `FLINK-1_11`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_serviceexecutionrole_csharp">
 <a href="#state_serviceexecutionrole_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Execution<wbr>Role</a>
@@ -1851,7 +1904,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1860,7 +1914,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1869,7 +1924,8 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_versionid_csharp">
 <a href="#state_versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -1878,11 +1934,14 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The current application version. Kinesis Data Analytics updates the `version_id` each time the application is updated.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_applicationconfiguration_go">
 <a href="#state_applicationconfiguration_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Configuration</a>
@@ -1891,7 +1950,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1900,7 +1960,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchloggingoptions_go">
 <a href="#state_cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
@@ -1909,7 +1970,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_createtimestamp_go">
 <a href="#state_createtimestamp_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Timestamp</a>
@@ -1918,7 +1980,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1927,7 +1990,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A summary description of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdatetimestamp_go">
 <a href="#state_lastupdatetimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Timestamp</a>
@@ -1936,7 +2000,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was last updated.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1945,7 +2010,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_runtimeenvironment_go">
 <a href="#state_runtimeenvironment_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Environment</a>
@@ -1954,7 +2020,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime environment for the application. Valid values: `SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, `FLINK-1_11`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_serviceexecutionrole_go">
 <a href="#state_serviceexecutionrole_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Execution<wbr>Role</a>
@@ -1963,7 +2030,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1972,7 +2040,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1981,7 +2050,8 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_versionid_go">
 <a href="#state_versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -1990,11 +2060,14 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The current application version. Kinesis Data Analytics updates the `version_id` each time the application is updated.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_applicationconfiguration_nodejs">
 <a href="#state_applicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Configuration</a>
@@ -2003,7 +2076,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2012,7 +2086,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchloggingoptions_nodejs">
 <a href="#state_cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
@@ -2021,7 +2096,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_createtimestamp_nodejs">
 <a href="#state_createtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Timestamp</a>
@@ -2030,7 +2106,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2039,7 +2116,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A summary description of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdatetimestamp_nodejs">
 <a href="#state_lastupdatetimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Timestamp</a>
@@ -2048,7 +2126,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was last updated.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2057,7 +2136,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_runtimeenvironment_nodejs">
 <a href="#state_runtimeenvironment_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Environment</a>
@@ -2066,7 +2146,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime environment for the application. Valid values: `SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, `FLINK-1_11`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_serviceexecutionrole_nodejs">
 <a href="#state_serviceexecutionrole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Execution<wbr>Role</a>
@@ -2075,7 +2156,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2084,7 +2166,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2093,7 +2176,8 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_versionid_nodejs">
 <a href="#state_versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
@@ -2102,11 +2186,14 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The current application version. Kinesis Data Analytics updates the `version_id` each time the application is updated.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_application_configuration_python">
 <a href="#state_application_configuration_python" style="color: inherit; text-decoration: inherit;">application_<wbr>configuration</a>
@@ -2115,7 +2202,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2124,7 +2212,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatch_logging_options_python">
 <a href="#state_cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
@@ -2133,7 +2222,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_create_timestamp_python">
 <a href="#state_create_timestamp_python" style="color: inherit; text-decoration: inherit;">create_<wbr>timestamp</a>
@@ -2142,7 +2232,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was created.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2151,7 +2242,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A summary description of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_last_update_timestamp_python">
 <a href="#state_last_update_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update_<wbr>timestamp</a>
@@ -2160,7 +2252,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current timestamp when the application was last updated.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2169,7 +2262,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_environment_python">
 <a href="#state_runtime_environment_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>environment</a>
@@ -2178,7 +2272,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The runtime environment for the application. Valid values: `SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, `FLINK-1_11`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_service_execution_role_python">
 <a href="#state_service_execution_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>execution_<wbr>role</a>
@@ -2187,7 +2282,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2196,7 +2292,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2205,7 +2302,8 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_version_id_python">
 <a href="#state_version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
@@ -2214,7 +2312,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The current application version. Kinesis Data Analytics updates the `version_id` each time the application is updated.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -2229,7 +2328,9 @@ The following state arguments are supported:
 <h4 id="applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="applicationcodeconfiguration_csharp">
 <a href="#applicationcodeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Code<wbr>Configuration</a>
@@ -2238,7 +2339,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The code location and type parameters for the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="applicationsnapshotconfiguration_csharp">
 <a href="#applicationsnapshotconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Snapshot<wbr>Configuration</a>
@@ -2247,7 +2349,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="environmentproperties_csharp">
 <a href="#environmentproperties_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Properties</a>
@@ -2256,7 +2359,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes execution properties for a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="flinkapplicationconfiguration_csharp">
 <a href="#flinkapplicationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Flink<wbr>Application<wbr>Configuration</a>
@@ -2265,7 +2369,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sqlapplicationconfiguration_csharp">
 <a href="#sqlapplicationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Application<wbr>Configuration</a>
@@ -2274,7 +2379,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a SQL-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcconfiguration_csharp">
 <a href="#vpcconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
@@ -2283,11 +2389,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration of a Flink-based application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="applicationcodeconfiguration_go">
 <a href="#applicationcodeconfiguration_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Code<wbr>Configuration</a>
@@ -2296,7 +2405,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The code location and type parameters for the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="applicationsnapshotconfiguration_go">
 <a href="#applicationsnapshotconfiguration_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Snapshot<wbr>Configuration</a>
@@ -2305,7 +2415,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="environmentproperties_go">
 <a href="#environmentproperties_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Properties</a>
@@ -2314,7 +2425,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Describes execution properties for a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="flinkapplicationconfiguration_go">
 <a href="#flinkapplicationconfiguration_go" style="color: inherit; text-decoration: inherit;">Flink<wbr>Application<wbr>Configuration</a>
@@ -2323,7 +2435,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sqlapplicationconfiguration_go">
 <a href="#sqlapplicationconfiguration_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Application<wbr>Configuration</a>
@@ -2332,7 +2445,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a SQL-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcconfiguration_go">
 <a href="#vpcconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
@@ -2341,11 +2455,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration of a Flink-based application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="applicationcodeconfiguration_nodejs">
 <a href="#applicationcodeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Code<wbr>Configuration</a>
@@ -2354,7 +2471,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The code location and type parameters for the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="applicationsnapshotconfiguration_nodejs">
 <a href="#applicationsnapshotconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Snapshot<wbr>Configuration</a>
@@ -2363,7 +2481,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="environmentproperties_nodejs">
 <a href="#environmentproperties_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Properties</a>
@@ -2372,7 +2491,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Describes execution properties for a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="flinkapplicationconfiguration_nodejs">
 <a href="#flinkapplicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">flink<wbr>Application<wbr>Configuration</a>
@@ -2381,7 +2501,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sqlapplicationconfiguration_nodejs">
 <a href="#sqlapplicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Application<wbr>Configuration</a>
@@ -2390,7 +2511,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a SQL-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcconfiguration_nodejs">
 <a href="#vpcconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Configuration</a>
@@ -2399,11 +2521,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration of a Flink-based application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="application_code_configuration_python">
 <a href="#application_code_configuration_python" style="color: inherit; text-decoration: inherit;">application_<wbr>code_<wbr>configuration</a>
@@ -2412,7 +2537,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The code location and type parameters for the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="application_snapshot_configuration_python">
 <a href="#application_snapshot_configuration_python" style="color: inherit; text-decoration: inherit;">application_<wbr>snapshot_<wbr>configuration</a>
@@ -2421,7 +2547,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="environment_properties_python">
 <a href="#environment_properties_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>properties</a>
@@ -2430,7 +2557,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes execution properties for a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="flink_application_configuration_python">
 <a href="#flink_application_configuration_python" style="color: inherit; text-decoration: inherit;">flink_<wbr>application_<wbr>configuration</a>
@@ -2439,7 +2567,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a Flink-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sql_application_configuration_python">
 <a href="#sql_application_configuration_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>application_<wbr>configuration</a>
@@ -2448,7 +2577,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a SQL-based application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpc_configuration_python">
 <a href="#vpc_configuration_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>configuration</a>
@@ -2457,13 +2587,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration of a Flink-based application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="codecontenttype_csharp">
 <a href="#codecontenttype_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Content<wbr>Type</a>
@@ -2472,7 +2605,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the code content is in text or zip format. Valid values: `PLAINTEXT`, `ZIPFILE`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="codecontent_csharp">
 <a href="#codecontent_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Content</a>
@@ -2481,11 +2615,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location and type of the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="codecontenttype_go">
 <a href="#codecontenttype_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Content<wbr>Type</a>
@@ -2494,7 +2631,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the code content is in text or zip format. Valid values: `PLAINTEXT`, `ZIPFILE`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="codecontent_go">
 <a href="#codecontent_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Content</a>
@@ -2503,11 +2641,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The location and type of the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="codecontenttype_nodejs">
 <a href="#codecontenttype_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Content<wbr>Type</a>
@@ -2516,7 +2657,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the code content is in text or zip format. Valid values: `PLAINTEXT`, `ZIPFILE`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="codecontent_nodejs">
 <a href="#codecontent_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Content</a>
@@ -2525,11 +2667,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The location and type of the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="code_content_type_python">
 <a href="#code_content_type_python" style="color: inherit; text-decoration: inherit;">code_<wbr>content_<wbr>type</a>
@@ -2538,7 +2683,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the code content is in text or zip format. Valid values: `PLAINTEXT`, `ZIPFILE`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="code_content_python">
 <a href="#code_content_python" style="color: inherit; text-decoration: inherit;">code_<wbr>content</a>
@@ -2547,13 +2693,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location and type of the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="s3contentlocation_csharp">
 <a href="#s3contentlocation_csharp" style="color: inherit; text-decoration: inherit;">S3Content<wbr>Location</a>
@@ -2562,7 +2711,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Amazon S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="textcontent_csharp">
 <a href="#textcontent_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Content</a>
@@ -2571,11 +2721,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text-format code for the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="s3contentlocation_go">
 <a href="#s3contentlocation_go" style="color: inherit; text-decoration: inherit;">S3Content<wbr>Location</a>
@@ -2584,7 +2737,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Information about the Amazon S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="textcontent_go">
 <a href="#textcontent_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Content</a>
@@ -2593,11 +2747,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text-format code for the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="s3contentlocation_nodejs">
 <a href="#s3contentlocation_nodejs" style="color: inherit; text-decoration: inherit;">s3Content<wbr>Location</a>
@@ -2606,7 +2763,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Information about the Amazon S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="textcontent_nodejs">
 <a href="#textcontent_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Content</a>
@@ -2615,11 +2773,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text-format code for the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="s3_content_location_python">
 <a href="#s3_content_location_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>content_<wbr>location</a>
@@ -2628,7 +2789,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Amazon S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="text_content_python">
 <a href="#text_content_python" style="color: inherit; text-decoration: inherit;">text_<wbr>content</a>
@@ -2637,13 +2799,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text-format code for the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucketarn_csharp">
 <a href="#bucketarn_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
@@ -2652,7 +2817,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="filekey_csharp">
 <a href="#filekey_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Key</a>
@@ -2661,7 +2827,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file key for the object containing the application code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="objectversion_csharp">
 <a href="#objectversion_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Version</a>
@@ -2670,11 +2837,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the object containing the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucketarn_go">
 <a href="#bucketarn_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
@@ -2683,7 +2853,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="filekey_go">
 <a href="#filekey_go" style="color: inherit; text-decoration: inherit;">File<wbr>Key</a>
@@ -2692,7 +2863,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file key for the object containing the application code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="objectversion_go">
 <a href="#objectversion_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Version</a>
@@ -2701,11 +2873,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the object containing the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucketarn_nodejs">
 <a href="#bucketarn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
@@ -2714,7 +2889,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="filekey_nodejs">
 <a href="#filekey_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Key</a>
@@ -2723,7 +2899,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file key for the object containing the application code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="objectversion_nodejs">
 <a href="#objectversion_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Version</a>
@@ -2732,11 +2909,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the object containing the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucket_arn_python">
 <a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
@@ -2745,7 +2925,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="file_key_python">
 <a href="#file_key_python" style="color: inherit; text-decoration: inherit;">file_<wbr>key</a>
@@ -2754,7 +2935,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file key for the object containing the application code.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="object_version_python">
 <a href="#object_version_python" style="color: inherit; text-decoration: inherit;">object_<wbr>version</a>
@@ -2763,13 +2945,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the object containing the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="snapshotsenabled_csharp">
 <a href="#snapshotsenabled_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>Enabled</a>
@@ -2778,11 +2963,14 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="snapshotsenabled_go">
 <a href="#snapshotsenabled_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>Enabled</a>
@@ -2791,11 +2979,14 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="snapshotsenabled_nodejs">
 <a href="#snapshotsenabled_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>Enabled</a>
@@ -2804,11 +2995,14 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="snapshots_enabled_python">
 <a href="#snapshots_enabled_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>enabled</a>
@@ -2817,13 +3011,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="propertygroups_csharp">
 <a href="#propertygroups_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Groups</a>
@@ -2832,11 +3029,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the execution property groups.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="propertygroups_go">
 <a href="#propertygroups_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Groups</a>
@@ -2845,11 +3045,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">[]Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Describes the execution property groups.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="propertygroups_nodejs">
 <a href="#propertygroups_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Groups</a>
@@ -2858,11 +3061,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the execution property groups.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="property_groups_python">
 <a href="#property_groups_python" style="color: inherit; text-decoration: inherit;">property_<wbr>groups</a>
@@ -2871,13 +3077,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the execution property groups.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationenvironmentpropertiespropertygroup">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="propertygroupid_csharp">
 <a href="#propertygroupid_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Group<wbr>Id</a>
@@ -2886,7 +3095,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the application execution property key-value map.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="propertymap_csharp">
 <a href="#propertymap_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Map</a>
@@ -2895,11 +3105,14 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Application execution property key-value map.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="propertygroupid_go">
 <a href="#propertygroupid_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Group<wbr>Id</a>
@@ -2908,7 +3121,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the application execution property key-value map.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="propertymap_go">
 <a href="#propertymap_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Map</a>
@@ -2917,11 +3131,14 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Application execution property key-value map.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="propertygroupid_nodejs">
 <a href="#propertygroupid_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Group<wbr>Id</a>
@@ -2930,7 +3147,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the application execution property key-value map.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="propertymap_nodejs">
 <a href="#propertymap_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Map</a>
@@ -2939,11 +3157,14 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Application execution property key-value map.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="property_group_id_python">
 <a href="#property_group_id_python" style="color: inherit; text-decoration: inherit;">property_<wbr>group_<wbr>id</a>
@@ -2952,7 +3173,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key of the application execution property key-value map.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="property_map_python">
 <a href="#property_map_python" style="color: inherit; text-decoration: inherit;">property_<wbr>map</a>
@@ -2961,13 +3183,16 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Application execution property key-value map.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpointconfiguration_csharp">
 <a href="#checkpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Checkpoint<wbr>Configuration</a>
@@ -2976,7 +3201,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an application's checkpointing configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="monitoringconfiguration_csharp">
 <a href="#monitoringconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Configuration</a>
@@ -2985,7 +3211,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes configuration parameters for CloudWatch logging for an application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelismconfiguration_csharp">
 <a href="#parallelismconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Parallelism<wbr>Configuration</a>
@@ -2994,11 +3221,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for how an application executes multiple tasks simultaneously.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpointconfiguration_go">
 <a href="#checkpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Checkpoint<wbr>Configuration</a>
@@ -3007,7 +3237,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes an application's checkpointing configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="monitoringconfiguration_go">
 <a href="#monitoringconfiguration_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Configuration</a>
@@ -3016,7 +3247,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes configuration parameters for CloudWatch logging for an application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelismconfiguration_go">
 <a href="#parallelismconfiguration_go" style="color: inherit; text-decoration: inherit;">Parallelism<wbr>Configuration</a>
@@ -3025,11 +3257,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for how an application executes multiple tasks simultaneously.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpointconfiguration_nodejs">
 <a href="#checkpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">checkpoint<wbr>Configuration</a>
@@ -3038,7 +3273,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes an application's checkpointing configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="monitoringconfiguration_nodejs">
 <a href="#monitoringconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Configuration</a>
@@ -3047,7 +3283,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes configuration parameters for CloudWatch logging for an application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelismconfiguration_nodejs">
 <a href="#parallelismconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">parallelism<wbr>Configuration</a>
@@ -3056,11 +3293,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for how an application executes multiple tasks simultaneously.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpoint_configuration_python">
 <a href="#checkpoint_configuration_python" style="color: inherit; text-decoration: inherit;">checkpoint_<wbr>configuration</a>
@@ -3069,7 +3309,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an application's checkpointing configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="monitoring_configuration_python">
 <a href="#monitoring_configuration_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>configuration</a>
@@ -3078,7 +3319,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes configuration parameters for CloudWatch logging for an application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelism_configuration_python">
 <a href="#parallelism_configuration_python" style="color: inherit; text-decoration: inherit;">parallelism_<wbr>configuration</a>
@@ -3087,13 +3329,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for how an application executes multiple tasks simultaneously.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configurationtype_csharp">
 <a href="#configurationtype_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Type</a>
@@ -3105,7 +3350,8 @@ The following state arguments are supported:
 * `checkpointing_enabled = true`
 * `checkpoint_interval = 60000`
 * `min_pause_between_checkpoints = 5000`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpointinterval_csharp">
 <a href="#checkpointinterval_csharp" style="color: inherit; text-decoration: inherit;">Checkpoint<wbr>Interval</a>
@@ -3114,7 +3360,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the interval in milliseconds between checkpoint operations.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpointingenabled_csharp">
 <a href="#checkpointingenabled_csharp" style="color: inherit; text-decoration: inherit;">Checkpointing<wbr>Enabled</a>
@@ -3123,7 +3370,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="minpausebetweencheckpoints_csharp">
 <a href="#minpausebetweencheckpoints_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Pause<wbr>Between<wbr>Checkpoints</a>
@@ -3132,11 +3380,14 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configurationtype_go">
 <a href="#configurationtype_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Type</a>
@@ -3148,7 +3399,8 @@ The following state arguments are supported:
 * `checkpointing_enabled = true`
 * `checkpoint_interval = 60000`
 * `min_pause_between_checkpoints = 5000`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpointinterval_go">
 <a href="#checkpointinterval_go" style="color: inherit; text-decoration: inherit;">Checkpoint<wbr>Interval</a>
@@ -3157,7 +3409,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the interval in milliseconds between checkpoint operations.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpointingenabled_go">
 <a href="#checkpointingenabled_go" style="color: inherit; text-decoration: inherit;">Checkpointing<wbr>Enabled</a>
@@ -3166,7 +3419,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="minpausebetweencheckpoints_go">
 <a href="#minpausebetweencheckpoints_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Pause<wbr>Between<wbr>Checkpoints</a>
@@ -3175,11 +3429,14 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configurationtype_nodejs">
 <a href="#configurationtype_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Type</a>
@@ -3191,7 +3448,8 @@ The following state arguments are supported:
 * `checkpointing_enabled = true`
 * `checkpoint_interval = 60000`
 * `min_pause_between_checkpoints = 5000`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpointinterval_nodejs">
 <a href="#checkpointinterval_nodejs" style="color: inherit; text-decoration: inherit;">checkpoint<wbr>Interval</a>
@@ -3200,7 +3458,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Describes the interval in milliseconds between checkpoint operations.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpointingenabled_nodejs">
 <a href="#checkpointingenabled_nodejs" style="color: inherit; text-decoration: inherit;">checkpointing<wbr>Enabled</a>
@@ -3209,7 +3468,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="minpausebetweencheckpoints_nodejs">
 <a href="#minpausebetweencheckpoints_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Pause<wbr>Between<wbr>Checkpoints</a>
@@ -3218,11 +3478,14 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configuration_type_python">
 <a href="#configuration_type_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>type</a>
@@ -3234,7 +3497,8 @@ The following state arguments are supported:
 * `checkpointing_enabled = true`
 * `checkpoint_interval = 60000`
 * `min_pause_between_checkpoints = 5000`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpoint_interval_python">
 <a href="#checkpoint_interval_python" style="color: inherit; text-decoration: inherit;">checkpoint_<wbr>interval</a>
@@ -3243,7 +3507,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the interval in milliseconds between checkpoint operations.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="checkpointing_enabled_python">
 <a href="#checkpointing_enabled_python" style="color: inherit; text-decoration: inherit;">checkpointing_<wbr>enabled</a>
@@ -3252,7 +3517,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="min_pause_between_checkpoints_python">
 <a href="#min_pause_between_checkpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>pause_<wbr>between_<wbr>checkpoints</a>
@@ -3261,13 +3527,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configurationtype_csharp">
 <a href="#configurationtype_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Type</a>
@@ -3276,7 +3545,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes whether to use the default CloudWatch logging configuration for an application. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `log_level` or `metrics_level` attribute values to be effective.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="loglevel_csharp">
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -3285,7 +3555,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the verbosity of the CloudWatch Logs for an application. Valid values: `DEBUG`, `ERROR`, `INFO`, `WARN`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="metricslevel_csharp">
 <a href="#metricslevel_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Level</a>
@@ -3294,11 +3565,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the granularity of the CloudWatch Logs for an application. Valid values: `APPLICATION`, `OPERATOR`, `PARALLELISM`, `TASK`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configurationtype_go">
 <a href="#configurationtype_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Type</a>
@@ -3307,7 +3581,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes whether to use the default CloudWatch logging configuration for an application. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `log_level` or `metrics_level` attribute values to be effective.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="loglevel_go">
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -3316,7 +3591,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the verbosity of the CloudWatch Logs for an application. Valid values: `DEBUG`, `ERROR`, `INFO`, `WARN`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="metricslevel_go">
 <a href="#metricslevel_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Level</a>
@@ -3325,11 +3601,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the granularity of the CloudWatch Logs for an application. Valid values: `APPLICATION`, `OPERATOR`, `PARALLELISM`, `TASK`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configurationtype_nodejs">
 <a href="#configurationtype_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Type</a>
@@ -3338,7 +3617,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes whether to use the default CloudWatch logging configuration for an application. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `log_level` or `metrics_level` attribute values to be effective.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="loglevel_nodejs">
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -3347,7 +3627,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the verbosity of the CloudWatch Logs for an application. Valid values: `DEBUG`, `ERROR`, `INFO`, `WARN`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="metricslevel_nodejs">
 <a href="#metricslevel_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Level</a>
@@ -3356,11 +3637,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the granularity of the CloudWatch Logs for an application. Valid values: `APPLICATION`, `OPERATOR`, `PARALLELISM`, `TASK`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configuration_type_python">
 <a href="#configuration_type_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>type</a>
@@ -3369,7 +3653,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes whether to use the default CloudWatch logging configuration for an application. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `log_level` or `metrics_level` attribute values to be effective.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="log_level_python">
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -3378,7 +3663,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the verbosity of the CloudWatch Logs for an application. Valid values: `DEBUG`, `ERROR`, `INFO`, `WARN`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="metrics_level_python">
 <a href="#metrics_level_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>level</a>
@@ -3387,13 +3673,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the granularity of the CloudWatch Logs for an application. Valid values: `APPLICATION`, `OPERATOR`, `PARALLELISM`, `TASK`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configurationtype_csharp">
 <a href="#configurationtype_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Type</a>
@@ -3402,7 +3691,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes whether the application uses the default parallelism for the Kinesis Data Analytics service. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `auto_scaling_enabled`, `parallelism`, or `parallelism_per_kpu` attribute values to be effective.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autoscalingenabled_csharp">
 <a href="#autoscalingenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Enabled</a>
@@ -3411,7 +3701,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether the Kinesis Data Analytics service can increase the parallelism of the application in response to increased throughput.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelism_csharp">
 <a href="#parallelism_csharp" style="color: inherit; text-decoration: inherit;">Parallelism</a>
@@ -3420,7 +3711,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the initial number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelismperkpu_csharp">
 <a href="#parallelismperkpu_csharp" style="color: inherit; text-decoration: inherit;">Parallelism<wbr>Per<wbr>Kpu</a>
@@ -3429,11 +3721,14 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform per Kinesis Processing Unit (KPU) used by the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configurationtype_go">
 <a href="#configurationtype_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Type</a>
@@ -3442,7 +3737,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes whether the application uses the default parallelism for the Kinesis Data Analytics service. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `auto_scaling_enabled`, `parallelism`, or `parallelism_per_kpu` attribute values to be effective.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autoscalingenabled_go">
 <a href="#autoscalingenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Enabled</a>
@@ -3451,7 +3747,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether the Kinesis Data Analytics service can increase the parallelism of the application in response to increased throughput.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelism_go">
 <a href="#parallelism_go" style="color: inherit; text-decoration: inherit;">Parallelism</a>
@@ -3460,7 +3757,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the initial number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelismperkpu_go">
 <a href="#parallelismperkpu_go" style="color: inherit; text-decoration: inherit;">Parallelism<wbr>Per<wbr>Kpu</a>
@@ -3469,11 +3767,14 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform per Kinesis Processing Unit (KPU) used by the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configurationtype_nodejs">
 <a href="#configurationtype_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Type</a>
@@ -3482,7 +3783,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes whether the application uses the default parallelism for the Kinesis Data Analytics service. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `auto_scaling_enabled`, `parallelism`, or `parallelism_per_kpu` attribute values to be effective.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autoscalingenabled_nodejs">
 <a href="#autoscalingenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Enabled</a>
@@ -3491,7 +3793,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes whether the Kinesis Data Analytics service can increase the parallelism of the application in response to increased throughput.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelism_nodejs">
 <a href="#parallelism_nodejs" style="color: inherit; text-decoration: inherit;">parallelism</a>
@@ -3500,7 +3803,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Describes the initial number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelismperkpu_nodejs">
 <a href="#parallelismperkpu_nodejs" style="color: inherit; text-decoration: inherit;">parallelism<wbr>Per<wbr>Kpu</a>
@@ -3509,11 +3813,14 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Describes the number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform per Kinesis Processing Unit (KPU) used by the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="configuration_type_python">
 <a href="#configuration_type_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>type</a>
@@ -3522,7 +3829,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes whether the application uses the default parallelism for the Kinesis Data Analytics service. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `auto_scaling_enabled`, `parallelism`, or `parallelism_per_kpu` attribute values to be effective.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="auto_scaling_enabled_python">
 <a href="#auto_scaling_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>enabled</a>
@@ -3531,7 +3839,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether the Kinesis Data Analytics service can increase the parallelism of the application in response to increased throughput.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelism_python">
 <a href="#parallelism_python" style="color: inherit; text-decoration: inherit;">parallelism</a>
@@ -3540,7 +3849,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the initial number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="parallelism_per_kpu_python">
 <a href="#parallelism_per_kpu_python" style="color: inherit; text-decoration: inherit;">parallelism_<wbr>per_<wbr>kpu</a>
@@ -3549,13 +3859,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Describes the number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform per Kinesis Processing Unit (KPU) used by the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="input_csharp">
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
@@ -3564,7 +3877,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The input stream used by the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outputs_csharp">
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -3573,7 +3887,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The destination streams used by the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="referencedatasource_csharp">
 <a href="#referencedatasource_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Data<wbr>Source</a>
@@ -3582,11 +3897,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference data source used by the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="input_go">
 <a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
@@ -3595,7 +3913,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The input stream used by the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outputs_go">
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -3604,7 +3923,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">[]Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}The destination streams used by the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="referencedatasource_go">
 <a href="#referencedatasource_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Data<wbr>Source</a>
@@ -3613,11 +3933,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The reference data source used by the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="input_nodejs">
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
@@ -3626,7 +3949,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The input stream used by the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outputs_nodejs">
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -3635,7 +3959,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output[]</a></span>
     </dt>
     <dd>{{% md %}}The destination streams used by the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="referencedatasource_nodejs">
 <a href="#referencedatasource_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Data<wbr>Source</a>
@@ -3644,11 +3969,14 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The reference data source used by the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="input_python">
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
@@ -3657,7 +3985,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The input stream used by the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outputs_python">
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -3666,7 +3995,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The destination streams used by the application.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="reference_data_source_python">
 <a href="#reference_data_source_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>data_<wbr>source</a>
@@ -3675,13 +4005,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference data source used by the application.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="inputschema_csharp">
 <a href="#inputschema_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Schema</a>
@@ -3690,7 +4023,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="nameprefix_csharp">
 <a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -3699,7 +4033,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name prefix to use when creating an in-application stream.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inappstreamnames_csharp">
 <a href="#inappstreamnames_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>App<wbr>Stream<wbr>Names</a>
@@ -3707,7 +4042,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputid_csharp">
 <a href="#inputid_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Id</a>
@@ -3715,7 +4051,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputparallelism_csharp">
 <a href="#inputparallelism_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Parallelism</a>
@@ -3724,7 +4061,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the number of in-application streams to create.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputprocessingconfiguration_csharp">
 <a href="#inputprocessingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Processing<wbr>Configuration</a>
@@ -3734,7 +4072,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The input processing configuration for the input.
 An input processor transforms records as they are received from the stream, before the application's SQL code executes.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputstartingpositionconfigurations_csharp">
 <a href="#inputstartingpositionconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Starting<wbr>Position<wbr>Configurations</a>
@@ -3742,7 +4081,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisfirehoseinput_csharp">
 <a href="#kinesisfirehoseinput_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Firehose<wbr>Input</a>
@@ -3751,7 +4091,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html), identifies the delivery stream's ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsinput_csharp">
 <a href="#kinesisstreamsinput_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Streams<wbr>Input</a>
@@ -3760,11 +4101,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html), identifies the stream's Amazon Resource Name (ARN).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="inputschema_go">
 <a href="#inputschema_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Schema</a>
@@ -3773,7 +4117,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="nameprefix_go">
 <a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -3782,7 +4127,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name prefix to use when creating an in-application stream.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inappstreamnames_go">
 <a href="#inappstreamnames_go" style="color: inherit; text-decoration: inherit;">In<wbr>App<wbr>Stream<wbr>Names</a>
@@ -3790,7 +4136,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputid_go">
 <a href="#inputid_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Id</a>
@@ -3798,7 +4145,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputparallelism_go">
 <a href="#inputparallelism_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Parallelism</a>
@@ -3807,7 +4155,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism</a></span>
     </dt>
     <dd>{{% md %}}Describes the number of in-application streams to create.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputprocessingconfiguration_go">
 <a href="#inputprocessingconfiguration_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Processing<wbr>Configuration</a>
@@ -3817,7 +4166,8 @@ An input processor transforms records as they are received from the stream, befo
     </dt>
     <dd>{{% md %}}The input processing configuration for the input.
 An input processor transforms records as they are received from the stream, before the application's SQL code executes.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputstartingpositionconfigurations_go">
 <a href="#inputstartingpositionconfigurations_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Starting<wbr>Position<wbr>Configurations</a>
@@ -3825,7 +4175,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">[]Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisfirehoseinput_go">
 <a href="#kinesisfirehoseinput_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Firehose<wbr>Input</a>
@@ -3834,7 +4185,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html), identifies the delivery stream's ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsinput_go">
 <a href="#kinesisstreamsinput_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Streams<wbr>Input</a>
@@ -3843,11 +4195,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html), identifies the stream's Amazon Resource Name (ARN).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="inputschema_nodejs">
 <a href="#inputschema_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Schema</a>
@@ -3856,7 +4211,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="nameprefix_nodejs">
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -3865,7 +4221,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name prefix to use when creating an in-application stream.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inappstreamnames_nodejs">
 <a href="#inappstreamnames_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>App<wbr>Stream<wbr>Names</a>
@@ -3873,7 +4230,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputid_nodejs">
 <a href="#inputid_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Id</a>
@@ -3881,7 +4239,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputparallelism_nodejs">
 <a href="#inputparallelism_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Parallelism</a>
@@ -3890,7 +4249,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism</a></span>
     </dt>
     <dd>{{% md %}}Describes the number of in-application streams to create.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputprocessingconfiguration_nodejs">
 <a href="#inputprocessingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Processing<wbr>Configuration</a>
@@ -3900,7 +4260,8 @@ An input processor transforms records as they are received from the stream, befo
     </dt>
     <dd>{{% md %}}The input processing configuration for the input.
 An input processor transforms records as they are received from the stream, before the application's SQL code executes.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inputstartingpositionconfigurations_nodejs">
 <a href="#inputstartingpositionconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Starting<wbr>Position<wbr>Configurations</a>
@@ -3908,7 +4269,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisfirehoseinput_nodejs">
 <a href="#kinesisfirehoseinput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Firehose<wbr>Input</a>
@@ -3917,7 +4279,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html), identifies the delivery stream's ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsinput_nodejs">
 <a href="#kinesisstreamsinput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Streams<wbr>Input</a>
@@ -3926,11 +4289,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html), identifies the stream's Amazon Resource Name (ARN).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="input_schema_python">
 <a href="#input_schema_python" style="color: inherit; text-decoration: inherit;">input_<wbr>schema</a>
@@ -3939,7 +4305,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_prefix_python">
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -3948,7 +4315,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name prefix to use when creating an in-application stream.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="in_app_stream_names_python">
 <a href="#in_app_stream_names_python" style="color: inherit; text-decoration: inherit;">in_<wbr>app_<wbr>stream_<wbr>names</a>
@@ -3956,7 +4324,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="input_id_python">
 <a href="#input_id_python" style="color: inherit; text-decoration: inherit;">input_<wbr>id</a>
@@ -3964,7 +4333,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="input_parallelism_python">
 <a href="#input_parallelism_python" style="color: inherit; text-decoration: inherit;">input_<wbr>parallelism</a>
@@ -3973,7 +4343,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the number of in-application streams to create.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="input_processing_configuration_python">
 <a href="#input_processing_configuration_python" style="color: inherit; text-decoration: inherit;">input_<wbr>processing_<wbr>configuration</a>
@@ -3983,7 +4354,8 @@ An input processor transforms records as they are received from the stream, befo
     </dt>
     <dd>{{% md %}}The input processing configuration for the input.
 An input processor transforms records as they are received from the stream, before the application's SQL code executes.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="input_starting_position_configurations_python">
 <a href="#input_starting_position_configurations_python" style="color: inherit; text-decoration: inherit;">input_<wbr>starting_<wbr>position_<wbr>configurations</a>
@@ -3991,7 +4363,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesis_firehose_input_python">
 <a href="#kinesis_firehose_input_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>firehose_<wbr>input</a>
@@ -4000,7 +4373,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html), identifies the delivery stream's ARN.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesis_streams_input_python">
 <a href="#kinesis_streams_input_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>streams_<wbr>input</a>
@@ -4009,13 +4383,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html), identifies the stream's Amazon Resource Name (ARN).
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -4024,11 +4401,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of in-application streams to create.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -4037,11 +4417,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of in-application streams to create.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -4050,11 +4433,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of in-application streams to create.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -4063,13 +4449,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of in-application streams to create.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="inputlambdaprocessor_csharp">
 <a href="#inputlambdaprocessor_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Lambda<wbr>Processor</a>
@@ -4078,11 +4467,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) that is used to preprocess the records in the stream before being processed by your application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="inputlambdaprocessor_go">
 <a href="#inputlambdaprocessor_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Lambda<wbr>Processor</a>
@@ -4091,11 +4483,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) that is used to preprocess the records in the stream before being processed by your application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="inputlambdaprocessor_nodejs">
 <a href="#inputlambdaprocessor_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Lambda<wbr>Processor</a>
@@ -4104,11 +4499,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) that is used to preprocess the records in the stream before being processed by your application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="input_lambda_processor_python">
 <a href="#input_lambda_processor_python" style="color: inherit; text-decoration: inherit;">input_<wbr>lambda_<wbr>processor</a>
@@ -4117,13 +4515,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) that is used to preprocess the records in the stream before being processed by your application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
 <a href="#resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -4132,11 +4533,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function that operates on records in the stream.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
 <a href="#resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -4145,11 +4549,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function that operates on records in the stream.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
 <a href="#resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
@@ -4158,11 +4565,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function that operates on records in the stream.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
 <a href="#resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
@@ -4171,13 +4581,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function that operates on records in the stream.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumns_csharp">
 <a href="#recordcolumns_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Columns</a>
@@ -4186,7 +4599,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformat_csharp">
 <a href="#recordformat_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Format</a>
@@ -4195,7 +4609,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="recordencoding_csharp">
 <a href="#recordencoding_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Encoding</a>
@@ -4204,11 +4619,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the records in the streaming source. For example, `UTF-8`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumns_go">
 <a href="#recordcolumns_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Columns</a>
@@ -4217,7 +4635,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">[]Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformat_go">
 <a href="#recordformat_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Format</a>
@@ -4226,7 +4645,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="recordencoding_go">
 <a href="#recordencoding_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Encoding</a>
@@ -4235,11 +4655,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the records in the streaming source. For example, `UTF-8`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumns_nodejs">
 <a href="#recordcolumns_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Columns</a>
@@ -4248,7 +4671,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformat_nodejs">
 <a href="#recordformat_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format</a>
@@ -4257,7 +4681,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="recordencoding_nodejs">
 <a href="#recordencoding_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Encoding</a>
@@ -4266,11 +4691,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the records in the streaming source. For example, `UTF-8`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="record_columns_python">
 <a href="#record_columns_python" style="color: inherit; text-decoration: inherit;">record_<wbr>columns</a>
@@ -4279,7 +4707,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="record_format_python">
 <a href="#record_format_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format</a>
@@ -4288,7 +4717,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="record_encoding_python">
 <a href="#record_encoding_python" style="color: inherit; text-decoration: inherit;">record_<wbr>encoding</a>
@@ -4297,13 +4727,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the records in the streaming source. For example, `UTF-8`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4312,7 +4745,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column that is created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sqltype_csharp">
 <a href="#sqltype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Type</a>
@@ -4321,7 +4755,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of column created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mapping_csharp">
 <a href="#mapping_csharp" style="color: inherit; text-decoration: inherit;">Mapping</a>
@@ -4330,11 +4765,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the data element in the streaming input or the reference data source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4343,7 +4781,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column that is created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sqltype_go">
 <a href="#sqltype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Type</a>
@@ -4352,7 +4791,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of column created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mapping_go">
 <a href="#mapping_go" style="color: inherit; text-decoration: inherit;">Mapping</a>
@@ -4361,11 +4801,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the data element in the streaming input or the reference data source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4374,7 +4817,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column that is created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sqltype_nodejs">
 <a href="#sqltype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Type</a>
@@ -4383,7 +4827,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of column created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mapping_nodejs">
 <a href="#mapping_nodejs" style="color: inherit; text-decoration: inherit;">mapping</a>
@@ -4392,11 +4837,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the data element in the streaming input or the reference data source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4405,7 +4853,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column that is created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sql_type_python">
 <a href="#sql_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>type</a>
@@ -4414,7 +4863,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of column created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mapping_python">
 <a href="#mapping_python" style="color: inherit; text-decoration: inherit;">mapping</a>
@@ -4423,13 +4873,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the data element in the streaming input or the reference data source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mappingparameters_csharp">
 <a href="#mappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Parameters</a>
@@ -4438,7 +4891,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformattype_csharp">
 <a href="#recordformattype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Format<wbr>Type</a>
@@ -4447,11 +4901,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of record format. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mappingparameters_go">
 <a href="#mappingparameters_go" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Parameters</a>
@@ -4460,7 +4917,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformattype_go">
 <a href="#recordformattype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Format<wbr>Type</a>
@@ -4469,11 +4927,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of record format. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mappingparameters_nodejs">
 <a href="#mappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Parameters</a>
@@ -4482,7 +4943,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformattype_nodejs">
 <a href="#recordformattype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format<wbr>Type</a>
@@ -4491,11 +4953,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of record format. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mapping_parameters_python">
 <a href="#mapping_parameters_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>parameters</a>
@@ -4504,7 +4969,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="record_format_type_python">
 <a href="#record_format_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format_<wbr>type</a>
@@ -4513,13 +4979,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of record format. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csvmappingparameters_csharp">
 <a href="#csvmappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Mapping<wbr>Parameters</a>
@@ -4528,7 +4997,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="jsonmappingparameters_csharp">
 <a href="#jsonmappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Mapping<wbr>Parameters</a>
@@ -4537,11 +5007,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csvmappingparameters_go">
 <a href="#csvmappingparameters_go" style="color: inherit; text-decoration: inherit;">Csv<wbr>Mapping<wbr>Parameters</a>
@@ -4550,7 +5023,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="jsonmappingparameters_go">
 <a href="#jsonmappingparameters_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Mapping<wbr>Parameters</a>
@@ -4559,11 +5033,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csvmappingparameters_nodejs">
 <a href="#csvmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Mapping<wbr>Parameters</a>
@@ -4572,7 +5049,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="jsonmappingparameters_nodejs">
 <a href="#jsonmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Mapping<wbr>Parameters</a>
@@ -4581,11 +5059,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csv_mapping_parameters_python">
 <a href="#csv_mapping_parameters_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>mapping_<wbr>parameters</a>
@@ -4594,7 +5075,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="json_mapping_parameters_python">
 <a href="#json_mapping_parameters_python" style="color: inherit; text-decoration: inherit;">json_<wbr>mapping_<wbr>parameters</a>
@@ -4603,13 +5085,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_csharp">
 <a href="#recordcolumndelimiter_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Column<wbr>Delimiter</a>
@@ -4618,7 +5103,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The column delimiter. For example, in a CSV format, a comma (`,`) is the typical column delimiter.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordrowdelimiter_csharp">
 <a href="#recordrowdelimiter_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Row<wbr>Delimiter</a>
@@ -4627,11 +5113,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The row delimiter. For example, in a CSV format, `\n` is the typical row delimiter.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_go">
 <a href="#recordcolumndelimiter_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Column<wbr>Delimiter</a>
@@ -4640,7 +5129,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The column delimiter. For example, in a CSV format, a comma (`,`) is the typical column delimiter.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordrowdelimiter_go">
 <a href="#recordrowdelimiter_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Row<wbr>Delimiter</a>
@@ -4649,11 +5139,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The row delimiter. For example, in a CSV format, `\n` is the typical row delimiter.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_nodejs">
 <a href="#recordcolumndelimiter_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Column<wbr>Delimiter</a>
@@ -4662,7 +5155,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The column delimiter. For example, in a CSV format, a comma (`,`) is the typical column delimiter.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordrowdelimiter_nodejs">
 <a href="#recordrowdelimiter_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Row<wbr>Delimiter</a>
@@ -4671,11 +5165,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The row delimiter. For example, in a CSV format, `\n` is the typical row delimiter.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="record_column_delimiter_python">
 <a href="#record_column_delimiter_python" style="color: inherit; text-decoration: inherit;">record_<wbr>column_<wbr>delimiter</a>
@@ -4684,7 +5181,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The column delimiter. For example, in a CSV format, a comma (`,`) is the typical column delimiter.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="record_row_delimiter_python">
 <a href="#record_row_delimiter_python" style="color: inherit; text-decoration: inherit;">record_<wbr>row_<wbr>delimiter</a>
@@ -4693,13 +5191,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The row delimiter. For example, in a CSV format, `\n` is the typical row delimiter.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordrowpath_csharp">
 <a href="#recordrowpath_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Row<wbr>Path</a>
@@ -4708,11 +5209,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the top-level parent that contains the records.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordrowpath_go">
 <a href="#recordrowpath_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Row<wbr>Path</a>
@@ -4721,11 +5225,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the top-level parent that contains the records.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordrowpath_nodejs">
 <a href="#recordrowpath_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Row<wbr>Path</a>
@@ -4734,11 +5241,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the top-level parent that contains the records.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="record_row_path_python">
 <a href="#record_row_path_python" style="color: inherit; text-decoration: inherit;">record_<wbr>row_<wbr>path</a>
@@ -4747,13 +5257,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the top-level parent that contains the records.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="inputstartingposition_csharp">
 <a href="#inputstartingposition_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Starting<wbr>Position</a>
@@ -4761,11 +5274,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="inputstartingposition_go">
 <a href="#inputstartingposition_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Starting<wbr>Position</a>
@@ -4773,11 +5289,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="inputstartingposition_nodejs">
 <a href="#inputstartingposition_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Starting<wbr>Position</a>
@@ -4785,11 +5304,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="input_starting_position_python">
 <a href="#input_starting_position_python" style="color: inherit; text-decoration: inherit;">input_<wbr>starting_<wbr>position</a>
@@ -4797,13 +5319,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
 <a href="#resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -4812,11 +5337,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the delivery stream.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
 <a href="#resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -4825,11 +5353,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the delivery stream.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
 <a href="#resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
@@ -4838,11 +5369,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the delivery stream.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
 <a href="#resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
@@ -4851,13 +5385,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the delivery stream.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
 <a href="#resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -4866,11 +5403,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the input Kinesis data stream to read.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
 <a href="#resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -4879,11 +5419,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the input Kinesis data stream to read.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
 <a href="#resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
@@ -4892,11 +5435,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the input Kinesis data stream to read.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
 <a href="#resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
@@ -4905,13 +5451,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the input Kinesis data stream to read.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destinationschema_csharp">
 <a href="#destinationschema_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Schema</a>
@@ -4920,7 +5469,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format when records are written to the destination.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4929,7 +5479,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the in-application stream.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisfirehoseoutput_csharp">
 <a href="#kinesisfirehoseoutput_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Firehose<wbr>Output</a>
@@ -4938,7 +5489,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsoutput_csharp">
 <a href="#kinesisstreamsoutput_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Streams<wbr>Output</a>
@@ -4947,7 +5499,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="lambdaoutput_csharp">
 <a href="#lambdaoutput_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Output</a>
@@ -4956,7 +5509,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outputid_csharp">
 <a href="#outputid_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Id</a>
@@ -4964,11 +5518,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destinationschema_go">
 <a href="#destinationschema_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Schema</a>
@@ -4977,7 +5534,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format when records are written to the destination.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4986,7 +5544,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the in-application stream.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisfirehoseoutput_go">
 <a href="#kinesisfirehoseoutput_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Firehose<wbr>Output</a>
@@ -4995,7 +5554,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsoutput_go">
 <a href="#kinesisstreamsoutput_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Streams<wbr>Output</a>
@@ -5004,7 +5564,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="lambdaoutput_go">
 <a href="#lambdaoutput_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Output</a>
@@ -5013,7 +5574,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outputid_go">
 <a href="#outputid_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Id</a>
@@ -5021,11 +5583,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destinationschema_nodejs">
 <a href="#destinationschema_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Schema</a>
@@ -5034,7 +5599,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format when records are written to the destination.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5043,7 +5609,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the in-application stream.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisfirehoseoutput_nodejs">
 <a href="#kinesisfirehoseoutput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Firehose<wbr>Output</a>
@@ -5052,7 +5619,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsoutput_nodejs">
 <a href="#kinesisstreamsoutput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Streams<wbr>Output</a>
@@ -5061,7 +5629,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="lambdaoutput_nodejs">
 <a href="#lambdaoutput_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Output</a>
@@ -5070,7 +5639,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outputid_nodejs">
 <a href="#outputid_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Id</a>
@@ -5078,11 +5648,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="destination_schema_python">
 <a href="#destination_schema_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>schema</a>
@@ -5091,7 +5664,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format when records are written to the destination.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5100,7 +5674,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the in-application stream.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesis_firehose_output_python">
 <a href="#kinesis_firehose_output_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>firehose_<wbr>output</a>
@@ -5109,7 +5684,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kinesis_streams_output_python">
 <a href="#kinesis_streams_output_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>streams_<wbr>output</a>
@@ -5118,7 +5694,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="lambda_output_python">
 <a href="#lambda_output_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>output</a>
@@ -5127,7 +5704,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies a [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) as the destination.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="output_id_python">
 <a href="#output_id_python" style="color: inherit; text-decoration: inherit;">output_<wbr>id</a>
@@ -5135,13 +5713,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordformattype_csharp">
 <a href="#recordformattype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Format<wbr>Type</a>
@@ -5150,11 +5731,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordformattype_go">
 <a href="#recordformattype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Format<wbr>Type</a>
@@ -5163,11 +5747,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordformattype_nodejs">
 <a href="#recordformattype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format<wbr>Type</a>
@@ -5176,11 +5763,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="record_format_type_python">
 <a href="#record_format_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format_<wbr>type</a>
@@ -5189,13 +5779,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
 <a href="#resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -5204,11 +5797,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination delivery stream to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
 <a href="#resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -5217,11 +5813,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination delivery stream to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
 <a href="#resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
@@ -5230,11 +5829,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination delivery stream to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
 <a href="#resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
@@ -5243,13 +5845,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination delivery stream to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
 <a href="#resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -5258,11 +5863,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination Kinesis data stream to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
 <a href="#resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -5271,11 +5879,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination Kinesis data stream to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
 <a href="#resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
@@ -5284,11 +5895,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination Kinesis data stream to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
 <a href="#resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
@@ -5297,13 +5911,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination Kinesis data stream to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
 <a href="#resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -5312,11 +5929,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination Lambda function to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
 <a href="#resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -5325,11 +5945,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination Lambda function to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
 <a href="#resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
@@ -5338,11 +5961,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination Lambda function to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
 <a href="#resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
@@ -5351,13 +5977,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination Lambda function to write to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="referenceschema_csharp">
 <a href="#referenceschema_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Schema</a>
@@ -5366,7 +5995,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="s3referencedatasource_csharp">
 <a href="#s3referencedatasource_csharp" style="color: inherit; text-decoration: inherit;">S3Reference<wbr>Data<wbr>Source</a>
@@ -5375,7 +6005,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the S3 bucket and object that contains the reference data.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -5384,7 +6015,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the in-application table to create.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="referenceid_csharp">
 <a href="#referenceid_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
@@ -5392,11 +6024,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="referenceschema_go">
 <a href="#referenceschema_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Schema</a>
@@ -5405,7 +6040,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="s3referencedatasource_go">
 <a href="#s3referencedatasource_go" style="color: inherit; text-decoration: inherit;">S3Reference<wbr>Data<wbr>Source</a>
@@ -5414,7 +6050,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Identifies the S3 bucket and object that contains the reference data.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -5423,7 +6060,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the in-application table to create.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="referenceid_go">
 <a href="#referenceid_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
@@ -5431,11 +6069,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="referenceschema_nodejs">
 <a href="#referenceschema_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Schema</a>
@@ -5444,7 +6085,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="s3referencedatasource_nodejs">
 <a href="#s3referencedatasource_nodejs" style="color: inherit; text-decoration: inherit;">s3Reference<wbr>Data<wbr>Source</a>
@@ -5453,7 +6095,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Identifies the S3 bucket and object that contains the reference data.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -5462,7 +6105,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the in-application table to create.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="referenceid_nodejs">
 <a href="#referenceid_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Id</a>
@@ -5470,11 +6114,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="reference_schema_python">
 <a href="#reference_schema_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>schema</a>
@@ -5483,7 +6130,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="s3_reference_data_source_python">
 <a href="#s3_reference_data_source_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>reference_<wbr>data_<wbr>source</a>
@@ -5492,7 +6140,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the S3 bucket and object that contains the reference data.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -5501,7 +6150,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the in-application table to create.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="reference_id_python">
 <a href="#reference_id_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>id</a>
@@ -5509,13 +6159,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumns_csharp">
 <a href="#recordcolumns_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Columns</a>
@@ -5524,7 +6177,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformat_csharp">
 <a href="#recordformat_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Format</a>
@@ -5533,7 +6187,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="recordencoding_csharp">
 <a href="#recordencoding_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Encoding</a>
@@ -5542,11 +6197,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the records in the streaming source. For example, `UTF-8`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumns_go">
 <a href="#recordcolumns_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Columns</a>
@@ -5555,7 +6213,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">[]Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformat_go">
 <a href="#recordformat_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Format</a>
@@ -5564,7 +6223,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="recordencoding_go">
 <a href="#recordencoding_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Encoding</a>
@@ -5573,11 +6233,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the records in the streaming source. For example, `UTF-8`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumns_nodejs">
 <a href="#recordcolumns_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Columns</a>
@@ -5586,7 +6249,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformat_nodejs">
 <a href="#recordformat_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format</a>
@@ -5595,7 +6259,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="recordencoding_nodejs">
 <a href="#recordencoding_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Encoding</a>
@@ -5604,11 +6269,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the records in the streaming source. For example, `UTF-8`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="record_columns_python">
 <a href="#record_columns_python" style="color: inherit; text-decoration: inherit;">record_<wbr>columns</a>
@@ -5617,7 +6285,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="record_format_python">
 <a href="#record_format_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format</a>
@@ -5626,7 +6295,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="record_encoding_python">
 <a href="#record_encoding_python" style="color: inherit; text-decoration: inherit;">record_<wbr>encoding</a>
@@ -5635,13 +6305,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the records in the streaming source. For example, `UTF-8`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5650,7 +6323,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column that is created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sqltype_csharp">
 <a href="#sqltype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Type</a>
@@ -5659,7 +6333,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of column created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mapping_csharp">
 <a href="#mapping_csharp" style="color: inherit; text-decoration: inherit;">Mapping</a>
@@ -5668,11 +6343,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the data element in the streaming input or the reference data source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5681,7 +6359,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column that is created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sqltype_go">
 <a href="#sqltype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Type</a>
@@ -5690,7 +6369,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of column created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mapping_go">
 <a href="#mapping_go" style="color: inherit; text-decoration: inherit;">Mapping</a>
@@ -5699,11 +6379,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the data element in the streaming input or the reference data source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5712,7 +6395,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column that is created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sqltype_nodejs">
 <a href="#sqltype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Type</a>
@@ -5721,7 +6405,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of column created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mapping_nodejs">
 <a href="#mapping_nodejs" style="color: inherit; text-decoration: inherit;">mapping</a>
@@ -5730,11 +6415,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the data element in the streaming input or the reference data source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5743,7 +6431,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column that is created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="sql_type_python">
 <a href="#sql_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>type</a>
@@ -5752,7 +6441,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of column created in the in-application input stream or reference table.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mapping_python">
 <a href="#mapping_python" style="color: inherit; text-decoration: inherit;">mapping</a>
@@ -5761,13 +6451,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the data element in the streaming input or the reference data source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mappingparameters_csharp">
 <a href="#mappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Parameters</a>
@@ -5776,7 +6469,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformattype_csharp">
 <a href="#recordformattype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Format<wbr>Type</a>
@@ -5785,11 +6479,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of record format. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mappingparameters_go">
 <a href="#mappingparameters_go" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Parameters</a>
@@ -5798,7 +6495,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformattype_go">
 <a href="#recordformattype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Format<wbr>Type</a>
@@ -5807,11 +6505,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of record format. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mappingparameters_nodejs">
 <a href="#mappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Parameters</a>
@@ -5820,7 +6521,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordformattype_nodejs">
 <a href="#recordformattype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format<wbr>Type</a>
@@ -5829,11 +6531,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of record format. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mapping_parameters_python">
 <a href="#mapping_parameters_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>parameters</a>
@@ -5842,7 +6547,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="record_format_type_python">
 <a href="#record_format_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format_<wbr>type</a>
@@ -5851,13 +6557,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of record format. Valid values: `CSV`, `JSON`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csvmappingparameters_csharp">
 <a href="#csvmappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Mapping<wbr>Parameters</a>
@@ -5866,7 +6575,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="jsonmappingparameters_csharp">
 <a href="#jsonmappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Mapping<wbr>Parameters</a>
@@ -5875,11 +6585,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csvmappingparameters_go">
 <a href="#csvmappingparameters_go" style="color: inherit; text-decoration: inherit;">Csv<wbr>Mapping<wbr>Parameters</a>
@@ -5888,7 +6601,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="jsonmappingparameters_go">
 <a href="#jsonmappingparameters_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Mapping<wbr>Parameters</a>
@@ -5897,11 +6611,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csvmappingparameters_nodejs">
 <a href="#csvmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Mapping<wbr>Parameters</a>
@@ -5910,7 +6627,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="jsonmappingparameters_nodejs">
 <a href="#jsonmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Mapping<wbr>Parameters</a>
@@ -5919,11 +6637,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csv_mapping_parameters_python">
 <a href="#csv_mapping_parameters_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>mapping_<wbr>parameters</a>
@@ -5932,7 +6653,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="json_mapping_parameters_python">
 <a href="#json_mapping_parameters_python" style="color: inherit; text-decoration: inherit;">json_<wbr>mapping_<wbr>parameters</a>
@@ -5941,13 +6663,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_csharp">
 <a href="#recordcolumndelimiter_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Column<wbr>Delimiter</a>
@@ -5956,7 +6681,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The column delimiter. For example, in a CSV format, a comma (`,`) is the typical column delimiter.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordrowdelimiter_csharp">
 <a href="#recordrowdelimiter_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Row<wbr>Delimiter</a>
@@ -5965,11 +6691,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The row delimiter. For example, in a CSV format, `\n` is the typical row delimiter.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_go">
 <a href="#recordcolumndelimiter_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Column<wbr>Delimiter</a>
@@ -5978,7 +6707,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The column delimiter. For example, in a CSV format, a comma (`,`) is the typical column delimiter.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordrowdelimiter_go">
 <a href="#recordrowdelimiter_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Row<wbr>Delimiter</a>
@@ -5987,11 +6717,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The row delimiter. For example, in a CSV format, `\n` is the typical row delimiter.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_nodejs">
 <a href="#recordcolumndelimiter_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Column<wbr>Delimiter</a>
@@ -6000,7 +6733,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The column delimiter. For example, in a CSV format, a comma (`,`) is the typical column delimiter.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="recordrowdelimiter_nodejs">
 <a href="#recordrowdelimiter_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Row<wbr>Delimiter</a>
@@ -6009,11 +6743,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The row delimiter. For example, in a CSV format, `\n` is the typical row delimiter.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="record_column_delimiter_python">
 <a href="#record_column_delimiter_python" style="color: inherit; text-decoration: inherit;">record_<wbr>column_<wbr>delimiter</a>
@@ -6022,7 +6759,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The column delimiter. For example, in a CSV format, a comma (`,`) is the typical column delimiter.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="record_row_delimiter_python">
 <a href="#record_row_delimiter_python" style="color: inherit; text-decoration: inherit;">record_<wbr>row_<wbr>delimiter</a>
@@ -6031,13 +6769,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The row delimiter. For example, in a CSV format, `\n` is the typical row delimiter.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordrowpath_csharp">
 <a href="#recordrowpath_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Row<wbr>Path</a>
@@ -6046,11 +6787,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the top-level parent that contains the records.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordrowpath_go">
 <a href="#recordrowpath_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Row<wbr>Path</a>
@@ -6059,11 +6803,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the top-level parent that contains the records.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="recordrowpath_nodejs">
 <a href="#recordrowpath_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Row<wbr>Path</a>
@@ -6072,11 +6819,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the top-level parent that contains the records.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="record_row_path_python">
 <a href="#record_row_path_python" style="color: inherit; text-decoration: inherit;">record_<wbr>row_<wbr>path</a>
@@ -6085,13 +6835,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the top-level parent that contains the records.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucketarn_csharp">
 <a href="#bucketarn_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
@@ -6100,7 +6853,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="filekey_csharp">
 <a href="#filekey_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Key</a>
@@ -6109,11 +6863,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file key for the object containing the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucketarn_go">
 <a href="#bucketarn_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
@@ -6122,7 +6879,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="filekey_go">
 <a href="#filekey_go" style="color: inherit; text-decoration: inherit;">File<wbr>Key</a>
@@ -6131,11 +6889,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file key for the object containing the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucketarn_nodejs">
 <a href="#bucketarn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
@@ -6144,7 +6905,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="filekey_nodejs">
 <a href="#filekey_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Key</a>
@@ -6153,11 +6915,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file key for the object containing the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="bucket_arn_python">
 <a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
@@ -6166,7 +6931,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the S3 bucket containing the application code.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="file_key_python">
 <a href="#file_key_python" style="color: inherit; text-decoration: inherit;">file_<wbr>key</a>
@@ -6175,13 +6941,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file key for the object containing the application code.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -6190,7 +6959,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The [Security Group](https://www.terraform.io/docs/providers/aws/r/security_group.html) IDs used by the VPC configuration.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -6199,7 +6969,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The [Subnet](https://www.terraform.io/docs/providers/aws/r/subnet.html) IDs used by the VPC configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcconfigurationid_csharp">
 <a href="#vpcconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration<wbr>Id</a>
@@ -6207,7 +6978,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -6215,11 +6987,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -6228,7 +7003,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The [Security Group](https://www.terraform.io/docs/providers/aws/r/security_group.html) IDs used by the VPC configuration.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -6237,7 +7013,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The [Subnet](https://www.terraform.io/docs/providers/aws/r/subnet.html) IDs used by the VPC configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcconfigurationid_go">
 <a href="#vpcconfigurationid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration<wbr>Id</a>
@@ -6245,7 +7022,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -6253,11 +7031,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -6266,7 +7047,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The [Security Group](https://www.terraform.io/docs/providers/aws/r/security_group.html) IDs used by the VPC configuration.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -6275,7 +7057,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The [Subnet](https://www.terraform.io/docs/providers/aws/r/subnet.html) IDs used by the VPC configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcconfigurationid_nodejs">
 <a href="#vpcconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Configuration<wbr>Id</a>
@@ -6283,7 +7066,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -6291,11 +7075,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -6304,7 +7091,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The [Security Group](https://www.terraform.io/docs/providers/aws/r/security_group.html) IDs used by the VPC configuration.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -6313,7 +7101,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The [Subnet](https://www.terraform.io/docs/providers/aws/r/subnet.html) IDs used by the VPC configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpc_configuration_id_python">
 <a href="#vpc_configuration_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>configuration_<wbr>id</a>
@@ -6321,7 +7110,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -6329,13 +7119,16 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="logstreamarn_csharp">
 <a href="#logstreamarn_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Arn</a>
@@ -6344,7 +7137,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the CloudWatch log stream to receive application messages.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggingoptionid_csharp">
 <a href="#cloudwatchloggingoptionid_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Option<wbr>Id</a>
@@ -6352,11 +7146,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="logstreamarn_go">
 <a href="#logstreamarn_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Stream<wbr>Arn</a>
@@ -6365,7 +7162,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the CloudWatch log stream to receive application messages.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggingoptionid_go">
 <a href="#cloudwatchloggingoptionid_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Option<wbr>Id</a>
@@ -6373,11 +7171,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="logstreamarn_nodejs">
 <a href="#logstreamarn_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Arn</a>
@@ -6386,7 +7187,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the CloudWatch log stream to receive application messages.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggingoptionid_nodejs">
 <a href="#cloudwatchloggingoptionid_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Option<wbr>Id</a>
@@ -6394,11 +7196,14 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="log_stream_arn_python">
 <a href="#log_stream_arn_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>arn</a>
@@ -6407,7 +7212,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the CloudWatch log stream to receive application messages.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="cloudwatch_logging_option_id_python">
 <a href="#cloudwatch_logging_option_id_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>option_<wbr>id</a>
@@ -6415,7 +7221,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -6436,6 +7243,6 @@ An input processor transforms records as they are received from the stream, befo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

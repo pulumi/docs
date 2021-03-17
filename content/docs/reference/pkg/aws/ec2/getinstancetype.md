@@ -14,17 +14,11 @@ Get characteristics for a single EC2 Instance Type.
 
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -42,12 +36,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -69,12 +60,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -82,12 +70,9 @@ import pulumi_aws as aws
 example = aws.ec2.get_instance_type(instance_type="t2.micro")
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -98,16 +83,9 @@ const example = pulumi.output(aws.ec2.getInstanceType({
 }, { async: true }));
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Using getInstanceType {#using}
@@ -145,7 +123,9 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -154,7 +134,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultcores_csharp">
 <a href="#defaultcores_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cores</a>
@@ -163,7 +144,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default number of cores for the instance type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultthreadspercore_csharp">
 <a href="#defaultthreadspercore_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Threads<wbr>Per<wbr>Core</a>
@@ -172,7 +154,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The  default  number of threads per core for the instance type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="fpgas_csharp">
 <a href="#fpgas_csharp" style="color: inherit; text-decoration: inherit;">Fpgas</a>
@@ -185,7 +168,8 @@ The following arguments are supported:
 * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
 * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
 * `fpgas.#.name` - The name of the FPGA accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="gpuses_csharp">
 <a href="#gpuses_csharp" style="color: inherit; text-decoration: inherit;">Gpuses</a>
@@ -198,7 +182,8 @@ The following arguments are supported:
 * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
 * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
 * `gpus.#.name` - The name of the GPU accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="hypervisor_csharp">
 <a href="#hypervisor_csharp" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
@@ -211,7 +196,8 @@ The following arguments are supported:
 * `inference_accelerators.#.count` - The number of Inference accelerators for the instance type.
 * `inference_accelerators.#.manufacturer` - The manufacturer of the Inference accelerator.
 * `inference_accelerators.#.name` - The name of the Inference accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inferenceaccelerators_csharp">
 <a href="#inferenceaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Inference<wbr>Accelerators</a>
@@ -219,7 +205,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">List&lt;Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instancedisks_csharp">
 <a href="#instancedisks_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Disks</a>
@@ -231,7 +218,8 @@ The following arguments are supported:
 * `instance_disks.#.count` - The number of disks with this configuration.
 * `instance_disks.#.size` - The size of the disk in GB.
 * `instance_disks.#.type` - The type of disk.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="maximumipv6addressesperinterface_csharp">
 <a href="#maximumipv6addressesperinterface_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Ipv6Addresses<wbr>Per<wbr>Interface</a>
@@ -240,7 +228,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv6 addresses per network interface.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="totalfpgamemory_csharp">
 <a href="#totalfpgamemory_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Fpga<wbr>Memory</a>
@@ -249,7 +238,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total memory of all FPGA accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="totalgpumemory_csharp">
 <a href="#totalgpumemory_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Gpu<wbr>Memory</a>
@@ -258,7 +248,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the memory for the GPU accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="totalinstancestorage_csharp">
 <a href="#totalinstancestorage_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Instance<wbr>Storage</a>
@@ -267,11 +258,14 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the instance disks, in GB.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -280,7 +274,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultcores_go">
 <a href="#defaultcores_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cores</a>
@@ -289,7 +284,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default number of cores for the instance type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultthreadspercore_go">
 <a href="#defaultthreadspercore_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Threads<wbr>Per<wbr>Core</a>
@@ -298,7 +294,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The  default  number of threads per core for the instance type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="fpgas_go">
 <a href="#fpgas_go" style="color: inherit; text-decoration: inherit;">Fpgas</a>
@@ -311,7 +308,8 @@ The following arguments are supported:
 * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
 * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
 * `fpgas.#.name` - The name of the FPGA accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="gpuses_go">
 <a href="#gpuses_go" style="color: inherit; text-decoration: inherit;">Gpuses</a>
@@ -324,7 +322,8 @@ The following arguments are supported:
 * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
 * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
 * `gpus.#.name` - The name of the GPU accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="hypervisor_go">
 <a href="#hypervisor_go" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
@@ -337,7 +336,8 @@ The following arguments are supported:
 * `inference_accelerators.#.count` - The number of Inference accelerators for the instance type.
 * `inference_accelerators.#.manufacturer` - The manufacturer of the Inference accelerator.
 * `inference_accelerators.#.name` - The name of the Inference accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inferenceaccelerators_go">
 <a href="#inferenceaccelerators_go" style="color: inherit; text-decoration: inherit;">Inference<wbr>Accelerators</a>
@@ -345,7 +345,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">[]Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instancedisks_go">
 <a href="#instancedisks_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Disks</a>
@@ -357,7 +358,8 @@ The following arguments are supported:
 * `instance_disks.#.count` - The number of disks with this configuration.
 * `instance_disks.#.size` - The size of the disk in GB.
 * `instance_disks.#.type` - The type of disk.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="maximumipv6addressesperinterface_go">
 <a href="#maximumipv6addressesperinterface_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Ipv6Addresses<wbr>Per<wbr>Interface</a>
@@ -366,7 +368,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv6 addresses per network interface.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="totalfpgamemory_go">
 <a href="#totalfpgamemory_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Fpga<wbr>Memory</a>
@@ -375,7 +378,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total memory of all FPGA accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="totalgpumemory_go">
 <a href="#totalgpumemory_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Gpu<wbr>Memory</a>
@@ -384,7 +388,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the memory for the GPU accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="totalinstancestorage_go">
 <a href="#totalinstancestorage_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Instance<wbr>Storage</a>
@@ -393,11 +398,14 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the instance disks, in GB.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -406,7 +414,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultcores_nodejs">
 <a href="#defaultcores_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cores</a>
@@ -415,7 +424,8 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default number of cores for the instance type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultthreadspercore_nodejs">
 <a href="#defaultthreadspercore_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Threads<wbr>Per<wbr>Core</a>
@@ -424,7 +434,8 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The  default  number of threads per core for the instance type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="fpgas_nodejs">
 <a href="#fpgas_nodejs" style="color: inherit; text-decoration: inherit;">fpgas</a>
@@ -437,7 +448,8 @@ The following arguments are supported:
 * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
 * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
 * `fpgas.#.name` - The name of the FPGA accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="gpuses_nodejs">
 <a href="#gpuses_nodejs" style="color: inherit; text-decoration: inherit;">gpuses</a>
@@ -450,7 +462,8 @@ The following arguments are supported:
 * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
 * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
 * `gpus.#.name` - The name of the GPU accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="hypervisor_nodejs">
 <a href="#hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
@@ -463,7 +476,8 @@ The following arguments are supported:
 * `inference_accelerators.#.count` - The number of Inference accelerators for the instance type.
 * `inference_accelerators.#.manufacturer` - The manufacturer of the Inference accelerator.
 * `inference_accelerators.#.name` - The name of the Inference accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inferenceaccelerators_nodejs">
 <a href="#inferenceaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">inference<wbr>Accelerators</a>
@@ -471,7 +485,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instancedisks_nodejs">
 <a href="#instancedisks_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Disks</a>
@@ -483,7 +498,8 @@ The following arguments are supported:
 * `instance_disks.#.count` - The number of disks with this configuration.
 * `instance_disks.#.size` - The size of the disk in GB.
 * `instance_disks.#.type` - The type of disk.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="maximumipv6addressesperinterface_nodejs">
 <a href="#maximumipv6addressesperinterface_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Ipv6Addresses<wbr>Per<wbr>Interface</a>
@@ -492,7 +508,8 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv6 addresses per network interface.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="totalfpgamemory_nodejs">
 <a href="#totalfpgamemory_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Fpga<wbr>Memory</a>
@@ -501,7 +518,8 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total memory of all FPGA accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="totalgpumemory_nodejs">
 <a href="#totalgpumemory_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Gpu<wbr>Memory</a>
@@ -510,7 +528,8 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total size of the memory for the GPU accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="totalinstancestorage_nodejs">
 <a href="#totalinstancestorage_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Instance<wbr>Storage</a>
@@ -519,11 +538,14 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total size of the instance disks, in GB.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -532,7 +554,8 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_cores_python">
 <a href="#default_cores_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cores</a>
@@ -541,7 +564,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default number of cores for the instance type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_threads_per_core_python">
 <a href="#default_threads_per_core_python" style="color: inherit; text-decoration: inherit;">default_<wbr>threads_<wbr>per_<wbr>core</a>
@@ -550,7 +574,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The  default  number of threads per core for the instance type.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="fpgas_python">
 <a href="#fpgas_python" style="color: inherit; text-decoration: inherit;">fpgas</a>
@@ -563,7 +588,8 @@ The following arguments are supported:
 * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
 * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
 * `fpgas.#.name` - The name of the FPGA accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="gpuses_python">
 <a href="#gpuses_python" style="color: inherit; text-decoration: inherit;">gpuses</a>
@@ -576,7 +602,8 @@ The following arguments are supported:
 * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
 * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
 * `gpus.#.name` - The name of the GPU accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="hypervisor_python">
 <a href="#hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
@@ -589,7 +616,8 @@ The following arguments are supported:
 * `inference_accelerators.#.count` - The number of Inference accelerators for the instance type.
 * `inference_accelerators.#.manufacturer` - The manufacturer of the Inference accelerator.
 * `inference_accelerators.#.name` - The name of the Inference accelerator.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="inference_accelerators_python">
 <a href="#inference_accelerators_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>accelerators</a>
@@ -597,7 +625,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">Sequence[Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instance_disks_python">
 <a href="#instance_disks_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>disks</a>
@@ -609,7 +638,8 @@ The following arguments are supported:
 * `instance_disks.#.count` - The number of disks with this configuration.
 * `instance_disks.#.size` - The size of the disk in GB.
 * `instance_disks.#.type` - The type of disk.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="maximum_ipv6_addresses_per_interface_python">
 <a href="#maximum_ipv6_addresses_per_interface_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>ipv6_<wbr>addresses_<wbr>per_<wbr>interface</a>
@@ -618,7 +648,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv6 addresses per network interface.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="total_fpga_memory_python">
 <a href="#total_fpga_memory_python" style="color: inherit; text-decoration: inherit;">total_<wbr>fpga_<wbr>memory</a>
@@ -627,7 +658,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total memory of all FPGA accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="total_gpu_memory_python">
 <a href="#total_gpu_memory_python" style="color: inherit; text-decoration: inherit;">total_<wbr>gpu_<wbr>memory</a>
@@ -636,7 +668,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the memory for the GPU accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="total_instance_storage_python">
 <a href="#total_instance_storage_python" style="color: inherit; text-decoration: inherit;">total_<wbr>instance_<wbr>storage</a>
@@ -645,7 +678,8 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the instance disks, in GB.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -658,7 +692,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="autorecoverysupported_csharp">
 <a href="#autorecoverysupported_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Recovery<wbr>Supported</a>
@@ -667,7 +703,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if auto recovery is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="baremetal_csharp">
 <a href="#baremetal_csharp" style="color: inherit; text-decoration: inherit;">Bare<wbr>Metal</a>
@@ -676,7 +713,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if it is a bare metal instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="burstableperformancesupported_csharp">
 <a href="#burstableperformancesupported_csharp" style="color: inherit; text-decoration: inherit;">Burstable<wbr>Performance<wbr>Supported</a>
@@ -685,7 +723,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the instance type is a burstable performance instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="currentgeneration_csharp">
 <a href="#currentgeneration_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Generation</a>
@@ -694,7 +733,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true`  if the instance type is a current generation.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dedicatedhostssupported_csharp">
 <a href="#dedicatedhostssupported_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Hosts<wbr>Supported</a>
@@ -703,7 +743,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if Dedicated Hosts are supported on the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultcores_csharp">
 <a href="#defaultcores_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cores</a>
@@ -712,7 +753,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default number of cores for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultthreadspercore_csharp">
 <a href="#defaultthreadspercore_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Threads<wbr>Per<wbr>Core</a>
@@ -721,7 +763,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The  default  number of threads per core for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultvcpus_csharp">
 <a href="#defaultvcpus_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Vcpus</a>
@@ -730,7 +773,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default number of vCPUs for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsencryptionsupport_csharp">
 <a href="#ebsencryptionsupport_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Encryption<wbr>Support</a>
@@ -739,7 +783,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Amazon EBS encryption is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsnvmesupport_csharp">
 <a href="#ebsnvmesupport_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Nvme<wbr>Support</a>
@@ -748,7 +793,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether non-volatile memory express (NVMe) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsoptimizedsupport_csharp">
 <a href="#ebsoptimizedsupport_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized<wbr>Support</a>
@@ -757,7 +803,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that the instance type is Amazon EBS-optimized.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancebaselinebandwidth_csharp">
 <a href="#ebsperformancebaselinebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Baseline<wbr>Bandwidth</a>
@@ -766,7 +813,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline bandwidth performance for an EBS-optimized instance type, in Mbps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancebaselineiops_csharp">
 <a href="#ebsperformancebaselineiops_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Baseline<wbr>Iops</a>
@@ -775,7 +823,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline input/output storage operations per seconds for an EBS-optimized instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancebaselinethroughput_csharp">
 <a href="#ebsperformancebaselinethroughput_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Baseline<wbr>Throughput</a>
@@ -784,7 +833,8 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The baseline throughput performance for an EBS-optimized instance type, in MBps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancemaximumbandwidth_csharp">
 <a href="#ebsperformancemaximumbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Maximum<wbr>Bandwidth</a>
@@ -793,7 +843,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum bandwidth performance for an EBS-optimized instance type, in Mbps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancemaximumiops_csharp">
 <a href="#ebsperformancemaximumiops_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Maximum<wbr>Iops</a>
@@ -802,7 +853,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum input/output storage operations per second for an EBS-optimized instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancemaximumthroughput_csharp">
 <a href="#ebsperformancemaximumthroughput_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Maximum<wbr>Throughput</a>
@@ -811,7 +863,8 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum throughput performance for an EBS-optimized instance type, in MBps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="efasupported_csharp">
 <a href="#efasupported_csharp" style="color: inherit; text-decoration: inherit;">Efa<wbr>Supported</a>
@@ -820,7 +873,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Elastic Fabric Adapter (EFA) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="enasupport_csharp">
 <a href="#enasupport_csharp" style="color: inherit; text-decoration: inherit;">Ena<wbr>Support</a>
@@ -829,7 +883,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Elastic Network Adapter (ENA) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="fpgas_csharp">
 <a href="#fpgas_csharp" style="color: inherit; text-decoration: inherit;">Fpgas</a>
@@ -842,7 +897,8 @@ The following output properties are available:
 * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
 * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
 * `fpgas.#.name` - The name of the FPGA accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="freetiereligible_csharp">
 <a href="#freetiereligible_csharp" style="color: inherit; text-decoration: inherit;">Free<wbr>Tier<wbr>Eligible</a>
@@ -851,7 +907,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the instance type is eligible for the free tier.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="gpuses_csharp">
 <a href="#gpuses_csharp" style="color: inherit; text-decoration: inherit;">Gpuses</a>
@@ -864,7 +921,8 @@ The following output properties are available:
 * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
 * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
 * `gpus.#.name` - The name of the GPU accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hibernationsupported_csharp">
 <a href="#hibernationsupported_csharp" style="color: inherit; text-decoration: inherit;">Hibernation<wbr>Supported</a>
@@ -873,7 +931,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if On-Demand hibernation is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hypervisor_csharp">
 <a href="#hypervisor_csharp" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
@@ -886,7 +945,8 @@ The following output properties are available:
 * `inference_accelerators.#.count` - The number of Inference accelerators for the instance type.
 * `inference_accelerators.#.manufacturer` - The manufacturer of the Inference accelerator.
 * `inference_accelerators.#.name` - The name of the Inference accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -895,7 +955,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="inferenceaccelerators_csharp">
 <a href="#inferenceaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Inference<wbr>Accelerators</a>
@@ -903,7 +964,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">List&lt;Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancedisks_csharp">
 <a href="#instancedisks_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Disks</a>
@@ -915,7 +977,8 @@ The following output properties are available:
 * `instance_disks.#.count` - The number of disks with this configuration.
 * `instance_disks.#.size` - The size of the disk in GB.
 * `instance_disks.#.type` - The type of disk.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancestoragesupported_csharp">
 <a href="#instancestoragesupported_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Storage<wbr>Supported</a>
@@ -924,7 +987,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if instance storage is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -932,7 +996,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6supported_csharp">
 <a href="#ipv6supported_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Supported</a>
@@ -941,7 +1006,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if IPv6 is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximumipv4addressesperinterface_csharp">
 <a href="#maximumipv4addressesperinterface_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Ipv4Addresses<wbr>Per<wbr>Interface</a>
@@ -950,7 +1016,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv4 addresses per network interface.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximumipv6addressesperinterface_csharp">
 <a href="#maximumipv6addressesperinterface_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Ipv6Addresses<wbr>Per<wbr>Interface</a>
@@ -959,7 +1026,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv6 addresses per network interface.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximumnetworkinterfaces_csharp">
 <a href="#maximumnetworkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Network<wbr>Interfaces</a>
@@ -968,7 +1036,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of network interfaces for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="memorysize_csharp">
 <a href="#memorysize_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -977,7 +1046,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="networkperformance_csharp">
 <a href="#networkperformance_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance</a>
@@ -986,7 +1056,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the network performance.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedarchitectures_csharp">
 <a href="#supportedarchitectures_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Architectures</a>
@@ -995,7 +1066,8 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of architectures supported by the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedplacementstrategies_csharp">
 <a href="#supportedplacementstrategies_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Placement<wbr>Strategies</a>
@@ -1004,7 +1076,8 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of supported placement groups types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedrootdevicetypes_csharp">
 <a href="#supportedrootdevicetypes_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Root<wbr>Device<wbr>Types</a>
@@ -1013,7 +1086,8 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Indicates the supported root device types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedusagesclasses_csharp">
 <a href="#supportedusagesclasses_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Usages<wbr>Classes</a>
@@ -1022,7 +1096,8 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Indicates whether the instance type is offered for spot or On-Demand.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedvirtualizationtypes_csharp">
 <a href="#supportedvirtualizationtypes_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Virtualization<wbr>Types</a>
@@ -1031,7 +1106,8 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The supported virtualization types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="sustainedclockspeed_csharp">
 <a href="#sustainedclockspeed_csharp" style="color: inherit; text-decoration: inherit;">Sustained<wbr>Clock<wbr>Speed</a>
@@ -1040,7 +1116,8 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The speed of the processor, in GHz.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="totalfpgamemory_csharp">
 <a href="#totalfpgamemory_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Fpga<wbr>Memory</a>
@@ -1049,7 +1126,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total memory of all FPGA accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="totalgpumemory_csharp">
 <a href="#totalgpumemory_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Gpu<wbr>Memory</a>
@@ -1058,7 +1136,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the memory for the GPU accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="totalinstancestorage_csharp">
 <a href="#totalinstancestorage_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Instance<wbr>Storage</a>
@@ -1067,7 +1146,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the instance disks, in GB.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="validcores_csharp">
 <a href="#validcores_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Cores</a>
@@ -1076,7 +1156,8 @@ The following output properties are available:
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}List of the valid number of cores that can be configured for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="validthreadspercores_csharp">
 <a href="#validthreadspercores_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Threads<wbr>Per<wbr>Cores</a>
@@ -1085,11 +1166,14 @@ The following output properties are available:
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}List of the valid number of threads per core that can be configured for the instance type.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="autorecoverysupported_go">
 <a href="#autorecoverysupported_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Recovery<wbr>Supported</a>
@@ -1098,7 +1182,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if auto recovery is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="baremetal_go">
 <a href="#baremetal_go" style="color: inherit; text-decoration: inherit;">Bare<wbr>Metal</a>
@@ -1107,7 +1192,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if it is a bare metal instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="burstableperformancesupported_go">
 <a href="#burstableperformancesupported_go" style="color: inherit; text-decoration: inherit;">Burstable<wbr>Performance<wbr>Supported</a>
@@ -1116,7 +1202,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the instance type is a burstable performance instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="currentgeneration_go">
 <a href="#currentgeneration_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Generation</a>
@@ -1125,7 +1212,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true`  if the instance type is a current generation.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dedicatedhostssupported_go">
 <a href="#dedicatedhostssupported_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Hosts<wbr>Supported</a>
@@ -1134,7 +1222,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if Dedicated Hosts are supported on the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultcores_go">
 <a href="#defaultcores_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cores</a>
@@ -1143,7 +1232,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default number of cores for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultthreadspercore_go">
 <a href="#defaultthreadspercore_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Threads<wbr>Per<wbr>Core</a>
@@ -1152,7 +1242,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The  default  number of threads per core for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultvcpus_go">
 <a href="#defaultvcpus_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Vcpus</a>
@@ -1161,7 +1252,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default number of vCPUs for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsencryptionsupport_go">
 <a href="#ebsencryptionsupport_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Encryption<wbr>Support</a>
@@ -1170,7 +1262,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Amazon EBS encryption is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsnvmesupport_go">
 <a href="#ebsnvmesupport_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Nvme<wbr>Support</a>
@@ -1179,7 +1272,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether non-volatile memory express (NVMe) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsoptimizedsupport_go">
 <a href="#ebsoptimizedsupport_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized<wbr>Support</a>
@@ -1188,7 +1282,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that the instance type is Amazon EBS-optimized.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancebaselinebandwidth_go">
 <a href="#ebsperformancebaselinebandwidth_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Baseline<wbr>Bandwidth</a>
@@ -1197,7 +1292,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline bandwidth performance for an EBS-optimized instance type, in Mbps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancebaselineiops_go">
 <a href="#ebsperformancebaselineiops_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Baseline<wbr>Iops</a>
@@ -1206,7 +1302,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline input/output storage operations per seconds for an EBS-optimized instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancebaselinethroughput_go">
 <a href="#ebsperformancebaselinethroughput_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Baseline<wbr>Throughput</a>
@@ -1215,7 +1312,8 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The baseline throughput performance for an EBS-optimized instance type, in MBps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancemaximumbandwidth_go">
 <a href="#ebsperformancemaximumbandwidth_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Maximum<wbr>Bandwidth</a>
@@ -1224,7 +1322,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum bandwidth performance for an EBS-optimized instance type, in Mbps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancemaximumiops_go">
 <a href="#ebsperformancemaximumiops_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Maximum<wbr>Iops</a>
@@ -1233,7 +1332,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum input/output storage operations per second for an EBS-optimized instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancemaximumthroughput_go">
 <a href="#ebsperformancemaximumthroughput_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Performance<wbr>Maximum<wbr>Throughput</a>
@@ -1242,7 +1342,8 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum throughput performance for an EBS-optimized instance type, in MBps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="efasupported_go">
 <a href="#efasupported_go" style="color: inherit; text-decoration: inherit;">Efa<wbr>Supported</a>
@@ -1251,7 +1352,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Elastic Fabric Adapter (EFA) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="enasupport_go">
 <a href="#enasupport_go" style="color: inherit; text-decoration: inherit;">Ena<wbr>Support</a>
@@ -1260,7 +1362,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Elastic Network Adapter (ENA) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="fpgas_go">
 <a href="#fpgas_go" style="color: inherit; text-decoration: inherit;">Fpgas</a>
@@ -1273,7 +1376,8 @@ The following output properties are available:
 * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
 * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
 * `fpgas.#.name` - The name of the FPGA accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="freetiereligible_go">
 <a href="#freetiereligible_go" style="color: inherit; text-decoration: inherit;">Free<wbr>Tier<wbr>Eligible</a>
@@ -1282,7 +1386,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the instance type is eligible for the free tier.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="gpuses_go">
 <a href="#gpuses_go" style="color: inherit; text-decoration: inherit;">Gpuses</a>
@@ -1295,7 +1400,8 @@ The following output properties are available:
 * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
 * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
 * `gpus.#.name` - The name of the GPU accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hibernationsupported_go">
 <a href="#hibernationsupported_go" style="color: inherit; text-decoration: inherit;">Hibernation<wbr>Supported</a>
@@ -1304,7 +1410,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if On-Demand hibernation is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hypervisor_go">
 <a href="#hypervisor_go" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
@@ -1317,7 +1424,8 @@ The following output properties are available:
 * `inference_accelerators.#.count` - The number of Inference accelerators for the instance type.
 * `inference_accelerators.#.manufacturer` - The manufacturer of the Inference accelerator.
 * `inference_accelerators.#.name` - The name of the Inference accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1326,7 +1434,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="inferenceaccelerators_go">
 <a href="#inferenceaccelerators_go" style="color: inherit; text-decoration: inherit;">Inference<wbr>Accelerators</a>
@@ -1334,7 +1443,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">[]Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancedisks_go">
 <a href="#instancedisks_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Disks</a>
@@ -1346,7 +1456,8 @@ The following output properties are available:
 * `instance_disks.#.count` - The number of disks with this configuration.
 * `instance_disks.#.size` - The size of the disk in GB.
 * `instance_disks.#.type` - The type of disk.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancestoragesupported_go">
 <a href="#instancestoragesupported_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Storage<wbr>Supported</a>
@@ -1355,7 +1466,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if instance storage is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1363,7 +1475,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6supported_go">
 <a href="#ipv6supported_go" style="color: inherit; text-decoration: inherit;">Ipv6Supported</a>
@@ -1372,7 +1485,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if IPv6 is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximumipv4addressesperinterface_go">
 <a href="#maximumipv4addressesperinterface_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Ipv4Addresses<wbr>Per<wbr>Interface</a>
@@ -1381,7 +1495,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv4 addresses per network interface.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximumipv6addressesperinterface_go">
 <a href="#maximumipv6addressesperinterface_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Ipv6Addresses<wbr>Per<wbr>Interface</a>
@@ -1390,7 +1505,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv6 addresses per network interface.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximumnetworkinterfaces_go">
 <a href="#maximumnetworkinterfaces_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Network<wbr>Interfaces</a>
@@ -1399,7 +1515,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of network interfaces for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="memorysize_go">
 <a href="#memorysize_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -1408,7 +1525,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="networkperformance_go">
 <a href="#networkperformance_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance</a>
@@ -1417,7 +1535,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the network performance.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedarchitectures_go">
 <a href="#supportedarchitectures_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Architectures</a>
@@ -1426,7 +1545,8 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of architectures supported by the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedplacementstrategies_go">
 <a href="#supportedplacementstrategies_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Placement<wbr>Strategies</a>
@@ -1435,7 +1555,8 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of supported placement groups types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedrootdevicetypes_go">
 <a href="#supportedrootdevicetypes_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Root<wbr>Device<wbr>Types</a>
@@ -1444,7 +1565,8 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Indicates the supported root device types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedusagesclasses_go">
 <a href="#supportedusagesclasses_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Usages<wbr>Classes</a>
@@ -1453,7 +1575,8 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the instance type is offered for spot or On-Demand.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedvirtualizationtypes_go">
 <a href="#supportedvirtualizationtypes_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Virtualization<wbr>Types</a>
@@ -1462,7 +1585,8 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The supported virtualization types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="sustainedclockspeed_go">
 <a href="#sustainedclockspeed_go" style="color: inherit; text-decoration: inherit;">Sustained<wbr>Clock<wbr>Speed</a>
@@ -1471,7 +1595,8 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The speed of the processor, in GHz.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="totalfpgamemory_go">
 <a href="#totalfpgamemory_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Fpga<wbr>Memory</a>
@@ -1480,7 +1605,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total memory of all FPGA accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="totalgpumemory_go">
 <a href="#totalgpumemory_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Gpu<wbr>Memory</a>
@@ -1489,7 +1615,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the memory for the GPU accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="totalinstancestorage_go">
 <a href="#totalinstancestorage_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Instance<wbr>Storage</a>
@@ -1498,7 +1625,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the instance disks, in GB.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="validcores_go">
 <a href="#validcores_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Cores</a>
@@ -1507,7 +1635,8 @@ The following output properties are available:
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}List of the valid number of cores that can be configured for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="validthreadspercores_go">
 <a href="#validthreadspercores_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Threads<wbr>Per<wbr>Cores</a>
@@ -1516,11 +1645,14 @@ The following output properties are available:
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}List of the valid number of threads per core that can be configured for the instance type.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="autorecoverysupported_nodejs">
 <a href="#autorecoverysupported_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Recovery<wbr>Supported</a>
@@ -1529,7 +1661,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if auto recovery is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="baremetal_nodejs">
 <a href="#baremetal_nodejs" style="color: inherit; text-decoration: inherit;">bare<wbr>Metal</a>
@@ -1538,7 +1671,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if it is a bare metal instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="burstableperformancesupported_nodejs">
 <a href="#burstableperformancesupported_nodejs" style="color: inherit; text-decoration: inherit;">burstable<wbr>Performance<wbr>Supported</a>
@@ -1547,7 +1681,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if the instance type is a burstable performance instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="currentgeneration_nodejs">
 <a href="#currentgeneration_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Generation</a>
@@ -1556,7 +1691,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true`  if the instance type is a current generation.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dedicatedhostssupported_nodejs">
 <a href="#dedicatedhostssupported_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Hosts<wbr>Supported</a>
@@ -1565,7 +1701,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if Dedicated Hosts are supported on the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultcores_nodejs">
 <a href="#defaultcores_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cores</a>
@@ -1574,7 +1711,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default number of cores for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultthreadspercore_nodejs">
 <a href="#defaultthreadspercore_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Threads<wbr>Per<wbr>Core</a>
@@ -1583,7 +1721,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The  default  number of threads per core for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="defaultvcpus_nodejs">
 <a href="#defaultvcpus_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Vcpus</a>
@@ -1592,7 +1731,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default number of vCPUs for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsencryptionsupport_nodejs">
 <a href="#ebsencryptionsupport_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Encryption<wbr>Support</a>
@@ -1601,7 +1741,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Amazon EBS encryption is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsnvmesupport_nodejs">
 <a href="#ebsnvmesupport_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Nvme<wbr>Support</a>
@@ -1610,7 +1751,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether non-volatile memory express (NVMe) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsoptimizedsupport_nodejs">
 <a href="#ebsoptimizedsupport_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized<wbr>Support</a>
@@ -1619,7 +1761,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that the instance type is Amazon EBS-optimized.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancebaselinebandwidth_nodejs">
 <a href="#ebsperformancebaselinebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Performance<wbr>Baseline<wbr>Bandwidth</a>
@@ -1628,7 +1771,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The baseline bandwidth performance for an EBS-optimized instance type, in Mbps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancebaselineiops_nodejs">
 <a href="#ebsperformancebaselineiops_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Performance<wbr>Baseline<wbr>Iops</a>
@@ -1637,7 +1781,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The baseline input/output storage operations per seconds for an EBS-optimized instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancebaselinethroughput_nodejs">
 <a href="#ebsperformancebaselinethroughput_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Performance<wbr>Baseline<wbr>Throughput</a>
@@ -1646,7 +1791,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The baseline throughput performance for an EBS-optimized instance type, in MBps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancemaximumbandwidth_nodejs">
 <a href="#ebsperformancemaximumbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Performance<wbr>Maximum<wbr>Bandwidth</a>
@@ -1655,7 +1801,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum bandwidth performance for an EBS-optimized instance type, in Mbps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancemaximumiops_nodejs">
 <a href="#ebsperformancemaximumiops_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Performance<wbr>Maximum<wbr>Iops</a>
@@ -1664,7 +1811,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum input/output storage operations per second for an EBS-optimized instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebsperformancemaximumthroughput_nodejs">
 <a href="#ebsperformancemaximumthroughput_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Performance<wbr>Maximum<wbr>Throughput</a>
@@ -1673,7 +1821,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum throughput performance for an EBS-optimized instance type, in MBps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="efasupported_nodejs">
 <a href="#efasupported_nodejs" style="color: inherit; text-decoration: inherit;">efa<wbr>Supported</a>
@@ -1682,7 +1831,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether Elastic Fabric Adapter (EFA) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="enasupport_nodejs">
 <a href="#enasupport_nodejs" style="color: inherit; text-decoration: inherit;">ena<wbr>Support</a>
@@ -1691,7 +1841,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Elastic Network Adapter (ENA) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="fpgas_nodejs">
 <a href="#fpgas_nodejs" style="color: inherit; text-decoration: inherit;">fpgas</a>
@@ -1704,7 +1855,8 @@ The following output properties are available:
 * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
 * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
 * `fpgas.#.name` - The name of the FPGA accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="freetiereligible_nodejs">
 <a href="#freetiereligible_nodejs" style="color: inherit; text-decoration: inherit;">free<wbr>Tier<wbr>Eligible</a>
@@ -1713,7 +1865,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if the instance type is eligible for the free tier.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="gpuses_nodejs">
 <a href="#gpuses_nodejs" style="color: inherit; text-decoration: inherit;">gpuses</a>
@@ -1726,7 +1879,8 @@ The following output properties are available:
 * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
 * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
 * `gpus.#.name` - The name of the GPU accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hibernationsupported_nodejs">
 <a href="#hibernationsupported_nodejs" style="color: inherit; text-decoration: inherit;">hibernation<wbr>Supported</a>
@@ -1735,7 +1889,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if On-Demand hibernation is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hypervisor_nodejs">
 <a href="#hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
@@ -1748,7 +1903,8 @@ The following output properties are available:
 * `inference_accelerators.#.count` - The number of Inference accelerators for the instance type.
 * `inference_accelerators.#.manufacturer` - The manufacturer of the Inference accelerator.
 * `inference_accelerators.#.name` - The name of the Inference accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1757,7 +1913,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="inferenceaccelerators_nodejs">
 <a href="#inferenceaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">inference<wbr>Accelerators</a>
@@ -1765,7 +1922,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancedisks_nodejs">
 <a href="#instancedisks_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Disks</a>
@@ -1777,7 +1935,8 @@ The following output properties are available:
 * `instance_disks.#.count` - The number of disks with this configuration.
 * `instance_disks.#.size` - The size of the disk in GB.
 * `instance_disks.#.type` - The type of disk.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancestoragesupported_nodejs">
 <a href="#instancestoragesupported_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Storage<wbr>Supported</a>
@@ -1786,7 +1945,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if instance storage is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1794,7 +1954,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6supported_nodejs">
 <a href="#ipv6supported_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Supported</a>
@@ -1803,7 +1964,8 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if IPv6 is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximumipv4addressesperinterface_nodejs">
 <a href="#maximumipv4addressesperinterface_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Ipv4Addresses<wbr>Per<wbr>Interface</a>
@@ -1812,7 +1974,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv4 addresses per network interface.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximumipv6addressesperinterface_nodejs">
 <a href="#maximumipv6addressesperinterface_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Ipv6Addresses<wbr>Per<wbr>Interface</a>
@@ -1821,7 +1984,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv6 addresses per network interface.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximumnetworkinterfaces_nodejs">
 <a href="#maximumnetworkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Network<wbr>Interfaces</a>
@@ -1830,7 +1994,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of network interfaces for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="memorysize_nodejs">
 <a href="#memorysize_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
@@ -1839,7 +2004,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="networkperformance_nodejs">
 <a href="#networkperformance_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Performance</a>
@@ -1848,7 +2014,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the network performance.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedarchitectures_nodejs">
 <a href="#supportedarchitectures_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Architectures</a>
@@ -1857,7 +2024,8 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of architectures supported by the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedplacementstrategies_nodejs">
 <a href="#supportedplacementstrategies_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Placement<wbr>Strategies</a>
@@ -1866,7 +2034,8 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of supported placement groups types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedrootdevicetypes_nodejs">
 <a href="#supportedrootdevicetypes_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Root<wbr>Device<wbr>Types</a>
@@ -1875,7 +2044,8 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Indicates the supported root device types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedusagesclasses_nodejs">
 <a href="#supportedusagesclasses_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Usages<wbr>Classes</a>
@@ -1884,7 +2054,8 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the instance type is offered for spot or On-Demand.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supportedvirtualizationtypes_nodejs">
 <a href="#supportedvirtualizationtypes_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Virtualization<wbr>Types</a>
@@ -1893,7 +2064,8 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The supported virtualization types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="sustainedclockspeed_nodejs">
 <a href="#sustainedclockspeed_nodejs" style="color: inherit; text-decoration: inherit;">sustained<wbr>Clock<wbr>Speed</a>
@@ -1902,7 +2074,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The speed of the processor, in GHz.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="totalfpgamemory_nodejs">
 <a href="#totalfpgamemory_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Fpga<wbr>Memory</a>
@@ -1911,7 +2084,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total memory of all FPGA accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="totalgpumemory_nodejs">
 <a href="#totalgpumemory_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Gpu<wbr>Memory</a>
@@ -1920,7 +2094,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total size of the memory for the GPU accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="totalinstancestorage_nodejs">
 <a href="#totalinstancestorage_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Instance<wbr>Storage</a>
@@ -1929,7 +2104,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total size of the instance disks, in GB.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="validcores_nodejs">
 <a href="#validcores_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Cores</a>
@@ -1938,7 +2114,8 @@ The following output properties are available:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}List of the valid number of cores that can be configured for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="validthreadspercores_nodejs">
 <a href="#validthreadspercores_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Threads<wbr>Per<wbr>Cores</a>
@@ -1947,11 +2124,14 @@ The following output properties are available:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}List of the valid number of threads per core that can be configured for the instance type.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="auto_recovery_supported_python">
 <a href="#auto_recovery_supported_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>recovery_<wbr>supported</a>
@@ -1960,7 +2140,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if auto recovery is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="bare_metal_python">
 <a href="#bare_metal_python" style="color: inherit; text-decoration: inherit;">bare_<wbr>metal</a>
@@ -1969,7 +2150,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if it is a bare metal instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="burstable_performance_supported_python">
 <a href="#burstable_performance_supported_python" style="color: inherit; text-decoration: inherit;">burstable_<wbr>performance_<wbr>supported</a>
@@ -1978,7 +2160,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the instance type is a burstable performance instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="current_generation_python">
 <a href="#current_generation_python" style="color: inherit; text-decoration: inherit;">current_<wbr>generation</a>
@@ -1987,7 +2170,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true`  if the instance type is a current generation.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dedicated_hosts_supported_python">
 <a href="#dedicated_hosts_supported_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>hosts_<wbr>supported</a>
@@ -1996,7 +2180,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if Dedicated Hosts are supported on the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="default_cores_python">
 <a href="#default_cores_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cores</a>
@@ -2005,7 +2190,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default number of cores for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="default_threads_per_core_python">
 <a href="#default_threads_per_core_python" style="color: inherit; text-decoration: inherit;">default_<wbr>threads_<wbr>per_<wbr>core</a>
@@ -2014,7 +2200,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The  default  number of threads per core for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="default_vcpus_python">
 <a href="#default_vcpus_python" style="color: inherit; text-decoration: inherit;">default_<wbr>vcpus</a>
@@ -2023,7 +2210,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default number of vCPUs for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebs_encryption_support_python">
 <a href="#ebs_encryption_support_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>encryption_<wbr>support</a>
@@ -2032,7 +2220,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether Amazon EBS encryption is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebs_nvme_support_python">
 <a href="#ebs_nvme_support_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>nvme_<wbr>support</a>
@@ -2041,7 +2230,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether non-volatile memory express (NVMe) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebs_optimized_support_python">
 <a href="#ebs_optimized_support_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized_<wbr>support</a>
@@ -2050,7 +2240,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates that the instance type is Amazon EBS-optimized.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebs_performance_baseline_bandwidth_python">
 <a href="#ebs_performance_baseline_bandwidth_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>performance_<wbr>baseline_<wbr>bandwidth</a>
@@ -2059,7 +2250,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline bandwidth performance for an EBS-optimized instance type, in Mbps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebs_performance_baseline_iops_python">
 <a href="#ebs_performance_baseline_iops_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>performance_<wbr>baseline_<wbr>iops</a>
@@ -2068,7 +2260,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline input/output storage operations per seconds for an EBS-optimized instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebs_performance_baseline_throughput_python">
 <a href="#ebs_performance_baseline_throughput_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>performance_<wbr>baseline_<wbr>throughput</a>
@@ -2077,7 +2270,8 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The baseline throughput performance for an EBS-optimized instance type, in MBps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebs_performance_maximum_bandwidth_python">
 <a href="#ebs_performance_maximum_bandwidth_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>performance_<wbr>maximum_<wbr>bandwidth</a>
@@ -2086,7 +2280,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum bandwidth performance for an EBS-optimized instance type, in Mbps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebs_performance_maximum_iops_python">
 <a href="#ebs_performance_maximum_iops_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>performance_<wbr>maximum_<wbr>iops</a>
@@ -2095,7 +2290,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum input/output storage operations per second for an EBS-optimized instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ebs_performance_maximum_throughput_python">
 <a href="#ebs_performance_maximum_throughput_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>performance_<wbr>maximum_<wbr>throughput</a>
@@ -2104,7 +2300,8 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum throughput performance for an EBS-optimized instance type, in MBps.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="efa_supported_python">
 <a href="#efa_supported_python" style="color: inherit; text-decoration: inherit;">efa_<wbr>supported</a>
@@ -2113,7 +2310,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Elastic Fabric Adapter (EFA) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ena_support_python">
 <a href="#ena_support_python" style="color: inherit; text-decoration: inherit;">ena_<wbr>support</a>
@@ -2122,7 +2320,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether Elastic Network Adapter (ENA) is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="fpgas_python">
 <a href="#fpgas_python" style="color: inherit; text-decoration: inherit;">fpgas</a>
@@ -2135,7 +2334,8 @@ The following output properties are available:
 * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
 * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
 * `fpgas.#.name` - The name of the FPGA accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="free_tier_eligible_python">
 <a href="#free_tier_eligible_python" style="color: inherit; text-decoration: inherit;">free_<wbr>tier_<wbr>eligible</a>
@@ -2144,7 +2344,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the instance type is eligible for the free tier.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="gpuses_python">
 <a href="#gpuses_python" style="color: inherit; text-decoration: inherit;">gpuses</a>
@@ -2157,7 +2358,8 @@ The following output properties are available:
 * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
 * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
 * `gpus.#.name` - The name of the GPU accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hibernation_supported_python">
 <a href="#hibernation_supported_python" style="color: inherit; text-decoration: inherit;">hibernation_<wbr>supported</a>
@@ -2166,7 +2368,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if On-Demand hibernation is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="hypervisor_python">
 <a href="#hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
@@ -2179,7 +2382,8 @@ The following output properties are available:
 * `inference_accelerators.#.count` - The number of Inference accelerators for the instance type.
 * `inference_accelerators.#.manufacturer` - The manufacturer of the Inference accelerator.
 * `inference_accelerators.#.name` - The name of the Inference accelerator.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2188,7 +2392,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="inference_accelerators_python">
 <a href="#inference_accelerators_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>accelerators</a>
@@ -2196,7 +2401,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">Sequence[Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instance_disks_python">
 <a href="#instance_disks_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>disks</a>
@@ -2208,7 +2414,8 @@ The following output properties are available:
 * `instance_disks.#.count` - The number of disks with this configuration.
 * `instance_disks.#.size` - The size of the disk in GB.
 * `instance_disks.#.type` - The type of disk.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instance_storage_supported_python">
 <a href="#instance_storage_supported_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>storage_<wbr>supported</a>
@@ -2217,7 +2424,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if instance storage is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -2225,7 +2433,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6_supported_python">
 <a href="#ipv6_supported_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>supported</a>
@@ -2234,7 +2443,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if IPv6 is supported.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximum_ipv4_addresses_per_interface_python">
 <a href="#maximum_ipv4_addresses_per_interface_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>ipv4_<wbr>addresses_<wbr>per_<wbr>interface</a>
@@ -2243,7 +2453,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv4 addresses per network interface.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximum_ipv6_addresses_per_interface_python">
 <a href="#maximum_ipv6_addresses_per_interface_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>ipv6_<wbr>addresses_<wbr>per_<wbr>interface</a>
@@ -2252,7 +2463,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of IPv6 addresses per network interface.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="maximum_network_interfaces_python">
 <a href="#maximum_network_interfaces_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>network_<wbr>interfaces</a>
@@ -2261,7 +2473,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of network interfaces for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="memory_size_python">
 <a href="#memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
@@ -2270,7 +2483,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="network_performance_python">
 <a href="#network_performance_python" style="color: inherit; text-decoration: inherit;">network_<wbr>performance</a>
@@ -2279,7 +2493,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the network performance.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supported_architectures_python">
 <a href="#supported_architectures_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>architectures</a>
@@ -2288,7 +2503,8 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of architectures supported by the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supported_placement_strategies_python">
 <a href="#supported_placement_strategies_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>placement_<wbr>strategies</a>
@@ -2297,7 +2513,8 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of supported placement groups types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supported_root_device_types_python">
 <a href="#supported_root_device_types_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>root_<wbr>device_<wbr>types</a>
@@ -2306,7 +2523,8 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the supported root device types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supported_usages_classes_python">
 <a href="#supported_usages_classes_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>usages_<wbr>classes</a>
@@ -2315,7 +2533,8 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the instance type is offered for spot or On-Demand.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="supported_virtualization_types_python">
 <a href="#supported_virtualization_types_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>virtualization_<wbr>types</a>
@@ -2324,7 +2543,8 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The supported virtualization types.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="sustained_clock_speed_python">
 <a href="#sustained_clock_speed_python" style="color: inherit; text-decoration: inherit;">sustained_<wbr>clock_<wbr>speed</a>
@@ -2333,7 +2553,8 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The speed of the processor, in GHz.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="total_fpga_memory_python">
 <a href="#total_fpga_memory_python" style="color: inherit; text-decoration: inherit;">total_<wbr>fpga_<wbr>memory</a>
@@ -2342,7 +2563,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total memory of all FPGA accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="total_gpu_memory_python">
 <a href="#total_gpu_memory_python" style="color: inherit; text-decoration: inherit;">total_<wbr>gpu_<wbr>memory</a>
@@ -2351,7 +2573,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the memory for the GPU accelerators for the instance type (in MiB).
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="total_instance_storage_python">
 <a href="#total_instance_storage_python" style="color: inherit; text-decoration: inherit;">total_<wbr>instance_<wbr>storage</a>
@@ -2360,7 +2583,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of the instance disks, in GB.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="valid_cores_python">
 <a href="#valid_cores_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>cores</a>
@@ -2369,7 +2593,8 @@ The following output properties are available:
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}List of the valid number of cores that can be configured for the instance type.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="valid_threads_per_cores_python">
 <a href="#valid_threads_per_cores_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>threads_<wbr>per_<wbr>cores</a>
@@ -2378,7 +2603,8 @@ The following output properties are available:
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}List of the valid number of threads per core that can be configured for the instance type.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -2392,7 +2618,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2400,7 +2628,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_csharp">
 <a href="#manufacturer_csharp" style="color: inherit; text-decoration: inherit;">Manufacturer</a>
@@ -2408,7 +2637,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="memorysize_csharp">
 <a href="#memorysize_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -2417,7 +2647,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2425,11 +2656,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2437,7 +2671,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_go">
 <a href="#manufacturer_go" style="color: inherit; text-decoration: inherit;">Manufacturer</a>
@@ -2445,7 +2680,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="memorysize_go">
 <a href="#memorysize_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -2454,7 +2690,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2462,11 +2699,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2474,7 +2714,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_nodejs">
 <a href="#manufacturer_nodejs" style="color: inherit; text-decoration: inherit;">manufacturer</a>
@@ -2482,7 +2723,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="memorysize_nodejs">
 <a href="#memorysize_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
@@ -2491,7 +2733,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2499,11 +2742,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2511,7 +2757,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_python">
 <a href="#manufacturer_python" style="color: inherit; text-decoration: inherit;">manufacturer</a>
@@ -2519,7 +2766,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="memory_size_python">
 <a href="#memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
@@ -2528,7 +2776,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2536,7 +2785,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetypegpus">Get<wbr>Instance<wbr>Type<wbr>Gpus</h4>
@@ -2544,7 +2794,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2552,7 +2804,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_csharp">
 <a href="#manufacturer_csharp" style="color: inherit; text-decoration: inherit;">Manufacturer</a>
@@ -2560,7 +2813,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="memorysize_csharp">
 <a href="#memorysize_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -2569,7 +2823,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2577,11 +2832,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2589,7 +2847,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_go">
 <a href="#manufacturer_go" style="color: inherit; text-decoration: inherit;">Manufacturer</a>
@@ -2597,7 +2856,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="memorysize_go">
 <a href="#memorysize_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -2606,7 +2866,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2614,11 +2875,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2626,7 +2890,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_nodejs">
 <a href="#manufacturer_nodejs" style="color: inherit; text-decoration: inherit;">manufacturer</a>
@@ -2634,7 +2899,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="memorysize_nodejs">
 <a href="#memorysize_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
@@ -2643,7 +2909,8 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2651,11 +2918,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2663,7 +2933,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_python">
 <a href="#manufacturer_python" style="color: inherit; text-decoration: inherit;">manufacturer</a>
@@ -2671,7 +2942,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="memory_size_python">
 <a href="#memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
@@ -2680,7 +2952,8 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the instance memory, in MiB.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2688,7 +2961,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetypeinferenceaccelerator">Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator</h4>
@@ -2696,7 +2970,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2704,7 +2980,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_csharp">
 <a href="#manufacturer_csharp" style="color: inherit; text-decoration: inherit;">Manufacturer</a>
@@ -2712,7 +2989,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2720,11 +2998,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2732,7 +3013,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_go">
 <a href="#manufacturer_go" style="color: inherit; text-decoration: inherit;">Manufacturer</a>
@@ -2740,7 +3022,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2748,11 +3031,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2760,7 +3046,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_nodejs">
 <a href="#manufacturer_nodejs" style="color: inherit; text-decoration: inherit;">manufacturer</a>
@@ -2768,7 +3055,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2776,11 +3064,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2788,7 +3079,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="manufacturer_python">
 <a href="#manufacturer_python" style="color: inherit; text-decoration: inherit;">manufacturer</a>
@@ -2796,7 +3088,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2804,7 +3097,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetypeinstancedisk">Get<wbr>Instance<wbr>Type<wbr>Instance<wbr>Disk</h4>
@@ -2812,7 +3106,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2820,7 +3116,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -2828,7 +3125,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2836,11 +3134,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2848,7 +3149,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -2856,7 +3158,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2864,11 +3167,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2876,7 +3182,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2884,7 +3191,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2892,11 +3200,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2904,7 +3215,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2912,7 +3224,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2920,7 +3233,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -2934,6 +3248,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

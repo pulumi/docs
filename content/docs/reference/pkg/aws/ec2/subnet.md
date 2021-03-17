@@ -15,17 +15,11 @@ Provides an VPC subnet resource.
 > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), subnets associated with Lambda Functions can take up to 45 minutes to successfully delete.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-
 ### Basic Usage
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -48,12 +42,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -79,12 +70,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -97,12 +85,9 @@ main = aws.ec2.Subnet("main",
     })
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -117,17 +102,10 @@ const main = new aws.ec2.Subnet("main", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
+{{% /example %}}
 
 ### Subnets In Secondary VPC CIDR Blocks
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -151,12 +129,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -186,12 +161,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -204,12 +176,9 @@ in_secondary_cidr = aws.ec2.Subnet("inSecondaryCidr",
     cidr_block="172.2.0.0/24")
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -225,16 +194,9 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a Subnet Resource {#create}
@@ -259,7 +221,9 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -267,7 +231,9 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -275,7 +241,9 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,7 +251,10 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -309,7 +280,9 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -317,7 +290,9 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -325,7 +300,9 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -333,7 +310,9 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -341,13 +320,18 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -355,7 +339,9 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -363,7 +349,9 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -371,7 +359,10 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -386,7 +377,9 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -395,7 +388,8 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -404,7 +398,8 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="assignipv6addressoncreation_csharp">
 <a href="#assignipv6addressoncreation_csharp" style="color: inherit; text-decoration: inherit;">Assign<wbr>Ipv6Address<wbr>On<wbr>Creation</a>
@@ -415,7 +410,8 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
 assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -424,7 +420,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzoneid_csharp">
 <a href="#availabilityzoneid_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Id</a>
@@ -433,7 +430,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_csharp">
 <a href="#customerownedipv4pool_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -442,7 +440,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblock_csharp">
 <a href="#ipv6cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
@@ -452,7 +451,8 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mapcustomerownediponlaunch_csharp">
 <a href="#mapcustomerownediponlaunch_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -461,7 +461,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mappubliciponlaunch_csharp">
 <a href="#mappubliciponlaunch_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -472,7 +473,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
 a public IP address. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outpostarn_csharp">
 <a href="#outpostarn_csharp" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
@@ -481,7 +483,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -490,11 +493,14 @@ a public IP address. Default is `false`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -503,7 +509,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -512,7 +519,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="assignipv6addressoncreation_go">
 <a href="#assignipv6addressoncreation_go" style="color: inherit; text-decoration: inherit;">Assign<wbr>Ipv6Address<wbr>On<wbr>Creation</a>
@@ -523,7 +531,8 @@ a public IP address. Default is `false`.
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
 assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -532,7 +541,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzoneid_go">
 <a href="#availabilityzoneid_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Id</a>
@@ -541,7 +551,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_go">
 <a href="#customerownedipv4pool_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -550,7 +561,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblock_go">
 <a href="#ipv6cidrblock_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
@@ -560,7 +572,8 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mapcustomerownediponlaunch_go">
 <a href="#mapcustomerownediponlaunch_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -569,7 +582,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mappubliciponlaunch_go">
 <a href="#mappubliciponlaunch_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -580,7 +594,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
 a public IP address. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outpostarn_go">
 <a href="#outpostarn_go" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
@@ -589,7 +604,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -598,11 +614,14 @@ a public IP address. Default is `false`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -611,7 +630,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -620,7 +640,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="assignipv6addressoncreation_nodejs">
 <a href="#assignipv6addressoncreation_nodejs" style="color: inherit; text-decoration: inherit;">assign<wbr>Ipv6Address<wbr>On<wbr>Creation</a>
@@ -631,7 +652,8 @@ a public IP address. Default is `false`.
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
 assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -640,7 +662,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availabilityzoneid_nodejs">
 <a href="#availabilityzoneid_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Id</a>
@@ -649,7 +672,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_nodejs">
 <a href="#customerownedipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -658,7 +682,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblock_nodejs">
 <a href="#ipv6cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Block</a>
@@ -668,7 +693,8 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mapcustomerownediponlaunch_nodejs">
 <a href="#mapcustomerownediponlaunch_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -677,7 +703,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="mappubliciponlaunch_nodejs">
 <a href="#mappubliciponlaunch_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -688,7 +715,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
 a public IP address. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outpostarn_nodejs">
 <a href="#outpostarn_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Arn</a>
@@ -697,7 +725,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -706,11 +735,14 @@ a public IP address. Default is `false`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -719,7 +751,8 @@ a public IP address. Default is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -728,7 +761,8 @@ a public IP address. Default is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="assign_ipv6_address_on_creation_python">
 <a href="#assign_ipv6_address_on_creation_python" style="color: inherit; text-decoration: inherit;">assign_<wbr>ipv6_<wbr>address_<wbr>on_<wbr>creation</a>
@@ -739,7 +773,8 @@ a public IP address. Default is `false`.
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
 assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -748,7 +783,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="availability_zone_id_python">
 <a href="#availability_zone_id_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>id</a>
@@ -757,7 +793,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customer_owned_ipv4_pool_python">
 <a href="#customer_owned_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ipv4_<wbr>pool</a>
@@ -766,7 +803,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ipv6_cidr_block_python">
 <a href="#ipv6_cidr_block_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>block</a>
@@ -776,7 +814,8 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="map_customer_owned_ip_on_launch_python">
 <a href="#map_customer_owned_ip_on_launch_python" style="color: inherit; text-decoration: inherit;">map_<wbr>customer_<wbr>owned_<wbr>ip_<wbr>on_<wbr>launch</a>
@@ -785,7 +824,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="map_public_ip_on_launch_python">
 <a href="#map_public_ip_on_launch_python" style="color: inherit; text-decoration: inherit;">map_<wbr>public_<wbr>ip_<wbr>on_<wbr>launch</a>
@@ -796,7 +836,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
 a public IP address. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="outpost_arn_python">
 <a href="#outpost_arn_python" style="color: inherit; text-decoration: inherit;">outpost_<wbr>arn</a>
@@ -805,7 +846,8 @@ a public IP address. Default is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -814,7 +856,8 @@ a public IP address. Default is `false`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -825,7 +868,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -834,7 +879,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -842,7 +888,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6cidrblockassociationid_csharp">
 <a href="#ipv6cidrblockassociationid_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</a>
@@ -851,7 +898,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ownerid_csharp">
 <a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -860,11 +908,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -873,7 +924,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -881,7 +933,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6cidrblockassociationid_go">
 <a href="#ipv6cidrblockassociationid_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</a>
@@ -890,7 +943,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ownerid_go">
 <a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -899,11 +953,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -912,7 +969,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -920,7 +978,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6cidrblockassociationid_nodejs">
 <a href="#ipv6cidrblockassociationid_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</a>
@@ -929,7 +988,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ownerid_nodejs">
 <a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
@@ -938,11 +998,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -951,7 +1014,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -959,7 +1023,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6_cidr_block_association_id_python">
 <a href="#ipv6_cidr_block_association_id_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>block_<wbr>association_<wbr>id</a>
@@ -968,7 +1033,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="owner_id_python">
 <a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
@@ -977,7 +1043,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1104,7 +1171,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1113,7 +1182,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_assignipv6addressoncreation_csharp">
 <a href="#state_assignipv6addressoncreation_csharp" style="color: inherit; text-decoration: inherit;">Assign<wbr>Ipv6Address<wbr>On<wbr>Creation</a>
@@ -1124,7 +1194,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
 assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_csharp">
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1133,7 +1204,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzoneid_csharp">
 <a href="#state_availabilityzoneid_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Id</a>
@@ -1142,7 +1214,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cidrblock_csharp">
 <a href="#state_cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -1151,7 +1224,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customerownedipv4pool_csharp">
 <a href="#state_customerownedipv4pool_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -1160,7 +1234,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblock_csharp">
 <a href="#state_ipv6cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
@@ -1170,7 +1245,8 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblockassociationid_csharp">
 <a href="#state_ipv6cidrblockassociationid_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</a>
@@ -1179,7 +1255,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_mapcustomerownediponlaunch_csharp">
 <a href="#state_mapcustomerownediponlaunch_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -1188,7 +1265,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_mappubliciponlaunch_csharp">
 <a href="#state_mappubliciponlaunch_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -1199,7 +1277,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
 a public IP address. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_outpostarn_csharp">
 <a href="#state_outpostarn_csharp" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
@@ -1208,7 +1287,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_csharp">
 <a href="#state_ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -1217,7 +1297,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1226,7 +1307,8 @@ a public IP address. Default is `false`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
 <a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1235,11 +1317,14 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1248,7 +1333,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_assignipv6addressoncreation_go">
 <a href="#state_assignipv6addressoncreation_go" style="color: inherit; text-decoration: inherit;">Assign<wbr>Ipv6Address<wbr>On<wbr>Creation</a>
@@ -1259,7 +1345,8 @@ a public IP address. Default is `false`.
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
 assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_go">
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1268,7 +1355,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzoneid_go">
 <a href="#state_availabilityzoneid_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Id</a>
@@ -1277,7 +1365,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cidrblock_go">
 <a href="#state_cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -1286,7 +1375,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customerownedipv4pool_go">
 <a href="#state_customerownedipv4pool_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -1295,7 +1385,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblock_go">
 <a href="#state_ipv6cidrblock_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
@@ -1305,7 +1396,8 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblockassociationid_go">
 <a href="#state_ipv6cidrblockassociationid_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</a>
@@ -1314,7 +1406,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_mapcustomerownediponlaunch_go">
 <a href="#state_mapcustomerownediponlaunch_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -1323,7 +1416,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_mappubliciponlaunch_go">
 <a href="#state_mappubliciponlaunch_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -1334,7 +1428,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
 a public IP address. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_outpostarn_go">
 <a href="#state_outpostarn_go" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
@@ -1343,7 +1438,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_go">
 <a href="#state_ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -1352,7 +1448,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1361,7 +1458,8 @@ a public IP address. Default is `false`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
 <a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1370,11 +1468,14 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1383,7 +1484,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_assignipv6addressoncreation_nodejs">
 <a href="#state_assignipv6addressoncreation_nodejs" style="color: inherit; text-decoration: inherit;">assign<wbr>Ipv6Address<wbr>On<wbr>Creation</a>
@@ -1394,7 +1496,8 @@ a public IP address. Default is `false`.
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
 assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_nodejs">
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -1403,7 +1506,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzoneid_nodejs">
 <a href="#state_availabilityzoneid_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Id</a>
@@ -1412,7 +1516,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cidrblock_nodejs">
 <a href="#state_cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -1421,7 +1526,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customerownedipv4pool_nodejs">
 <a href="#state_customerownedipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -1430,7 +1536,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblock_nodejs">
 <a href="#state_ipv6cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Block</a>
@@ -1440,7 +1547,8 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblockassociationid_nodejs">
 <a href="#state_ipv6cidrblockassociationid_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</a>
@@ -1449,7 +1557,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_mapcustomerownediponlaunch_nodejs">
 <a href="#state_mapcustomerownediponlaunch_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -1458,7 +1567,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_mappubliciponlaunch_nodejs">
 <a href="#state_mappubliciponlaunch_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</a>
@@ -1469,7 +1579,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
 a public IP address. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_outpostarn_nodejs">
 <a href="#state_outpostarn_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Arn</a>
@@ -1478,7 +1589,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_nodejs">
 <a href="#state_ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
@@ -1487,7 +1599,8 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1496,7 +1609,8 @@ a public IP address. Default is `false`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -1505,11 +1619,14 @@ a public IP address. Default is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1518,7 +1635,8 @@ a public IP address. Default is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_assign_ipv6_address_on_creation_python">
 <a href="#state_assign_ipv6_address_on_creation_python" style="color: inherit; text-decoration: inherit;">assign_<wbr>ipv6_<wbr>address_<wbr>on_<wbr>creation</a>
@@ -1529,7 +1647,8 @@ a public IP address. Default is `false`.
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
 assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_python">
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -1538,7 +1657,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_id_python">
 <a href="#state_availability_zone_id_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>id</a>
@@ -1547,7 +1667,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_cidr_block_python">
 <a href="#state_cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -1556,7 +1677,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customer_owned_ipv4_pool_python">
 <a href="#state_customer_owned_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ipv4_<wbr>pool</a>
@@ -1565,7 +1687,8 @@ assigned an IPv6 address. Default is `false`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_cidr_block_python">
 <a href="#state_ipv6_cidr_block_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>block</a>
@@ -1575,7 +1698,8 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_cidr_block_association_id_python">
 <a href="#state_ipv6_cidr_block_association_id_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>block_<wbr>association_<wbr>id</a>
@@ -1584,7 +1708,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_map_customer_owned_ip_on_launch_python">
 <a href="#state_map_customer_owned_ip_on_launch_python" style="color: inherit; text-decoration: inherit;">map_<wbr>customer_<wbr>owned_<wbr>ip_<wbr>on_<wbr>launch</a>
@@ -1593,7 +1718,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_map_public_ip_on_launch_python">
 <a href="#state_map_public_ip_on_launch_python" style="color: inherit; text-decoration: inherit;">map_<wbr>public_<wbr>ip_<wbr>on_<wbr>launch</a>
@@ -1604,7 +1730,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
 a public IP address. Default is `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_outpost_arn_python">
 <a href="#state_outpost_arn_python" style="color: inherit; text-decoration: inherit;">outpost_<wbr>arn</a>
@@ -1613,7 +1740,8 @@ a public IP address. Default is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_owner_id_python">
 <a href="#state_owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
@@ -1622,7 +1750,8 @@ a public IP address. Default is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1631,7 +1760,8 @@ a public IP address. Default is `false`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -1640,7 +1770,8 @@ a public IP address. Default is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1666,6 +1797,6 @@ Subnets can be imported using the `subnet id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

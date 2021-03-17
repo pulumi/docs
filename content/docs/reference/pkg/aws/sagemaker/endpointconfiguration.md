@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.sagemaker.EndpointConfiguration resource w
 Provides a SageMaker endpoint configuration resource.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -54,12 +48,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -91,12 +82,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -113,12 +101,9 @@ ec = aws.sagemaker.EndpointConfiguration("ec",
     })
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -137,16 +122,9 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a EndpointConfiguration Resource {#create}
@@ -171,7 +149,9 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -179,7 +159,9 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -187,7 +169,9 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -195,7 +179,10 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -221,7 +208,9 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -229,7 +218,9 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,7 +228,9 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -245,7 +238,9 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -253,13 +248,18 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -267,7 +267,9 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -275,7 +277,9 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,7 +287,10 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -298,7 +305,9 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="productionvariants_csharp">
 <a href="#productionvariants_csharp" style="color: inherit; text-decoration: inherit;">Production<wbr>Variants</a>
@@ -307,7 +316,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">List&lt;Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="datacaptureconfig_csharp">
 <a href="#datacaptureconfig_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
@@ -316,7 +326,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_csharp">
 <a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -325,7 +336,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -334,7 +346,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -343,11 +356,14 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="productionvariants_go">
 <a href="#productionvariants_go" style="color: inherit; text-decoration: inherit;">Production<wbr>Variants</a>
@@ -356,7 +372,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">[]Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="datacaptureconfig_go">
 <a href="#datacaptureconfig_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
@@ -365,7 +382,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_go">
 <a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -374,7 +392,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -383,7 +402,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -392,11 +412,14 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="productionvariants_nodejs">
 <a href="#productionvariants_nodejs" style="color: inherit; text-decoration: inherit;">production<wbr>Variants</a>
@@ -405,7 +428,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">Endpoint<wbr>Configuration<wbr>Production<wbr>Variant[]</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="datacaptureconfig_nodejs">
 <a href="#datacaptureconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Capture<wbr>Config</a>
@@ -414,7 +438,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_nodejs">
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
@@ -423,7 +448,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -432,7 +458,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -441,11 +468,14 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="production_variants_python">
 <a href="#production_variants_python" style="color: inherit; text-decoration: inherit;">production_<wbr>variants</a>
@@ -454,7 +484,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">Sequence[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="data_capture_config_python">
 <a href="#data_capture_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>capture_<wbr>config</a>
@@ -463,7 +494,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kms_key_arn_python">
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
@@ -472,7 +504,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -481,7 +514,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -490,7 +524,8 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -501,7 +536,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -510,7 +547,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -518,11 +556,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -531,7 +572,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -539,11 +581,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -552,7 +597,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -560,11 +606,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -573,7 +622,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -581,7 +631,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -708,7 +759,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -717,7 +770,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_datacaptureconfig_csharp">
 <a href="#state_datacaptureconfig_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
@@ -726,7 +780,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_csharp">
 <a href="#state_kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -735,7 +790,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -744,7 +800,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_productionvariants_csharp">
 <a href="#state_productionvariants_csharp" style="color: inherit; text-decoration: inherit;">Production<wbr>Variants</a>
@@ -753,7 +810,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">List&lt;Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -762,11 +820,14 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -775,7 +836,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_datacaptureconfig_go">
 <a href="#state_datacaptureconfig_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
@@ -784,7 +846,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_go">
 <a href="#state_kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -793,7 +856,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -802,7 +866,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_productionvariants_go">
 <a href="#state_productionvariants_go" style="color: inherit; text-decoration: inherit;">Production<wbr>Variants</a>
@@ -811,7 +876,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">[]Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -820,11 +886,14 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -833,7 +902,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_datacaptureconfig_nodejs">
 <a href="#state_datacaptureconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Capture<wbr>Config</a>
@@ -842,7 +912,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_nodejs">
 <a href="#state_kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
@@ -851,7 +922,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -860,7 +932,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_productionvariants_nodejs">
 <a href="#state_productionvariants_nodejs" style="color: inherit; text-decoration: inherit;">production<wbr>Variants</a>
@@ -869,7 +942,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">Endpoint<wbr>Configuration<wbr>Production<wbr>Variant[]</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -878,11 +952,14 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -891,7 +968,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_data_capture_config_python">
 <a href="#state_data_capture_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>capture_<wbr>config</a>
@@ -900,7 +978,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_arn_python">
 <a href="#state_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
@@ -909,7 +988,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -918,7 +998,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_production_variants_python">
 <a href="#state_production_variants_python" style="color: inherit; text-decoration: inherit;">production_<wbr>variants</a>
@@ -927,7 +1008,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">Sequence[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -936,7 +1018,8 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -951,7 +1034,9 @@ The following state arguments are supported:
 <h4 id="endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="captureoptions_csharp">
 <a href="#captureoptions_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Options</a>
@@ -960,7 +1045,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">List&lt;Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="destinations3uri_csharp">
 <a href="#destinations3uri_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>S3Uri</a>
@@ -969,7 +1055,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for S3 location where the captured data is stored.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="initialsamplingpercentage_csharp">
 <a href="#initialsamplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Sampling<wbr>Percentage</a>
@@ -978,7 +1065,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Portion of data to capture. Should be between 0 and 100.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="capturecontenttypeheader_csharp">
 <a href="#capturecontenttypeheader_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Content<wbr>Type<wbr>Header</a>
@@ -987,7 +1075,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content type headers to capture. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enablecapture_csharp">
 <a href="#enablecapture_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Capture</a>
@@ -996,7 +1085,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to enable data capture. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1005,11 +1095,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="captureoptions_go">
 <a href="#captureoptions_go" style="color: inherit; text-decoration: inherit;">Capture<wbr>Options</a>
@@ -1018,7 +1111,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">[]Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="destinations3uri_go">
 <a href="#destinations3uri_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>S3Uri</a>
@@ -1027,7 +1121,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for S3 location where the captured data is stored.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="initialsamplingpercentage_go">
 <a href="#initialsamplingpercentage_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Sampling<wbr>Percentage</a>
@@ -1036,7 +1131,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Portion of data to capture. Should be between 0 and 100.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="capturecontenttypeheader_go">
 <a href="#capturecontenttypeheader_go" style="color: inherit; text-decoration: inherit;">Capture<wbr>Content<wbr>Type<wbr>Header</a>
@@ -1045,7 +1141,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}The content type headers to capture. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enablecapture_go">
 <a href="#enablecapture_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Capture</a>
@@ -1054,7 +1151,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to enable data capture. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1063,11 +1161,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="captureoptions_nodejs">
 <a href="#captureoptions_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Options</a>
@@ -1076,7 +1177,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="destinations3uri_nodejs">
 <a href="#destinations3uri_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>S3Uri</a>
@@ -1085,7 +1187,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for S3 location where the captured data is stored.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="initialsamplingpercentage_nodejs">
 <a href="#initialsamplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Sampling<wbr>Percentage</a>
@@ -1094,7 +1197,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Portion of data to capture. Should be between 0 and 100.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="capturecontenttypeheader_nodejs">
 <a href="#capturecontenttypeheader_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Content<wbr>Type<wbr>Header</a>
@@ -1103,7 +1207,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}The content type headers to capture. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enablecapture_nodejs">
 <a href="#enablecapture_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Capture</a>
@@ -1112,7 +1217,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to enable data capture. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -1121,11 +1227,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="capture_options_python">
 <a href="#capture_options_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>options</a>
@@ -1134,7 +1243,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">Sequence[Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="destination_s3_uri_python">
 <a href="#destination_s3_uri_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>s3_<wbr>uri</a>
@@ -1143,7 +1253,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for S3 location where the captured data is stored.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="initial_sampling_percentage_python">
 <a href="#initial_sampling_percentage_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>sampling_<wbr>percentage</a>
@@ -1152,7 +1263,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Portion of data to capture. Should be between 0 and 100.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="capture_content_type_header_python">
 <a href="#capture_content_type_header_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>content_<wbr>type_<wbr>header</a>
@@ -1161,7 +1273,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content type headers to capture. Fields are documented below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="enable_capture_python">
 <a href="#enable_capture_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>capture</a>
@@ -1170,7 +1283,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to enable data capture. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -1179,13 +1293,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csvcontenttypes_csharp">
 <a href="#csvcontenttypes_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Content<wbr>Types</a>
@@ -1194,7 +1311,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The CSV content type headers to capture.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="jsoncontenttypes_csharp">
 <a href="#jsoncontenttypes_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Content<wbr>Types</a>
@@ -1203,11 +1321,14 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The JSON content type headers to capture.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csvcontenttypes_go">
 <a href="#csvcontenttypes_go" style="color: inherit; text-decoration: inherit;">Csv<wbr>Content<wbr>Types</a>
@@ -1216,7 +1337,8 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The CSV content type headers to capture.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="jsoncontenttypes_go">
 <a href="#jsoncontenttypes_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Content<wbr>Types</a>
@@ -1225,11 +1347,14 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The JSON content type headers to capture.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csvcontenttypes_nodejs">
 <a href="#csvcontenttypes_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Content<wbr>Types</a>
@@ -1238,7 +1363,8 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The CSV content type headers to capture.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="jsoncontenttypes_nodejs">
 <a href="#jsoncontenttypes_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Content<wbr>Types</a>
@@ -1247,11 +1373,14 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The JSON content type headers to capture.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="csv_content_types_python">
 <a href="#csv_content_types_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>content_<wbr>types</a>
@@ -1260,7 +1389,8 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The CSV content type headers to capture.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="json_content_types_python">
 <a href="#json_content_types_python" style="color: inherit; text-decoration: inherit;">json_<wbr>content_<wbr>types</a>
@@ -1269,13 +1399,16 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The JSON content type headers to capture.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="endpointconfigurationdatacaptureconfigcaptureoption">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="capturemode_csharp">
 <a href="#capturemode_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Mode</a>
@@ -1284,11 +1417,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the data to be captured. Should be one of `Input` or `Output`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="capturemode_go">
 <a href="#capturemode_go" style="color: inherit; text-decoration: inherit;">Capture<wbr>Mode</a>
@@ -1297,11 +1433,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the data to be captured. Should be one of `Input` or `Output`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="capturemode_nodejs">
 <a href="#capturemode_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Mode</a>
@@ -1310,11 +1449,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the data to be captured. Should be one of `Input` or `Output`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="capture_mode_python">
 <a href="#capture_mode_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>mode</a>
@@ -1323,13 +1465,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the data to be captured. Should be one of `Input` or `Output`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="endpointconfigurationproductionvariant">Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="initialinstancecount_csharp">
 <a href="#initialinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Instance<wbr>Count</a>
@@ -1338,7 +1483,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Initial number of instances used for auto-scaling.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1347,7 +1493,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="modelname_csharp">
 <a href="#modelname_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Name</a>
@@ -1356,7 +1503,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the model to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="acceleratortype_csharp">
 <a href="#acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
@@ -1365,7 +1513,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the Elastic Inference (EI) instance to use for the production variant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="initialvariantweight_csharp">
 <a href="#initialvariantweight_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Variant<wbr>Weight</a>
@@ -1374,7 +1523,8 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="variantname_csharp">
 <a href="#variantname_csharp" style="color: inherit; text-decoration: inherit;">Variant<wbr>Name</a>
@@ -1383,11 +1533,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variant. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="initialinstancecount_go">
 <a href="#initialinstancecount_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Instance<wbr>Count</a>
@@ -1396,7 +1549,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Initial number of instances used for auto-scaling.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1405,7 +1559,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="modelname_go">
 <a href="#modelname_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Name</a>
@@ -1414,7 +1569,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the model to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="acceleratortype_go">
 <a href="#acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
@@ -1423,7 +1579,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the Elastic Inference (EI) instance to use for the production variant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="initialvariantweight_go">
 <a href="#initialvariantweight_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Variant<wbr>Weight</a>
@@ -1432,7 +1589,8 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="variantname_go">
 <a href="#variantname_go" style="color: inherit; text-decoration: inherit;">Variant<wbr>Name</a>
@@ -1441,11 +1599,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variant. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="initialinstancecount_nodejs">
 <a href="#initialinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Instance<wbr>Count</a>
@@ -1454,7 +1615,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Initial number of instances used for auto-scaling.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1463,7 +1625,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="modelname_nodejs">
 <a href="#modelname_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Name</a>
@@ -1472,7 +1635,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the model to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="acceleratortype_nodejs">
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
@@ -1481,7 +1645,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the Elastic Inference (EI) instance to use for the production variant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="initialvariantweight_nodejs">
 <a href="#initialvariantweight_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Variant<wbr>Weight</a>
@@ -1490,7 +1655,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="variantname_nodejs">
 <a href="#variantname_nodejs" style="color: inherit; text-decoration: inherit;">variant<wbr>Name</a>
@@ -1499,11 +1665,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variant. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="initial_instance_count_python">
 <a href="#initial_instance_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>instance_<wbr>count</a>
@@ -1512,7 +1681,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Initial number of instances used for auto-scaling.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -1521,7 +1691,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of instance to start.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="model_name_python">
 <a href="#model_name_python" style="color: inherit; text-decoration: inherit;">model_<wbr>name</a>
@@ -1530,7 +1701,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the model to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="accelerator_type_python">
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
@@ -1539,7 +1711,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the Elastic Inference (EI) instance to use for the production variant.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="initial_variant_weight_python">
 <a href="#initial_variant_weight_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>variant_<wbr>weight</a>
@@ -1548,7 +1721,8 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="variant_name_python">
 <a href="#variant_name_python" style="color: inherit; text-decoration: inherit;">variant_<wbr>name</a>
@@ -1557,7 +1731,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the variant. If omitted, this provider will assign a random, unique name.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -1578,6 +1753,6 @@ Endpoint configurations can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

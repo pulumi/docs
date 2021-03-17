@@ -54,7 +54,9 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -63,7 +65,8 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -73,7 +76,8 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Boolean constraint on whether the desired VPC is
 the default VPC for the region.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dhcpoptionsid_csharp">
 <a href="#dhcpoptionsid_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Options<wbr>Id</a>
@@ -82,7 +86,8 @@ the default VPC for the region.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DHCP options id of the desired VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -91,7 +96,8 @@ the default VPC for the region.
         <span class="property-type"><a href="#getvpcfilter">List&lt;Get<wbr>Vpc<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -100,7 +106,8 @@ the default VPC for the region.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the specific VPC to retrieve.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -110,7 +117,8 @@ the default VPC for the region.
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -120,11 +128,14 @@ Can be either `"pending"` or `"available"`.
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired VPC.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -133,7 +144,8 @@ a pair on the desired VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -143,7 +155,8 @@ a pair on the desired VPC.
     </dt>
     <dd>{{% md %}}Boolean constraint on whether the desired VPC is
 the default VPC for the region.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dhcpoptionsid_go">
 <a href="#dhcpoptionsid_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Options<wbr>Id</a>
@@ -152,7 +165,8 @@ the default VPC for the region.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DHCP options id of the desired VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -161,7 +175,8 @@ the default VPC for the region.
         <span class="property-type"><a href="#getvpcfilter">[]Get<wbr>Vpc<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -170,7 +185,8 @@ the default VPC for the region.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the specific VPC to retrieve.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -180,7 +196,8 @@ the default VPC for the region.
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -190,11 +207,14 @@ Can be either `"pending"` or `"available"`.
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired VPC.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -203,7 +223,8 @@ a pair on the desired VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
@@ -213,7 +234,8 @@ a pair on the desired VPC.
     </dt>
     <dd>{{% md %}}Boolean constraint on whether the desired VPC is
 the default VPC for the region.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dhcpoptionsid_nodejs">
 <a href="#dhcpoptionsid_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Options<wbr>Id</a>
@@ -222,7 +244,8 @@ the default VPC for the region.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DHCP options id of the desired VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -231,7 +254,8 @@ the default VPC for the region.
         <span class="property-type"><a href="#getvpcfilter">Get<wbr>Vpc<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -240,7 +264,8 @@ the default VPC for the region.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the specific VPC to retrieve.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -250,7 +275,8 @@ the default VPC for the region.
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -260,11 +286,14 @@ Can be either `"pending"` or `"available"`.
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired VPC.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -273,7 +302,8 @@ a pair on the desired VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
@@ -283,7 +313,8 @@ a pair on the desired VPC.
     </dt>
     <dd>{{% md %}}Boolean constraint on whether the desired VPC is
 the default VPC for the region.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="dhcp_options_id_python">
 <a href="#dhcp_options_id_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>options_<wbr>id</a>
@@ -292,7 +323,8 @@ the default VPC for the region.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DHCP options id of the desired VPC.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -301,7 +333,8 @@ the default VPC for the region.
         <span class="property-type"><a href="#getvpcfilter">Sequence[Get<wbr>Vpc<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -310,7 +343,8 @@ the default VPC for the region.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the specific VPC to retrieve.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -320,7 +354,8 @@ the default VPC for the region.
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -330,7 +365,8 @@ Can be either `"pending"` or `"available"`.
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired VPC.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -343,7 +379,9 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -352,7 +390,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of VPC
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -361,7 +400,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the association.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cidrblockassociations_csharp">
 <a href="#cidrblockassociations_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block<wbr>Associations</a>
@@ -369,7 +409,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpccidrblockassociation">List&lt;Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -377,7 +418,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dhcpoptionsid_csharp">
 <a href="#dhcpoptionsid_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Options<wbr>Id</a>
@@ -385,7 +427,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="enablednshostnames_csharp">
 <a href="#enablednshostnames_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dns<wbr>Hostnames</a>
@@ -394,7 +437,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS hostname support
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="enablednssupport_csharp">
 <a href="#enablednssupport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dns<wbr>Support</a>
@@ -403,7 +447,8 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS support
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -411,7 +456,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancetenancy_csharp">
 <a href="#instancetenancy_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tenancy</a>
@@ -421,7 +467,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The allowed tenancy of instances launched into the
 selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6associationid_csharp">
 <a href="#ipv6associationid_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Association<wbr>Id</a>
@@ -430,7 +477,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6cidrblock_csharp">
 <a href="#ipv6cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
@@ -439,7 +487,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="mainroutetableid_csharp">
 <a href="#mainroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Route<wbr>Table<wbr>Id</a>
@@ -448,7 +497,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with this VPC.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ownerid_csharp">
 <a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -457,7 +507,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -466,7 +517,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State of the association.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -474,7 +526,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -482,11 +535,14 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpcfilter">List&lt;Get<wbr>Vpc<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -495,7 +551,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of VPC
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -504,7 +561,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the association.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cidrblockassociations_go">
 <a href="#cidrblockassociations_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block<wbr>Associations</a>
@@ -512,7 +570,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpccidrblockassociation">[]Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -520,7 +579,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dhcpoptionsid_go">
 <a href="#dhcpoptionsid_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Options<wbr>Id</a>
@@ -528,7 +588,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="enablednshostnames_go">
 <a href="#enablednshostnames_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dns<wbr>Hostnames</a>
@@ -537,7 +598,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS hostname support
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="enablednssupport_go">
 <a href="#enablednssupport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dns<wbr>Support</a>
@@ -546,7 +608,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS support
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -554,7 +617,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancetenancy_go">
 <a href="#instancetenancy_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tenancy</a>
@@ -564,7 +628,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
     </dt>
     <dd>{{% md %}}The allowed tenancy of instances launched into the
 selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6associationid_go">
 <a href="#ipv6associationid_go" style="color: inherit; text-decoration: inherit;">Ipv6Association<wbr>Id</a>
@@ -573,7 +638,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6cidrblock_go">
 <a href="#ipv6cidrblock_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
@@ -582,7 +648,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="mainroutetableid_go">
 <a href="#mainroutetableid_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Route<wbr>Table<wbr>Id</a>
@@ -591,7 +658,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with this VPC.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ownerid_go">
 <a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -600,7 +668,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -609,7 +678,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State of the association.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -617,7 +687,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -625,11 +696,14 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpcfilter">[]Get<wbr>Vpc<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -638,7 +712,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of VPC
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -647,7 +722,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the association.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cidrblockassociations_nodejs">
 <a href="#cidrblockassociations_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block<wbr>Associations</a>
@@ -655,7 +731,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpccidrblockassociation">Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
@@ -663,7 +740,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dhcpoptionsid_nodejs">
 <a href="#dhcpoptionsid_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Options<wbr>Id</a>
@@ -671,7 +749,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="enablednshostnames_nodejs">
 <a href="#enablednshostnames_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dns<wbr>Hostnames</a>
@@ -680,7 +759,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS hostname support
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="enablednssupport_nodejs">
 <a href="#enablednssupport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dns<wbr>Support</a>
@@ -689,7 +769,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS support
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -697,7 +778,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instancetenancy_nodejs">
 <a href="#instancetenancy_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Tenancy</a>
@@ -707,7 +789,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
     </dt>
     <dd>{{% md %}}The allowed tenancy of instances launched into the
 selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6associationid_nodejs">
 <a href="#ipv6associationid_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Association<wbr>Id</a>
@@ -716,7 +799,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6cidrblock_nodejs">
 <a href="#ipv6cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Block</a>
@@ -725,7 +809,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="mainroutetableid_nodejs">
 <a href="#mainroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Route<wbr>Table<wbr>Id</a>
@@ -734,7 +819,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with this VPC.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ownerid_nodejs">
 <a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
@@ -743,7 +829,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -752,7 +839,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State of the association.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -760,7 +848,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -768,11 +857,14 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpcfilter">Get<wbr>Vpc<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -781,7 +873,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of VPC
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -790,7 +883,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the association.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="cidr_block_associations_python">
 <a href="#cidr_block_associations_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block_<wbr>associations</a>
@@ -798,7 +892,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpccidrblockassociation">Sequence[Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
@@ -806,7 +901,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="dhcp_options_id_python">
 <a href="#dhcp_options_id_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>options_<wbr>id</a>
@@ -814,7 +910,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="enable_dns_hostnames_python">
 <a href="#enable_dns_hostnames_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dns_<wbr>hostnames</a>
@@ -823,7 +920,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS hostname support
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="enable_dns_support_python">
 <a href="#enable_dns_support_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dns_<wbr>support</a>
@@ -832,7 +930,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS support
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -840,7 +939,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="instance_tenancy_python">
 <a href="#instance_tenancy_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tenancy</a>
@@ -850,7 +950,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
     </dt>
     <dd>{{% md %}}The allowed tenancy of instances launched into the
 selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6_association_id_python">
 <a href="#ipv6_association_id_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>association_<wbr>id</a>
@@ -859,7 +960,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="ipv6_cidr_block_python">
 <a href="#ipv6_cidr_block_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>block</a>
@@ -868,7 +970,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="main_route_table_id_python">
 <a href="#main_route_table_id_python" style="color: inherit; text-decoration: inherit;">main_<wbr>route_<wbr>table_<wbr>id</a>
@@ -877,7 +980,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with this VPC.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="owner_id_python">
 <a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
@@ -886,7 +990,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -895,7 +1000,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The State of the association.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -903,7 +1009,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -911,7 +1018,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpcfilter">Sequence[Get<wbr>Vpc<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -925,7 +1033,9 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="associationid_csharp">
 <a href="#associationid_csharp" style="color: inherit; text-decoration: inherit;">Association<wbr>Id</a>
@@ -934,7 +1044,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the the IPv4 CIDR block.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -943,7 +1054,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -953,11 +1065,14 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="associationid_go">
 <a href="#associationid_go" style="color: inherit; text-decoration: inherit;">Association<wbr>Id</a>
@@ -966,7 +1081,8 @@ Can be either `"pending"` or `"available"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the the IPv4 CIDR block.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -975,7 +1091,8 @@ Can be either `"pending"` or `"available"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -985,11 +1102,14 @@ Can be either `"pending"` or `"available"`.
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="associationid_nodejs">
 <a href="#associationid_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Id</a>
@@ -998,7 +1118,8 @@ Can be either `"pending"` or `"available"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the the IPv4 CIDR block.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -1007,7 +1128,8 @@ Can be either `"pending"` or `"available"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1017,11 +1139,14 @@ Can be either `"pending"` or `"available"`.
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="association_id_python">
 <a href="#association_id_python" style="color: inherit; text-decoration: inherit;">association_<wbr>id</a>
@@ -1030,7 +1155,8 @@ Can be either `"pending"` or `"available"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The association ID for the the IPv4 CIDR block.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -1039,7 +1165,8 @@ Can be either `"pending"` or `"available"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1049,7 +1176,8 @@ Can be either `"pending"` or `"available"`.
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 <h4 id="getvpcfilter">Get<wbr>Vpc<wbr>Filter</h4>
@@ -1057,7 +1185,9 @@ Can be either `"pending"` or `"available"`.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1067,7 +1197,8 @@ Can be either `"pending"` or `"available"`.
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcs.html).
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1077,11 +1208,14 @@ Can be either `"pending"` or `"available"`.
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1091,7 +1225,8 @@ A VPC will be selected if any one of the given values matches.
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcs.html).
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1101,11 +1236,14 @@ A VPC will be selected if any one of the given values matches.
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1115,7 +1253,8 @@ A VPC will be selected if any one of the given values matches.
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcs.html).
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1125,11 +1264,14 @@ A VPC will be selected if any one of the given values matches.
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1139,7 +1281,8 @@ A VPC will be selected if any one of the given values matches.
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcs.html).
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1149,7 +1292,8 @@ A VPC will be selected if any one of the given values matches.
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1163,6 +1307,6 @@ A VPC will be selected if any one of the given values matches.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

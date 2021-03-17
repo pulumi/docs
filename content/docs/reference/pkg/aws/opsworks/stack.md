@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.opsworks.Stack resource with examples, inp
 Provides an OpsWorks stack resource.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -53,12 +47,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -88,12 +79,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -113,12 +101,9 @@ main = aws.opsworks.Stack("main",
 """)
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -140,16 +125,9 @@ const main = new aws.opsworks.Stack("main", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a Stack Resource {#create}
@@ -174,7 +152,9 @@ const main = new aws.opsworks.Stack("main", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -182,7 +162,9 @@ const main = new aws.opsworks.Stack("main", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -190,7 +172,9 @@ const main = new aws.opsworks.Stack("main", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -198,7 +182,10 @@ const main = new aws.opsworks.Stack("main", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -224,7 +211,9 @@ const main = new aws.opsworks.Stack("main", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -232,7 +221,9 @@ const main = new aws.opsworks.Stack("main", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -240,7 +231,9 @@ const main = new aws.opsworks.Stack("main", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -248,7 +241,9 @@ const main = new aws.opsworks.Stack("main", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -256,13 +251,18 @@ const main = new aws.opsworks.Stack("main", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -270,7 +270,9 @@ const main = new aws.opsworks.Stack("main", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -278,7 +280,9 @@ const main = new aws.opsworks.Stack("main", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -286,7 +290,10 @@ const main = new aws.opsworks.Stack("main", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -301,7 +308,9 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="defaultinstanceprofilearn_csharp">
 <a href="#defaultinstanceprofilearn_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -311,7 +320,8 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The ARN of an IAM Instance Profile that created instances
 will have by default.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -320,7 +330,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the region where the stack will exist.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="servicerolearn_csharp">
 <a href="#servicerolearn_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Role<wbr>Arn</a>
@@ -329,7 +340,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that the OpsWorks service will act as.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="agentversion_csharp">
 <a href="#agentversion_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
@@ -338,7 +350,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `"LATEST"`, OpsWorks will automatically install the latest version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="berkshelfversion_csharp">
 <a href="#berkshelfversion_csharp" style="color: inherit; text-decoration: inherit;">Berkshelf<wbr>Version</a>
@@ -347,7 +360,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `manage_berkshelf` is enabled, the version of Berkshelf to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="color_csharp">
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -356,7 +370,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to paint next to the stack's resources in the OpsWorks console.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="configurationmanagername_csharp">
 <a href="#configurationmanagername_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Manager<wbr>Name</a>
@@ -365,7 +380,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration manager to use. Defaults to "Chef".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="configurationmanagerversion_csharp">
 <a href="#configurationmanagerversion_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Manager<wbr>Version</a>
@@ -374,7 +390,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the configuration manager to use. Defaults to "11.4".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customcookbookssources_csharp">
 <a href="#customcookbookssources_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cookbooks<wbr>Sources</a>
@@ -384,7 +401,8 @@ will have by default.
     </dt>
     <dd>{{% md %}}When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customjson_csharp">
 <a href="#customjson_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
@@ -393,7 +411,8 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the entire stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultavailabilityzone_csharp">
 <a href="#defaultavailabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Availability<wbr>Zone</a>
@@ -403,7 +422,8 @@ described below.
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default. This is required unless you set `vpc_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultos_csharp">
 <a href="#defaultos_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Os</a>
@@ -412,7 +432,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of OS that will be installed on instances by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultrootdevicetype_csharp">
 <a href="#defaultrootdevicetype_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Device<wbr>Type</a>
@@ -421,7 +442,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultsshkeyname_csharp">
 <a href="#defaultsshkeyname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssh<wbr>Key<wbr>Name</a>
@@ -430,7 +452,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultsubnetid_csharp">
 <a href="#defaultsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Subnet<wbr>Id</a>
@@ -440,7 +463,8 @@ by default. This is required unless you set `vpc_id`.
     </dt>
     <dd>{{% md %}}Id of the subnet in which instances will be created by default. Mandatory
 if `vpc_id` is set, and forbidden if it isn't.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="hostnametheme_csharp">
 <a href="#hostnametheme_csharp" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Theme</a>
@@ -450,7 +474,8 @@ if `vpc_id` is set, and forbidden if it isn't.
     </dt>
     <dd>{{% md %}}Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="manageberkshelf_csharp">
 <a href="#manageberkshelf_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Berkshelf</a>
@@ -459,7 +484,8 @@ within this stack.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value controlling whether Opsworks will run Berkshelf for this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -468,7 +494,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -477,7 +504,8 @@ within this stack.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="usecustomcookbooks_csharp">
 <a href="#usecustomcookbooks_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Custom<wbr>Cookbooks</a>
@@ -487,7 +515,8 @@ within this stack.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the custom cookbook settings are
 enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="useopsworkssecuritygroups_csharp">
 <a href="#useopsworkssecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Opsworks<wbr>Security<wbr>Groups</a>
@@ -497,7 +526,8 @@ enabled.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the standard OpsWorks
 security groups apply to created instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -506,11 +536,14 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that this stack belongs to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="defaultinstanceprofilearn_go">
 <a href="#defaultinstanceprofilearn_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -520,7 +553,8 @@ security groups apply to created instances.
     </dt>
     <dd>{{% md %}}The ARN of an IAM Instance Profile that created instances
 will have by default.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -529,7 +563,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the region where the stack will exist.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="servicerolearn_go">
 <a href="#servicerolearn_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Role<wbr>Arn</a>
@@ -538,7 +573,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that the OpsWorks service will act as.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="agentversion_go">
 <a href="#agentversion_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
@@ -547,7 +583,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `"LATEST"`, OpsWorks will automatically install the latest version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="berkshelfversion_go">
 <a href="#berkshelfversion_go" style="color: inherit; text-decoration: inherit;">Berkshelf<wbr>Version</a>
@@ -556,7 +593,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `manage_berkshelf` is enabled, the version of Berkshelf to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="color_go">
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -565,7 +603,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to paint next to the stack's resources in the OpsWorks console.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="configurationmanagername_go">
 <a href="#configurationmanagername_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Manager<wbr>Name</a>
@@ -574,7 +613,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration manager to use. Defaults to "Chef".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="configurationmanagerversion_go">
 <a href="#configurationmanagerversion_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Manager<wbr>Version</a>
@@ -583,7 +623,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the configuration manager to use. Defaults to "11.4".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customcookbookssources_go">
 <a href="#customcookbookssources_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cookbooks<wbr>Sources</a>
@@ -593,7 +634,8 @@ will have by default.
     </dt>
     <dd>{{% md %}}When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customjson_go">
 <a href="#customjson_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
@@ -602,7 +644,8 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the entire stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultavailabilityzone_go">
 <a href="#defaultavailabilityzone_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Availability<wbr>Zone</a>
@@ -612,7 +655,8 @@ described below.
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default. This is required unless you set `vpc_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultos_go">
 <a href="#defaultos_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Os</a>
@@ -621,7 +665,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of OS that will be installed on instances by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultrootdevicetype_go">
 <a href="#defaultrootdevicetype_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Device<wbr>Type</a>
@@ -630,7 +675,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultsshkeyname_go">
 <a href="#defaultsshkeyname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssh<wbr>Key<wbr>Name</a>
@@ -639,7 +685,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultsubnetid_go">
 <a href="#defaultsubnetid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Subnet<wbr>Id</a>
@@ -649,7 +696,8 @@ by default. This is required unless you set `vpc_id`.
     </dt>
     <dd>{{% md %}}Id of the subnet in which instances will be created by default. Mandatory
 if `vpc_id` is set, and forbidden if it isn't.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="hostnametheme_go">
 <a href="#hostnametheme_go" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Theme</a>
@@ -659,7 +707,8 @@ if `vpc_id` is set, and forbidden if it isn't.
     </dt>
     <dd>{{% md %}}Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="manageberkshelf_go">
 <a href="#manageberkshelf_go" style="color: inherit; text-decoration: inherit;">Manage<wbr>Berkshelf</a>
@@ -668,7 +717,8 @@ within this stack.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value controlling whether Opsworks will run Berkshelf for this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -677,7 +727,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -686,7 +737,8 @@ within this stack.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="usecustomcookbooks_go">
 <a href="#usecustomcookbooks_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Custom<wbr>Cookbooks</a>
@@ -696,7 +748,8 @@ within this stack.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the custom cookbook settings are
 enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="useopsworkssecuritygroups_go">
 <a href="#useopsworkssecuritygroups_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Opsworks<wbr>Security<wbr>Groups</a>
@@ -706,7 +759,8 @@ enabled.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the standard OpsWorks
 security groups apply to created instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -715,11 +769,14 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that this stack belongs to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="defaultinstanceprofilearn_nodejs">
 <a href="#defaultinstanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -729,7 +786,8 @@ security groups apply to created instances.
     </dt>
     <dd>{{% md %}}The ARN of an IAM Instance Profile that created instances
 will have by default.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -738,7 +796,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the region where the stack will exist.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="servicerolearn_nodejs">
 <a href="#servicerolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role<wbr>Arn</a>
@@ -747,7 +806,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that the OpsWorks service will act as.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="agentversion_nodejs">
 <a href="#agentversion_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version</a>
@@ -756,7 +816,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `"LATEST"`, OpsWorks will automatically install the latest version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="berkshelfversion_nodejs">
 <a href="#berkshelfversion_nodejs" style="color: inherit; text-decoration: inherit;">berkshelf<wbr>Version</a>
@@ -765,7 +826,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `manage_berkshelf` is enabled, the version of Berkshelf to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="color_nodejs">
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
@@ -774,7 +836,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to paint next to the stack's resources in the OpsWorks console.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="configurationmanagername_nodejs">
 <a href="#configurationmanagername_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Manager<wbr>Name</a>
@@ -783,7 +846,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration manager to use. Defaults to "Chef".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="configurationmanagerversion_nodejs">
 <a href="#configurationmanagerversion_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Manager<wbr>Version</a>
@@ -792,7 +856,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the configuration manager to use. Defaults to "11.4".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customcookbookssources_nodejs">
 <a href="#customcookbookssources_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Cookbooks<wbr>Sources</a>
@@ -802,7 +867,8 @@ will have by default.
     </dt>
     <dd>{{% md %}}When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customjson_nodejs">
 <a href="#customjson_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Json</a>
@@ -811,7 +877,8 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the entire stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultavailabilityzone_nodejs">
 <a href="#defaultavailabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Availability<wbr>Zone</a>
@@ -821,7 +888,8 @@ described below.
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default. This is required unless you set `vpc_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultos_nodejs">
 <a href="#defaultos_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Os</a>
@@ -830,7 +898,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of OS that will be installed on instances by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultrootdevicetype_nodejs">
 <a href="#defaultrootdevicetype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Root<wbr>Device<wbr>Type</a>
@@ -839,7 +908,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultsshkeyname_nodejs">
 <a href="#defaultsshkeyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ssh<wbr>Key<wbr>Name</a>
@@ -848,7 +918,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="defaultsubnetid_nodejs">
 <a href="#defaultsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Subnet<wbr>Id</a>
@@ -858,7 +929,8 @@ by default. This is required unless you set `vpc_id`.
     </dt>
     <dd>{{% md %}}Id of the subnet in which instances will be created by default. Mandatory
 if `vpc_id` is set, and forbidden if it isn't.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="hostnametheme_nodejs">
 <a href="#hostnametheme_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Theme</a>
@@ -868,7 +940,8 @@ if `vpc_id` is set, and forbidden if it isn't.
     </dt>
     <dd>{{% md %}}Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="manageberkshelf_nodejs">
 <a href="#manageberkshelf_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Berkshelf</a>
@@ -877,7 +950,8 @@ within this stack.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value controlling whether Opsworks will run Berkshelf for this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -886,7 +960,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -895,7 +970,8 @@ within this stack.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="usecustomcookbooks_nodejs">
 <a href="#usecustomcookbooks_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Custom<wbr>Cookbooks</a>
@@ -905,7 +981,8 @@ within this stack.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the custom cookbook settings are
 enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="useopsworkssecuritygroups_nodejs">
 <a href="#useopsworkssecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Opsworks<wbr>Security<wbr>Groups</a>
@@ -915,7 +992,8 @@ enabled.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the standard OpsWorks
 security groups apply to created instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -924,11 +1002,14 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that this stack belongs to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="default_instance_profile_arn_python">
 <a href="#default_instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">default_<wbr>instance_<wbr>profile_<wbr>arn</a>
@@ -938,7 +1019,8 @@ security groups apply to created instances.
     </dt>
     <dd>{{% md %}}The ARN of an IAM Instance Profile that created instances
 will have by default.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -947,7 +1029,8 @@ will have by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the region where the stack will exist.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="service_role_arn_python">
 <a href="#service_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role_<wbr>arn</a>
@@ -956,7 +1039,8 @@ will have by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that the OpsWorks service will act as.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="agent_version_python">
 <a href="#agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
@@ -965,7 +1049,8 @@ will have by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set to `"LATEST"`, OpsWorks will automatically install the latest version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="berkshelf_version_python">
 <a href="#berkshelf_version_python" style="color: inherit; text-decoration: inherit;">berkshelf_<wbr>version</a>
@@ -974,7 +1059,8 @@ will have by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If `manage_berkshelf` is enabled, the version of Berkshelf to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="color_python">
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
@@ -983,7 +1069,8 @@ will have by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Color to paint next to the stack's resources in the OpsWorks console.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="configuration_manager_name_python">
 <a href="#configuration_manager_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>manager_<wbr>name</a>
@@ -992,7 +1079,8 @@ will have by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the configuration manager to use. Defaults to "Chef".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="configuration_manager_version_python">
 <a href="#configuration_manager_version_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>manager_<wbr>version</a>
@@ -1001,7 +1089,8 @@ will have by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the configuration manager to use. Defaults to "11.4".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custom_cookbooks_sources_python">
 <a href="#custom_cookbooks_sources_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cookbooks_<wbr>sources</a>
@@ -1011,7 +1100,8 @@ will have by default.
     </dt>
     <dd>{{% md %}}When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custom_json_python">
 <a href="#custom_json_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>json</a>
@@ -1020,7 +1110,8 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the entire stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_availability_zone_python">
 <a href="#default_availability_zone_python" style="color: inherit; text-decoration: inherit;">default_<wbr>availability_<wbr>zone</a>
@@ -1030,7 +1121,8 @@ described below.
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default. This is required unless you set `vpc_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_os_python">
 <a href="#default_os_python" style="color: inherit; text-decoration: inherit;">default_<wbr>os</a>
@@ -1039,7 +1131,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of OS that will be installed on instances by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_root_device_type_python">
 <a href="#default_root_device_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>root_<wbr>device_<wbr>type</a>
@@ -1048,7 +1141,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_ssh_key_name_python">
 <a href="#default_ssh_key_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssh_<wbr>key_<wbr>name</a>
@@ -1057,7 +1151,8 @@ by default. This is required unless you set `vpc_id`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="default_subnet_id_python">
 <a href="#default_subnet_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>subnet_<wbr>id</a>
@@ -1067,7 +1162,8 @@ by default. This is required unless you set `vpc_id`.
     </dt>
     <dd>{{% md %}}Id of the subnet in which instances will be created by default. Mandatory
 if `vpc_id` is set, and forbidden if it isn't.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="hostname_theme_python">
 <a href="#hostname_theme_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>theme</a>
@@ -1077,7 +1173,8 @@ if `vpc_id` is set, and forbidden if it isn't.
     </dt>
     <dd>{{% md %}}Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="manage_berkshelf_python">
 <a href="#manage_berkshelf_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>berkshelf</a>
@@ -1086,7 +1183,8 @@ within this stack.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value controlling whether Opsworks will run Berkshelf for this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1095,7 +1193,8 @@ within this stack.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1104,7 +1203,8 @@ within this stack.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="use_custom_cookbooks_python">
 <a href="#use_custom_cookbooks_python" style="color: inherit; text-decoration: inherit;">use_<wbr>custom_<wbr>cookbooks</a>
@@ -1114,7 +1214,8 @@ within this stack.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the custom cookbook settings are
 enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="use_opsworks_security_groups_python">
 <a href="#use_opsworks_security_groups_python" style="color: inherit; text-decoration: inherit;">use_<wbr>opsworks_<wbr>security_<wbr>groups</a>
@@ -1124,7 +1225,8 @@ enabled.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the standard OpsWorks
 security groups apply to created instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -1133,7 +1235,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that this stack belongs to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1144,7 +1247,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1152,7 +1257,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1160,7 +1266,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="stackendpoint_csharp">
 <a href="#stackendpoint_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Endpoint</a>
@@ -1168,11 +1275,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1180,7 +1290,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1188,7 +1299,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="stackendpoint_go">
 <a href="#stackendpoint_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Endpoint</a>
@@ -1196,11 +1308,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1208,7 +1323,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1216,7 +1332,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="stackendpoint_nodejs">
 <a href="#stackendpoint_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Endpoint</a>
@@ -1224,11 +1341,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1236,7 +1356,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1244,7 +1365,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="stack_endpoint_python">
 <a href="#stack_endpoint_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>endpoint</a>
@@ -1252,7 +1374,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1379,7 +1502,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_agentversion_csharp">
 <a href="#state_agentversion_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
@@ -1388,7 +1513,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `"LATEST"`, OpsWorks will automatically install the latest version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1396,7 +1522,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_berkshelfversion_csharp">
 <a href="#state_berkshelfversion_csharp" style="color: inherit; text-decoration: inherit;">Berkshelf<wbr>Version</a>
@@ -1405,7 +1532,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `manage_berkshelf` is enabled, the version of Berkshelf to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_color_csharp">
 <a href="#state_color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -1414,7 +1542,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to paint next to the stack's resources in the OpsWorks console.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_configurationmanagername_csharp">
 <a href="#state_configurationmanagername_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Manager<wbr>Name</a>
@@ -1423,7 +1552,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration manager to use. Defaults to "Chef".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_configurationmanagerversion_csharp">
 <a href="#state_configurationmanagerversion_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Manager<wbr>Version</a>
@@ -1432,7 +1562,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the configuration manager to use. Defaults to "11.4".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customcookbookssources_csharp">
 <a href="#state_customcookbookssources_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cookbooks<wbr>Sources</a>
@@ -1442,7 +1573,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customjson_csharp">
 <a href="#state_customjson_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
@@ -1451,7 +1583,8 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the entire stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultavailabilityzone_csharp">
 <a href="#state_defaultavailabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Availability<wbr>Zone</a>
@@ -1461,7 +1594,8 @@ described below.
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default. This is required unless you set `vpc_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultinstanceprofilearn_csharp">
 <a href="#state_defaultinstanceprofilearn_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -1471,7 +1605,8 @@ by default. This is required unless you set `vpc_id`.
     </dt>
     <dd>{{% md %}}The ARN of an IAM Instance Profile that created instances
 will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultos_csharp">
 <a href="#state_defaultos_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Os</a>
@@ -1480,7 +1615,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of OS that will be installed on instances by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultrootdevicetype_csharp">
 <a href="#state_defaultrootdevicetype_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Device<wbr>Type</a>
@@ -1489,7 +1625,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultsshkeyname_csharp">
 <a href="#state_defaultsshkeyname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssh<wbr>Key<wbr>Name</a>
@@ -1498,7 +1635,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultsubnetid_csharp">
 <a href="#state_defaultsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Subnet<wbr>Id</a>
@@ -1508,7 +1646,8 @@ will have by default.
     </dt>
     <dd>{{% md %}}Id of the subnet in which instances will be created by default. Mandatory
 if `vpc_id` is set, and forbidden if it isn't.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_hostnametheme_csharp">
 <a href="#state_hostnametheme_csharp" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Theme</a>
@@ -1518,7 +1657,8 @@ if `vpc_id` is set, and forbidden if it isn't.
     </dt>
     <dd>{{% md %}}Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_manageberkshelf_csharp">
 <a href="#state_manageberkshelf_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Berkshelf</a>
@@ -1527,7 +1667,8 @@ within this stack.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value controlling whether Opsworks will run Berkshelf for this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1536,7 +1677,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1545,7 +1687,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the region where the stack will exist.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_servicerolearn_csharp">
 <a href="#state_servicerolearn_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Role<wbr>Arn</a>
@@ -1554,7 +1697,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that the OpsWorks service will act as.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stackendpoint_csharp">
 <a href="#state_stackendpoint_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Endpoint</a>
@@ -1562,7 +1706,8 @@ within this stack.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1571,7 +1716,8 @@ within this stack.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_usecustomcookbooks_csharp">
 <a href="#state_usecustomcookbooks_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Custom<wbr>Cookbooks</a>
@@ -1581,7 +1727,8 @@ within this stack.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the custom cookbook settings are
 enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_useopsworkssecuritygroups_csharp">
 <a href="#state_useopsworkssecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Opsworks<wbr>Security<wbr>Groups</a>
@@ -1591,7 +1738,8 @@ enabled.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the standard OpsWorks
 security groups apply to created instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
 <a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1600,11 +1748,14 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that this stack belongs to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_agentversion_go">
 <a href="#state_agentversion_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
@@ -1613,7 +1764,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `"LATEST"`, OpsWorks will automatically install the latest version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1621,7 +1773,8 @@ security groups apply to created instances.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_berkshelfversion_go">
 <a href="#state_berkshelfversion_go" style="color: inherit; text-decoration: inherit;">Berkshelf<wbr>Version</a>
@@ -1630,7 +1783,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `manage_berkshelf` is enabled, the version of Berkshelf to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_color_go">
 <a href="#state_color_go" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -1639,7 +1793,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to paint next to the stack's resources in the OpsWorks console.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_configurationmanagername_go">
 <a href="#state_configurationmanagername_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Manager<wbr>Name</a>
@@ -1648,7 +1803,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration manager to use. Defaults to "Chef".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_configurationmanagerversion_go">
 <a href="#state_configurationmanagerversion_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Manager<wbr>Version</a>
@@ -1657,7 +1813,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the configuration manager to use. Defaults to "11.4".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customcookbookssources_go">
 <a href="#state_customcookbookssources_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cookbooks<wbr>Sources</a>
@@ -1667,7 +1824,8 @@ security groups apply to created instances.
     </dt>
     <dd>{{% md %}}When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customjson_go">
 <a href="#state_customjson_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
@@ -1676,7 +1834,8 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the entire stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultavailabilityzone_go">
 <a href="#state_defaultavailabilityzone_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Availability<wbr>Zone</a>
@@ -1686,7 +1845,8 @@ described below.
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default. This is required unless you set `vpc_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultinstanceprofilearn_go">
 <a href="#state_defaultinstanceprofilearn_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -1696,7 +1856,8 @@ by default. This is required unless you set `vpc_id`.
     </dt>
     <dd>{{% md %}}The ARN of an IAM Instance Profile that created instances
 will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultos_go">
 <a href="#state_defaultos_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Os</a>
@@ -1705,7 +1866,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of OS that will be installed on instances by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultrootdevicetype_go">
 <a href="#state_defaultrootdevicetype_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Device<wbr>Type</a>
@@ -1714,7 +1876,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultsshkeyname_go">
 <a href="#state_defaultsshkeyname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssh<wbr>Key<wbr>Name</a>
@@ -1723,7 +1886,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultsubnetid_go">
 <a href="#state_defaultsubnetid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Subnet<wbr>Id</a>
@@ -1733,7 +1897,8 @@ will have by default.
     </dt>
     <dd>{{% md %}}Id of the subnet in which instances will be created by default. Mandatory
 if `vpc_id` is set, and forbidden if it isn't.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_hostnametheme_go">
 <a href="#state_hostnametheme_go" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Theme</a>
@@ -1743,7 +1908,8 @@ if `vpc_id` is set, and forbidden if it isn't.
     </dt>
     <dd>{{% md %}}Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_manageberkshelf_go">
 <a href="#state_manageberkshelf_go" style="color: inherit; text-decoration: inherit;">Manage<wbr>Berkshelf</a>
@@ -1752,7 +1918,8 @@ within this stack.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value controlling whether Opsworks will run Berkshelf for this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1761,7 +1928,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1770,7 +1938,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the region where the stack will exist.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_servicerolearn_go">
 <a href="#state_servicerolearn_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Role<wbr>Arn</a>
@@ -1779,7 +1948,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that the OpsWorks service will act as.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stackendpoint_go">
 <a href="#state_stackendpoint_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Endpoint</a>
@@ -1787,7 +1957,8 @@ within this stack.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1796,7 +1967,8 @@ within this stack.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_usecustomcookbooks_go">
 <a href="#state_usecustomcookbooks_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Custom<wbr>Cookbooks</a>
@@ -1806,7 +1978,8 @@ within this stack.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the custom cookbook settings are
 enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_useopsworkssecuritygroups_go">
 <a href="#state_useopsworkssecuritygroups_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Opsworks<wbr>Security<wbr>Groups</a>
@@ -1816,7 +1989,8 @@ enabled.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the standard OpsWorks
 security groups apply to created instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
 <a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1825,11 +1999,14 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that this stack belongs to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_agentversion_nodejs">
 <a href="#state_agentversion_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version</a>
@@ -1838,7 +2015,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `"LATEST"`, OpsWorks will automatically install the latest version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1846,7 +2024,8 @@ security groups apply to created instances.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_berkshelfversion_nodejs">
 <a href="#state_berkshelfversion_nodejs" style="color: inherit; text-decoration: inherit;">berkshelf<wbr>Version</a>
@@ -1855,7 +2034,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `manage_berkshelf` is enabled, the version of Berkshelf to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_color_nodejs">
 <a href="#state_color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
@@ -1864,7 +2044,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to paint next to the stack's resources in the OpsWorks console.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_configurationmanagername_nodejs">
 <a href="#state_configurationmanagername_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Manager<wbr>Name</a>
@@ -1873,7 +2054,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration manager to use. Defaults to "Chef".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_configurationmanagerversion_nodejs">
 <a href="#state_configurationmanagerversion_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Manager<wbr>Version</a>
@@ -1882,7 +2064,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the configuration manager to use. Defaults to "11.4".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customcookbookssources_nodejs">
 <a href="#state_customcookbookssources_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Cookbooks<wbr>Sources</a>
@@ -1892,7 +2075,8 @@ security groups apply to created instances.
     </dt>
     <dd>{{% md %}}When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customjson_nodejs">
 <a href="#state_customjson_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Json</a>
@@ -1901,7 +2085,8 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the entire stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultavailabilityzone_nodejs">
 <a href="#state_defaultavailabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Availability<wbr>Zone</a>
@@ -1911,7 +2096,8 @@ described below.
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default. This is required unless you set `vpc_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultinstanceprofilearn_nodejs">
 <a href="#state_defaultinstanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -1921,7 +2107,8 @@ by default. This is required unless you set `vpc_id`.
     </dt>
     <dd>{{% md %}}The ARN of an IAM Instance Profile that created instances
 will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultos_nodejs">
 <a href="#state_defaultos_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Os</a>
@@ -1930,7 +2117,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of OS that will be installed on instances by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultrootdevicetype_nodejs">
 <a href="#state_defaultrootdevicetype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Root<wbr>Device<wbr>Type</a>
@@ -1939,7 +2127,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultsshkeyname_nodejs">
 <a href="#state_defaultsshkeyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ssh<wbr>Key<wbr>Name</a>
@@ -1948,7 +2137,8 @@ will have by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_defaultsubnetid_nodejs">
 <a href="#state_defaultsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Subnet<wbr>Id</a>
@@ -1958,7 +2148,8 @@ will have by default.
     </dt>
     <dd>{{% md %}}Id of the subnet in which instances will be created by default. Mandatory
 if `vpc_id` is set, and forbidden if it isn't.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_hostnametheme_nodejs">
 <a href="#state_hostnametheme_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Theme</a>
@@ -1968,7 +2159,8 @@ if `vpc_id` is set, and forbidden if it isn't.
     </dt>
     <dd>{{% md %}}Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_manageberkshelf_nodejs">
 <a href="#state_manageberkshelf_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Berkshelf</a>
@@ -1977,7 +2169,8 @@ within this stack.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value controlling whether Opsworks will run Berkshelf for this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1986,7 +2179,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1995,7 +2189,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the region where the stack will exist.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_servicerolearn_nodejs">
 <a href="#state_servicerolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role<wbr>Arn</a>
@@ -2004,7 +2199,8 @@ within this stack.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that the OpsWorks service will act as.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stackendpoint_nodejs">
 <a href="#state_stackendpoint_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Endpoint</a>
@@ -2012,7 +2208,8 @@ within this stack.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2021,7 +2218,8 @@ within this stack.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_usecustomcookbooks_nodejs">
 <a href="#state_usecustomcookbooks_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Custom<wbr>Cookbooks</a>
@@ -2031,7 +2229,8 @@ within this stack.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the custom cookbook settings are
 enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_useopsworkssecuritygroups_nodejs">
 <a href="#state_useopsworkssecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Opsworks<wbr>Security<wbr>Groups</a>
@@ -2041,7 +2240,8 @@ enabled.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the standard OpsWorks
 security groups apply to created instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -2050,11 +2250,14 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that this stack belongs to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_agent_version_python">
 <a href="#state_agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
@@ -2063,7 +2266,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set to `"LATEST"`, OpsWorks will automatically install the latest version.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2071,7 +2275,8 @@ security groups apply to created instances.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_berkshelf_version_python">
 <a href="#state_berkshelf_version_python" style="color: inherit; text-decoration: inherit;">berkshelf_<wbr>version</a>
@@ -2080,7 +2285,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If `manage_berkshelf` is enabled, the version of Berkshelf to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_color_python">
 <a href="#state_color_python" style="color: inherit; text-decoration: inherit;">color</a>
@@ -2089,7 +2295,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Color to paint next to the stack's resources in the OpsWorks console.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_configuration_manager_name_python">
 <a href="#state_configuration_manager_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>manager_<wbr>name</a>
@@ -2098,7 +2305,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the configuration manager to use. Defaults to "Chef".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_configuration_manager_version_python">
 <a href="#state_configuration_manager_version_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>manager_<wbr>version</a>
@@ -2107,7 +2315,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the configuration manager to use. Defaults to "11.4".
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custom_cookbooks_sources_python">
 <a href="#state_custom_cookbooks_sources_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cookbooks_<wbr>sources</a>
@@ -2117,7 +2326,8 @@ security groups apply to created instances.
     </dt>
     <dd>{{% md %}}When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custom_json_python">
 <a href="#state_custom_json_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>json</a>
@@ -2126,7 +2336,8 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the entire stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_default_availability_zone_python">
 <a href="#state_default_availability_zone_python" style="color: inherit; text-decoration: inherit;">default_<wbr>availability_<wbr>zone</a>
@@ -2136,7 +2347,8 @@ described below.
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default. This is required unless you set `vpc_id`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_default_instance_profile_arn_python">
 <a href="#state_default_instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">default_<wbr>instance_<wbr>profile_<wbr>arn</a>
@@ -2146,7 +2358,8 @@ by default. This is required unless you set `vpc_id`.
     </dt>
     <dd>{{% md %}}The ARN of an IAM Instance Profile that created instances
 will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_default_os_python">
 <a href="#state_default_os_python" style="color: inherit; text-decoration: inherit;">default_<wbr>os</a>
@@ -2155,7 +2368,8 @@ will have by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of OS that will be installed on instances by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_default_root_device_type_python">
 <a href="#state_default_root_device_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>root_<wbr>device_<wbr>type</a>
@@ -2164,7 +2378,8 @@ will have by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_default_ssh_key_name_python">
 <a href="#state_default_ssh_key_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssh_<wbr>key_<wbr>name</a>
@@ -2173,7 +2388,8 @@ will have by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_default_subnet_id_python">
 <a href="#state_default_subnet_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>subnet_<wbr>id</a>
@@ -2183,7 +2399,8 @@ will have by default.
     </dt>
     <dd>{{% md %}}Id of the subnet in which instances will be created by default. Mandatory
 if `vpc_id` is set, and forbidden if it isn't.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_hostname_theme_python">
 <a href="#state_hostname_theme_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>theme</a>
@@ -2193,7 +2410,8 @@ if `vpc_id` is set, and forbidden if it isn't.
     </dt>
     <dd>{{% md %}}Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_manage_berkshelf_python">
 <a href="#state_manage_berkshelf_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>berkshelf</a>
@@ -2202,7 +2420,8 @@ within this stack.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value controlling whether Opsworks will run Berkshelf for this stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2211,7 +2430,8 @@ within this stack.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the stack.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2220,7 +2440,8 @@ within this stack.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the region where the stack will exist.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_service_role_arn_python">
 <a href="#state_service_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role_<wbr>arn</a>
@@ -2229,7 +2450,8 @@ within this stack.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that the OpsWorks service will act as.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stack_endpoint_python">
 <a href="#state_stack_endpoint_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>endpoint</a>
@@ -2237,7 +2459,8 @@ within this stack.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2246,7 +2469,8 @@ within this stack.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_use_custom_cookbooks_python">
 <a href="#state_use_custom_cookbooks_python" style="color: inherit; text-decoration: inherit;">use_<wbr>custom_<wbr>cookbooks</a>
@@ -2256,7 +2480,8 @@ within this stack.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the custom cookbook settings are
 enabled.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_use_opsworks_security_groups_python">
 <a href="#state_use_opsworks_security_groups_python" style="color: inherit; text-decoration: inherit;">use_<wbr>opsworks_<wbr>security_<wbr>groups</a>
@@ -2266,7 +2491,8 @@ enabled.
     </dt>
     <dd>{{% md %}}Boolean value controlling whether the standard OpsWorks
 security groups apply to created instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -2275,7 +2501,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that this stack belongs to.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -2290,7 +2517,9 @@ security groups apply to created instances.
 <h4 id="stackcustomcookbookssource">Stack<wbr>Custom<wbr>Cookbooks<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2299,7 +2528,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of source to use. For example, "archive".
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2308,7 +2538,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the cookbooks resource can be found.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2317,7 +2548,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="revision_csharp">
 <a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -2326,7 +2558,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For sources that are version-aware, the revision to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sshkey_csharp">
 <a href="#sshkey_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key</a>
@@ -2335,7 +2568,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2344,11 +2578,14 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use when authenticating to the source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2357,7 +2594,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of source to use. For example, "archive".
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2366,7 +2604,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the cookbooks resource can be found.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2375,7 +2614,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="revision_go">
 <a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -2384,7 +2624,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For sources that are version-aware, the revision to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sshkey_go">
 <a href="#sshkey_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key</a>
@@ -2393,7 +2634,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2402,11 +2644,14 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use when authenticating to the source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2415,7 +2660,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of source to use. For example, "archive".
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2424,7 +2670,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the cookbooks resource can be found.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2433,7 +2680,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="revision_nodejs">
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -2442,7 +2690,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For sources that are version-aware, the revision to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="sshkey_nodejs">
 <a href="#sshkey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key</a>
@@ -2451,7 +2700,8 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2460,11 +2710,14 @@ security groups apply to created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use when authenticating to the source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2473,7 +2726,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of source to use. For example, "archive".
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2482,7 +2736,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL where the cookbooks resource can be found.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2491,7 +2746,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="revision_python">
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -2500,7 +2756,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For sources that are version-aware, the revision to use.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ssh_key_python">
 <a href="#ssh_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key</a>
@@ -2509,7 +2766,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2518,7 +2776,8 @@ security groups apply to created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username to use when authenticating to the source.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -2539,6 +2798,6 @@ OpsWorks stacks can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

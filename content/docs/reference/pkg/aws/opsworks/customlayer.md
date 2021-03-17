@@ -13,17 +13,11 @@ meta_desc: "Documentation for the aws.opsworks.CustomLayer resource with example
 Provides an OpsWorks custom layer resource.
 
 {{% examples %}}
-
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-
-
-
-
-{{< example csharp >}}
-
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -42,12 +36,9 @@ class MyStack : Stack
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example go >}}
-
+{{% example go %}}
 ```go
 package main
 
@@ -70,12 +61,9 @@ func main() {
 }
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example python >}}
-
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -85,12 +73,9 @@ custlayer = aws.opsworks.CustomLayer("custlayer",
     stack_id=aws_opsworks_stack["main"]["id"])
 ```
 
+{{% /example %}}
 
-{{< /example >}}
-
-
-{{< example typescript >}}
-
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -102,16 +87,9 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
 });
 ```
 
-
-{{< /example >}}
-
-
-
-
+{{% /example %}}
 
 {{% /examples %}}
-
-
 
 
 ## Create a CustomLayer Resource {#create}
@@ -136,7 +114,9 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -144,7 +124,9 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -152,7 +134,9 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -160,7 +144,10 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -186,7 +173,9 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -194,7 +183,9 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -202,7 +193,9 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -210,7 +203,9 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -218,13 +213,18 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties"><dt
+<dl class="resources-properties">
+  
+    <dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -232,7 +232,9 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -240,7 +242,9 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd><dt
+    </dd>
+  
+    <dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -248,7 +252,10 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    </dd>
+  
+
+</dl>
 
 {{% /choosable %}}
 
@@ -263,7 +270,9 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="shortname_csharp">
 <a href="#shortname_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -272,7 +281,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="stackid_csharp">
 <a href="#stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -281,7 +291,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autoassignelasticips_csharp">
 <a href="#autoassignelasticips_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
@@ -290,7 +301,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autoassignpublicips_csharp">
 <a href="#autoassignpublicips_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Public<wbr>Ips</a>
@@ -299,7 +311,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autohealing_csharp">
 <a href="#autohealing_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
@@ -308,7 +321,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customconfigurerecipes_csharp">
 <a href="#customconfigurerecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Configure<wbr>Recipes</a>
@@ -316,7 +330,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customdeployrecipes_csharp">
 <a href="#customdeployrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deploy<wbr>Recipes</a>
@@ -324,7 +339,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custominstanceprofilearn_csharp">
 <a href="#custominstanceprofilearn_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -333,7 +349,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customjson_csharp">
 <a href="#customjson_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
@@ -342,7 +359,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customsecuritygroupids_csharp">
 <a href="#customsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -351,7 +369,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customsetuprecipes_csharp">
 <a href="#customsetuprecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Recipes</a>
@@ -359,7 +378,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customshutdownrecipes_csharp">
 <a href="#customshutdownrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shutdown<wbr>Recipes</a>
@@ -367,7 +387,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customundeployrecipes_csharp">
 <a href="#customundeployrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Undeploy<wbr>Recipes</a>
@@ -375,7 +396,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="drainelbonshutdown_csharp">
 <a href="#drainelbonshutdown_csharp" style="color: inherit; text-decoration: inherit;">Drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
@@ -384,7 +406,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ebsvolumes_csharp">
 <a href="#ebsvolumes_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Volumes</a>
@@ -393,7 +416,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#customlayerebsvolume">List&lt;Custom<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="elasticloadbalancer_csharp">
 <a href="#elasticloadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancer</a>
@@ -402,7 +426,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="installupdatesonboot_csharp">
 <a href="#installupdatesonboot_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
@@ -411,7 +436,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instanceshutdowntimeout_csharp">
 <a href="#instanceshutdowntimeout_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Shutdown<wbr>Timeout</a>
@@ -420,7 +446,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -429,7 +456,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="systempackages_csharp">
 <a href="#systempackages_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Packages</a>
@@ -438,7 +466,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -447,7 +476,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="useebsoptimizedinstances_csharp">
 <a href="#useebsoptimizedinstances_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
@@ -456,11 +486,14 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="shortname_go">
 <a href="#shortname_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -469,7 +502,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="stackid_go">
 <a href="#stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -478,7 +512,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autoassignelasticips_go">
 <a href="#autoassignelasticips_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
@@ -487,7 +522,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autoassignpublicips_go">
 <a href="#autoassignpublicips_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Public<wbr>Ips</a>
@@ -496,7 +532,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autohealing_go">
 <a href="#autohealing_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
@@ -505,7 +542,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customconfigurerecipes_go">
 <a href="#customconfigurerecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Configure<wbr>Recipes</a>
@@ -513,7 +551,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customdeployrecipes_go">
 <a href="#customdeployrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deploy<wbr>Recipes</a>
@@ -521,7 +560,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custominstanceprofilearn_go">
 <a href="#custominstanceprofilearn_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -530,7 +570,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customjson_go">
 <a href="#customjson_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
@@ -539,7 +580,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customsecuritygroupids_go">
 <a href="#customsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -548,7 +590,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customsetuprecipes_go">
 <a href="#customsetuprecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Recipes</a>
@@ -556,7 +599,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customshutdownrecipes_go">
 <a href="#customshutdownrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shutdown<wbr>Recipes</a>
@@ -564,7 +608,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customundeployrecipes_go">
 <a href="#customundeployrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Undeploy<wbr>Recipes</a>
@@ -572,7 +617,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="drainelbonshutdown_go">
 <a href="#drainelbonshutdown_go" style="color: inherit; text-decoration: inherit;">Drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
@@ -581,7 +627,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ebsvolumes_go">
 <a href="#ebsvolumes_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Volumes</a>
@@ -590,7 +637,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#customlayerebsvolume">[]Custom<wbr>Layer<wbr>Ebs<wbr>Volume</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="elasticloadbalancer_go">
 <a href="#elasticloadbalancer_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancer</a>
@@ -599,7 +647,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="installupdatesonboot_go">
 <a href="#installupdatesonboot_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
@@ -608,7 +657,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instanceshutdowntimeout_go">
 <a href="#instanceshutdowntimeout_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Shutdown<wbr>Timeout</a>
@@ -617,7 +667,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -626,7 +677,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="systempackages_go">
 <a href="#systempackages_go" style="color: inherit; text-decoration: inherit;">System<wbr>Packages</a>
@@ -635,7 +687,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -644,7 +697,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="useebsoptimizedinstances_go">
 <a href="#useebsoptimizedinstances_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
@@ -653,11 +707,14 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="shortname_nodejs">
 <a href="#shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
@@ -666,7 +723,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="stackid_nodejs">
 <a href="#stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
@@ -675,7 +733,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autoassignelasticips_nodejs">
 <a href="#autoassignelasticips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
@@ -684,7 +743,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autoassignpublicips_nodejs">
 <a href="#autoassignpublicips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Public<wbr>Ips</a>
@@ -693,7 +753,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="autohealing_nodejs">
 <a href="#autohealing_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing</a>
@@ -702,7 +763,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customconfigurerecipes_nodejs">
 <a href="#customconfigurerecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Configure<wbr>Recipes</a>
@@ -710,7 +772,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customdeployrecipes_nodejs">
 <a href="#customdeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deploy<wbr>Recipes</a>
@@ -718,7 +781,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custominstanceprofilearn_nodejs">
 <a href="#custominstanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -727,7 +791,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customjson_nodejs">
 <a href="#customjson_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Json</a>
@@ -736,7 +801,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customsecuritygroupids_nodejs">
 <a href="#customsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -745,7 +811,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customsetuprecipes_nodejs">
 <a href="#customsetuprecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Recipes</a>
@@ -753,7 +820,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customshutdownrecipes_nodejs">
 <a href="#customshutdownrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Shutdown<wbr>Recipes</a>
@@ -761,7 +829,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="customundeployrecipes_nodejs">
 <a href="#customundeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Undeploy<wbr>Recipes</a>
@@ -769,7 +838,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="drainelbonshutdown_nodejs">
 <a href="#drainelbonshutdown_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
@@ -778,7 +848,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ebsvolumes_nodejs">
 <a href="#ebsvolumes_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Volumes</a>
@@ -787,7 +858,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#customlayerebsvolume">Custom<wbr>Layer<wbr>Ebs<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="elasticloadbalancer_nodejs">
 <a href="#elasticloadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Load<wbr>Balancer</a>
@@ -796,7 +868,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="installupdatesonboot_nodejs">
 <a href="#installupdatesonboot_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Updates<wbr>On<wbr>Boot</a>
@@ -805,7 +878,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instanceshutdowntimeout_nodejs">
 <a href="#instanceshutdowntimeout_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Shutdown<wbr>Timeout</a>
@@ -814,7 +888,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -823,7 +898,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="systempackages_nodejs">
 <a href="#systempackages_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Packages</a>
@@ -832,7 +908,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -841,7 +918,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="useebsoptimizedinstances_nodejs">
 <a href="#useebsoptimizedinstances_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
@@ -850,11 +928,14 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="short_name_python">
 <a href="#short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
@@ -863,7 +944,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="stack_id_python">
 <a href="#stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
@@ -872,7 +954,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="auto_assign_elastic_ips_python">
 <a href="#auto_assign_elastic_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>elastic_<wbr>ips</a>
@@ -881,7 +964,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="auto_assign_public_ips_python">
 <a href="#auto_assign_public_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>public_<wbr>ips</a>
@@ -890,7 +974,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="auto_healing_python">
 <a href="#auto_healing_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing</a>
@@ -899,7 +984,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custom_configure_recipes_python">
 <a href="#custom_configure_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>configure_<wbr>recipes</a>
@@ -907,7 +993,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custom_deploy_recipes_python">
 <a href="#custom_deploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deploy_<wbr>recipes</a>
@@ -915,7 +1002,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custom_instance_profile_arn_python">
 <a href="#custom_instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>instance_<wbr>profile_<wbr>arn</a>
@@ -924,7 +1012,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custom_json_python">
 <a href="#custom_json_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>json</a>
@@ -933,7 +1022,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custom_security_group_ids_python">
 <a href="#custom_security_group_ids_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -942,7 +1032,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custom_setup_recipes_python">
 <a href="#custom_setup_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>recipes</a>
@@ -950,7 +1041,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custom_shutdown_recipes_python">
 <a href="#custom_shutdown_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>shutdown_<wbr>recipes</a>
@@ -958,7 +1050,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="custom_undeploy_recipes_python">
 <a href="#custom_undeploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>undeploy_<wbr>recipes</a>
@@ -966,7 +1059,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="drain_elb_on_shutdown_python">
 <a href="#drain_elb_on_shutdown_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>elb_<wbr>on_<wbr>shutdown</a>
@@ -975,7 +1069,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="ebs_volumes_python">
 <a href="#ebs_volumes_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>volumes</a>
@@ -984,7 +1079,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#customlayerebsvolume">Sequence[Custom<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="elastic_load_balancer_python">
 <a href="#elastic_load_balancer_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>load_<wbr>balancer</a>
@@ -993,7 +1089,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="install_updates_on_boot_python">
 <a href="#install_updates_on_boot_python" style="color: inherit; text-decoration: inherit;">install_<wbr>updates_<wbr>on_<wbr>boot</a>
@@ -1002,7 +1099,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="instance_shutdown_timeout_python">
 <a href="#instance_shutdown_timeout_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>shutdown_<wbr>timeout</a>
@@ -1011,7 +1109,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1020,7 +1119,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="system_packages_python">
 <a href="#system_packages_python" style="color: inherit; text-decoration: inherit;">system_<wbr>packages</a>
@@ -1029,7 +1129,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1038,7 +1139,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="use_ebs_optimized_instances_python">
 <a href="#use_ebs_optimized_instances_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ebs_<wbr>optimized_<wbr>instances</a>
@@ -1047,7 +1149,8 @@ The CustomLayer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1058,7 +1161,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1067,7 +1172,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1075,11 +1181,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1088,7 +1197,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1096,11 +1206,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1109,7 +1222,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1117,11 +1231,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+<dl class="resources-properties">
+
+    <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1130,7 +1247,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd>
+    <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1138,7 +1256,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -1265,7 +1384,9 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1274,7 +1395,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autoassignelasticips_csharp">
 <a href="#state_autoassignelasticips_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
@@ -1283,7 +1405,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autoassignpublicips_csharp">
 <a href="#state_autoassignpublicips_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Public<wbr>Ips</a>
@@ -1292,7 +1415,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autohealing_csharp">
 <a href="#state_autohealing_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
@@ -1301,7 +1425,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customconfigurerecipes_csharp">
 <a href="#state_customconfigurerecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Configure<wbr>Recipes</a>
@@ -1309,7 +1434,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customdeployrecipes_csharp">
 <a href="#state_customdeployrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deploy<wbr>Recipes</a>
@@ -1317,7 +1443,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custominstanceprofilearn_csharp">
 <a href="#state_custominstanceprofilearn_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -1326,7 +1453,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customjson_csharp">
 <a href="#state_customjson_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
@@ -1335,7 +1463,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customsecuritygroupids_csharp">
 <a href="#state_customsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1344,7 +1473,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customsetuprecipes_csharp">
 <a href="#state_customsetuprecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Recipes</a>
@@ -1352,7 +1482,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customshutdownrecipes_csharp">
 <a href="#state_customshutdownrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shutdown<wbr>Recipes</a>
@@ -1360,7 +1491,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customundeployrecipes_csharp">
 <a href="#state_customundeployrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Undeploy<wbr>Recipes</a>
@@ -1368,7 +1500,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_drainelbonshutdown_csharp">
 <a href="#state_drainelbonshutdown_csharp" style="color: inherit; text-decoration: inherit;">Drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
@@ -1377,7 +1510,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ebsvolumes_csharp">
 <a href="#state_ebsvolumes_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Volumes</a>
@@ -1386,7 +1520,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customlayerebsvolume">List&lt;Custom<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_elasticloadbalancer_csharp">
 <a href="#state_elasticloadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancer</a>
@@ -1395,7 +1530,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_installupdatesonboot_csharp">
 <a href="#state_installupdatesonboot_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
@@ -1404,7 +1540,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instanceshutdowntimeout_csharp">
 <a href="#state_instanceshutdowntimeout_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Shutdown<wbr>Timeout</a>
@@ -1413,7 +1550,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1422,7 +1560,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_shortname_csharp">
 <a href="#state_shortname_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -1431,7 +1570,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stackid_csharp">
 <a href="#state_stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -1440,7 +1580,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_systempackages_csharp">
 <a href="#state_systempackages_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Packages</a>
@@ -1449,7 +1590,8 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1458,7 +1600,8 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_useebsoptimizedinstances_csharp">
 <a href="#state_useebsoptimizedinstances_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
@@ -1467,11 +1610,14 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1480,7 +1626,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autoassignelasticips_go">
 <a href="#state_autoassignelasticips_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
@@ -1489,7 +1636,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autoassignpublicips_go">
 <a href="#state_autoassignpublicips_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Public<wbr>Ips</a>
@@ -1498,7 +1646,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autohealing_go">
 <a href="#state_autohealing_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
@@ -1507,7 +1656,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customconfigurerecipes_go">
 <a href="#state_customconfigurerecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Configure<wbr>Recipes</a>
@@ -1515,7 +1665,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customdeployrecipes_go">
 <a href="#state_customdeployrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deploy<wbr>Recipes</a>
@@ -1523,7 +1674,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custominstanceprofilearn_go">
 <a href="#state_custominstanceprofilearn_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -1532,7 +1684,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customjson_go">
 <a href="#state_customjson_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
@@ -1541,7 +1694,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customsecuritygroupids_go">
 <a href="#state_customsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1550,7 +1704,8 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customsetuprecipes_go">
 <a href="#state_customsetuprecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Recipes</a>
@@ -1558,7 +1713,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customshutdownrecipes_go">
 <a href="#state_customshutdownrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shutdown<wbr>Recipes</a>
@@ -1566,7 +1722,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customundeployrecipes_go">
 <a href="#state_customundeployrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Undeploy<wbr>Recipes</a>
@@ -1574,7 +1731,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_drainelbonshutdown_go">
 <a href="#state_drainelbonshutdown_go" style="color: inherit; text-decoration: inherit;">Drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
@@ -1583,7 +1741,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ebsvolumes_go">
 <a href="#state_ebsvolumes_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Volumes</a>
@@ -1592,7 +1751,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customlayerebsvolume">[]Custom<wbr>Layer<wbr>Ebs<wbr>Volume</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_elasticloadbalancer_go">
 <a href="#state_elasticloadbalancer_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancer</a>
@@ -1601,7 +1761,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_installupdatesonboot_go">
 <a href="#state_installupdatesonboot_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
@@ -1610,7 +1771,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instanceshutdowntimeout_go">
 <a href="#state_instanceshutdowntimeout_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Shutdown<wbr>Timeout</a>
@@ -1619,7 +1781,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1628,7 +1791,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_shortname_go">
 <a href="#state_shortname_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -1637,7 +1801,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stackid_go">
 <a href="#state_stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -1646,7 +1811,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_systempackages_go">
 <a href="#state_systempackages_go" style="color: inherit; text-decoration: inherit;">System<wbr>Packages</a>
@@ -1655,7 +1821,8 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1664,7 +1831,8 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_useebsoptimizedinstances_go">
 <a href="#state_useebsoptimizedinstances_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
@@ -1673,11 +1841,14 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1686,7 +1857,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autoassignelasticips_nodejs">
 <a href="#state_autoassignelasticips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
@@ -1695,7 +1867,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autoassignpublicips_nodejs">
 <a href="#state_autoassignpublicips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Public<wbr>Ips</a>
@@ -1704,7 +1877,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_autohealing_nodejs">
 <a href="#state_autohealing_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing</a>
@@ -1713,7 +1887,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customconfigurerecipes_nodejs">
 <a href="#state_customconfigurerecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Configure<wbr>Recipes</a>
@@ -1721,7 +1896,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customdeployrecipes_nodejs">
 <a href="#state_customdeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deploy<wbr>Recipes</a>
@@ -1729,7 +1905,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custominstanceprofilearn_nodejs">
 <a href="#state_custominstanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -1738,7 +1915,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customjson_nodejs">
 <a href="#state_customjson_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Json</a>
@@ -1747,7 +1925,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customsecuritygroupids_nodejs">
 <a href="#state_customsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1756,7 +1935,8 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customsetuprecipes_nodejs">
 <a href="#state_customsetuprecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Recipes</a>
@@ -1764,7 +1944,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customshutdownrecipes_nodejs">
 <a href="#state_customshutdownrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Shutdown<wbr>Recipes</a>
@@ -1772,7 +1953,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_customundeployrecipes_nodejs">
 <a href="#state_customundeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Undeploy<wbr>Recipes</a>
@@ -1780,7 +1962,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_drainelbonshutdown_nodejs">
 <a href="#state_drainelbonshutdown_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
@@ -1789,7 +1972,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ebsvolumes_nodejs">
 <a href="#state_ebsvolumes_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Volumes</a>
@@ -1798,7 +1982,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customlayerebsvolume">Custom<wbr>Layer<wbr>Ebs<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_elasticloadbalancer_nodejs">
 <a href="#state_elasticloadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Load<wbr>Balancer</a>
@@ -1807,7 +1992,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_installupdatesonboot_nodejs">
 <a href="#state_installupdatesonboot_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Updates<wbr>On<wbr>Boot</a>
@@ -1816,7 +2002,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instanceshutdowntimeout_nodejs">
 <a href="#state_instanceshutdowntimeout_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Shutdown<wbr>Timeout</a>
@@ -1825,7 +2012,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1834,7 +2022,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_shortname_nodejs">
 <a href="#state_shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
@@ -1843,7 +2032,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stackid_nodejs">
 <a href="#state_stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
@@ -1852,7 +2042,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_systempackages_nodejs">
 <a href="#state_systempackages_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Packages</a>
@@ -1861,7 +2052,8 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1870,7 +2062,8 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_useebsoptimizedinstances_nodejs">
 <a href="#state_useebsoptimizedinstances_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
@@ -1879,11 +2072,14 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties">
+
+    <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1892,7 +2088,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_auto_assign_elastic_ips_python">
 <a href="#state_auto_assign_elastic_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>elastic_<wbr>ips</a>
@@ -1901,7 +2098,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_auto_assign_public_ips_python">
 <a href="#state_auto_assign_public_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>public_<wbr>ips</a>
@@ -1910,7 +2108,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_auto_healing_python">
 <a href="#state_auto_healing_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing</a>
@@ -1919,7 +2118,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custom_configure_recipes_python">
 <a href="#state_custom_configure_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>configure_<wbr>recipes</a>
@@ -1927,7 +2127,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custom_deploy_recipes_python">
 <a href="#state_custom_deploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deploy_<wbr>recipes</a>
@@ -1935,7 +2136,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custom_instance_profile_arn_python">
 <a href="#state_custom_instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>instance_<wbr>profile_<wbr>arn</a>
@@ -1944,7 +2146,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custom_json_python">
 <a href="#state_custom_json_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>json</a>
@@ -1953,7 +2156,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custom_security_group_ids_python">
 <a href="#state_custom_security_group_ids_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -1962,7 +2166,8 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custom_setup_recipes_python">
 <a href="#state_custom_setup_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>recipes</a>
@@ -1970,7 +2175,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custom_shutdown_recipes_python">
 <a href="#state_custom_shutdown_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>shutdown_<wbr>recipes</a>
@@ -1978,7 +2184,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_custom_undeploy_recipes_python">
 <a href="#state_custom_undeploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>undeploy_<wbr>recipes</a>
@@ -1986,7 +2193,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_drain_elb_on_shutdown_python">
 <a href="#state_drain_elb_on_shutdown_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>elb_<wbr>on_<wbr>shutdown</a>
@@ -1995,7 +2203,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_ebs_volumes_python">
 <a href="#state_ebs_volumes_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>volumes</a>
@@ -2004,7 +2213,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customlayerebsvolume">Sequence[Custom<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_elastic_load_balancer_python">
 <a href="#state_elastic_load_balancer_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>load_<wbr>balancer</a>
@@ -2013,7 +2223,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_install_updates_on_boot_python">
 <a href="#state_install_updates_on_boot_python" style="color: inherit; text-decoration: inherit;">install_<wbr>updates_<wbr>on_<wbr>boot</a>
@@ -2022,7 +2233,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_instance_shutdown_timeout_python">
 <a href="#state_instance_shutdown_timeout_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>shutdown_<wbr>timeout</a>
@@ -2031,7 +2243,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2040,7 +2253,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_short_name_python">
 <a href="#state_short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
@@ -2049,7 +2263,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_stack_id_python">
 <a href="#state_stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
@@ -2058,7 +2273,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_system_packages_python">
 <a href="#state_system_packages_python" style="color: inherit; text-decoration: inherit;">system_<wbr>packages</a>
@@ -2067,7 +2283,8 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2076,7 +2293,8 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="state_use_ebs_optimized_instances_python">
 <a href="#state_use_ebs_optimized_instances_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ebs_<wbr>optimized_<wbr>instances</a>
@@ -2085,7 +2303,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 
@@ -2100,7 +2319,9 @@ The following state arguments are supported:
 <h4 id="customlayerebsvolume">Custom<wbr>Layer<wbr>Ebs<wbr>Volume</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mountpoint_csharp">
 <a href="#mountpoint_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
@@ -2109,7 +2330,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="numberofdisks_csharp">
 <a href="#numberofdisks_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Disks</a>
@@ -2118,7 +2340,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -2127,7 +2350,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -2136,7 +2360,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Encrypt the volume.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="iops_csharp">
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -2145,7 +2370,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="raidlevel_csharp">
 <a href="#raidlevel_csharp" style="color: inherit; text-decoration: inherit;">Raid<wbr>Level</a>
@@ -2154,7 +2380,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2163,11 +2390,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mountpoint_go">
 <a href="#mountpoint_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
@@ -2176,7 +2406,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="numberofdisks_go">
 <a href="#numberofdisks_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Disks</a>
@@ -2185,7 +2416,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -2194,7 +2426,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -2203,7 +2436,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Encrypt the volume.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="iops_go">
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -2212,7 +2446,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="raidlevel_go">
 <a href="#raidlevel_go" style="color: inherit; text-decoration: inherit;">Raid<wbr>Level</a>
@@ -2221,7 +2456,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2230,11 +2466,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mountpoint_nodejs">
 <a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
@@ -2243,7 +2482,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="numberofdisks_nodejs">
 <a href="#numberofdisks_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Disks</a>
@@ -2252,7 +2492,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2261,7 +2502,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2270,7 +2512,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Encrypt the volume.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="iops_nodejs">
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2279,7 +2522,8 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="raidlevel_nodejs">
 <a href="#raidlevel_nodejs" style="color: inherit; text-decoration: inherit;">raid<wbr>Level</a>
@@ -2288,7 +2532,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2297,11 +2542,14 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
+<dl class="resources-properties">
+
+    <dt class="property-required"
             title="Required">
         <span id="mount_point_python">
 <a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
@@ -2310,7 +2558,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="number_of_disks_python">
 <a href="#number_of_disks_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>disks</a>
@@ -2319,7 +2568,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd>
+    <dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2328,7 +2578,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2337,7 +2588,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Encrypt the volume.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="iops_python">
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2346,7 +2598,8 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="raid_level_python">
 <a href="#raid_level_python" style="color: inherit; text-decoration: inherit;">raid_<wbr>level</a>
@@ -2355,7 +2608,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd>
+    <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2364,7 +2618,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 ## Import
 
@@ -2385,6 +2640,6 @@ OpsWorks Custom Layers can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 
