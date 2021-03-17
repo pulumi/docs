@@ -12,9 +12,15 @@ tags:
     - Python
 ---
 
-Data scientists typically work locally, whether they use R or Jupyter notebooks. However, they often store the input data for analyses and models in the cloud. The advantages of using cloud resources are apparent, i.e., managed storage and databases, low-cost hosting of large data sets, and data on demand. Many cloud providers offer SDKs for the APIs of cloud resources. For example, AWS offers the Python library, `boto3`, for creating and working with resources.
+Data science has advanced because tools like Jupyter Notebook hide complexity by running high level code for the specific problem they are trying to solve. Increasing the level of abstraction lets a data scientist be more productive by reducing the effort to try multiple approaches to near zero, which encourages experimentation and better results.
 
-Although these libraries are helpful, a data scientist must know how to create and manage cloud resources in addition to performing data science. The Pulumi Automation API changes this model and lets data scientists do their work without becoming well-versed in cloud APIs.
+Data scientists typically work locally, but they often store data for analyses and models in the cloud. There are clear advantages to using cloud resources for these tasks:
+
+- Data scientists generally don’t want to manage their storage and databases.
+- They need to be able to store large data sets cheaply.
+- They need large capacity swings available on-demand.
+
+SDKs like AWS’ Python library, `boto3`, can create resources, but they still require domain expertise to manage and properly architect a solution. The Pulumi Automation API improves raw SDKs by providing high-level abstractions for creating and managing cloud services, letting data scientists concentrate on analyses and models without being well-versed in cloud APIs.
 
 <!--more-->
 
@@ -28,7 +34,11 @@ Pulumi reduces the burden of creating and maintaining repeatable and robust depl
 
 ## Infrastructure as a function
 
+As a data scientist, you might want to share data, charts, or graphs with remote team members and make them available through a shared website. You want to keep iterating on your model but don't want to update the site manually, or worse, let it get out of date.
+
 The [first example](https://github.com/pulumi/automation-api-examples/blob/main/python/pulumi_via_jupyter/automation_api.ipynb) is a simple overview of Automation API that demonstrates a basic deployment of a static website from within a Jupyter notebook. This example uses an inline program to define infrastructure within a function alongside your other code. The function called `s3_static_site` creates an s3 bucket, sets it up as a basic static website, and exports the URL. This is the equivalent of creating a Pulumi [stack]({{< relref "/docs/intro/concepts/stack" >}}) using the CLI.
+
+We've added code to the example to upload files written to the `www` directory. Every time you want to update the website, you can write a file to the directory and call the function to upload it to the s3 bucket. Pulumi maintains state, so it will only upload new files when the function is called.
 
 ```python
 from pulumi_aws import s3
