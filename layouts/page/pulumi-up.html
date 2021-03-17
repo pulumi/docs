@@ -1,24 +1,37 @@
 {{ define "main" }}
-    <div class="pulumi-up-body text-white py-12">
-        <div class="container mx-auto">
-            <section id="about">
+    <div class="pulumi-up-body text-white pb-12">
+        <div class="relative overflow-hidden">
+            <video class="pulumiup-video" autoplay muted loop>
+                <source src="/video/pulumiup-lofi.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="pulumiup-title">
                 <div class="neon-container">
                     <span class="blue-neon-sign-xl">Pulumi</span>
                     <span class="green-neon-sign-xl">UP</span>
                 </div>
-                <pulumi-date-countdown
-                    value-label-class="text-2xl"
-                    text-class="date-countdown"
-                    date-string="{{ .Params.countdown_date }}"
-                ></pulumi-date-countdown>
+                <div class="mt-24">
+                    <pulumi-date-countdown
+                        value-label-class="text-2xl"
+                        text-class="date-countdown"
+                        date-string="{{ .Params.countdown_date }}"
+                    ></pulumi-date-countdown>
+                </div>
+            </div>
+            <div class="absolute bottom-0 right-0 flex items-start w-16 py-4">
+                <pulumi-mp3-mute-controller
+                    audio-element-id="pulumiup-background-music"
+                    file="http://music-bucker-d3204f7.s3-website-us-west-2.amazonaws.com/pulumiup-background-music.mp3"
+                ></pulumi-mp3-mute-controller>
+            </div>
+        </div>
+        <div class="container mx-auto">
+            <section id="about">
                 <div class="bg-green"></div>
                 <div class="w-full flex items-center justify-center">
-                    <div class="max-w-xl mx-auto">
-                        <blockquote class="twitter-tweet" data-align="center">
-                            <p lang="en" dir="ltr">We&#39;re cooking up something brand new and I really can&#39;t wait to tell y&#39;all about it. Building cloud apps will never be the same again. Stay tuned 📻</p>&mdash; J☁e Duffy (@funcOfJoe) <a href="https://twitter.com/funcOfJoe/status/1366829416429457408?ref_src=twsrc%5Etfw">March 2, 2021</a>
-                        </blockquote>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div>
+                    <p data-title="The Main Event" class="neon-callout-box-green">
+                        Some great text
+                    </p>
                 </div>
                 <div class="text-center p-4">
                     <h4 class="text-gray-100 md:mr-8 mt-2 text-2xl">{{ .Params.form.label }}</h4>
@@ -36,4 +49,5 @@
         </div>
     </div>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Vibur" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Walter+Turncoat" />
 {{ end }}

@@ -50,7 +50,7 @@ $orange900: theme("colors.orange.900");
     @include neon-sign($blue400, $blue700, $blue900, 6rem, "blue-neon-sign-xl-pulse");
 
     @screen lg {
-        @include neon-sign($blue400, $blue700, $blue900, 8rem, "blue-neon-sign-xl-pulse");
+        @include neon-sign($blue400, $blue700, $blue900, 9rem, "blue-neon-sign-xl-pulse");
     }
 }
 
@@ -58,7 +58,7 @@ $orange900: theme("colors.orange.900");
     @include neon-sign($green400, $green700, $green900, 6rem, "green-neon-sign-xl-pulse", true, 4s);
 
     @screen lg {
-        @include neon-sign($green400, $green700, $green900, 8rem, "green-neon-sign-xl-pulse", true, 4s);
+        @include neon-sign($green400, $green700, $green900, 9rem, "green-neon-sign-xl-pulse", true, 4s);
     }
 }
 
@@ -69,4 +69,51 @@ $orange900: theme("colors.orange.900");
 
 .pulumi-up-body {
     @apply bg-gray-900;
+}
+
+%dialog-box {
+    border-radius: 1em;
+    color: white;
+    margin: 5% auto;
+    max-width: 25em;
+    padding: 2em;
+    position: relative;
+    width: 95%;
+
+    &:before {
+        @apply bg-gray-900 absolute uppercase text-center p-0 px-4;
+        content: attr(data-title);
+        left: 50%;
+        top: -0.9em;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin dialog-box ($color: #05d5fc){
+    @extend %dialog-box;
+    border: 0.2em solid $color;
+    box-shadow: inset 0 0 0.4em $color, 0 0 0.4em $color;
+
+    &:before {
+        color: $color;
+        text-shadow: 0 0 0.4em $color;
+    }
+
+    em {
+        color: $color;
+    }
+}
+
+.pulumiup-video {
+    @apply w-full;
+    margin-top: -190px;
+}
+
+.pulumiup-title {
+    @apply absolute top-0;
+    left: 25%;
+}
+
+.neon-callout-box-green {
+    @include dialog-box($green400);
 }

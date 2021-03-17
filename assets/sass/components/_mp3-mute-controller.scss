@@ -1,0 +1,8 @@
+pulumi-mp3-mute-controller {
+    .mp3-mute-controller-container {
+        @apply cursor-pointer;
+        i {
+            @apply text-5xl;
+        }
+    }
+}
