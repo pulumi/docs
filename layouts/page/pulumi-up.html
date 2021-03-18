@@ -26,13 +26,53 @@
             </div>
         </div>
         <div class="container mx-auto">
-            <section id="about">
-                <div class="bg-green"></div>
+            <section id="keynote">
                 <div class="w-full flex items-center justify-center">
-                    <p data-title="The Main Event" class="neon-callout-box-green">
-                        Some great text
-                    </p>
+                    <div data-title="The Main Event" class="neon-callout-box-green max-w-full">
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="flex flex-col lg:flex-row justify-center items-center">
+                                {{ range $id := .Params.keynote.speakers }}
+                                    {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
+                                    {{ $authorData := index $.Site.Data.team.team $id }}
+
+                                    <span class="flex items-center justify-center mx-4">
+                                        <span class="speaker-image">
+                                            <img src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}">
+                                        </span>
+                                        <span class="flex flex-col">
+                                            <span class="speaker-name-blue ml-4">
+                                                {{ $authorData.name }}
+                                            </span>
+                                            <span class="text-white">{{ $authorData.title }}, {{ $authorData.company }}</span>
+                                        </span>
+                                    </span>
+                                {{ end }}
+                            </div>
+                            <div class="mt-8 px-16">
+                                <p class="text-xl">
+                                    This chat about modern cloud architectures and development will include a variety of topics - building blocks and abstractions; infrastructure and application boundaries; and chaos, canaries, and compliance in software delivery.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </section>
+            <section id="sessions">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="w-full lg:w-1/2 p-4">
+                        <div data-title="Workshops" class="neon-callout-box-orange text-center">
+                            <p class="coming-soon-sign">Coming Soon</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 p-4">
+                        <div data-title="Binge Content" class="neon-callout-box-blue text-center">
+                            <p class="coming-soon-sign">Coming Soon</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="register">
                 <div class="text-center p-4">
                     <h4 class="text-gray-100 md:mr-8 mt-2 text-2xl">{{ .Params.form.label }}</h4>
                     <div class="flex items-center justify-center">

@@ -11,6 +11,11 @@ aliases:
 
 countdown_date: 2021-04-20T09:00:00-08:00
 
+keynote:
+    speakers:
+        - "joe-duffy"
+        - "adrian-cockcroft"
+
 form:
     label: Enter your email to be first to know when registrations starts
     form_id: 8457d25f-b10e-406c-b366-abf311d48caa

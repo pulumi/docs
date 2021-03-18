@@ -72,16 +72,12 @@ $orange900: theme("colors.orange.900");
 }
 
 %dialog-box {
-    border-radius: 1em;
-    color: white;
+    @apply relative p-8 w-full text-white;
     margin: 5% auto;
-    max-width: 25em;
-    padding: 2em;
-    position: relative;
-    width: 95%;
+    border-radius: 1rem;
 
     &:before {
-        @apply bg-gray-900 absolute uppercase text-center p-0 px-4;
+        @apply bg-gray-900 absolute uppercase text-center p-0 px-4 text-3xl;
         content: attr(data-title);
         left: 50%;
         top: -0.9em;
@@ -98,10 +94,6 @@ $orange900: theme("colors.orange.900");
         color: $color;
         text-shadow: 0 0 0.4em $color;
     }
-
-    em {
-        color: $color;
-    }
 }
 
 .pulumiup-video {
@@ -116,4 +108,30 @@ $orange900: theme("colors.orange.900");
 
 .neon-callout-box-green {
     @include dialog-box($green400);
+}
+
+.neon-callout-box-blue {
+    @include dialog-box($blue400);
+}
+
+.neon-callout-box-orange {
+    @include dialog-box($orange400);
+}
+
+.speaker-name-blue {
+    @include neon-sign($orange400, $orange700, $orange900, 2.25rem, "speaker-name-blue", false);
+}
+
+.speaker-image {
+    @apply rounded-full p-1 bg-orange-400 mr-2;
+    box-shadow: inset 0 0 0.4em $orange400, 0 0 0.4em $orange400;
+
+    img {
+        @apply w-24 rounded-full;
+    }
+}
+
+.coming-soon-sign {
+    @apply inline-block p-4;
+    @include neon-sign($green400, $green700, $green900, 2.25rem, "coming-soon-sign", false);
 }
