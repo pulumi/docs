@@ -1,8 +1,23 @@
+$orange200: theme('colors.orange.200');
+$orange400: theme('colors.orange.400');
+$orange600: theme('colors.orange.600');
+
+$blue400: theme('colors.blue.400');
+$blue600: theme('colors.blue.600');
+
+$green200: theme('colors.green.200');
+$green400: theme('colors.green.400');
+$green600: theme('colors.green.600');
+
 pulumi-mp3-mute-controller {
     .mp3-mute-controller-container {
-        @apply cursor-pointer;
+        @apply cursor-pointer text-center;
         i {
-            @apply text-5xl;
+            @apply mr-4;
+        }
+
+        .mp3-toggle-button {
+            @apply btn btn-orange inline-block;
         }
     }
 }

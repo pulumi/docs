@@ -3,14 +3,19 @@
         <div class="relative overflow-hidden">
             <video class="pulumiup-video" autoplay muted loop>
                 <source src="/video/pulumiup-lofi.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
             <div class="pulumiup-title">
                 <div class="neon-container">
                     <span class="blue-neon-sign-xl">Pulumi</span>
                     <span class="green-neon-sign-xl">UP</span>
                 </div>
-                <div class="mt-24">
+                <pulumi-mp3-mute-controller
+                    paused-text="FEEL THE VIBE"
+                    playing-text="PAUSE THE VIBE"
+                    audio-element-id="pulumiup-background-music"
+                    file="http://music-bucker-d3204f7.s3-website-us-west-2.amazonaws.com/pulumiup-background-music.mp4"
+                ></pulumi-mp3-mute-controller>
+                <div class="mt-16">
                     <pulumi-date-countdown
                         value-label-class="text-2xl"
                         text-class="date-countdown"
@@ -18,24 +23,18 @@
                     ></pulumi-date-countdown>
                 </div>
             </div>
-            <div class="absolute bottom-0 right-0 flex items-start w-16 py-4">
-                <pulumi-mp3-mute-controller
-                    audio-element-id="pulumiup-background-music"
-                    file="http://music-bucker-d3204f7.s3-website-us-west-2.amazonaws.com/pulumiup-background-music.mp3"
-                ></pulumi-mp3-mute-controller>
-            </div>
         </div>
         <div class="container mx-auto">
             <section id="keynote">
                 <div class="w-full flex items-center justify-center">
                     <div data-title="The Main Event" class="neon-callout-box-green max-w-full">
                         <div class="flex flex-col justify-center items-center">
-                            <div class="flex flex-col lg:flex-row justify-center items-center">
+                            <div class="flex flex-col lg:flex-row justify-center items-start lg:items-center">
                                 {{ range $id := .Params.keynote.speakers }}
                                     {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
                                     {{ $authorData := index $.Site.Data.team.team $id }}
 
-                                    <span class="flex items-center justify-center mx-4">
+                                    <span class="flex items-center mx-4 mt-4 lg:mt-0">
                                         <span class="speaker-image">
                                             <img src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}">
                                         </span>

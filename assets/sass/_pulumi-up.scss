@@ -98,7 +98,9 @@ $orange900: theme("colors.orange.900");
 
 .pulumiup-video {
     @apply w-full;
-    margin-top: -190px;
+    @screen lg {
+        margin-top: -10%;
+    }
 }
 
 .pulumiup-title {

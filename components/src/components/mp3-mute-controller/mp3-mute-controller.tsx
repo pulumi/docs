@@ -9,13 +9,13 @@ export class Mp3MuteController {
     file: string;
 
     @Prop()
+    playingText: string;
+
+    @Prop()
+    pausedText: string;
+
+    @Prop()
     audioElementId: string;
-
-    @Prop()
-    playingIcon = "volume-up";
-
-    @Prop()
-    mutedIcon = "volume-off";
 
     @State()
     isPlaying = false;
@@ -47,11 +47,11 @@ export class Mp3MuteController {
     }
 
     render() {
-        const icon = this.muted ? this.mutedIcon : this.playingIcon;
+        const text = this.muted ? this.pausedText : this.playingText;
         return (
             <div class="mp3-mute-controller-container" onClick={this.toggleMute.bind(this)}>
-                <div><i class={`fas fa-${icon}`}></i></div>
-                <audio id={this.audioElementId} loop>
+                <div class="mp3-toggle-button"><i class="fas fa-music"></i>{ text }</div>
+                <audio id={this.audioElementId} preload="none" loop>
                     <source src={this.file} type="audio/mpeg" />
                 </audio>
             </div>

@@ -68,8 +68,8 @@ export namespace Components {
   interface PulumiMp3MuteController {
     'audioElementId': string;
     'file': string;
-    'mutedIcon': string;
-    'playingIcon': string;
+    'pausedText': string;
+    'playingText': string;
   }
   interface PulumiRoot {}
   interface PulumiTooltip {
@@ -241,8 +241,8 @@ declare namespace LocalJSX {
   interface PulumiMp3MuteController {
     'audioElementId'?: string;
     'file'?: string;
-    'mutedIcon'?: string;
-    'playingIcon'?: string;
+    'pausedText'?: string;
+    'playingText'?: string;
   }
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
