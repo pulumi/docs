@@ -16,7 +16,7 @@ tags:
 
 ## Just the basics
 
-Let’s start with a hello world function in an AWS Lambda. You can start the [example from Github](https://github.com/pulumi/examples/tree/master/aws-py-stepfunctions") by clicking on the `Deploy with Pulumi` button. A new project page is created automatically in Pulumi console, click on `Create Project` to get started. Follow the steps to copy the project locally. As with any Python project, we recommend creating a virtual environment to store project-specific dependencies.
+Let’s start with a hello world function in an AWS Lambda. You can start the [example from Github](https://github.com/pulumi/examples/tree/master/aws-py-stepfunctions) by clicking on the `Deploy with Pulumi` button. A new project page is created automatically in Pulumi console, click on `Create Project` to get started. Follow the steps to copy the project locally. As with any Python project, we recommend creating a virtual environment to store project-specific dependencies.
 
 ```bash
 $ python3 -m venv venv
@@ -175,4 +175,4 @@ You can see the results in the AWS Console. The workflow graph shows the new ste
 
 ## What’s next
 
-This example is just a simple workflow intended as an introduction. In future articles, we’ll expand on this basic model to include custom lambda functions and  AWS services. If python isn’t your preferred programming language, this example is also available in [typescript](https://github.com/pulumi/examples/tree/master/aws-ts-stepfunctions). Additionally, check out the [examples repository](https://github.com/pulumi/examples") to see what you can build next.
+This example is just a simple workflow intended as an introduction. In future articles, we’ll expand on this basic model to include custom lambda functions and  AWS services. If python isn’t your preferred programming language, this example is also available in [typescript](https://github.com/pulumi/examples/tree/master/aws-ts-stepfunctions). Additionally, check out the [examples repository](https://github.com/pulumi/examples) to see what you can build next.

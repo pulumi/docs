@@ -16,7 +16,7 @@ to fit into any existing type of deployment setup.
 
 ### Spinnaker installation
 
-> [Spinnaker Plugin Creator's Guide](https://www.spinnaker.io/guides/developer/plugin-creators/overview/).
+> [Spinnaker Plugin Creator's Guide](https://spinnaker.io/guides/developer/plugins/).
 
 This solution requires a version of Spinnaker that supports plugins as well as the Pulumi Plugin for Spinnaker itself.
 
