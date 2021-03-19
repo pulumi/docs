@@ -64,13 +64,13 @@ EOT
 
 {{% /choosable %}}
 
-Now that you have your new `index.html` with some content, enable static website support, upload `index.html` to a storage container, and retrieve a public URL through the use of resource properties. These properties can be used to define dependencies between related resources or to retrieve property values for further processing.
+Now that you have your new `index.html` with some content, you can enable static website support, upload `index.html` to a storage container, and retrieve a public URL through the use of resource properties. These properties can be used to define dependencies between related resources or to retrieve property values for further processing.
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language typescript %}}
 
-To start, open `index.ts` in your IDE or text editor and add the following right after the storage account creation:
+To start, open `index.ts` and add the following right after the storage account creation:
 
 ```typescript
 // Enable static website support
@@ -84,7 +84,7 @@ const staticWebsite = new storage.StorageAccountStaticWebsite("staticWebsite", {
 {{% /choosable %}}
 {{% choosable language python %}}
 
-To start, open `__main__.py` in your IDE or text editor and add the following right after the storage account creation:
+To start, open `__main__.py` and add the following right after the storage account creation:
 
 ```python
 # Enable static website support
@@ -97,7 +97,7 @@ static_website = storage.StorageAccountStaticWebsite("staticWebsite",
 {{% /choosable %}}
 {{% choosable language go %}}
 
-To start, open `main.go` in your IDE or text editor and add the following right after the storage account creation:
+To start, open `main.go` and add the following right after the storage account creation:
 
 ```go
 // Enable static website support
@@ -114,7 +114,7 @@ if err != nil {
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
-To start, open `MyStack.cs` in your IDE or text editor and add the following right after the storage account creation:
+To start, open `MyStack.cs` and add the following right after the storage account creation:
 
 ```csharp
 // Enable static website support
