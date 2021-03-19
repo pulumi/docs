@@ -237,8 +237,19 @@ export const privateIp = frontend.spec.clusterIP;
 {{% choosable language python %}}
 
 ```python
-# ConfigGroup is not yet available in Python:
-# https://github.com/pulumi/pulumi-kubernetes/issues/770
+from pulumi_kubernetes.yaml import ConfigGroup
+from pulumi import export
+
+# Create resources from standard Kubernetes guestbook YAML example.
+guestbook = ConfigGroup(
+  "guestbook",
+  files=["yaml/*.yaml"])
+
+# Export the private cluster IP address of the frontend.
+frontend = guestbook.get_resource("v1/Service", "frontend")
+export(
+  name="privateIp",
+  value=frontend.spec.clusterIP)
 ```
 
 {{% /choosable %}}
