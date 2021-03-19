@@ -12,7 +12,7 @@ meta_desc: "Documentation for the aws.s3.Bucket resource with examples, input pr
 
 Provides a S3 bucket resource.
 
-> This functionality is for managing S3 in an AWS Partition. To manage [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html), see the [`aws.s3control.Bucket`](https://www.terraform.io/docs/providers/aws/r/s3control_bucket.html) resource.
+> This functionality is for managing S3 in an AWS Partition. To manage [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html), see the `aws.s3control.Bucket` resource.
 
 {{% examples %}}
 
@@ -6555,7 +6555,7 @@ S3 bucket can be imported using the `bucket`, e.g.
  $ pulumi import aws:s3/bucket:Bucket bucket bucket-name
 ```
 
- The `policy` argument is not imported and will be deprecated in a future version 3.x of the Terraform AWS Provider for removal in version 4.0. Use the [`aws_s3_bucket_policy` resource](/docs/providers/aws/r/s3_bucket_policy.html) to manage the S3 Bucket Policy instead.
+ The `policy` argument is not imported and will be deprecated in a future version of the provider. Use the `aws_s3_bucket_policy` resource to manage the S3 Bucket Policy instead.
 
 
 

@@ -11,13 +11,6 @@ meta_desc: "Documentation for the aws.rds.EventSubscription resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a DB event subscription resource.
-## Attributes
-
-The following additional atttributes are provided:
-
-* `id` - The name of the RDS event notification subscription
-* `arn` - The Amazon Resource Name of the RDS event notification subscription
-* `customer_aws_id` - The AWS customer account associated with the RDS event notification subscription
 
 {{% examples %}}
 
@@ -704,7 +697,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Amazon Resource Name of the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerawsid_csharp">
 <a href="#customerawsid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Aws<wbr>Id</a>
@@ -712,7 +706,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The AWS customer account associated with the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -732,7 +727,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Amazon Resource Name of the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerawsid_go">
 <a href="#customerawsid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Aws<wbr>Id</a>
@@ -740,7 +736,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The AWS customer account associated with the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -760,7 +757,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Amazon Resource Name of the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerawsid_nodejs">
 <a href="#customerawsid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Aws<wbr>Id</a>
@@ -768,7 +766,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The AWS customer account associated with the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -788,7 +787,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Amazon Resource Name of the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customer_aws_id_python">
 <a href="#customer_aws_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>aws_<wbr>id</a>
@@ -796,7 +796,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The AWS customer account associated with the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -939,7 +940,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name of the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerawsid_csharp">
 <a href="#state_customerawsid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Aws<wbr>Id</a>
@@ -947,7 +949,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The AWS customer account associated with the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1031,7 +1034,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name of the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerawsid_go">
 <a href="#state_customerawsid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Aws<wbr>Id</a>
@@ -1039,7 +1043,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The AWS customer account associated with the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1123,7 +1128,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name of the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerawsid_nodejs">
 <a href="#state_customerawsid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Aws<wbr>Id</a>
@@ -1131,7 +1137,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The AWS customer account associated with the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1215,7 +1222,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name of the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customer_aws_id_python">
 <a href="#state_customer_aws_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>aws_<wbr>id</a>
@@ -1223,7 +1231,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The AWS customer account associated with the RDS event notification subscription
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>

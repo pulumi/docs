@@ -456,7 +456,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version
+    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_csharp">
@@ -669,7 +669,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version
+    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_go">
@@ -882,7 +882,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version
+    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_nodejs">
@@ -1095,7 +1095,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The database engine version
+    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_python">
@@ -1755,7 +1755,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version
+    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_csharp">
@@ -2031,7 +2031,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version
+    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_go">
@@ -2307,7 +2307,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version
+    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_nodejs">
@@ -2583,7 +2583,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The database engine version
+    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_python">

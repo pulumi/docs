@@ -838,7 +838,8 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`) before continuing. Default `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1048,7 +1049,8 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`) before continuing. Default `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1258,7 +1260,8 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`) before continuing. Default `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1468,7 +1471,8 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`) before continuing. Default `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1856,7 +1860,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`) before continuing. Default `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2066,7 +2071,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`) before continuing. Default `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2276,7 +2282,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`) before continuing. Default `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2486,7 +2493,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If `true`, the provider will wait for the service to reach a steady state (like `aws ecs wait services-stable`) before continuing. Default `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

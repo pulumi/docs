@@ -26,7 +26,7 @@ this parameter to manage the DNS records for that domain.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Creating A New Domain
+
 
 
 {{< example csharp >}}

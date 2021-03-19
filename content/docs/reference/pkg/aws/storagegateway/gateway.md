@@ -432,7 +432,7 @@ const example = new aws.storagegateway.Gateway("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activation_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">average_download_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">average_upload_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cloudwatch_log_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_vpc_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">medium_changer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_active_directory_settings</span><span class="p">:</span> <span class="nx">Optional[GatewaySmbActiveDirectorySettingsArgs]</span> = None<span class="p">, </span><span class="nx">smb_guest_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_security_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tape_drive_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activation_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">average_download_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">average_upload_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cloudwatch_log_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_vpc_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">medium_changer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_active_directory_settings</span><span class="p">:</span> <span class="nx">Optional[GatewaySmbActiveDirectorySettingsArgs]</span> = None<span class="p">, </span><span class="nx">smb_file_share_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">smb_guest_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_security_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tape_drive_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -673,6 +673,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="smbfilesharevisibility_csharp">
+<a href="#smbfilesharevisibility_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>File<wbr>Share<wbr>Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the shares on this gateway appear when listing shares.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smbguestpassword_csharp">
 <a href="#smbguestpassword_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
 </span>
@@ -697,7 +706,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tapedrivetype_csharp">
@@ -812,6 +821,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="smbfilesharevisibility_go">
+<a href="#smbfilesharevisibility_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>File<wbr>Share<wbr>Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the shares on this gateway appear when listing shares.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smbguestpassword_go">
 <a href="#smbguestpassword_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
 </span>
@@ -836,7 +854,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tapedrivetype_go">
@@ -951,6 +969,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="smbfilesharevisibility_nodejs">
+<a href="#smbfilesharevisibility_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>File<wbr>Share<wbr>Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the shares on this gateway appear when listing shares.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smbguestpassword_nodejs">
 <a href="#smbguestpassword_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Guest<wbr>Password</a>
 </span>
@@ -975,7 +1002,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tapedrivetype_nodejs">
@@ -1090,6 +1117,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="smb_file_share_visibility_python">
+<a href="#smb_file_share_visibility_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>file_<wbr>share_<wbr>visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the shares on this gateway appear when listing shares.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smb_guest_password_python">
 <a href="#smb_guest_password_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>guest_<wbr>password</a>
 </span>
@@ -1114,7 +1150,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tape_drive_type_python">
@@ -1411,7 +1447,7 @@ Get an existing Gateway resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activation_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">average_download_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">average_upload_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cloudwatch_log_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ec2_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GatewayGatewayNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_vpc_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">medium_changer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_active_directory_settings</span><span class="p">:</span> <span class="nx">Optional[GatewaySmbActiveDirectorySettingsArgs]</span> = None<span class="p">, </span><span class="nx">smb_guest_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_security_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tape_drive_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Gateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activation_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">average_download_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">average_upload_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cloudwatch_log_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ec2_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GatewayGatewayNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_vpc_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">medium_changer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_active_directory_settings</span><span class="p">:</span> <span class="nx">Optional[GatewaySmbActiveDirectorySettingsArgs]</span> = None<span class="p">, </span><span class="nx">smb_file_share_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">smb_guest_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_security_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tape_drive_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Gateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1677,6 +1713,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_smbfilesharevisibility_csharp">
+<a href="#state_smbfilesharevisibility_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>File<wbr>Share<wbr>Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the shares on this gateway appear when listing shares.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_smbguestpassword_csharp">
 <a href="#state_smbguestpassword_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
 </span>
@@ -1701,7 +1746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tapedrivetype_csharp">
@@ -1870,6 +1915,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_smbfilesharevisibility_go">
+<a href="#state_smbfilesharevisibility_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>File<wbr>Share<wbr>Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the shares on this gateway appear when listing shares.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_smbguestpassword_go">
 <a href="#state_smbguestpassword_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
 </span>
@@ -1894,7 +1948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tapedrivetype_go">
@@ -2063,6 +2117,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_smbfilesharevisibility_nodejs">
+<a href="#state_smbfilesharevisibility_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>File<wbr>Share<wbr>Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the shares on this gateway appear when listing shares.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_smbguestpassword_nodejs">
 <a href="#state_smbguestpassword_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Guest<wbr>Password</a>
 </span>
@@ -2087,7 +2150,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tapedrivetype_nodejs">
@@ -2256,6 +2319,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_smb_file_share_visibility_python">
+<a href="#state_smb_file_share_visibility_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>file_<wbr>share_<wbr>visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the shares on this gateway appear when listing shares.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_smb_guest_password_python">
 <a href="#state_smb_guest_password_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>guest_<wbr>password</a>
 </span>
@@ -2280,7 +2352,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tape_drive_type_python">
@@ -2638,7 +2710,19 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
  $ pulumi import aws:storagegateway/gateway:Gateway example arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678
 ```
 
- Certain resource arguments, like `gateway_ip_address` do not have a Storage Gateway API method for reading the information after creation, either omit the argument from the provider configuration or use `ignoreChanges` to hide the difference.
+ <<<<<<< HEAD Certain resource arguments, like `gateway_ip_address` do not have a Storage Gateway API method for reading the information after creation, either omit the argument from the provider configuration or use `ignoreChanges` to hide the difference. ======= Certain resource arguments, like `gateway_ip_address` do not have a Storage Gateway API method for reading the information after creation, either omit the argument from the provider configuration or use `ignore_changes` to hide the difference, e.g. terraform resource "aws_storagegateway_gateway" "example" {
+
+# ... other configuration ...
+
+ gateway_ip_address = aws_instance.sgw.private_ip
+
+# There is no Storage Gateway API for reading gateway_ip_address
+
+ lifecycle {
+
+ ignore_changes = ["gateway_ip_address"]
+
+ } } >>>>>>> v3.33.0
 
 
 

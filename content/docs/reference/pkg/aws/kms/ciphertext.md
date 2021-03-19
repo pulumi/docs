@@ -15,8 +15,6 @@ by using an AWS KMS customer master key. The value returned by this resource
 is stable across every apply. For a changing ciphertext value each apply, see
 the `aws.kms.Ciphertext` data source.
 
-> **Note:** All arguments including the plaintext be stored in the raw state as plain-text.
-
 
 {{% examples %}}
 

@@ -32,7 +32,7 @@ of this provider.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Certificate creation
+### Create Certificate
 
 
 {{< example csharp >}}
@@ -134,7 +134,7 @@ const cert = new aws.acm.Certificate("cert", {
 
 
 
-### Importing an existing certificate
+### Existing Certificate Body Import
 
 
 {{< example csharp >}}

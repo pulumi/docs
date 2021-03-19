@@ -312,7 +312,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
+    <dd>{{% md %}}The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -417,7 +417,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
+    <dd>{{% md %}}The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -522,7 +522,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
+    <dd>{{% md %}}The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -627,7 +627,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
+    <dd>{{% md %}}The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1039,7 +1039,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
+    <dd>{{% md %}}The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1174,7 +1174,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
+    <dd>{{% md %}}The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -1309,7 +1309,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
+    <dd>{{% md %}}The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -1444,7 +1444,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
+    <dd>{{% md %}}The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">

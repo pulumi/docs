@@ -12,8 +12,6 @@ meta_desc: "Documentation for the aws.redshift.Cluster resource with examples, i
 
 Provides a Redshift Cluster Resource.
 
-> **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
-
 {{% examples %}}
 
 ## Example Usage

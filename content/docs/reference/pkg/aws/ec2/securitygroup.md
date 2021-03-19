@@ -1457,7 +1457,9 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The protocol. If you select a protocol of
+"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_csharp">
 <a href="#toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -1543,7 +1545,9 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The protocol. If you select a protocol of
+"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_go">
 <a href="#toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -1629,7 +1633,9 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The protocol. If you select a protocol of
+"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_nodejs">
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
@@ -1715,7 +1721,9 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The protocol. If you select a protocol of
+"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_port_python">
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
@@ -1803,7 +1811,9 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The protocol. If you select a protocol of
+"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_csharp">
 <a href="#toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -1889,7 +1899,9 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The protocol. If you select a protocol of
+"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_go">
 <a href="#toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -1975,7 +1987,9 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The protocol. If you select a protocol of
+"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_nodejs">
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
@@ -2061,7 +2075,9 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The protocol. If you select a protocol of
+"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_port_python">
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>

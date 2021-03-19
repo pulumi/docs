@@ -2599,7 +2599,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Template to customize data sent to the target. Must be valid JSON. To send a string value, the string value must include double quotes. Values must be escaped for both JSON and the provider, e.g. `"\"Your string goes here.\\nA new line.\""`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputpaths_csharp">
 <a href="#inputpaths_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Paths</a>
@@ -2623,7 +2624,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Template to customize data sent to the target. Must be valid JSON. To send a string value, the string value must include double quotes. Values must be escaped for both JSON and the provider, e.g. `"\"Your string goes here.\\nA new line.\""`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputpaths_go">
 <a href="#inputpaths_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Paths</a>
@@ -2647,7 +2649,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Template to customize data sent to the target. Must be valid JSON. To send a string value, the string value must include double quotes. Values must be escaped for both JSON and the provider, e.g. `"\"Your string goes here.\\nA new line.\""`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputpaths_nodejs">
 <a href="#inputpaths_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Paths</a>
@@ -2671,7 +2674,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Template to customize data sent to the target. Must be valid JSON. To send a string value, the string value must include double quotes. Values must be escaped for both JSON and the provider, e.g. `"\"Your string goes here.\\nA new line.\""`
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_paths_python">
 <a href="#input_paths_python" style="color: inherit; text-decoration: inherit;">input_<wbr>paths</a>

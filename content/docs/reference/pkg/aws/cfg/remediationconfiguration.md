@@ -12,7 +12,7 @@ meta_desc: "Documentation for the aws.cfg.RemediationConfiguration resource with
 
 Provides an AWS Config Remediation Configuration.
 
-> **Note:** Config Remediation Configuration requires an existing [Config Rule](https://www.terraform.io/docs/providers/aws/r/config_config_rule.html) to be present.
+> **Note:** Config Remediation Configuration requires an existing Config Rule to be present.
 
 {{% examples %}}
 
@@ -613,7 +613,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Config Remediation Configuration.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -633,7 +634,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Config Remediation Configuration.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -653,7 +655,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Config Remediation Configuration.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -673,7 +676,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Config Remediation Configuration.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -816,7 +820,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Config Remediation Configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configrulename_csharp">
 <a href="#state_configrulename_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Rule<wbr>Name</a>
@@ -883,7 +888,8 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Config Remediation Configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configrulename_go">
 <a href="#state_configrulename_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Rule<wbr>Name</a>
@@ -950,7 +956,8 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Config Remediation Configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configrulename_nodejs">
 <a href="#state_configrulename_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Rule<wbr>Name</a>
@@ -1017,7 +1024,8 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Config Remediation Configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_rule_name_python">
 <a href="#state_config_rule_name_python" style="color: inherit; text-decoration: inherit;">config_<wbr>rule_<wbr>name</a>

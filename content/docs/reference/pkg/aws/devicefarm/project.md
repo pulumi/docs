@@ -17,20 +17,18 @@ For more information about Device Farm Projects, see the AWS Documentation on
 
 > **NOTE:** AWS currently has limited regional support for Device Farm (e.g. `us-west-2`). See [AWS Device Farm endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/devicefarm.html) for information on supported regions.
 
-## Basic Example Usage
+{{% examples %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
+## Example Usage
 
-const awesomeDevices = new aws.devicefarm.Project("awesome_devices", {});
-```
-```python
-import pulumi
-import pulumi_aws as aws
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-awesome_devices = aws.devicefarm.Project("awesomeDevices")
-```
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -46,6 +44,13 @@ class MyStack : Stack
 
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,6 +69,43 @@ func main() {
 	})
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+awesome_devices = aws.devicefarm.Project("awesomeDevices")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const awesomeDevices = new aws.devicefarm.Project("awesome_devices", {});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
 
 
 

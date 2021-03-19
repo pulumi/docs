@@ -12,8 +12,6 @@ meta_desc: "Documentation for the aws.ec2.VpnConnection resource with examples, 
 
 Manages an EC2 VPN connection. These objects can be connected to customer gateways, and allow you to establish tunnels between your network and Amazon.
 
-> **Note:** All arguments including `tunnel1_preshared_key` and `tunnel2_preshared_key` will be stored in the raw state as plain-text.
-
 > **Note:** The CIDR blocks in the arguments `tunnel1_inside_cidr` and `tunnel2_inside_cidr` must have a prefix of /30 and be a part of a specific range.
 [Read more about this in the AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html).
 
@@ -2242,7 +2240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the [`aws.ec2.Tag` resource](https://www.terraform.io/docs/providers/aws/r/ec2_tag.html) for tagging the EC2 Transit Gateway VPN Attachment.
+    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the `aws.ec2.Tag` resource for tagging the EC2 Transit Gateway VPN Attachment.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnel1address_csharp">
@@ -2387,7 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the [`aws.ec2.Tag` resource](https://www.terraform.io/docs/providers/aws/r/ec2_tag.html) for tagging the EC2 Transit Gateway VPN Attachment.
+    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the `aws.ec2.Tag` resource for tagging the EC2 Transit Gateway VPN Attachment.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnel1address_go">
@@ -2532,7 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the [`aws.ec2.Tag` resource](https://www.terraform.io/docs/providers/aws/r/ec2_tag.html) for tagging the EC2 Transit Gateway VPN Attachment.
+    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the `aws.ec2.Tag` resource for tagging the EC2 Transit Gateway VPN Attachment.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnel1address_nodejs">
@@ -2677,7 +2675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the [`aws.ec2.Tag` resource](https://www.terraform.io/docs/providers/aws/r/ec2_tag.html) for tagging the EC2 Transit Gateway VPN Attachment.
+    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the `aws.ec2.Tag` resource for tagging the EC2 Transit Gateway VPN Attachment.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnel1_address_python">
@@ -3009,7 +3007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the [`aws.ec2.Tag` resource](https://www.terraform.io/docs/providers/aws/r/ec2_tag.html) for tagging the EC2 Transit Gateway VPN Attachment.
+    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the `aws.ec2.Tag` resource for tagging the EC2 Transit Gateway VPN Attachment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayid_csharp">
@@ -3578,7 +3576,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the [`aws.ec2.Tag` resource](https://www.terraform.io/docs/providers/aws/r/ec2_tag.html) for tagging the EC2 Transit Gateway VPN Attachment.
+    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the `aws.ec2.Tag` resource for tagging the EC2 Transit Gateway VPN Attachment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayid_go">
@@ -4147,7 +4145,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the [`aws.ec2.Tag` resource](https://www.terraform.io/docs/providers/aws/r/ec2_tag.html) for tagging the EC2 Transit Gateway VPN Attachment.
+    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the `aws.ec2.Tag` resource for tagging the EC2 Transit Gateway VPN Attachment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayid_nodejs">
@@ -4716,7 +4714,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the [`aws.ec2.Tag` resource](https://www.terraform.io/docs/providers/aws/r/ec2_tag.html) for tagging the EC2 Transit Gateway VPN Attachment.
+    <dd>{{% md %}}When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the `aws.ec2.Tag` resource for tagging the EC2 Transit Gateway VPN Attachment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transit_gateway_id_python">

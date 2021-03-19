@@ -12,90 +12,18 @@ meta_desc: "Documentation for the aws.transfer.Server resource with examples, in
 
 Provides a AWS Transfer Server resource.
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
+{{% examples %}}
 
-const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-		"Effect": "Allow",
-		"Principal": {
-			"Service": "transfer.amazonaws.com"
-		},
-		"Action": "sts:AssumeRole"
-		}
-	]
-}
-`});
-const exampleServer = new aws.transfer.Server("exampleServer", {
-    identityProviderType: "SERVICE_MANAGED",
-    loggingRole: exampleRole.arn,
-    tags: {
-        NAME: "tf-acc-test-transfer-server",
-        ENV: "test",
-    },
-});
-const exampleRolePolicy = new aws.iam.RolePolicy("exampleRolePolicy", {
-    role: exampleRole.id,
-    policy: `{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-		"Sid": "AllowFullAccesstoCloudWatchLogs",
-		"Effect": "Allow",
-		"Action": [
-			"logs:*"
-		],
-		"Resource": "*"
-		}
-	]
-}
-`,
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
+## Example Usage
 
-example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-		"Effect": "Allow",
-		"Principal": {
-			"Service": "transfer.amazonaws.com"
-		},
-		"Action": "sts:AssumeRole"
-		}
-	]
-}
-""")
-example_server = aws.transfer.Server("exampleServer",
-    identity_provider_type="SERVICE_MANAGED",
-    logging_role=example_role.arn,
-    tags={
-        "NAME": "tf-acc-test-transfer-server",
-        "ENV": "test",
-    })
-example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
-    role=example_role.id,
-    policy="""{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-		"Sid": "AllowFullAccesstoCloudWatchLogs",
-		"Effect": "Allow",
-		"Action": [
-			"logs:*"
-		],
-		"Resource": "*"
-		}
-	]
-}
-""")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -152,6 +80,13 @@ class MyStack : Stack
 
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -193,6 +128,115 @@ func main() {
 	})
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "transfer.amazonaws.com"
+		},
+		"Action": "sts:AssumeRole"
+		}
+	]
+}
+""")
+example_server = aws.transfer.Server("exampleServer",
+    identity_provider_type="SERVICE_MANAGED",
+    logging_role=example_role.arn,
+    tags={
+        "NAME": "tf-acc-test-transfer-server",
+        "ENV": "test",
+    })
+example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
+    role=example_role.id,
+    policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Sid": "AllowFullAccesstoCloudWatchLogs",
+		"Effect": "Allow",
+		"Action": [
+			"logs:*"
+		],
+		"Resource": "*"
+		}
+	]
+}
+""")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "transfer.amazonaws.com"
+		},
+		"Action": "sts:AssumeRole"
+		}
+	]
+}
+`});
+const exampleServer = new aws.transfer.Server("exampleServer", {
+    identityProviderType: "SERVICE_MANAGED",
+    loggingRole: exampleRole.arn,
+    tags: {
+        NAME: "tf-acc-test-transfer-server",
+        ENV: "test",
+    },
+});
+const exampleRolePolicy = new aws.iam.RolePolicy("exampleRolePolicy", {
+    role: exampleRole.id,
+    policy: `{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Sid": "AllowFullAccesstoCloudWatchLogs",
+		"Effect": "Allow",
+		"Action": [
+			"logs:*"
+		],
+		"Resource": "*"
+		}
+	]
+}
+`,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
 
 
 

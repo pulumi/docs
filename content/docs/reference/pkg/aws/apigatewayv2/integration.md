@@ -852,7 +852,10 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs.
+The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+this provider will only perform drift detection of its value when present in a configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsconfig_csharp">
 <a href="#tlsconfig_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -1023,7 +1026,10 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs.
+The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+this provider will only perform drift detection of its value when present in a configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsconfig_go">
 <a href="#tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -1194,7 +1200,10 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs.
+The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+this provider will only perform drift detection of its value when present in a configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsconfig_nodejs">
 <a href="#tlsconfig_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Config</a>
@@ -1365,7 +1374,10 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs.
+The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+this provider will only perform drift detection of its value when present in a configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_config_python">
 <a href="#tls_config_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>config</a>
@@ -1759,7 +1771,10 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs.
+The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+this provider will only perform drift detection of its value when present in a configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsconfig_csharp">
 <a href="#state_tlsconfig_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -1939,7 +1954,10 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs.
+The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+this provider will only perform drift detection of its value when present in a configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsconfig_go">
 <a href="#state_tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -2119,7 +2137,10 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs.
+The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+this provider will only perform drift detection of its value when present in a configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsconfig_nodejs">
 <a href="#state_tlsconfig_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Config</a>
@@ -2299,7 +2320,10 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs.
+The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+this provider will only perform drift detection of its value when present in a configuration.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tls_config_python">
 <a href="#state_tls_config_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>config</a>

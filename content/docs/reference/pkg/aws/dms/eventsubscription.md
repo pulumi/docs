@@ -553,7 +553,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the DMS Event Subscription.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -573,7 +574,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the DMS Event Subscription.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -593,7 +595,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the DMS Event Subscription.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -613,7 +616,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the DMS Event Subscription.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -756,7 +760,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the DMS Event Subscription.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -830,7 +835,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the DMS Event Subscription.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -904,7 +910,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the DMS Event Subscription.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -978,7 +985,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the DMS Event Subscription.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>

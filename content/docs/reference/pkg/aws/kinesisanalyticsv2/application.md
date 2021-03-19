@@ -13,7 +13,7 @@ meta_desc: "Documentation for the aws.kinesisanalyticsv2.Application resource wi
 Manages a Kinesis Analytics v2 Application.
 This resource can be used to manage both Kinesis Data Analytics for SQL applications and Kinesis Data Analytics for Apache Flink applications.
 
-> **Note:** Kinesis Data Analytics for SQL applications created using this resource cannot currently be viewed in the AWS Console. To manage Kinesis Data Analytics for SQL applications that can also be viewed in the AWS Console, use the [`aws.kinesis.AnalyticsApplication`](https://www.terraform.io/docs/providers/aws/r/kinesis_analytics_application.html) resource.
+> **Note:** Kinesis Data Analytics for SQL applications created using this resource cannot currently be viewed in the AWS Console. To manage Kinesis Data Analytics for SQL applications that can also be viewed in the AWS Console, use the `aws.kinesis.AnalyticsApplication`resource.
 
 {{% examples %}}
 
@@ -1161,7 +1161,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+    <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconfiguration_csharp">
@@ -1179,7 +1179,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
+    <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -1228,7 +1228,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+    <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconfiguration_go">
@@ -1246,7 +1246,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
+    <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -1295,7 +1295,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+    <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconfiguration_nodejs">
@@ -1313,7 +1313,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
+    <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -1362,7 +1362,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+    <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_configuration_python">
@@ -1380,7 +1380,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
+    <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1796,7 +1796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
+    <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtimestamp_csharp">
@@ -1850,7 +1850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+    <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
@@ -1908,7 +1908,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
+    <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtimestamp_go">
@@ -1962,7 +1962,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+    <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
@@ -2020,7 +2020,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
+    <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtimestamp_nodejs">
@@ -2074,7 +2074,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+    <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
@@ -2132,7 +2132,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A [CloudWatch log stream](https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_stream.html) to monitor application configuration errors.
+    <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_timestamp_python">
@@ -2186,7 +2186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the [IAM role](https://www.terraform.io/docs/providers/aws/r/iam_role.html) used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+    <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
@@ -3750,7 +3750,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If the streaming source is a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html), identifies the delivery stream's ARN.
+    <dd>{{% md %}}If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsinput_csharp">
@@ -3759,7 +3759,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If the streaming source is a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html), identifies the stream's Amazon Resource Name (ARN).
+    <dd>{{% md %}}If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3833,7 +3833,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input</a></span>
     </dt>
-    <dd>{{% md %}}If the streaming source is a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html), identifies the delivery stream's ARN.
+    <dd>{{% md %}}If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsinput_go">
@@ -3842,7 +3842,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input</a></span>
     </dt>
-    <dd>{{% md %}}If the streaming source is a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html), identifies the stream's Amazon Resource Name (ARN).
+    <dd>{{% md %}}If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3916,7 +3916,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input</a></span>
     </dt>
-    <dd>{{% md %}}If the streaming source is a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html), identifies the delivery stream's ARN.
+    <dd>{{% md %}}If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsinput_nodejs">
@@ -3925,7 +3925,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input</a></span>
     </dt>
-    <dd>{{% md %}}If the streaming source is a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html), identifies the stream's Amazon Resource Name (ARN).
+    <dd>{{% md %}}If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3999,7 +3999,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If the streaming source is a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html), identifies the delivery stream's ARN.
+    <dd>{{% md %}}If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesis_streams_input_python">
@@ -4008,7 +4008,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If the streaming source is a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html), identifies the stream's Amazon Resource Name (ARN).
+    <dd>{{% md %}}If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4077,7 +4077,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) that is used to preprocess the records in the stream before being processed by your application code.
+    <dd>{{% md %}}Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4090,7 +4090,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor</a></span>
     </dt>
-    <dd>{{% md %}}Describes the [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) that is used to preprocess the records in the stream before being processed by your application code.
+    <dd>{{% md %}}Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4103,7 +4103,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor</a></span>
     </dt>
-    <dd>{{% md %}}Describes the [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) that is used to preprocess the records in the stream before being processed by your application code.
+    <dd>{{% md %}}Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4116,7 +4116,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) that is used to preprocess the records in the stream before being processed by your application code.
+    <dd>{{% md %}}Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4937,7 +4937,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html) as the destination.
+    <dd>{{% md %}}Identifies a Kinesis Data Firehose delivery stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsoutput_csharp">
@@ -4946,7 +4946,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html) as the destination.
+    <dd>{{% md %}}Identifies a Kinesis data stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdaoutput_csharp">
@@ -4955,7 +4955,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) as the destination.
+    <dd>{{% md %}}Identifies a Lambda function as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputid_csharp">
@@ -4994,7 +4994,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html) as the destination.
+    <dd>{{% md %}}Identifies a Kinesis Data Firehose delivery stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsoutput_go">
@@ -5003,7 +5003,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html) as the destination.
+    <dd>{{% md %}}Identifies a Kinesis data stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdaoutput_go">
@@ -5012,7 +5012,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) as the destination.
+    <dd>{{% md %}}Identifies a Lambda function as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputid_go">
@@ -5051,7 +5051,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html) as the destination.
+    <dd>{{% md %}}Identifies a Kinesis Data Firehose delivery stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesisstreamsoutput_nodejs">
@@ -5060,7 +5060,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html) as the destination.
+    <dd>{{% md %}}Identifies a Kinesis data stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdaoutput_nodejs">
@@ -5069,7 +5069,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) as the destination.
+    <dd>{{% md %}}Identifies a Lambda function as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputid_nodejs">
@@ -5108,7 +5108,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Kinesis Data Firehose delivery stream](https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html) as the destination.
+    <dd>{{% md %}}Identifies a Kinesis Data Firehose delivery stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesis_streams_output_python">
@@ -5117,7 +5117,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Kinesis data stream](https://www.terraform.io/docs/providers/aws/r/kinesis_stream.html) as the destination.
+    <dd>{{% md %}}Identifies a Kinesis data stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambda_output_python">
@@ -5126,7 +5126,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identifies a [Lambda function](https://www.terraform.io/docs/providers/aws/r/lambda_function.html) as the destination.
+    <dd>{{% md %}}Identifies a Lambda function as the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_id_python">
@@ -6189,7 +6189,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The [Security Group](https://www.terraform.io/docs/providers/aws/r/security_group.html) IDs used by the VPC configuration.
+    <dd>{{% md %}}The Security Group IDs used by the VPC configuration.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_csharp">
@@ -6198,7 +6198,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The [Subnet](https://www.terraform.io/docs/providers/aws/r/subnet.html) IDs used by the VPC configuration.
+    <dd>{{% md %}}The Subnet IDs used by the VPC configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconfigurationid_csharp">
@@ -6227,7 +6227,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The [Security Group](https://www.terraform.io/docs/providers/aws/r/security_group.html) IDs used by the VPC configuration.
+    <dd>{{% md %}}The Security Group IDs used by the VPC configuration.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_go">
@@ -6236,7 +6236,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The [Subnet](https://www.terraform.io/docs/providers/aws/r/subnet.html) IDs used by the VPC configuration.
+    <dd>{{% md %}}The Subnet IDs used by the VPC configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconfigurationid_go">
@@ -6265,7 +6265,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The [Security Group](https://www.terraform.io/docs/providers/aws/r/security_group.html) IDs used by the VPC configuration.
+    <dd>{{% md %}}The Security Group IDs used by the VPC configuration.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_nodejs">
@@ -6274,7 +6274,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The [Subnet](https://www.terraform.io/docs/providers/aws/r/subnet.html) IDs used by the VPC configuration.
+    <dd>{{% md %}}The Subnet IDs used by the VPC configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconfigurationid_nodejs">
@@ -6303,7 +6303,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The [Security Group](https://www.terraform.io/docs/providers/aws/r/security_group.html) IDs used by the VPC configuration.
+    <dd>{{% md %}}The Security Group IDs used by the VPC configuration.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_ids_python">
@@ -6312,7 +6312,7 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The [Subnet](https://www.terraform.io/docs/providers/aws/r/subnet.html) IDs used by the VPC configuration.
+    <dd>{{% md %}}The Subnet IDs used by the VPC configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_configuration_id_python">

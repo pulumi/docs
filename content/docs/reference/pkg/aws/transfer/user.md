@@ -12,105 +12,18 @@ meta_desc: "Documentation for the aws.transfer.User resource with examples, inpu
 
 Provides a AWS Transfer User resource. Managing SSH keys can be accomplished with the `aws.transfer.SshKey` resource.
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
+{{% examples %}}
 
-const fooServer = new aws.transfer.Server("fooServer", {
-    identityProviderType: "SERVICE_MANAGED",
-    tags: {
-        NAME: "tf-acc-test-transfer-server",
-    },
-});
-const fooRole = new aws.iam.Role("fooRole", {assumeRolePolicy: `{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-		"Effect": "Allow",
-		"Principal": {
-			"Service": "transfer.amazonaws.com"
-		},
-		"Action": "sts:AssumeRole"
-		}
-	]
-}
-`});
-const fooRolePolicy = new aws.iam.RolePolicy("fooRolePolicy", {
-    role: fooRole.id,
-    policy: `{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "AllowFullAccesstoS3",
-			"Effect": "Allow",
-			"Action": [
-				"s3:*"
-			],
-			"Resource": "*"
-		}
-	]
-}
-`,
-});
-const fooUser = new aws.transfer.User("fooUser", {
-    serverId: fooServer.id,
-    userName: "tftestuser",
-    role: fooRole.arn,
-    homeDirectoryType: "LOGICAL",
-    homeDirectoryMappings: [{
-        entry: "/test.pdf",
-        target: "/bucket3/test-path/tftestuser.pdf",
-    }],
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
+## Example Usage
 
-foo_server = aws.transfer.Server("fooServer",
-    identity_provider_type="SERVICE_MANAGED",
-    tags={
-        "NAME": "tf-acc-test-transfer-server",
-    })
-foo_role = aws.iam.Role("fooRole", assume_role_policy="""{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-		"Effect": "Allow",
-		"Principal": {
-			"Service": "transfer.amazonaws.com"
-		},
-		"Action": "sts:AssumeRole"
-		}
-	]
-}
-""")
-foo_role_policy = aws.iam.RolePolicy("fooRolePolicy",
-    role=foo_role.id,
-    policy="""{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "AllowFullAccesstoS3",
-			"Effect": "Allow",
-			"Action": [
-				"s3:*"
-			],
-			"Resource": "*"
-		}
-	]
-}
-""")
-foo_user = aws.transfer.User("fooUser",
-    server_id=foo_server.id,
-    user_name="tftestuser",
-    role=foo_role.arn,
-    home_directory_type="LOGICAL",
-    home_directory_mappings=[aws.transfer.UserHomeDirectoryMappingArgs(
-        entry="/test.pdf",
-        target="/bucket3/test-path/tftestuser.pdf",
-    )])
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -180,6 +93,13 @@ class MyStack : Stack
 
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -234,6 +154,130 @@ func main() {
 	})
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo_server = aws.transfer.Server("fooServer",
+    identity_provider_type="SERVICE_MANAGED",
+    tags={
+        "NAME": "tf-acc-test-transfer-server",
+    })
+foo_role = aws.iam.Role("fooRole", assume_role_policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "transfer.amazonaws.com"
+		},
+		"Action": "sts:AssumeRole"
+		}
+	]
+}
+""")
+foo_role_policy = aws.iam.RolePolicy("fooRolePolicy",
+    role=foo_role.id,
+    policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowFullAccesstoS3",
+			"Effect": "Allow",
+			"Action": [
+				"s3:*"
+			],
+			"Resource": "*"
+		}
+	]
+}
+""")
+foo_user = aws.transfer.User("fooUser",
+    server_id=foo_server.id,
+    user_name="tftestuser",
+    role=foo_role.arn,
+    home_directory_type="LOGICAL",
+    home_directory_mappings=[aws.transfer.UserHomeDirectoryMappingArgs(
+        entry="/test.pdf",
+        target="/bucket3/test-path/tftestuser.pdf",
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const fooServer = new aws.transfer.Server("fooServer", {
+    identityProviderType: "SERVICE_MANAGED",
+    tags: {
+        NAME: "tf-acc-test-transfer-server",
+    },
+});
+const fooRole = new aws.iam.Role("fooRole", {assumeRolePolicy: `{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "transfer.amazonaws.com"
+		},
+		"Action": "sts:AssumeRole"
+		}
+	]
+}
+`});
+const fooRolePolicy = new aws.iam.RolePolicy("fooRolePolicy", {
+    role: fooRole.id,
+    policy: `{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowFullAccesstoS3",
+			"Effect": "Allow",
+			"Action": [
+				"s3:*"
+			],
+			"Resource": "*"
+		}
+	]
+}
+`,
+});
+const fooUser = new aws.transfer.User("fooUser", {
+    serverId: fooServer.id,
+    userName: "tftestuser",
+    role: fooRole.arn,
+    homeDirectoryType: "LOGICAL",
+    homeDirectoryMappings: [{
+        entry: "/test.pdf",
+        target: "/bucket3/test-path/tftestuser.pdf",
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
 
 
 
