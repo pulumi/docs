@@ -64,19 +64,21 @@ EOT
 
 {{% /choosable %}}
 
-Now that you have your new `index.html` with some content, open your IDE or text editor and modify your program to add the contents of your `index.html` file to your S3 bucket.
+Now that you have your new `index.html` with some content, open your program file and modify it to add the contents of your `index.html` file to your S3 bucket.
 
-To accomplish this, we will take advantage of your chosen programming language's native libraries to read the content of the file and assign it as an input to a new  `BucketObject`.
+To accomplish this, you will use your chosen programming language's native libraries to read the content of the file and assign it as an input to a new  `BucketObject`.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language javascript %}}
 
+In `index.js`, add the following:
+
 ```javascript
 const fs = require("fs");
 ```
 
-Next you will create a new bucket object on the lines right after creating the bucket itself.
+Next you will create a new bucket object right after creating the bucket itself.
 
 ```javascript
 const bucketObject = new aws.s3.BucketObject("index.html", {
@@ -89,11 +91,13 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
 
 {{% choosable language typescript %}}
 
+In `index.ts`, add the following:
+
 ```typescript
 import * as fs from "fs";
 ```
 
-Next you will create a new bucket object on the lines right after creating the bucket itself.
+Next you will create a new bucket object right after creating the bucket itself.
 
 ```typescript
 const bucketObject = new aws.s3.BucketObject("index.html", {
@@ -106,7 +110,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
 
 {{% choosable language python %}}
 
-Next you will create a new bucket object on the lines right after creating the bucket itself.
+In `__main__.py`, create a new bucket object by adding the following right after creating the bucket itself:
 
 ```python
 bucketObject = s3.BucketObject(
@@ -119,6 +123,8 @@ bucketObject = s3.BucketObject(
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
+In `main.go`, add the following:
 
 ```go
 import (
@@ -148,11 +154,13 @@ if err != nil {
 
 {{% choosable language csharp %}}
 
+In `MyStack.cs`, add the following:
+
 ```csharp
 using System.IO;
 ```
 
-Next you will create a new bucket object on the lines right after creating the bucket itself.
+Next you will create a new bucket object right after creating the bucket itself.
 
 ```csharp
 var filePath = Path.GetFullPath("./site/index.html");

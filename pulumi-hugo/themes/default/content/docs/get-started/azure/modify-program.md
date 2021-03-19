@@ -66,11 +66,11 @@ EOT
 
 Now that you have your new `index.html` with some content, you can enable static website support, upload `index.html` to a storage container, and retrieve a public URL through the use of resource properties. These properties can be used to define dependencies between related resources or to retrieve property values for further processing.
 
-To see how this all works, open the program file in your IDE or text editor and add the following the lines right after the storage account creation.
-
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language typescript %}}
+
+To start, open `index.ts` and add the following right after the storage account creation:
 
 ```typescript
 // Enable static website support
@@ -84,6 +84,8 @@ const staticWebsite = new storage.StorageAccountStaticWebsite("staticWebsite", {
 {{% /choosable %}}
 {{% choosable language python %}}
 
+To start, open `__main__.py` and add the following right after the storage account creation:
+
 ```python
 # Enable static website support
 static_website = storage.StorageAccountStaticWebsite("staticWebsite",
@@ -94,6 +96,8 @@ static_website = storage.StorageAccountStaticWebsite("staticWebsite",
 
 {{% /choosable %}}
 {{% choosable language go %}}
+
+To start, open `main.go` and add the following right after the storage account creation:
 
 ```go
 // Enable static website support
@@ -109,6 +113,8 @@ if err != nil {
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
+
+To start, open `MyStack.cs` and add the following right after the storage account creation:
 
 ```csharp
 // Enable static website support
@@ -187,9 +193,9 @@ var index_html = new Blob("index.html", new BlobArgs
 
 {{% /choosable %}}
 
-Finally, at the end of the program file, export the resulting storage container's endpoint URL to stdout for easy access:
-
 {{% choosable language typescript %}}
+
+Finally, at the end of `index.ts`, export the resulting storage container's endpoint URL to stdout for easy access:
 
 ```typescript
 // Web endpoint to the website
@@ -200,6 +206,8 @@ export const staticEndpoint = storageAccount.primaryEndpoints.web;
 
 {{% choosable language python %}}
 
+Finally, at the end of `__main__.py`, export the resulting storage container's endpoint URL to stdout for easy access:
+
 ```python
 # Web endpoint to the website
 pulumi.export("staticEndpoint", account.primary_endpoints.web)
@@ -209,6 +217,8 @@ pulumi.export("staticEndpoint", account.primary_endpoints.web)
 
 {{% choosable language go %}}
 
+Finally, at the end of `main.go`, export the resulting storage container's endpoint URL to stdout for easy access:
+
 ```go
 // Web endpoint to the website
 ctx.Export("staticEndpoint", account.PrimaryEndpoints.Web())
@@ -217,6 +227,8 @@ ctx.Export("staticEndpoint", account.PrimaryEndpoints.Web())
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
+Finally, at the end of `MyStack.cs`, export the resulting storage container's endpoint URL to stdout for easy access:
 
 ```csharp
 // Web endpoint to the website
