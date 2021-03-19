@@ -12,8 +12,6 @@ meta_desc: "Documentation for the aws.opsworks.MysqlLayer resource with examples
 
 Provides an OpsWorks MySQL layer resource.
 
-> **Note:** All arguments including the root password will be stored in the raw state as plain-text.
-
 
 {{% examples %}}
 

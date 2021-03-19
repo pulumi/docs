@@ -12,44 +12,18 @@ meta_desc: "Documentation for the aws.ssm.MaintenanceWindowTarget resource with 
 
 Provides an SSM Maintenance Window Target resource
 
-## Instance Target Example Usage
+{{% examples %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
+## Example Usage
 
-const window = new aws.ssm.MaintenanceWindow("window", {
-    schedule: "cron(0 16 ? * TUE *)",
-    duration: 3,
-    cutoff: 1,
-});
-const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
-    windowId: window.id,
-    description: "This is a maintenance window target",
-    resourceType: "INSTANCE",
-    targets: [{
-        key: "tag:Name",
-        values: ["acceptance_test"],
-    }],
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-window = aws.ssm.MaintenanceWindow("window",
-    schedule="cron(0 16 ? * TUE *)",
-    duration=3,
-    cutoff=1)
-target1 = aws.ssm.MaintenanceWindowTarget("target1",
-    window_id=window.id,
-    description="This is a maintenance window target",
-    resource_type="INSTANCE",
-    targets=[aws.ssm.MaintenanceWindowTargetTargetArgs(
-        key="tag:Name",
-        values=["acceptance_test"],
-    )])
-```
+
+### Instance Target
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -85,6 +59,13 @@ class MyStack : Stack
 
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -124,7 +105,36 @@ func main() {
 }
 ```
 
-## Resource Group Target Example Usage
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+window = aws.ssm.MaintenanceWindow("window",
+    schedule="cron(0 16 ? * TUE *)",
+    duration=3,
+    cutoff=1)
+target1 = aws.ssm.MaintenanceWindowTarget("target1",
+    window_id=window.id,
+    description="This is a maintenance window target",
+    resource_type="INSTANCE",
+    targets=[aws.ssm.MaintenanceWindowTargetTargetArgs(
+        key="tag:Name",
+        values=["acceptance_test"],
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -138,30 +148,25 @@ const window = new aws.ssm.MaintenanceWindow("window", {
 const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
     windowId: window.id,
     description: "This is a maintenance window target",
-    resourceType: "RESOURCE_GROUP",
+    resourceType: "INSTANCE",
     targets: [{
-        key: "resource-groups:ResourceTypeFilters",
-        values: ["AWS::EC2::Instance"],
+        key: "tag:Name",
+        values: ["acceptance_test"],
     }],
 });
 ```
-```python
-import pulumi
-import pulumi_aws as aws
 
-window = aws.ssm.MaintenanceWindow("window",
-    schedule="cron(0 16 ? * TUE *)",
-    duration=3,
-    cutoff=1)
-target1 = aws.ssm.MaintenanceWindowTarget("target1",
-    window_id=window.id,
-    description="This is a maintenance window target",
-    resource_type="RESOURCE_GROUP",
-    targets=[aws.ssm.MaintenanceWindowTargetTargetArgs(
-        key="resource-groups:ResourceTypeFilters",
-        values=["AWS::EC2::Instance"],
-    )])
-```
+
+{{< /example >}}
+
+
+
+
+### Resource Group Target
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -197,6 +202,13 @@ class MyStack : Stack
 
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -235,6 +247,67 @@ func main() {
 	})
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+window = aws.ssm.MaintenanceWindow("window",
+    schedule="cron(0 16 ? * TUE *)",
+    duration=3,
+    cutoff=1)
+target1 = aws.ssm.MaintenanceWindowTarget("target1",
+    window_id=window.id,
+    description="This is a maintenance window target",
+    resource_type="RESOURCE_GROUP",
+    targets=[aws.ssm.MaintenanceWindowTargetTargetArgs(
+        key="resource-groups:ResourceTypeFilters",
+        values=["AWS::EC2::Instance"],
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const window = new aws.ssm.MaintenanceWindow("window", {
+    schedule: "cron(0 16 ? * TUE *)",
+    duration: 3,
+    cutoff: 1,
+});
+const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
+    windowId: window.id,
+    description: "This is a maintenance window target",
+    resourceType: "RESOURCE_GROUP",
+    targets: [{
+        key: "resource-groups:ResourceTypeFilters",
+        values: ["AWS::EC2::Instance"],
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
 
 
 

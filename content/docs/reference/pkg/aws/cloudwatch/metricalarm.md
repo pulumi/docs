@@ -1697,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the cloudwatch metric alarm.
+    <dd>{{% md %}}The ARN of the CloudWatch Metric Alarm.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1718,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the cloudwatch metric alarm.
+    <dd>{{% md %}}The ARN of the CloudWatch Metric Alarm.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -1739,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the cloudwatch metric alarm.
+    <dd>{{% md %}}The ARN of the CloudWatch Metric Alarm.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1760,7 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the cloudwatch metric alarm.
+    <dd>{{% md %}}The ARN of the CloudWatch Metric Alarm.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -1931,7 +1931,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the cloudwatch metric alarm.
+    <dd>{{% md %}}The ARN of the CloudWatch Metric Alarm.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comparisonoperator_csharp">
@@ -2150,7 +2150,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the cloudwatch metric alarm.
+    <dd>{{% md %}}The ARN of the CloudWatch Metric Alarm.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comparisonoperator_go">
@@ -2369,7 +2369,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the cloudwatch metric alarm.
+    <dd>{{% md %}}The ARN of the CloudWatch Metric Alarm.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comparisonoperator_nodejs">
@@ -2588,7 +2588,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the cloudwatch metric alarm.
+    <dd>{{% md %}}The ARN of the CloudWatch Metric Alarm.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comparison_operator_python">
@@ -3226,7 +3226,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 ## Import
 
 
-Cloud Metric Alarms can be imported using the `alarm_name`, e.g.
+CloudWatch Metric Alarm can be imported using the `alarm_name`, e.g.
 
 ```sh
  $ pulumi import aws:cloudwatch/metricAlarm:MetricAlarm test alarm-12345

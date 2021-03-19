@@ -310,8 +310,7 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
+    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -340,7 +339,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
+    <dd>{{% md %}}The region of the accepter VPC of the VPC Peering Connection. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -350,8 +349,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
+    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -392,8 +390,7 @@ the peering connection (a maximum of one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
+    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +419,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
+    <dd>{{% md %}}The region of the accepter VPC of the VPC Peering Connection. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -432,8 +429,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester</a></span>
     </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
+    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,8 +470,7 @@ the peering connection (a maximum of one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter</a></span>
     </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
+    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -504,7 +499,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
+    <dd>{{% md %}}The region of the accepter VPC of the VPC Peering Connection. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,8 +509,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester</a></span>
     </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
+    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -556,8 +550,7 @@ the peering connection (a maximum of one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
+    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +579,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
+    <dd>{{% md %}}The region of the accepter VPC of the VPC Peering Connection. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -596,8 +589,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
+    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -843,8 +835,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
+    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +864,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
+    <dd>{{% md %}}The region of the accepter VPC of the VPC Peering Connection. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,8 +883,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
+    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,8 +924,7 @@ the peering connection (a maximum of one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
+    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +953,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
+    <dd>{{% md %}}The region of the accepter VPC of the VPC Peering Connection. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -983,8 +972,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester</a></span>
     </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
+    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1025,8 +1013,7 @@ the peering connection (a maximum of one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter</a></span>
     </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
+    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1055,7 +1042,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
+    <dd>{{% md %}}The region of the accepter VPC of the VPC Peering Connection. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,8 +1061,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester</a></span>
     </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
+    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,8 +1102,7 @@ the peering connection (a maximum of one).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
+    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1131,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
+    <dd>{{% md %}}The region of the accepter VPC of the VPC Peering Connection. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,8 +1150,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
+    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

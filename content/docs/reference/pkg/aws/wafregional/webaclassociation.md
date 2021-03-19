@@ -14,108 +14,18 @@ Manages an association with WAF Regional Web ACL.
 
 > **Note:** An Application Load Balancer can only be associated with one WAF Regional WebACL.
 
-## Application Load Balancer Association Example
+{{% examples %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
+## Example Usage
 
-const ipset = new aws.wafregional.IpSet("ipset", {ipSetDescriptors: [{
-    type: "IPV4",
-    value: "192.0.7.0/24",
-}]});
-const fooRule = new aws.wafregional.Rule("fooRule", {
-    metricName: "tfWAFRule",
-    predicates: [{
-        dataId: ipset.id,
-        negated: false,
-        type: "IPMatch",
-    }],
-});
-const fooWebAcl = new aws.wafregional.WebAcl("fooWebAcl", {
-    metricName: "foo",
-    defaultAction: {
-        type: "ALLOW",
-    },
-    rules: [{
-        action: {
-            type: "BLOCK",
-        },
-        priority: 1,
-        ruleId: fooRule.id,
-    }],
-});
-const fooVpc = new aws.ec2.Vpc("fooVpc", {cidrBlock: "10.1.0.0/16"});
-const available = aws.getAvailabilityZones({});
-const fooSubnet = new aws.ec2.Subnet("fooSubnet", {
-    vpcId: fooVpc.id,
-    cidrBlock: "10.1.1.0/24",
-    availabilityZone: available.then(available => available.names[0]),
-});
-const bar = new aws.ec2.Subnet("bar", {
-    vpcId: fooVpc.id,
-    cidrBlock: "10.1.2.0/24",
-    availabilityZone: available.then(available => available.names[1]),
-});
-const fooLoadBalancer = new aws.alb.LoadBalancer("fooLoadBalancer", {
-    internal: true,
-    subnets: [
-        fooSubnet.id,
-        bar.id,
-    ],
-});
-const fooWebAclAssociation = new aws.wafregional.WebAclAssociation("fooWebAclAssociation", {
-    resourceArn: fooLoadBalancer.arn,
-    webAclId: fooWebAcl.id,
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-ipset = aws.wafregional.IpSet("ipset", ip_set_descriptors=[aws.wafregional.IpSetIpSetDescriptorArgs(
-    type="IPV4",
-    value="192.0.7.0/24",
-)])
-foo_rule = aws.wafregional.Rule("fooRule",
-    metric_name="tfWAFRule",
-    predicates=[aws.wafregional.RulePredicateArgs(
-        data_id=ipset.id,
-        negated=False,
-        type="IPMatch",
-    )])
-foo_web_acl = aws.wafregional.WebAcl("fooWebAcl",
-    metric_name="foo",
-    default_action=aws.wafregional.WebAclDefaultActionArgs(
-        type="ALLOW",
-    ),
-    rules=[aws.wafregional.WebAclRuleArgs(
-        action=aws.wafregional.WebAclRuleActionArgs(
-            type="BLOCK",
-        ),
-        priority=1,
-        rule_id=foo_rule.id,
-    )])
-foo_vpc = aws.ec2.Vpc("fooVpc", cidr_block="10.1.0.0/16")
-available = aws.get_availability_zones()
-foo_subnet = aws.ec2.Subnet("fooSubnet",
-    vpc_id=foo_vpc.id,
-    cidr_block="10.1.1.0/24",
-    availability_zone=available.names[0])
-bar = aws.ec2.Subnet("bar",
-    vpc_id=foo_vpc.id,
-    cidr_block="10.1.2.0/24",
-    availability_zone=available.names[1])
-foo_load_balancer = aws.alb.LoadBalancer("fooLoadBalancer",
-    internal=True,
-    subnets=[
-        foo_subnet.id,
-        bar.id,
-    ])
-foo_web_acl_association = aws.wafregional.WebAclAssociation("fooWebAclAssociation",
-    resource_arn=foo_load_balancer.arn,
-    web_acl_id=foo_web_acl.id)
-```
+
+### Application Load Balancer Association
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -203,6 +113,13 @@ class MyStack : Stack
 
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -305,6 +222,131 @@ func main() {
 	})
 }
 ```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+ipset = aws.wafregional.IpSet("ipset", ip_set_descriptors=[aws.wafregional.IpSetIpSetDescriptorArgs(
+    type="IPV4",
+    value="192.0.7.0/24",
+)])
+foo_rule = aws.wafregional.Rule("fooRule",
+    metric_name="tfWAFRule",
+    predicates=[aws.wafregional.RulePredicateArgs(
+        data_id=ipset.id,
+        negated=False,
+        type="IPMatch",
+    )])
+foo_web_acl = aws.wafregional.WebAcl("fooWebAcl",
+    metric_name="foo",
+    default_action=aws.wafregional.WebAclDefaultActionArgs(
+        type="ALLOW",
+    ),
+    rules=[aws.wafregional.WebAclRuleArgs(
+        action=aws.wafregional.WebAclRuleActionArgs(
+            type="BLOCK",
+        ),
+        priority=1,
+        rule_id=foo_rule.id,
+    )])
+foo_vpc = aws.ec2.Vpc("fooVpc", cidr_block="10.1.0.0/16")
+available = aws.get_availability_zones()
+foo_subnet = aws.ec2.Subnet("fooSubnet",
+    vpc_id=foo_vpc.id,
+    cidr_block="10.1.1.0/24",
+    availability_zone=available.names[0])
+bar = aws.ec2.Subnet("bar",
+    vpc_id=foo_vpc.id,
+    cidr_block="10.1.2.0/24",
+    availability_zone=available.names[1])
+foo_load_balancer = aws.alb.LoadBalancer("fooLoadBalancer",
+    internal=True,
+    subnets=[
+        foo_subnet.id,
+        bar.id,
+    ])
+foo_web_acl_association = aws.wafregional.WebAclAssociation("fooWebAclAssociation",
+    resource_arn=foo_load_balancer.arn,
+    web_acl_id=foo_web_acl.id)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const ipset = new aws.wafregional.IpSet("ipset", {ipSetDescriptors: [{
+    type: "IPV4",
+    value: "192.0.7.0/24",
+}]});
+const fooRule = new aws.wafregional.Rule("fooRule", {
+    metricName: "tfWAFRule",
+    predicates: [{
+        dataId: ipset.id,
+        negated: false,
+        type: "IPMatch",
+    }],
+});
+const fooWebAcl = new aws.wafregional.WebAcl("fooWebAcl", {
+    metricName: "foo",
+    defaultAction: {
+        type: "ALLOW",
+    },
+    rules: [{
+        action: {
+            type: "BLOCK",
+        },
+        priority: 1,
+        ruleId: fooRule.id,
+    }],
+});
+const fooVpc = new aws.ec2.Vpc("fooVpc", {cidrBlock: "10.1.0.0/16"});
+const available = aws.getAvailabilityZones({});
+const fooSubnet = new aws.ec2.Subnet("fooSubnet", {
+    vpcId: fooVpc.id,
+    cidrBlock: "10.1.1.0/24",
+    availabilityZone: available.then(available => available.names[0]),
+});
+const bar = new aws.ec2.Subnet("bar", {
+    vpcId: fooVpc.id,
+    cidrBlock: "10.1.2.0/24",
+    availabilityZone: available.then(available => available.names[1]),
+});
+const fooLoadBalancer = new aws.alb.LoadBalancer("fooLoadBalancer", {
+    internal: true,
+    subnets: [
+        fooSubnet.id,
+        bar.id,
+    ],
+});
+const fooWebAclAssociation = new aws.wafregional.WebAclAssociation("fooWebAclAssociation", {
+    resourceArn: fooLoadBalancer.arn,
+    webAclId: fooWebAcl.id,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
 
 
 

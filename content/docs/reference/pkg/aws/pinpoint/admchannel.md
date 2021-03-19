@@ -12,8 +12,6 @@ meta_desc: "Documentation for the aws.pinpoint.AdmChannel resource with examples
 
 Provides a Pinpoint ADM (Amazon Device Messaging) Channel resource.
 
-> **Note:** All arguments including the Client ID and Client Secret will be stored in the raw state as plain-text.
-
 {{% examples %}}
 
 ## Example Usage

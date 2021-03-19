@@ -14,12 +14,14 @@ Explore the resources and functions of the aws.kinesis module.
     <li><a href="analyticsapplication" title="AnalyticsApplication"><span class="symbol resource"></span>AnalyticsApplication</a></li>
     <li><a href="firehosedeliverystream" title="FirehoseDeliveryStream"><span class="symbol resource"></span>FirehoseDeliveryStream</a></li>
     <li><a href="stream" title="Stream"><span class="symbol resource"></span>Stream</a></li>
+    <li><a href="streamconsumer" title="StreamConsumer"><span class="symbol resource"></span>StreamConsumer</a></li>
     <li><a href="videostream" title="VideoStream"><span class="symbol resource"></span>VideoStream</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getstream" title="GetStream"><span class="symbol function"></span>GetStream</a></li>
+    <li><a href="getstreamconsumer" title="GetStreamConsumer"><span class="symbol function"></span>GetStreamConsumer</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,6 +33,6 @@ Explore the resources and functions of the aws.kinesis module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.33.0</dd>
+	<dd>3.34.0</dd>
 </dl>
 

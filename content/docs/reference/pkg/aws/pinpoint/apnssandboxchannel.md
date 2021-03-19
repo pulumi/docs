@@ -12,8 +12,6 @@ meta_desc: "Documentation for the aws.pinpoint.ApnsSandboxChannel resource with 
 
 Provides a Pinpoint APNs Sandbox Channel resource.
 
-> **Note:** All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
-
 {{% examples %}}
 
 ## Example Usage

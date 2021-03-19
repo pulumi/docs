@@ -12,8 +12,6 @@ meta_desc: "Documentation for the aws.pinpoint.GcmChannel resource with examples
 
 Provides a Pinpoint GCM Channel resource.
 
-> **Note:** Api Key argument will be stored in the raw state as plain-text.
-
 {{% examples %}}
 
 ## Example Usage

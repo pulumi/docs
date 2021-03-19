@@ -324,7 +324,8 @@ The SecretPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretarn_csharp">
 <a href="#secretarn_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Arn</a>
@@ -354,7 +355,8 @@ The SecretPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretarn_go">
 <a href="#secretarn_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Arn</a>
@@ -384,7 +386,8 @@ The SecretPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretarn_nodejs">
 <a href="#secretarn_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Arn</a>
@@ -414,7 +417,8 @@ The SecretPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_arn_python">
 <a href="#secret_arn_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>arn</a>
@@ -631,7 +635,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretarn_csharp">
 <a href="#state_secretarn_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Arn</a>
@@ -661,7 +666,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretarn_go">
 <a href="#state_secretarn_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Arn</a>
@@ -691,7 +697,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretarn_nodejs">
 <a href="#state_secretarn_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Arn</a>
@@ -721,7 +728,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_arn_python">
 <a href="#state_secret_arn_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>arn</a>

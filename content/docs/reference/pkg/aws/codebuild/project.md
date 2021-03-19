@@ -2376,7 +2376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactidentifier_csharp">
@@ -2461,7 +2461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactidentifier_go">
@@ -2546,7 +2546,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactidentifier_nodejs">
@@ -2631,7 +2631,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifact_identifier_python">
@@ -2736,7 +2736,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2767,7 +2767,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2798,7 +2798,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2829,7 +2829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2862,7 +2862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
@@ -2938,7 +2938,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
@@ -3014,7 +3014,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
@@ -3090,7 +3090,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
@@ -3168,7 +3168,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3199,7 +3199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3230,7 +3230,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3261,7 +3261,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3717,7 +3717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptiondisabled_csharp">
@@ -3802,7 +3802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptiondisabled_go">
@@ -3887,7 +3887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptiondisabled_nodejs">
@@ -3972,7 +3972,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_disabled_python">
@@ -4059,17 +4059,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="auths_csharp">
 <a href="#auths_csharp" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourceauth">List&lt;Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_csharp">
 <a href="#buildspec_csharp" style="color: inherit; text-decoration: inherit;">Buildspec</a>
@@ -4144,17 +4144,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="auths_go">
 <a href="#auths_go" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourceauth">[]Project<wbr>Secondary<wbr>Source<wbr>Auth</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_go">
 <a href="#buildspec_go" style="color: inherit; text-decoration: inherit;">Buildspec</a>
@@ -4229,17 +4229,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="auths_nodejs">
 <a href="#auths_nodejs" style="color: inherit; text-decoration: inherit;">auths</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_nodejs">
 <a href="#buildspec_nodejs" style="color: inherit; text-decoration: inherit;">buildspec</a>
@@ -4314,17 +4314,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="auths_python">
 <a href="#auths_python" style="color: inherit; text-decoration: inherit;">auths</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourceauth">Sequence[Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_python">
 <a href="#buildspec_python" style="color: inherit; text-decoration: inherit;">buildspec</a>
@@ -4384,91 +4384,91 @@ The following state arguments are supported:
 <h4 id="projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource value that applies to the specified authorization type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource value that applies to the specified authorization type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource value that applies to the specified authorization type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource value that applies to the specified authorization type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 <h4 id="projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</h4>
@@ -4536,17 +4536,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="auths_csharp">
 <a href="#auths_csharp" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourceauth">List&lt;Project<wbr>Source<wbr>Auth<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_csharp">
 <a href="#buildspec_csharp" style="color: inherit; text-decoration: inherit;">Buildspec</a>
@@ -4612,17 +4612,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="auths_go">
 <a href="#auths_go" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourceauth">[]Project<wbr>Source<wbr>Auth</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_go">
 <a href="#buildspec_go" style="color: inherit; text-decoration: inherit;">Buildspec</a>
@@ -4688,17 +4688,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="auths_nodejs">
 <a href="#auths_nodejs" style="color: inherit; text-decoration: inherit;">auths</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_nodejs">
 <a href="#buildspec_nodejs" style="color: inherit; text-decoration: inherit;">buildspec</a>
@@ -4764,17 +4764,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="auths_python">
 <a href="#auths_python" style="color: inherit; text-decoration: inherit;">auths</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourceauth">Sequence[Project<wbr>Source<wbr>Auth<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_python">
 <a href="#buildspec_python" style="color: inherit; text-decoration: inherit;">buildspec</a>
@@ -4834,91 +4834,91 @@ The following state arguments are supported:
 <h4 id="projectsourceauth">Project<wbr>Source<wbr>Auth</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource value that applies to the specified authorization type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource value that applies to the specified authorization type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource value that applies to the specified authorization type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource value that applies to the specified authorization type.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 <h4 id="projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</h4>

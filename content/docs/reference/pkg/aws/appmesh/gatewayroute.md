@@ -364,7 +364,7 @@ The GatewayRoute resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the [virtual gateway](https://www.terraform.io/docs/providers/aws/r/appmesh_virtual_gateway.html) to associate the gateway route with. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meshowner_csharp">
@@ -422,7 +422,7 @@ The GatewayRoute resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the [virtual gateway](https://www.terraform.io/docs/providers/aws/r/appmesh_virtual_gateway.html) to associate the gateway route with. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meshowner_go">
@@ -480,7 +480,7 @@ The GatewayRoute resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the [virtual gateway](https://www.terraform.io/docs/providers/aws/r/appmesh_virtual_gateway.html) to associate the gateway route with. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meshowner_nodejs">
@@ -538,7 +538,7 @@ The GatewayRoute resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the [virtual gateway](https://www.terraform.io/docs/providers/aws/r/appmesh_virtual_gateway.html) to associate the gateway route with. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_owner_python">
@@ -981,7 +981,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the [virtual gateway](https://www.terraform.io/docs/providers/aws/r/appmesh_virtual_gateway.html) to associate the gateway route with. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1075,7 +1075,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the [virtual gateway](https://www.terraform.io/docs/providers/aws/r/appmesh_virtual_gateway.html) to associate the gateway route with. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1169,7 +1169,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the [virtual gateway](https://www.terraform.io/docs/providers/aws/r/appmesh_virtual_gateway.html) to associate the gateway route with. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1263,7 +1263,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the [virtual gateway](https://www.terraform.io/docs/providers/aws/r/appmesh_virtual_gateway.html) to associate the gateway route with. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

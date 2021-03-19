@@ -12,8 +12,6 @@ meta_desc: "Documentation for the aws.dms.Endpoint resource with examples, input
 
 Provides a DMS (Data Migration Service) endpoint resource. DMS endpoints can be created, updated, deleted, and imported.
 
-> **Note:** All arguments including the password will be stored in the raw state as plain-text.
-
 {{% examples %}}
 
 ## Example Usage
