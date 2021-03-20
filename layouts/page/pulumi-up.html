@@ -1,6 +1,6 @@
 {{ define "main" }}
-    <div class="pulumi-up-body text-white pb-12">
-        <div class="relative overflow-hidden">
+    <div class="pulumi-up-body text-white pb-12 ">
+        <div class="relative overflow-hidden pulumi-up-video-section">
             <video class="pulumiup-video" autoplay muted loop>
                 <source src="/video/pulumiup-lofi.mp4" type="video/mp4">
             </video>
@@ -24,39 +24,54 @@
                 </div>
             </div>
         </div>
-        <div class="container mx-auto">
-            <section id="keynote">
+        <div class="container mx-auto py-16">
+            <section id="main-event">
                 <div class="w-full flex items-center justify-center">
-                    <div data-title="The Main Event" class="neon-callout-box-green max-w-full">
-                        <div class="flex flex-col justify-center items-center">
-                            <div class="flex flex-col lg:flex-row justify-center items-start lg:items-center">
-                                {{ range $id := .Params.keynote.speakers }}
+                    <div data-title="The Main Event" class="neon-callout-box-green max-w-full p-16 pt-4">
+                        <div class="">
+                            <pulumi-datetime class="section-title-blue text-center mt-4" date="2021-04-20T09:00:00-07:00"></pulumi-datetime>
+                            <p class="max-w-3xl mx-auto text-lg">
+                                PulumiUP is a 2 hour virtual event for anyone who is interested in cloud engineering,
+                                cloud infrastructure, software development, modern applications, or Pulumi.
+                                Whether you’re a seasoned cloud engineer or just curious to learn what’s all
+                                the fuss about cloud engineering, PulumiUP will teach you something new about
+                                the future of building on the cloud.
+                            </p>
+                            <h3 class="section-title-blue text-center">Featuring</h3>
+                            <div class="flex flex-col flex-wrap lg:flex-row justify-center items-center ml-12">
+                                {{ range $id := .Params.speakers }}
                                     {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
                                     {{ $authorData := index $.Site.Data.team.team $id }}
 
-                                    <span class="flex items-center mx-4 mt-4 lg:mt-0">
+                                    <span class="flex w-1/3 items-start mt-4">
                                         <span class="speaker-image">
                                             <img src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}">
                                         </span>
                                         <span class="flex flex-col">
-                                            <span class="speaker-name-blue ml-4">
+                                            <span class="speaker-name-orange ml-4">
                                                 {{ $authorData.name }}
                                             </span>
-                                            <span class="text-white">{{ $authorData.title }}, {{ $authorData.company }}</span>
+                                            <span class="text-white ml-4">{{ $authorData.title }}, {{ $authorData.company }}</span>
                                         </span>
                                     </span>
                                 {{ end }}
                             </div>
-                            <div class="mt-8 px-16">
-                                <p class="text-xl">
-                                    This chat about modern cloud architectures and development will include a variety of topics - building blocks and abstractions; infrastructure and application boundaries; and chaos, canaries, and compliance in software delivery.
-                                </p>
+                            <div class="mt-16">
+                                <h3 class="section-title-green text-center"><span class="section-title-blue">ACT I</span> "The Vision"</h3>
+                                <p class="max-w-3xl mx-auto text-lg">{{ .Params.vision.description | markdownify }}</p>
+                                <h3 class="section-title-green text-center"><span class="section-title-blue">ACT II</span> "The Tools"</h3>
+                                <p class="max-w-3xl mx-auto text-lg">{{ .Params.vision.description | markdownify }}</p>
+                                <h3 class="section-title-green text-center"><span class="section-title-blue">ACT III</span> "Your Peers"</h3>
+                                <p class="max-w-3xl mx-auto text-lg">{{ .Params.vision.description | markdownify }}</p>
+                                <div class="mt-12 text-center">
+                                    <a href="#register" class="btn btn-lg btn-orange">Grab Your Spot</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="sessions">
+            <section id="sessions" class="mt-16">
                 <div class="flex flex-col lg:flex-row">
                     <div class="w-full lg:w-1/2 p-4">
                         <div data-title="Workshops" class="neon-callout-box-orange text-center">
@@ -71,18 +86,16 @@
                     </div>
                 </div>
             </section>
-            <section id="register">
-                <div class="text-center p-4">
-                    <h4 class="text-gray-100 md:mr-8 mt-2 text-2xl">{{ .Params.form.label }}</h4>
-                    <div class="flex items-center justify-center">
-                        <pulumi-hubspot-form form-id="{{ .Params.form.form_id }}" class="newsletter newsletter-wide"></pulumi-hubspot-form>
-                    </div>
-                </div>
-                <div class="w-full flex items-center justify-center mt-8 p-4">
-                    <div class="relative inline-block">
-                        <p class="mb-12 text-2xl">{{ .Params.quote.quote }}</p>
-                        <p class="absolute bottom-0 right-0 text-lg italic">~ {{ .Params.quote.name }}</p>
-                    </div>
+            <section id="register" class="mb-0 py-16 text-white px-4 lg:px-0">
+                <div class="container mx-auto w-full lg:w-1/2 bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
+                    {{ with .Params.register_form }}
+                        <div class="mx-auto">
+                            <h2 class="text-black text-center">{{ .headline }}</h2>
+                            <div class="hs-form hs-form-fg-light hs-demo-form text-black">
+                                <pulumi-hubspot-form form-id="{{ .hubspot_form_id }}"></pulumi-hubspot-form>
+                            </div>
+                        </div>
+                    {{ end }}
                 </div>
             </section>
         </div>

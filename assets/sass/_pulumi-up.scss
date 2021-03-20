@@ -16,8 +16,10 @@ $orange900: theme("colors.orange.900");
     @apply text-center align-middle;
 }
 
-@mixin neon-sign-defaults($fontSize: 4rem) {
-    font-family: "Vibur";
+@mixin neon-sign-defaults($fontSize: 4rem, $cursive: true) {
+    @if $cursive {
+        font-family: "Vibur";
+    }
     font-size: $fontSize;
 }
 
@@ -36,8 +38,8 @@ $orange900: theme("colors.orange.900");
     }
 }
 
-@mixin neon-sign($light, $medium, $dark, $fontSize, $name, $animate: true, $pulseTime: 3s) {
-    @include neon-sign-defaults($fontSize);
+@mixin neon-sign($light, $medium, $dark, $fontSize, $name, $animate: true, $cursive: true, $pulseTime: 3s) {
+    @include neon-sign-defaults($fontSize, $cursive);
     @if $animate {
         @include neon-sign-animation($light, $medium, $dark, $pulseTime, $name);
     }
@@ -55,10 +57,10 @@ $orange900: theme("colors.orange.900");
 }
 
 .green-neon-sign-xl {
-    @include neon-sign($green400, $green700, $green900, 6rem, "green-neon-sign-xl-pulse", true, 4s);
+    @include neon-sign($green400, $green700, $green900, 6rem, "green-neon-sign-xl-pulse", true, true, 4s);
 
     @screen lg {
-        @include neon-sign($green400, $green700, $green900, 9rem, "green-neon-sign-xl-pulse", true, 4s);
+        @include neon-sign($green400, $green700, $green900, 9rem, "green-neon-sign-xl-pulse", true, true, 4s);
     }
 }
 
@@ -73,7 +75,7 @@ $orange900: theme("colors.orange.900");
 
 %dialog-box {
     @apply relative p-8 w-full text-white;
-    margin: 5% auto;
+    //margin: 5% auto;
     border-radius: 1rem;
 
     &:before {
@@ -96,16 +98,20 @@ $orange900: theme("colors.orange.900");
     }
 }
 
-.pulumiup-video {
-    @apply w-full;
-    @screen lg {
-        margin-top: -10%;
-    }
-}
+.pulumi-up-video-section {
+    box-shadow: 0 0 3em black;
 
-.pulumiup-title {
-    @apply absolute top-0;
-    left: 25%;
+    .pulumiup-video {
+        @apply w-full;
+        @screen lg {
+            margin-top: -10%;
+        }
+    }
+
+    .pulumiup-title {
+        @apply absolute top-0;
+        left: 25%;
+    }
 }
 
 .neon-callout-box-green {
@@ -120,8 +126,16 @@ $orange900: theme("colors.orange.900");
     @include dialog-box($orange400);
 }
 
-.speaker-name-blue {
-    @include neon-sign($orange400, $orange700, $orange900, 2.25rem, "speaker-name-blue", false);
+.speaker-name-orange {
+    @include neon-sign($orange400, $orange700, $orange900, 2rem, "speaker-name-orange", false);
+}
+
+.section-title-blue {
+    @include neon-sign($blue400, $blue700, $blue900, 1.75rem, "section-title-blue", false, false);
+}
+
+.section-title-green {
+    @include neon-sign($green400, $green700, $green900, 1.75rem, "section-title-green", false, false);
 }
 
 .speaker-image {
