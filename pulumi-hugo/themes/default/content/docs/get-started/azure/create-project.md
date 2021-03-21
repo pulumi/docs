@@ -12,7 +12,7 @@ menu:
 aliases: ["/docs/quickstart/azure/create-project/"]
 ---
 
-Now that you have set up your environment by installing Pulumi, installing your preferred language runtime, and configuring your AWS credentials, let's get started with creating your first Pulumi program.
+Now that you have set up your environment by installing Pulumi, installing your preferred language runtime, and configuring your Azure credentials, let's get started with creating your first Pulumi program.
 
 In this guide you will:
 
