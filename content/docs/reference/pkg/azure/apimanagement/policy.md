@@ -308,7 +308,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The XML Content for this Policy as a string.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xmllink_csharp">
 <a href="#xmllink_csharp" style="color: inherit; text-decoration: inherit;">Xml<wbr>Link</a>
@@ -338,7 +339,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The XML Content for this Policy as a string.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xmllink_go">
 <a href="#xmllink_go" style="color: inherit; text-decoration: inherit;">Xml<wbr>Link</a>
@@ -368,7 +370,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The XML Content for this Policy as a string.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xmllink_nodejs">
 <a href="#xmllink_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Link</a>
@@ -398,7 +401,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The XML Content for this Policy as a string.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xml_link_python">
 <a href="#xml_link_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>link</a>
@@ -606,7 +610,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The XML Content for this Policy as a string.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xmllink_csharp">
 <a href="#state_xmllink_csharp" style="color: inherit; text-decoration: inherit;">Xml<wbr>Link</a>
@@ -636,7 +641,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The XML Content for this Policy as a string.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xmllink_go">
 <a href="#state_xmllink_go" style="color: inherit; text-decoration: inherit;">Xml<wbr>Link</a>
@@ -666,7 +672,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The XML Content for this Policy as a string.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xmllink_nodejs">
 <a href="#state_xmllink_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Link</a>
@@ -696,7 +703,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The XML Content for this Policy as a string.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xml_link_python">
 <a href="#state_xml_link_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>link</a>

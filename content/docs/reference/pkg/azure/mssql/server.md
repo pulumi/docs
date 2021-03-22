@@ -12,9 +12,6 @@ meta_desc: "Documentation for the azure.mssql.Server resource with examples, inp
 
 Manages a Microsoft SQL Azure Database Server.
 
-> **Note:** All arguments including the administrator login and password will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
-
 {{% examples %}}
 
 ## Example Usage
