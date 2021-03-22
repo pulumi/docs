@@ -3459,6 +3459,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfig_csharp">
+<a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Inputs.<wbr>Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fargateprofile_csharp">
 <a href="#fargateprofile_csharp" style="color: inherit; text-decoration: inherit;">Fargate<wbr>Profile</a>
 </span>
@@ -3612,6 +3620,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Config<wbr>Map</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionconfig_go">
+<a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3771,6 +3787,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfig_nodejs">
+<a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">awstypesinputeks<wbr>Cluster<wbr>Encryption<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fargateprofile_nodejs">
 <a href="#fargateprofile_nodejs" style="color: inherit; text-decoration: inherit;">fargate<wbr>Profile</a>
 </span>
@@ -3924,6 +3948,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Config<wbr>Map</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryption_config_python">
+<a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5141,6 +5173,30 @@ Please note that at most one storage class can be marked as default. If two or m
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="cniconfigurerpfilter_csharp">
+<a href="#cniconfigurerpfilter_csharp" style="color: inherit; text-decoration: inherit;">Cni<wbr>Configure<wbr>Rpfilter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether ipamd should configure rp filter for primary interface. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cnicustomnetworkcfg_csharp">
+<a href="#cnicustomnetworkcfg_csharp" style="color: inherit; text-decoration: inherit;">Cni<wbr>Custom<wbr>Network<wbr>Cfg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies that your pods may use subnets and security groups that are independent of your worker node's VPC configuration. By default, pods share the same subnet and security groups as the worker node's primary interface. Setting this variable to true causes ipamd to use the security groups and VPC subnet in a worker node's ENIConfig for elastic network interface allocation. You must create an ENIConfig custom resource for each subnet that your pods will reside in, and then annotate or label each worker node to use a specific ENIConfig (multiple worker nodes can be annotated or labelled with the same ENIConfig). Worker nodes can only be annotated with a single ENIConfig at a time, and the subnet in the ENIConfig must belong to the same Availability Zone that the worker node resides in. For more information, see CNI Custom Networking in the Amazon EKS User Guide. Default is `false`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cniexternalsnat_csharp">
+<a href="#cniexternalsnat_csharp" style="color: inherit; text-decoration: inherit;">Cni<wbr>External<wbr>Snat</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied. Disable SNAT if you need to allow inbound communication to your pods from external VPNs, direct connections, and external VPCs, and your pods do not need to access the Internet directly via an Internet Gateway. However, your nodes must be running in a private subnet and connected to the internet through an AWS NAT Gateway or another external NAT device. Default is `false`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customnetworkconfig_csharp">
 <a href="#customnetworkconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Network<wbr>Config</a>
 </span>
@@ -5150,6 +5206,14 @@ Please note that at most one storage class can be marked as default. If two or m
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
 Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablepodeni_csharp">
+<a href="#enablepodeni_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pod<wbr>Eni</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to allow IPAMD to add the `vpc.amazonaws.com/has-trunk-attached` label tothe node if the instance has capacity to attach an additional ENI. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniconfiglabeldef_csharp">
 <a href="#eniconfiglabeldef_csharp" style="color: inherit; text-decoration: inherit;">Eni<wbr>Config<wbr>Label<wbr>Def</a>
@@ -5223,6 +5287,14 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt c
 
 Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securitycontextprivileged_csharp">
+<a href="#securitycontextprivileged_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Context<wbr>Privileged</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Pass privilege to containers securityContext. This is required when SELinux is enabled. This value will not be passed to the CNI config by default{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vethprefix_csharp">
 <a href="#vethprefix_csharp" style="color: inherit; text-decoration: inherit;">Veth<wbr>Prefix</a>
 </span>
@@ -5257,6 +5329,30 @@ Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="cniconfigurerpfilter_go">
+<a href="#cniconfigurerpfilter_go" style="color: inherit; text-decoration: inherit;">Cni<wbr>Configure<wbr>Rpfilter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether ipamd should configure rp filter for primary interface. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cnicustomnetworkcfg_go">
+<a href="#cnicustomnetworkcfg_go" style="color: inherit; text-decoration: inherit;">Cni<wbr>Custom<wbr>Network<wbr>Cfg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies that your pods may use subnets and security groups that are independent of your worker node's VPC configuration. By default, pods share the same subnet and security groups as the worker node's primary interface. Setting this variable to true causes ipamd to use the security groups and VPC subnet in a worker node's ENIConfig for elastic network interface allocation. You must create an ENIConfig custom resource for each subnet that your pods will reside in, and then annotate or label each worker node to use a specific ENIConfig (multiple worker nodes can be annotated or labelled with the same ENIConfig). Worker nodes can only be annotated with a single ENIConfig at a time, and the subnet in the ENIConfig must belong to the same Availability Zone that the worker node resides in. For more information, see CNI Custom Networking in the Amazon EKS User Guide. Default is `false`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cniexternalsnat_go">
+<a href="#cniexternalsnat_go" style="color: inherit; text-decoration: inherit;">Cni<wbr>External<wbr>Snat</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied. Disable SNAT if you need to allow inbound communication to your pods from external VPNs, direct connections, and external VPCs, and your pods do not need to access the Internet directly via an Internet Gateway. However, your nodes must be running in a private subnet and connected to the internet through an AWS NAT Gateway or another external NAT device. Default is `false`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customnetworkconfig_go">
 <a href="#customnetworkconfig_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Network<wbr>Config</a>
 </span>
@@ -5266,6 +5362,14 @@ Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
 Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablepodeni_go">
+<a href="#enablepodeni_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pod<wbr>Eni</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to allow IPAMD to add the `vpc.amazonaws.com/has-trunk-attached` label tothe node if the instance has capacity to attach an additional ENI. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniconfiglabeldef_go">
 <a href="#eniconfiglabeldef_go" style="color: inherit; text-decoration: inherit;">Eni<wbr>Config<wbr>Label<wbr>Def</a>
@@ -5339,6 +5443,14 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt c
 
 Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securitycontextprivileged_go">
+<a href="#securitycontextprivileged_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Context<wbr>Privileged</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Pass privilege to containers securityContext. This is required when SELinux is enabled. This value will not be passed to the CNI config by default{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vethprefix_go">
 <a href="#vethprefix_go" style="color: inherit; text-decoration: inherit;">Veth<wbr>Prefix</a>
 </span>
@@ -5373,6 +5485,30 @@ Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="cniconfigurerpfilter_nodejs">
+<a href="#cniconfigurerpfilter_nodejs" style="color: inherit; text-decoration: inherit;">cni<wbr>Configure<wbr>Rpfilter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether ipamd should configure rp filter for primary interface. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cnicustomnetworkcfg_nodejs">
+<a href="#cnicustomnetworkcfg_nodejs" style="color: inherit; text-decoration: inherit;">cni<wbr>Custom<wbr>Network<wbr>Cfg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies that your pods may use subnets and security groups that are independent of your worker node's VPC configuration. By default, pods share the same subnet and security groups as the worker node's primary interface. Setting this variable to true causes ipamd to use the security groups and VPC subnet in a worker node's ENIConfig for elastic network interface allocation. You must create an ENIConfig custom resource for each subnet that your pods will reside in, and then annotate or label each worker node to use a specific ENIConfig (multiple worker nodes can be annotated or labelled with the same ENIConfig). Worker nodes can only be annotated with a single ENIConfig at a time, and the subnet in the ENIConfig must belong to the same Availability Zone that the worker node resides in. For more information, see CNI Custom Networking in the Amazon EKS User Guide. Default is `false`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cniexternalsnat_nodejs">
+<a href="#cniexternalsnat_nodejs" style="color: inherit; text-decoration: inherit;">cni<wbr>External<wbr>Snat</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied. Disable SNAT if you need to allow inbound communication to your pods from external VPNs, direct connections, and external VPCs, and your pods do not need to access the Internet directly via an Internet Gateway. However, your nodes must be running in a private subnet and connected to the internet through an AWS NAT Gateway or another external NAT device. Default is `false`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customnetworkconfig_nodejs">
 <a href="#customnetworkconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Network<wbr>Config</a>
 </span>
@@ -5382,6 +5518,14 @@ Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
 Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablepodeni_nodejs">
+<a href="#enablepodeni_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Pod<wbr>Eni</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to allow IPAMD to add the `vpc.amazonaws.com/has-trunk-attached` label tothe node if the instance has capacity to attach an additional ENI. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniconfiglabeldef_nodejs">
 <a href="#eniconfiglabeldef_nodejs" style="color: inherit; text-decoration: inherit;">eni<wbr>Config<wbr>Label<wbr>Def</a>
@@ -5455,6 +5599,14 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt c
 
 Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securitycontextprivileged_nodejs">
+<a href="#securitycontextprivileged_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context<wbr>Privileged</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Pass privilege to containers securityContext. This is required when SELinux is enabled. This value will not be passed to the CNI config by default{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vethprefix_nodejs">
 <a href="#vethprefix_nodejs" style="color: inherit; text-decoration: inherit;">veth<wbr>Prefix</a>
 </span>
@@ -5489,6 +5641,30 @@ Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="cni_configure_rpfilter_python">
+<a href="#cni_configure_rpfilter_python" style="color: inherit; text-decoration: inherit;">cni_<wbr>configure_<wbr>rpfilter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether ipamd should configure rp filter for primary interface. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cni_custom_network_cfg_python">
+<a href="#cni_custom_network_cfg_python" style="color: inherit; text-decoration: inherit;">cni_<wbr>custom_<wbr>network_<wbr>cfg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies that your pods may use subnets and security groups that are independent of your worker node's VPC configuration. By default, pods share the same subnet and security groups as the worker node's primary interface. Setting this variable to true causes ipamd to use the security groups and VPC subnet in a worker node's ENIConfig for elastic network interface allocation. You must create an ENIConfig custom resource for each subnet that your pods will reside in, and then annotate or label each worker node to use a specific ENIConfig (multiple worker nodes can be annotated or labelled with the same ENIConfig). Worker nodes can only be annotated with a single ENIConfig at a time, and the subnet in the ENIConfig must belong to the same Availability Zone that the worker node resides in. For more information, see CNI Custom Networking in the Amazon EKS User Guide. Default is `false`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cni_external_snat_python">
+<a href="#cni_external_snat_python" style="color: inherit; text-decoration: inherit;">cni_<wbr>external_<wbr>snat</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied. Disable SNAT if you need to allow inbound communication to your pods from external VPNs, direct connections, and external VPCs, and your pods do not need to access the Internet directly via an Internet Gateway. However, your nodes must be running in a private subnet and connected to the internet through an AWS NAT Gateway or another external NAT device. Default is `false`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="custom_network_config_python">
 <a href="#custom_network_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>network_<wbr>config</a>
 </span>
@@ -5498,6 +5674,14 @@ Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
 Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_pod_eni_python">
+<a href="#enable_pod_eni_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>pod_<wbr>eni</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to allow IPAMD to add the `vpc.amazonaws.com/has-trunk-attached` label tothe node if the instance has capacity to attach an additional ENI. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eni_config_label_def_python">
 <a href="#eni_config_label_def_python" style="color: inherit; text-decoration: inherit;">eni_<wbr>config_<wbr>label_<wbr>def</a>
@@ -5570,6 +5754,14 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt c
     <dd>{{% md %}}Specifies whether NodePort services are enabled on a worker node's primary network interface. This requires additional iptables rules and that the kernel's reverse path filter on the primary interface is set to loose.
 
 Defaults to true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="security_context_privileged_python">
+<a href="#security_context_privileged_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context_<wbr>privileged</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Pass privilege to containers securityContext. This is required when SELinux is enabled. This value will not be passed to the CNI config by default{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="veth_prefix_python">
 <a href="#veth_prefix_python" style="color: inherit; text-decoration: inherit;">veth_<wbr>prefix</a>

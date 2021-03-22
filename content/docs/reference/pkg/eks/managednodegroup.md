@@ -27,7 +27,7 @@ https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedNodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[CoreDataArgs]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">force_update_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_role</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.iam.Role]</span> = None<span class="p">, </span><span class="nx">node_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedNodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[CoreDataArgs]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">force_update_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.eks.NodeGroupLaunchTemplateArgs]</span> = None<span class="p">, </span><span class="nx">node_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_role</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.iam.Role]</span> = None<span class="p">, </span><span class="nx">node_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_access</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.eks.NodeGroupRemoteAccessArgs]</span> = None<span class="p">, </span><span class="nx">scaling_config</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.eks.NodeGroupScalingConfigArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -225,6 +225,14 @@ The ManagedNodeGroup resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="launchtemplate_csharp">
+<a href="#launchtemplate_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouplaunchtemplate">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Inputs.<wbr>Node<wbr>Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Launch Template settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nodegroupname_csharp">
 <a href="#nodegroupname_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Name</a>
 </span>
@@ -260,6 +268,27 @@ Note, `nodeRoleArn` and `nodeRole` are mutually exclusive, and a single option m
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="remoteaccess_csharp">
+<a href="#remoteaccess_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Inputs.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Remote access settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scalingconfig_csharp">
+<a href="#scalingconfig_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Inputs.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Scaling settings.
+
+Default scaling amounts of the node group autoscaling group are:
+  - desiredSize: 2
+  - minSize: 1
+  - maxSize: 2{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -352,6 +381,14 @@ This default logic is based on the existing subnet IDs logic of this package: ht
     </dt>
     <dd>{{% md %}}Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="launchtemplate_go">
+<a href="#launchtemplate_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouplaunchtemplate">Node<wbr>Group<wbr>Launch<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}Launch Template settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nodegroupname_go">
 <a href="#nodegroupname_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Name</a>
 </span>
@@ -387,6 +424,27 @@ Note, `nodeRoleArn` and `nodeRole` are mutually exclusive, and a single option m
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="remoteaccess_go">
+<a href="#remoteaccess_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Remote access settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scalingconfig_go">
+<a href="#scalingconfig_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Scaling settings.
+
+Default scaling amounts of the node group autoscaling group are:
+  - desiredSize: 2
+  - minSize: 1
+  - maxSize: 2{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -479,6 +537,14 @@ This default logic is based on the existing subnet IDs logic of this package: ht
     </dt>
     <dd>{{% md %}}Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="launchtemplate_nodejs">
+<a href="#launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouplaunchtemplate">awstypesinputeks<wbr>Node<wbr>Group<wbr>Launch<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}Launch Template settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nodegroupname_nodejs">
 <a href="#nodegroupname_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group<wbr>Name</a>
 </span>
@@ -514,6 +580,27 @@ Note, `nodeRoleArn` and `nodeRole` are mutually exclusive, and a single option m
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="remoteaccess_nodejs">
+<a href="#remoteaccess_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">awstypesinputeks<wbr>Node<wbr>Group<wbr>Remote<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Remote access settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scalingconfig_nodejs">
+<a href="#scalingconfig_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">awstypesinputeks<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Scaling settings.
+
+Default scaling amounts of the node group autoscaling group are:
+  - desiredSize: 2
+  - minSize: 1
+  - maxSize: 2{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -606,6 +693,14 @@ This default logic is based on the existing subnet IDs logic of this package: ht
     </dt>
     <dd>{{% md %}}Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="launch_template_python">
+<a href="#launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouplaunchtemplate">Node<wbr>Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Launch Template settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="node_group_name_python">
 <a href="#node_group_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group_<wbr>name</a>
 </span>
@@ -641,6 +736,27 @@ Note, `nodeRoleArn` and `nodeRole` are mutually exclusive, and a single option m
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="remote_access_python">
+<a href="#remote_access_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Remote access settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scaling_config_python">
+<a href="#scaling_config_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Scaling settings.
+
+Default scaling amounts of the node group autoscaling group are:
+  - desiredSize: 2
+  - minSize: 1
+  - maxSize: 2{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -1850,6 +1966,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfig_csharp">
+<a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Inputs.<wbr>Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fargateprofile_csharp">
 <a href="#fargateprofile_csharp" style="color: inherit; text-decoration: inherit;">Fargate<wbr>Profile</a>
 </span>
@@ -2003,6 +2127,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Config<wbr>Map</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionconfig_go">
+<a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2162,6 +2294,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfig_nodejs">
+<a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">awstypesinputeks<wbr>Cluster<wbr>Encryption<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fargateprofile_nodejs">
 <a href="#fargateprofile_nodejs" style="color: inherit; text-decoration: inherit;">fargate<wbr>Profile</a>
 </span>
@@ -2315,6 +2455,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Config<wbr>Map</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryption_config_python">
+<a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
