@@ -8380,6 +8380,15 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ephemeralstorageconfig_csharp">
+<a href="#ephemeralstorageconfig_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="guestaccelerators_csharp">
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
@@ -8437,8 +8446,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of local SSD disks that will be
-attached to each cluster node. Defaults to 0.
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_csharp">
@@ -8598,6 +8606,15 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ephemeralstorageconfig_go">
+<a href="#ephemeralstorageconfig_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="guestaccelerators_go">
 <a href="#guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
@@ -8655,8 +8672,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of local SSD disks that will be
-attached to each cluster node. Defaults to 0.
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_go">
@@ -8816,6 +8832,15 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ephemeralstorageconfig_nodejs">
+<a href="#ephemeralstorageconfig_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="guestaccelerators_nodejs">
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
@@ -8873,8 +8898,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of local SSD disks that will be
-attached to each cluster node. Defaults to 0.
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_nodejs">
@@ -9034,6 +9058,15 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ephemeral_storage_config_python">
+<a href="#ephemeral_storage_config_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="guest_accelerators_python">
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
@@ -9091,8 +9124,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of local SSD disks that will be
-attached to each cluster node. Defaults to 0.
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machine_type_python">
@@ -9217,6 +9249,60 @@ recommended. Structure is documented below.
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localssdcount_csharp">
+<a href="#localssdcount_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localssdcount_go">
+<a href="#localssdcount_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localssdcount_nodejs">
+<a href="#localssdcount_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="local_ssd_count_python">
+<a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10546,6 +10632,15 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ephemeralstorageconfig_csharp">
+<a href="#ephemeralstorageconfig_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="guestaccelerators_csharp">
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
@@ -10603,8 +10698,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of local SSD disks that will be
-attached to each cluster node. Defaults to 0.
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_csharp">
@@ -10764,6 +10858,15 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ephemeralstorageconfig_go">
+<a href="#ephemeralstorageconfig_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="guestaccelerators_go">
 <a href="#guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
@@ -10821,8 +10924,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of local SSD disks that will be
-attached to each cluster node. Defaults to 0.
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_go">
@@ -10982,6 +11084,15 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ephemeralstorageconfig_nodejs">
+<a href="#ephemeralstorageconfig_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="guestaccelerators_nodejs">
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
@@ -11039,8 +11150,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of local SSD disks that will be
-attached to each cluster node. Defaults to 0.
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_nodejs">
@@ -11200,6 +11310,15 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ephemeral_storage_config_python">
+<a href="#ephemeral_storage_config_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="guest_accelerators_python">
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
@@ -11257,8 +11376,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of local SSD disks that will be
-attached to each cluster node. Defaults to 0.
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machine_type_python">
@@ -11383,6 +11501,60 @@ recommended. Structure is documented below.
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localssdcount_csharp">
+<a href="#localssdcount_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localssdcount_go">
+<a href="#localssdcount_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localssdcount_nodejs">
+<a href="#localssdcount_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="local_ssd_count_python">
+<a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -12351,7 +12523,10 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Controls cluster master global
+access settings. If unset, the provider will no longer manage this field and will
+not modify the previously-set value. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_csharp">
 <a href="#masteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -12429,7 +12604,10 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Controls cluster master global
+access settings. If unset, the provider will no longer manage this field and will
+not modify the previously-set value. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_go">
 <a href="#masteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -12507,7 +12685,10 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Controls cluster master global
+access settings. If unset, the provider will no longer manage this field and will
+not modify the previously-set value. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_nodejs">
 <a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -12585,7 +12766,10 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Controls cluster master global
+access settings. If unset, the provider will no longer manage this field and will
+not modify the previously-set value. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_ipv4_cidr_block_python">
 <a href="#master_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>cidr_<wbr>block</a>

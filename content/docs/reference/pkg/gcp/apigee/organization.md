@@ -265,10 +265,10 @@ class MyStack : Stack
         {
             AnalyticsRegion = "us-central1",
             DisplayName = "apigee-org",
-            Description = "Terraform-provisioned Apigee Org.",
+            Description = "Auto-provisioned Apigee Org.",
             ProjectId = current.Apply(current => current.Project),
             AuthorizedNetwork = apigeeNetwork.Id,
-            RuntimeDatabaseEncryptionKeyName = google_kms_key.Apigee_key.Id,
+            RuntimeDatabaseEncryptionKeyName = apigeeKey.Id,
         }, new CustomResourceOptions
         {
             DependsOn = 
@@ -366,10 +366,10 @@ func main() {
 		_, err = apigee.NewOrganization(ctx, "org", &apigee.OrganizationArgs{
 			AnalyticsRegion:                  pulumi.String("us-central1"),
 			DisplayName:                      pulumi.String("apigee-org"),
-			Description:                      pulumi.String("Terraform-provisioned Apigee Org."),
+			Description:                      pulumi.String("Auto-provisioned Apigee Org."),
 			ProjectId:                        pulumi.String(current.Project),
 			AuthorizedNetwork:                apigeeNetwork.ID(),
-			RuntimeDatabaseEncryptionKeyName: pulumi.Any(google_kms_key.Apigee_key.Id),
+			RuntimeDatabaseEncryptionKeyName: apigeeKey.ID(),
 		}, pulumi.DependsOn([]pulumi.Resource{
 			apigeeVpcConnection,
 			apigeeSaKeyuser,
@@ -416,10 +416,10 @@ apigee_sa_keyuser = gcp.kms.CryptoKeyIAMBinding("apigeeSaKeyuser",
 org = gcp.apigee.Organization("org",
     analytics_region="us-central1",
     display_name="apigee-org",
-    description="Terraform-provisioned Apigee Org.",
+    description="Auto-provisioned Apigee Org.",
     project_id=current.project,
     authorized_network=apigee_network.id,
-    runtime_database_encryption_key_name=google_kms_key["apigee_key"]["id"],
+    runtime_database_encryption_key_name=apigee_key.id,
     opts=pulumi.ResourceOptions(depends_on=[
             apigee_vpc_connection,
             apigee_sa_keyuser,
@@ -466,10 +466,10 @@ const apigeeSaKeyuser = new gcp.kms.CryptoKeyIAMBinding("apigeeSaKeyuser", {
 const org = new gcp.apigee.Organization("org", {
     analyticsRegion: "us-central1",
     displayName: "apigee-org",
-    description: "Terraform-provisioned Apigee Org.",
+    description: "Auto-provisioned Apigee Org.",
     projectId: current.then(current => current.project),
     authorizedNetwork: apigeeNetwork.id,
-    runtimeDatabaseEncryptionKeyName: google_kms_key.apigee_key.id,
+    runtimeDatabaseEncryptionKeyName: apigeeKey.id,
 }, {
     dependsOn: [
         apigeeVpcConnection,

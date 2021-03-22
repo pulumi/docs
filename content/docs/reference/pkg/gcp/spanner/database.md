@@ -336,7 +336,9 @@ error in any statement, the database is not created.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+in state, a `destroy` or `update` that would delete the instance will fail.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -389,7 +391,9 @@ error in any statement, the database is not created.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+in state, a `destroy` or `update` that would delete the instance will fail.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -442,7 +446,9 @@ error in any statement, the database is not created.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+in state, a `destroy` or `update` that would delete the instance will fail.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -495,7 +501,9 @@ error in any statement, the database is not created.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+in state, a `destroy` or `update` that would delete the instance will fail.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -753,7 +761,9 @@ error in any statement, the database is not created.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+in state, a `destroy` or `update` that would delete the instance will fail.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_csharp">
 <a href="#state_instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -815,7 +825,9 @@ error in any statement, the database is not created.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+in state, a `destroy` or `update` that would delete the instance will fail.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_go">
 <a href="#state_instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -877,7 +889,9 @@ error in any statement, the database is not created.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+in state, a `destroy` or `update` that would delete the instance will fail.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_nodejs">
 <a href="#state_instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -939,7 +953,9 @@ error in any statement, the database is not created.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
+in state, a `destroy` or `update` that would delete the instance will fail.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_python">
 <a href="#state_instance_python" style="color: inherit; text-decoration: inherit;">instance</a>

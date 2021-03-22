@@ -3082,8 +3082,18 @@ this service that return in no more than threshold.
 <h4 id="slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="availability_csharp">
+<a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="latency_csharp">
 <a href="#latency_csharp" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
@@ -3138,8 +3148,18 @@ field will result in an error.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="availability_go">
+<a href="#availability_go" style="color: inherit; text-decoration: inherit;">Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability</a></span>
+    </dt>
+    <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="latency_go">
 <a href="#latency_go" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
@@ -3194,8 +3214,18 @@ field will result in an error.
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="availability_nodejs">
+<a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability</a></span>
+    </dt>
+    <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="latency_nodejs">
 <a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
@@ -3250,8 +3280,18 @@ field will result in an error.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="availability_python">
+<a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="latency_python">
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
@@ -3302,6 +3342,60 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

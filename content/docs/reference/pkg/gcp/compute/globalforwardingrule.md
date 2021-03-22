@@ -961,10 +961,12 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
-the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
-purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
+The forwarded traffic must be of a type appropriate to the target object.
+For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
+are valid.
+For global address with a purpose of PRIVATE_SERVICE_CONNECT and
+addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -1043,12 +1045,15 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
-be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
-Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
-if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
-"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
+The value of INTERNAL_SELF_MANAGED means that this will be used for
+Internal Global HTTP(S) LB. The value of EXTERNAL means that this
+will be used for External Global Load Balancing (HTTP(S) LB,
+External TCP/UDP LB, SSL Proxy)
+Note: This field must be set "" if the global address is
+configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_csharp">
@@ -1141,10 +1146,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
-the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
-purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
+The forwarded traffic must be of a type appropriate to the target object.
+For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
+are valid.
+For global address with a purpose of PRIVATE_SERVICE_CONNECT and
+addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -1223,12 +1230,15 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
-be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
-Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
-if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
-"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
+The value of INTERNAL_SELF_MANAGED means that this will be used for
+Internal Global HTTP(S) LB. The value of EXTERNAL means that this
+will be used for External Global Load Balancing (HTTP(S) LB,
+External TCP/UDP LB, SSL Proxy)
+Note: This field must be set "" if the global address is
+configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_go">
@@ -1321,10 +1331,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
-the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
-purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
+The forwarded traffic must be of a type appropriate to the target object.
+For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
+are valid.
+For global address with a purpose of PRIVATE_SERVICE_CONNECT and
+addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -1403,12 +1415,15 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
-be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
-Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
-if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
-"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
+The value of INTERNAL_SELF_MANAGED means that this will be used for
+Internal Global HTTP(S) LB. The value of EXTERNAL means that this
+will be used for External Global Load Balancing (HTTP(S) LB,
+External TCP/UDP LB, SSL Proxy)
+Note: This field must be set "" if the global address is
+configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_nodejs">
@@ -1501,10 +1516,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
-the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
-purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
+The forwarded traffic must be of a type appropriate to the target object.
+For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
+are valid.
+For global address with a purpose of PRIVATE_SERVICE_CONNECT and
+addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1583,12 +1600,15 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
-be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
-Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
-if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
-"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
+The value of INTERNAL_SELF_MANAGED means that this will be used for
+Internal Global HTTP(S) LB. The value of EXTERNAL means that this
+will be used for External Global Load Balancing (HTTP(S) LB,
+External TCP/UDP LB, SSL Proxy)
+Note: This field must be set "" if the global address is
+configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_filters_python">
@@ -2010,12 +2030,15 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
-be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
-Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
-if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
-"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
+The value of INTERNAL_SELF_MANAGED means that this will be used for
+Internal Global HTTP(S) LB. The value of EXTERNAL means that this
+will be used for External Global Load Balancing (HTTP(S) LB,
+External TCP/UDP LB, SSL Proxy)
+Note: This field must be set "" if the global address is
+configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadatafilters_csharp">
@@ -2113,10 +2136,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
-the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
-purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
+The forwarded traffic must be of a type appropriate to the target object.
+For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
+are valid.
+For global address with a purpose of PRIVATE_SERVICE_CONNECT and
+addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2208,12 +2233,15 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
-be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
-Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
-if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
-"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
+The value of INTERNAL_SELF_MANAGED means that this will be used for
+Internal Global HTTP(S) LB. The value of EXTERNAL means that this
+will be used for External Global Load Balancing (HTTP(S) LB,
+External TCP/UDP LB, SSL Proxy)
+Note: This field must be set "" if the global address is
+configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadatafilters_go">
@@ -2311,10 +2339,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
-the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
-purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
+The forwarded traffic must be of a type appropriate to the target object.
+For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
+are valid.
+For global address with a purpose of PRIVATE_SERVICE_CONNECT and
+addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2406,12 +2436,15 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
-be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
-Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
-if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
-"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
+The value of INTERNAL_SELF_MANAGED means that this will be used for
+Internal Global HTTP(S) LB. The value of EXTERNAL means that this
+will be used for External Global Load Balancing (HTTP(S) LB,
+External TCP/UDP LB, SSL Proxy)
+Note: This field must be set "" if the global address is
+configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadatafilters_nodejs">
@@ -2509,10 +2542,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
-the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
-purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
+The forwarded traffic must be of a type appropriate to the target object.
+For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
+are valid.
+For global address with a purpose of PRIVATE_SERVICE_CONNECT and
+addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2604,12 +2639,15 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
-be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
-Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
-if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
-"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
+The value of INTERNAL_SELF_MANAGED means that this will be used for
+Internal Global HTTP(S) LB. The value of EXTERNAL means that this
+will be used for External Global Load Balancing (HTTP(S) LB,
+External TCP/UDP LB, SSL Proxy)
+Note: This field must be set "" if the global address is
+configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_filters_python">
@@ -2707,10 +2745,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
-the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
-([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
-purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
+The forwarded traffic must be of a type appropriate to the target object.
+For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
+are valid.
+For global address with a purpose of PRIVATE_SERVICE_CONNECT and
+addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
