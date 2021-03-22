@@ -555,7 +555,9 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the instance template. If you leave
+this blank, the provider will auto-generate a unique name.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -821,7 +823,9 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the instance template. If you leave
+this blank, the provider will auto-generate a unique name.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1087,7 +1091,9 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the instance template. If you leave
+this blank, the provider will auto-generate a unique name.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1353,7 +1359,9 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the instance template. If you leave
+this blank, the provider will auto-generate a unique name.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2179,7 +2187,13 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">List&lt;Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Access configurations, i.e. IPs via which this
+instance can be accessed via the Internet. Omit to ensure that the instance
+is not accessible from the Internet (this means that ssh provisioners will
+not work unless you are running the prvovider can send traffic to the instance's
+network (e.g. via tunnel or because it is running on another cloud instance
+on that network). This block can be repeated multiple times. Structure documented below.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aliasipranges_csharp">
 <a href="#aliasipranges_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
@@ -2222,14 +2236,6 @@ Use `network` attribute for Legacy or Auto subnetted networks and
 empty, the address will be automatically assigned.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nictype_csharp">
-<a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
@@ -2261,7 +2267,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">[]Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Access configurations, i.e. IPs via which this
+instance can be accessed via the Internet. Omit to ensure that the instance
+is not accessible from the Internet (this means that ssh provisioners will
+not work unless you are running the prvovider can send traffic to the instance's
+network (e.g. via tunnel or because it is running on another cloud instance
+on that network). This block can be repeated multiple times. Structure documented below.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aliasipranges_go">
 <a href="#aliasipranges_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
@@ -2304,14 +2316,6 @@ Use `network` attribute for Legacy or Auto subnetted networks and
 empty, the address will be automatically assigned.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nictype_go">
-<a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
@@ -2343,7 +2347,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Access configurations, i.e. IPs via which this
+instance can be accessed via the Internet. Omit to ensure that the instance
+is not accessible from the Internet (this means that ssh provisioners will
+not work unless you are running the prvovider can send traffic to the instance's
+network (e.g. via tunnel or because it is running on another cloud instance
+on that network). This block can be repeated multiple times. Structure documented below.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aliasipranges_nodejs">
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
@@ -2386,14 +2396,6 @@ Use `network` attribute for Legacy or Auto subnetted networks and
 empty, the address will be automatically assigned.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nictype_nodejs">
-<a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
@@ -2425,7 +2427,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">Sequence[Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Access configurations, i.e. IPs via which this
+instance can be accessed via the Internet. Omit to ensure that the instance
+is not accessible from the Internet (this means that ssh provisioners will
+not work unless you are running the prvovider can send traffic to the instance's
+network (e.g. via tunnel or because it is running on another cloud instance
+on that network). This block can be repeated multiple times. Structure documented below.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alias_ip_ranges_python">
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
@@ -2467,14 +2475,6 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
 {{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="nic_type_python">
-<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>

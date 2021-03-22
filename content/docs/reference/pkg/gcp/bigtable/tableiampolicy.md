@@ -447,7 +447,9 @@ The TableIamPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The project in which the table belongs. If it
+is not provided, this provider will use the provider default.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -486,7 +488,9 @@ The TableIamPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The project in which the table belongs. If it
+is not provided, this provider will use the provider default.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -525,7 +529,9 @@ The TableIamPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The project in which the table belongs. If it
+is not provided, this provider will use the provider default.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -564,7 +570,9 @@ The TableIamPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The project in which the table belongs. If it
+is not provided, this provider will use the provider default.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -817,7 +825,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The project in which the table belongs. If it
+is not provided, this provider will use the provider default.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_csharp">
 <a href="#state_table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
@@ -865,7 +875,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The project in which the table belongs. If it
+is not provided, this provider will use the provider default.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_go">
 <a href="#state_table_go" style="color: inherit; text-decoration: inherit;">Table</a>
@@ -913,7 +925,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The project in which the table belongs. If it
+is not provided, this provider will use the provider default.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_nodejs">
 <a href="#state_table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
@@ -961,7 +975,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The project in which the table belongs. If it
+is not provided, this provider will use the provider default.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_python">
 <a href="#state_table_python" style="color: inherit; text-decoration: inherit;">table</a>

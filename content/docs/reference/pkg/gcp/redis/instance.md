@@ -14,7 +14,7 @@ A Google Cloud Redis instance.
 
 To get more information about Instance, see:
 
-* [API documentation](https://cloud.google.com/memorystore/docs/redis/reference/rest/)
+* [API documentation](https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/memorystore/docs/redis/)
 
@@ -245,6 +245,201 @@ const cache = new gcp.redis.Instance("cache", {
         my_key: "my_val",
         other_key: "other_val",
     },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Redis Instance Private Service
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var redis_network = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
+        {
+            Name = "redis-test-network",
+        }));
+        var serviceRange = new Gcp.Compute.GlobalAddress("serviceRange", new Gcp.Compute.GlobalAddressArgs
+        {
+            Purpose = "VPC_PEERING",
+            AddressType = "INTERNAL",
+            PrefixLength = 16,
+            Network = redis_network.Apply(redis_network => redis_network.Id),
+        });
+        var privateServiceConnection = new Gcp.ServiceNetworking.Connection("privateServiceConnection", new Gcp.ServiceNetworking.ConnectionArgs
+        {
+            Network = redis_network.Apply(redis_network => redis_network.Id),
+            Service = "servicenetworking.googleapis.com",
+            ReservedPeeringRanges = 
+            {
+                serviceRange.Name,
+            },
+        });
+        var cache = new Gcp.Redis.Instance("cache", new Gcp.Redis.InstanceArgs
+        {
+            Tier = "STANDARD_HA",
+            MemorySizeGb = 1,
+            LocationId = "us-central1-a",
+            AlternativeLocationId = "us-central1-f",
+            AuthorizedNetwork = redis_network.Apply(redis_network => redis_network.Id),
+            ConnectMode = "PRIVATE_SERVICE_ACCESS",
+            RedisVersion = "REDIS_4_0",
+            DisplayName = "Test Instance",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                privateServiceConnection,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/servicenetworking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		redis_network, err := compute.LookupNetwork(ctx, &compute.LookupNetworkArgs{
+			Name: "redis-test-network",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		serviceRange, err := compute.NewGlobalAddress(ctx, "serviceRange", &compute.GlobalAddressArgs{
+			Purpose:      pulumi.String("VPC_PEERING"),
+			AddressType:  pulumi.String("INTERNAL"),
+			PrefixLength: pulumi.Int(16),
+			Network:      pulumi.String(redis_network.Id),
+		})
+		if err != nil {
+			return err
+		}
+		privateServiceConnection, err := servicenetworking.NewConnection(ctx, "privateServiceConnection", &servicenetworking.ConnectionArgs{
+			Network: pulumi.String(redis_network.Id),
+			Service: pulumi.String("servicenetworking.googleapis.com"),
+			ReservedPeeringRanges: pulumi.StringArray{
+				serviceRange.Name,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = redis.NewInstance(ctx, "cache", &redis.InstanceArgs{
+			Tier:                  pulumi.String("STANDARD_HA"),
+			MemorySizeGb:          pulumi.Int(1),
+			LocationId:            pulumi.String("us-central1-a"),
+			AlternativeLocationId: pulumi.String("us-central1-f"),
+			AuthorizedNetwork:     pulumi.String(redis_network.Id),
+			ConnectMode:           pulumi.String("PRIVATE_SERVICE_ACCESS"),
+			RedisVersion:          pulumi.String("REDIS_4_0"),
+			DisplayName:           pulumi.String("Test Instance"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			privateServiceConnection,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+redis_network = gcp.compute.get_network(name="redis-test-network")
+service_range = gcp.compute.GlobalAddress("serviceRange",
+    purpose="VPC_PEERING",
+    address_type="INTERNAL",
+    prefix_length=16,
+    network=redis_network.id)
+private_service_connection = gcp.servicenetworking.Connection("privateServiceConnection",
+    network=redis_network.id,
+    service="servicenetworking.googleapis.com",
+    reserved_peering_ranges=[service_range.name])
+cache = gcp.redis.Instance("cache",
+    tier="STANDARD_HA",
+    memory_size_gb=1,
+    location_id="us-central1-a",
+    alternative_location_id="us-central1-f",
+    authorized_network=redis_network.id,
+    connect_mode="PRIVATE_SERVICE_ACCESS",
+    redis_version="REDIS_4_0",
+    display_name="Test Instance",
+    opts=pulumi.ResourceOptions(depends_on=[private_service_connection]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const redis-network = gcp.compute.getNetwork({
+    name: "redis-test-network",
+});
+const serviceRange = new gcp.compute.GlobalAddress("serviceRange", {
+    purpose: "VPC_PEERING",
+    addressType: "INTERNAL",
+    prefixLength: 16,
+    network: redis_network.then(redis_network => redis_network.id),
+});
+const privateServiceConnection = new gcp.servicenetworking.Connection("privateServiceConnection", {
+    network: redis_network.then(redis_network => redis_network.id),
+    service: "servicenetworking.googleapis.com",
+    reservedPeeringRanges: [serviceRange.name],
+});
+const cache = new gcp.redis.Instance("cache", {
+    tier: "STANDARD_HA",
+    memorySizeGb: 1,
+    locationId: "us-central1-a",
+    alternativeLocationId: "us-central1-f",
+    authorizedNetwork: redis_network.then(redis_network => redis_network.id),
+    connectMode: "PRIVATE_SERVICE_ACCESS",
+    redisVersion: "REDIS_4_0",
+    displayName: "Test Instance",
+}, {
+    dependsOn: [privateServiceConnection],
 });
 ```
 
@@ -580,9 +775,10 @@ Possible values are `BASIC` and `STANDARD_HA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
-to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
-["SERVER_AUTHENTICATION", "DISABLED"]
+    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
+- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentcation
+Default value is `DISABLED`.
+Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -758,9 +954,10 @@ Possible values are `BASIC` and `STANDARD_HA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
-to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
-["SERVER_AUTHENTICATION", "DISABLED"]
+    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
+- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentcation
+Default value is `DISABLED`.
+Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -936,9 +1133,10 @@ Possible values are `BASIC` and `STANDARD_HA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
-to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
-["SERVER_AUTHENTICATION", "DISABLED"]
+    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
+- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentcation
+Default value is `DISABLED`.
+Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1114,9 +1312,10 @@ Possible values are `BASIC` and `STANDARD_HA`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
-to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
-["SERVER_AUTHENTICATION", "DISABLED"]
+    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
+- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentcation
+Default value is `DISABLED`.
+Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1805,9 +2004,10 @@ Possible values are `BASIC` and `STANDARD_HA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
-to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
-["SERVER_AUTHENTICATION", "DISABLED"]
+    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
+- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentcation
+Default value is `DISABLED`.
+Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2050,9 +2250,10 @@ Possible values are `BASIC` and `STANDARD_HA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
-to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
-["SERVER_AUTHENTICATION", "DISABLED"]
+    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
+- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentcation
+Default value is `DISABLED`.
+Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2295,9 +2496,10 @@ Possible values are `BASIC` and `STANDARD_HA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
-to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
-["SERVER_AUTHENTICATION", "DISABLED"]
+    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
+- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentcation
+Default value is `DISABLED`.
+Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2540,9 +2742,10 @@ Possible values are `BASIC` and `STANDARD_HA`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
-to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
-["SERVER_AUTHENTICATION", "DISABLED"]
+    <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
+- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentcation
+Default value is `DISABLED`.
+Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

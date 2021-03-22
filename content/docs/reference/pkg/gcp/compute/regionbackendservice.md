@@ -4555,7 +4555,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the cache setting for all responses from this backend.
+The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC
+Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STATIC`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientttl_csharp">
 <a href="#clientttl_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Ttl</a>
@@ -4563,7 +4566,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_csharp">
 <a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -4571,7 +4575,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses
+that do not have an existing valid TTL (max-age or s-max-age).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -4579,7 +4585,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecaching_csharp">
 <a href="#negativecaching_csharp" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching</a>
@@ -4587,7 +4594,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecachingpolicies_csharp">
 <a href="#negativecachingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching<wbr>Policies</a>
@@ -4595,7 +4603,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">List&lt;Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
+Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servewhilestale_csharp">
 <a href="#servewhilestale_csharp" style="color: inherit; text-decoration: inherit;">Serve<wbr>While<wbr>Stale</a>
@@ -4603,7 +4614,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signedurlcachemaxagesec_csharp">
 <a href="#signedurlcachemaxagesec_csharp" style="color: inherit; text-decoration: inherit;">Signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
@@ -4642,7 +4654,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the cache setting for all responses from this backend.
+The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC
+Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STATIC`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientttl_go">
 <a href="#clientttl_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Ttl</a>
@@ -4650,7 +4665,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_go">
 <a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -4658,7 +4674,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses
+that do not have an existing valid TTL (max-age or s-max-age).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -4666,7 +4684,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecaching_go">
 <a href="#negativecaching_go" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching</a>
@@ -4674,7 +4693,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecachingpolicies_go">
 <a href="#negativecachingpolicies_go" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching<wbr>Policies</a>
@@ -4682,7 +4702,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">[]Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
+Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servewhilestale_go">
 <a href="#servewhilestale_go" style="color: inherit; text-decoration: inherit;">Serve<wbr>While<wbr>Stale</a>
@@ -4690,7 +4713,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signedurlcachemaxagesec_go">
 <a href="#signedurlcachemaxagesec_go" style="color: inherit; text-decoration: inherit;">Signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
@@ -4729,7 +4753,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the cache setting for all responses from this backend.
+The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC
+Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STATIC`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientttl_nodejs">
 <a href="#clientttl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Ttl</a>
@@ -4737,7 +4764,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_nodejs">
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
@@ -4745,7 +4773,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses
+that do not have an existing valid TTL (max-age or s-max-age).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -4753,7 +4783,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecaching_nodejs">
 <a href="#negativecaching_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching</a>
@@ -4761,7 +4792,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecachingpolicies_nodejs">
 <a href="#negativecachingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching<wbr>Policies</a>
@@ -4769,7 +4801,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
+Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servewhilestale_nodejs">
 <a href="#servewhilestale_nodejs" style="color: inherit; text-decoration: inherit;">serve<wbr>While<wbr>Stale</a>
@@ -4777,7 +4812,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signedurlcachemaxagesec_nodejs">
 <a href="#signedurlcachemaxagesec_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
@@ -4816,7 +4852,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the cache setting for all responses from this backend.
+The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC
+Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STATIC`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_ttl_python">
 <a href="#client_ttl_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ttl</a>
@@ -4824,7 +4863,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ttl_python">
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
@@ -4832,7 +4872,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses
+that do not have an existing valid TTL (max-age or s-max-age).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -4840,7 +4882,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negative_caching_python">
 <a href="#negative_caching_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching</a>
@@ -4848,7 +4891,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negative_caching_policies_python">
 <a href="#negative_caching_policies_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policies</a>
@@ -4856,7 +4900,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">Sequence[Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
+Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serve_while_stale_python">
 <a href="#serve_while_stale_python" style="color: inherit; text-decoration: inherit;">serve_<wbr>while_<wbr>stale</a>
@@ -4864,7 +4911,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signed_url_cache_max_age_sec_python">
 <a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
@@ -5145,7 +5193,9 @@ delimiters.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
+can be specified as values, and you cannot specify a status code more than once.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -5153,7 +5203,9 @@ delimiters.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+(30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5165,7 +5217,9 @@ delimiters.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
+can be specified as values, and you cannot specify a status code more than once.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -5173,7 +5227,9 @@ delimiters.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+(30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5185,7 +5241,9 @@ delimiters.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
+can be specified as values, and you cannot specify a status code more than once.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -5193,7 +5251,9 @@ delimiters.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+(30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5205,7 +5265,9 @@ delimiters.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
+can be specified as values, and you cannot specify a status code more than once.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -5213,7 +5275,9 @@ delimiters.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+(30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers</h4>
@@ -5775,7 +5839,9 @@ Defaults to 1024.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+(30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5805,7 +5871,9 @@ Defaults to 1024.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+(30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5835,7 +5903,9 @@ Defaults to 1024.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+(30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5865,7 +5935,9 @@ Defaults to 1024.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+(30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</h4>

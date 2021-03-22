@@ -2598,6 +2598,14 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="backupretentionsettings_csharp">
+<a href="#backupretentionsettings_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfigurationbackupretentionsetting">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Setting<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="binarylogenabled_csharp">
 <a href="#binarylogenabled_csharp" style="color: inherit; text-decoration: inherit;">Binary<wbr>Log<wbr>Enabled</a>
 </span>
@@ -2639,11 +2647,27 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup configuration starts.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="transactionlogretentiondays_csharp">
+<a href="#transactionlogretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Log<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backupretentionsettings_go">
+<a href="#backupretentionsettings_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfigurationbackupretentionsetting">[]Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Setting</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="binarylogenabled_go">
 <a href="#binarylogenabled_go" style="color: inherit; text-decoration: inherit;">Binary<wbr>Log<wbr>Enabled</a>
@@ -2686,11 +2710,27 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup configuration starts.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="transactionlogretentiondays_go">
+<a href="#transactionlogretentiondays_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Log<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backupretentionsettings_nodejs">
+<a href="#backupretentionsettings_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfigurationbackupretentionsetting">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Setting[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="binarylogenabled_nodejs">
 <a href="#binarylogenabled_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Log<wbr>Enabled</a>
@@ -2733,11 +2773,27 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup configuration starts.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="transactionlogretentiondays_nodejs">
+<a href="#transactionlogretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Log<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backup_retention_settings_python">
+<a href="#backup_retention_settings_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfigurationbackupretentionsetting">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Setting<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="binary_log_enabled_python">
 <a href="#binary_log_enabled_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>log_<wbr>enabled</a>
@@ -2780,7 +2836,99 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup configuration starts.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="transaction_log_retention_days_python">
+<a href="#transaction_log_retention_days_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>log_<wbr>retention_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getdatabaseinstancesettingbackupconfigurationbackupretentionsetting">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Setting</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="retainedbackups_csharp">
+<a href="#retainedbackups_csharp" style="color: inherit; text-decoration: inherit;">Retained<wbr>Backups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retentionunit_csharp">
+<a href="#retentionunit_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="retainedbackups_go">
+<a href="#retainedbackups_go" style="color: inherit; text-decoration: inherit;">Retained<wbr>Backups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retentionunit_go">
+<a href="#retentionunit_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="retainedbackups_nodejs">
+<a href="#retainedbackups_nodejs" style="color: inherit; text-decoration: inherit;">retained<wbr>Backups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retentionunit_nodejs">
+<a href="#retentionunit_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="retained_backups_python">
+<a href="#retained_backups_python" style="color: inherit; text-decoration: inherit;">retained_<wbr>backups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retention_unit_python">
+<a href="#retention_unit_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettingdatabaseflag">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag</h4>

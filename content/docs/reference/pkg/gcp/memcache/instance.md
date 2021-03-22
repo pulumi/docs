@@ -14,9 +14,219 @@ A Google Cloud Memcache instance.
 
 To get more information about Instance, see:
 
-* [API documentation](https://cloud.google.com/memorystore/docs/memcached/reference/rest)
+* [API documentation](https://cloud.google.com/memorystore/docs/memcached/reference/rest/v1beta2/projects.locations.instances)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/memcache/docs/creating-instances)
+
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Memcache Instance Basic
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var memcacheNetwork = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
+        {
+            Name = "test-network",
+        }));
+        var serviceRange = new Gcp.Compute.GlobalAddress("serviceRange", new Gcp.Compute.GlobalAddressArgs
+        {
+            Purpose = "VPC_PEERING",
+            AddressType = "INTERNAL",
+            PrefixLength = 16,
+            Network = memcacheNetwork.Apply(memcacheNetwork => memcacheNetwork.Id),
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var privateServiceConnection = new Gcp.ServiceNetworking.Connection("privateServiceConnection", new Gcp.ServiceNetworking.ConnectionArgs
+        {
+            Network = memcacheNetwork.Apply(memcacheNetwork => memcacheNetwork.Id),
+            Service = "servicenetworking.googleapis.com",
+            ReservedPeeringRanges = 
+            {
+                serviceRange.Name,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var instance = new Gcp.Memcache.Instance("instance", new Gcp.Memcache.InstanceArgs
+        {
+            AuthorizedNetwork = privateServiceConnection.Network,
+            NodeConfig = new Gcp.Memcache.Inputs.InstanceNodeConfigArgs
+            {
+                CpuCount = 1,
+                MemorySizeMb = 1024,
+            },
+            NodeCount = 1,
+            MemcacheVersion = "MEMCACHE_1_5",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/memcache"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/servicenetworking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		memcacheNetwork, err := compute.LookupNetwork(ctx, &compute.LookupNetworkArgs{
+			Name: "test-network",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		serviceRange, err := compute.NewGlobalAddress(ctx, "serviceRange", &compute.GlobalAddressArgs{
+			Purpose:      pulumi.String("VPC_PEERING"),
+			AddressType:  pulumi.String("INTERNAL"),
+			PrefixLength: pulumi.Int(16),
+			Network:      pulumi.String(memcacheNetwork.Id),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		privateServiceConnection, err := servicenetworking.NewConnection(ctx, "privateServiceConnection", &servicenetworking.ConnectionArgs{
+			Network: pulumi.String(memcacheNetwork.Id),
+			Service: pulumi.String("servicenetworking.googleapis.com"),
+			ReservedPeeringRanges: pulumi.StringArray{
+				serviceRange.Name,
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = memcache.NewInstance(ctx, "instance", &memcache.InstanceArgs{
+			AuthorizedNetwork: privateServiceConnection.Network,
+			NodeConfig: &memcache.InstanceNodeConfigArgs{
+				CpuCount:     pulumi.Int(1),
+				MemorySizeMb: pulumi.Int(1024),
+			},
+			NodeCount:       pulumi.Int(1),
+			MemcacheVersion: pulumi.String("MEMCACHE_1_5"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+memcache_network = gcp.compute.get_network(name="test-network")
+service_range = gcp.compute.GlobalAddress("serviceRange",
+    purpose="VPC_PEERING",
+    address_type="INTERNAL",
+    prefix_length=16,
+    network=memcache_network.id,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+private_service_connection = gcp.servicenetworking.Connection("privateServiceConnection",
+    network=memcache_network.id,
+    service="servicenetworking.googleapis.com",
+    reserved_peering_ranges=[service_range.name],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+instance = gcp.memcache.Instance("instance",
+    authorized_network=private_service_connection.network,
+    node_config=gcp.memcache.InstanceNodeConfigArgs(
+        cpu_count=1,
+        memory_size_mb=1024,
+    ),
+    node_count=1,
+    memcache_version="MEMCACHE_1_5",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const memcacheNetwork = gcp.compute.getNetwork({
+    name: "test-network",
+});
+const serviceRange = new gcp.compute.GlobalAddress("serviceRange", {
+    purpose: "VPC_PEERING",
+    addressType: "INTERNAL",
+    prefixLength: 16,
+    network: memcacheNetwork.then(memcacheNetwork => memcacheNetwork.id),
+}, {
+    provider: google_beta,
+});
+const privateServiceConnection = new gcp.servicenetworking.Connection("privateServiceConnection", {
+    network: memcacheNetwork.then(memcacheNetwork => memcacheNetwork.id),
+    service: "servicenetworking.googleapis.com",
+    reservedPeeringRanges: [serviceRange.name],
+}, {
+    provider: google_beta,
+});
+const instance = new gcp.memcache.Instance("instance", {
+    authorizedNetwork: privateServiceConnection.network,
+    nodeConfig: {
+        cpuCount: 1,
+        memorySizeMb: 1024,
+    },
+    nodeCount: 1,
+    memcacheVersion: "MEMCACHE_1_5",
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
 
 
 

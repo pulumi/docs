@@ -1476,7 +1476,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">List&lt;Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1594,7 +1596,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">[]Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1712,7 +1716,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1830,7 +1836,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">Sequence[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization</h4>
@@ -1847,6 +1855,17 @@ Structure is documented below.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predictivemethod_csharp">
+<a href="#predictivemethod_csharp" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+- NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
+- OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1862,6 +1881,17 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predictivemethod_go">
+<a href="#predictivemethod_go" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+- NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
+- OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1877,6 +1907,17 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predictivemethod_nodejs">
+<a href="#predictivemethod_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+- NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
+- OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1892,6 +1933,17 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="predictive_method_python">
+<a href="#predictive_method_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+- NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
+- OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

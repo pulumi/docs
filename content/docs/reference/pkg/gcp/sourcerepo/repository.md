@@ -117,7 +117,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var test_account = new Gcp.ServiceAccount.Account("test-account", new Gcp.ServiceAccount.AccountArgs
+        var testAccount = new Gcp.ServiceAccount.Account("testAccount", new Gcp.ServiceAccount.AccountArgs
         {
             AccountId = "my-account",
             DisplayName = "Test Service Account",
@@ -133,7 +133,7 @@ class MyStack : Stack
                 {
                     Topic = topic.Id,
                     MessageFormat = "JSON",
-                    ServiceAccountEmail = test_account.Email,
+                    ServiceAccountEmail = testAccount.Email,
                 },
             },
         });
@@ -160,7 +160,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := serviceAccount.NewAccount(ctx, "test_account", &serviceAccount.AccountArgs{
+		testAccount, err := serviceAccount.NewAccount(ctx, "testAccount", &serviceAccount.AccountArgs{
 			AccountId:   pulumi.String("my-account"),
 			DisplayName: pulumi.String("Test Service Account"),
 		})
@@ -176,7 +176,7 @@ func main() {
 				&sourcerepo.RepositoryPubsubConfigArgs{
 					Topic:               topic.ID(),
 					MessageFormat:       pulumi.String("JSON"),
-					ServiceAccountEmail: test_account.Email,
+					ServiceAccountEmail: testAccount.Email,
 				},
 			},
 		})
@@ -198,7 +198,7 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-test_account = gcp.service_account.Account("test-account",
+test_account = gcp.service_account.Account("testAccount",
     account_id="my-account",
     display_name="Test Service Account")
 topic = gcp.pubsub.Topic("topic")
@@ -220,7 +220,7 @@ my_repo = gcp.sourcerepo.Repository("my-repo", pubsub_configs=[gcp.sourcerepo.Re
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const test_account = new gcp.serviceAccount.Account("test-account", {
+const testAccount = new gcp.serviceAccount.Account("testAccount", {
     accountId: "my-account",
     displayName: "Test Service Account",
 });
@@ -228,7 +228,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
 const my_repo = new gcp.sourcerepo.Repository("my-repo", {pubsubConfigs: [{
     topic: topic.id,
     messageFormat: "JSON",
-    serviceAccountEmail: test_account.email,
+    serviceAccountEmail: testAccount.email,
 }]});
 ```
 

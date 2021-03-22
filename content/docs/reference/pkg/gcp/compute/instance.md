@@ -4291,8 +4291,7 @@ empty, the address will be automatically assigned.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) The type of vNIC to be used on this interface.
-Possible values: GVNIC, VIRTIO_NET.
+    <dd>{{% md %}}The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_csharp">
@@ -4384,8 +4383,7 @@ empty, the address will be automatically assigned.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) The type of vNIC to be used on this interface.
-Possible values: GVNIC, VIRTIO_NET.
+    <dd>{{% md %}}The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_go">
@@ -4477,8 +4475,7 @@ empty, the address will be automatically assigned.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) The type of vNIC to be used on this interface.
-Possible values: GVNIC, VIRTIO_NET.
+    <dd>{{% md %}}The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_nodejs">
@@ -4570,8 +4567,7 @@ empty, the address will be automatically assigned.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}) The type of vNIC to be used on this interface.
-Possible values: GVNIC, VIRTIO_NET.
+    <dd>{{% md %}}The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_python">

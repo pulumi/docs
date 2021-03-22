@@ -166,6 +166,158 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
 
 
 
+### Region Consumer Quota Override
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
+        {
+            ProjectId = "quota",
+            OrgId = "123456789",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var @override = new Gcp.ServiceUsage.ConsumerQuotaOverride("override", new Gcp.ServiceUsage.ConsumerQuotaOverrideArgs
+        {
+            Dimensions = 
+            {
+                { "region", "us-central1" },
+            },
+            Project = myProject.ProjectId,
+            Service = "compute.googleapis.com",
+            Metric = "compute.googleapis.com%2Fn2_cpus",
+            Limit = "%2Fproject%2Fregion",
+            OverrideValue = "8",
+            Force = true,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceusage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myProject, err := organizations.NewProject(ctx, "myProject", &organizations.ProjectArgs{
+			ProjectId: pulumi.String("quota"),
+			OrgId:     pulumi.String("123456789"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = serviceusage.NewConsumerQuotaOverride(ctx, "override", &serviceusage.ConsumerQuotaOverrideArgs{
+			Dimensions: pulumi.StringMap{
+				"region": pulumi.String("us-central1"),
+			},
+			Project:       myProject.ProjectId,
+			Service:       pulumi.String("compute.googleapis.com"),
+			Metric:        pulumi.String(fmt.Sprintf("%v%v%v", "compute.googleapis.com", "%", "2Fn2_cpus")),
+			Limit:         pulumi.String(fmt.Sprintf("%v%v%v%v", "%", "2Fproject", "%", "2Fregion")),
+			OverrideValue: pulumi.String("8"),
+			Force:         pulumi.Bool(true),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    project_id="quota",
+    org_id="123456789",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+override = gcp.serviceusage.ConsumerQuotaOverride("override",
+    dimensions={
+        "region": "us-central1",
+    },
+    project=my_project.project_id,
+    service="compute.googleapis.com",
+    metric="compute.googleapis.com%2Fn2_cpus",
+    limit="%2Fproject%2Fregion",
+    override_value="8",
+    force=True,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "quota",
+    orgId: "123456789",
+}, {
+    provider: google_beta,
+});
+const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
+    dimensions: {
+        region: "us-central1",
+    },
+    project: myProject.projectId,
+    service: "compute.googleapis.com",
+    metric: `compute.googleapis.com%2Fn2_cpus`,
+    limit: `%2Fproject%2Fregion`,
+    overrideValue: "8",
+    force: true,
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

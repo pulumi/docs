@@ -435,7 +435,10 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-Possible values are `BASIC` and `ENTERPRISE`.
+- DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+pipelines at low cost.
+Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -559,7 +562,10 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-Possible values are `BASIC` and `ENTERPRISE`.
+- DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+pipelines at low cost.
+Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -683,7 +689,10 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-Possible values are `BASIC` and `ENTERPRISE`.
+- DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+pipelines at low cost.
+Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -807,7 +816,10 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-Possible values are `BASIC` and `ENTERPRISE`.
+- DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+pipelines at low cost.
+Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1475,7 +1487,10 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-Possible values are `BASIC` and `ENTERPRISE`.
+- DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+pipelines at low cost.
+Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
@@ -1655,7 +1670,10 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-Possible values are `BASIC` and `ENTERPRISE`.
+- DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+pipelines at low cost.
+Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
@@ -1835,7 +1853,10 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-Possible values are `BASIC` and `ENTERPRISE`.
+- DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+pipelines at low cost.
+Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
@@ -2015,7 +2036,10 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-Possible values are `BASIC` and `ENTERPRISE`.
+- DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+pipelines at low cost.
+Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">

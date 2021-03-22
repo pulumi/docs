@@ -2389,7 +2389,6 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]
-- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacementmethod_csharp">
@@ -2398,7 +2397,9 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}, The instance replacement method for managed instance groups. Valid values are: "RECREATE", "SUBSTITUTE". If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0.
+- - -
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2465,7 +2466,6 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]
-- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacementmethod_go">
@@ -2474,7 +2474,9 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}, The instance replacement method for managed instance groups. Valid values are: "RECREATE", "SUBSTITUTE". If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0.
+- - -
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2541,7 +2543,6 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}, Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]
-- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacementmethod_nodejs">
@@ -2550,7 +2551,9 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}, The instance replacement method for managed instance groups. Valid values are: "RECREATE", "SUBSTITUTE". If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0.
+- - -
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2617,7 +2620,6 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]
-- - -
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacement_method_python">
@@ -2626,7 +2628,9 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}, The instance replacement method for managed instance groups. Valid values are: "RECREATE", "SUBSTITUTE". If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0.
+- - -
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancegroupmanagerversion">Instance<wbr>Group<wbr>Manager<wbr>Version</h4>

@@ -16,7 +16,7 @@ Environments run Apache Airflow software on Google infrastructure.
 
 To get more information about Environments, see:
 
-* [API documentation](https://cloud.google.com/composer/docs/reference/rest/)
+* [API documentation](https://cloud.google.com/composer/docs/reference/rest/v1/projects.locations.environments)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/composer/docs)
     * [Configuring Shared VPC for Composer Environments](https://cloud.google.com/composer/docs/how-to/managing/configuring-shared-vpc)
@@ -1317,7 +1317,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its dependencies.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_csharp">
 <a href="#gkecluster_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
@@ -1417,7 +1418,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its dependencies.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_go">
 <a href="#gkecluster_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
@@ -1517,7 +1519,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its dependencies.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_nodejs">
 <a href="#gkecluster_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
@@ -1617,7 +1620,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its dependencies.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gke_cluster_python">
 <a href="#gke_cluster_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster</a>

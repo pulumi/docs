@@ -360,8 +360,9 @@ These images can be referred by family name here.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
@@ -447,6 +448,10 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
+~>**NOTE** If you change the size, the provider updates the disk size
+if upsizing is detected but recreates the disk if downsizing is requested.
+You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+and recreating.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
@@ -562,8 +567,9 @@ These images can be referred by family name here.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
@@ -649,6 +655,10 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
+~>**NOTE** If you change the size, the provider updates the disk size
+if upsizing is detected but recreates the disk if downsizing is requested.
+You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+and recreating.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
@@ -764,8 +774,9 @@ These images can be referred by family name here.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
@@ -851,6 +862,10 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
+~>**NOTE** If you change the size, the provider updates the disk size
+if upsizing is detected but recreates the disk if downsizing is requested.
+You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+and recreating.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
@@ -966,8 +981,9 @@ These images can be referred by family name here.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -1053,6 +1069,10 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
+~>**NOTE** If you change the size, the provider updates the disk size
+if upsizing is detected but recreates the disk if downsizing is requested.
+You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+and recreating.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
@@ -1659,8 +1679,9 @@ These images can be referred by family name here.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_csharp">
@@ -1782,6 +1803,10 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
+~>**NOTE** If you change the size, the provider updates the disk size
+if upsizing is detected but recreates the disk if downsizing is requested.
+You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+and recreating.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_csharp">
@@ -1937,8 +1962,9 @@ These images can be referred by family name here.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_go">
@@ -2060,6 +2086,10 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
+~>**NOTE** If you change the size, the provider updates the disk size
+if upsizing is detected but recreates the disk if downsizing is requested.
+You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+and recreating.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_go">
@@ -2215,8 +2245,9 @@ These images can be referred by family name here.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_nodejs">
@@ -2338,6 +2369,10 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
+~>**NOTE** If you change the size, the provider updates the disk size
+if upsizing is detected but recreates the disk if downsizing is requested.
+You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+and recreating.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_nodejs">
@@ -2493,8 +2528,9 @@ These images can be referred by family name here.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
-value: "SCSI" Possible values: ["SCSI", "NVME"]
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_fingerprint_python">
@@ -2616,6 +2652,10 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
+~>**NOTE** If you change the size, the provider updates the disk size
+if upsizing is detected but recreates the disk if downsizing is requested.
+You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+and recreating.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_python">
