@@ -3533,7 +3533,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `max-pods` and `random`. Defaults to `random`.
+    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `most-pods` and `random`. Defaults to `random`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxgracefulterminationsec_csharp">
@@ -3654,7 +3654,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `max-pods` and `random`. Defaults to `random`.
+    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `most-pods` and `random`. Defaults to `random`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxgracefulterminationsec_go">
@@ -3775,7 +3775,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `max-pods` and `random`. Defaults to `random`.
+    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `most-pods` and `random`. Defaults to `random`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxgracefulterminationsec_nodejs">
@@ -3896,7 +3896,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `max-pods` and `random`. Defaults to `random`.
+    <dd>{{% md %}}Expander to use. Possible values are `least-waste`, `priority`, `most-pods` and `random`. Defaults to `random`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_graceful_termination_sec_python">

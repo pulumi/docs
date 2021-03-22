@@ -291,16 +291,6 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addressspaces_csharp">
-<a href="#addressspaces_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The list of string CIDRs representing the
-address spaces the gateway exposes.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -309,6 +299,16 @@ address spaces the gateway exposes.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the local network gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="addressspaces_csharp">
+<a href="#addressspaces_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of string CIDRs representing the
+address spaces the gateway exposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_csharp">
@@ -372,16 +372,6 @@ forces a new resource to be created.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addressspaces_go">
-<a href="#addressspaces_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of string CIDRs representing the
-address spaces the gateway exposes.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -390,6 +380,16 @@ address spaces the gateway exposes.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the local network gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="addressspaces_go">
+<a href="#addressspaces_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of string CIDRs representing the
+address spaces the gateway exposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_go">
@@ -453,16 +453,6 @@ forces a new resource to be created.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addressspaces_nodejs">
-<a href="#addressspaces_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Spaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The list of string CIDRs representing the
-address spaces the gateway exposes.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -471,6 +461,16 @@ address spaces the gateway exposes.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the local network gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="addressspaces_nodejs">
+<a href="#addressspaces_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Spaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of string CIDRs representing the
+address spaces the gateway exposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_nodejs">
@@ -534,16 +534,6 @@ forces a new resource to be created.
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="address_spaces_python">
-<a href="#address_spaces_python" style="color: inherit; text-decoration: inherit;">address_<wbr>spaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of string CIDRs representing the
-address spaces the gateway exposes.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -552,6 +542,16 @@ address spaces the gateway exposes.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the local network gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="address_spaces_python">
+<a href="#address_spaces_python" style="color: inherit; text-decoration: inherit;">address_<wbr>spaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of string CIDRs representing the
+address spaces the gateway exposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgp_settings_python">

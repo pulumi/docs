@@ -374,15 +374,6 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="userid_csharp">
-<a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowtracing_csharp">
@@ -435,6 +426,15 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Identifier which should used as the ID of this Subscription. If not specified a new Subscription ID will be generated. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userid_csharp">
+<a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -466,15 +466,6 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="userid_go">
-<a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowtracing_go">
@@ -527,6 +518,15 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Identifier which should used as the ID of this Subscription. If not specified a new Subscription ID will be generated. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userid_go">
+<a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -558,15 +558,6 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="userid_nodejs">
-<a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowtracing_nodejs">
@@ -619,6 +610,15 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Identifier which should used as the ID of this Subscription. If not specified a new Subscription ID will be generated. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userid_nodejs">
+<a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -650,15 +650,6 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="user_id_python">
-<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_tracing_python">
@@ -711,6 +702,15 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Identifier which should used as the ID of this Subscription. If not specified a new Subscription ID will be generated. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

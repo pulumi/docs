@@ -40,6 +40,7 @@ class MyStack : Stack
         {
             Description = "This is a lighthouse definition created IaC",
             ManagingTenantId = "00000000-0000-0000-0000-000000000000",
+            Scope = "/subscriptions/00000000-0000-0000-0000-000000000000",
             Authorizations = 
             {
                 new Azure.Lighthouse.Inputs.DefinitionAuthorizationArgs
@@ -82,6 +83,7 @@ func main() {
 		_, err = lighthouse.NewDefinition(ctx, "example", &lighthouse.DefinitionArgs{
 			Description:      pulumi.String("This is a lighthouse definition created IaC"),
 			ManagingTenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+			Scope:            pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000"),
 			Authorizations: lighthouse.DefinitionAuthorizationArray{
 				&lighthouse.DefinitionAuthorizationArgs{
 					PrincipalId:          pulumi.String("00000000-0000-0000-0000-000000000000"),
@@ -112,6 +114,7 @@ contributor = azure.authorization.get_role_definition(role_definition_id="b24988
 example = azure.lighthouse.Definition("example",
     description="This is a lighthouse definition created IaC",
     managing_tenant_id="00000000-0000-0000-0000-000000000000",
+    scope="/subscriptions/00000000-0000-0000-0000-000000000000",
     authorizations=[azure.lighthouse.DefinitionAuthorizationArgs(
         principal_id="00000000-0000-0000-0000-000000000000",
         role_definition_id=contributor.role_definition_id,
@@ -136,6 +139,7 @@ const contributor = azure.authorization.getRoleDefinition({
 const example = new azure.lighthouse.Definition("example", {
     description: "This is a lighthouse definition created IaC",
     managingTenantId: "00000000-0000-0000-0000-000000000000",
+    scope: "/subscriptions/00000000-0000-0000-0000-000000000000",
     authorizations: [{
         principalId: "00000000-0000-0000-0000-000000000000",
         roleDefinitionId: contributor.then(contributor => contributor.roleDefinitionId),
@@ -331,7 +335,8 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the managed subscription.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -388,7 +393,8 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the managed subscription.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -445,7 +451,8 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the managed subscription.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -502,7 +509,8 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the managed subscription.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -764,7 +772,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the managed subscription.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -821,7 +830,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the managed subscription.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -878,7 +888,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the managed subscription.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -935,7 +946,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the managed subscription.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
