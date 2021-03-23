@@ -29,6 +29,6 @@ Explore the resources and functions of the openstack.dns module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.16.0</dd>
+	<dd>2.17.1</dd>
 </dl>
 
