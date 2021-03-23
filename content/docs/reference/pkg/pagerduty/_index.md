@@ -56,6 +56,6 @@ A Pulumi package for creating and managing pagerduty cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.4.0</dd>
+	<dd>1.4.1</dd>
 </dl>
 
