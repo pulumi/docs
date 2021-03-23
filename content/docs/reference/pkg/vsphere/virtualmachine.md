@@ -10153,6 +10153,14 @@ a static MAC address and set accordingly. Setting this to `true` requires
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deploymentoption_csharp">
+<a href="#deploymentoption_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="diskprovisioning_csharp">
 <a href="#diskprovisioning_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Provisioning</a>
 </span>
@@ -10210,6 +10218,14 @@ a static MAC address and set accordingly. Setting this to `true` requires
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deploymentoption_go">
+<a href="#deploymentoption_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10273,6 +10289,14 @@ a static MAC address and set accordingly. Setting this to `true` requires
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deploymentoption_nodejs">
+<a href="#deploymentoption_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="diskprovisioning_nodejs">
 <a href="#diskprovisioning_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Provisioning</a>
 </span>
@@ -10330,6 +10354,14 @@ a static MAC address and set accordingly. Setting this to `true` requires
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deployment_option_python">
+<a href="#deployment_option_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

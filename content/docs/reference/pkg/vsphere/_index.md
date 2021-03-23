@@ -72,6 +72,7 @@ A Pulumi package for creating vsphere resources
     <li><a href="gethostpcidevice" title="GetHostPciDevice"><span class="symbol function"></span>GetHostPciDevice</a></li>
     <li><a href="gethostthumbprint" title="GetHostThumbprint"><span class="symbol function"></span>GetHostThumbprint</a></li>
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
+    <li><a href="getovfvmtemplate" title="GetOvfVmTemplate"><span class="symbol function"></span>GetOvfVmTemplate</a></li>
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
     <li><a href="getresourcepool" title="GetResourcePool"><span class="symbol function"></span>GetResourcePool</a></li>
     <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
@@ -91,6 +92,6 @@ A Pulumi package for creating vsphere resources
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
+	<dd>2.13.1</dd>
 </dl>
 
