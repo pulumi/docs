@@ -48,6 +48,6 @@ A Pulumi package for creating and managing CloudAMQP resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
+	<dd>2.8.1</dd>
 </dl>
 
