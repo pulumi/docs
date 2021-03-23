@@ -17,6 +17,7 @@ Explore the resources and functions of the alicloud.rds module.
     <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="rdsparametergroup" title="RdsParameterGroup"><span class="symbol resource"></span>RdsParameterGroup</a></li>
     <li><a href="readonlyinstance" title="ReadOnlyInstance"><span class="symbol resource"></span>ReadOnlyInstance</a></li>
     <li><a href="readwritesplittingconnection" title="ReadWriteSplittingConnection"><span class="symbol resource"></span>ReadWriteSplittingConnection</a></li>
 </ul>
@@ -26,6 +27,7 @@ Explore the resources and functions of the alicloud.rds module.
     <li><a href="getinstanceclasses" title="GetInstanceClasses"><span class="symbol function"></span>GetInstanceClasses</a></li>
     <li><a href="getinstanceengines" title="GetInstanceEngines"><span class="symbol function"></span>GetInstanceEngines</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getrdsparametergroups" title="GetRdsParameterGroups"><span class="symbol function"></span>GetRdsParameterGroups</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
 
@@ -38,6 +40,6 @@ Explore the resources and functions of the alicloud.rds module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.37.0</dd>
+	<dd>2.38.0</dd>
 </dl>
 

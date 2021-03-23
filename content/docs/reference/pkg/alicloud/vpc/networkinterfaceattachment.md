@@ -49,6 +49,7 @@ class MyStack : Stack
         }));
         var vswitch = new AliCloud.Vpc.Switch("vswitch", new AliCloud.Vpc.SwitchArgs
         {
+            VswitchName = name,
             CidrBlock = "192.168.0.0/24",
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
             VpcId = vpc.Id,
@@ -142,6 +143,7 @@ if number is None:
 vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/24")
 default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 vswitch = alicloud.vpc.Switch("vswitch",
+    vswitch_name=name,
     cidr_block="192.168.0.0/24",
     availability_zone=default_zones.zones[0].id,
     vpc_id=vpc.id)
@@ -193,6 +195,7 @@ const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
 });
 const vswitch = new alicloud.vpc.Switch("vswitch", {
+    vswitchName: name,
     cidrBlock: "192.168.0.0/24",
     availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
     vpcId: vpc.id,

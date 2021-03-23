@@ -51,8 +51,11 @@ class MyStack : Stack
             MostRecent = true,
             Owners = "system",
         }));
+        var config = new Config();
+        var name = config.Get("name") ?? "ecsInstanceVPCExample";
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = name,
             CidrBlock = "172.16.0.0/16",
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
@@ -76,8 +79,6 @@ class MyStack : Stack
             SecurityGroupId = defaultSecurityGroup.Id,
             CidrIp = "172.16.0.0/24",
         });
-        var config = new Config();
-        var name = config.Get("name") ?? "ecsInstanceVPCExample";
         var foo = new AliCloud.Ecs.Instance("foo", new AliCloud.Ecs.InstanceArgs
         {
             VswitchId = defaultSwitch.Id,
@@ -151,7 +152,13 @@ default_instance_types = alicloud.ecs.get_instance_types(availability_zone=defau
 default_images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
     most_recent=True,
     owners="system")
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "ecsInstanceVPCExample"
+default_network = alicloud.vpc.Network("defaultNetwork",
+    vpc_name=name,
+    cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
@@ -166,10 +173,6 @@ default_security_group_rule = alicloud.ecs.SecurityGroupRule("defaultSecurityGro
     priority=1,
     security_group_id=default_security_group.id,
     cidr_ip="172.16.0.0/24")
-config = pulumi.Config()
-name = config.get("name")
-if name is None:
-    name = "ecsInstanceVPCExample"
 foo = alicloud.ecs.Instance("foo",
     vswitch_id=default_switch.id,
     image_id=default_images.images[0].id,
@@ -228,7 +231,12 @@ const defaultImages = alicloud.ecs.getImages({
     mostRecent: true,
     owners: "system",
 });
-const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const config = new pulumi.Config();
+const name = config.get("name") || "ecsInstanceVPCExample";
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {
+    vpcName: name,
+    cidrBlock: "172.16.0.0/16",
+});
 const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/24",
@@ -245,8 +253,6 @@ const defaultSecurityGroupRule = new alicloud.ecs.SecurityGroupRule("defaultSecu
     securityGroupId: defaultSecurityGroup.id,
     cidrIp: "172.16.0.0/24",
 });
-const config = new pulumi.Config();
-const name = config.get("name") || "ecsInstanceVPCExample";
 const foo = new alicloud.ecs.Instance("foo", {
     vswitchId: defaultSwitch.id,
     imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),

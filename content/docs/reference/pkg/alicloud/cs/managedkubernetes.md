@@ -15,7 +15,7 @@ meta_desc: "Documentation for the alicloud.cs.ManagedKubernetes resource with ex
 Kubernetes cluster can be imported using the id, e.g. Then complete the main.tf accords to the result of `terraform plan`.
 
 ```sh
- $ pulumi import alicloud:cs/managedKubernetes:ManagedKubernetes alicloud_cs_managed_kubernetes.main cluster-id
+ $ pulumi import alicloud:cs/managedKubernetes:ManagedKubernetes alicloud_cs_managed_kubernetes.main cluster_id
 ```
 
 
@@ -501,7 +501,8 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RDS instance list, You can choose which RDS instances whitelist to add instances to.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -690,7 +691,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workernumber_csharp">
@@ -699,7 +700,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerperiod_csharp">
@@ -1053,7 +1054,8 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RDS instance list, You can choose which RDS instances whitelist to add instances to.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -1242,7 +1244,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workernumber_go">
@@ -1251,7 +1253,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerperiod_go">
@@ -1605,7 +1607,8 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RDS instance list, You can choose which RDS instances whitelist to add instances to.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -1794,7 +1797,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workernumber_nodejs">
@@ -1803,7 +1806,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerperiod_nodejs">
@@ -2157,7 +2160,8 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RDS instance list, You can choose which RDS instances whitelist to add instances to.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -2346,7 +2350,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_number_python">
@@ -2355,7 +2359,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_period_python">
@@ -3222,7 +3226,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RDS instance list, You can choose which RDS instances whitelist to add instances to.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_csharp">
 <a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -3445,7 +3450,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workernodes_csharp">
@@ -3463,7 +3468,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerperiod_csharp">
@@ -3853,7 +3858,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RDS instance list, You can choose which RDS instances whitelist to add instances to.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_go">
 <a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -4076,7 +4082,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workernodes_go">
@@ -4094,7 +4100,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerperiod_go">
@@ -4484,7 +4490,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RDS instance list, You can choose which RDS instances whitelist to add instances to.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_nodejs">
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -4707,7 +4714,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workernodes_nodejs">
@@ -4725,7 +4732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerperiod_nodejs">
@@ -5115,7 +5122,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RDS instance list, You can choose which RDS instances whitelist to add instances to.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_id_python">
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -5338,7 +5346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_worker_nodes_python">
@@ -5356,7 +5364,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From ersion 1.109.1, It is not necessary in the professional managed cluster.
+    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us. From version 1.109.1, It is not necessary in the professional managed cluster, but it is necessary in other types of clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_worker_period_python">

@@ -62,6 +62,7 @@ class MyStack : Stack
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
             CidrBlock = "10.1.1.0/24",
             VpcId = fooNetwork.Id,
+            VswitchName = name,
         });
         var tfTestFoo = new AliCloud.Ecs.SecurityGroup("tfTestFoo", new AliCloud.Ecs.SecurityGroupArgs
         {
@@ -174,6 +175,7 @@ func main() {
 			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 			CidrBlock:        pulumi.String("10.1.1.0/24"),
 			VpcId:            fooNetwork.ID(),
+			VswitchName:      pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -254,7 +256,8 @@ foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="10.1.0.0/21")
 foo_switch = alicloud.vpc.Switch("fooSwitch",
     availability_zone=default_zones.zones[0].id,
     cidr_block="10.1.1.0/24",
-    vpc_id=foo_network.id)
+    vpc_id=foo_network.id,
+    vswitch_name=name)
 tf_test_foo = alicloud.ecs.SecurityGroup("tfTestFoo",
     description="foo",
     vpc_id=foo_network.id)
@@ -320,6 +323,7 @@ const fooSwitch = new alicloud.vpc.Switch("foo", {
     availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "10.1.1.0/24",
     vpcId: fooNetwork.id,
+    vswitchName: name,
 });
 const tfTestFoo = new alicloud.ecs.SecurityGroup("tf_test_foo", {
     description: "foo",

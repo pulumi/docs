@@ -42,13 +42,16 @@ class MyStack : Stack
             CdnType = "web",
             DomainName = "terraform.test.com",
             Scope = "overseas",
-            Sources = new AliCloud.Cdn.Inputs.DomainNewSourcesArgs
+            Sources = 
             {
-                Content = "1.1.1.1",
-                Port = 80,
-                Priority = 20,
-                Type = "ipaddr",
-                Weight = 10,
+                new AliCloud.Cdn.Inputs.DomainNewSourceArgs
+                {
+                    Content = "1.1.1.1",
+                    Port = 80,
+                    Priority = 20,
+                    Type = "ipaddr",
+                    Weight = 10,
+                },
             },
         });
     }
@@ -76,12 +79,14 @@ func main() {
 			CdnType:    pulumi.String("web"),
 			DomainName: pulumi.String("terraform.test.com"),
 			Scope:      pulumi.String("overseas"),
-			Sources: &cdn.DomainNewSourcesArgs{
-				Content:  pulumi.String("1.1.1.1"),
-				Port:     pulumi.Int(80),
-				Priority: pulumi.Int(20),
-				Type:     pulumi.String("ipaddr"),
-				Weight:   pulumi.Int(10),
+			Sources: cdn.DomainNewSourceArray{
+				&cdn.DomainNewSourceArgs{
+					Content:  pulumi.String("1.1.1.1"),
+					Port:     pulumi.Int(80),
+					Priority: pulumi.Int(20),
+					Type:     pulumi.String("ipaddr"),
+					Weight:   pulumi.Int(10),
+				},
 			},
 		})
 		if err != nil {
@@ -107,13 +112,13 @@ domain = alicloud.cdn.DomainNew("domain",
     cdn_type="web",
     domain_name="terraform.test.com",
     scope="overseas",
-    sources=alicloud.cdn.DomainNewSourcesArgs(
+    sources=[alicloud.cdn.DomainNewSourceArgs(
         content="1.1.1.1",
         port=80,
         priority=20,
         type="ipaddr",
         weight=10,
-    ))
+    )])
 ```
 
 
@@ -132,13 +137,13 @@ const domain = new alicloud.cdn.DomainNew("domain", {
     cdnType: "web",
     domainName: "terraform.test.com",
     scope: "overseas",
-    sources: {
+    sources: [{
         content: "1.1.1.1",
         port: 80,
         priority: 20,
         type: "ipaddr",
         weight: 10,
-    },
+    }],
 });
 ```
 
@@ -163,7 +168,7 @@ const domain = new alicloud.cdn.DomainNew("domain", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DomainNew</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainNewCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[DomainNewSourcesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DomainNew</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainNewCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainNewSourceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -327,7 +332,7 @@ The DomainNew resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cdn.<wbr>Inputs.<wbr>Domain<wbr>New<wbr>Sources<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainnewsource">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cdn.<wbr>Inputs.<wbr>Domain<wbr>New<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -394,7 +399,7 @@ The DomainNew resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources</a></span>
+        <span class="property-type"><a href="#domainnewsource">[]Domain<wbr>New<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -461,7 +466,7 @@ The DomainNew resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources</a></span>
+        <span class="property-type"><a href="#domainnewsource">Domain<wbr>New<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -528,7 +533,7 @@ The DomainNew resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainnewsource">Sequence[Domain<wbr>New<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +679,7 @@ Get an existing DomainNew resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainNewCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[DomainNewSourcesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">) -&gt;</span> DomainNew</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainNewCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainNewSourceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">) -&gt;</span> DomainNew</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -845,7 +850,7 @@ The following state arguments are supported:
 <a href="#state_sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cdn.<wbr>Inputs.<wbr>Domain<wbr>New<wbr>Sources<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainnewsource">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cdn.<wbr>Inputs.<wbr>Domain<wbr>New<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +926,7 @@ The following state arguments are supported:
 <a href="#state_sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources</a></span>
+        <span class="property-type"><a href="#domainnewsource">[]Domain<wbr>New<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -997,7 +1002,7 @@ The following state arguments are supported:
 <a href="#state_sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources</a></span>
+        <span class="property-type"><a href="#domainnewsource">Domain<wbr>New<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1073,7 +1078,7 @@ The following state arguments are supported:
 <a href="#state_sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainnewsource">Sequence[Domain<wbr>New<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1331,7 +1336,7 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="domainnewsources">Domain<wbr>New<wbr>Sources</h4>
+<h4 id="domainnewsource">Domain<wbr>New<wbr>Source</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

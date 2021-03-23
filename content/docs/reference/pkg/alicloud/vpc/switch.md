@@ -30,7 +30,7 @@ Vswitch can be imported using the id, e.g.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Switch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Switch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -172,15 +172,6 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="availabilityzone_csharp">
-<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AZ for the switch.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
 </span>
@@ -197,7 +188,16 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `availability_zone` has been deprecated from provider version 1.119.0. New field `zone_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;availability_zone&#39; has been deprecated from provider version 1.119.0. New field &#39;zone_id&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -206,16 +206,16 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The switch description. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the switch. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.0. New field `vswitch_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.0. New field &#39;vswitch_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -224,20 +224,29 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="availabilityzone_go">
-<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitchname_csharp">
+<a href="#vswitchname_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the switch. Defaults to null.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ for the switch.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -255,7 +264,16 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `availability_zone` has been deprecated from provider version 1.119.0. New field `zone_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;availability_zone&#39; has been deprecated from provider version 1.119.0. New field &#39;zone_id&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -264,16 +282,16 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The switch description. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the switch. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.0. New field `vswitch_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.0. New field &#39;vswitch_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -282,20 +300,29 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="availabilityzone_nodejs">
-<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitchname_go">
+<a href="#vswitchname_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the switch. Defaults to null.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ for the switch.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -313,7 +340,16 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Field `availability_zone` has been deprecated from provider version 1.119.0. New field `zone_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;availability_zone&#39; has been deprecated from provider version 1.119.0. New field &#39;zone_id&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -322,16 +358,16 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The switch description. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the switch. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.0. New field `vswitch_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.0. New field &#39;vswitch_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -340,20 +376,29 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitchname_nodejs">
+<a href="#vswitchname_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the switch. Defaults to null.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AZ for the switch.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="availability_zone_python">
-<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AZ for the switch.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -371,7 +416,16 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Field `availability_zone` has been deprecated from provider version 1.119.0. New field `zone_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;availability_zone&#39; has been deprecated from provider version 1.119.0. New field &#39;zone_id&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -380,16 +434,16 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The switch description. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the switch. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.0. New field `vswitch_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.0. New field &#39;vswitch_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -398,6 +452,24 @@ The Switch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitch_name_python">
+<a href="#vswitch_name_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the switch. Defaults to null.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AZ for the switch.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -417,7 +489,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.0+) The status of the switch.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -429,7 +510,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.0+) The status of the switch.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -441,7 +531,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.0+) The status of the switch.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -453,7 +552,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.0+) The status of the switch.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -469,7 +577,7 @@ Get an existing Switch resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Switch</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Switch</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -580,16 +688,16 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_availabilityzone_csharp">
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AZ for the switch.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `availability_zone` has been deprecated from provider version 1.119.0. New field `zone_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;availability_zone&#39; has been deprecated from provider version 1.119.0. New field &#39;zone_id&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrblock_csharp">
 <a href="#state_cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -607,15 +715,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The switch description. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the switch. Defaults to null.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.0. New field `vswitch_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.0. New field &#39;vswitch_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.0+) The status of the switch.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -634,20 +751,38 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vswitchname_csharp">
+<a href="#state_vswitchname_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the switch. Defaults to null.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneid_csharp">
+<a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AZ for the switch.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_availabilityzone_go">
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AZ for the switch.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `availability_zone` has been deprecated from provider version 1.119.0. New field `zone_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;availability_zone&#39; has been deprecated from provider version 1.119.0. New field &#39;zone_id&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrblock_go">
 <a href="#state_cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -665,15 +800,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The switch description. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the switch. Defaults to null.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.0. New field `vswitch_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.0. New field &#39;vswitch_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.0+) The status of the switch.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -692,20 +836,38 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vswitchname_go">
+<a href="#state_vswitchname_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the switch. Defaults to null.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneid_go">
+<a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AZ for the switch.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_availabilityzone_nodejs">
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AZ for the switch.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `availability_zone` has been deprecated from provider version 1.119.0. New field `zone_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;availability_zone&#39; has been deprecated from provider version 1.119.0. New field &#39;zone_id&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrblock_nodejs">
 <a href="#state_cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -723,15 +885,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The switch description. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the switch. Defaults to null.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.0. New field `vswitch_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.0. New field &#39;vswitch_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.0+) The status of the switch.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -750,20 +921,38 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vswitchname_nodejs">
+<a href="#state_vswitchname_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the switch. Defaults to null.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneid_nodejs">
+<a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AZ for the switch.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_availability_zone_python">
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AZ for the switch.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `availability_zone` has been deprecated from provider version 1.119.0. New field `zone_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;availability_zone&#39; has been deprecated from provider version 1.119.0. New field &#39;zone_id&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_block_python">
 <a href="#state_cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -781,15 +970,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The switch description. Defaults to null.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the switch. Defaults to null.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.0. New field `vswitch_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.0. New field &#39;vswitch_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.0+) The status of the switch.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -808,6 +1006,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vswitch_name_python">
+<a href="#state_vswitch_name_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the switch. Defaults to null.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zone_id_python">
+<a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AZ for the switch.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

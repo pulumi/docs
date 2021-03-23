@@ -139,7 +139,7 @@ export const firstVpcId = vpcsDs.vpcs[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_networks(</span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNetworksResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_networks(</span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dhcp_options_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_owner_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNetworksResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -172,6 +172,33 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific CIDR block. For example: "172.16.0.0/12".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dhcpoptionssetid_csharp">
+<a href="#dhcpoptionssetid_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Options<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of dhcp options set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_csharp">
+<a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to check this request only. Valid values: `true` and `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.119.0+) Default to `true`. Set it to true can output the `route_table_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
@@ -236,6 +263,24 @@ The following arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="vpcname_csharp">
+<a href="#vpcname_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the VPC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcownerid_csharp">
+<a href="#vpcownerid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The owner ID of VPC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vswitchid_csharp">
 <a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
 </span>
@@ -256,6 +301,33 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific CIDR block. For example: "172.16.0.0/12".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dhcpoptionssetid_go">
+<a href="#dhcpoptionssetid_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Options<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of dhcp options set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_go">
+<a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to check this request only. Valid values: `true` and `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.119.0+) Default to `true`. Set it to true can output the `route_table_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_go">
@@ -320,6 +392,24 @@ The following arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="vpcname_go">
+<a href="#vpcname_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the VPC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcownerid_go">
+<a href="#vpcownerid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The owner ID of VPC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vswitchid_go">
 <a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
 </span>
@@ -340,6 +430,33 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific CIDR block. For example: "172.16.0.0/12".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dhcpoptionssetid_nodejs">
+<a href="#dhcpoptionssetid_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Options<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of dhcp options set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_nodejs">
+<a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to check this request only. Valid values: `true` and `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.119.0+) Default to `true`. Set it to true can output the `route_table_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
@@ -404,6 +521,24 @@ The following arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="vpcname_nodejs">
+<a href="#vpcname_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the VPC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcownerid_nodejs">
+<a href="#vpcownerid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The owner ID of VPC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vswitchid_nodejs">
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span>
@@ -424,6 +559,33 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific CIDR block. For example: "172.16.0.0/12".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dhcp_options_set_id_python">
+<a href="#dhcp_options_set_id_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>options_<wbr>set_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of dhcp options set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dry_run_python">
+<a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to check this request only. Valid values: `true` and `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.119.0+) Default to `true`. Set it to true can output the `route_table_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
@@ -486,6 +648,24 @@ The following arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpc_name_python">
+<a href="#vpc_name_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the VPC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpc_owner_id_python">
+<a href="#vpc_owner_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The owner ID of VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitch_id_python">
@@ -555,6 +735,30 @@ The following output properties are available:
     <dd>{{% md %}}CIDR block of the VPC.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dhcpoptionssetid_csharp">
+<a href="#dhcpoptionssetid_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Options<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dryrun_csharp">
+<a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
 </span>
@@ -605,6 +809,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A map of tags assigned to the VPC.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vpcname_csharp">
+<a href="#vpcname_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the VPC.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vpcownerid_csharp">
+<a href="#vpcownerid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vswitchid_csharp">
 <a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -663,6 +884,30 @@ The following output properties are available:
     <dd>{{% md %}}CIDR block of the VPC.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dhcpoptionssetid_go">
+<a href="#dhcpoptionssetid_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Options<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dryrun_go">
+<a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="isdefault_go">
 <a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
 </span>
@@ -713,6 +958,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A map of tags assigned to the VPC.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vpcname_go">
+<a href="#vpcname_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the VPC.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vpcownerid_go">
+<a href="#vpcownerid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vswitchid_go">
 <a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -771,6 +1033,30 @@ The following output properties are available:
     <dd>{{% md %}}CIDR block of the VPC.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dhcpoptionssetid_nodejs">
+<a href="#dhcpoptionssetid_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Options<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dryrun_nodejs">
+<a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="isdefault_nodejs">
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
 </span>
@@ -821,6 +1107,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A map of tags assigned to the VPC.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vpcname_nodejs">
+<a href="#vpcname_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the VPC.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vpcownerid_nodejs">
+<a href="#vpcownerid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vswitchid_nodejs">
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -879,6 +1182,30 @@ The following output properties are available:
     <dd>{{% md %}}CIDR block of the VPC.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dhcp_options_set_id_python">
+<a href="#dhcp_options_set_id_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>options_<wbr>set_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dry_run_python">
+<a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="is_default_python">
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span>
@@ -929,6 +1256,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A map of tags assigned to the VPC.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vpc_name_python">
+<a href="#vpc_name_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the VPC.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vpc_owner_id_python">
+<a href="#vpc_owner_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vswitch_id_python">
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -988,6 +1332,15 @@ The following output properties are available:
     <dd>{{% md %}}ID of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6cidrblock_csharp">
+<a href="#ipv6cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR block of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
 </span>
@@ -1006,6 +1359,15 @@ The following output properties are available:
     <dd>{{% md %}}ID of the region where the VPC is located.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which VPC belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="routetableid_csharp">
 <a href="#routetableid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
 </span>
@@ -1013,6 +1375,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Route table ID of the VRouter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routerid_csharp">
+<a href="#routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VRouter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secondarycidrblocks_csharp">
+<a href="#secondarycidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Cidr<wbr>Blocks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of secondary IPv4 CIDR blocks of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
@@ -1033,13 +1413,31 @@ The following output properties are available:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="usercidrs_csharp">
+<a href="#usercidrs_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of user CIDRs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vpcid_csharp">
+<a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vpcname_csharp">
 <a href="#vpcname_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the VPC.
+    <dd>{{% md %}}The name of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vrouterid_csharp">
@@ -1100,6 +1498,15 @@ The following output properties are available:
     <dd>{{% md %}}ID of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6cidrblock_go">
+<a href="#ipv6cidrblock_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR block of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="isdefault_go">
 <a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
 </span>
@@ -1118,6 +1525,15 @@ The following output properties are available:
     <dd>{{% md %}}ID of the region where the VPC is located.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which VPC belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="routetableid_go">
 <a href="#routetableid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
 </span>
@@ -1125,6 +1541,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Route table ID of the VRouter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routerid_go">
+<a href="#routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VRouter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secondarycidrblocks_go">
+<a href="#secondarycidrblocks_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Cidr<wbr>Blocks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of secondary IPv4 CIDR blocks of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
@@ -1145,13 +1579,31 @@ The following output properties are available:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="usercidrs_go">
+<a href="#usercidrs_go" style="color: inherit; text-decoration: inherit;">User<wbr>Cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of user CIDRs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vpcid_go">
+<a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vpcname_go">
 <a href="#vpcname_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the VPC.
+    <dd>{{% md %}}The name of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vrouterid_go">
@@ -1212,6 +1664,15 @@ The following output properties are available:
     <dd>{{% md %}}ID of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6cidrblock_nodejs">
+<a href="#ipv6cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR block of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="isdefault_nodejs">
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
 </span>
@@ -1230,6 +1691,15 @@ The following output properties are available:
     <dd>{{% md %}}ID of the region where the VPC is located.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which VPC belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="routetableid_nodejs">
 <a href="#routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
 </span>
@@ -1237,6 +1707,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Route table ID of the VRouter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routerid_nodejs">
+<a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VRouter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secondarycidrblocks_nodejs">
+<a href="#secondarycidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Cidr<wbr>Blocks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of secondary IPv4 CIDR blocks of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
@@ -1257,13 +1745,31 @@ The following output properties are available:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="usercidrs_nodejs">
+<a href="#usercidrs_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of user CIDRs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vpcid_nodejs">
+<a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vpcname_nodejs">
 <a href="#vpcname_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the VPC.
+    <dd>{{% md %}}The name of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vrouterid_nodejs">
@@ -1324,6 +1830,15 @@ The following output properties are available:
     <dd>{{% md %}}ID of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6_cidr_block_python">
+<a href="#ipv6_cidr_block_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR block of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="is_default_python">
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span>
@@ -1342,6 +1857,15 @@ The following output properties are available:
     <dd>{{% md %}}ID of the region where the VPC is located.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which VPC belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="route_table_id_python">
 <a href="#route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
 </span>
@@ -1349,6 +1873,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Route table ID of the VRouter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="router_id_python">
+<a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VRouter.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secondary_cidr_blocks_python">
+<a href="#secondary_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>cidr_<wbr>blocks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of secondary IPv4 CIDR blocks of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
@@ -1369,13 +1911,31 @@ The following output properties are available:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="user_cidrs_python">
+<a href="#user_cidrs_python" style="color: inherit; text-decoration: inherit;">user_<wbr>cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of user CIDRs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vpc_id_python">
+<a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vpc_name_python">
 <a href="#vpc_name_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the VPC.
+    <dd>{{% md %}}The name of the VPC.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vrouter_id_python">

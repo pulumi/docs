@@ -86,6 +86,7 @@ class MyStack : Stack
             VpcId = mainNetwork.Id,
             CidrBlock = "172.16.0.0/16",
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            VswitchName = name,
         });
         var groupSecurityGroup = new AliCloud.Ecs.SecurityGroup("groupSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
         {
@@ -219,7 +220,8 @@ main_network = alicloud.vpc.Network("mainNetwork", cidr_block="172.16.0.0/16")
 main_switch = alicloud.vpc.Switch("mainSwitch",
     vpc_id=main_network.id,
     cidr_block="172.16.0.0/16",
-    availability_zone=default_zones.zones[0].id)
+    availability_zone=default_zones.zones[0].id,
+    vswitch_name=name)
 group_security_group = alicloud.ecs.SecurityGroup("groupSecurityGroup", vpc_id=main_network.id)
 instance_instance = []
 for range in [{"value": i} for i in range(0, 2)]:
@@ -313,6 +315,7 @@ const mainSwitch = new alicloud.vpc.Switch("mainSwitch", {
     vpcId: mainNetwork.id,
     cidrBlock: "172.16.0.0/16",
     availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    vswitchName: name,
 });
 const groupSecurityGroup = new alicloud.ecs.SecurityGroup("groupSecurityGroup", {vpcId: mainNetwork.id});
 const instanceInstance: alicloud.ecs.Instance[];

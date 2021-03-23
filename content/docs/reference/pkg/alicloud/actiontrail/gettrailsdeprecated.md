@@ -647,11 +647,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mnstopicarn_csharp">
-<a href="#mnstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
+        <span id="isorganizationtrail_csharp">
+<a href="#isorganizationtrail_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Organization<wbr>Trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -673,14 +673,13 @@ The following output properties are available:
     <dd>{{% md %}}The prefix of the specified OSS bucket name.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rolename_csharp">
-<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+        <span id="osswriterolearn_csharp">
+<a href="#osswriterolearn_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Write<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role in ActionTrail.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slsprojectarn_csharp">
 <a href="#slsprojectarn_csharp" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -745,11 +744,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mnstopicarn_go">
-<a href="#mnstopicarn_go" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
+        <span id="isorganizationtrail_go">
+<a href="#isorganizationtrail_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Organization<wbr>Trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -771,14 +770,13 @@ The following output properties are available:
     <dd>{{% md %}}The prefix of the specified OSS bucket name.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rolename_go">
-<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+        <span id="osswriterolearn_go">
+<a href="#osswriterolearn_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Write<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role in ActionTrail.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slsprojectarn_go">
 <a href="#slsprojectarn_go" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -843,11 +841,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mnstopicarn_nodejs">
-<a href="#mnstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">mns<wbr>Topic<wbr>Arn</a>
+        <span id="isorganizationtrail_nodejs">
+<a href="#isorganizationtrail_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Organization<wbr>Trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -869,14 +867,13 @@ The following output properties are available:
     <dd>{{% md %}}The prefix of the specified OSS bucket name.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rolename_nodejs">
-<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
+        <span id="osswriterolearn_nodejs">
+<a href="#osswriterolearn_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Write<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role in ActionTrail.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slsprojectarn_nodejs">
 <a href="#slsprojectarn_nodejs" style="color: inherit; text-decoration: inherit;">sls<wbr>Project<wbr>Arn</a>
@@ -941,11 +938,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mns_topic_arn_python">
-<a href="#mns_topic_arn_python" style="color: inherit; text-decoration: inherit;">mns_<wbr>topic_<wbr>arn</a>
+        <span id="is_organization_trail_python">
+<a href="#is_organization_trail_python" style="color: inherit; text-decoration: inherit;">is_<wbr>organization_<wbr>trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -967,14 +964,13 @@ The following output properties are available:
     <dd>{{% md %}}The prefix of the specified OSS bucket name.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="role_name_python">
-<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
+        <span id="oss_write_role_arn_python">
+<a href="#oss_write_role_arn_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>write_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role in ActionTrail.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sls_project_arn_python">
 <a href="#sls_project_arn_python" style="color: inherit; text-decoration: inherit;">sls_<wbr>project_<wbr>arn</a>
@@ -1043,11 +1039,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mnstopicarn_csharp">
-<a href="#mnstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
+        <span id="isorganizationtrail_csharp">
+<a href="#isorganizationtrail_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Organization<wbr>Trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1069,14 +1065,13 @@ The following output properties are available:
     <dd>{{% md %}}The prefix of the specified OSS bucket name.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rolename_csharp">
-<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+        <span id="osswriterolearn_csharp">
+<a href="#osswriterolearn_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Write<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role in ActionTrail.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slsprojectarn_csharp">
 <a href="#slsprojectarn_csharp" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -1141,11 +1136,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mnstopicarn_go">
-<a href="#mnstopicarn_go" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
+        <span id="isorganizationtrail_go">
+<a href="#isorganizationtrail_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Organization<wbr>Trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1167,14 +1162,13 @@ The following output properties are available:
     <dd>{{% md %}}The prefix of the specified OSS bucket name.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rolename_go">
-<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+        <span id="osswriterolearn_go">
+<a href="#osswriterolearn_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Write<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role in ActionTrail.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slsprojectarn_go">
 <a href="#slsprojectarn_go" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -1239,11 +1233,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mnstopicarn_nodejs">
-<a href="#mnstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">mns<wbr>Topic<wbr>Arn</a>
+        <span id="isorganizationtrail_nodejs">
+<a href="#isorganizationtrail_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Organization<wbr>Trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1265,14 +1259,13 @@ The following output properties are available:
     <dd>{{% md %}}The prefix of the specified OSS bucket name.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rolename_nodejs">
-<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
+        <span id="osswriterolearn_nodejs">
+<a href="#osswriterolearn_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Write<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role in ActionTrail.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slsprojectarn_nodejs">
 <a href="#slsprojectarn_nodejs" style="color: inherit; text-decoration: inherit;">sls<wbr>Project<wbr>Arn</a>
@@ -1337,11 +1330,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mns_topic_arn_python">
-<a href="#mns_topic_arn_python" style="color: inherit; text-decoration: inherit;">mns_<wbr>topic_<wbr>arn</a>
+        <span id="is_organization_trail_python">
+<a href="#is_organization_trail_python" style="color: inherit; text-decoration: inherit;">is_<wbr>organization_<wbr>trail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1363,14 +1356,13 @@ The following output properties are available:
     <dd>{{% md %}}The prefix of the specified OSS bucket name.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="role_name_python">
-<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
+        <span id="oss_write_role_arn_python">
+<a href="#oss_write_role_arn_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>write_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role in ActionTrail.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sls_project_arn_python">
 <a href="#sls_project_arn_python" style="color: inherit; text-decoration: inherit;">sls_<wbr>project_<wbr>arn</a>

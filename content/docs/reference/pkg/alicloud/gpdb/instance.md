@@ -53,6 +53,7 @@ class MyStack : Stack
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
             VpcId = defaultNetwork.Id,
             CidrBlock = "172.16.0.0/24",
+            VswitchName = "vpc-123456",
         });
         var example = new AliCloud.Gpdb.Instance("example", new AliCloud.Gpdb.InstanceArgs
         {
@@ -108,6 +109,7 @@ func main() {
 			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 			VpcId:            defaultNetwork.ID(),
 			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			VswitchName:      pulumi.String("vpc-123456"),
 		})
 		if err != nil {
 			return err
@@ -147,7 +149,8 @@ default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     availability_zone=default_zones.zones[0].id,
     vpc_id=default_network.id,
-    cidr_block="172.16.0.0/24")
+    cidr_block="172.16.0.0/24",
+    vswitch_name="vpc-123456")
 example = alicloud.gpdb.Instance("example",
     description="tf-gpdb-test",
     engine="gpdb",
@@ -180,6 +183,7 @@ const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
     vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/24",
+    vswitchName: "vpc-123456",
 });
 const example = new alicloud.gpdb.Instance("example", {
     description: "tf-gpdb-test",

@@ -58,6 +58,7 @@ class MyStack : Stack
         var name = config.Get("name") ?? "keyPairAttachmentName";
         var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = name,
             CidrBlock = "10.1.0.0/21",
         });
         var vswitch = new AliCloud.Vpc.Switch("vswitch", new AliCloud.Vpc.SwitchArgs
@@ -65,6 +66,7 @@ class MyStack : Stack
             VpcId = vpc.Id,
             CidrBlock = "10.1.1.0/24",
             AvailabilityZone = @default.Apply(@default => @default.Zones[0].Id),
+            VswitchName = name,
         });
         var @group = new AliCloud.Ecs.SecurityGroup("group", new AliCloud.Ecs.SecurityGroupArgs
         {
@@ -164,6 +166,7 @@ func main() {
 			name = param
 		}
 		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
+			VpcName:   pulumi.String(name),
 			CidrBlock: pulumi.String("10.1.0.0/21"),
 		})
 		if err != nil {
@@ -173,6 +176,7 @@ func main() {
 			VpcId:            vpc.ID(),
 			CidrBlock:        pulumi.String("10.1.1.0/24"),
 			AvailabilityZone: pulumi.String(_default.Zones[0].Id),
+			VswitchName:      pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -256,11 +260,14 @@ config = pulumi.Config()
 name = config.get("name")
 if name is None:
     name = "keyPairAttachmentName"
-vpc = alicloud.vpc.Network("vpc", cidr_block="10.1.0.0/21")
+vpc = alicloud.vpc.Network("vpc",
+    vpc_name=name,
+    cidr_block="10.1.0.0/21")
 vswitch = alicloud.vpc.Switch("vswitch",
     vpc_id=vpc.id,
     cidr_block="10.1.1.0/24",
-    availability_zone=default.zones[0].id)
+    availability_zone=default.zones[0].id,
+    vswitch_name=name)
 group = alicloud.ecs.SecurityGroup("group",
     description="New security group",
     vpc_id=vpc.id)
@@ -310,11 +317,15 @@ const images = alicloud.ecs.getImages({
 });
 const config = new pulumi.Config();
 const name = config.get("name") || "keyPairAttachmentName";
-const vpc = new alicloud.vpc.Network("vpc", {cidrBlock: "10.1.0.0/21"});
+const vpc = new alicloud.vpc.Network("vpc", {
+    vpcName: name,
+    cidrBlock: "10.1.0.0/21",
+});
 const vswitch = new alicloud.vpc.Switch("vswitch", {
     vpcId: vpc.id,
     cidrBlock: "10.1.1.0/24",
     availabilityZone: _default.then(_default => _default.zones[0].id),
+    vswitchName: name,
 });
 const group = new alicloud.ecs.SecurityGroup("group", {
     description: "New security group",
