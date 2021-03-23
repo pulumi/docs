@@ -55,6 +55,6 @@ A Pulumi package for creating and managing opsgenie cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`opsgenie` Terraform Provider](https://github.com/opsgenie/terraform-provider-opsgenie).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
