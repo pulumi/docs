@@ -162,6 +162,7 @@ class MyStack : Stack
         {
             TemplateGcsPath = "gs://my-bucket/templates/template_file",
             TempGcsLocation = "gs://my-bucket/tmp_dir",
+            EnableStreamingEngine = true,
             Parameters = 
             {
                 { "inputFilePattern", bucket1.Url.Apply(url => $"{url}/*.json") },
@@ -216,8 +217,9 @@ func main() {
 			return err
 		}
 		_, err = dataflow.NewJob(ctx, "pubsubStream", &dataflow.JobArgs{
-			TemplateGcsPath: pulumi.String("gs://my-bucket/templates/template_file"),
-			TempGcsLocation: pulumi.String("gs://my-bucket/tmp_dir"),
+			TemplateGcsPath:       pulumi.String("gs://my-bucket/templates/template_file"),
+			TempGcsLocation:       pulumi.String("gs://my-bucket/tmp_dir"),
+			EnableStreamingEngine: pulumi.Bool(true),
 			Parameters: pulumi.StringMap{
 				"inputFilePattern": bucket1.Url.ApplyT(func(url string) (string, error) {
 					return fmt.Sprintf("%v%v", url, "/*.json"), nil
@@ -254,6 +256,7 @@ bucket2 = gcp.storage.Bucket("bucket2", force_destroy=True)
 pubsub_stream = gcp.dataflow.Job("pubsubStream",
     template_gcs_path="gs://my-bucket/templates/template_file",
     temp_gcs_location="gs://my-bucket/tmp_dir",
+    enable_streaming_engine=True,
     parameters={
         "inputFilePattern": bucket1.url.apply(lambda url: f"{url}/*.json"),
         "outputTopic": topic.id,
@@ -281,6 +284,7 @@ const bucket2 = new gcp.storage.Bucket("bucket2", {forceDestroy: true});
 const pubsubStream = new gcp.dataflow.Job("pubsubStream", {
     templateGcsPath: "gs://my-bucket/templates/template_file",
     tempGcsLocation: "gs://my-bucket/tmp_dir",
+    enableStreamingEngine: true,
     parameters: {
         inputFilePattern: pulumi.interpolate`${bucket1.url}/*.json`,
         outputTopic: topic.id,
@@ -314,7 +318,7 @@ const pubsubStream = new gcp.dataflow.Job("pubsubStream", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_experiments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_delete</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">temp_gcs_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_gcs_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_name_mapping</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_experiments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_streaming_engine</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_delete</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">temp_gcs_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_gcs_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_name_mapping</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -481,6 +485,15 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablestreamingengine_csharp">
+<a href="#enablestreamingengine_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Streaming<wbr>Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfiguration_csharp">
@@ -652,6 +665,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablestreamingengine_go">
+<a href="#enablestreamingengine_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Streaming<wbr>Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipconfiguration_go">
 <a href="#ipconfiguration_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
@@ -821,6 +843,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablestreamingengine_nodejs">
+<a href="#enablestreamingengine_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Streaming<wbr>Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipconfiguration_nodejs">
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
@@ -988,6 +1019,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_streaming_engine_python">
+<a href="#enable_streaming_engine_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>streaming_<wbr>engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_configuration_python">
@@ -1305,7 +1345,7 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_experiments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_delete</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">temp_gcs_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_gcs_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_name_mapping</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_experiments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_streaming_engine</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_delete</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">temp_gcs_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_gcs_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_name_mapping</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1425,6 +1465,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enablestreamingengine_csharp">
+<a href="#state_enablestreamingengine_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Streaming<wbr>Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipconfiguration_csharp">
@@ -1623,6 +1672,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enablestreamingengine_go">
+<a href="#state_enablestreamingengine_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Streaming<wbr>Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipconfiguration_go">
 <a href="#state_ipconfiguration_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
@@ -1819,6 +1877,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enablestreamingengine_nodejs">
+<a href="#state_enablestreamingengine_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Streaming<wbr>Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipconfiguration_nodejs">
 <a href="#state_ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
@@ -2013,6 +2080,15 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_streaming_engine_python">
+<a href="#state_enable_streaming_engine_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>streaming_<wbr>engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_configuration_python">

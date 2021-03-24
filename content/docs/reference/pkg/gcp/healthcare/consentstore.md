@@ -14,7 +14,7 @@ The Consent Management API is a tool for tracking user consents and the document
 
 To get more information about ConsentStore, see:
 
-* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.consentStores)
+* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.consentStores)
 * How-to Guides
     * [Creating a Consent store](https://cloud.google.com/healthcare/docs/how-tos/consent)
 
@@ -41,16 +41,10 @@ class MyStack : Stack
         var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
         {
             Location = "us-central1",
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var my_consent = new Gcp.Healthcare.ConsentStore("my-consent", new Gcp.Healthcare.ConsentStoreArgs
         {
             Dataset = dataset.Id,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -75,13 +69,13 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
 			Location: pulumi.String("us-central1"),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
 		_, err = healthcare.NewConsentStore(ctx, "my_consent", &healthcare.ConsentStoreArgs{
 			Dataset: dataset.ID(),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -100,10 +94,8 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-dataset = gcp.healthcare.Dataset("dataset", location="us-central1",
-opts=pulumi.ResourceOptions(provider=google_beta))
-my_consent = gcp.healthcare.ConsentStore("my-consent", dataset=dataset.id,
-opts=pulumi.ResourceOptions(provider=google_beta))
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+my_consent = gcp.healthcare.ConsentStore("my-consent", dataset=dataset.id)
 ```
 
 
@@ -117,12 +109,8 @@ opts=pulumi.ResourceOptions(provider=google_beta))
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"}, {
-    provider: google_beta,
-});
-const my_consent = new gcp.healthcare.ConsentStore("my-consent", {dataset: dataset.id}, {
-    provider: google_beta,
-});
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const my_consent = new gcp.healthcare.ConsentStore("my-consent", {dataset: dataset.id});
 ```
 
 
@@ -147,9 +135,6 @@ class MyStack : Stack
         var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
         {
             Location = "us-central1",
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var my_consent = new Gcp.Healthcare.ConsentStore("my-consent", new Gcp.Healthcare.ConsentStoreArgs
         {
@@ -160,9 +145,6 @@ class MyStack : Stack
             {
                 { "label1", "labelvalue1" },
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -187,7 +169,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
 			Location: pulumi.String("us-central1"),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -198,7 +180,7 @@ func main() {
 			Labels: pulumi.StringMap{
 				"label1": pulumi.String("labelvalue1"),
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -217,16 +199,14 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-dataset = gcp.healthcare.Dataset("dataset", location="us-central1",
-opts=pulumi.ResourceOptions(provider=google_beta))
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
 my_consent = gcp.healthcare.ConsentStore("my-consent",
     dataset=dataset.id,
     enable_consent_create_on_update=True,
     default_consent_ttl="90000s",
     labels={
         "label1": "labelvalue1",
-    },
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    })
 ```
 
 
@@ -240,9 +220,7 @@ my_consent = gcp.healthcare.ConsentStore("my-consent",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"}, {
-    provider: google_beta,
-});
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
 const my_consent = new gcp.healthcare.ConsentStore("my-consent", {
     dataset: dataset.id,
     enableConsentCreateOnUpdate: true,
@@ -250,8 +228,6 @@ const my_consent = new gcp.healthcare.ConsentStore("my-consent", {
     labels: {
         label1: "labelvalue1",
     },
-}, {
-    provider: google_beta,
 });
 ```
 
@@ -277,24 +253,15 @@ class MyStack : Stack
         var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
         {
             Location = "us-central1",
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var my_consent = new Gcp.Healthcare.ConsentStore("my-consent", new Gcp.Healthcare.ConsentStoreArgs
         {
             Dataset = dataset.Id,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var test_account = new Gcp.ServiceAccount.Account("test-account", new Gcp.ServiceAccount.AccountArgs
         {
             AccountId = "my-account",
             DisplayName = "Test Service Account",
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var test_iam = new Gcp.Healthcare.ConsentStoreIamMember("test-iam", new Gcp.Healthcare.ConsentStoreIamMemberArgs
         {
@@ -302,9 +269,6 @@ class MyStack : Stack
             ConsentStoreId = my_consent.Name,
             Role = "roles/editor",
             Member = test_account.Email.Apply(email => $"serviceAccount:{email}"),
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -332,20 +296,20 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
 			Location: pulumi.String("us-central1"),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
 		_, err = healthcare.NewConsentStore(ctx, "my_consent", &healthcare.ConsentStoreArgs{
 			Dataset: dataset.ID(),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
 		_, err = serviceAccount.NewAccount(ctx, "test_account", &serviceAccount.AccountArgs{
 			AccountId:   pulumi.String("my-account"),
 			DisplayName: pulumi.String("Test Service Account"),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -356,7 +320,7 @@ func main() {
 			Member: test_account.Email.ApplyT(func(email string) (string, error) {
 				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
 			}).(pulumi.StringOutput),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -375,20 +339,16 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-dataset = gcp.healthcare.Dataset("dataset", location="us-central1",
-opts=pulumi.ResourceOptions(provider=google_beta))
-my_consent = gcp.healthcare.ConsentStore("my-consent", dataset=dataset.id,
-opts=pulumi.ResourceOptions(provider=google_beta))
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+my_consent = gcp.healthcare.ConsentStore("my-consent", dataset=dataset.id)
 test_account = gcp.service_account.Account("test-account",
     account_id="my-account",
-    display_name="Test Service Account",
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    display_name="Test Service Account")
 test_iam = gcp.healthcare.ConsentStoreIamMember("test-iam",
     dataset=dataset.id,
     consent_store_id=my_consent.name,
     role="roles/editor",
-    member=test_account.email.apply(lambda email: f"serviceAccount:{email}"),
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
 ```
 
 
@@ -402,25 +362,17 @@ test_iam = gcp.healthcare.ConsentStoreIamMember("test-iam",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"}, {
-    provider: google_beta,
-});
-const my_consent = new gcp.healthcare.ConsentStore("my-consent", {dataset: dataset.id}, {
-    provider: google_beta,
-});
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const my_consent = new gcp.healthcare.ConsentStore("my-consent", {dataset: dataset.id});
 const test_account = new gcp.serviceAccount.Account("test-account", {
     accountId: "my-account",
     displayName: "Test Service Account",
-}, {
-    provider: google_beta,
 });
 const test_iam = new gcp.healthcare.ConsentStoreIamMember("test-iam", {
     dataset: dataset.id,
     consentStoreId: my_consent.name,
     role: "roles/editor",
     member: pulumi.interpolate`serviceAccount:${test_account.email}`,
-}, {
-    provider: google_beta,
 });
 ```
 
@@ -613,7 +565,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
+    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
@@ -672,7 +624,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
+    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
@@ -731,7 +683,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
+    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
@@ -790,7 +742,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
+    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -1027,7 +979,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
+    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
@@ -1086,7 +1038,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
+    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
@@ -1145,7 +1097,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
+    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
@@ -1204,7 +1156,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
+    <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
@@ -1245,14 +1197,6 @@ ConsentStore can be imported using any of these accepted formats
 
 ```sh
  $ pulumi import gcp:healthcare/consentStore:ConsentStore default {{dataset}}/consentStores/{{name}}
-```
-
-```sh
- $ pulumi import gcp:healthcare/consentStore:ConsentStore default {{dataset}}/{{name}}
-```
-
-```sh
- $ pulumi import gcp:healthcare/consentStore:ConsentStore default {{name}}
 ```
 
 

@@ -682,8 +682,7 @@ or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
 INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
-If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
-Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set `role`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
@@ -825,8 +824,7 @@ or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
 INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
-If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
-Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set `role`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
@@ -968,8 +966,7 @@ or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
 INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
-If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
-Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set `role`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
@@ -1111,8 +1108,7 @@ or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
 INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
-If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
-Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set `role`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
@@ -1603,8 +1599,7 @@ or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
 INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
-If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
-Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set `role`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
@@ -1782,8 +1777,7 @@ or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
 INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
-If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
-Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set `role`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
@@ -1961,8 +1955,7 @@ or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
 INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
-If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
-Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set `role`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
@@ -2140,8 +2133,7 @@ or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
 INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
-If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
-Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set `role`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
