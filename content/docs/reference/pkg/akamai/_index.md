@@ -82,6 +82,6 @@ A Pulumi package for creating and managing akamai cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.2.0</dd>
+	<dd>1.2.1</dd>
 </dl>
 
