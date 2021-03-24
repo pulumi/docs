@@ -3163,6 +3163,16 @@ in the cloud console. Your project's Compute Engine System service account
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="kmskeyserviceaccount_csharp">
+<a href="#kmskeyserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rawkey_csharp">
 <a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
 </span>
@@ -3199,6 +3209,16 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyserviceaccount_go">
+<a href="#kmskeyserviceaccount_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_go">
@@ -3239,6 +3259,16 @@ in the cloud console. Your project's Compute Engine System service account
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="kmskeyserviceaccount_nodejs">
+<a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rawkey_nodejs">
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
 </span>
@@ -3275,6 +3305,16 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_service_account_python">
+<a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_key_python">

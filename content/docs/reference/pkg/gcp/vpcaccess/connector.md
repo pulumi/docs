@@ -114,6 +114,158 @@ const connector = new gcp.vpcaccess.Connector("connector", {
 
 
 
+### VPC Access Connector Shared VPC
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customTestNetwork = new Gcp.Compute.Network("customTestNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var customTestSubnetwork = new Gcp.Compute.Subnetwork("customTestSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.2.0.0/28",
+            Region = "us-central1",
+            Network = customTestNetwork.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var connector = new Gcp.VpcAccess.Connector("connector", new Gcp.VpcAccess.ConnectorArgs
+        {
+            Subnet = new Gcp.VpcAccess.Inputs.ConnectorSubnetArgs
+            {
+                Name = customTestSubnetwork.Name,
+            },
+            MachineType = "e2-standard-4",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/vpcaccess"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		customTestNetwork, err := compute.NewNetwork(ctx, "customTestNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		customTestSubnetwork, err := compute.NewSubnetwork(ctx, "customTestSubnetwork", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.2.0.0/28"),
+			Region:      pulumi.String("us-central1"),
+			Network:     customTestNetwork.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = vpcaccess.NewConnector(ctx, "connector", &vpcaccess.ConnectorArgs{
+			Subnet: &vpcaccess.ConnectorSubnetArgs{
+				Name: customTestSubnetwork.Name,
+			},
+			MachineType: pulumi.String("e2-standard-4"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_test_network = gcp.compute.Network("customTestNetwork", auto_create_subnetworks=False,
+opts=pulumi.ResourceOptions(provider=google_beta))
+custom_test_subnetwork = gcp.compute.Subnetwork("customTestSubnetwork",
+    ip_cidr_range="10.2.0.0/28",
+    region="us-central1",
+    network=custom_test_network.id,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+connector = gcp.vpcaccess.Connector("connector",
+    subnet=gcp.vpcaccess.ConnectorSubnetArgs(
+        name=custom_test_subnetwork.name,
+    ),
+    machine_type="e2-standard-4",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const customTestNetwork = new gcp.compute.Network("customTestNetwork", {autoCreateSubnetworks: false}, {
+    provider: google_beta,
+});
+const customTestSubnetwork = new gcp.compute.Subnetwork("customTestSubnetwork", {
+    ipCidrRange: "10.2.0.0/28",
+    region: "us-central1",
+    network: customTestNetwork.id,
+}, {
+    provider: google_beta,
+});
+const connector = new gcp.vpcaccess.Connector("connector", {
+    subnet: {
+        name: customTestSubnetwork.name,
+    },
+    machineType: "e2-standard-4",
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -125,19 +277,19 @@ const connector = new gcp.vpcaccess.Connector("connector", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[ConnectorSubnetArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnector</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connector</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnector</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connector</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -151,7 +303,7 @@ const connector = new gcp.vpcaccess.Connector("connector", {
     <dd>
       The unique name of the resource.
     </dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectorArgs</a></span>
@@ -209,7 +361,7 @@ const connector = new gcp.vpcaccess.Connector("connector", {
     <dd>
       The unique name of the resource.
     </dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectorArgs</a></span>
@@ -239,7 +391,7 @@ const connector = new gcp.vpcaccess.Connector("connector", {
     <dd>
       The unique name of the resource.
     </dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectorArgs</a></span>
@@ -269,8 +421,8 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="ipcidrrange_csharp">
 <a href="#ipcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
 </span>
@@ -278,15 +430,24 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="network_csharp">
-<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="machinetype_csharp">
+<a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a VPC network.
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxinstances_csharp">
+<a href="#maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_csharp">
@@ -296,6 +457,15 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstances_csharp">
+<a href="#mininstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minthroughput_csharp">
@@ -316,6 +486,15 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The name of the resource (Max 25 characters).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the VPC network. Required if `ip_cidr_range` is set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -333,12 +512,21 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_csharp">
+<a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to house the connector
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="ipcidrrange_go">
 <a href="#ipcidrrange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
 </span>
@@ -346,15 +534,24 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="network_go">
-<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="machinetype_go">
+<a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a VPC network.
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxinstances_go">
+<a href="#maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_go">
@@ -364,6 +561,15 @@ If it is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstances_go">
+<a href="#mininstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minthroughput_go">
@@ -384,6 +590,15 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The name of the resource (Max 25 characters).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the VPC network. Required if `ip_cidr_range` is set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -401,12 +616,21 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_go">
+<a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to house the connector
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="ipcidrrange_nodejs">
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
 </span>
@@ -414,15 +638,24 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="network_nodejs">
-<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="machinetype_nodejs">
+<a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a VPC network.
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxinstances_nodejs">
+<a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_nodejs">
@@ -432,6 +665,15 @@ If it is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mininstances_nodejs">
+<a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minthroughput_nodejs">
@@ -452,6 +694,15 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The name of the resource (Max 25 characters).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the VPC network. Required if `ip_cidr_range` is set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -469,12 +720,21 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_nodejs">
+<a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to house the connector
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="ip_cidr_range_python">
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
 </span>
@@ -482,15 +742,24 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="network_python">
-<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="machine_type_python">
+<a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of a VPC network.
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_instances_python">
+<a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_throughput_python">
@@ -500,6 +769,15 @@ If it is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_instances_python">
+<a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_throughput_python">
@@ -520,6 +798,15 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The name of the resource (Max 25 characters).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the VPC network. Required if `ip_cidr_range` is set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -537,6 +824,15 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_python">
+<a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to house the connector
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -680,7 +976,7 @@ Get an existing Connector resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Connector</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[ConnectorSubnetArgs]</span> = None<span class="p">) -&gt;</span> Connector</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -802,6 +1098,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_machinetype_csharp">
+<a href="#state_machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maxinstances_csharp">
+<a href="#state_maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxthroughput_csharp">
 <a href="#state_maxthroughput_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
 </span>
@@ -809,6 +1123,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mininstances_csharp">
+<a href="#state_mininstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minthroughput_csharp">
@@ -835,7 +1158,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a VPC network.
+    <dd>{{% md %}}Name of the VPC network. Required if `ip_cidr_range` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -873,6 +1196,15 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the VPC access connector.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_subnet_csharp">
+<a href="#state_subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to house the connector
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -888,6 +1220,24 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_machinetype_go">
+<a href="#state_machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maxinstances_go">
+<a href="#state_maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxthroughput_go">
 <a href="#state_maxthroughput_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
 </span>
@@ -895,6 +1245,15 @@ If it is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mininstances_go">
+<a href="#state_mininstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minthroughput_go">
@@ -921,7 +1280,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a VPC network.
+    <dd>{{% md %}}Name of the VPC network. Required if `ip_cidr_range` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -959,6 +1318,15 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the VPC access connector.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_subnet_go">
+<a href="#state_subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to house the connector
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -974,6 +1342,24 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_machinetype_nodejs">
+<a href="#state_machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maxinstances_nodejs">
+<a href="#state_maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxthroughput_nodejs">
 <a href="#state_maxthroughput_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Throughput</a>
 </span>
@@ -981,6 +1367,15 @@ If it is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mininstances_nodejs">
+<a href="#state_mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minthroughput_nodejs">
@@ -1007,7 +1402,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a VPC network.
+    <dd>{{% md %}}Name of the VPC network. Required if `ip_cidr_range` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -1045,6 +1440,15 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the VPC access connector.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_subnet_nodejs">
+<a href="#state_subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to house the connector
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1060,6 +1464,24 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_machine_type_python">
+<a href="#state_machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Machine type of VM Instance underlying connector. Default is e2-micro
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_max_instances_python">
+<a href="#state_max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum value of instances in autoscaling group underlying the connector.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_max_throughput_python">
 <a href="#state_max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span>
@@ -1067,6 +1489,15 @@ If it is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_min_instances_python">
+<a href="#state_min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum value of instances in autoscaling group underlying the connector.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_throughput_python">
@@ -1093,7 +1524,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of a VPC network.
+    <dd>{{% md %}}Name of the VPC network. Required if `ip_cidr_range` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -1131,6 +1562,15 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of the VPC access connector.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_subnet_python">
+<a href="#state_subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to house the connector
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1138,6 +1578,92 @@ If it is not provided, the provider project is used.
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="connectorsubnet">Connector<wbr>Subnet</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 
