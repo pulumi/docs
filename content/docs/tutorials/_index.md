@@ -1,6 +1,6 @@
 ---
-title: Tutorials
-meta_desc: A collection of tutorials for interacting and deploying resources
+title: Tutorials and Examples
+meta_desc: A collection of tutorials and examples for interacting and deploying resources
            to different cloud providers.
 menu:
   userguides:
@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/tutorials/"]
 ---
 
-From VMs to Serverless to Containers, our collection of tutorials below represents a great jumping-off point for cloud programmers of all kinds. You can deploy each of these tutorials as they are or use them as a foundation for your own applications and infrastructure.
+From VMs to Serverless to Containers, our collection of tutorials and examples below represents a great jumping-off point for cloud programmers of all kinds. You can deploy each of these as they are or use them as a foundation for your own applications and infrastructure.
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
@@ -18,13 +18,13 @@ From VMs to Serverless to Containers, our collection of tutorials below represen
             <a href="{{< relref "aws" >}}"><img class="h-10" src="/logos/tech/aws.svg" alt="AWS"></a>
         </p>
         <ul class="p2 ml-2">
-            <li><a href="{{< relref "aws/ec2-webserver" >}}">EC2 Virtual Machine</a></li>
-            <li><a href="{{< relref "aws/ecs-fargate" >}}">ECS Fargate Containers</a></li>
-            <li><a href="{{< relref "aws/rest-api" >}}">API Gateway and Lambda</a></li>
-            <li><a href="{{< relref "aws/s3-website" >}}">S3 Static Website</a></li>
+            <li><a href="{{< relref "/docs/tutorials/aws/ec2-webserver.md" >}}">EC2 Virtual Machine</a></li>
+            <li><a href="{{< relref "/docs/tutorials/aws/ecs-fargate.md" >}}">ECS Fargate Containers</a></li>
+            <li><a href="{{< relref "/docs/tutorials/aws/rest-api.md" >}}">API Gateway and Lambda</a></li>
+            <li><a href="{{< relref "/docs/tutorials/aws/s3-website.md" >}}">S3 Static Website</a></li>
         </ul>
         <p class="mt-6">
-            <a class="btn btn-secondary" href="{{< relref "aws" >}}">VIEW MORE</a>
+            <a class="btn btn-secondary" href="{{< relref "/docs/tutorials/aws" >}}">VIEW MORE</a>
         </p>
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
@@ -32,13 +32,13 @@ From VMs to Serverless to Containers, our collection of tutorials below represen
             <a href="{{< relref "azure" >}}"><img class="h-10" src="/logos/tech/azure.svg" alt="Azure"></a>
         </p>
         <ul class="p2 ml-2">
-            <li><a href="{{< relref "azure/azure-cs-appservice-docker" >}}">Azure App Service</a></li>
-            <li><a href="{{< relref "azure/azure-py-aks" >}}">Azure Kubernetes Service</a></li>
-            <li><a href="{{< relref "azure/azure-go-aci" >}}">Azure Container Instances</a></li>
-            <li><a href="{{< relref "azure/azure-ts-webserver" >}}">Azure Virtual Machine</a></li>
+            <li><a href="{{< relref "/docs/tutorials/azure/azure-cs-appservice-docker.md" >}}">Azure App Service</a></li>
+            <li><a href="{{< relref "/docs/tutorials/azure/azure-py-aks.md" >}}">Azure Kubernetes Service</a></li>
+            <li><a href="{{< relref "/docs/tutorials/azure/azure-go-aci.md" >}}">Azure Container Instances</a></li>
+            <li><a href="{{< relref "/docs/tutorials/azure/azure-ts-webserver.md" >}}">Azure Virtual Machine</a></li>
         </ul>
         <p class="mt-6">
-            <a class="btn btn-secondary" href="{{< relref "azure" >}}">VIEW MORE</a>
+            <a class="btn btn-secondary" href="{{< relref "/docs/tutorials/azure" >}}">VIEW MORE</a>
         </p>
     </div>
 </div>
@@ -46,34 +46,34 @@ From VMs to Serverless to Containers, our collection of tutorials below represen
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
         <p>
-            <a href="{{< relref "gcp" >}}"><img class="h-10" src="/logos/tech/gcp.svg" alt="Google Cloud"></a>
+            <a href="{{< relref "/docs/tutorials/gcp" >}}"><img class="h-10" src="/logos/tech/gcp.svg" alt="Google Cloud"></a>
         </p>
         <ul class="p2 ml-2">
-            <li><a href="{{< relref "gcp/gce-webserver" >}}">GCE Virtual Machine</a></li>
-            <li><a href="{{< relref "kubernetes/gke" >}}">GKE Cluster</a></li>
-            <li><a href="{{< relref "gcp/gcp-ts-functions" >}}">Google Functions</a></li>
-            <li><a href="{{< relref "gcp/gcp-ts-k8s-ruby-on-rails-postgresql" >}}">Containerized App</a></li>
+            <li><a href="{{< relref "/docs/tutorials/gcp/gce-webserver.md" >}}">GCE Virtual Machine</a></li>
+            <li><a href="{{< relref "/docs/tutorials/kubernetes/gke" >}}">GKE Cluster</a></li>
+            <li><a href="{{< relref "/docs/tutorials/gcp/gcp-ts-functions.md" >}}">Google Functions</a></li>
+            <li><a href="{{< relref "/docs/tutorials/gcp/gcp-ts-k8s-ruby-on-rails-postgresql.md" >}}">Containerized App</a></li>
         </ul>
         <p class="mt-6">
-            <a class="btn btn-secondary" href="{{< relref "gcp" >}}">VIEW MORE</a>
+            <a class="btn btn-secondary" href="{{< relref "/docs/tutorials/gcp" >}}">VIEW MORE</a>
         </p>
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <p>
-            <a href="{{< relref "kubernetes" >}}"><img class="h-10" src="/logos/tech/k8s.svg" alt="Kubernetes"></a>
+            <a href="{{< relref "/docs/tutorials/kubernetes" >}}"><img class="h-10" src="/logos/tech/k8s.svg" alt="Kubernetes"></a>
         </p>
         <ul class="p2 ml-2">
             <li>
-                <a href="{{< relref "kubernetes/aks" >}}">AKS</a>,
-                <a href="{{< relref "kubernetes/eks" >}}">EKS</a>,
-                or <a href="{{< relref "kubernetes/gke" >}}">GKE</a>
+                <a href="{{< relref "/docs/tutorials/kubernetes/aks" >}}">AKS</a>,
+                <a href="{{< relref "/docs/tutorials/kubernetes/eks" >}}">EKS</a>,
+                or <a href="{{< relref "/docs/tutorials/kubernetes/gke" >}}">GKE</a>
             </li>
-            <li><a href="{{< relref "kubernetes/exposed-deployment" >}}">Hello, World</a></li>
-            <li><a href="{{< relref "kubernetes/wordpress-chart" >}}">Helm Charts</a></li>
-            <li><a href="{{< relref "kubernetes/guestbook" >}}">Guestbook App</a></li>
+            <li><a href="{{< relref "/docs/tutorials/kubernetes/exposed-deployment.md" >}}">Hello, World</a></li>
+            <li><a href="{{< relref "/docs/tutorials/kubernetes/wordpress-chart.md" >}}">Helm Charts</a></li>
+            <li><a href="{{< relref "/docs/tutorials/kubernetes/guestbook.md" >}}">Guestbook App</a></li>
         </ul>
         <p class="mt-6">
-            <a class="btn btn-secondary" href="{{< relref "kubernetes" >}}">VIEW MORE</a>
+            <a class="btn btn-secondary" href="{{< relref "/docs/tutorials/kubernetes" >}}">VIEW MORE</a>
         </p>
     </div>
 </div>
