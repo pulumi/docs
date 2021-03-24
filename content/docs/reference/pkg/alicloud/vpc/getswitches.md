@@ -39,16 +39,18 @@ class MyStack : Stack
         var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/16",
+            VpcName = name,
         });
         var vswitch = new AliCloud.Vpc.Switch("vswitch", new AliCloud.Vpc.SwitchArgs
         {
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
             CidrBlock = "172.16.0.0/24",
             VpcId = vpc.Id,
+            VswitchName = name,
         });
-        var defaultSwitches = vswitch.Name.Apply(name => AliCloud.Vpc.GetSwitches.InvokeAsync(new AliCloud.Vpc.GetSwitchesArgs
+        var defaultSwitches = vswitch.VswitchName.Apply(vswitchName => AliCloud.Vpc.GetSwitches.InvokeAsync(new AliCloud.Vpc.GetSwitchesArgs
         {
-            NameRegex = name,
+            NameRegex = vswitchName,
         }));
     }
 
@@ -84,6 +86,7 @@ func main() {
 		}
 		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("172.16.0.0/16"),
+			VpcName:   pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -92,6 +95,7 @@ func main() {
 			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			VpcId:            vpc.ID(),
+			VswitchName:      pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -116,12 +120,15 @@ name = config.get("name")
 if name is None:
     name = "vswitchDatasourceName"
 default_zones = alicloud.get_zones()
-vpc = alicloud.vpc.Network("vpc", cidr_block="172.16.0.0/16")
+vpc = alicloud.vpc.Network("vpc",
+    cidr_block="172.16.0.0/16",
+    vpc_name=name)
 vswitch = alicloud.vpc.Switch("vswitch",
     availability_zone=default_zones.zones[0].id,
     cidr_block="172.16.0.0/24",
-    vpc_id=vpc.id)
-default_switches = vswitch.name.apply(lambda name: alicloud.vpc.get_switches(name_regex=name))
+    vpc_id=vpc.id,
+    vswitch_name=name)
+default_switches = vswitch.vswitch_name.apply(lambda vswitch_name: alicloud.vpc.get_switches(name_regex=vswitch_name))
 ```
 
 
@@ -141,14 +148,16 @@ const name = config.get("name") || "vswitchDatasourceName";
 const defaultZones = pulumi.output(alicloud.getZones({ async: true }));
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "172.16.0.0/16",
+    vpcName: name,
 });
 const vswitch = new alicloud.vpc.Switch("vswitch", {
     availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "172.16.0.0/24",
     vpcId: vpc.id,
+    vswitchName: name,
 });
-const defaultSwitches = vswitch.name.apply(name => alicloud.vpc.getSwitches({
-    nameRegex: name,
+const defaultSwitches = vswitch.vswitchName.apply(vswitchName => alicloud.vpc.getSwitches({
+    nameRegex: vswitchName,
 }, { async: true }));
 ```
 
@@ -175,7 +184,7 @@ const defaultSwitches = vswitch.name.apply(name => alicloud.vpc.getSwitches({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_switches(</span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSwitchesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_switches(</span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_owner_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSwitchesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -208,6 +217,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific CIDR block. For example: "172.16.0.0/12".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_csharp">
+<a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck this request only. Valid values: `true` and `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
@@ -254,6 +272,24 @@ The following arguments are supported:
     <dd>{{% md %}}The Id of resource group which VSWitch belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routetableid_csharp">
+<a href="#routetableid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -270,6 +306,24 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitchname_csharp">
+<a href="#vswitchname_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitchownerid_csharp">
+<a href="#vswitchownerid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VSwitch owner id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
@@ -292,6 +346,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific CIDR block. For example: "172.16.0.0/12".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_go">
+<a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck this request only. Valid values: `true` and `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_go">
@@ -338,6 +401,24 @@ The following arguments are supported:
     <dd>{{% md %}}The Id of resource group which VSWitch belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routetableid_go">
+<a href="#routetableid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -354,6 +435,24 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitchname_go">
+<a href="#vswitchname_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitchownerid_go">
+<a href="#vswitchownerid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VSwitch owner id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
@@ -376,6 +475,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific CIDR block. For example: "172.16.0.0/12".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_nodejs">
+<a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck this request only. Valid values: `true` and `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
@@ -422,6 +530,24 @@ The following arguments are supported:
     <dd>{{% md %}}The Id of resource group which VSWitch belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routetableid_nodejs">
+<a href="#routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -438,6 +564,24 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitchname_nodejs">
+<a href="#vswitchname_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitchownerid_nodejs">
+<a href="#vswitchownerid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The VSwitch owner id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
@@ -460,6 +604,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific CIDR block. For example: "172.16.0.0/12".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dry_run_python">
+<a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck this request only. Valid values: `true` and `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
@@ -506,6 +659,24 @@ The following arguments are supported:
     <dd>{{% md %}}The Id of resource group which VSWitch belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="route_table_id_python">
+<a href="#route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -522,6 +693,24 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitch_name_python">
+<a href="#vswitch_name_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the VSwitch.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vswitch_owner_id_python">
+<a href="#vswitch_owner_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VSwitch owner id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
@@ -591,6 +780,14 @@ The following output properties are available:
     <dd>{{% md %}}CIDR block of the VSwitch.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dryrun_csharp">
+<a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
 </span>
@@ -622,7 +819,26 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource group ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="routetableid_csharp">
+<a href="#routetableid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -630,7 +846,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Tags of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -640,6 +857,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vswitchname_csharp">
+<a href="#vswitchname_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vswitchownerid_csharp">
+<a href="#vswitchownerid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -699,6 +933,14 @@ The following output properties are available:
     <dd>{{% md %}}CIDR block of the VSwitch.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dryrun_go">
+<a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="isdefault_go">
 <a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
 </span>
@@ -730,7 +972,26 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource group ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="routetableid_go">
+<a href="#routetableid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -738,7 +999,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Tags of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -748,6 +1010,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vswitchname_go">
+<a href="#vswitchname_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vswitchownerid_go">
+<a href="#vswitchownerid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -807,6 +1086,14 @@ The following output properties are available:
     <dd>{{% md %}}CIDR block of the VSwitch.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dryrun_nodejs">
+<a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="isdefault_nodejs">
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
 </span>
@@ -838,7 +1125,26 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource group ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="routetableid_nodejs">
+<a href="#routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -846,7 +1152,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Tags of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -856,6 +1163,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vswitchname_nodejs">
+<a href="#vswitchname_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vswitchownerid_nodejs">
+<a href="#vswitchownerid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -915,6 +1239,14 @@ The following output properties are available:
     <dd>{{% md %}}CIDR block of the VSwitch.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dry_run_python">
+<a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="is_default_python">
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span>
@@ -946,7 +1278,26 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource group ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="route_table_id_python">
+<a href="#route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -954,7 +1305,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Tags of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -964,6 +1316,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vswitch_name_python">
+<a href="#vswitch_name_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the VSwitch.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vswitch_owner_id_python">
+<a href="#vswitch_owner_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -987,6 +1356,15 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="availableipaddresscount_csharp">
+<a href="#availableipaddresscount_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Ip<wbr>Address<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The available ip address count of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -1024,15 +1402,6 @@ The following output properties are available:
     <dd>{{% md %}}ID of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="instanceids_csharp">
-<a href="#instanceids_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}List of ECS instance IDs in the specified VSwitch.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
 </span>
@@ -1051,6 +1420,42 @@ The following output properties are available:
     <dd>{{% md %}}Name of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which VSWitch belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routetableid_csharp">
+<a href="#routetableid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
@@ -1058,6 +1463,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchid_csharp">
+<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchname_csharp">
+<a href="#vswitchname_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
@@ -1072,6 +1495,15 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="availableipaddresscount_go">
+<a href="#availableipaddresscount_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Ip<wbr>Address<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The available ip address count of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -1109,15 +1541,6 @@ The following output properties are available:
     <dd>{{% md %}}ID of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="instanceids_go">
-<a href="#instanceids_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of ECS instance IDs in the specified VSwitch.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="isdefault_go">
 <a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
 </span>
@@ -1136,6 +1559,42 @@ The following output properties are available:
     <dd>{{% md %}}Name of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which VSWitch belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routetableid_go">
+<a href="#routetableid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
@@ -1143,6 +1602,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchid_go">
+<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchname_go">
+<a href="#vswitchname_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
@@ -1157,6 +1634,15 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="availableipaddresscount_nodejs">
+<a href="#availableipaddresscount_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Ip<wbr>Address<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The available ip address count of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -1194,15 +1680,6 @@ The following output properties are available:
     <dd>{{% md %}}ID of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="instanceids_nodejs">
-<a href="#instanceids_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}List of ECS instance IDs in the specified VSwitch.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="isdefault_nodejs">
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
 </span>
@@ -1221,6 +1698,42 @@ The following output properties are available:
     <dd>{{% md %}}Name of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which VSWitch belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routetableid_nodejs">
+<a href="#routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
@@ -1228,6 +1741,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchid_nodejs">
+<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchname_nodejs">
+<a href="#vswitchname_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
@@ -1242,6 +1773,15 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="available_ip_address_count_python">
+<a href="#available_ip_address_count_python" style="color: inherit; text-decoration: inherit;">available_<wbr>ip_<wbr>address_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The available ip address count of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -1279,15 +1819,6 @@ The following output properties are available:
     <dd>{{% md %}}ID of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="instance_ids_python">
-<a href="#instance_ids_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}List of ECS instance IDs in the specified VSwitch.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="is_default_python">
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span>
@@ -1306,6 +1837,42 @@ The following output properties are available:
     <dd>{{% md %}}Name of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which VSWitch belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="route_table_id_python">
+<a href="#route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The route table ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of the VSwitch. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
@@ -1313,6 +1880,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that owns the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitch_id_python">
+<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the VSwitch.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitch_name_python">
+<a href="#vswitch_name_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the VSwitch.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_id_python">

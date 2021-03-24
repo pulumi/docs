@@ -65,6 +65,7 @@ class MyStack : Stack
         }));
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = name,
             CidrBlock = "172.16.0.0/16",
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
@@ -72,6 +73,7 @@ class MyStack : Stack
             VpcId = defaultNetwork.Id,
             CidrBlock = "172.16.0.0/16",
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            VswitchName = name,
         });
         var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
         {
@@ -153,11 +155,14 @@ default_instance_types = alicloud.ecs.get_instance_types(availability_zone=defau
 default_images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
     most_recent=True,
     owners="system")
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_network = alicloud.vpc.Network("defaultNetwork",
+    vpc_name=name,
+    cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     vpc_id=default_network.id,
     cidr_block="172.16.0.0/16",
-    availability_zone=default_zones.zones[0].id)
+    availability_zone=default_zones.zones[0].id,
+    vswitch_name=name)
 default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
 default_instance = []
 for range in [{"value": i} for i in range(0, 2)]:
@@ -214,11 +219,15 @@ const defaultImages = alicloud.ecs.getImages({
     mostRecent: true,
     owners: "system",
 });
-const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {
+    vpcName: name,
+    cidrBlock: "172.16.0.0/16",
+});
 const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/16",
     availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    vswitchName: name,
 });
 const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("defaultSecurityGroup", {vpcId: defaultNetwork.id});
 const defaultInstance: alicloud.ecs.Instance[];

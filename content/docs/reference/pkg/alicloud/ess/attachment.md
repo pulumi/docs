@@ -58,6 +58,7 @@ class MyStack : Stack
         }));
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = name,
             CidrBlock = "172.16.0.0/16",
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
@@ -198,6 +199,7 @@ func main() {
 			return err
 		}
 		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			VpcName:   pulumi.String(name),
 			CidrBlock: pulumi.String("172.16.0.0/16"),
 		})
 		if err != nil {
@@ -315,7 +317,9 @@ default_instance_types = alicloud.ecs.get_instance_types(availability_zone=defau
 default_images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
     most_recent=True,
     owners="system")
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_network = alicloud.vpc.Network("defaultNetwork",
+    vpc_name=name,
+    cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
@@ -395,7 +399,10 @@ const defaultImages = alicloud.ecs.getImages({
     mostRecent: true,
     owners: "system",
 });
-const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {
+    vpcName: name,
+    cidrBlock: "172.16.0.0/16",
+});
 const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/24",

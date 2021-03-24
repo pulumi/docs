@@ -19,6 +19,7 @@ Explore the resources and functions of the alicloud.mns module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getqueues" title="GetQueues"><span class="symbol function"></span>GetQueues</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="gettopicsubscriptions" title="GetTopicSubscriptions"><span class="symbol function"></span>GetTopicSubscriptions</a></li>
     <li><a href="gettopics" title="GetTopics"><span class="symbol function"></span>GetTopics</a></li>
 </ul>
@@ -32,6 +33,6 @@ Explore the resources and functions of the alicloud.mns module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.37.0</dd>
+	<dd>2.38.0</dd>
 </dl>
 

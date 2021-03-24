@@ -55,6 +55,7 @@ class MyStack : Stack
         var fooSwitch = new AliCloud.Vpc.Switch("fooSwitch", new AliCloud.Vpc.SwitchArgs
         {
             VpcId = fooNetwork.Id,
+            VswitchName = "for-ots-instance",
             CidrBlock = "172.16.1.0/24",
             AvailabilityZone = fooZones.Apply(fooZones => fooZones.Zones[0].Id),
         });
@@ -113,6 +114,7 @@ func main() {
 		}
 		fooSwitch, err := vpc.NewSwitch(ctx, "fooSwitch", &vpc.SwitchArgs{
 			VpcId:            fooNetwork.ID(),
+			VswitchName:      pulumi.String("for-ots-instance"),
 			CidrBlock:        pulumi.String("172.16.1.0/24"),
 			AvailabilityZone: pulumi.String(fooZones.Zones[0].Id),
 		})
@@ -154,6 +156,7 @@ foo_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/16")
 foo_switch = alicloud.vpc.Switch("fooSwitch",
     vpc_id=foo_network.id,
+    vswitch_name="for-ots-instance",
     cidr_block="172.16.1.0/24",
     availability_zone=foo_zones.zones[0].id)
 foo_instance_attachment = alicloud.ots.InstanceAttachment("fooInstanceAttachment",
@@ -188,6 +191,7 @@ const fooZones = alicloud.getZones({
 const fooNetwork = new alicloud.vpc.Network("fooNetwork", {cidrBlock: "172.16.0.0/16"});
 const fooSwitch = new alicloud.vpc.Switch("fooSwitch", {
     vpcId: fooNetwork.id,
+    vswitchName: "for-ots-instance",
     cidrBlock: "172.16.1.0/24",
     availabilityZone: fooZones.then(fooZones => fooZones.zones[0].id),
 });

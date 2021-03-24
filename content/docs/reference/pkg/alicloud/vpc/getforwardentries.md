@@ -50,6 +50,7 @@ class MyStack : Stack
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
             CidrBlock = "172.16.0.0/21",
             VpcId = defaultNetwork.Id,
+            VswitchName = name,
         });
         var defaultNatGateway = new AliCloud.Vpc.NatGateway("defaultNatGateway", new AliCloud.Vpc.NatGatewayArgs
         {
@@ -123,6 +124,7 @@ func main() {
 			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
 			CidrBlock:        pulumi.String("172.16.0.0/21"),
 			VpcId:            defaultNetwork.ID(),
+			VswitchName:      pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -180,7 +182,8 @@ default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     availability_zone=default_zones.zones[0].id,
     cidr_block="172.16.0.0/21",
-    vpc_id=default_network.id)
+    vpc_id=default_network.id,
+    vswitch_name=name)
 default_nat_gateway = alicloud.vpc.NatGateway("defaultNatGateway",
     specification="Small",
     vpc_id=default_network.id)
@@ -222,6 +225,7 @@ const defaultSwitch = new alicloud.vpc.Switch("default", {
     availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "172.16.0.0/21",
     vpcId: defaultNetwork.id,
+    vswitchName: name,
 });
 const defaultNatGateway = new alicloud.vpc.NatGateway("default", {
     specification: "Small",

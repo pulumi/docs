@@ -52,6 +52,7 @@ class MyStack : Stack
             VpcId = defaultNetwork.Id,
             CidrBlock = "172.16.0.0/21",
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            VswitchName = name,
         });
         var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer("defaultLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
         {
@@ -117,6 +118,7 @@ func main() {
 			VpcId:            defaultNetwork.ID(),
 			CidrBlock:        pulumi.String("172.16.0.0/21"),
 			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+			VswitchName:      pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -164,7 +166,8 @@ default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     vpc_id=default_network.id,
     cidr_block="172.16.0.0/21",
-    availability_zone=default_zones.zones[0].id)
+    availability_zone=default_zones.zones[0].id,
+    vswitch_name=name)
 default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer",
     specification="slb.s2.small",
     vswitch_id=default_switch.id,
@@ -203,6 +206,7 @@ const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/21",
     availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    vswitchName: name,
 });
 const defaultLoadBalancer = new alicloud.slb.LoadBalancer("defaultLoadBalancer", {
     specification: "slb.s2.small",

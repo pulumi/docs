@@ -39,7 +39,7 @@ class MyStack : Stack
         {
             EventRw = "All",
             OssBucketName = "bucket_name",
-            RoleName = "aliyunserviceroleforactiontrail",
+            OssWriteRoleArn = "acs:ram::1182725xxxxxxxxxxx",
             TrailName = "action-trail",
             TrailRegion = "cn-hangzhou",
         });
@@ -65,11 +65,11 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := actiontrail.NewTrail(ctx, "_default", &actiontrail.TrailArgs{
-			EventRw:       pulumi.String("All"),
-			OssBucketName: pulumi.String("bucket_name"),
-			RoleName:      pulumi.String("aliyunserviceroleforactiontrail"),
-			TrailName:     pulumi.String("action-trail"),
-			TrailRegion:   pulumi.String("cn-hangzhou"),
+			EventRw:         pulumi.String("All"),
+			OssBucketName:   pulumi.String("bucket_name"),
+			OssWriteRoleArn: pulumi.String("acs:ram::1182725xxxxxxxxxxx"),
+			TrailName:       pulumi.String("action-trail"),
+			TrailRegion:     pulumi.String("cn-hangzhou"),
 		})
 		if err != nil {
 			return err
@@ -93,7 +93,7 @@ import pulumi_alicloud as alicloud
 default = alicloud.actiontrail.Trail("default",
     event_rw="All",
     oss_bucket_name="bucket_name",
-    role_name="aliyunserviceroleforactiontrail",
+    oss_write_role_arn="acs:ram::1182725xxxxxxxxxxx",
     trail_name="action-trail",
     trail_region="cn-hangzhou")
 ```
@@ -113,7 +113,7 @@ import * as alicloud from "@pulumi/alicloud";
 const defaultTrail = new alicloud.actiontrail.Trail("default", {
     eventRw: "All",
     ossBucketName: "bucket_name",
-    roleName: "aliyunserviceroleforactiontrail",
+    ossWriteRoleArn: "acs:ram::1182725xxxxxxxxxxx",
     trailName: "action-trail",
     trailRegion: "cn-hangzhou",
 });
@@ -140,7 +140,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">event_rw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mns_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oss_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oss_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sls_project_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sls_write_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trail_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trail_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">event_rw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mns_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oss_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oss_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oss_write_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sls_project_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sls_write_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trail_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trail_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -297,16 +297,16 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="mnstopicarn_csharp">
 <a href="#mnstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Field `mns_topic_arn` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mns_topic_arn&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -335,14 +335,23 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="osswriterolearn_csharp">
+<a href="#osswriterolearn_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Write<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique ARN of the Oss role.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;role_name&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="slsprojectarn_csharp">
 <a href="#slsprojectarn_csharp" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -408,16 +417,16 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="mnstopicarn_go">
 <a href="#mnstopicarn_go" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Field `mns_topic_arn` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mns_topic_arn&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -446,14 +455,23 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="osswriterolearn_go">
+<a href="#osswriterolearn_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Write<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique ARN of the Oss role.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;role_name&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="slsprojectarn_go">
 <a href="#slsprojectarn_go" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -519,16 +537,16 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="mnstopicarn_nodejs">
 <a href="#mnstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">mns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Field `mns_topic_arn` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mns_topic_arn&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -557,14 +575,23 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="osswriterolearn_nodejs">
+<a href="#osswriterolearn_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Write<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique ARN of the Oss role.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;role_name&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="slsprojectarn_nodejs">
 <a href="#slsprojectarn_nodejs" style="color: inherit; text-decoration: inherit;">sls<wbr>Project<wbr>Arn</a>
@@ -630,16 +657,16 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="mns_topic_arn_python">
 <a href="#mns_topic_arn_python" style="color: inherit; text-decoration: inherit;">mns_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Field `mns_topic_arn` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mns_topic_arn&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -668,14 +695,23 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="oss_write_role_arn_python">
+<a href="#oss_write_role_arn_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>write_<wbr>role_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique ARN of the Oss role.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;role_name&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sls_project_arn_python">
 <a href="#sls_project_arn_python" style="color: inherit; text-decoration: inherit;">sls_<wbr>project_<wbr>arn</a>
@@ -791,7 +827,7 @@ Get an existing Trail resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">event_rw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mns_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oss_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oss_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sls_project_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sls_write_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trail_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trail_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Trail</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">event_rw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mns_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oss_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oss_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oss_write_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sls_project_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sls_write_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trail_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trail_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Trail</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -919,16 +955,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_mnstopicarn_csharp">
 <a href="#state_mnstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Field `mns_topic_arn` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mns_topic_arn&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -957,14 +993,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_osswriterolearn_csharp">
+<a href="#state_osswriterolearn_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Write<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique ARN of the Oss role.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_rolename_csharp">
 <a href="#state_rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;role_name&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_slsprojectarn_csharp">
 <a href="#state_slsprojectarn_csharp" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -1030,16 +1075,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_mnstopicarn_go">
 <a href="#state_mnstopicarn_go" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Field `mns_topic_arn` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mns_topic_arn&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1068,14 +1113,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_osswriterolearn_go">
+<a href="#state_osswriterolearn_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Write<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique ARN of the Oss role.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_rolename_go">
 <a href="#state_rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;role_name&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_slsprojectarn_go">
 <a href="#state_slsprojectarn_go" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -1141,16 +1195,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_mnstopicarn_nodejs">
 <a href="#state_mnstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">mns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Field `mns_topic_arn` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mns_topic_arn&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1179,14 +1233,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_osswriterolearn_nodejs">
+<a href="#state_osswriterolearn_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Write<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique ARN of the Oss role.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_rolename_nodejs">
 <a href="#state_rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;role_name&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_slsprojectarn_nodejs">
 <a href="#state_slsprojectarn_nodejs" style="color: inherit; text-decoration: inherit;">sls<wbr>Project<wbr>Arn</a>
@@ -1252,16 +1315,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_mns_topic_arn_python">
 <a href="#state_mns_topic_arn_python" style="color: inherit; text-decoration: inherit;">mns_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Field `mns_topic_arn` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mns_topic_arn&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1290,14 +1353,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_oss_write_role_arn_python">
+<a href="#state_oss_write_role_arn_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>write_<wbr>role_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique ARN of the Oss role.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_role_name_python">
 <a href="#state_role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.118.0.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;role_name&#39; has been deprecated from version 1.118.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_sls_project_arn_python">
 <a href="#state_sls_project_arn_python" style="color: inherit; text-decoration: inherit;">sls_<wbr>project_<wbr>arn</a>

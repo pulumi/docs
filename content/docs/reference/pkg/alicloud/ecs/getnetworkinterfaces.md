@@ -56,6 +56,7 @@ class MyStack : Stack
         var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "192.168.0.0/24",
+            VpcName = name,
         });
         var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
         {
@@ -66,6 +67,7 @@ class MyStack : Stack
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
             CidrBlock = "192.168.0.0/24",
             VpcId = vpc.Id,
+            VswitchName = name,
         });
         var @group = new AliCloud.Ecs.SecurityGroup("group", new AliCloud.Ecs.SecurityGroupArgs
         {
@@ -159,12 +161,15 @@ config = pulumi.Config()
 name = config.get("name")
 if name is None:
     name = "networkInterfacesName"
-vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/24")
+vpc = alicloud.vpc.Network("vpc",
+    cidr_block="192.168.0.0/24",
+    vpc_name=name)
 default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 vswitch = alicloud.vpc.Switch("vswitch",
     availability_zone=default_zones.zones[0].id,
     cidr_block="192.168.0.0/24",
-    vpc_id=vpc.id)
+    vpc_id=vpc.id,
+    vswitch_name=name)
 group = alicloud.ecs.SecurityGroup("group", vpc_id=vpc.id)
 interface = alicloud.vpc.NetworkInterface("interface",
     description="Basic test",
@@ -216,6 +221,7 @@ const name = config.get("name") || "networkInterfacesName";
 
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "192.168.0.0/24",
+    vpcName: name,
 });
 const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
@@ -224,6 +230,7 @@ const vswitch = new alicloud.vpc.Switch("vswitch", {
     availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "192.168.0.0/24",
     vpcId: vpc.id,
+    vswitchName: name,
 });
 const group = new alicloud.ecs.SecurityGroup("group", {
     vpcId: vpc.id,

@@ -44,6 +44,7 @@ class MyStack : Stack
         });
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = "test_name",
             CidrBlock = "172.16.0.0/12",
         });
         var defaultInstanceAttachment = new AliCloud.Cen.InstanceAttachment("defaultInstanceAttachment", new AliCloud.Cen.InstanceAttachmentArgs
@@ -100,6 +101,7 @@ func main() {
 			return err
 		}
 		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			VpcName:   pulumi.String("test_name"),
 			CidrBlock: pulumi.String("172.16.0.0/12"),
 		})
 		if err != nil {
@@ -145,7 +147,9 @@ import pulumi_alicloud as alicloud
 
 # Create a cen Private Zone resource and use it.
 default_instance = alicloud.cen.Instance("defaultInstance")
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
+default_network = alicloud.vpc.Network("defaultNetwork",
+    vpc_name="test_name",
+    cidr_block="172.16.0.0/12")
 default_instance_attachment = alicloud.cen.InstanceAttachment("defaultInstanceAttachment",
     instance_id=default_instance.id,
     child_instance_id=default_network.id,
@@ -176,7 +180,10 @@ import * as alicloud from "@pulumi/alicloud";
 
 // Create a cen Private Zone resource and use it.
 const defaultInstance = new alicloud.cen.Instance("defaultInstance", {});
-const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {
+    vpcName: "test_name",
+    cidrBlock: "172.16.0.0/12",
+});
 const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("defaultInstanceAttachment", {
     instanceId: defaultInstance.id,
     childInstanceId: defaultNetwork.id,

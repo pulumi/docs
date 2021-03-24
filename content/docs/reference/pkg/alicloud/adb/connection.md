@@ -46,6 +46,7 @@ class MyStack : Stack
         }));
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = name,
             CidrBlock = "172.16.0.0/16",
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
@@ -53,6 +54,7 @@ class MyStack : Stack
             VpcId = defaultNetwork.Id,
             CidrBlock = "172.16.0.0/24",
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            VswitchName = name,
         });
         var cluster = new AliCloud.Adb.Cluster("cluster", new AliCloud.Adb.ClusterArgs
         {
@@ -111,6 +113,7 @@ func main() {
 			return err
 		}
 		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			VpcName:   pulumi.String(name),
 			CidrBlock: pulumi.String("172.16.0.0/16"),
 		})
 		if err != nil {
@@ -120,6 +123,7 @@ func main() {
 			VpcId:            defaultNetwork.ID(),
 			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+			VswitchName:      pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -167,11 +171,14 @@ name = config.get("name")
 if name is None:
     name = "adbaccountmysql"
 default_zones = alicloud.get_zones(available_resource_creation=creation)
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_network = alicloud.vpc.Network("defaultNetwork",
+    vpc_name=name,
+    cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    availability_zone=default_zones.zones[0].id)
+    availability_zone=default_zones.zones[0].id,
+    vswitch_name=name)
 cluster = alicloud.adb.Cluster("cluster",
     db_cluster_version="3.0",
     db_cluster_category="Cluster",
@@ -203,11 +210,15 @@ const name = config.get("name") || "adbaccountmysql";
 const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
 });
-const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {
+    vpcName: name,
+    cidrBlock: "172.16.0.0/16",
+});
 const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/24",
     availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    vswitchName: name,
 });
 const cluster = new alicloud.adb.Cluster("cluster", {
     dbClusterVersion: "3.0",

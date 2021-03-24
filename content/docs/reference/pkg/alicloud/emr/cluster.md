@@ -103,6 +103,7 @@ class MyStack : Stack
             vswitch.Add(new AliCloud.Vpc.Switch($"vswitch-{range.Value}", new AliCloud.Vpc.SwitchArgs
             {
                 AvailabilityZone = @var.Availability_zone == "" ? defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId) : @var.Availability_zone,
+                VswitchName = @var.Vswitch_name,
                 CidrBlock = @var.Vswitch_cidr,
                 VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
             }));
@@ -281,6 +282,7 @@ const vswitch: alicloud.vpc.Switch[];
 for (const range = {value: 0}; range.value < (_var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
     vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
         availabilityZone: _var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : _var.availability_zone,
+        vswitchName: _var.vswitch_name,
         cidrBlock: _var.vswitch_cidr,
         vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id,
     }));
@@ -444,6 +446,7 @@ class MyStack : Stack
             vswitch.Add(new AliCloud.Vpc.Switch($"vswitch-{range.Value}", new AliCloud.Vpc.SwitchArgs
             {
                 AvailabilityZone = @var.Availability_zone == "" ? defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId) : @var.Availability_zone,
+                VswitchName = @var.Vswitch_name,
                 CidrBlock = @var.Vswitch_cidr,
                 VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
             }));
@@ -622,6 +625,7 @@ const vswitch: alicloud.vpc.Switch[];
 for (const range = {value: 0}; range.value < (_var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
     vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
         availabilityZone: _var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : _var.availability_zone,
+        vswitchName: _var.vswitch_name,
         cidrBlock: _var.vswitch_cidr,
         vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id,
     }));
@@ -785,6 +789,7 @@ class MyStack : Stack
             vswitch.Add(new AliCloud.Vpc.Switch($"vswitch-{range.Value}", new AliCloud.Vpc.SwitchArgs
             {
                 AvailabilityZone = @var.Availability_zone == "" ? defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId) : @var.Availability_zone,
+                VswitchName = @var.Vswitch_name,
                 CidrBlock = @var.Vswitch_cidr,
                 VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
             }));
@@ -963,6 +968,7 @@ const vswitch: alicloud.vpc.Switch[];
 for (const range = {value: 0}; range.value < (_var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
     vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
         availabilityZone: _var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : _var.availability_zone,
+        vswitchName: _var.vswitch_name,
         cidrBlock: _var.vswitch_cidr,
         vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id,
     }));
@@ -1124,6 +1130,7 @@ class MyStack : Stack
             vswitch.Add(new AliCloud.Vpc.Switch($"vswitch-{range.Value}", new AliCloud.Vpc.SwitchArgs
             {
                 AvailabilityZone = @var.Availability_zone == "" ? defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId) : @var.Availability_zone,
+                VswitchName = @var.Vswitch_name,
                 CidrBlock = @var.Vswitch_cidr,
                 VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
             }));
@@ -1255,6 +1262,7 @@ const vswitch: alicloud.vpc.Switch[];
 for (const range = {value: 0}; range.value < (_var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
     vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
         availabilityZone: _var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : _var.availability_zone,
+        vswitchName: _var.vswitch_name,
         cidrBlock: _var.vswitch_cidr,
         vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id,
     }));

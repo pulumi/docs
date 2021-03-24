@@ -46,10 +46,12 @@ class MyStack : Stack
         var name = config.Get("name") ?? "alicloudRouterInterfaceConnectionBasic";
         var fooNetwork = new AliCloud.Vpc.Network("fooNetwork", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = name,
             CidrBlock = "172.16.0.0/12",
         });
         var barNetwork = new AliCloud.Vpc.Network("barNetwork", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = name,
             CidrBlock = "192.168.0.0/16",
         }, new CustomResourceOptions
         {
@@ -132,12 +134,14 @@ func main() {
 			name = param
 		}
 		fooNetwork, err := vpc.NewNetwork(ctx, "fooNetwork", &vpc.NetworkArgs{
+			VpcName:   pulumi.String(name),
 			CidrBlock: pulumi.String("172.16.0.0/12"),
 		})
 		if err != nil {
 			return err
 		}
 		barNetwork, err := vpc.NewNetwork(ctx, "barNetwork", &vpc.NetworkArgs{
+			VpcName:   pulumi.String(name),
 			CidrBlock: pulumi.String("192.168.0.0/16"),
 		}, pulumi.Provider(alicloud))
 		if err != nil {
@@ -204,9 +208,13 @@ if region is None:
 name = config.get("name")
 if name is None:
     name = "alicloudRouterInterfaceConnectionBasic"
-foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/12")
-bar_network = alicloud.vpc.Network("barNetwork", cidr_block="192.168.0.0/16",
-opts=pulumi.ResourceOptions(provider=alicloud))
+foo_network = alicloud.vpc.Network("fooNetwork",
+    vpc_name=name,
+    cidr_block="172.16.0.0/12")
+bar_network = alicloud.vpc.Network("barNetwork",
+    vpc_name=name,
+    cidr_block="192.168.0.0/16",
+    opts=pulumi.ResourceOptions(provider=alicloud))
 initiate = alicloud.vpc.RouterInterface("initiate",
     opposite_region=region,
     router_type="VRouter",
@@ -249,8 +257,14 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const region = config.get("region") || "cn-hangzhou";
 const name = config.get("name") || "alicloudRouterInterfaceConnectionBasic";
-const fooNetwork = new alicloud.vpc.Network("fooNetwork", {cidrBlock: "172.16.0.0/12"});
-const barNetwork = new alicloud.vpc.Network("barNetwork", {cidrBlock: "192.168.0.0/16"}, {
+const fooNetwork = new alicloud.vpc.Network("fooNetwork", {
+    vpcName: name,
+    cidrBlock: "172.16.0.0/12",
+});
+const barNetwork = new alicloud.vpc.Network("barNetwork", {
+    vpcName: name,
+    cidrBlock: "192.168.0.0/16",
+}, {
     provider: alicloud,
 });
 const initiate = new alicloud.vpc.RouterInterface("initiate", {

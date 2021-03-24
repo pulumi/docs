@@ -47,14 +47,15 @@ class MyStack : Stack
         });
         var fooSwitch = new AliCloud.Vpc.Switch("fooSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = @default.Apply(@default => @default.Zones[0].Id),
-            CidrBlock = "172.16.0.0/21",
             VpcId = fooNetwork.Id,
+            CidrBlock = "172.16.0.0/21",
+            AvailabilityZone = @default.Apply(@default => @default.Zones[0].Id),
+            VswitchName = name,
         });
         var fooNatGateway = new AliCloud.Vpc.NatGateway("fooNatGateway", new AliCloud.Vpc.NatGatewayArgs
         {
-            Specification = "Small",
             VpcId = fooNetwork.Id,
+            Specification = "Small",
         });
         var fooEip = new AliCloud.Ecs.Eip("fooEip", new AliCloud.Ecs.EipArgs
         {
@@ -66,9 +67,9 @@ class MyStack : Stack
         });
         var fooSnatEntry = new AliCloud.Vpc.SnatEntry("fooSnatEntry", new AliCloud.Vpc.SnatEntryArgs
         {
-            SnatIp = fooEip.IpAddress,
             SnatTableId = fooNatGateway.SnatTableIds,
             SourceVswitchId = fooSwitch.Id,
+            SnatIp = fooEip.IpAddress,
         });
         var fooSnatEntries = fooSnatEntry.SnatTableId.Apply(snatTableId => AliCloud.Vpc.GetSnatEntries.InvokeAsync(new AliCloud.Vpc.GetSnatEntriesArgs
         {
@@ -117,16 +118,17 @@ func main() {
 			return err
 		}
 		fooSwitch, err := vpc.NewSwitch(ctx, "fooSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(_default.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/21"),
 			VpcId:            fooNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/21"),
+			AvailabilityZone: pulumi.String(_default.Zones[0].Id),
+			VswitchName:      pulumi.String(name),
 		})
 		if err != nil {
 			return err
 		}
 		fooNatGateway, err := vpc.NewNatGateway(ctx, "fooNatGateway", &vpc.NatGatewayArgs{
-			Specification: pulumi.String("Small"),
 			VpcId:         fooNetwork.ID(),
+			Specification: pulumi.String("Small"),
 		})
 		if err != nil {
 			return err
@@ -143,9 +145,9 @@ func main() {
 			return err
 		}
 		fooSnatEntry, err := vpc.NewSnatEntry(ctx, "fooSnatEntry", &vpc.SnatEntryArgs{
-			SnatIp:          fooEip.IpAddress,
 			SnatTableId:     fooNatGateway.SnatTableIds,
 			SourceVswitchId: fooSwitch.ID(),
+			SnatIp:          fooEip.IpAddress,
 		})
 		if err != nil {
 			return err
@@ -172,20 +174,21 @@ if name is None:
 default = alicloud.get_zones(available_resource_creation="VSwitch")
 foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/12")
 foo_switch = alicloud.vpc.Switch("fooSwitch",
-    availability_zone=default.zones[0].id,
+    vpc_id=foo_network.id,
     cidr_block="172.16.0.0/21",
-    vpc_id=foo_network.id)
+    availability_zone=default.zones[0].id,
+    vswitch_name=name)
 foo_nat_gateway = alicloud.vpc.NatGateway("fooNatGateway",
-    specification="Small",
-    vpc_id=foo_network.id)
+    vpc_id=foo_network.id,
+    specification="Small")
 foo_eip = alicloud.ecs.Eip("fooEip")
 foo_eip_association = alicloud.ecs.EipAssociation("fooEipAssociation",
     allocation_id=foo_eip.id,
     instance_id=foo_nat_gateway.id)
 foo_snat_entry = alicloud.vpc.SnatEntry("fooSnatEntry",
-    snat_ip=foo_eip.ip_address,
     snat_table_id=foo_nat_gateway.snat_table_ids,
-    source_vswitch_id=foo_switch.id)
+    source_vswitch_id=foo_switch.id,
+    snat_ip=foo_eip.ip_address)
 foo_snat_entries = foo_snat_entry.snat_table_id.apply(lambda snat_table_id: alicloud.vpc.get_snat_entries(snat_table_id=snat_table_id))
 ```
 
@@ -202,35 +205,33 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "snat-entry-example-name";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const default = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const fooNetwork = new alicloud.vpc.Network("foo", {
-    cidrBlock: "172.16.0.0/12",
 });
-const fooSwitch = new alicloud.vpc.Switch("foo", {
-    availabilityZone: defaultZones.zones[0].id,
+const fooNetwork = new alicloud.vpc.Network("fooNetwork", {cidrBlock: "172.16.0.0/12"});
+const fooSwitch = new alicloud.vpc.Switch("fooSwitch", {
+    vpcId: fooNetwork.id,
     cidrBlock: "172.16.0.0/21",
-    vpcId: fooNetwork.id,
+    availabilityZone: _default.then(_default => _default.zones[0].id),
+    vswitchName: name,
 });
-const fooNatGateway = new alicloud.vpc.NatGateway("foo", {
+const fooNatGateway = new alicloud.vpc.NatGateway("fooNatGateway", {
+    vpcId: fooNetwork.id,
     specification: "Small",
-    vpcId: fooNetwork.id,
 });
-const fooEip = new alicloud.ecs.Eip("foo", {});
-const fooEipAssociation = new alicloud.ecs.EipAssociation("foo", {
+const fooEip = new alicloud.ecs.Eip("fooEip", {});
+const fooEipAssociation = new alicloud.ecs.EipAssociation("fooEipAssociation", {
     allocationId: fooEip.id,
     instanceId: fooNatGateway.id,
 });
-const fooSnatEntry = new alicloud.vpc.SnatEntry("foo", {
-    snatIp: fooEip.ipAddress,
+const fooSnatEntry = new alicloud.vpc.SnatEntry("fooSnatEntry", {
     snatTableId: fooNatGateway.snatTableIds,
     sourceVswitchId: fooSwitch.id,
+    snatIp: fooEip.ipAddress,
 });
 const fooSnatEntries = fooSnatEntry.snatTableId.apply(snatTableId => alicloud.vpc.getSnatEntries({
     snatTableId: snatTableId,
-}, { async: true }));
+}));
 ```
 
 

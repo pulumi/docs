@@ -25,6 +25,7 @@ Explore the resources and functions of the alicloud.cms module.
     <li><a href="getalarmcontactgroups" title="GetAlarmContactGroups"><span class="symbol function"></span>GetAlarmContactGroups</a></li>
     <li><a href="getalarmcontacts" title="GetAlarmContacts"><span class="symbol function"></span>GetAlarmContacts</a></li>
     <li><a href="getgroupmetricrules" title="GetGroupMetricRules"><span class="symbol function"></span>GetGroupMetricRules</a></li>
+    <li><a href="getmonitorgroupinstances" title="GetMonitorGroupInstances"><span class="symbol function"></span>GetMonitorGroupInstances</a></li>
     <li><a href="getmonitorgroups" title="GetMonitorGroups"><span class="symbol function"></span>GetMonitorGroups</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
@@ -38,6 +39,6 @@ Explore the resources and functions of the alicloud.cms module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.37.0</dd>
+	<dd>2.38.0</dd>
 </dl>
 

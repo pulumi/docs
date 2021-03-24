@@ -48,6 +48,7 @@ class MyStack : Stack
         }));
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = name,
             CidrBlock = "172.16.0.0/16",
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
@@ -55,6 +56,7 @@ class MyStack : Stack
             VpcId = defaultNetwork.Id,
             CidrBlock = "172.16.0.0/24",
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            VswitchName = name,
         });
         var defaultScalingGroup = new AliCloud.Ess.ScalingGroup("defaultScalingGroup", new AliCloud.Ess.ScalingGroupArgs
         {
@@ -143,6 +145,7 @@ func main() {
 			return err
 		}
 		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			VpcName:   pulumi.String(name),
 			CidrBlock: pulumi.String("172.16.0.0/16"),
 		})
 		if err != nil {
@@ -152,6 +155,7 @@ func main() {
 			VpcId:            defaultNetwork.ID(),
 			CidrBlock:        pulumi.String("172.16.0.0/24"),
 			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+			VswitchName:      pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -211,11 +215,14 @@ default_regions = alicloud.get_regions(current=True)
 default_account = alicloud.get_account()
 default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_network = alicloud.vpc.Network("defaultNetwork",
+    vpc_name=name,
+    cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    availability_zone=default_zones.zones[0].id)
+    availability_zone=default_zones.zones[0].id,
+    vswitch_name=name)
 default_scaling_group = alicloud.ess.ScalingGroup("defaultScalingGroup",
     min_size=1,
     max_size=1,
@@ -256,11 +263,15 @@ const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
 });
-const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {
+    vpcName: name,
+    cidrBlock: "172.16.0.0/16",
+});
 const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/24",
     availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    vswitchName: name,
 });
 const defaultScalingGroup = new alicloud.ess.ScalingGroup("defaultScalingGroup", {
     minSize: 1,

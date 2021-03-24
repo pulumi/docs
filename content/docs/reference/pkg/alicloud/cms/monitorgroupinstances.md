@@ -38,6 +38,7 @@ class MyStack : Stack
     {
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = "tf-testacc-vpcname",
             CidrBlock = "192.168.0.0/16",
         });
         var defaultMonitorGroup = new AliCloud.Cms.MonitorGroup("defaultMonitorGroup", new AliCloud.Cms.MonitorGroupArgs
@@ -81,6 +82,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			VpcName:   pulumi.String("tf-testacc-vpcname"),
 			CidrBlock: pulumi.String("192.168.0.0/16"),
 		})
 		if err != nil {
@@ -121,7 +123,9 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="192.168.0.0/16")
+default_network = alicloud.vpc.Network("defaultNetwork",
+    vpc_name="tf-testacc-vpcname",
+    cidr_block="192.168.0.0/16")
 default_monitor_group = alicloud.cms.MonitorGroup("defaultMonitorGroup", monitor_group_name="tf-testaccmonitorgroup")
 example = alicloud.cms.MonitorGroupInstances("example",
     group_id=default_monitor_group.id,
@@ -144,7 +148,10 @@ example = alicloud.cms.MonitorGroupInstances("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "192.168.0.0/16"});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {
+    vpcName: "tf-testacc-vpcname",
+    cidrBlock: "192.168.0.0/16",
+});
 const defaultMonitorGroup = new alicloud.cms.MonitorGroup("defaultMonitorGroup", {monitorGroupName: "tf-testaccmonitorgroup"});
 const example = new alicloud.cms.MonitorGroupInstances("example", {
     groupId: defaultMonitorGroup.id,

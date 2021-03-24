@@ -48,6 +48,7 @@ class MyStack : Stack
         });
         var vpc1 = new AliCloud.Vpc.Network("vpc1", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = name,
             CidrBlock = "192.168.0.0/16",
         }, new CustomResourceOptions
         {
@@ -152,6 +153,7 @@ func main() {
 			return err
 		}
 		vpc1, err := vpc.NewNetwork(ctx, "vpc1", &vpc.NetworkArgs{
+			VpcName:   pulumi.String(name),
 			CidrBlock: pulumi.String("192.168.0.0/16"),
 		}, pulumi.Provider(alicloud.Fra))
 		if err != nil {
@@ -241,8 +243,10 @@ if name is None:
     name = "tf-testAccCenBandwidthLimitConfig"
 fra = pulumi.providers.Alicloud("fra", region="eu-central-1")
 sh = pulumi.providers.Alicloud("sh", region="cn-shanghai")
-vpc1 = alicloud.vpc.Network("vpc1", cidr_block="192.168.0.0/16",
-opts=pulumi.ResourceOptions(provider=alicloud["fra"]))
+vpc1 = alicloud.vpc.Network("vpc1",
+    vpc_name=name,
+    cidr_block="192.168.0.0/16",
+    opts=pulumi.ResourceOptions(provider=alicloud["fra"]))
 vpc2 = alicloud.vpc.Network("vpc2", cidr_block="172.16.0.0/12",
 opts=pulumi.ResourceOptions(provider=alicloud["sh"]))
 cen = alicloud.cen.Instance("cen", description="tf-testAccCenBandwidthLimitConfigDescription")
@@ -294,7 +298,10 @@ const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccCenBandwidthLimitConfig";
 const fra = new alicloud.Provider("fra", {region: "eu-central-1"});
 const sh = new alicloud.Provider("sh", {region: "cn-shanghai"});
-const vpc1 = new alicloud.vpc.Network("vpc1", {cidrBlock: "192.168.0.0/16"}, {
+const vpc1 = new alicloud.vpc.Network("vpc1", {
+    vpcName: name,
+    cidrBlock: "192.168.0.0/16",
+}, {
     provider: alicloud.fra,
 });
 const vpc2 = new alicloud.vpc.Network("vpc2", {cidrBlock: "172.16.0.0/12"}, {

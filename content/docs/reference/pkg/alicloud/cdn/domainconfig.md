@@ -42,13 +42,16 @@ class MyStack : Stack
             DomainName = "tf-testacc%d.xiaozhu.com",
             CdnType = "web",
             Scope = "overseas",
-            Sources = new AliCloud.Cdn.Inputs.DomainNewSourcesArgs
+            Sources = 
             {
-                Content = "1.1.1.1",
-                Type = "ipaddr",
-                Priority = 20,
-                Port = 80,
-                Weight = 15,
+                new AliCloud.Cdn.Inputs.DomainNewSourceArgs
+                {
+                    Content = "1.1.1.1",
+                    Type = "ipaddr",
+                    Priority = 20,
+                    Port = 80,
+                    Weight = 15,
+                },
             },
         });
         var config = new AliCloud.Cdn.DomainConfig("config", new AliCloud.Cdn.DomainConfigArgs
@@ -91,12 +94,14 @@ func main() {
 			DomainName: pulumi.String(fmt.Sprintf("%v%v%v", "tf-testacc", "%", "d.xiaozhu.com")),
 			CdnType:    pulumi.String("web"),
 			Scope:      pulumi.String("overseas"),
-			Sources: &cdn.DomainNewSourcesArgs{
-				Content:  pulumi.String("1.1.1.1"),
-				Type:     pulumi.String("ipaddr"),
-				Priority: pulumi.Int(20),
-				Port:     pulumi.Int(80),
-				Weight:   pulumi.Int(15),
+			Sources: cdn.DomainNewSourceArray{
+				&cdn.DomainNewSourceArgs{
+					Content:  pulumi.String("1.1.1.1"),
+					Type:     pulumi.String("ipaddr"),
+					Priority: pulumi.Int(20),
+					Port:     pulumi.Int(80),
+					Weight:   pulumi.Int(15),
+				},
 			},
 		})
 		if err != nil {
@@ -135,13 +140,13 @@ domain = alicloud.cdn.DomainNew("domain",
     domain_name="tf-testacc%d.xiaozhu.com",
     cdn_type="web",
     scope="overseas",
-    sources=alicloud.cdn.DomainNewSourcesArgs(
+    sources=[alicloud.cdn.DomainNewSourceArgs(
         content="1.1.1.1",
         type="ipaddr",
         priority=20,
         port=80,
         weight=15,
-    ))
+    )])
 config = alicloud.cdn.DomainConfig("config",
     domain_name=domain.domain_name,
     function_name="ip_allow_list_set",
@@ -167,13 +172,13 @@ const domain = new alicloud.cdn.DomainNew("domain", {
     domainName: `tf-testacc%d.xiaozhu.com`,
     cdnType: "web",
     scope: "overseas",
-    sources: {
+    sources: [{
         content: "1.1.1.1",
         type: "ipaddr",
         priority: "20",
         port: 80,
         weight: "15",
-    },
+    }],
 });
 const config = new alicloud.cdn.DomainConfig("config", {
     domainName: domain.domainName,

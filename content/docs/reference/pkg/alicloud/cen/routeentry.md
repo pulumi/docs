@@ -60,6 +60,7 @@ class MyStack : Stack
         }));
         var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = name,
             CidrBlock = "172.16.0.0/12",
         }, new CustomResourceOptions
         {
@@ -70,6 +71,7 @@ class MyStack : Stack
             VpcId = vpc.Id,
             CidrBlock = "172.16.0.0/21",
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            VswitchName = name,
         }, new CustomResourceOptions
         {
             Provider = alicloud.Hz,
@@ -207,6 +209,7 @@ func main() {
 			return err
 		}
 		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
+			VpcName:   pulumi.String(name),
 			CidrBlock: pulumi.String("172.16.0.0/12"),
 		}, pulumi.Provider(alicloud.Hz))
 		if err != nil {
@@ -216,6 +219,7 @@ func main() {
 			VpcId:            vpc.ID(),
 			CidrBlock:        pulumi.String("172.16.0.0/21"),
 			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+			VswitchName:      pulumi.String(name),
 		}, pulumi.Provider(alicloud.Hz))
 		if err != nil {
 			return err
@@ -306,12 +310,15 @@ default_instance_types = alicloud.ecs.get_instance_types(availability_zone=defau
 default_images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
     most_recent=True,
     owners="system")
-vpc = alicloud.vpc.Network("vpc", cidr_block="172.16.0.0/12",
-opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
+vpc = alicloud.vpc.Network("vpc",
+    vpc_name=name,
+    cidr_block="172.16.0.0/12",
+    opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     vpc_id=vpc.id,
     cidr_block="172.16.0.0/21",
     availability_zone=default_zones.zones[0].id,
+    vswitch_name=name,
     opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
 default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup",
     description="foo",
@@ -377,13 +384,17 @@ const defaultImages = alicloud.ecs.getImages({
     mostRecent: true,
     owners: "system",
 });
-const vpc = new alicloud.vpc.Network("vpc", {cidrBlock: "172.16.0.0/12"}, {
+const vpc = new alicloud.vpc.Network("vpc", {
+    vpcName: name,
+    cidrBlock: "172.16.0.0/12",
+}, {
     provider: alicloud.hz,
 });
 const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: vpc.id,
     cidrBlock: "172.16.0.0/21",
     availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    vswitchName: name,
 }, {
     provider: alicloud.hz,
 });
