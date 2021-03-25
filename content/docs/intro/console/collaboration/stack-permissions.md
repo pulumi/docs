@@ -43,7 +43,7 @@ from these sources are merged together, granting the highest permission availabl
 
 - **Organization Settings**. An organization admin can configure [base permissions]({{< relref "organization-roles#organization-settings" >}}) for the organization's stacks, granting all members of the organization a minimum permission level.
 - **Stack Creator**. The user who created the stack is given `Stack admin` permission, even if the organization's
-  base permission for stacks is `None`. An organization admin can remove the stack creator by navigating to **Stack > Settings > Access** and clicking **Remove**.
+  base permission for stacks is `None`. An organization admin can remove the stack creator by navigating to **Stack > Settings > Access** and selecting **Remove**.
 - **Team Membership**. Organization admins can grant members of a [team]({{< relref "teams" >}}) access to stacks and set their permissions.
 
 ## Next Steps

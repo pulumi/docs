@@ -19,7 +19,7 @@ to a group of users.
 ### Creating a Team
 
 You can add a new team by going to the organization's **Teams** tab, and then
-clicking **New**. Only organization admins can create or update teams.
+selecting **New**. Only organization admins can create or update teams.
 
 ![Adding a new team](/images/docs/reference/service/new-team-card.png)
 

@@ -128,7 +128,7 @@ The Organization drop-down list displays all of the organizations your account i
 associated with, and lets you add a new organization backed by a third
 party identity provider. To switch to a different organization:
 
-1. Click on the organization drop-down list on the upper left corner of the Console screen
+1. Select the organization drop-down list on the upper left corner of the Console screen
 next to the Pulumi logo.
 1. Select your organization name. The organization page view is dependent on your role within the Pulumi organization.
 

@@ -30,7 +30,7 @@ Console.  Your account display name, avatar URL, and email address are
 obtained from the identity provider you used for signing up. For example, your
 GitHub identity.
 
-To edit your profile information, navigate to **Profile Settings** by clicking
+To edit your profile information, navigate to **Profile Settings** by selecting
 on your avatar and selecting **Settings**. The **Profile** tab is displayed by default.
 
 ![User-profile page](/images/docs/reference/service/user-profile-page.png)
@@ -68,7 +68,7 @@ When you run [`pulumi login`]({{< relref "/docs/reference/cli/pulumi_login" >}})
 
 ![Access tokens](/images/docs/reference/service/access-tokens.png)
 
-You can create additional access tokens on this tab by clicking **New Access Token**. Similarly, you may remove an unused token by highlighting it on the list and clicking "Remove access token".
+You can create additional access tokens on this tab by selecting **New Access Token**. Similarly, you may remove an unused token by highlighting it on the list and selecting "Remove access token".
 
 ## Subscription
 
@@ -76,7 +76,7 @@ This tab provides details on your subscription information, which is the Pulumi 
 
 ## Integrations
 
-This tab provides a list of Pulumi's Continuous Delivery guides. Click on your favorite CI/CD platform to learn more about how to integrate it with Pulumi.
+This tab provides a list of Pulumi's Continuous Delivery guides. Select your favorite CI/CD platform to learn more about how to integrate it with Pulumi.
 
 ## Next Steps
 

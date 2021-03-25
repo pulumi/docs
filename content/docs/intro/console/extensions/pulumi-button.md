@@ -9,7 +9,7 @@ aliases:
 
 The "Deploy with Pulumi" button lets you easily create new Pulumi projects from the browser. You can embed the button in README files within GitHub repositories or gists, blog posts, or other web pages.
 
-For example, you can click the following button to configure and create a new empty JavaScript project:
+For example, select the `Deploy` button to configure and create a new empty JavaScript project:
 
 [![Deploy](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
 
@@ -65,13 +65,13 @@ After you've verified your project template works as expected, you can add a but
 
 There are two ways to reference the project template:
 
-- Implicitly without a `template` parameter. For public GitHub repositories or gists, if you don't specify a `template` parameter, Pulumi will infer the URL to the template using the HTTP `referer` header that is sent when the button is clicked. This makes the button stable under forks and branches of the repository.
+- Implicitly without a `template` parameter. For public GitHub repositories or gists, if you don't specify a `template` parameter, Pulumi will infer the URL to the template using the HTTP `referer` header that is sent. This makes the button stable under forks and branches of the repository.
 
 - Explicitly specifying a `template` parameter that points to the project. This is useful for buttons that aren't inside a repository, such as in blog posts or other web pages, or when the README isn't in the same directory as the project template.
 
 ### Implicit Templates
 
-If you're embedding the button in the README of a public GitHub repo or gist, Pulumi will automatically infer the URL to the template from the `referer` header that is sent when the button is clicked.
+If you're embedding the button in the README of a public GitHub repo or gist, Pulumi will automatically infer the URL to the template from the `referer` header that is sent.
 
 This is convenient because it eliminates the need for hard-coding the specific repository URL into the button, allowing forks and branches of the repository to work without needing to change the button's `template` parameter.
 
