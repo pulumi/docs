@@ -59,6 +59,14 @@ const originBucket = pulumi.output(aws.s3.getBucket({
     bucket: originBucketName,
 }));
 
+// Create a bucket to store files we do not keep in source control.
+const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
+    acl: aws.s3.PublicReadAcl,
+    website: {
+        indexDocument: "index.html",
+    },
+});
+
 // The origin bucket needs to have the "public-read" ACL so its contents can be read by
 // CloudFront and served. But we deny the s3:ListBucket permission to anyone but account
 // users to prevent unintended disclosure of the bucket's contents.
@@ -166,6 +174,16 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 originSslProtocols: ["TLSv1.2"],
             },
         },
+        {
+            originId: uploadsBucket.arn,
+            domainName: uploadsBucket.websiteEndpoint,
+            customOriginConfig: {
+                originProtocolPolicy: "http-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            },
+        }
     ],
 
     // Default object to serve when no path is given.
@@ -177,6 +195,13 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     orderedCacheBehaviors: [
+        {
+            ...baseCacheBehavior,
+            targetOriginId: uploadsBucket.arn,
+            pathPattern: "/uploads/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+        },
         {
             ...baseCacheBehavior,
             pathPattern: "/css/styles.*.css",
@@ -349,6 +374,7 @@ async function createAliasRecord(
 
 [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
+export const uploadsBucketName = uploadsBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
