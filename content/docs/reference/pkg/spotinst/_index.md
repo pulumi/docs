@@ -24,6 +24,7 @@ A Pulumi package for creating and managing spotinst cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="elastigroupazurev3" title="ElastigroupAzureV3"><span class="symbol resource"></span>ElastigroupAzureV3</a></li>
     <li><a href="healthcheck" title="HealthCheck"><span class="symbol resource"></span>HealthCheck</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
@@ -38,6 +39,6 @@ A Pulumi package for creating and managing spotinst cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.19.0</dd>
+	<dd>2.19.1</dd>
 </dl>
 
