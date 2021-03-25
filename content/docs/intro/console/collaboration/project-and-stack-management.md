@@ -78,7 +78,7 @@ Select a resource link from **Activity > Timeline** to drill into a specific res
 
 ##### List View
 
-The Resource list view includes a useful search and filtering feature. You may filter by resource type which is broken down into three categories: Data, Compute, and Operations. Some resources include links to their associated pages in the cloud provider's console. For example, a Route 53 record set in the AWS Console.
+The Resource list view includes a useful search and filtering feature. You may filter by resource type which is broken down into three categories: Data, Compute, and Operations. Some resources include links to their associated pages in the cloud provider's console.
 
 ![Stack resource list](/images/docs/reference/service/stack-resource-list.png)
 
