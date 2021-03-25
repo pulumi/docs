@@ -59,6 +59,11 @@ const originBucket = pulumi.output(aws.s3.getBucket({
     bucket: originBucketName,
 }));
 
+// Create a bucket to store large files.
+const largeFileBucket = new aws.s3.Bucket("large-file-bucket", {
+    acl: aws.s3.PublicReadAcl,
+});
+
 // The origin bucket needs to have the "public-read" ACL so its contents can be read by
 // CloudFront and served. But we deny the s3:ListBucket permission to anyone but account
 // users to prevent unintended disclosure of the bucket's contents.
@@ -166,6 +171,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 originSslProtocols: ["TLSv1.2"],
             },
         },
+        {
+            originId: largeFileBucket.arn,
+            domainName: largeFileBucket.websiteEndpoint,
+        }
     ],
 
     // Default object to serve when no path is given.
@@ -216,6 +225,13 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/images/home/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: largeFileBucket.arn,
+            pathPattern: "/large-files/*",
             defaultTtl: oneHour,
             maxTtl: oneHour,
         },
@@ -349,6 +365,7 @@ async function createAliasRecord(
 
 [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
+export const largeFileBucketName = largeFileBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
