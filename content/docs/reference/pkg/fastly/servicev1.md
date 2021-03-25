@@ -6603,7 +6603,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
+    <dd>{{% md %}}The classification type for the condition (can be one of `REQUEST`, `RESPONSE`, `CACHE`, or `PREFETCH`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
