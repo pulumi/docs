@@ -1,7 +1,7 @@
 ---
 title: "Serverless: Is it Really the Future (Part 2)"
 date: 2021-04-06
-meta_desc: "Serverless is a popular infrastructure choice because it's fast, cheap, and can be implemented outside of traditional IT. This article discusse the pros and cons of serverless architecture."
+meta_desc: "Serverless is a popular because it's fast and cheap. This article discusses the pros and cons of serverless architecture."
 meta_image: meta.png
 authors:
     - lee-briggs
