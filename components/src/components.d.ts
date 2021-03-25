@@ -23,6 +23,11 @@ import {
 } from './components/convert/convert';
 
 export namespace Components {
+  interface PulumiAudio {
+    'pausedText': string;
+    'playingText': string;
+    'url': string;
+  }
   interface PulumiBanner {
     'dismissible': boolean;
     'name': string;
@@ -65,12 +70,6 @@ export namespace Components {
     'formId': string;
     'goToWebinarKey'?: string;
   }
-  interface PulumiMp3MuteController {
-    'audioElementId': string;
-    'file': string;
-    'pausedText': string;
-    'playingText': string;
-  }
   interface PulumiRoot {}
   interface PulumiTooltip {
     'hide': () => Promise<unknown>;
@@ -86,6 +85,12 @@ export namespace Components {
 
 declare global {
 
+
+  interface HTMLPulumiAudioElement extends Components.PulumiAudio, HTMLStencilElement {}
+  var HTMLPulumiAudioElement: {
+    prototype: HTMLPulumiAudioElement;
+    new (): HTMLPulumiAudioElement;
+  };
 
   interface HTMLPulumiBannerElement extends Components.PulumiBanner, HTMLStencilElement {}
   var HTMLPulumiBannerElement: {
@@ -147,12 +152,6 @@ declare global {
     new (): HTMLPulumiHubspotFormElement;
   };
 
-  interface HTMLPulumiMp3MuteControllerElement extends Components.PulumiMp3MuteController, HTMLStencilElement {}
-  var HTMLPulumiMp3MuteControllerElement: {
-    prototype: HTMLPulumiMp3MuteControllerElement;
-    new (): HTMLPulumiMp3MuteControllerElement;
-  };
-
   interface HTMLPulumiRootElement extends Components.PulumiRoot, HTMLStencilElement {}
   var HTMLPulumiRootElement: {
     prototype: HTMLPulumiRootElement;
@@ -177,6 +176,7 @@ declare global {
     new (): HTMLPulumiWebinarFormSelectElement;
   };
   interface HTMLElementTagNameMap {
+    'pulumi-audio': HTMLPulumiAudioElement;
     'pulumi-banner': HTMLPulumiBannerElement;
     'pulumi-choosable': HTMLPulumiChoosableElement;
     'pulumi-chooser': HTMLPulumiChooserElement;
@@ -187,7 +187,6 @@ declare global {
     'pulumi-examples': HTMLPulumiExamplesElement;
     'pulumi-greenhouse-jobs-list': HTMLPulumiGreenhouseJobsListElement;
     'pulumi-hubspot-form': HTMLPulumiHubspotFormElement;
-    'pulumi-mp3-mute-controller': HTMLPulumiMp3MuteControllerElement;
     'pulumi-root': HTMLPulumiRootElement;
     'pulumi-tooltip': HTMLPulumiTooltipElement;
     'pulumi-top-button': HTMLPulumiTopButtonElement;
@@ -196,6 +195,11 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface PulumiAudio {
+    'pausedText'?: string;
+    'playingText'?: string;
+    'url'?: string;
+  }
   interface PulumiBanner {
     'dismissible'?: boolean;
     'name'?: string;
@@ -238,12 +242,6 @@ declare namespace LocalJSX {
     'formId'?: string;
     'goToWebinarKey'?: string;
   }
-  interface PulumiMp3MuteController {
-    'audioElementId'?: string;
-    'file'?: string;
-    'pausedText'?: string;
-    'playingText'?: string;
-  }
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
   }
@@ -256,6 +254,7 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'pulumi-audio': PulumiAudio;
     'pulumi-banner': PulumiBanner;
     'pulumi-choosable': PulumiChoosable;
     'pulumi-chooser': PulumiChooser;
@@ -266,7 +265,6 @@ declare namespace LocalJSX {
     'pulumi-examples': PulumiExamples;
     'pulumi-greenhouse-jobs-list': PulumiGreenhouseJobsList;
     'pulumi-hubspot-form': PulumiHubspotForm;
-    'pulumi-mp3-mute-controller': PulumiMp3MuteController;
     'pulumi-root': PulumiRoot;
     'pulumi-tooltip': PulumiTooltip;
     'pulumi-top-button': PulumiTopButton;
@@ -280,6 +278,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'pulumi-audio': LocalJSX.PulumiAudio & JSXBase.HTMLAttributes<HTMLPulumiAudioElement>;
       'pulumi-banner': LocalJSX.PulumiBanner & JSXBase.HTMLAttributes<HTMLPulumiBannerElement>;
       'pulumi-choosable': LocalJSX.PulumiChoosable & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
       'pulumi-chooser': LocalJSX.PulumiChooser & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
@@ -290,7 +289,6 @@ declare module "@stencil/core" {
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
       'pulumi-greenhouse-jobs-list': LocalJSX.PulumiGreenhouseJobsList & JSXBase.HTMLAttributes<HTMLPulumiGreenhouseJobsListElement>;
       'pulumi-hubspot-form': LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
-      'pulumi-mp3-mute-controller': LocalJSX.PulumiMp3MuteController & JSXBase.HTMLAttributes<HTMLPulumiMp3MuteControllerElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
       'pulumi-tooltip': LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
       'pulumi-top-button': LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;

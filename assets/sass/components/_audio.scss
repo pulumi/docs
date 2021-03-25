@@ -9,14 +9,19 @@ $green200: theme('colors.green.200');
 $green400: theme('colors.green.400');
 $green600: theme('colors.green.600');
 
-pulumi-mp3-mute-controller {
-    .mp3-mute-controller-container {
+pulumi-audio {
+    .error-callout {
+        @apply btn btn-orange inline-block;
+        cursor: default;
+    }
+
+    .audio-container {
         @apply cursor-pointer text-center;
         i {
             @apply mr-4;
         }
 
-        .mp3-toggle-button {
+        .audio-button {
             @apply btn btn-orange inline-block;
         }
     }

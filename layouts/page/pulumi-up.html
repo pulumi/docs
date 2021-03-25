@@ -9,12 +9,11 @@
                     <span class="blue-neon-sign-xl">Pulumi</span>
                     <span class="green-neon-sign-xl">UP</span>
                 </div>
-                <pulumi-mp3-mute-controller
+                <pulumi-audio
                     paused-text="FEEL THE VIBE"
                     playing-text="PAUSE THE VIBE"
-                    audio-element-id="pulumiup-background-music"
-                    file="http://music-bucker-d3204f7.s3-website-us-west-2.amazonaws.com/pulumiup-background-music.mp4"
-                ></pulumi-mp3-mute-controller>
+                    url="http://music-bucker-d3204f7.s3-website-us-west-2.amazonaws.com/pulumiup-background-music.mp4"
+                ></pulumi-audio>
                 <div class="mt-16">
                     <pulumi-date-countdown
                         value-label-class="text-2xl"
@@ -31,7 +30,7 @@
                         <div class="">
                             <pulumi-datetime class="section-title-blue text-center mt-4" date="2021-04-20T09:00:00-07:00"></pulumi-datetime>
                             <p class="max-w-3xl mx-auto text-lg">
-                                PulumiUP is a 2 hour virtual event for anyone who is interested in cloud engineering,
+                                PulumiUP is a two-hour virtual event for anyone who is interested in cloud engineering,
                                 cloud infrastructure, software development, modern applications, or Pulumi.
                                 Whether you’re a seasoned cloud engineer or just curious to learn what’s all
                                 the fuss about cloud engineering, PulumiUP will teach you something new about
@@ -101,5 +100,4 @@
         </div>
     </div>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Walter+Turncoat" />
 {{ end }}
