@@ -5,6 +5,7 @@ meta_desc: "Serverless is a popular because it's fast and cheap. This article di
 meta_image: serverless.png
 authors:
     - lee-briggs
+    - piers-karsenbarg
 tags:
     - serverless
 ---
