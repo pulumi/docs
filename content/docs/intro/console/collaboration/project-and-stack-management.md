@@ -34,7 +34,7 @@ Once signed in, select your organization from the drop-down list on the upper le
 
 ![Stack outputs and configuration](/images/docs/reference/service/organization-stacks.png)
 
-The **Projects** tab displays a card-based view of your stacks with relevant details including the project name and description, language, stack name, last update information, and resource count. This example shows an organization backed by GitHub and sorts the stacks by their GitHub repositories. By default, stacks are grouped by [project]({{< relref "/docs/intro/concepts/project" >}}) but you may group them by [tag]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}). Select the stack name to drill into a specific stack.
+The **Projects** tab displays a card-based view of your stacks with relevant details including the project name and description, language, stack name, last update information, and resource count. This example shows an organization backed by GitHub and sorts the stacks by their GitHub repositories. By default, stacks are grouped by [project]({{< relref "/docs/intro/concepts/project" >}}), but you may group them by [tag]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}). Select the stack name to get more details on a specific stack.
 
 ### Viewing a specific stack
 
@@ -74,7 +74,7 @@ Selecting "Details" from the Stack update tab, or selecting a specific activity 
 
 #### Resources View
 
-Select a resource link from **Activity > Timeline** to drill into a specific resource's properties and dependencies, if any. The Resources tab lets you toggle between a list and a graph view.
+Select a resource link from **Activity > Timeline** to drill into a specific resource's properties and dependencies, if any. The **Resources** tab lets you toggle between a list and a graph view.
 
 ##### List View
 

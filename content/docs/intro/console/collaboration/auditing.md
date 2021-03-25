@@ -29,8 +29,8 @@ of the call the user made.
 
 Audit logs are available to organizations with an Enterprise level subscription
 only. If you are an organization administrator, you can view your organization's audit logs,
-by selecting your organization from the organization drop down. Then select the settings tab.
-On the left nav-bar you should see a tab called Audit Logs. Audit Logs allow you to view
+by selecting your organization from the organization drop down. Then select the **Settings** tab.
+On the left nav-bar you should see a tab called **Audit Logs**. Audit Logs allow you to view
 the most recent audit logs for your organization.
 
 <img src="/images/docs/guides/self-hosted/auditlogs.png">

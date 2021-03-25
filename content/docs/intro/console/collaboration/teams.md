@@ -20,11 +20,11 @@ to a group of users.
 
 Members of a team can be granted `Team admin` or `Team member` permissions. Team admin's can add members to a
 team. Both team admins and team members can grant stack access to a team. By default, any new team members will be
-assigned the team member role. To change a team member's role use the 3-dot menu at the end of the table row.
+assigned the team member role. To change a team member's role use the ellipsis menu item at the end of the table row.
 
 ### Creating a Team
 
-Organization admins can add a new team by going to the organization's **Teams** tab, and then
+Organization admins can add a new team by going to the organization's **Teams** tab and 
 selecting **Create team**. Organization members can also be granted permissions to create teams
 in the organization settings. Any member who creates a team will automatically be assigned the team admin role.
 

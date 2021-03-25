@@ -62,7 +62,7 @@ to create a new repository in the target service as well as the instructions for
 ensuring that Pulumi correctly recognizes the VCS configuration.
 
 Complete each step and check-off the appropriate step. When all of the tasks under the
-**Configure VCS** step are complete select the **Next** button. The wizard will confirm
+**Configure VCS** step are complete, select the **Next** button. The wizard will confirm
 that your VCS configuration has been recognized and will automatically move you to the
 next step.
 

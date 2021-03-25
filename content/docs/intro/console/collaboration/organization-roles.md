@@ -55,7 +55,7 @@ If the stack permission for all members is `None`, then organization members mus
 granted access using [teams]({{< relref "teams" >}}) in order to update, or even [view the organization
 stacks]({{< relref "project-and-stack-management#viewing-your-organization-stacks" >}}).
 
-Additionally, organization admins can toggle wether organization members can create statck, wether
+Additionally, organization admins can toggle whether organization members can create stack, whether
 stacks admins can delete stcks, and whether staack admins can move stacks to other organizations.
 
 ### Team Permissions
