@@ -1145,8 +1145,9 @@ and stream_id if provided.</p>
 <dl class="py function">
 <dt id="pulumi.error">
 <code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">resource</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Resource<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stream_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.error" title="Permalink to this definition"></a></dt>
-<dd><p>Logs a message to the Pulumi CLI’s error channel, associating it with a resource
-and stream_id if provided.</p>
+<dd><p>Logs a message to the Pulumi CLI’s error channel, associating it
+with a resource and stream_id if provided.</p>
+<p>Consider raising an exception after calling error to stop the Pulumi program.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
