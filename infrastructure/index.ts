@@ -197,6 +197,13 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     orderedCacheBehaviors: [
         {
             ...baseCacheBehavior,
+            targetOriginId: largeFileBucket.arn,
+            pathPattern: "/large-files/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+        },
+        {
+            ...baseCacheBehavior,
             pathPattern: "/css/styles.*.css",
             defaultTtl: oneYear,
             maxTtl: oneYear,
@@ -234,13 +241,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/images/home/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
-        },
-        {
-            ...baseCacheBehavior,
-            targetOriginId: largeFileBucket.arn,
-            pathPattern: "/large-files/*",
             defaultTtl: oneHour,
             maxTtl: oneHour,
         },
