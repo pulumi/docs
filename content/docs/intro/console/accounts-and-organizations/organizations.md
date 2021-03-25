@@ -141,11 +141,12 @@ and Settings tabs.
 
 | Console Tab | Description |
 |--------|--------|
-| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management">}}) to learn more. |
-| People | A list of active members of the Pulumi organization. |
+| Dashboard | An overview of the organization including, recently updated stacks, recent activiity, a resource count graph. |
+| Projects | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management">}}) to learn more. |
+| Members | A list of active members of the Pulumi organization. |
 | Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
-| Webhooks | A [Team Pro]({{< relref "/pricing" >}}) feature that allows external services to be notified about events happening on an organization, including events occurring on organization stacks. |
-| Settings | A place for you to manage your organization settings including subscription and payment information and history, base permissions to all of the organization's stacks (including stack creation and deletion), and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
+| Policies | Policies empower you to set guardrails to enforce best practices and compliance. |
+| Settings | A place for you to manage your organization settings including subscription and payment information and history, stack permissiongs, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
 
 ## Next Steps
 

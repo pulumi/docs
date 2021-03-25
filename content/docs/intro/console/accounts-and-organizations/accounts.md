@@ -68,7 +68,7 @@ When you run [`pulumi login`]({{< relref "/docs/reference/cli/pulumi_login" >}})
 
 ![Access tokens](/images/docs/reference/service/access-tokens.png)
 
-You can create additional access tokens on this tab by selecting **New Access Token**. Similarly, you may remove an unused token by highlighting it on the list and selecting "Remove access token".
+You can create additional access tokens on this tab by selecting **Create token**. Similarly, you may remove an unused token by highlighting it on the list and selecting "Remove access token".
 
 ## Subscription
 

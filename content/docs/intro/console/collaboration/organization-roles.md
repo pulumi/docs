@@ -27,7 +27,7 @@ There are several kinds of organization roles a user may be assigned.
 
 **`Member`**
 
-A member of a Pulumi organization can be added to organization [teams]({{< relref "teams" >}}), and
+A member of a Pulumi organization can be added to [teams]({{< relref "teams" >}}), and
 depending on organization settings, may be able to create or delete stacks.
 
 **`Admin`**
