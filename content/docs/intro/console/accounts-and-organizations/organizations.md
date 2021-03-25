@@ -14,7 +14,7 @@ created for you and subscribed to the Pulumi Community edition.
 You can however be a member of multiple Pulumi organizations, and collaborate
 with other developers.
 
-If you're an admin of a Pulumi organization, you have the
+If you're a Pulumi organization admin, you have the
 ability to:
 
 * [Invite users]({{< relref "/docs/intro/console/collaboration/organization-roles#organization-membership" >}})

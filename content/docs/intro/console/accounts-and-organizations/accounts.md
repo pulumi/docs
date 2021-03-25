@@ -49,7 +49,7 @@ You can associate your Pulumi account with multiple identities. In addition to t
 
 Connecting these additional identities will enable
 you to join Pulumi organizations that are backed by those systems. Note that only
-admins can add members to a Pulumi organization.
+organization admins can add members to a Pulumi organization.
 
 In order to be invited as a member of a Pulumi organization, you must connect
 your account with the organization's backing identity provider. Once your
