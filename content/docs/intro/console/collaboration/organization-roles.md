@@ -14,7 +14,7 @@ organization.
 > Organizations billed per stack have slightly different rules regarding membership.
 
 To become a member of a Pulumi organization, you must be invited by an existing Pulumi
-organization administrator, or you must submit a request to the organization administrator for approval. In addition, depending on the [organization type]({{< relref "/docs/intro/console/accounts-and-organizations#organization-types" >}}), you must also be a member of the third-party organization or group backing the Pulumi
+organization administrator or you must submit a request to the organization administrator for approval. In addition, depending on the [organization type]({{< relref "/docs/intro/console/accounts-and-organizations#organization-types" >}}), you must also be a member of the third-party organization or group backing the Pulumi
 organization.
 
 For example, to become a member of a Pulumi organization backed by a GitLab Group,
@@ -60,7 +60,7 @@ stacks admins can delete stcks, and whether staack admins can move stacks to oth
 
 ### Team Permissions
 
-Organization admins can toggler wether members have the ability to create teams.
+Organization admins can toggler whether members have the ability to create teams.
 
 ## Next Steps
 

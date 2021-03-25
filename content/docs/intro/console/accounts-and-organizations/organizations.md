@@ -146,7 +146,7 @@ and Settings tabs.
 | Members | A list of active members of the Pulumi organization. |
 | Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
 | Policies | Policies empower you to set guardrails to enforce best practices and compliance. |
-| Settings | A place for you to manage your organization settings including subscription and payment information and history, stack permissiongs, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
+| Settings | A place for you to manage your organization settings including subscription and payment information and history, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
 
 ## Next Steps
 
