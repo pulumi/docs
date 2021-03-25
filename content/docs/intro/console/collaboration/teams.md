@@ -24,7 +24,7 @@ assigned the team member role. To change a team member's role use the ellipsis m
 
 ### Creating a Team
 
-Organization admins can add a new team by going to the organization's **Teams** tab and 
+Organization admins can add a new team by going to the organization's **Teams** tab and
 selecting **Create team**. Organization members can also be granted permissions to create teams
 in the organization settings. Any member who creates a team will automatically be assigned the team admin role.
 
