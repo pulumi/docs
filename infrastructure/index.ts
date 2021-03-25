@@ -62,6 +62,9 @@ const originBucket = pulumi.output(aws.s3.getBucket({
 // Create a bucket to store large files.
 const largeFileBucket = new aws.s3.Bucket("large-file-bucket", {
     acl: aws.s3.PublicReadAcl,
+    website: {
+        indexDocument: "index.html",
+    },
 });
 
 // The origin bucket needs to have the "public-read" ACL so its contents can be read by
@@ -174,6 +177,12 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             originId: largeFileBucket.arn,
             domainName: largeFileBucket.websiteEndpoint,
+            customOriginConfig: {
+                originProtocolPolicy: "http-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            },
         }
     ],
 
