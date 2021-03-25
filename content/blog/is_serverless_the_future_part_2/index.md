@@ -32,20 +32,26 @@ Whether you’re developing a greenfield application or evaluating an existing o
 
 To summarize, serverless isn’t the answer to everything but it has a lot to offer in the right places. Keep these questions  in mind:
 
-**[ ] How much do you care about vendor lock-in?**
-    Serverless architectures can’t simply be ported from one cloud provider to another. How much does your organization care about vendor lock-in?
-**[ ] What’s the size of your organization?**
-    Serverless is often a better fit for smaller organizations. Once you have the IT staff to support it, you might want to look at more traditional options. Large enterprises might want to look at Kubernetes.
-**[ ] Do you care about providing value quickly more than application transparency?**
-    If you want to get an application to market as quickly as possible, serverless can be a great choice. However, you’ll be sacrificing metrics and insight into your application. This can cause real problems as the scale grows.
-**[ ] Do you understand your application’s profile?**
-    Serverless is often said to save money since you only pay for the time you use. However, if your application has long response or start-up times, look more closely. Serverless can turn out to be an expensive choice.
-**[ ] What is the architecture of your application?**
-    Don’t expect traditional end-tier-styled architectures to work well with serverless. Look for applications that can be broken down into smaller components that work together. It also works the other way around—moving a serverless application to a server you control requires that you re-architect the application. Do you have the time and people to do that?
-**[ ] Is serverless a way to bypass IT?**
-    Using serverless as a way to bypass your IT department may not be the best idea. It’s too easy to put up code that’s non-compliant and vulnerable to attacks. Instead, use the DevOps approach and meet with all the stakeholders to come up with a solution.
-**[ ] What about security?**
-    Security is problematic with serverless architectures. Cloud providers offer some ready-made options, such as Amazon GuardDuty, but they may have so many constraints limiting the flexibility that serverless offers. Implementing secure serverless applications requires a lot of thought.
+**[&nbsp;&nbsp;&nbsp;] How much do you care about vendor lock-in?**<br>
+Serverless architectures can’t simply be ported from one cloud provider to another. How much does your organization care about vendor lock-in?
+
+**[&nbsp;&nbsp;&nbsp;] What’s the size of your organization?**<br>
+Serverless is often a better fit for smaller organizations. Once you have the IT staff to support it, you might want to look at more traditional options. Large enterprises might want to look at Kubernetes.
+
+**[&nbsp;&nbsp;&nbsp;] Do you care about providing value quickly more than application transparency?**<br>
+If you want to get an application to market as quickly as possible, serverless can be a great choice. However, you’ll be sacrificing metrics and insight into your application. This can cause real problems as the scale grows.
+
+**[&nbsp;&nbsp;&nbsp;] Do you understand your application’s profile?**<br>
+Serverless is often said to save money since you only pay for the time you use. However, if your application has long response or start-up times, look more closely. Serverless can turn out to be an expensive choice.
+
+**[&nbsp;&nbsp;&nbsp;] What is the architecture of your application?**<br>
+Don’t expect traditional end-tier-styled architectures to work well with serverless. Look for applications that can be broken down into smaller components that work together. It also works the other way around—moving a serverless application to a server you control requires that you re-architect the application. Do you have the time and people to do that?
+
+**[&nbsp;&nbsp;&nbsp;] Is serverless a way to bypass IT?**<br>
+Using serverless as a way to bypass your IT department may not be the best idea. It’s too easy to put up code that’s non-compliant and vulnerable to attacks. Instead, use the DevOps approach and meet with all the stakeholders to come up with a solution.
+
+**[&nbsp;&nbsp;&nbsp;] What about security?**<br>
+Security is problematic with serverless architectures. Cloud providers offer some ready-made options, such as Amazon GuardDuty, but they may have so many constraints limiting the flexibility that serverless offers. Implementing secure serverless applications requires a lot of thought.
 
 ## Learn More
 
