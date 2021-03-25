@@ -32,7 +32,7 @@ depending on organization settings, may be able to create or delete stacks.
 
 **`Admin`**
 
-Pulumi organization admins have `Admion` access to _all_ organization stacks,
+Pulumi organization admins have `Admin` access to _all_ organization stacks,
 and can manage organization settings and team memberships.
 
 ## Organization Settings{#organization-settings}
@@ -42,7 +42,7 @@ the permissions available to members of the organization.
 
 ![Organization settings](/images/docs/reference/service/org-settings-card.png)
 
-### Default Stack Permission
+### Stack Permissions
 
 Any organization member with the `Admin` role automatically has `Admin`
 permissions for all of the organization's stacks. Regular organization members
@@ -51,37 +51,16 @@ are granted the organization's _base permissions_ instead.
 For example, if the organization's base permissions is `Write`, then
 any organization member can update any organization stack.
 
-If the default stack permission is `None`, then organization members must be
+If the stack permission for all members is `None`, then organization members must be
 granted access using [teams]({{< relref "teams" >}}) in order to update, or even [view the organization
 stacks]({{< relref "project-and-stack-management#viewing-your-organization-stacks" >}}).
 
-### Stack Creation
+Additionally, organization admins can toggle wether organization members can create statck, wether 
+stacks admins can delete stcks, and whether staack admins can move stacks to other organizations.
 
-Pulumi organization admins can configure whether or not members can create stacks.
+### Team Permissions
 
-If enabled, any organization member can create a new stack. Otherwise, only
-organization admins can.
-
-When a stack is created within an organization, the creator is given
-`Stack admin` permissions to the stack. So even if the default
-stack permission is `NONE`, the creator will be able to update the stack. Organization admins
-can remove a creator's access to the stack.
-
-### Stack Deletion
-
-Similar to stack creation, Pulumi organization admins can configure whether
-or not organization members can delete stacks.
-
-If enabled, any organization member with `Stack admin` permission on the stack can delete
-it. Otherwise, only Pulumi  organization admins can.
-
-### Stack Transfer
-
-If enabled, organization members will be able to transfer stacks to another
-Pulumi organization.
-
-Transfering a stack to another organization requires that the user performing the action
-has both `Stack admin` permission to the stack being moved, and is a member of the organization the stack is being transferred to.
+Organization admins can toggler wether members have the ability to create teams.
 
 ## Next Steps
 
