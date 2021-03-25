@@ -59,8 +59,8 @@ const originBucket = pulumi.output(aws.s3.getBucket({
     bucket: originBucketName,
 }));
 
-// Create a bucket to store large files.
-const largeFileBucket = new aws.s3.Bucket("large-file-bucket", {
+// Create a bucket to store files we do not keep in source control.
+const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
     acl: aws.s3.PublicReadAcl,
     website: {
         indexDocument: "index.html",
@@ -175,8 +175,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             },
         },
         {
-            originId: largeFileBucket.arn,
-            domainName: largeFileBucket.websiteEndpoint,
+            originId: uploadsBucket.arn,
+            domainName: uploadsBucket.websiteEndpoint,
             customOriginConfig: {
                 originProtocolPolicy: "http-only",
                 httpPort: 80,
@@ -197,8 +197,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     orderedCacheBehaviors: [
         {
             ...baseCacheBehavior,
-            targetOriginId: largeFileBucket.arn,
-            pathPattern: "/large-files/*",
+            targetOriginId: uploadsBucket.arn,
+            pathPattern: "/uploads/*",
             defaultTtl: oneHour,
             maxTtl: oneHour,
         },
@@ -374,7 +374,7 @@ async function createAliasRecord(
 
 [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
-export const largeFileBucketName = largeFileBucket.bucket;
+export const uploadsBucketName = uploadsBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
