@@ -38,7 +38,7 @@ A Pulumi organization needs to be linked to a third-party identity provider, off
 additional layer
 of security for you and your team. While membership within the Pulumi organization is
 managed by
-an organization administrator, you must be a member of the backing third-party identity
+an organization admin, you must be a member of the backing third-party identity
 provider in order
 to join a Pulumi organization.
 
@@ -67,7 +67,7 @@ relref "/docs/guides/saml" >}}).
 
 ### GitHub-backed
 
-To add a GitHub-backed organization to Pulumi, an administrator of the GitHub organization
+To add a GitHub-backed organization to Pulumi, an admin of the GitHub organization
 must
 first grant the Pulumi OAuth app the `read:org` scope. This can be done on GitHub's
 [Applications
@@ -80,7 +80,7 @@ will not have access to any of the organization's source code, issues, or other 
 
 ### GitLab-backed
 
-To add a GitLab-backed organization to Pulumi, an administrator of the GitLab group
+To add a GitLab-backed organization to Pulumi, an admin of the GitLab group
 may add the group to Pulumi, and invite its members to join Pulumi.
 
 GitLab allows group admins to add members with a temporary membership, i.e., with an
@@ -92,7 +92,7 @@ organization on Pulumi.
 
 ### Bitbucket-backed
 
-To add a Bitbucket-backed organization to Pulumi, an administrator of the Atlassian
+To add a Bitbucket-backed organization to Pulumi, an admin of the Atlassian
 Bitbucket workspace
 must first grant the Pulumi Oauth app [read
 access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html#OAuthonBitbucketCloud-Scopes)
@@ -136,7 +136,7 @@ next to the Pulumi logo.
 
   _Members_. Pulumi organization members only see the Stacks and People tabs.
 
-  _Admins_. Pulumi organization administrators see the Stacks, People, Teams, Webhooks,
+  _Admins_. Pulumi organization admins see the Stacks, People, Teams, Webhooks,
 and Settings tabs.
 
 | Console Tab | Description |
