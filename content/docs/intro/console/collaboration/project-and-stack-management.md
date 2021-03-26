@@ -58,7 +58,7 @@ Custom [stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}) can 
 
 By default, the Activity tab gives you a card-based list of stack updates sorted by date.
 
-Selecting "Details" from the Stack update tab, or selecting a specific activity from the login screen gives you a detailed view of that specific update. The Activity tab provides insights into the operations that were performed on your stack resources during an update. This tab can include three tabs, depending on your setup:
+Selecting "Details" from the Stack update tab, or selecting a specific activity from the login screen, gives you a detailed view of that specific update. The Activity tab provides insights into the operations that were performed on your stack resources during an update. This tab can include three tabs, depending on your setup:
 
 * **Changes**. This lets you toggle between different log views:
 ![Stack resource graph](/images/docs/reference/service/resource-changes.png)

@@ -128,7 +128,7 @@ The Organization drop-down list displays all of the organizations your account i
 associated with, and lets you add a new organization backed by a third
 party identity provider. To switch to a different organization:
 
-1. Select the organization drop-down list on the upper left corner of the Console screen
+1. Select the organization drop-down list in the upper left corner of the Console screen
 next to the Pulumi logo.
 1. Select your organization name. The organization page view is dependent on your role within the Pulumi organization.
 
@@ -141,12 +141,12 @@ and Settings tabs.
 
 | Console Tab | Description |
 |--------|--------|
-| Dashboard | An overview of the organization including recently updated stacks, recent activiity, and a resource count graph. |
-| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management">}}). |
+| Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
+| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management" >}}). |
 | Members | A list of active members of the Pulumi organization. |
 | Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
-| Policies | Policies empower you to set guardrails to enforce best practices and compliance. |
-| Settings | A place for you to manage your organization settings including subscription and payment information and history, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
+| Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
+| Settings | Organization settings including subscription and payment information and history, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
 
 ## Next Steps
 

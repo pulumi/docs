@@ -31,7 +31,7 @@ obtained from the identity provider you used for signing up. For example, your
 GitHub identity.
 
 To edit your profile information, navigate to **Profile Settings** by selecting
-on your avatar and selecting **Settings**. The **Profile** tab is displayed by default.
+your avatar, then **Settings**. The **Profile** tab is displayed by default.
 
 ![User-profile page](/images/docs/reference/service/user-profile-page.png)
 
