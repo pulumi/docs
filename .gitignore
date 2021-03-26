@@ -61,3 +61,6 @@ content/docs/reference/pkg/python
 !content/docs/reference/pkg/python/pulumi/pulumi_pulumi
 !content/docs/reference/pkg/python/pulumi/pulumi_policy
 !content/docs/reference/pkg/python/pulumi/pulumi_terraform
+
+# Ignore vendored Hugo modules.
+_vendor/

@@ -15,6 +15,6 @@ source ./scripts/common.sh
 # on the environment, but when running builds manually, we need to set it ourselves.
 export BUILD_IDENTIFIER="$(git_sha_short)-$(current_time_in_ms)"
 
-./scripts/build-site.sh
+./scripts/build-site.sh preview
 ./scripts/sync-and-test-bucket.sh
 ./scripts/make-s3-redirects.sh

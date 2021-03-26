@@ -1,75 +1,30 @@
 # Pulumi Documentation Site
 
-[![Build Status](https://travis-ci.com/pulumi/docs.svg?token=eHg7Zp5zdDDJfTjY8ejq&branch=master)](https://travis-ci.com/pulumi/docs)
+![Deployment Status](https://github.com/pulumi/docs/actions/workflows/build-and-deploy.yml/badge.svg?branch=master)
 
 ## Contributing
 
-**Before adding new content, read [CONTRIBUTING.md](CONTRIBUTING.md).**
+First, be sure to read our [contributing guide](CONTRIBUTING.md) and review our [code of conduct](CODE_OF_CONDUCT.md).
 
+## About this repository
+
+This repository hosts the documentation we generate for the Pulumi CLI, SDK, and tutorials sourced from https://github.com/pulumi/examples. It's also responsible for building and deploying the https://www.pulumi.com website.
+
+If you're interested in contributing a blog post or other documentation, you'll probably want [pulumi/pulumi-hugo](https://github.com/pulumi/pulumi-hugo) instead. There, you'll find all of our hand-authored documentation, including, guides, tutorials, blogs, and landing pages, along with all of the assets and templates we use to render the website. You'll also find all of the instructions you need to get going.
 ## Toolchain
 
-The website is statically built using [Hugo](https://gohugo.io). So we have basic templating
-for generating HTML and the ability to write most files in Markdown.
+We build the Pulumi website statically with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the project:
 
-TypeScript documentation is generated directly from source using [TYPEDOC](http://typedoc.org/). We
-just check the resulting files directly into the repo under `./content/reference/pkg/nodejs`.
+* [Go](https://golang.org/)
+* [Hugo](https://gohugo.io)
+* [Node.js](https://nodejs.org/en/)
+* [Yarn](https://classic.yarnpkg.com/en/)
 
-## Development
+Out TypeScript documentation is generated directly from source using [TypeDoc](http://typedoc.org/), and we check in the resulting files at `./content/reference/pkg/nodejs`.
 
-### Prerequisites
+#### Go-based tools
 
-- [Node.js and npm](https://www.npmjs.com/get-npm)
-- [Ruby](https://www.ruby-lang.org/en/downloads/)
-- [Yarn](https://yarnpkg.com/en/docs/install) for installing dependencies in package.json
-- [Hugo](#hugo)
-- [Go](https://golang.org/dl/)
-
-#### Hugo
-
-The website is powered by [Hugo](https://gohugo.io).
-
-**IMPORTANT.** Recent versions of Hugo have bugs in the markdown renderer (Blackfriday) that prevents fenced code from rendering correctly in lists when a language is specified. Many of our tutorials are made up of ordered lists of steps, each step containing a code snippet. Until those bugs are fixed, and Hugo has adopted the version of Blackfriday with the fixes, we'll pin to [Hugo v0.55.4](https://github.com/gohugoio/hugo/releases/tag/v0.55.4). Tracking issue: https://github.com/pulumi/docs/issues/1091
-
-#### macOS
-
-The following commands use the package manager, [Homebrew](https://brew.sh/).
-
-##### Install Hugo
-
-```bash
-brew install hugo
-```
-
-##### Install Go
-
-
-```bash
-brew install go
-```
-
-#### Linux (Ubuntu)
-
-##### Install Hugo
-
-The quickest way to install the extended version of Hugo v0.55.4 on your Linux machine is to use `wget` and the `dpkg` utility. For confirming your server architecture and post-installation cleanup, see [Installing Hugo Using the dpkg utility](https://hostadvice.com/how-to/how-to-install-hugo-on-ubuntu-18-04).
-
-```bash
-wget https://github.com/gohugoio/hugo/releases/download/v0.55.4/hugo_extended_0.55.4_Linux-64bit.deb
-```
-
-```bash
-sudo dpkg -i hugo_extended_0.55.4_Linux-64bit.deb
-```
-
-If you wish to use `brew` on Linux, see [Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux).
-
-##### Install Go
-
-Download the Linux package from https://golang.org/dl/. Follow [installation and setup steps](https://tecadmin.net/install-go-on-ubuntu/) on "Installing Go on Ubuntu".
-
-#### Go-based Tools
-
-There are several other Go-based tools to install as well.
+In order to run the documentation generators, you'll need to install some additional Go-based tools as well:
 
 ```bash
 go get -u github.com/cbroglie/mustache
@@ -77,34 +32,19 @@ go get -u github.com/gobuffalo/packr
 go get -u github.com/pkg/errors
 go get -u github.com/russross/blackfriday/v2
 ```
-
 ### Makefile
 
-`make ensure` will run `yarn install` which resolves project dependencies.
+The `Makefile` exposes a number of helpers:
 
-`make lint` will run `yarn lint-markdown` which lints the markdown in the `content` directory.
+* `make ensure` resolves and installs dependencies
+* `make lint` checks all Markdown files for correctness
+* `make build` generates the website and writes it to `./public`
+* `make test` runs a script that checks for broken links
+* `make generate` builds the TypeScript, Python, and CLI documentation, and renders tutorials sourced from https://github.com/pulumi/examples.
 
-`make build` will generate the website (published to `./public`).
+## Generating API docs
 
-`make serve` will build the website and serve it to http://localhost:1313.
-
-`make test` runs a broken link checker tool against http://localhost:1313.
-
-`make generate` will regenerate the TypeScript documentation if needed, as well as the CLI documentation in [content/references/cli](content/reference/cli). The generated API documentation is placed in the [/content/reference/pkg/nodejs]/content/reference/pkg/nodejs) folder. This is extremely hacky.
-
-The following repos must be peers of `docs`, should be checked out to an appropriate branch, and should be built before running `make generate`:
-
-- `pulumi`
-- `pulumi-aws`
-- `pulumi-azure`
-- `pulumi-cloud`
-- `pulumi-gcp`
-- `pulumi-kubernetes`
-- etc.
-
-## Updating API docs
-
-to update API docs for all Pulumi packages, run the following commands to fetch latest release of each package and rebuild docs into `.content/reference/pkg` folder:
+To update API docs for all Pulumi packages, run the following commands to fetch latest the release of each package (packages must be sibling directories alongside this repository) and rebuild docs into `./content/reference/pkg`:
 
 ```bash
 ./scripts/update_repos.sh
@@ -117,9 +57,9 @@ To update a single package, make sure you have it checked out at the desired rel
 PKGS=yourpackagename ./scripts/run_typedoc.sh
 ```
 
-Docs for additional packages can be added by updating `./scripts/run_typedoc.sh` to include the package, and then updating `./config.toml` to include the package in the TOC as a `[[menu.reference]]` entry.
+Docs for additional packages can be added by updating `./scripts/run_typedoc.sh` to include the package, and then updating `./config.yml` to include the package in the website table of contents as a menu entry.
 
-## Updating resource docs
+## Generating resource docs
 
 > Resource docs are only available for providers for which we can generate a Pulumi schema.
 
@@ -155,30 +95,4 @@ Add a new folder under `content/docs/intro/cloud-providers` with instructions on
 
 ## Deploying updates
 
-When changes are merged into `master`, https://www.pulumi.com/ is automatically deployed. You can use the [Travis UI](https://travis-ci.com/pulumi/docs) to check on the status of the deployment.
-
-## Design Reference
-
-Web design is hard. Documentation is hard. Good web design for documentation is harder.
-
-Examples of other sites and their docs as inspiration:
-
-- https://kubernetes.github.io/
-- https://devcenter.heroku.com/
-- https://stripe.com/docs/api/curl#authentication
-- http://developer.mailchimp.com/documentation/mailchimp/
-- http://ionicframework.com/docs/
-- https://www.twilio.com/docs/
-
-## Troubleshooting
-
-If you're on macOS and you encounter an error running `make serve` about having `too many open files`, you’ll need to increase the number of file descriptors available to shell processes to some number greater than the number of files comprising the website, which is currently hovering at around 30K.
-
-The commands below should help. The first sets the soft and hard limits for your system, and will persist until you restart your computer. The second is also required, and applies those limits for the duration of your shell.
-
-```
-sudo launchctl limit maxfiles 50000 50000
-ulimit -n 50000
-```
-
-Once you do this, `make serve` should work for you.
+When changes are merged into `master`, https://www.pulumi.com/ is automatically deployed.

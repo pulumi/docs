@@ -8,7 +8,7 @@ set -o errexit -o pipefail
 source ./scripts/common.sh
 
 build_dir="public"
-source_dir="assets"
+source_dir="_vendor/$(hugo_theme_path)/assets"
 
 # Make a folder to contain the source files and maps we upload to Sentry.
 release_dir="sentry-release"
@@ -16,7 +16,7 @@ rm -rf "${release_dir}"
 mkdir -p "${release_dir}" "${release_dir}/assets"
 
 # Copy the files into that folder.
-cp -R "assets/js" "${release_dir}/assets/"
+cp -R "${source_dir}/js" "${release_dir}/assets/"
 find "${source_dir}" -name "*.js" -o -name "*.ts" -exec cp {} "${release_dir}/" \;
 find "${build_dir}" -name "*.js.map" -exec cp {} "${release_dir}/" \;
 

@@ -10,6 +10,9 @@ if [ ! $(echo ${current_version} | grep ${required_version}) ]; then
     exit 1
 fi
 
+# Install the Node dependencies for the website and the infrastructure.
 yarn install
-yarn --cwd components install
 yarn --cwd infrastructure install
+
+# Fetch Hugo modules.
+hugo mod vendor
