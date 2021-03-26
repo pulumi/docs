@@ -7,7 +7,7 @@ on:
 jobs:
   all:
     env:
-      GOPATH: ${{ github.workspace }}
+      GOPATH: ${{ github.workspace }}/go
     name: Bucket cleanup
     runs-on: ubuntu-18.04
     steps:
@@ -19,7 +19,7 @@ jobs:
 
       - uses: actions/setup-go@v2
         with:
-          go-version: 1.13.x
+          go-version: 1.16.x
 
       - name: Install assume-role
         run: go get -u github.com/remind101/assume-role

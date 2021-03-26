@@ -1,5 +1,9 @@
 #!/bin/bash
 
+aws_region() {
+    echo "$(pulumi -C infrastructure config get 'aws:region')"
+}
+
 # Posts a message to Slack. Requires a valid access token is available in $SLACK_ACCESS_TOKEN.
 # Usage: post_to_slack <channel> <message>
 post_to_slack() {
@@ -141,4 +145,8 @@ retry() {
         fi
     }
     done
+}
+
+hugo_theme_path() {
+    echo "github.com/pulumi/pulumi-hugo/themes/default"
 }

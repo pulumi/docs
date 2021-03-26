@@ -224,8 +224,8 @@ function groupLintErrorOutput(result) {
     return filteredErrors;
 }
 
-// Build the lint object for the '../content' directory.
-const filesToLint = getMarkdownFiles("../content");
+// Build the lint object for the content directory.
+const filesToLint = getMarkdownFiles(`../_vendor/github.com/pulumi/pulumi-hugo/themes/default/content`);
 
 /**
  * The config options for lint markdown files. All rules
