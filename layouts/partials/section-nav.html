@@ -1,9 +1,0 @@
-<nav class="nav-section-sticky">
-    <div class="container mx-auto uppercase">
-        <ul>
-            {{ range .sections }}
-                <li><a data-track="nav-{{ .label | urlize }}" href="#{{ .id }}">{{ .label }}</a></li>
-            {{ end }}
-        </ul>
-    </div>
-</nav>

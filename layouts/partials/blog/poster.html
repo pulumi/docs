@@ -1,8 +1,0 @@
-{{/*
-    If a general image is associated with the post, display it in-line.
-*/}}
-{{ if .Params.meta_image }}
-    <a href="{{ .RelPermalink }}"><img class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100"
-        src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}"
-        alt="{{ .Title }}"></a>
-{{ end }}
