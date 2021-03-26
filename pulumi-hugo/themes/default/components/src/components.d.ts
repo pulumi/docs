@@ -23,6 +23,11 @@ import {
 } from './components/convert/convert';
 
 export namespace Components {
+  interface PulumiAudio {
+    'pausedText': string;
+    'playingText': string;
+    'url': string;
+  }
   interface PulumiBanner {
     'dismissible': boolean;
     'name': string;
@@ -80,6 +85,12 @@ export namespace Components {
 
 declare global {
 
+
+  interface HTMLPulumiAudioElement extends Components.PulumiAudio, HTMLStencilElement {}
+  var HTMLPulumiAudioElement: {
+    prototype: HTMLPulumiAudioElement;
+    new (): HTMLPulumiAudioElement;
+  };
 
   interface HTMLPulumiBannerElement extends Components.PulumiBanner, HTMLStencilElement {}
   var HTMLPulumiBannerElement: {
@@ -165,6 +176,7 @@ declare global {
     new (): HTMLPulumiWebinarFormSelectElement;
   };
   interface HTMLElementTagNameMap {
+    'pulumi-audio': HTMLPulumiAudioElement;
     'pulumi-banner': HTMLPulumiBannerElement;
     'pulumi-choosable': HTMLPulumiChoosableElement;
     'pulumi-chooser': HTMLPulumiChooserElement;
@@ -183,6 +195,11 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface PulumiAudio {
+    'pausedText'?: string;
+    'playingText'?: string;
+    'url'?: string;
+  }
   interface PulumiBanner {
     'dismissible'?: boolean;
     'name'?: string;
@@ -237,6 +254,7 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'pulumi-audio': PulumiAudio;
     'pulumi-banner': PulumiBanner;
     'pulumi-choosable': PulumiChoosable;
     'pulumi-chooser': PulumiChooser;
@@ -260,6 +278,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'pulumi-audio': LocalJSX.PulumiAudio & JSXBase.HTMLAttributes<HTMLPulumiAudioElement>;
       'pulumi-banner': LocalJSX.PulumiBanner & JSXBase.HTMLAttributes<HTMLPulumiBannerElement>;
       'pulumi-choosable': LocalJSX.PulumiChoosable & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
       'pulumi-chooser': LocalJSX.PulumiChooser & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
