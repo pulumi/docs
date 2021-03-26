@@ -12,9 +12,9 @@
                 <pulumi-audio
                     paused-text="FEEL THE VIBE"
                     playing-text="PAUSE THE VIBE"
-                    url="http://music-bucker-d3204f7.s3-website-us-west-2.amazonaws.com/pulumiup-background-music.mp4"
+                    url="https://www.pulumi.com/uploads/pulumiup-background-loop.mp4"
                 ></pulumi-audio>
-                <div class="mt-16">
+                <div class="lg:mt-16">
                     <pulumi-date-countdown
                         value-label-class="text-2xl"
                         text-class="date-countdown"
@@ -28,7 +28,7 @@
                 <div class="w-full flex items-center justify-center">
                     <div data-title="The Main Event" class="neon-callout-box-green max-w-full p-16 pt-4">
                         <div class="">
-                            <pulumi-datetime class="section-title-blue text-center mt-4" date="2021-04-20T09:00:00-07:00"></pulumi-datetime>
+                            <pulumi-datetime class="section-title-blue text-center mt-16 md:mt-4" date="2021-04-20T09:00:00-07:00"></pulumi-datetime>
                             <p class="max-w-3xl mx-auto text-lg">
                                 PulumiUP is a two-hour virtual event for anyone who is interested in cloud engineering,
                                 cloud infrastructure, software development, modern applications, or Pulumi.
@@ -37,13 +37,13 @@
                                 the future of building on the cloud.
                             </p>
                             <h3 class="section-title-blue text-center">Featuring</h3>
-                            <div class="flex flex-col flex-wrap lg:flex-row justify-center items-center ml-12">
+                            <div class="flex flex-col flex-wrap lg:flex-row justify-center items-center lg:ml-12">
                                 {{ range $id := .Params.speakers }}
                                     {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
                                     {{ $authorData := index $.Site.Data.team.team $id }}
 
-                                    <span class="flex w-1/3 items-start mt-4">
-                                        <span class="speaker-image">
+                                    <span class="flex flex-col lg:flex-row w-full lg:w-1/3 items-center text-center lg:text-left lg:items-start mt-4">
+                                        <span class="speaker-image lg:mr-2">
                                             <img src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}">
                                         </span>
                                         <span class="flex flex-col">
