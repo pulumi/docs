@@ -36,11 +36,9 @@ Once signed in, select your organization from the drop-down list on the upper le
 
 The **Projects** tab displays a card-based view of your stacks with relevant details including the project name and description, language, stack name, last update information, and resource count. This example shows an organization backed by GitHub and sorts the stacks by their GitHub repositories. By default, stacks are grouped by [project]({{< relref "/docs/intro/concepts/project" >}}), but you may group them by [tag]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}). Select the stack name to get more details on a specific stack.
 
-### Viewing a specific stack
-
 If you have been added to a Pulumi organization with existing projects and stacks, the Console displays a list of _Stacks_ and a _Recent Activity_ stream when you sign in. The lists are collapsible and are sorted according to the most recent updates. Select a specific stack update or activity for a more detailed view.
 
-#### Stack View
+### Stack Detailed View
 
 Selecting a specific stack update takes you to the Stack tab. This tab displays your stack's outputs, configuration values, and tags and renders a web-based view of the resulting output when you run `pulumi config` and `pulumi stack output` from the command line.
 
@@ -48,29 +46,37 @@ Selecting a specific stack update takes you to the Stack tab. This tab displays 
 
 You can see other details such as who applied the update and when, as well as counts of added, updated, and unchanged resources. If your stack is integrated with your workflow, such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), you should also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
 
-##### Stack tags
+#### Stack tags
 
 Custom [stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}) can be managed within the Stack tab. Select the **New** button to create a new tag, the pencil to edit an existing tag, or the trash can to permanently delete a tag.
 
 ![Stack tags](/images/docs/reference/service/stack-tags.png)
 
-#### Detailed Activity View
+#### Activity
 
 By default, the Activity tab gives you a card-based list of stack updates sorted by date.
 
-Selecting "Details" from the Stack update tab, or selecting a specific activity from the login screen, gives you a detailed view of that specific update. The Activity tab provides insights into the operations that were performed on your stack resources during an update. This tab can include three tabs, depending on your setup:
+Selecting "Details" from the Stack update tab, or selecting a specific activity from the login screen, gives you a detailed view of that specific update. The Activity tab provides insights into the operations that were performed on your stack resources during an update. This tab can include three tabs, depending on your setup: Changes, Timeline, and Configuration.
 
-* **Changes**. This lets you toggle between different log views:
+##### Changes
+
+This lets you toggle between different log views:
+
+* _Summary Log_ which lists a summary of changes, counts of affected resources, and update duration
+* _Diff Log_ which displays a diff of the changes (created, updated, or deleted resources), your stack outputs, and the same counts and update duration shown in the Summary Log view.
+* _Diagnostic Log_ which displays warning messages or a description of the operations performed during the update (if any).
+
 ![Stack resource graph](/images/docs/reference/service/resource-changes.png)
-    * _Summary Log_ which lists a summary of changes, counts of affected resources, and update duration
-    * _Diff Log_ which displays a diff of the changes (created, updated, or deleted resources), your stack outputs, and the same counts and update duration shown in the Summary Log view.
-    * _Diagnostic Log_ which displays warning messages or a description of the operations performed during the update (if any).
 
-* **Timeline**. This gives you a detailed timeline of changes to individual cloud resources. It also includes useful resource links and counts of affected resources.
+##### Timeline
+
+This gives you a detailed timeline of changes to individual cloud resources. It also includes useful resource links and counts of affected resources.
 
 ![Stack resource graph timeline](/images/docs/reference/service/timeline.png)
 
-* **Configuration**. This displays the same configuration details that you can find in the Stack view for your update.
+##### Configuration
+
+This displays the same configuration details that you can find in the Stack view for your update.
 
 #### Resources View
 
