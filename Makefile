@@ -25,25 +25,8 @@ ensure_tools:
 
 .PHONY: serve
 serve:
-	@echo -e "\033[0;32mSERVE:\033[0m"
-	$(MAKE) lint
-	./scripts/serve.sh
-
-.PHONY: serve_marketing
-serve_marketing:
-	@echo -e "\033[0;32mSERVE MARKETING:\033[0m"
-	$(MAKE) lint
-	HUGO_ENVIRONMENT=marketing-dev ./scripts/serve.sh
-
-.PHONY: serve_components
-serve_components:
-	@echo -e "\033[0;32mSERVE COMPONENTS:\033[0m"
-	yarn --cwd components run start
-
-.PHONY: build_components
-build_components:
-	@echo -e "\033[0;32mBUILD COMPONENTS:\033[0m"
-	yarn --cwd components run build
+	echo "The 'serve' target has moved!"
+	echo "This repo is now contains generated content. If you want to work on the website, visit https://github.com/pulumi/pulumi-hugo and follow the instructions. Thanks!"
 
 .PHONY: generate
 generate:
