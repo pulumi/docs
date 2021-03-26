@@ -7,7 +7,7 @@ on:
 jobs:
   all:
     env:
-      GOPATH: ${{ github.workspace }}
+      GOPATH: ${{ github.workspace }}/go
     name: Bucket cleanup
     runs-on: ubuntu-18.04
     steps:

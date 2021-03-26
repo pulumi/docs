@@ -9,7 +9,7 @@ on:
 jobs:
   buildSite:
     env:
-      GOPATH: ${{ github.workspace }}
+      GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
     runs-on: ubuntu-18.04
     steps:

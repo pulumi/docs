@@ -8,7 +8,7 @@ jobs:
     name: Do cleanup
     runs-on: ubuntu-18.04
     env:
-      GOPATH: ${{ github.workspace }}
+      GOPATH: ${{ github.workspace }}/go
     steps:
       - uses: actions/checkout@v2
 
