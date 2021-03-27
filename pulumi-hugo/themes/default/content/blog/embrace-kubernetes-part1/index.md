@@ -35,7 +35,7 @@ There are several reasons why Kubernetes is so widely adopted. Here are some of 
 - **Third-party vendor support**. There are also many third-party vendors that repackage Kubernetes. These are called Kubernetes distributions. They provide opinionated implementations of production-ready Kubernetes. Examples include [Openshift](https://www.openshift.com/), [Rancher](https://rancher.com/) and [VMWare Tanzu](https://tanzu.vmware.com/tanzu).
 - **Frequent releases**. Kubernetes releases often, with a new significant release every three or four months. Each release adds many new features and innovations.
 
-## Is Kubernetes the Right Choice for You?\
+## Is Kubernetes the Right Choice for You?
 
 Given its widespread popularity, its many features, and its community support, it seems that selecting Kubernetes is a given. “Everyone else is using it so our company should use it, too.” But is that the case? In the rest of this article, we’re going to propose some questions that you, your peers and management can use as a basis for discussion. These questions are meant to help your organization come to an informed choice about Kubernetes.
 
