@@ -35,7 +35,7 @@ $ pulumi new aws-typescript --name myproject
 
 ### Step 2: Build the Dockerized app
 
-Create a subdirectory, `app`, containing our sample Dockerized application. From the `app` subdirectory, add the following files:
+Create a subdirectory, `app`, which will contain your sample Dockerized application. From the `app` subdirectory, add the following files:
 
 #### **Dockerfile**
 
@@ -48,7 +48,7 @@ COPY index.html /usr/share/nginx/html
 
 ```html
 <html>
-  <head>
+  <head><meta charset="UTF-8">
     <title>Hello Fargate</title>
   </head>
   <body>
@@ -63,10 +63,11 @@ COPY index.html /usr/share/nginx/html
 Replace the contents of `index.ts` with the following:
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
 import * as awsx from "@pulumi/awsx";
 
 // Create a load balancer to listen for requests and route them to the container.
-let lb = new awsx.lb.NetworkListener("nginx", { port: 80 });
+const listener = new awsx.elasticloadbalancingv2.NetworkListener("nginx", { port: 80 });
 ```
 
 ### Step 4: Define the service and publish the Docker image
@@ -75,28 +76,28 @@ Add the following lines to `index.ts`:
 
 ```typescript
 // Define the service, building and publishing our "./app/Dockerfile", and using the load balancer.
-let service = new awsx.ecs.FargateService("nginx", {
+const service = new awsx.ecs.FargateService("nginx", {
     desiredCount: 2,
     taskDefinitionArgs: {
         containers: {
             nginx: {
                 image: awsx.ecs.Image.fromPath("nginx", "./app"),
                 memory: 512,
-                portMappings: [ lb ],
+                portMappings: [listener],
             },
         },
     },
 });
 
 // Export the URL so we can easily access it.
-export const url = lb.endpoint.hostname;
+export const frontendURL = pulumi.interpolate `http://${listener.endpoint.hostname}/`;
 ```
 
 You just created an automatic cluster in the default AWS VPC to run a Fargate service.
 
 ### Step 5: Verify your app structure
 
-Ensure you have the following directory structure:
+In addition to the `node_modules` directory and related npm package files, ensure you have the following directory structure:
 
 ```
 Pulumi.yaml
@@ -120,24 +121,22 @@ To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cl
 
 ```bash
 $ pulumi up
-Previewing changes:
-...
-Diagnostics:
-    ...
-    global: global
-    info: Building container image 'pulum-164fa748-container': context=./app
+Previewing update (dev)
 ...
 Do you want to perform this update? yes
-Updating stack 'container-quickstart-dev'
+Updating (dev)
 ...
+Diagnostics:
+  awsx:x:ecs:FargateTaskDefinition (nginx):
+  ...
 
----outputs:---
-url: "http://42dc3ff4-ac65d11-86a100b6e1d7f210.elb.us-west-2.amazonaws.com"
+Outputs:
+    frontendURL: "http://nginx-4c517b3-c98ba6a1e62b644e.elb.us-east-1.amazonaws.com/"
 
 Resources:
     + 32 created
 
-Duration: 4m6s
+Duration: 3m39s
 ```
 
 The deployment takes a few minutes. With your `pulumi up` invocation, Pulumi automatically does the following for you:
@@ -151,9 +150,9 @@ The deployment takes a few minutes. With your `pulumi up` invocation, Pulumi aut
 Now that you've deployed your app, confirm that the service is working via `curl`.
 
 ```bash
-$ curl http://$(pulumi stack output url)
+$ curl $(pulumi stack output frontendURL)
 <html>
-    <head>
+    <head><meta charset="UTF-8">
         <title>Hello Fargate</title>
     </head>
     <body>
@@ -169,10 +168,10 @@ To view the runtime logs from the container, use the [`pulumi logs`]({{< relref 
 
 ```bash
 $ pulumi logs --follow
-Collecting logs for stack container-quickstart-dev since 2019-09-11T13:38:04.000-07:00.
+Collecting logs for stack dev since 2021-03-26T10:49:57.000-07:00.
 
-2019-09-11T14:32:35.713-07:00[nginx-d73e16c] 172.31.61.144 - - [11/Sep/2019:21:32:35 +0000] "GET / HTTP/1.1" 200 193 "-" "curl/7.64.0" "-"
- 2019-09-11T14:50:27.388-07:00[nginx-d73e16c] 95.140.20.94 - - [11/Sep/2019:21:50:27 +0000] "\xA0<\xA6\x1D\xED\xB2\xCC\xC79dH\xDCo\xED\xD6k\x02\xB6b\x05{)r\xFF5g\xC8/\xC4\xE7x~\xAB\xB8\xC8\x95\xF9\x9D?" 400 157 "-" "-" "-"
+ 2021-03-26T11:45:02.624-07:00[nginx-185c47c] 172.31.38.69 - - [26/Mar/2021:18:45:02 +0000] "GET / HTTP/1.1" 200 205 "-" "curl/7.64.1" "-"
+ 2021-03-26T11:48:44.585-07:00[nginx-185c47c] 172.31.38.69 - - [26/Mar/2021:18:48:44 +0000] "GET / HTTP/1.1" 200 205 "-" "Mozilla/5.0 (compatible; Nimbostratus-Bot/v1.3.2; http://cloudsystemnetworks.com)" "-"
 ```
 
 ## Clean Up
