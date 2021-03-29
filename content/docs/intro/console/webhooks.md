@@ -1,6 +1,7 @@
 ---
 title: Webhooks
 meta_desc: An overview of how to use Webhooks within the Pulumi Cloud Service.
+weight: 8
 aliases:
 - /docs/reference/service/webhooks/
 - /docs/console/extensions/webhooks/

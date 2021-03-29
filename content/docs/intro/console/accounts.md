@@ -1,6 +1,7 @@
 ---
 title: Accounts
 meta_desc: An overview of Accounts within the Pulumi Cloud Service.
+weight: 0
 aliases:
   - /docs/intro/console/accounts/
   - /docs/intro/console/accounts/account/

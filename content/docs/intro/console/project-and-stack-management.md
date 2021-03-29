@@ -1,5 +1,6 @@
 ---
 title: Project and Stack Management
+weight: 3
 meta_desc: An overivew of Project and Stack Management within the Pulumi Cloud Service.
 ---
 

@@ -2,6 +2,7 @@
 title: "Deploy with Pulumi Button"
 meta_desc: An overview of how to use the "Deploy with Pulumi" button to easily
            create new projects directly from the browser.
+weight: 9
 aliases:
  - /docs/reference/service/pulumi-button/
  - /docs/console/extensions/pulumi-button/
