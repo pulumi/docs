@@ -145,6 +145,10 @@ $orange900: theme("colors.orange.900");
     @include neon-sign($green400, $green700, $green900, 1.75rem, "section-title-green", false, false);
 }
 
+.plot-cast-title {
+    @include neon-sign($blue400, $blue700, $blue900, 1.25rem, "plot-cast-name", false, false);
+}
+
 .speaker-image {
     @apply rounded-full p-1 bg-orange-400;
     box-shadow: inset 0 0 0.4em $orange400, 0 0 0.4em $orange400;
