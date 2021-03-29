@@ -1,7 +1,10 @@
 ---
 title: Project and Stack Management
-weight: 3
 meta_desc: An overivew of Project and Stack Management within the Pulumi Cloud Service.
+menu:
+  intro:
+    parent: console
+    weight: 4
 ---
 
 > While you can create projects within the individual organization created for your account, instructions in this document apply to members of an organization with sufficient [stack permissions]({{< relref "stack-permissions" >}}).

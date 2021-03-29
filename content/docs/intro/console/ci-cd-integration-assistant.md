@@ -1,7 +1,10 @@
 ---
 title: CI/CD Integration Assistant
 meta_desc: An overview of the CI/CD integration assistant in the Pulumi Console.
-weight: 6
+menu:
+  intro:
+    parent: console
+    weight: 7
 ---
 
 > This feature is available on the Pulumi Team Pro and Enterprise editions.

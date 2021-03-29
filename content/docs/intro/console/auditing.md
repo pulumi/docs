@@ -1,7 +1,10 @@
 ---
 title: Audit Logs
 meta_desc: "This is a guide on how to audit your organization's infrastructure as code activity"
-weight: 7
+menu:
+  intro:
+    parent: console
+    weight: 8
 ---
 
 <div class="note note-info" role="alert">

@@ -1,7 +1,10 @@
 ---
 title: Organization Roles
 meta_desc: An overview of Organization Roles within the Pulumi Cloud Service.
-weight: 2
+menu:
+  intro:
+    parent: console
+    weight: 3
 aliases: ["/docs/console/collaboration/organization-roles/"]
 ---
 

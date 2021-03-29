@@ -1,7 +1,10 @@
 ---
 title: Organizations
 meta_desc: An overview of Organizations within the Pulumi Cloud Service.
-weight: 1
+menu:
+  intro:
+    parent: console
+    weight: 2
 aliases:
 - /docs/reference/service/orgs/
 - /docs/console/accounts/organizations/
