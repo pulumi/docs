@@ -80,7 +80,7 @@ The **Configure CI/CD** step will help you configure secrets that will be used b
 For supported services, the wizard will provide a convenient link to the respective location
 where you can configure the secrets.
 
-The wizard provides a convenient way to create a [Pulumi Access Token]({{< relref "/docs/intro/console/accounts-and-organizations/accounts#access-tokens" >}})
+The wizard provides a convenient way to create a [Pulumi Access Token]({{< relref "/docs/intro/console/accounts#access-tokens" >}})
 without needing to leave the page.
 
 ![Pulumi Access Token](/images/docs/reference/console/pulumi-access-token.png)

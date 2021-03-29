@@ -99,7 +99,7 @@ Select an individual resources to view its list of properties and dependencies.
 
 ### Deleting a stack
 
-When drilling into a specific stack, organization members with [sufficient permissions]({{< relref "/docs/intro/console/collaboration/organization-roles#stack-deletion" >}}) have the additional option of being able to delete the stack. Note that this removes the stack entirely from the Pulumi Service, along with all of its update history.
+When drilling into a specific stack, organization members with [sufficient permissions]({{< relref "/docs/intro/console/organization-roles#stack-deletion" >}}) have the additional option of being able to delete the stack. Note that this removes the stack entirely from the Pulumi Service, along with all of its update history.
 
 ## Next Steps
 

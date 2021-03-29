@@ -20,9 +20,9 @@ Your account lets you authenticate into the Pulumi Console, where you can do the
 following:
 
 * Manage your profile settings, including your account password, access tokens, and subscriptions
-* [Add an organization]({{< relref "/docs/intro/console/accounts-and-organizations/organizations" >}}) backed by Atlassian, GitHub, GitLab, or a SAML
+* [Add an organization]({{< relref "/docs/intro/console/organizations" >}}) backed by Atlassian, GitHub, GitLab, or a SAML
   2.0-compatible identity provider, such as Active Directory, Okta, or G Suite
-* [Manage your projects and stacks]({{< relref "/docs/intro/console/collaboration/project-and-stack-management" >}})
+* [Manage your projects and stacks]({{< relref "/docs/intro/console/project-and-stack-management" >}})
 
 ## Profile
 
@@ -40,7 +40,7 @@ From this tab, you can:
 
 * Update your display name and Avatar URL
 * Update the email address associated with your Pulumi account
-* Add third party identities for [collaborating with other developers]({{< relref "/docs/intro/console/collaboration/organization-roles" >}})
+* Add third party identities for [collaborating with other developers]({{< relref "/docs/intro/console/organization-roles" >}})
 
 ### Adding New Identities{#adding-new-identities}
 
@@ -81,4 +81,4 @@ This tab provides a list of Pulumi's Continuous Delivery guides. Select your fav
 
 ## Next Steps
 
-* [Organizations]({{< relref "/docs/intro/console/accounts-and-organizations/organizations" >}})
+* [Organizations]({{< relref "/docs/intro/console/organizations" >}})

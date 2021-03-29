@@ -23,7 +23,7 @@ by the Pulumi Service. It then echos the event to Slack.
 
 ## Prerequisites
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-    - [Create an Organization](https://www.pulumi.com/docs/intro/console/accounts-and-organizations/organizations/)
+    - [Create an Organization](https://www.pulumi.com/docs/intro/console/organizations/)
 2. [Configure AWS Credentials](https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/)
 
 ## Steps
@@ -84,7 +84,7 @@ After cloning this repo, run these commands from the working directory:
     pulumi stack output url
     ```
 
-1. Create a [Pulumi webhook](https://www.pulumi.com/docs/intro/console/extensions/webhooks/). Use the output from the previous step as the `Payload URL`.
+1. Create a [Pulumi webhook](https://www.pulumi.com/docs/intro/console/webhooks/). Use the output from the previous step as the `Payload URL`.
 
 1. Ping our webhook by clicking `Ping` under `Deliveries` from your webhook's page. You should see the message `Just a friendly ping from Pulumi` in your Slack channel.
 
