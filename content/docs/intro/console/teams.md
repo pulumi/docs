@@ -49,6 +49,4 @@ Membership within a team will grant a Pulumi user a specific permission level fo
 stack in the team. For example, members of `network-team` may have `Stack write` access to the
 `backend/production` stack, but only `Stack read` access to `datastore/production`.
 
-## Next Steps
-
-* [Stack Permissions]({{< relref "stack-permissions" >}})
+![Editing team stacks and permissions](/images/docs/reference/service/editing-stack-permissions.png)

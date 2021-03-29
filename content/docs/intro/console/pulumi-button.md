@@ -127,7 +127,3 @@ You can use a fully qualified GitHub URL with the `template` parameter to refere
 ```
 https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 ```
-
-## Next Steps
-
-- [Continuous Delivery]({{< relref "/docs/guides/continuous-delivery" >}})

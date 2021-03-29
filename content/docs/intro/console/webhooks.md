@@ -274,7 +274,3 @@ the stack update or performed the action.
 	}
 }
 ```
-
-## Next Steps
-
-- ["Deploy with Pulumi" Button]({{< relref "pulumi-button" >}})

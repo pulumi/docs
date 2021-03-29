@@ -49,7 +49,3 @@ from these sources are merged together, granting the highest permission availabl
 - **Stack Creator**. The user who created the stack is given `Stack admin` permission, even if the organization's
   stack permissions for all members is `None`. An organization admin can remove the stack creator by navigating to **Stack > Settings > Access** and selecting **Remove**.
 - **Team Membership**. Organization admins, and team members can grant members of a [team]({{< relref "teams" >}}) access to stacks and set their permissions.
-
-## Next Steps
-
-- [Project and Stack Management]({{< relref "project-and-stack-management" >}})

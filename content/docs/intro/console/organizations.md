@@ -148,7 +148,5 @@ and Settings tabs.
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
 | Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management" >}}). |
 | Members | A list of active members of the Pulumi organization. |
-
-## Next Steps
-
-* [Organization Roles]({{< relref "/docs/intro/console/organization-roles" >}})
+| Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
+| Settings | A place for you to manage your organization settings including subscription and payment information and history, base permissions to all of the organization's stacks (including stack creation and deletion), and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |

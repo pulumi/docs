@@ -81,7 +81,3 @@ This tab provides details on your subscription information, which is the Pulumi 
 ## Integrations
 
 This tab provides a list of Pulumi's Continuous Delivery guides. Select your favorite CI/CD platform to learn more about how to integrate it with Pulumi.
-
-## Next Steps
-
-* [Organizations]({{< relref "/docs/intro/console/organizations" >}})
