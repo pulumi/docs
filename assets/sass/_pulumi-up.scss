@@ -64,6 +64,12 @@ $orange900: theme("colors.orange.900");
     }
 }
 
+.orange-neon {
+    border-radius: 0.25rem;
+    border-color: #e17d47;
+    box-shadow: 0 0 15px, 0 0 2px, 0 0 1em #e17d47, 0 0 0.5em #e17d47, 0 0 0.1em #e17d47
+}
+
 .date-countdown {
     @apply w-full text-center;
     @include neon-sign($orange400, $orange700, $orange900, 1.75rem, "date-countdown", false);
