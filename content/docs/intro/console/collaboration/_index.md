@@ -23,8 +23,7 @@ See [product editions]({{< relref "editions" >}}) for more information.
 
 There are two permissions systems used when determining a user's access to a stack.
 
-First is the user's [role in the organization]({{< relref "organization-roles" >}}). Administrators
-of a Pulumi organization have broad access to the organization settings, including configuring
+First is the user's [role in the organization]({{< relref "organization-roles" >}}). Pulumi organization admins have broad access to the organization settings, including configuring
 the specific permissions for other members of the organization.
 
 Second is the specific [stack permissions]({{< relref "stack-permissions" >}}) a user may be

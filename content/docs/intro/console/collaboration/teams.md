@@ -16,12 +16,18 @@ The Pulumi Console offers role-based access control (RBAC) using teams.
 Teams allow organization admins to assign a set of stack permissions
 to a group of users.
 
+## Team Roles
+
+Members of a team can be granted `Team admin` or `Team member` permissions. Team admins can add members to a
+team. Both team admins and team members can grant stack access to a team. By default, any new team members will be
+assigned the team member role. To change a team member's role, use the ellipsis menu item at the end of the table row.
+
 ### Creating a Team
 
-You can add a new team by going to the organization's **Teams** tab, and then
-clicking **New**. Only organization admins can create or update teams.
-
-![Adding a new team](/images/docs/reference/service/new-team-card.png)
+Organization admins can add a new team by going to the organization's **Teams** tab and
+selecting **Create team**. Organization members can also be granted permissions to create teams
+from the **Access** section of the organization **Settings** tab. Any member who creates a team
+will automatically be assigned the team admin role.
 
 #### GitHub-based Teams
 
@@ -36,10 +42,8 @@ permissions granted to team members is managed on the Pulumi Console.
 ## Team / Stack Permissions
 
 Membership within a team will grant a Pulumi user a specific permission level for each
-stack in the team. For example, members of `network-team` may have `WRITE` access to the
-`backend/production` stack, but only `READ` access to `datastore/production`.
-
-![Editing team stacks and permissions](/images/docs/reference/service/editing-stack-permissions.png)
+stack in the team. For example, members of `network-team` may have `Stack write` access to the
+`backend/production` stack, but only `Stack read` access to `datastore/production`.
 
 ## Next Steps
 
