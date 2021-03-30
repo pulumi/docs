@@ -210,7 +210,7 @@ Finally, at the end of `__main__.py`, export the resulting storage container's e
 
 ```python
 # Web endpoint to the website
-pulumi.export("staticEndpoint", account.primary_endpoints.web)
+pulumi.export("static_endpoint", account.primary_endpoints.web)
 ```
 
 {{% /choosable %}}
