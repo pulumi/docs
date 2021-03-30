@@ -5,6 +5,9 @@ menu:
   intro:
     parent: console
     weight: 7
+aliases:
+- /docs/intro/console/extensions/
+- /docs/intro/console/extensions/ci-cd-integration-assistant/
 ---
 
 > This feature is available on the Pulumi Team Pro and Enterprise editions.

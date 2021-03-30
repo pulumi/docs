@@ -8,6 +8,7 @@ menu:
 aliases:
 - /docs/reference/service/webhooks/
 - /docs/console/extensions/webhooks/
+- /docs/intro/console/extensions/webhooks/
 ---
 
 > Pulumi Webhooks is a feature available on the Pulumi Team and Enterprise editions.

@@ -9,6 +9,7 @@ menu:
 aliases:
  - /docs/reference/service/pulumi-button/
  - /docs/console/extensions/pulumi-button/
+ - /docs/intro/console/extensions/pulumi-button/
 ---
 
 If you want to share a common cloud application, you can create a reusable template and share it with other developers using a “Deploy with Pulumi” Button.

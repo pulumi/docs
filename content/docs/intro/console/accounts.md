@@ -8,6 +8,8 @@ menu:
 aliases:
   - /docs/intro/console/accounts/
   - /docs/intro/console/accounts/account/
+  - /docs/intro/console/accounts-and-organizations/
+  - /docs/intro/console/accounts-and-organizations/accounts/
 ---
 
 If you haven't created your Pulumi account, navigate to [app.pulumi.com](https://app.pulumi.com) and sign

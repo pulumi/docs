@@ -5,6 +5,8 @@ menu:
   intro:
     parent: console
     weight: 8
+aliases:
+- /docs/intro/console/collaboration/auditing/
 ---
 
 <div class="note note-info" role="alert">

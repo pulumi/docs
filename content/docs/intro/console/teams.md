@@ -8,6 +8,8 @@ menu:
 aliases:
 - /docs/reference/service/teams/
 - /docs/console/collaboration/teams/
+- /docs/intro/console/collaboration/
+- /docs/intro/console/collaboration/teams/
 ---
 
 > Note: This feature is only available to organizations using the Pulumi Team Pro or
