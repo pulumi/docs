@@ -7,6 +7,7 @@ $green700: theme("colors.green.700");
 $green900: theme("colors.green.900");
 
 $orange400: theme("colors.orange.400");
+$orange600: theme("colors.orange.600");
 $orange700: theme("colors.orange.700");
 $orange900: theme("colors.orange.900");
 
@@ -62,6 +63,12 @@ $orange900: theme("colors.orange.900");
     @screen lg {
         @include neon-sign($green400, $green700, $green900, 9rem, "green-neon-sign-xl-pulse", true, true, 4s);
     }
+}
+
+.orange-neon {
+    border-radius: 0.25rem;
+    border-color: $orange600;
+    box-shadow: 0 0 15px, 0 0 2px, 0 0 1em $orange600, 0 0 0.5em $orange600, 0 0 0.1em $orange600;
 }
 
 .date-countdown {
