@@ -46,7 +46,7 @@ of the following form:
     }
 
 The name table maps language names to parent and provider URNs. These names are
-used in the genrated definitions, and should match the corresponding declarations
+used in the generated definitions, and should match the corresponding declarations
 in the source program. This table is required if any parents or providers are
 specified by the resources to import.
 
