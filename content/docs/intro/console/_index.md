@@ -19,7 +19,7 @@ In your browser, navigate to <a href="https://app.pulumi.com" target="_blank">ap
 
 <a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Sign up</a>
 
-### Pulumi Plans
+### Pulumi Plans{#pulumi-plans}
 
 #### Community
 

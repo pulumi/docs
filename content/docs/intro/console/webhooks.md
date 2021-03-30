@@ -278,4 +278,4 @@ the stack update or performed the action.
 
 ## Related Blogs
 
-* [Managing Github Webhooks with Pulumi]({{< relref "/blog/managing-github-webhooks-with-pulumi" >}})
+* [Managing Github Webhooks with Pulumi]({{< ref "/blog/managing-github-webhooks-with-pulumi" >}})
