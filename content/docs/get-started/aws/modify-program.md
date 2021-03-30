@@ -66,7 +66,7 @@ To accomplish this, you will use Pulumi's `FileAsset` class to assign the conten
 
 {{% choosable language javascript %}}
 
-In `index.ts`, create a new bucket object right after creating the bucket itself.
+In `index.js`, create the `BucketObject` right after creating the bucket itself.
 
 ```javascript
 const bucketObject = new aws.s3.BucketObject("index.html", {
@@ -79,7 +79,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
 
 {{% choosable language typescript %}}
 
-In `index.ts`, create a new bucket object right after creating the bucket itself.
+In `index.ts`, create the `BucketObject` right after creating the bucket itself.
 
 ```typescript
 const bucketObject = new aws.s3.BucketObject("index.html", {
@@ -106,7 +106,7 @@ bucketObject = s3.BucketObject(
 
 {{% choosable language go %}}
 
-In `main.go`, create a new bucket object on the lines right after creating the bucket itself.
+In `main.go`, create the `BucketObject` right after creating the bucket itself.
 
 ```go
 _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
@@ -122,7 +122,7 @@ if err != nil {
 
 {{% choosable language csharp %}}
 
-Next you will create a new bucket object right after creating the bucket itself.
+In `MyStack.cs`, create the `BucketObject` right after creating the bucket itself.
 
 ```csharp
 var bucketObject = new BucketObject("index.html", new BucketObjectArgs

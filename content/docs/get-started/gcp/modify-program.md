@@ -66,7 +66,7 @@ To accomplish this, you will use Pulumi's `FileAsset` class to assign the conten
 
 {{% choosable language javascript %}}
 
-Create a new bucket object on the lines right after creating the bucket itself.
+In `index.js`, create the `BucketObject` right after creating the bucket itself.
 
 ```javascript
 const bucketObject = new gcp.storage.BucketObject("index.html", {
@@ -79,7 +79,7 @@ const bucketObject = new gcp.storage.BucketObject("index.html", {
 
 {{% choosable language typescript %}}
 
-Create a new bucket object on the lines right after creating the bucket itself.
+In `index.ts`, create the `BucketObject` right after creating the bucket itself.
 
 ```typescript
 const bucketObject = new gcp.storage.BucketObject("index.html", {
@@ -106,7 +106,7 @@ bucketObject = storage.BucketObject(
 
 {{% choosable language go %}}
 
-Create a new bucket object on the lines right after creating the bucket itself.
+In `main.go`, create the `BucketObject` right after creating the bucket itself.
 
 ```go
 bucketObject, err := storage.NewBucketObject(ctx, "index.html", &storage.BucketObjectArgs{
@@ -122,7 +122,7 @@ if err != nil {
 
 {{% choosable language csharp %}}
 
-Create a new bucket object on the lines right after creating the bucket itself.
+In `MyStack.cs`, create the `BucketObject` right after creating the bucket itself.
 
 ```csharp
 var bucketObject = new BucketObject("index.html", new BucketObjectArgs
