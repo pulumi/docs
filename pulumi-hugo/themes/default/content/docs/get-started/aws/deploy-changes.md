@@ -126,7 +126,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
     acl: "public-read",
     contentType: "text/html",
     bucket: bucket,
-    content: fs.readFileSync("site/index.html").toString(),
+    source: new pulumi.asset.FileAsset("index.html"),
 });
 ```
 
@@ -157,7 +157,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
     acl: "public-read",
     contentType: "text/html",
     bucket: bucket,
-    content: fs.readFileSync("site/index.html").toString(),
+    source: new pulumi.asset.FileAsset("index.html")
 });
 ```
 
@@ -188,7 +188,7 @@ bucketObject = s3.BucketObject(
     acl='public-read',
     content_type='text/html',
     bucket=bucket,
-    content=open('site/index.html').read(),
+    content=pulumi.FileAsset('index.html'),
 )
 ```
 
@@ -219,7 +219,7 @@ _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
     Acl:         pulumi.String("public-read"),
     ContentType: pulumi.String("text/html"),
     Bucket:      bucket.ID(),
-    Content:     pulumi.String(string(htmlContent)),
+    Source:      pulumi.NewFileAsset("index.html")
 })
 ```
 
@@ -258,7 +258,7 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
     Acl = "public-read",
     ContentType = "text/html",
     Bucket = bucket.BucketName,
-    Content = htmlString,
+    Source = new FileAsset("index.html")
 });
 ```
 

@@ -140,7 +140,7 @@ Also, change the content type of your `index.html` object so that it is served a
 const bucketObject = new gcp.storage.BucketObject("index.html", {
     bucket: bucket.name,
     contentType: "text/html",
-    content: fs.readFileSync("site/index.html").toString(),
+    source: new pulumi.asset.FileAsset("index.html")
 });
 ```
 
@@ -182,7 +182,7 @@ Also, change the content type of your `index.html` object so that it is served a
 const bucketObject = new gcp.storage.BucketObject("index.html", {
     bucket: bucket.name,
     contentType: "text/html",
-    content: fs.readFileSync("site/index.html").toString(),
+    source: new pulumi.asset.FileAsset("index.html")
 });
 ```
 
@@ -224,7 +224,7 @@ bucketObject = storage.BucketObject(
     'index.html',
     bucket=bucket,
     content_type='text/html',
-    content=open('site/index.html').read(),
+    source=pulumi.FileAsset('index.html')
 )
 ```
 
@@ -272,8 +272,8 @@ Also, change the content type of your `index.html` object so that it is served a
 
 ```go
 bucketObject, err := storage.NewBucketObject(ctx, "index.html", &storage.BucketObjectArgs{
-    Bucket:  bucket.Name,
-    Content: pulumi.String(string(htmlContent)),
+    Bucket: bucket.Name,
+    Source: pulumi.NewFileAsset("index.html")
 })
 if err != nil {
     return err
@@ -327,7 +327,7 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
     Bucket = bucket.Name,
     ContentType = "text/html",
-    Content = htmlString,
+    Source = new FileAsset("index.html")
 });
 ```
 
