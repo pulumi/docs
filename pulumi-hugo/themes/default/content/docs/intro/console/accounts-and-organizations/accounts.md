@@ -30,8 +30,8 @@ Console.  Your account display name, avatar URL, and email address are
 obtained from the identity provider you used for signing up. For example, your
 GitHub identity.
 
-To edit your profile information, navigate to **Profile Settings** by clicking
-on your avatar and selecting **Settings**. The **Profile** tab is displayed by default.
+To edit your profile information, navigate to **Profile Settings** by selecting
+your avatar, then **Settings**. The **Profile** tab is displayed by default.
 
 ![User-profile page](/images/docs/reference/service/user-profile-page.png)
 
@@ -49,7 +49,7 @@ You can associate your Pulumi account with multiple identities. In addition to t
 
 Connecting these additional identities will enable
 you to join Pulumi organizations that are backed by those systems. Note that only
-admins can add members to a Pulumi organization.
+organization admins can add members to a Pulumi organization.
 
 In order to be invited as a member of a Pulumi organization, you must connect
 your account with the organization's backing identity provider. Once your
@@ -68,7 +68,7 @@ When you run [`pulumi login`]({{< relref "/docs/reference/cli/pulumi_login" >}})
 
 ![Access tokens](/images/docs/reference/service/access-tokens.png)
 
-You can create additional access tokens on this tab by clicking **New Access Token**. Similarly, you may remove an unused token by highlighting it on the list and clicking "Remove access token".
+You can create additional access tokens on this tab by selecting **Create token**. Similarly, you may remove an unused token by highlighting it on the list and selecting "Remove access token".
 
 ## Subscription
 
@@ -76,7 +76,7 @@ This tab provides details on your subscription information, which is the Pulumi 
 
 ## Integrations
 
-This tab provides a list of Pulumi's Continuous Delivery guides. Click on your favorite CI/CD platform to learn more about how to integrate it with Pulumi.
+This tab provides a list of Pulumi's Continuous Delivery guides. Select your favorite CI/CD platform to learn more about how to integrate it with Pulumi.
 
 ## Next Steps
 

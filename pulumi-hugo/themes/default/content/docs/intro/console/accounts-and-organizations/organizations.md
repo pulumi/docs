@@ -14,7 +14,7 @@ created for you and subscribed to the Pulumi Community edition.
 You can however be a member of multiple Pulumi organizations, and collaborate
 with other developers.
 
-If you're an admin of a Pulumi organization, you have the
+If you're a Pulumi organization admin, you have the
 ability to:
 
 * [Invite users]({{< relref "/docs/intro/console/collaboration/organization-roles#organization-membership" >}})
@@ -38,7 +38,7 @@ A Pulumi organization needs to be linked to a third-party identity provider, off
 additional layer
 of security for you and your team. While membership within the Pulumi organization is
 managed by
-an organization administrator, you must be a member of the backing third-party identity
+an organization admin, you must be a member of the backing third-party identity
 provider in order
 to join a Pulumi organization.
 
@@ -67,7 +67,7 @@ relref "/docs/guides/saml" >}}).
 
 ### GitHub-backed
 
-To add a GitHub-backed organization to Pulumi, an administrator of the GitHub organization
+To add a GitHub-backed organization to Pulumi, an admin of the GitHub organization
 must
 first grant the Pulumi OAuth app the `read:org` scope. This can be done on GitHub's
 [Applications
@@ -80,7 +80,7 @@ will not have access to any of the organization's source code, issues, or other 
 
 ### GitLab-backed
 
-To add a GitLab-backed organization to Pulumi, an administrator of the GitLab group
+To add a GitLab-backed organization to Pulumi, an admin of the GitLab group
 may add the group to Pulumi, and invite its members to join Pulumi.
 
 GitLab allows group admins to add members with a temporary membership, i.e., with an
@@ -92,7 +92,7 @@ organization on Pulumi.
 
 ### Bitbucket-backed
 
-To add a Bitbucket-backed organization to Pulumi, an administrator of the Atlassian
+To add a Bitbucket-backed organization to Pulumi, an admin of the Atlassian
 Bitbucket workspace
 must first grant the Pulumi Oauth app [read
 access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html#OAuthonBitbucketCloud-Scopes)
@@ -128,7 +128,7 @@ The Organization drop-down list displays all of the organizations your account i
 associated with, and lets you add a new organization backed by a third
 party identity provider. To switch to a different organization:
 
-1. Click on the organization drop-down list on the upper left corner of the Console screen
+1. Select the organization drop-down list in the upper left corner of the Console screen
 next to the Pulumi logo.
 1. Select your organization name. The organization page view is dependent on your role within the Pulumi organization.
 
@@ -136,16 +136,17 @@ next to the Pulumi logo.
 
   _Members_. Pulumi organization members only see the Stacks and People tabs.
 
-  _Admins_. Pulumi organization administrators see the Stacks, People, Teams, Webhooks,
+  _Admins_. Pulumi organization admins see the Stacks, People, Teams, Webhooks,
 and Settings tabs.
 
 | Console Tab | Description |
 |--------|--------|
-| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management">}}) to learn more. |
-| People | A list of active members of the Pulumi organization. |
+| Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
+| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management" >}}). |
+| Members | A list of active members of the Pulumi organization. |
 | Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
-| Webhooks | A [Team Pro]({{< relref "/pricing" >}}) feature that allows external services to be notified about events happening on an organization, including events occurring on organization stacks. |
-| Settings | A place for you to manage your organization settings including subscription and payment information and history, base permissions to all of the organization's stacks (including stack creation and deletion), and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
+| Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
+| Settings | Organization settings including subscription and payment information and history, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
 
 ## Next Steps
 

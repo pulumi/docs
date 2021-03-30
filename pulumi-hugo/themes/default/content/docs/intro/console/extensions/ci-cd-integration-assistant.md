@@ -62,7 +62,7 @@ to create a new repository in the target service as well as the instructions for
 ensuring that Pulumi correctly recognizes the VCS configuration.
 
 Complete each step and check-off the appropriate step. When all of the tasks under the
-**Configure VCS** step are complete click the **Next** button. The wizard will confirm
+**Configure VCS** step are complete, select the **Next** button. The wizard will confirm
 that your VCS configuration has been recognized and will automatically move you to the
 next step.
 
@@ -73,7 +73,7 @@ Most importantly, your Pulumi project is safe from accidents on your local machi
 
 If you start the CI/CD integration wizard having configured the VCS for your project already,
 the wizard will skip to the next step automatically. You can see the repository that your project
-is integrated with by clicking on the Configure VCS step marker.
+is integrated with by selecting the Configure VCS step marker.
 
 The **Configure CI/CD** step will help you configure secrets that will be used by your Pulumi stack.
 For supported services, the wizard will provide a convenient link to the respective location
@@ -106,7 +106,7 @@ that is likely hosting services critical to your business.
 ### Validation
 
 In the previous step, you committed a new workflow configuration by creating a new pull request. This will trigger a new build
-that will run the `pulumi preview` command. Click the **Next** button to validate the CI configuration.
+that will run the `pulumi preview` command. Select the **Next** button to validate the CI configuration.
 
 Congratulations on configuring a version control system and an automated pipeline for your stack! 🎉
 
