@@ -8,7 +8,7 @@ menu:
 no_on_this_page: true
 aliases:
 - /docs/reference/service
--/docs/intro/console/accounts-and-organizations/editions/
+- /docs/intro/console/accounts-and-organizations/editions/
 ---
 
 The [Pulumi Console](https://app.pulumi.com) web application automatically manages deployment state and enables collaboration between developers and operators. The Pulumi CLI automatically uses it unless you [explicitly opt out]({{< relref "/docs/intro/concepts/state" >}}). Explore the different sections to learn more about the features and benefits of using the Pulumi Console.
@@ -47,7 +47,6 @@ Pulumi Team and Enterprise plans, refer to the [pricing page]({{< relref "/prici
 * [Accounts]({{< relref "/docs/intro/console/accounts" >}})
 * [Organizations]({{< relref "/docs/intro/console/organizations" >}})
 * [SAML Integrations]({{< relref "/docs/guides/saml" >}})
-
 
 ## Collaboration
 

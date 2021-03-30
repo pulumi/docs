@@ -106,4 +106,4 @@ When drilling into a specific stack, organization members with [sufficient permi
 
 ## Related Blogs
 
-* [Building New Pulumi Projects and Stacks From Templates]({{< relref "/docs/blog/building-new-pulumi-projects-and-stacks-from-templates/" >}}) 
+* [Building New Pulumi Projects and Stacks From Templates]({{< relref "/docs/blog/building-new-pulumi-projects-and-stacks-from-templates/" >}})
