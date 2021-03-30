@@ -10,14 +10,10 @@ aliases:
 - /docs/console/collaboration/teams/
 ---
 
-The Pulumi Console offers role-based access control (RBAC) using teams.
-
 > Note: This feature is only available to organizations using the Pulumi Team Pro or
 > Enterprise editions. To learn more about Pulumi editions, see the [pricing page]({{< relref "/pricing" >}}).
 
-## Teams
-
-Teams allow organization admins to assign a set of stack permissions
+The Pulumi Console offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions
 to a group of users.
 
 ## Team Roles
@@ -26,7 +22,7 @@ Members of a team can be granted `Team admin` or `Team member` permissions. Team
 team. Both team admins and team members can grant stack access to a team. By default, any new team members will be
 assigned the team member role. To change a team member's role, use the ellipsis menu item at the end of the table row.
 
-### Creating a Team
+### Creating a Team{#creating-a-team}
 
 Organization admins can add a new team by going to the organization's **Teams** tab and
 selecting **Create team**. Organization members can also be granted permissions to create teams

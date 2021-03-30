@@ -11,6 +11,8 @@ aliases:
  - /docs/console/extensions/pulumi-button/
 ---
 
+If you want to share a common cloud application, you can create a reusable template and share it with other developers using a “Deploy with Pulumi” Button.
+
 The "Deploy with Pulumi" button lets you easily create new Pulumi projects from the browser. You can embed the button in README files within GitHub repositories or gists, blog posts, or other web pages.
 
 For example, select the `Deploy` button to configure and create a new empty JavaScript project:

@@ -12,8 +12,8 @@ aliases:
 ---
 
 An organization is the primary grouping unit for stacks within the Pulumi Console.
-When you sign into the Pulumi Console, an individual organization is automatically
-created for you and subscribed to the Pulumi Community edition.
+When you sign into the Pulumi Console, a personal account is automatically
+created for you and subscribed to the Pulumi Community plan.
 
 You can however be a member of multiple Pulumi organizations, and collaborate
 with other developers.
@@ -23,7 +23,7 @@ ability to:
 
 * [Invite users]({{< relref "/docs/intro/console/organization-roles#organization-membership" >}})
 * Manage default stack permissions for the organization
-* Create [teams]({{< relref "/docs/intro/console/teams" >}}) and manage their permissions
+* [Create teams]({{< relref "/docs/intro/console/teams#creating-a-team" >}}) and manage their permissions
 * Assign [organization roles]({{< relref "/docs/intro/console/organization-roles" >}}) for role-based access control (RBAC)
 to your organization's stacks
 
@@ -33,7 +33,7 @@ You can create a new Pulumi organization directly from the Pulumi Console.
 
 <a class="btn btn-secondary" href="https://app.pulumi.com/site/trial"
 target="_blank">
-    CREATE ORGANIZATION
+    Create organziation
 </a>
 
 ## Organization Types

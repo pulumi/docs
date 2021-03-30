@@ -9,6 +9,8 @@ aliases:
 - /docs/reference/service/roles-and-access-controls/
 - /docs/console/collaboration/stack-permissions/
 ---
+Second is the specific stack permissions a user may be granted to a stack. For example, by being a member of a team, or by being the stack creator.
+
 
 The Pulumi Console provides fine-grained access controls for stacks.
 

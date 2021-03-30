@@ -11,70 +11,22 @@ aliases: [/docs/reference/service]
 
 The [Pulumi Console](https://app.pulumi.com) web application automatically manages deployment state and enables collaboration between developers and operators. The Pulumi CLI automatically uses it unless you [explicitly opt out]({{< relref "/docs/intro/concepts/state" >}}). Explore the different sections to learn more about the features and benefits of using the Pulumi Console.
 
-<div class="md:flex flex-row mt-6 mb-6">
-    <div class="w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="https://app.pulumi.com" target="_blank"><i class="fas fa-angle-right pr-2"></i> Getting Started</a></h3>
-        <p>
-            In your browser, navigate to <a href="https://app.pulumi.com" target="_blank">app.pulumi.com</a> and sign up. The <a href="{{< relref "/docs/intro/console#community-edition" >}}">Pulumi Community Edition</a> is free forever
-            for unlimited individual use.
-        </p>
-            <a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">SIGN UP</a>
-    </div>
-    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><i class="fas fa-user-circle pr-2"></i> Accounts & Organizations</h3>
-        <p>Learn about the Pulumi product editions. Link your account with a third party identity provider, including one that is compatible with SAML 2.0. Next, you can learn how to create an organization.
-        <ul class="p2">
-            <li><a href="{{< relref "/docs/intro/console" >}}">Plans and Editions</a></li>
-            <li><a href="{{< relref "/docs/intro/console/accounts" >}}">Accounts</a></li>
-            <li><a href="{{< relref "/docs/intro/console/organizations" >}}">Organizations</a></li>
-            <li><a href="{{< relref "/docs/guides/saml" >}}">SAML Integrations</a></li>
-        </ul>
-    </div>
-</div>
+## Getting Started
 
-<div class="md:flex flex-row mt-6 mb-6">
-    <div class="w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><i class="fas fa-users pr-2"></i> Collaboration</h3>
-        <p>
-            Collaborate with other developers and coordinate on updates. Provide fine-grained access to stacks and use RBAC (Role-based Access Control) for your organization.
-        </p>
-        <ul class="p2">
-            <li><a href="{{< relref "/docs/intro/console/organization-roles" >}}">Organization Roles</a></li>
-            <li><a href="{{< relref "/docs/intro/console/teams" >}}">Teams</a></li>
-            <li><a href="{{< relref "/docs/intro/console/stack-permissions" >}}">Stack Permissions</a></li>
-            <li><a href="{{< relref "/docs/intro/console/project-and-stack-management" >}}">Project and Stack Management</a></li>
-            <li><a href="{{< relref "/docs/intro/console/auditing" >}}">Audit Logs</a></li>
-        </ul>
-    </div>
-    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"></i> Integrations and Extensions</h3>
-        <p>Integrate Pulumi with your current continuous delivery pipeline. Build your own extensions, and create reusable templates.
-        <ul class="p2">
-            <li><a href="{{< relref "/docs/intro/console/ci-cd-integration-assistant" >}}">CI/CD Integration Assistant</a></li>
-            <li><a href="{{< relref "/docs/guides/continuous-delivery" >}}">Continuous Delivery</a></li>
-            <li><a href="{{< relref "/docs/intro/console/webhooks" >}}">Webhooks</a></li>
-            <li><a href="{{< relref "/docs/intro/console/pulumi-button" >}}">"Deploy with Pulumi" Button</a></li>
-        </ul>
-    </div>
-</div>
+In your browser, navigate to <a href="https://app.pulumi.com" target="_blank">app.pulumi.com</a> and sign up.
 
-Pulumi has multiple subscription plans available to organizations, each offering an
-expanding set of features and capabilities.
+<a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Sign up</a>
 
-## Pulumi Community Edition{#community-edition}
+### Pulumi Plans
 
-When you sign into the Pulumi Console, an individual organization is automatically
-created for your account and subscribed to the Pulumi Community edition. The Pulumi
-Community Edition is free forever for unlimited individual use.
+#### Community
 
-With your Community Edition organization, you can create an unlimited number of stacks,
-encrypt configuration and resource secrets, and browse stack history.
+When you sign into the Pulumi Console, an personal account is automatically
+created on the Community plan. The Pulumi Community Plan is free forever for unlimited individual use.
 
-But if you want to collaborate with other developers or use advanced features such as ones
-that require [SAML SSO]({{< relref "/docs/guides/saml" >}}), you'll need to create a new Pulumi
-organization.
+You can create an unlimited number of stacks, encrypt configuration and resource secrets, and browse stack history. To collaborate with other developers or use advanced features like [SAML SSO]({{< relref "/docs/guides/saml" >}}), you'll need to create a Pulumi [organization]({{< relref "organizations" >}}).
 
-## Other Editions
+#### Other Plans
 
 **Pulumi Team Starter** is ideal for teams just getting started deploying cloud
 applications and infrastructure.
@@ -82,12 +34,34 @@ applications and infrastructure.
 **Pulumi Team Pro** is ideal for medium to large teams using Pulumi for multiple projects
 or clouds.
 
-**Pulumi Enterprise Edition** is ideal for large organizations running cloud software at
-scale,
-with advanced or custom needs.
+**Pulumi Enterprise** is ideal for large organizations running cloud software at
+scale, with advanced or custom needs.
 
 For more information about the specific differences and capabilities offered for the
-Pulumi Team and Enterprise editions, refer to the [pricing page]({{< relref "/pricing" >}}).
+Pulumi Team and Enterprise plans, refer to the [pricing page]({{< relref "/pricing" >}}).
 
-To create a new Pulumi organization with a new edition, see [Creating a New
-Organization]({{< relref "organizations#creating-a-new-organization" >}}).
+## Accounts & Organizations
+
+* [Accounts]({{< relref "/docs/intro/console/accounts" >}})
+* [Organizations]({{< relref "/docs/intro/console/organizations" >}})
+* [SAML Integrations]({{< relref "/docs/guides/saml" >}})
+
+
+## Collaboration
+
+Collaborate with other developers and coordinate on updates. Provide fine-grained access to stacks and use RBAC (Role-based Access Control) for your organization.
+
+* [Organization Roles]({{< relref "/docs/intro/console/organization-roles" >}})
+* [Teams]({{< relref "/docs/intro/console/teams" >}})
+* [Stack Permissions]({{< relref "/docs/intro/console/stack-permissions" >}})
+* [Project and Stack Management]({{< relref "/docs/intro/console/project-and-stack-management" >}})
+* [Audit Logs]({{< relref "/docs/intro/console/auditing" >}})
+
+## Integrations and Extensions
+
+Integrate Pulumi with your current continuous delivery pipeline. Build your own extensions, and create reusable templates.
+
+* [CI/CD Integration Assistant]({{< relref "/docs/intro/console/ci-cd-integration-assistant" >}})
+* [Continuous Delivery]({{< relref "/docs/guides/continuous-delivery" >}})
+* [Webhooks]({{< relref "/docs/intro/console/webhooks" >}})
+* ["Deploy with Pulumi" Button]({{< relref "/docs/intro/console/pulumi-button" >}})
