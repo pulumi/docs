@@ -12,11 +12,11 @@ tags:
 
 ---
 
-Earth is just the beginning. We are putting down the foundations of space so our children can build their future.  At Pulumi, we are committed to making life multiplanetary. We are excited to announce Pulumi Interstellar, a collection of resource providers that will help us reach the future of a space-faring and multi-planet species.
+Earth is just the beginning. We are putting down the foundations of space so our children can build their future.  At Pulumi, we are committed to making life multi-planetary. We are excited to announce Pulumi Interstellar, a collection of resource providers that will help us reach the future of a space-faring and multi-planet species.
 
 <!--more-->
 
-For our first offering of space related resource providers, we have aligned closet with the current priorities in the space industry today:
+For our first offering of space related resource providers, we have aligned closely with the current priorities in the space industry today:
 
 1. Getting to New Planets
 1. Making Planets Habitable
@@ -52,7 +52,7 @@ const spaceship = new spacex.spaceship.Instance("Edward Isreal", {
    engine: engineId,
    capability: kuiper_belt,
    tags,
-}]
+});
 ```
 
 On Day 1 you can deploy resources via reusable rockets. By declaring a payload on your Rocket, you tell Pulumi  to deliver the payload to the location specified. Resource Deployments will be particularly useful when configuring a new planet in the initial stages, as you can deploy new resources and terraforming equipment in a consistent, repeatable, and scalable manner.
@@ -75,7 +75,15 @@ const seats = spacex.spacex.PassengerGroup("Robinsons", {
    destination: "Mars",
    berth: "Colonist",
    tags,
-}]
+}};
+
+const spaceship = new spacex.spaceship.Instance("Edward Isreal", {
+   instanceType: spacex.spaceship.InstanceTypes.interplanetary,
+   engine: engineId,
+   capability: kuiper_belt,
+   seats: seats,
+   tags,
+});
 ```
 
 Once a planet is habitable and configured to your specifications, you will need a way to travel to your new home. Simply adding a `seats` argument to any Rocket will reserve those seats on the rocket (as they eventually become available).
@@ -96,14 +104,14 @@ import * as thecompany from "@pulumi/weyland-yutani"
 const domeId = thecompany.dome.getDome({
     owners: ["099720109477"], // Weyland-Yutani
     mostRecent: true,
-    filters: [{ name: "name", values: ["weyland-yutanu/terraforming/acheron-*"] }],
+    filters: [{ name: "terraform", values: ["weyland-yutanu/terraforming/acheron-*"] }],
 }).then(it => it.id);
 
-const terradome = thecompany.dome,Instance("Hadley's Hope", {
+const terradome = thecompany.dome.Instance("Hadley's Hope", {
    instanceType: thecompany.dome.InstanceType.LV_246,
    dome: domeId,
    type: atmospheric-processor,
-   tag,
+   tags,
 }]
 ```
 
@@ -117,14 +125,15 @@ While we will not be able to support nuclear terraforming on Day 1, we are worki
 
 ![Terraforming](nuke.png)
 
-How To Get Started
+## How To Get Started
+
 Getting started is as simple as getting started with any other resource provider, you just need to download the package with your preferred language’s package manager, configure the provider, and then start building. All space resources are billed via Dogecoin, so you will need to provide a wallet address in your provider’s arguments.
 
 ```bash
 $ pulumi config set --secret doge DilB3JrTyGm55FiMyRlhM7NZmfj0J9QVX
 ```
 
-Don't worry, we'll encrypt your wallet address. Your Dogecoin wallet will go straight to you provider and Pulumi never receives or handles your secrets.
+Don't worry, we'll encrypt your wallet address. Your Dogecoin wallet will go straight to your provider and Pulumi never receives or handles your secrets.
 
 ## Summary
 
