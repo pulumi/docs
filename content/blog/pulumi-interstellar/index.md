@@ -109,7 +109,7 @@ const terradome = thecompany.dome,Instance("Hadley's Hope", {
 
 The first step to establish humanity on other planets is to provision dome-based communities and build critical infrastructure and resources while we work to terraform the planet. Out of the box Pulumi provides boilerplate communities that are flexible and resilient enough to support any use case.
 
-![Domes](dome.jpg)
+![Domes](dome.png)
 
 ### Nuclear Terraforming
 
@@ -127,4 +127,5 @@ $ pulumi config set --secret doge DilB3JrTyGm55FiMyRlhM7NZmfj0J9QVX
 Don't worry, we'll encrypt your wallet address. Your Dogecoin wallet will go straight to you provider and Pulumi never receives or handles your secrets.
 
 ## Summary
+
 Today is one of the most exciting days in Pulumi's short history and we are incredibly excited to partner with our customers and leading space companies to make our multi-planetary dreams a reality. We cannot wait to see what you’ll build!
