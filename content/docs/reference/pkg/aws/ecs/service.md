@@ -492,7 +492,7 @@ const example = new aws.ecs.Service("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_execute_command</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -695,6 +695,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableexecutecommand_csharp">
+<a href="#enableexecutecommand_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Execute<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcenewdeployment_csharp">
@@ -908,6 +917,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enableexecutecommand_go">
+<a href="#enableexecutecommand_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Execute<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="forcenewdeployment_go">
 <a href="#forcenewdeployment_go" style="color: inherit; text-decoration: inherit;">Force<wbr>New<wbr>Deployment</a>
 </span>
@@ -1119,6 +1137,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enableexecutecommand_nodejs">
+<a href="#enableexecutecommand_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Execute<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="forcenewdeployment_nodejs">
 <a href="#forcenewdeployment_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>New<wbr>Deployment</a>
 </span>
@@ -1328,6 +1355,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_execute_command_python">
+<a href="#enable_execute_command_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>execute_<wbr>command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_new_deployment_python">
@@ -1543,7 +1579,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_execute_command</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1717,6 +1753,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enableexecutecommand_csharp">
+<a href="#state_enableexecutecommand_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Execute<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcenewdeployment_csharp">
@@ -1930,6 +1975,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enableexecutecommand_go">
+<a href="#state_enableexecutecommand_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Execute<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forcenewdeployment_go">
 <a href="#state_forcenewdeployment_go" style="color: inherit; text-decoration: inherit;">Force<wbr>New<wbr>Deployment</a>
 </span>
@@ -2141,6 +2195,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enableexecutecommand_nodejs">
+<a href="#state_enableexecutecommand_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Execute<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forcenewdeployment_nodejs">
 <a href="#state_forcenewdeployment_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>New<wbr>Deployment</a>
 </span>
@@ -2350,6 +2413,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_execute_command_python">
+<a href="#state_enable_execute_command_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>execute_<wbr>command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS Exec for the tasks within the service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_new_deployment_python">
