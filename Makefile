@@ -21,7 +21,7 @@ ensure:
 .PHONY: ensure_tools
 ensure_tools:
 	echo "Restoring resourcedocsgen deps..."
-	cd tools/resourcedocsgen && go mod tidy && go mod download
+	cd tools/resourcedocsgen && go mod download
 
 .PHONY: serve
 serve:
