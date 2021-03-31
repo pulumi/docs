@@ -35,25 +35,127 @@ In the initial release of the Rocket Provider we are happy to enable two key use
 
 ### Resource Deployment
 
+{{< chooser language "typescript,python,csharp,go" >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as spacex from "@pulumi/spacex"
 
-/**
-* Provision rocket
-*/
 const engineId = spacex.rocket.getEngine({
-   owners: ["420"], //SpaceX
+   owners: ["420"],
    mostRecent: true,
-   filters: [{name: "SuperDraco", values: ["spacex/engines/super-draco-15.03-*]}]
+   filters: [{name: "SuperDraco", values: ["spacex/engines/super-draco-15.03-*"]}],
 });
 
 const spaceship = new spacex.spaceship.Instance("Edward Isreal", {
    instanceType: spacex.spaceship.InstanceTypes.interplanetary,
    engine: engineId,
-   capability: kuiper_belt,
-   tags,
-});
+   capability: "kuiper_belt",
+}];
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+from pulumi_spacex import rocket, spaceship
+
+engine_id = rocket.getEngine(
+    owners=["420"],
+    most_recent=true,
+    filters="""[
+        {name: "SuperDraco", values: ["spacex/engines/super-draco-15.03-*"]}
+    ]""",
+)
+
+spaceship = spaceship.Instance("Edward Isreal",
+    instanceType=spaceship.instance_types.interplanetary,
+    engine=engineId,
+    capability="kuiper_belt"
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using SpaceX = Pulumi.SpaceX;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var engineId = new SpaceX.Rocket.GetEngine(new SpaceX.Rocket.GetEngineArgs
+        {
+            Owners =
+            {
+                "420",
+            }
+            MostRecent = true,
+            Filters = {
+                { "name": "SuperDraco", "values": ["spacex/engines/super-draco-15.03-*"] },
+            }
+        });
+
+        var spaceship = new SpaceX.Spaceship.Instance("", new SpaceX.Spaceship.InstanceArgs{
+            InstanceType = SpaceX.Spaceship.InstanceTypes.Interplanetary,
+            EngineId = engineId,
+            Capability = "kuiper_belt",
+        });
+    }
+
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spacex/sdk/v3/go"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+        engineId, err := spacex.Rocket.GetEngine(&spacex.Rocket.GetEngineArgs{
+            Owners:     []string{"420"},
+            MostRecent: true,
+            Filters:    []RocketEngineFilter{
+                RocketEngineFilter{
+                    Name:   "SuperDraco",
+                    Values: []string{"spacex/engines/super-draco-15.03-*"},
+                },
+            },
+        })
+        if err != nil {
+            return err
+        }
+
+        spaceship, err := spacex.Spaceship.Instance("Edward Isreal", &spacex.Spaceship.InstanceArgs{
+            InstanceType: spacex.Spaceship.InstanceTypes.Interplanetary,
+            EngineId:     engineId,
+            Capability:   "kuiper_belt",
+        })
+        if err != nil {
+            return err
+        }
+
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 On Day 1 you can deploy resources via reusable rockets. By declaring a payload on your Rocket, you tell Pulumi  to deliver the payload to the location specified. Resource Deployments will be particularly useful when configuring a new planet in the initial stages, as you can deploy new resources and terraforming equipment in a consistent, repeatable, and scalable manner.
 
@@ -63,10 +165,13 @@ Once the rocket arrives at its destination Pulumi’s Space AI Assistant, nickna
 
 ### Planetary Travel
 
-```typescript
+{{< chooser language "typescript,python,csharp,go" >}}
 
+{{% choosable language typescript %}}
+
+```typescript
 const config = pulumi.Config();
-const passengers = config.require("passengers")
+const passengers = config.require("passengers");
 
 const seats = spacex.spacex.PassengerGroup("Robinsons", {
    spaceshipId: spaceship.then(it => it.id),
@@ -74,17 +179,54 @@ const seats = spacex.spacex.PassengerGroup("Robinsons", {
    departure: "Luna",
    destination: "Mars",
    berth: "Colonist",
-   tags,
-}};
-
-const spaceship = new spacex.spaceship.Instance("Edward Isreal", {
-   instanceType: spacex.spaceship.InstanceTypes.interplanetary,
-   engine: engineId,
-   capability: kuiper_belt,
-   seats: seats,
-   tags,
-});
+}];
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+config = pulumi.Config()
+passengers = config.require("passengers")
+
+seats = spacex.spacex.PassengerGroup("Robinsons",
+    spaceshipId=spaceship.id,
+    seats=passengers,
+    departure="Luna",
+    destination="Mars",
+    berth="Colonist",
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+const blah = "test";
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+config := pulumi.Config()
+passengers := config.require("passengers")
+
+seats, err := spacex.SpaceX.PassengerGroup("Robinsons", &spacex.SpaceX.PassengerGroupArgs{
+    SpaceshipId: spaceship.id,
+    Seats:       passengers,
+    Departure:   "Luna",
+    Destination: "Mars",
+    Berth:       "Colonist",
+})
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Once a planet is habitable and configured to your specifications, you will need a way to travel to your new home. Simply adding a `seats` argument to any Rocket will reserve those seats on the rocket (as they eventually become available).
 
@@ -98,22 +240,101 @@ First, we need to provision dome-based communities in a repeatable and scalable 
 
 ### Dome-Based Communities
 
-```typescript
-import * as thecompany from "@pulumi/weyland-yutani"
+{{< chooser language "typescript,python,csharp,go" >}}
 
-const domeId = thecompany.dome.getDome({
-    owners: ["099720109477"], // Weyland-Yutani
+{{% choosable language typescript %}}
+
+```typescript
+import * as weyland from "@pulumi/weyland-yutani"
+
+const domeId = weyland.dome.getDome({
+    owners: ["099720109477"],
     mostRecent: true,
-    filters: [{ name: "terraform", values: ["weyland-yutanu/terraforming/acheron-*"] }],
+    filters: [{ name: "name", values: ["weyland-yutanu/terraforming/acheron-*"] }],
 }).then(it => it.id);
 
-const terradome = thecompany.dome.Instance("Hadley's Hope", {
-   instanceType: thecompany.dome.InstanceType.LV_246,
+const terradome = weyland.dome,Instance("Hadley's Hope", {
+   instanceType: weyland.dome.InstanceType.LV_246,
    dome: domeId,
-   type: atmospheric-processor,
-   tags,
-}]
+   type: "atmospheric-processor",
+}];
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+from pulumi_weyland_yutani import dome
+
+dome = dome.get_dome(
+    owners=["099720109477"],
+    most_recent=true,
+    filters="""[
+        {name: "BasicDome", values: ["weyland-yutanu/terraforming/acheron-*"]}
+    ]""",
+)
+
+terradome = dome.Instance("Hadley's Hope",
+    instance_type=dome.instance_type.lv_246,
+    dome=dome.id,
+    type="atmospheric-processor",
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+const blah = "test";
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-weyland-yutani/sdk/v3/go"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+        dome, err := weyland.Dome.GetDome(&weyland.Dome.GetDomeArgs{
+            Owners:     []string{"099720109477"},
+            MostRecent: true,
+            Filters:    []RocketEngineFilter{
+                RocketEngineFilter{
+                    Name:   "BasicDome",
+                    Values: []string{"weyland-yutanu/terraforming/acheron-*"},
+                },
+            },
+        })
+        if err != nil {
+            return err
+        }
+
+        terradome, err := weyland.Dome.Instance("", &weyland.Dome.InstanceArgs{
+            InstanceType: weyland.Dome.InstanceType.LV_246,
+            Dome:         dome.Id,
+            Type:         "atmospheric-processor",
+        })
+        if err != nil {
+            return err
+        }
+
+        return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 The first step to establish humanity on other planets is to provision dome-based communities and build critical infrastructure and resources while we work to terraform the planet. Out of the box Pulumi provides boilerplate communities that are flexible and resilient enough to support any use case.
 
@@ -138,3 +359,13 @@ Don't worry, we'll encrypt your wallet address. Your Dogecoin wallet will go str
 ## Summary
 
 Today is one of the most exciting days in Pulumi's short history and we are incredibly excited to partner with our customers and leading space companies to make our multi-planetary dreams a reality. We cannot wait to see what you’ll build!
+
+<div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe
+        src="//www.youtube.com/embed/oHg5SJYRHA0?rel=0;&autoplay=1"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+        allowfullscreen=""
+        title="Pulumi Interstellar"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1><img src='/blog/pulumi-interstellar/youtube-preview-interstellar.png' alt='Pulumi Interstellar'></a>"
+    ></iframe>
+</div>
