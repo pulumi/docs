@@ -168,7 +168,7 @@ const exampleSpringCloudApp = new azure.appplatform.SpringCloudApp("exampleSprin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SpringCloudApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[SpringCloudAppIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persistent_disk</span><span class="p">:</span> <span class="nx">Optional[SpringCloudAppPersistentDiskArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SpringCloudApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[SpringCloudAppIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persistent_disk</span><span class="p">:</span> <span class="nx">Optional[SpringCloudAppPersistentDiskArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -371,6 +371,15 @@ The SpringCloudApp resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#springcloudapppersistentdisk">Spring<wbr>Cloud<wbr>App<wbr>Persistent<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `persistent_disk` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlsenabled_csharp">
+<a href="#tlsenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is End to End TLS Enabled? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -438,6 +447,15 @@ The SpringCloudApp resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#springcloudapppersistentdisk">Spring<wbr>Cloud<wbr>App<wbr>Persistent<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}An `persistent_disk` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlsenabled_go">
+<a href="#tlsenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is End to End TLS Enabled? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -505,6 +523,15 @@ The SpringCloudApp resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#springcloudapppersistentdisk">Spring<wbr>Cloud<wbr>App<wbr>Persistent<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}An `persistent_disk` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlsenabled_nodejs">
+<a href="#tlsenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is End to End TLS Enabled? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -572,6 +599,15 @@ The SpringCloudApp resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#springcloudapppersistentdisk">Spring<wbr>Cloud<wbr>App<wbr>Persistent<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `persistent_disk` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls_enabled_python">
+<a href="#tls_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is End to End TLS Enabled? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -715,7 +751,7 @@ Get an existing SpringCloudApp resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[SpringCloudAppIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persistent_disk</span><span class="p">:</span> <span class="nx">Optional[SpringCloudAppPersistentDiskArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SpringCloudApp</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[SpringCloudAppIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persistent_disk</span><span class="p">:</span> <span class="nx">Optional[SpringCloudAppPersistentDiskArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SpringCloudApp</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -900,6 +936,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tlsenabled_csharp">
+<a href="#state_tlsenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is End to End TLS Enabled? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
 </span>
@@ -983,6 +1028,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tlsenabled_go">
+<a href="#state_tlsenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is End to End TLS Enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
@@ -1070,6 +1124,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tlsenabled_nodejs">
+<a href="#state_tlsenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is End to End TLS Enabled? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
@@ -1153,6 +1216,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tls_enabled_python">
+<a href="#state_tls_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is End to End TLS Enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
