@@ -2,7 +2,7 @@
 title: "Pulumi Interstellar"
 date: 2021-04-01
 meta_desc: "Infrastructure as code was just the start. Today we announce Pulumi Interstellar for Terraforming as Code."
-meta_image: meta.png
+meta_image: interstellar.png
 authors:
     - joe-duffy
 tags:
