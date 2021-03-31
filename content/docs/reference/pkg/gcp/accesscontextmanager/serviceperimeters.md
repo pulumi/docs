@@ -1351,15 +1351,33 @@ be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egresspolicies_csharp">
+<a href="#egresspolicies_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicy">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingresspolicies_csharp">
+<a href="#ingresspolicies_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicy">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of `IngressPolicies` to apply to the perimeter. A perimeter may have multiple `IngressPolicies`, each of which is evaluated separately. Access is granted if any `Ingress Policy` grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
-Currently only projects are allowed.
-Format: projects/{project_number}
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_csharp">
@@ -1407,15 +1425,33 @@ be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egresspolicies_go">
+<a href="#egresspolicies_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicy">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingresspolicies_go">
+<a href="#ingresspolicies_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicy">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of `IngressPolicies` to apply to the perimeter. A perimeter may have multiple `IngressPolicies`, each of which is evaluated separately. Access is granted if any `Ingress Policy` grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
-Currently only projects are allowed.
-Format: projects/{project_number}
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_go">
@@ -1463,15 +1499,33 @@ be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egresspolicies_nodejs">
+<a href="#egresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingresspolicies_nodejs">
+<a href="#ingresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of `IngressPolicies` to apply to the perimeter. A perimeter may have multiple `IngressPolicies`, each of which is evaluated separately. Access is granted if any `Ingress Policy` grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
-Currently only projects are allowed.
-Format: projects/{project_number}
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_nodejs">
@@ -1519,15 +1573,33 @@ be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egress_policies_python">
+<a href="#egress_policies_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicy">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingress_policies_python">
+<a href="#ingress_policies_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicy">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of `IngressPolicies` to apply to the perimeter. A perimeter may have multiple `IngressPolicies`, each of which is evaluated separately. Access is granted if any `Ingress Policy` grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
-Currently only projects are allowed.
-Format: projects/{project_number}
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restricted_services_python">
@@ -1552,6 +1624,1076 @@ restrictions.
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
 Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterspecegresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="egressfrom_csharp">
+<a href="#egressfrom_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="egressto_csharp">
+<a href="#egressto_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and destination resources that cause this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="egressfrom_go">
+<a href="#egressfrom_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="egressto_go">
+<a href="#egressto_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and destination resources that cause this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="egressfrom_nodejs">
+<a href="#egressfrom_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="egressto_nodejs">
+<a href="#egressto_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and destination resources that cause this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="egress_from_python">
+<a href="#egress_from_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="egress_to_python">
+<a href="#egress_to_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>to</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and destination resources that cause this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_csharp">
+<a href="#identities_csharp" style="color: inherit; text-decoration: inherit;">Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_csharp">
+<a href="#identitytype_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_go">
+<a href="#identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_go">
+<a href="#identitytype_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_nodejs">
+<a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_nodejs">
+<a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_python">
+<a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_type_python">
+<a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterspecegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_csharp">
+<a href="#operations_csharp" style="color: inherit; text-decoration: inherit;">Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperation">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_csharp">
+<a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_go">
+<a href="#operations_go" style="color: inherit; text-decoration: inherit;">Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperation">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_go">
+<a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_nodejs">
+<a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_nodejs">
+<a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_python">
+<a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperation">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_python">
+<a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterspecegresspolicyegresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_csharp">
+<a href="#methodselectors_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperationmethodselector">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_go">
+<a href="#methodselectors_go" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperationmethodselector">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_nodejs">
+<a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_selectors_python">
+<a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperationmethodselector">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterspecegresspolicyegresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_csharp">
+<a href="#permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_go">
+<a href="#permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_nodejs">
+<a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_python">
+<a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterspecingresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ingressfrom_csharp">
+<a href="#ingressfrom_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the source of a request causing this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressto_csharp">
+<a href="#ingressto_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and request destination that cause this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ingressfrom_go">
+<a href="#ingressfrom_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the source of a request causing this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressto_go">
+<a href="#ingressto_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and request destination that cause this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ingressfrom_nodejs">
+<a href="#ingressfrom_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the source of a request causing this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressto_nodejs">
+<a href="#ingressto_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and request destination that cause this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ingress_from_python">
+<a href="#ingress_from_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the source of a request causing this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingress_to_python">
+<a href="#ingress_to_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>to</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and request destination that cause this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_csharp">
+<a href="#identities_csharp" style="color: inherit; text-decoration: inherit;">Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_csharp">
+<a href="#identitytype_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_csharp">
+<a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfromsource">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ Sources that this `IngressPolicy` authorizes access from.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_go">
+<a href="#identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_go">
+<a href="#identitytype_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_go">
+<a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfromsource">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}/ Sources that this `IngressPolicy` authorizes access from.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_nodejs">
+<a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_nodejs">
+<a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_nodejs">
+<a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfromsource">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ Sources that this `IngressPolicy` authorizes access from.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_python">
+<a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_type_python">
+<a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_python">
+<a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfromsource">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ Sources that this `IngressPolicy` authorizes access from.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterspecingresspolicyingressfromsource">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesslevel_csharp">
+<a href="#accesslevel_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ An `AccessLevel` resource name that allow resources within the `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` will cause an error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.` If * is specified, then all IngressSources will be allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_csharp">
+<a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesslevel_go">
+<a href="#accesslevel_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ An `AccessLevel` resource name that allow resources within the `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` will cause an error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.` If * is specified, then all IngressSources will be allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_go">
+<a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesslevel_nodejs">
+<a href="#accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ An `AccessLevel` resource name that allow resources within the `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` will cause an error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.` If * is specified, then all IngressSources will be allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_nodejs">
+<a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="access_level_python">
+<a href="#access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ An `AccessLevel` resource name that allow resources within the `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` will cause an error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.` If * is specified, then all IngressSources will be allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_python">
+<a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterspecingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_csharp">
+<a href="#operations_csharp" style="color: inherit; text-decoration: inherit;">Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperation">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_csharp">
+<a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_go">
+<a href="#operations_go" style="color: inherit; text-decoration: inherit;">Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperation">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_go">
+<a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_nodejs">
+<a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_nodejs">
+<a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_python">
+<a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperation">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_python">
+<a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterspecingresspolicyingresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_csharp">
+<a href="#methodselectors_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperationmethodselector">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_go">
+<a href="#methodselectors_go" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperationmethodselector">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_nodejs">
+<a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_selectors_python">
+<a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperationmethodselector">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterspecingresspolicyingresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_csharp">
+<a href="#permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_go">
+<a href="#permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_nodejs">
+<a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_python">
+<a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1675,15 +2817,33 @@ be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egresspolicies_csharp">
+<a href="#egresspolicies_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicy">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingresspolicies_csharp">
+<a href="#ingresspolicies_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicy">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of `IngressPolicies` to apply to the perimeter. A perimeter may have multiple `IngressPolicies`, each of which is evaluated separately. Access is granted if any `Ingress Policy` grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
-Currently only projects are allowed.
-Format: projects/{project_number}
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_csharp">
@@ -1731,15 +2891,33 @@ be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egresspolicies_go">
+<a href="#egresspolicies_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicy">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingresspolicies_go">
+<a href="#ingresspolicies_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicy">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of `IngressPolicies` to apply to the perimeter. A perimeter may have multiple `IngressPolicies`, each of which is evaluated separately. Access is granted if any `Ingress Policy` grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
-Currently only projects are allowed.
-Format: projects/{project_number}
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_go">
@@ -1787,15 +2965,33 @@ be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egresspolicies_nodejs">
+<a href="#egresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingresspolicies_nodejs">
+<a href="#ingresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of `IngressPolicies` to apply to the perimeter. A perimeter may have multiple `IngressPolicies`, each of which is evaluated separately. Access is granted if any `Ingress Policy` grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
-Currently only projects are allowed.
-Format: projects/{project_number}
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_nodejs">
@@ -1843,15 +3039,33 @@ be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="egress_policies_python">
+<a href="#egress_policies_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicy">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingress_policies_python">
+<a href="#ingress_policies_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicy">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ List of `IngressPolicies` to apply to the perimeter. A perimeter may have multiple `IngressPolicies`, each of which is evaluated separately. Access is granted if any `Ingress Policy` grants it. Must be empty for a perimeter bridge.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
-Currently only projects are allowed.
-Format: projects/{project_number}
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restricted_services_python">
@@ -1876,6 +3090,1076 @@ restrictions.
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
 Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterstatusegresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="egressfrom_csharp">
+<a href="#egressfrom_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="egressto_csharp">
+<a href="#egressto_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and destination resources that cause this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="egressfrom_go">
+<a href="#egressfrom_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="egressto_go">
+<a href="#egressto_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and destination resources that cause this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="egressfrom_nodejs">
+<a href="#egressfrom_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="egressto_nodejs">
+<a href="#egressto_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and destination resources that cause this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="egress_from_python">
+<a href="#egress_from_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="egress_to_python">
+<a href="#egress_to_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>to</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and destination resources that cause this `EgressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_csharp">
+<a href="#identities_csharp" style="color: inherit; text-decoration: inherit;">Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_csharp">
+<a href="#identitytype_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_go">
+<a href="#identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_go">
+<a href="#identitytype_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_nodejs">
+<a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_nodejs">
+<a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_python">
+<a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_type_python">
+<a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_csharp">
+<a href="#operations_csharp" style="color: inherit; text-decoration: inherit;">Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperation">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_csharp">
+<a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_go">
+<a href="#operations_go" style="color: inherit; text-decoration: inherit;">Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperation">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_go">
+<a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_nodejs">
+<a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_nodejs">
+<a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_python">
+<a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperation">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_python">
+<a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterstatusegresspolicyegresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_csharp">
+<a href="#methodselectors_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperationmethodselector">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_go">
+<a href="#methodselectors_go" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperationmethodselector">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_nodejs">
+<a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_selectors_python">
+<a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperationmethodselector">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterstatusegresspolicyegresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_csharp">
+<a href="#permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_go">
+<a href="#permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_nodejs">
+<a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_python">
+<a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterstatusingresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ingressfrom_csharp">
+<a href="#ingressfrom_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the source of a request causing this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressto_csharp">
+<a href="#ingressto_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and request destination that cause this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ingressfrom_go">
+<a href="#ingressfrom_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the source of a request causing this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressto_go">
+<a href="#ingressto_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and request destination that cause this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ingressfrom_nodejs">
+<a href="#ingressfrom_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the source of a request causing this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressto_nodejs">
+<a href="#ingressto_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and request destination that cause this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ingress_from_python">
+<a href="#ingress_from_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the source of a request causing this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingress_to_python">
+<a href="#ingress_to_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>to</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}/ Defines the conditions on the `ApiOperation` and request destination that cause this `IngressPolicy` to apply.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_csharp">
+<a href="#identities_csharp" style="color: inherit; text-decoration: inherit;">Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_csharp">
+<a href="#identitytype_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_csharp">
+<a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfromsource">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ Sources that this `IngressPolicy` authorizes access from.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_go">
+<a href="#identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_go">
+<a href="#identitytype_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_go">
+<a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfromsource">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}/ Sources that this `IngressPolicy` authorizes access from.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_nodejs">
+<a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identitytype_nodejs">
+<a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_nodejs">
+<a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfromsource">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ Sources that this `IngressPolicy` authorizes access from.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identities_python">
+<a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of identities that are allowed access through this `EgressPolicy`. Should be in the format of email address. The email address should represent individual user or service account only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_type_python">
+<a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_python">
+<a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfromsource">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ Sources that this `IngressPolicy` authorizes access from.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterstatusingresspolicyingressfromsource">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesslevel_csharp">
+<a href="#accesslevel_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ An `AccessLevel` resource name that allow resources within the `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` will cause an error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.` If * is specified, then all IngressSources will be allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_csharp">
+<a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesslevel_go">
+<a href="#accesslevel_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ An `AccessLevel` resource name that allow resources within the `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` will cause an error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.` If * is specified, then all IngressSources will be allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_go">
+<a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesslevel_nodejs">
+<a href="#accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ An `AccessLevel` resource name that allow resources within the `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` will cause an error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.` If * is specified, then all IngressSources will be allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_nodejs">
+<a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="access_level_python">
+<a href="#access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ An `AccessLevel` resource name that allow resources within the `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` will cause an error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.` If * is specified, then all IngressSources will be allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_python">
+<a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_csharp">
+<a href="#operations_csharp" style="color: inherit; text-decoration: inherit;">Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperation">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_csharp">
+<a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_go">
+<a href="#operations_go" style="color: inherit; text-decoration: inherit;">Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperation">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_go">
+<a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_nodejs">
+<a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_nodejs">
+<a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="operations_python">
+<a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperation">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ A list of `ApiOperations` that this egress rule applies to. A request matches if it contains an operation/service in this list.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_python">
+<a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}/ A list of resources, currently only projects in the form `projects/<projectnumber>`, that match this to stanza. A request matches if it contains a resource in this list. If * is specified for resources, then this `EgressTo` rule will authorize access to all resources outside the perimeter.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterstatusingresspolicyingresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_csharp">
+<a href="#methodselectors_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperationmethodselector">List&lt;Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_go">
+<a href="#methodselectors_go" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperationmethodselector">[]Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="methodselectors_nodejs">
+<a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_selectors_python">
+<a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperationmethodselector">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}/ API methods or permissions to allow. Method or permission must belong to the service specified by `serviceName` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `serviceName`.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ The name of the API whose methods or permissions the `IngressPolicy` or `EgressPolicy` want to allow. A single `ApiOperation` with serviceName field set to `*` will allow all methods AND permissions for all services.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimetersserviceperimeterstatusingresspolicyingresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_csharp">
+<a href="#permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_go">
+<a href="#permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_nodejs">
+<a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Value for `method` should be a valid method name for the corresponding `serviceName` in `ApiOperation`. If `*` used as value for method, then ALL methods and permissions are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permission_python">
+<a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}/ Value for permission should be a valid Cloud IAM permission for the corresponding `serviceName` in `ApiOperation`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
