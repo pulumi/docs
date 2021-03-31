@@ -40,16 +40,16 @@ In the initial release of the Rocket Provider we are happy to enable two key use
 {{% choosable language typescript %}}
 
 ```typescript
-import * as spacex from "@pulumi/spacex"
+import * as tyrell from "@pulumi/tyrell"
 
-const engineId = spacex.rocket.getEngine({
+const engineId = tyrell.rocket.getEngine({
    owners: ["420"],
    mostRecent: true,
-   filters: [{name: "SuperDraco", values: ["spacex/engines/super-draco-15.03-*"]}],
+   filters: [{name: "SuperDraco", values: ["tyrell/engines/super-draco-15.03-*"]}],
 });
 
-const spaceship = new spacex.spaceship.Instance("Edward Isreal", {
-   instanceType: spacex.spaceship.InstanceTypes.interplanetary,
+const spaceship = new tyrell.spaceship.Instance("Edward Isreal", {
+   instanceType: tyrell.spaceship.InstanceTypes.interplanetary,
    engine: engineId,
    capability: "kuiper_belt",
 }];
@@ -60,13 +60,13 @@ const spaceship = new spacex.spaceship.Instance("Edward Isreal", {
 {{% choosable language python %}}
 
 ```python
-from pulumi_spacex import rocket, spaceship
+from pulumi_tyrell import rocket, spaceship
 
 engine_id = rocket.getEngine(
     owners=["420"],
     most_recent=true,
     filters="""[
-        {name: "SuperDraco", values: ["spacex/engines/super-draco-15.03-*"]}
+        {name: "SuperDraco", values: ["tyrell/engines/super-draco-15.03-*"]}
     ]""",
 )
 
@@ -97,7 +97,7 @@ class MyStack : Stack
             }
             MostRecent = true,
             Filters = {
-                { "name": "SuperDraco", "values": ["spacex/engines/super-draco-15.03-*"] },
+                { "name": "SuperDraco", "values": ["tyrell/engines/super-draco-15.03-*"] },
             }
         });
 
@@ -119,19 +119,19 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-spacex/sdk/v3/go"
+	"github.com/pulumi/pulumi-tyrell/sdk/v3/go"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-        engineId, err := spacex.Rocket.GetEngine(&spacex.Rocket.GetEngineArgs{
+        engineId, err := tyrell.Rocket.GetEngine(&tyrell.Rocket.GetEngineArgs{
             Owners:     []string{"420"},
             MostRecent: true,
             Filters:    []RocketEngineFilter{
                 RocketEngineFilter{
                     Name:   "SuperDraco",
-                    Values: []string{"spacex/engines/super-draco-15.03-*"},
+                    Values: []string{"tyrell/engines/super-draco-15.03-*"},
                 },
             },
         })
@@ -139,8 +139,8 @@ func main() {
             return err
         }
 
-        spaceship, err := spacex.Spaceship.Instance("Edward Isreal", &spacex.Spaceship.InstanceArgs{
-            InstanceType: spacex.Spaceship.InstanceTypes.Interplanetary,
+        spaceship, err := tyrell.Spaceship.Instance("Edward Isreal", &tyrell.Spaceship.InstanceArgs{
+            InstanceType: tyrell.Spaceship.InstanceTypes.Interplanetary,
             EngineId:     engineId,
             Capability:   "kuiper_belt",
         })
@@ -173,7 +173,7 @@ Once the rocket arrives at its destination Pulumi’s Space AI Assistant, nickna
 const config = pulumi.Config();
 const passengers = config.require("passengers");
 
-const seats = spacex.spacex.PassengerGroup("Robinsons", {
+const seats = tyrell.tyrell.PassengerGroup("Robinsons", {
    spaceshipId: spaceship.then(it => it.id),
    seats: passengers,
    departure: "Luna",
@@ -190,7 +190,7 @@ const seats = spacex.spacex.PassengerGroup("Robinsons", {
 config = pulumi.Config()
 passengers = config.require("passengers")
 
-seats = spacex.spacex.PassengerGroup("Robinsons",
+seats = tyrell.tyrell.PassengerGroup("Robinsons",
     spaceshipId=spaceship.id,
     seats=passengers,
     departure="Luna",
@@ -215,7 +215,7 @@ const blah = "test";
 config := pulumi.Config()
 passengers := config.require("passengers")
 
-seats, err := spacex.SpaceX.PassengerGroup("Robinsons", &spacex.SpaceX.PassengerGroupArgs{
+seats, err := tyrell.SpaceX.PassengerGroup("Robinsons", &tyrell.SpaceX.PassengerGroupArgs{
     SpaceshipId: spaceship.id,
     Seats:       passengers,
     Departure:   "Luna",
