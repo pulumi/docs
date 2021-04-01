@@ -265,7 +265,7 @@ const rolePolicy = new aws.iam.RolePolicy("rolePolicy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EmailChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">from_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EmailChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">from_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -443,6 +443,15 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="configurationset_csharp">
+<a href="#configurationset_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -490,6 +499,15 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configurationset_go">
+<a href="#configurationset_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -541,6 +559,15 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="configurationset_nodejs">
+<a href="#configurationset_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
@@ -588,6 +615,15 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configuration_set_python">
+<a href="#configuration_set_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -704,7 +740,7 @@ Get an existing EmailChannel resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">from_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">messages_per_second</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EmailChannel</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">from_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">messages_per_second</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EmailChannel</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -826,6 +862,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_configurationset_csharp">
+<a href="#state_configurationset_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -882,6 +927,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_configurationset_go">
+<a href="#state_configurationset_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
@@ -942,6 +996,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_configurationset_nodejs">
+<a href="#state_configurationset_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
@@ -998,6 +1061,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_configuration_set_python">
+<a href="#state_configuration_set_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
