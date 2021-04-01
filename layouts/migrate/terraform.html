@@ -83,7 +83,7 @@
 
                     <!-- Example 1 -->
                     {{ $code := `import * as aws from "@pulumi/aws";
-import { readFileSync, readdirSync } from "fs";
+import { readdirSync } from "fs";
 import { join as pathjoin } from "path";
 
 const bucket = new aws.s3.Bucket("mybucket");
@@ -93,7 +93,7 @@ let files = readdirSync(folder);
 for (let file of files) {
     const object = new aws.s3.BucketObject(file, {
         bucket: bucket,
-        content: readFileSync(pathjoin(folder, file)).toString("utf8")
+        source: new pulumi.FileAsset(pathjoin(folder, file))
     });
 }
 

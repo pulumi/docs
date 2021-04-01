@@ -1,6 +1,7 @@
 id = "luke-hoban"
 name = "Luke Hoban"
 title = "CTO"
+company = "Pulumi"
 weight = 1
 bio = """
 <p><strong>Luke Hoban</strong> is the CTO at Pulumi where he is re-inventing how developers program the cloud.</p>

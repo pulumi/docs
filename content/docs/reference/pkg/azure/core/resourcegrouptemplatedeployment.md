@@ -25,7 +25,7 @@ Manages a Resource Group Template Deployment.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ResourceGroupTemplateDeployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">debug_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ResourceGroupTemplateDeployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">debug_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_spec_version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -183,15 +183,6 @@ The ResourceGroupTemplateDeployment resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Resource Group Template Deployment should exist. Changing this forces a new Resource Group Template Deployment to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="templatecontent_csharp">
-<a href="#templatecontent_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Content</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debuglevel_csharp">
@@ -228,6 +219,24 @@ The ResourceGroupTemplateDeployment resource accepts the following [input]({{< r
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Resource Group Template Deployment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="templatecontent_csharp">
+<a href="#templatecontent_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group. Cannot be specified with `template_spec_version_id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="templatespecversionid_csharp">
+<a href="#templatespecversionid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Spec<wbr>Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Template Spec Version to deploy. Cannot be specified with `template_content`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -250,15 +259,6 @@ The ResourceGroupTemplateDeployment resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Resource Group Template Deployment should exist. Changing this forces a new Resource Group Template Deployment to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="templatecontent_go">
-<a href="#templatecontent_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Content</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debuglevel_go">
@@ -295,6 +295,24 @@ The ResourceGroupTemplateDeployment resource accepts the following [input]({{< r
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Resource Group Template Deployment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="templatecontent_go">
+<a href="#templatecontent_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group. Cannot be specified with `template_spec_version_id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="templatespecversionid_go">
+<a href="#templatespecversionid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Spec<wbr>Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Template Spec Version to deploy. Cannot be specified with `template_content`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -317,15 +335,6 @@ The ResourceGroupTemplateDeployment resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Resource Group Template Deployment should exist. Changing this forces a new Resource Group Template Deployment to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="templatecontent_nodejs">
-<a href="#templatecontent_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Content</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debuglevel_nodejs">
@@ -362,6 +371,24 @@ The ResourceGroupTemplateDeployment resource accepts the following [input]({{< r
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Resource Group Template Deployment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="templatecontent_nodejs">
+<a href="#templatecontent_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group. Cannot be specified with `template_spec_version_id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="templatespecversionid_nodejs">
+<a href="#templatespecversionid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Spec<wbr>Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Template Spec Version to deploy. Cannot be specified with `template_content`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -384,15 +411,6 @@ The ResourceGroupTemplateDeployment resource accepts the following [input]({{< r
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Resource Group Template Deployment should exist. Changing this forces a new Resource Group Template Deployment to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="template_content_python">
-<a href="#template_content_python" style="color: inherit; text-decoration: inherit;">template_<wbr>content</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debug_level_python">
@@ -429,6 +447,24 @@ The ResourceGroupTemplateDeployment resource accepts the following [input]({{< r
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Resource Group Template Deployment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="template_content_python">
+<a href="#template_content_python" style="color: inherit; text-decoration: inherit;">template_<wbr>content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group. Cannot be specified with `template_spec_version_id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="template_spec_version_id_python">
+<a href="#template_spec_version_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>spec_<wbr>version_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Template Spec Version to deploy. Cannot be specified with `template_content`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -536,7 +572,7 @@ Get an existing ResourceGroupTemplateDeployment resource's state with the given 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">debug_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourceGroupTemplateDeployment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">debug_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_spec_version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourceGroupTemplateDeployment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -718,7 +754,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group.
+    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group. Cannot be specified with `template_spec_version_id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_templatespecversionid_csharp">
+<a href="#state_templatespecversionid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Spec<wbr>Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Template Spec Version to deploy. Cannot be specified with `template_content`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -794,7 +839,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group.
+    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group. Cannot be specified with `template_spec_version_id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_templatespecversionid_go">
+<a href="#state_templatespecversionid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Spec<wbr>Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Template Spec Version to deploy. Cannot be specified with `template_content`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -870,7 +924,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group.
+    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group. Cannot be specified with `template_spec_version_id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_templatespecversionid_nodejs">
+<a href="#state_templatespecversionid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Spec<wbr>Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Template Spec Version to deploy. Cannot be specified with `template_content`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -946,7 +1009,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group.
+    <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Resource Group. Cannot be specified with `template_spec_version_id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_template_spec_version_id_python">
+<a href="#state_template_spec_version_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>spec_<wbr>version_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Template Spec Version to deploy. Cannot be specified with `template_content`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

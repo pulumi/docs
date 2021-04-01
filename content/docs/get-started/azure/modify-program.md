@@ -12,20 +12,14 @@ menu:
 aliases: ["/docs/quickstart/azure/modify-program/"]
 ---
 
-Now that your storage account is provisioned, let's add a file to it. First, create a new directory called `site`.
-
-```bash
-mkdir site
-```
-
-Next, create a new `index.html` file with some content in it.
+Now that your S3 bucket is provisioned, let's add an object to it. First, create a new `index.html` file with some content in it.
 
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
 
 ```bash
-cat <<EOT > site/index.html
+cat <<EOT > index.html
 <html>
     <body>
         <h1>Hello, Pulumi!</h1>
@@ -39,7 +33,7 @@ EOT
 {{% choosable os linux %}}
 
 ```bash
-cat <<EOT > site/index.html
+cat <<EOT > index.html
 <html>
     <body>
         <h1>Hello, Pulumi!</h1>
@@ -59,7 +53,7 @@ EOT
     <h1>Hello, Pulumi!</h1>
   </body>
 </html>
-"@ | Out-File -FilePath site\index.html
+"@ | Out-File -FilePath index.html
 ```
 
 {{% /choosable %}}
@@ -140,7 +134,7 @@ const indexHtml = new storage.Blob("index.html", {
     resourceGroupName: resourceGroup.name,
     accountName: storageAccount.name,
     containerName: staticWebsite.containerName,
-    source: new pulumi.asset.FileAsset("./site/index.html"),
+    source: new pulumi.asset.FileAsset("index.html"),
     contentType: "text/html",
 });
 ```
@@ -155,7 +149,7 @@ index_html = storage.Blob("index.html",
     resource_group_name=resource_group.name,
     account_name=account.name,
     container_name=static_website.container_name,
-    source=pulumi.FileAsset("./site/index.html"),
+    source=pulumi.FileAsset("index.html"),
     content_type="text/html")
 ```
 
@@ -168,7 +162,7 @@ _, err = storage.NewBlob(ctx, "index.html", &storage.BlobArgs{
     ResourceGroupName: resourceGroup.Name,
     AccountName:       account.Name,
     ContainerName:     staticWebsite.ContainerName,
-    Source:            pulumi.NewFileAsset("./site/index.html"),
+    Source:            pulumi.NewFileAsset("index.html"),
     ContentType:       pulumi.String("text/html"),
 })
 if err != nil {
@@ -186,7 +180,7 @@ var index_html = new Blob("index.html", new BlobArgs
     ResourceGroupName = resourceGroup.Name,
     AccountName = storageAccount.Name,
     ContainerName = staticWebsite.ContainerName,
-    Source = new FileAsset("./site/index.html"),
+    Source = new FileAsset("index.html"),
     ContentType = "text/html",
 });
 ```

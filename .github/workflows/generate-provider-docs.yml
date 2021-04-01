@@ -81,7 +81,6 @@ jobs:
           go get -u github.com/cbroglie/mustache
           go get -u github.com/gobuffalo/packr
           go get -u github.com/pkg/errors
-          go get -u gopkg.in/russross/blackfriday.v2
         working-directory: docs
       # We only want to run typedoc and python doc for non-resource providers
       - if: github.event.action == 'non-resource-provider'
@@ -117,6 +116,6 @@ jobs:
         dotnetversion:
         - 3.1.301
         goversion:
-        - 1.15.x
+        - 1.16.x
         pythonversion:
         - "3.7"

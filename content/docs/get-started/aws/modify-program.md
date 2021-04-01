@@ -12,20 +12,14 @@ menu:
 aliases: ["/docs/quickstart/aws/modify-program/"]
 ---
 
-Now that your S3 bucket is provisioned, let's add an object to it. First, create a new directory called `site`.
-
-```bash
-mkdir site
-```
-
-Next, create a new `index.html` file with some content in it.
+Now that your S3 bucket is provisioned, let's add an object to it. First, create a new `index.html` file with some content in it.
 
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
 
 ```bash
-cat <<EOT > site/index.html
+cat <<EOT > index.html
 <html>
     <body>
         <h1>Hello, Pulumi!</h1>
@@ -39,7 +33,7 @@ EOT
 {{% choosable os linux %}}
 
 ```bash
-cat <<EOT > site/index.html
+cat <<EOT > index.html
 <html>
     <body>
         <h1>Hello, Pulumi!</h1>
@@ -59,31 +53,25 @@ EOT
     <h1>Hello, Pulumi!</h1>
   </body>
 </html>
-"@ | Out-File -FilePath site\index.html
+"@ | Out-File -FilePath index.html
 ```
 
 {{% /choosable %}}
 
 Now that you have your new `index.html` with some content, open your program file and modify it to add the contents of your `index.html` file to your S3 bucket.
 
-To accomplish this, you will use your chosen programming language's native libraries to read the content of the file and assign it as an input to a new  `BucketObject`.
+To accomplish this, you will use Pulumi's `FileAsset` class to assign the content of the file to a new  `BucketObject`.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language javascript %}}
 
-In `index.js`, add the following:
-
-```javascript
-const fs = require("fs");
-```
-
-Next you will create a new bucket object right after creating the bucket itself.
+In `index.js`, create the `BucketObject` right after creating the bucket itself.
 
 ```javascript
 const bucketObject = new aws.s3.BucketObject("index.html", {
     bucket: bucket,
-    content: fs.readFileSync("site/index.html").toString(),
+    source: new pulumi.asset.FileAsset("index.html")
 });
 ```
 
@@ -91,18 +79,12 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
 
 {{% choosable language typescript %}}
 
-In `index.ts`, add the following:
-
-```typescript
-import * as fs from "fs";
-```
-
-Next you will create a new bucket object right after creating the bucket itself.
+In `index.ts`, create the `BucketObject` right after creating the bucket itself.
 
 ```typescript
 const bucketObject = new aws.s3.BucketObject("index.html", {
     bucket: bucket,
-    content: fs.readFileSync("site/index.html").toString(),
+    source: new pulumi.asset.FileAsset("index.html")
 });
 ```
 
@@ -116,7 +98,7 @@ In `__main__.py`, create a new bucket object by adding the following right after
 bucketObject = s3.BucketObject(
     'index.html',
     bucket=bucket,
-    content=open('site/index.html').read(),
+    source=pulumi.FileAsset('index.html')
 )
 ```
 
@@ -124,26 +106,12 @@ bucketObject = s3.BucketObject(
 
 {{% choosable language go %}}
 
-In `main.go`, add the following:
+In `main.go`, create the `BucketObject` right after creating the bucket itself.
 
 ```go
-import (
-    "io/ioutil"
-    // Existing imports...
-)
-```
-
-Next you will create a new bucket object on the lines right after creating the bucket itself.
-
-```go
-htmlContent, err := ioutil.ReadFile("site/index.html")
-if err != nil {
-    return err
-}
-
 _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
     Bucket:  bucket.ID(),
-    Content: pulumi.String(string(htmlContent)),
+    Source: pulumi.NewFileAsset("index.html")
 })
 if err != nil {
     return err
@@ -154,22 +122,13 @@ if err != nil {
 
 {{% choosable language csharp %}}
 
-In `MyStack.cs`, add the following:
+In `MyStack.cs`, create the `BucketObject` right after creating the bucket itself.
 
 ```csharp
-using System.IO;
-```
-
-Next you will create a new bucket object right after creating the bucket itself.
-
-```csharp
-var filePath = Path.GetFullPath("./site/index.html");
-var htmlString = File.ReadAllText(filePath);
-
 var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
     Bucket = bucket.BucketName,
-    Content = htmlString,
+    Source = new FileAsset("index.html")
 });
 ```
 

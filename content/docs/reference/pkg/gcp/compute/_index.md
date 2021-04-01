@@ -126,6 +126,7 @@ Explore the resources and functions of the gcp.compute module.
     <li><a href="getforwardingrule" title="GetForwardingRule"><span class="symbol function"></span>GetForwardingRule</a></li>
     <li><a href="getglobaladdress" title="GetGlobalAddress"><span class="symbol function"></span>GetGlobalAddress</a></li>
     <li><a href="getglobalforwardingrule" title="GetGlobalForwardingRule"><span class="symbol function"></span>GetGlobalForwardingRule</a></li>
+    <li><a href="gethealthcheck" title="GetHealthCheck"><span class="symbol function"></span>GetHealthCheck</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
     <li><a href="getinstancegroup" title="GetInstanceGroup"><span class="symbol function"></span>GetInstanceGroup</a></li>
@@ -156,6 +157,6 @@ Explore the resources and functions of the gcp.compute module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.17.0</dd>
+	<dd>4.18.0</dd>
 </dl>
 

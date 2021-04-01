@@ -159,7 +159,7 @@ const exampleTriggerRecurrence = new azure.logicapps.TriggerRecurrence("exampleT
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TriggerRecurrence</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">logic_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TriggerRecurrence</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">logic_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[TriggerRecurrenceScheduleArgs]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -337,6 +337,15 @@ The TriggerRecurrence resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as specified below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span>
@@ -393,6 +402,15 @@ The TriggerRecurrence resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as specified below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
@@ -453,6 +471,15 @@ The TriggerRecurrence resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as specified below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
@@ -509,6 +536,15 @@ The TriggerRecurrence resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as specified below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
@@ -598,7 +634,7 @@ Get an existing TriggerRecurrence resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">logic_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TriggerRecurrence</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">logic_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[TriggerRecurrenceScheduleArgs]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TriggerRecurrence</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -747,6 +783,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_schedule_csharp">
+<a href="#state_schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as specified below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_starttime_csharp">
 <a href="#state_starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span>
@@ -803,6 +848,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_schedule_go">
+<a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as specified below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_go">
@@ -863,6 +917,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_schedule_nodejs">
+<a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as specified below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_starttime_nodejs">
 <a href="#state_starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
@@ -921,6 +984,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_schedule_python">
+<a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `schedule` block as specified below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_start_time_python">
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
@@ -944,6 +1016,136 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="atthesehours_csharp">
+<a href="#atthesehours_csharp" style="color: inherit; text-decoration: inherit;">At<wbr>These<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of hours when the trigger should run. Valid values are between 0 and 23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="attheseminutes_csharp">
+<a href="#attheseminutes_csharp" style="color: inherit; text-decoration: inherit;">At<wbr>These<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of minutes when the trigger should run. Valid values are between 0 and 59.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onthesedays_csharp">
+<a href="#onthesedays_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>These<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of days when the trigger should run. Valid values include `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, and `Sunday`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="atthesehours_go">
+<a href="#atthesehours_go" style="color: inherit; text-decoration: inherit;">At<wbr>These<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of hours when the trigger should run. Valid values are between 0 and 23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="attheseminutes_go">
+<a href="#attheseminutes_go" style="color: inherit; text-decoration: inherit;">At<wbr>These<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of minutes when the trigger should run. Valid values are between 0 and 59.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onthesedays_go">
+<a href="#onthesedays_go" style="color: inherit; text-decoration: inherit;">On<wbr>These<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of days when the trigger should run. Valid values include `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, and `Sunday`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="atthesehours_nodejs">
+<a href="#atthesehours_nodejs" style="color: inherit; text-decoration: inherit;">at<wbr>These<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of hours when the trigger should run. Valid values are between 0 and 23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="attheseminutes_nodejs">
+<a href="#attheseminutes_nodejs" style="color: inherit; text-decoration: inherit;">at<wbr>These<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of minutes when the trigger should run. Valid values are between 0 and 59.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onthesedays_nodejs">
+<a href="#onthesedays_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>These<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of days when the trigger should run. Valid values include `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, and `Sunday`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="at_these_hours_python">
+<a href="#at_these_hours_python" style="color: inherit; text-decoration: inherit;">at_<wbr>these_<wbr>hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of hours when the trigger should run. Valid values are between 0 and 23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="at_these_minutes_python">
+<a href="#at_these_minutes_python" style="color: inherit; text-decoration: inherit;">at_<wbr>these_<wbr>minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of minutes when the trigger should run. Valid values are between 0 and 59.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="on_these_days_python">
+<a href="#on_these_days_python" style="color: inherit; text-decoration: inherit;">on_<wbr>these_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of days when the trigger should run. Valid values include `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, and `Sunday`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 
