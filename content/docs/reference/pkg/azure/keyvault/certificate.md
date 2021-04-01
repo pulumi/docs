@@ -19,7 +19,7 @@ Manages a Key Vault Certificate.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Generating A New Certificate)
+### Generating A New Certificate
 
 
 {{< example csharp >}}
