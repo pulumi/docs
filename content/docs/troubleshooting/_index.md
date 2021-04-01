@@ -473,3 +473,30 @@ value defined elsewhere in your application. If the value is known, it can be co
 
 If the stack-reference-name truly is dynamic and cannot be known ahead of time to supply directly into the app, then this
 approach will not work, and the only way to workaround the issue is to follow the steps in [Use getOutput/requireOutput](#use-getoutput).
+
+## 403 HTTP error fetching plugin
+
+You're more than likely seeing this error message as you're using an arm64 based processor (probably one of the new M1 MacBook Pros) and are using an older version of one of our providers that doesn't support this processor. 
+
+It's not possible just to upgrade the packages as your state will still be locked to the old version of the provider.
+
+There are two ways to fix this, one way if you have access to an Intel based computer and one if you don't
+
+### I have access to an Intel based computer
+
+1. Open your Pulumi program on a non-arm64 based computer
+1. Update your packages (pip / nuget / npm / go) and run `pulumi up`
+1. Once the update is complete, you can open the new, updated Pulumi program on your arm64-based system
+
+### I don't have access to an Intel based computer
+
+1. Run the following to export your stack to a local file: `pulumi stack export > file.json` 
+1. Go through the new file (in this case `file.json`), and you'll find references to something like `pulumi:providers:{provider-name}::default_2_6_1` (where in this case the `2_6_1` is the provider version). 
+1. Replace the version (in this case `2_6_1`) with the version of the provider you're trying to use. 
+1. Update your packages (pip / nuget / npm / go) to the same version
+1. Import your stack: `pulumi stack import --file file.json` (where `file.json` is the file that you've been updating)
+1. Run `pulumi up`
+
+### I'm seeing other errors, please help
+
+Get in touch with us, either through the [Community Slack](https://slack.pulumi.com) or by emailing our support team: [support@pulumi.com](mailto:support@pulumi.com).
