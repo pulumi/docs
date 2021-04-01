@@ -399,10 +399,9 @@ Today is one of the most exciting days in Pulumi's short history and we are incr
 
 <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
     <iframe
-        src="//www.youtube.com/embed/oHg5SJYRHA0?rel=0;&autoplay=1"
+        src="//www.youtube.com/embed/oHg5SJYRHA0?rel=0"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-        allowfullscreen=""
         title="Pulumi Interstellar"
-        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1><img src='/blog/pulumi-interstellar/pulumi_interstellar.png' alt='Pulumi Interstellar'></a>"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1><img src='/blog/pulumi-interstellar/youtube-preview-interstellar.png' alt='Pulumi Interstellar'></a>"
     ></iframe>
 </div>
