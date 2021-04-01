@@ -161,7 +161,7 @@ const example = new aws.mq.Configuration("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Configuration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Configuration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -309,9 +309,7 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The broker configuration in XML format.
-See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html)
-for supported parameters and format of the XML.
+    <dd>{{% md %}}Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enginetype_csharp">
@@ -320,7 +318,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of broker engine.
+    <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_csharp">
@@ -329,7 +327,16 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the broker engine.
+    <dd>{{% md %}}Version of the broker engine.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authenticationstrategy_csharp">
+<a href="#authenticationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -338,7 +345,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the configuration.
+    <dd>{{% md %}}Description of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -347,7 +354,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration
+    <dd>{{% md %}}Name of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -356,7 +363,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -369,9 +376,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The broker configuration in XML format.
-See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html)
-for supported parameters and format of the XML.
+    <dd>{{% md %}}Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enginetype_go">
@@ -380,7 +385,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of broker engine.
+    <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_go">
@@ -389,7 +394,16 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the broker engine.
+    <dd>{{% md %}}Version of the broker engine.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authenticationstrategy_go">
+<a href="#authenticationstrategy_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -398,7 +412,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the configuration.
+    <dd>{{% md %}}Description of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -407,7 +421,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration
+    <dd>{{% md %}}Name of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -416,7 +430,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -429,9 +443,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The broker configuration in XML format.
-See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html)
-for supported parameters and format of the XML.
+    <dd>{{% md %}}Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enginetype_nodejs">
@@ -440,7 +452,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of broker engine.
+    <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_nodejs">
@@ -449,7 +461,16 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the broker engine.
+    <dd>{{% md %}}Version of the broker engine.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authenticationstrategy_nodejs">
+<a href="#authenticationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -458,7 +479,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the configuration.
+    <dd>{{% md %}}Description of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -467,7 +488,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration
+    <dd>{{% md %}}Name of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -476,7 +497,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -489,9 +510,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The broker configuration in XML format.
-See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html)
-for supported parameters and format of the XML.
+    <dd>{{% md %}}Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_type_python">
@@ -500,7 +519,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of broker engine.
+    <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_version_python">
@@ -509,7 +528,16 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the broker engine.
+    <dd>{{% md %}}Version of the broker engine.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authentication_strategy_python">
+<a href="#authentication_strategy_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -518,7 +546,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the configuration.
+    <dd>{{% md %}}Description of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -527,7 +555,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration
+    <dd>{{% md %}}Name of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -536,7 +564,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -556,7 +584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the configuration.
+    <dd>{{% md %}}ARN of the configuration.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -573,7 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest revision of the configuration.
+    <dd>{{% md %}}Latest revision of the configuration.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -586,7 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the configuration.
+    <dd>{{% md %}}ARN of the configuration.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -603,7 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest revision of the configuration.
+    <dd>{{% md %}}Latest revision of the configuration.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -616,7 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the configuration.
+    <dd>{{% md %}}ARN of the configuration.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -633,7 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The latest revision of the configuration.
+    <dd>{{% md %}}Latest revision of the configuration.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -646,7 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the configuration.
+    <dd>{{% md %}}ARN of the configuration.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -663,7 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest revision of the configuration.
+    <dd>{{% md %}}Latest revision of the configuration.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -680,7 +708,7 @@ Get an existing Configuration resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">latest_revision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Configuration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">latest_revision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Configuration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -799,7 +827,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the configuration.
+    <dd>{{% md %}}ARN of the configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_authenticationstrategy_csharp">
+<a href="#state_authenticationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_csharp">
@@ -808,9 +845,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The broker configuration in XML format.
-See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html)
-for supported parameters and format of the XML.
+    <dd>{{% md %}}Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -819,7 +854,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the configuration.
+    <dd>{{% md %}}Description of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginetype_csharp">
@@ -828,7 +863,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of broker engine.
+    <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_csharp">
@@ -837,7 +872,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the broker engine.
+    <dd>{{% md %}}Version of the broker engine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latestrevision_csharp">
@@ -846,7 +881,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest revision of the configuration.
+    <dd>{{% md %}}Latest revision of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -855,7 +890,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration
+    <dd>{{% md %}}Name of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -864,7 +899,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -877,7 +912,16 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the configuration.
+    <dd>{{% md %}}ARN of the configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_authenticationstrategy_go">
+<a href="#state_authenticationstrategy_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_go">
@@ -886,9 +930,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The broker configuration in XML format.
-See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html)
-for supported parameters and format of the XML.
+    <dd>{{% md %}}Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -897,7 +939,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the configuration.
+    <dd>{{% md %}}Description of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginetype_go">
@@ -906,7 +948,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of broker engine.
+    <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_go">
@@ -915,7 +957,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the broker engine.
+    <dd>{{% md %}}Version of the broker engine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latestrevision_go">
@@ -924,7 +966,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest revision of the configuration.
+    <dd>{{% md %}}Latest revision of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -933,7 +975,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration
+    <dd>{{% md %}}Name of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -942,7 +984,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -955,7 +997,16 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the configuration.
+    <dd>{{% md %}}ARN of the configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_authenticationstrategy_nodejs">
+<a href="#state_authenticationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_nodejs">
@@ -964,9 +1015,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The broker configuration in XML format.
-See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html)
-for supported parameters and format of the XML.
+    <dd>{{% md %}}Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -975,7 +1024,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the configuration.
+    <dd>{{% md %}}Description of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginetype_nodejs">
@@ -984,7 +1033,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of broker engine.
+    <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_nodejs">
@@ -993,7 +1042,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the broker engine.
+    <dd>{{% md %}}Version of the broker engine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latestrevision_nodejs">
@@ -1002,7 +1051,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The latest revision of the configuration.
+    <dd>{{% md %}}Latest revision of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1011,7 +1060,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration
+    <dd>{{% md %}}Name of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1020,7 +1069,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1033,7 +1082,16 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the configuration.
+    <dd>{{% md %}}ARN of the configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_authentication_strategy_python">
+<a href="#state_authentication_strategy_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_python">
@@ -1042,9 +1100,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The broker configuration in XML format.
-See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html)
-for supported parameters and format of the XML.
+    <dd>{{% md %}}Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -1053,7 +1109,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the configuration.
+    <dd>{{% md %}}Description of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_type_python">
@@ -1062,7 +1118,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of broker engine.
+    <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_version_python">
@@ -1071,7 +1127,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the broker engine.
+    <dd>{{% md %}}Version of the broker engine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latest_revision_python">
@@ -1080,7 +1136,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The latest revision of the configuration.
+    <dd>{{% md %}}Latest revision of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1089,7 +1145,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration
+    <dd>{{% md %}}Name of the configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -1098,7 +1154,7 @@ for supported parameters and format of the XML.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

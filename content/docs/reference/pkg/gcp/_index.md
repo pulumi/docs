@@ -53,6 +53,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="firestore/" title="firestore"><span class="symbol module"></span>firestore</a></li>
     <li><a href="folder/" title="folder"><span class="symbol module"></span>folder</a></li>
     <li><a href="gameservices/" title="gameservices"><span class="symbol module"></span>gameservices</a></li>
+    <li><a href="gkehub/" title="gkehub"><span class="symbol module"></span>gkehub</a></li>
     <li><a href="healthcare/" title="healthcare"><span class="symbol module"></span>healthcare</a></li>
     <li><a href="iam/" title="iam"><span class="symbol module"></span>iam</a></li>
     <li><a href="iap/" title="iap"><span class="symbol module"></span>iap</a></li>
@@ -83,6 +84,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="spanner/" title="spanner"><span class="symbol module"></span>spanner</a></li>
     <li><a href="sql/" title="sql"><span class="symbol module"></span>sql</a></li>
     <li><a href="storage/" title="storage"><span class="symbol module"></span>storage</a></li>
+    <li><a href="tags/" title="tags"><span class="symbol module"></span>tags</a></li>
     <li><a href="tpu/" title="tpu"><span class="symbol module"></span>tpu</a></li>
     <li><a href="vpcaccess/" title="vpcaccess"><span class="symbol module"></span>vpcaccess</a></li>
     <li><a href="workflows/" title="workflows"><span class="symbol module"></span>workflows</a></li>
@@ -102,6 +104,6 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.17.0</dd>
+	<dd>4.18.0</dd>
 </dl>
 

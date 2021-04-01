@@ -1006,8 +1006,8 @@ The following state arguments are supported:
 <h4 id="webaclloggingconfigurationredactedfieldsingleheader">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Header</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required property-deprecated"
-            title="Required, Deprecated">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1015,12 +1015,12 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by WAFv2 API{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required property-deprecated"
-            title="Required, Deprecated">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1028,12 +1028,12 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by WAFv2 API{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required property-deprecated"
-            title="Required, Deprecated">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1041,12 +1041,12 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by WAFv2 API{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required property-deprecated"
-            title="Required, Deprecated">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1054,7 +1054,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by WAFv2 API{{% /md %}}</p></dd></dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webaclloggingconfigurationredactedfieldsinglequeryargument">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Query<wbr>Argument</h4>

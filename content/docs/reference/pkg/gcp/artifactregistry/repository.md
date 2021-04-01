@@ -14,7 +14,7 @@ A repository for storing artifacts
 
 To get more information about Repository, see:
 
-* [API documentation](https://cloud.google.com/artifact-registry/docs/reference/rest/)
+* [API documentation](https://cloud.google.com/artifact-registry/docs/reference/rest/v1beta2/projects.locations.repositories)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/artifact-registry/docs/overview)
 
@@ -565,7 +565,6 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.
-Possible values are `DOCKER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryid_csharp">
@@ -642,7 +641,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.
-Possible values are `DOCKER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryid_go">
@@ -719,7 +717,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.
-Possible values are `DOCKER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryid_nodejs">
@@ -796,7 +793,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.
-Possible values are `DOCKER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_id_python">
@@ -1177,7 +1173,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.
-Possible values are `DOCKER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyname_csharp">
@@ -1281,7 +1276,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.
-Possible values are `DOCKER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyname_go">
@@ -1385,7 +1379,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.
-Possible values are `DOCKER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyname_nodejs">
@@ -1489,7 +1482,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.
-Possible values are `DOCKER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_name_python">

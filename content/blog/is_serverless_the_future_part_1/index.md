@@ -1,7 +1,8 @@
 ---
 title: "Serverless: Is it Really the Future (Part 1)"
 date: 2021-03-30
-meta_desc: "Serverless is ~~a~~ popular because it's fast and cheap, but is it really? This article discusses the pros and cons of serverless architecture."
+meta_desc: "Serverless is popular because it's fast and cheap. This article discusses the pros and cons of serverless architecture."
+
 meta_image: serverless.png
 authors:
     - lee-briggs

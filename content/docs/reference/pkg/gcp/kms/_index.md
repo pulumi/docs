@@ -30,6 +30,7 @@ Explore the resources and functions of the gcp.kms module.
     <li><a href="getkmscryptokeyversion" title="GetKMSCryptoKeyVersion"><span class="symbol function"></span>GetKMSCryptoKeyVersion</a></li>
     <li><a href="getkmskeyring" title="GetKMSKeyRing"><span class="symbol function"></span>GetKMSKeyRing</a></li>
     <li><a href="getkmssecret" title="GetKMSSecret"><span class="symbol function"></span>GetKMSSecret</a></li>
+    <li><a href="getkmssecretasymmetric" title="GetKMSSecretAsymmetric"><span class="symbol function"></span>GetKMSSecretAsymmetric</a></li>
     <li><a href="getkmssecretciphertext" title="GetKMSSecretCiphertext"><span class="symbol function"></span>GetKMSSecretCiphertext</a></li>
 </ul>
 
@@ -42,6 +43,6 @@ Explore the resources and functions of the gcp.kms module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.17.0</dd>
+	<dd>4.18.0</dd>
 </dl>
 

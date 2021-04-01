@@ -22,6 +22,9 @@ Explore the resources and functions of the gcp.datacatalog module.
     <li><a href="policytagiampolicy" title="PolicyTagIamPolicy"><span class="symbol resource"></span>PolicyTagIamPolicy</a></li>
     <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
     <li><a href="tagtemplate" title="TagTemplate"><span class="symbol resource"></span>TagTemplate</a></li>
+    <li><a href="tagtemplateiambinding" title="TagTemplateIamBinding"><span class="symbol resource"></span>TagTemplateIamBinding</a></li>
+    <li><a href="tagtemplateiammember" title="TagTemplateIamMember"><span class="symbol resource"></span>TagTemplateIamMember</a></li>
+    <li><a href="tagtemplateiampolicy" title="TagTemplateIamPolicy"><span class="symbol resource"></span>TagTemplateIamPolicy</a></li>
     <li><a href="taxonomy" title="Taxonomy"><span class="symbol resource"></span>Taxonomy</a></li>
     <li><a href="taxonomyiambinding" title="TaxonomyIamBinding"><span class="symbol resource"></span>TaxonomyIamBinding</a></li>
     <li><a href="taxonomyiammember" title="TaxonomyIamMember"><span class="symbol resource"></span>TaxonomyIamMember</a></li>
@@ -37,6 +40,6 @@ Explore the resources and functions of the gcp.datacatalog module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.17.0</dd>
+	<dd>4.18.0</dd>
 </dl>
 

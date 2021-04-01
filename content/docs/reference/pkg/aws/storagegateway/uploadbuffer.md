@@ -21,7 +21,7 @@ Manages an AWS Storage Gateway upload buffer.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
+### Cached and VTL Gateway Type
 
 
 {{< example csharp >}}
@@ -34,6 +34,119 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var testLocalDisk = Output.Create(Aws.StorageGateway.GetLocalDisk.InvokeAsync(new Aws.StorageGateway.GetLocalDiskArgs
+        {
+            DiskNode = aws_volume_attachment.Test.Device_name,
+            GatewayArn = aws_storagegateway_gateway.Test.Arn,
+        }));
+        var testUploadBuffer = new Aws.StorageGateway.UploadBuffer("testUploadBuffer", new Aws.StorageGateway.UploadBufferArgs
+        {
+            DiskPath = testLocalDisk.Apply(testLocalDisk => testLocalDisk.DiskPath),
+            GatewayArn = aws_storagegateway_gateway.Test.Arn,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := aws_volume_attachment.Test.Device_name
+		testLocalDisk, err := storagegateway.GetLocalDisk(ctx, &storagegateway.GetLocalDiskArgs{
+			DiskNode:   &opt0,
+			GatewayArn: aws_storagegateway_gateway.Test.Arn,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = storagegateway.NewUploadBuffer(ctx, "testUploadBuffer", &storagegateway.UploadBufferArgs{
+			DiskPath:   pulumi.String(testLocalDisk.DiskPath),
+			GatewayArn: pulumi.Any(aws_storagegateway_gateway.Test.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_local_disk = aws.storagegateway.get_local_disk(disk_node=aws_volume_attachment["test"]["device_name"],
+    gateway_arn=aws_storagegateway_gateway["test"]["arn"])
+test_upload_buffer = aws.storagegateway.UploadBuffer("testUploadBuffer",
+    disk_path=test_local_disk.disk_path,
+    gateway_arn=aws_storagegateway_gateway["test"]["arn"])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testLocalDisk = aws.storagegateway.getLocalDisk({
+    diskNode: aws_volume_attachment.test.device_name,
+    gatewayArn: aws_storagegateway_gateway.test.arn,
+});
+const testUploadBuffer = new aws.storagegateway.UploadBuffer("testUploadBuffer", {
+    diskPath: testLocalDisk.then(testLocalDisk => testLocalDisk.diskPath),
+    gatewayArn: aws_storagegateway_gateway.test.arn,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Stored Gateway Type
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Aws.StorageGateway.GetLocalDisk.InvokeAsync(new Aws.StorageGateway.GetLocalDiskArgs
+        {
+            DiskNode = aws_volume_attachment.Test.Device_name,
+            GatewayArn = aws_storagegateway_gateway.Test.Arn,
+        }));
         var example = new Aws.StorageGateway.UploadBuffer("example", new Aws.StorageGateway.UploadBufferArgs
         {
             DiskId = data.Aws_storagegateway_local_disk.Example.Id,
@@ -60,7 +173,15 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storagegateway.NewUploadBuffer(ctx, "example", &storagegateway.UploadBufferArgs{
+		opt0 := aws_volume_attachment.Test.Device_name
+		_, err := storagegateway.GetLocalDisk(ctx, &storagegateway.GetLocalDiskArgs{
+			DiskNode:   &opt0,
+			GatewayArn: aws_storagegateway_gateway.Test.Arn,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = storagegateway.NewUploadBuffer(ctx, "example", &storagegateway.UploadBufferArgs{
 			DiskId:     pulumi.Any(data.Aws_storagegateway_local_disk.Example.Id),
 			GatewayArn: pulumi.Any(aws_storagegateway_gateway.Example.Arn),
 		})
@@ -82,6 +203,8 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
+test = aws.storagegateway.get_local_disk(disk_node=aws_volume_attachment["test"]["device_name"],
+    gateway_arn=aws_storagegateway_gateway["test"]["arn"])
 example = aws.storagegateway.UploadBuffer("example",
     disk_id=data["aws_storagegateway_local_disk"]["example"]["id"],
     gateway_arn=aws_storagegateway_gateway["example"]["arn"])
@@ -98,6 +221,10 @@ example = aws.storagegateway.UploadBuffer("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const test = aws.storagegateway.getLocalDisk({
+    diskNode: aws_volume_attachment.test.device_name,
+    gatewayArn: aws_storagegateway_gateway.test.arn,
+});
 const example = new aws.storagegateway.UploadBuffer("example", {
     diskId: data.aws_storagegateway_local_disk.example.id,
     gatewayArn: aws_storagegateway_gateway.example.arn,
@@ -125,7 +252,7 @@ const example = new aws.storagegateway.UploadBuffer("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UploadBuffer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UploadBuffer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -267,15 +394,6 @@ The UploadBuffer resource accepts the following [input]({{< relref "/docs/intro/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="diskid_csharp">
-<a href="#diskid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="gatewayarn_csharp">
 <a href="#gatewayarn_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Arn</a>
 </span>
@@ -283,20 +401,29 @@ The UploadBuffer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the gateway.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="diskid_go">
-<a href="#diskid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskid_csharp">
+<a href="#diskid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskpath_csharp">
+<a href="#diskpath_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Local disk path. For example, `/dev/nvme1n1`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayarn_go">
 <a href="#gatewayarn_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Arn</a>
@@ -305,20 +432,29 @@ The UploadBuffer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the gateway.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="diskid_nodejs">
-<a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskid_go">
+<a href="#diskid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskpath_go">
+<a href="#diskpath_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Local disk path. For example, `/dev/nvme1n1`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayarn_nodejs">
 <a href="#gatewayarn_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Arn</a>
@@ -327,20 +463,29 @@ The UploadBuffer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskid_nodejs">
+<a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskpath_nodejs">
+<a href="#diskpath_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Local disk path. For example, `/dev/nvme1n1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="disk_id_python">
-<a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gateway_arn_python">
 <a href="#gateway_arn_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>arn</a>
@@ -349,6 +494,24 @@ The UploadBuffer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disk_id_python">
+<a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disk_path_python">
+<a href="#disk_path_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Local disk path. For example, `/dev/nvme1n1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -420,7 +583,7 @@ Get an existing UploadBuffer resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UploadBuffer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UploadBuffer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -542,6 +705,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_diskpath_csharp">
+<a href="#state_diskpath_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Local disk path. For example, `/dev/nvme1n1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_gatewayarn_csharp">
 <a href="#state_gatewayarn_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Arn</a>
 </span>
@@ -562,6 +734,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_diskpath_go">
+<a href="#state_diskpath_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Local disk path. For example, `/dev/nvme1n1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayarn_go">
@@ -586,6 +767,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_diskpath_nodejs">
+<a href="#state_diskpath_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Local disk path. For example, `/dev/nvme1n1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_gatewayarn_nodejs">
 <a href="#state_gatewayarn_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Arn</a>
 </span>
@@ -606,6 +796,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disk_path_python">
+<a href="#state_disk_path_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Local disk path. For example, `/dev/nvme1n1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_arn_python">

@@ -13,6 +13,7 @@ Explore the resources and functions of the aws.lightsail module.
 <ul class="api">
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="instancepublicports" title="InstancePublicPorts"><span class="symbol resource"></span>InstancePublicPorts</a></li>
     <li><a href="keypair" title="KeyPair"><span class="symbol resource"></span>KeyPair</a></li>
     <li><a href="staticip" title="StaticIp"><span class="symbol resource"></span>StaticIp</a></li>
     <li><a href="staticipattachment" title="StaticIpAttachment"><span class="symbol resource"></span>StaticIpAttachment</a></li>
@@ -27,6 +28,6 @@ Explore the resources and functions of the aws.lightsail module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.34.2</dd>
+	<dd>3.35.0</dd>
 </dl>
 
