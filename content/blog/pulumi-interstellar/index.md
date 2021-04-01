@@ -225,7 +225,7 @@ var seats = new Tyrell.Tyrell.PassengerGroup("Robinsons", new Tyrell.Tyrell.Pass
 config := pulumi.Config()
 passengers := config.require("passengers")
 
-seats, err := tyrell.SpaceX.PassengerGroup("Robinsons", &tyrell.SpaceX.PassengerGroupArgs{
+seats, err := tyrell.PassengerGroup("Robinsons", &tyrell.PassengerGroupArgs{
     SpaceshipId: spaceship.id,
     Seats:       passengers,
     Departure:   "Luna",
