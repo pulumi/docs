@@ -83,13 +83,13 @@ spaceship = spaceship.Instance("Edward Isreal",
 
 ```csharp
 using Pulumi;
-using SpaceX = Pulumi.SpaceX;
+using Tyrell = Pulumi.Tyrell;
 
 class MyStack : Stack
 {
     public MyStack()
     {
-        var engineId = new SpaceX.Rocket.GetEngine(new SpaceX.Rocket.GetEngineArgs
+        var engineId = new Tyrell.Rocket.GetEngine(new Tyrell.Rocket.GetEngineArgs
         {
             Owners =
             {
@@ -101,8 +101,8 @@ class MyStack : Stack
             }
         });
 
-        var spaceship = new SpaceX.Spaceship.Instance("", new SpaceX.Spaceship.InstanceArgs{
-            InstanceType = SpaceX.Spaceship.InstanceTypes.Interplanetary,
+        var spaceship = new Tyrell.Spaceship.Instance("", new Tyrell.Spaceship.InstanceArgs{
+            InstanceType = Tyrell.Spaceship.InstanceTypes.Interplanetary,
             EngineId = engineId,
             Capability = "kuiper_belt",
         });
@@ -204,7 +204,17 @@ seats = tyrell.tyrell.PassengerGroup("Robinsons",
 {{% choosable language csharp %}}
 
 ```csharp
-const blah = "test";
+var config = Pulumi.Config();
+var passengers = config.require("passengers");
+
+var seats = new Tyrell.Tyrell.PassengerGroup("Robinsons", new Tyrell.Tyrell.PassengerGroupArgs
+{
+    SpaceshipId = spaceship.id,
+    Seats = passengers,
+    Departure = "Luna",
+    Destination = "Mars",
+    Berth = "Colonist",
+});
 ```
 
 {{% /choosable %}}
@@ -287,7 +297,34 @@ terradome = dome.Instance("Hadley's Hope",
 {{% choosable language csharp %}}
 
 ```csharp
-const blah = "test";
+using Pulumi;
+using WeylandYutani = Pulumi.WeylandYutani;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dome = new WeylandYutani.Dome.GetDome(new WeylandYutani.Dome.GetDomeArgs
+        {
+            Owners =
+            {
+                "099720109477",
+            }
+            MostRecent = true,
+            Filters = {
+                { "name": "BasicDome", "values": ["weyland-yutanu/terraforming/acheron-*"] },
+            }
+        });
+
+        var terradome = new WeylandYutani.Dome.Instance("Hadley's Hope", new Weyland.Yutani.Dome.InstanceArgs
+        {
+            InstanceType = Weyland.Dome.InstanceType.LV_246,
+            Dome = dome.Id,
+            Type = "atmospheric-processor",
+        });
+    }
+
+}
 ```
 
 {{% /choosable %}}
