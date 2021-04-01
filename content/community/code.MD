@@ -10,6 +10,8 @@ Here is a curated list of community created repositories, libraries, components,
 
 [statey](https://github.com/cfeenstra67/statey) - Infrastructure-as-code framework written in Python
 
+[gocloud](https://github.com/ksrichard/gocloud) - Create cloud based applications in Go
+
 
 ## Pipelines/Deployments
 [pulumi-react-app](https://github.com/nebulis-io/pulumi-react-app) - Deploy react apps
