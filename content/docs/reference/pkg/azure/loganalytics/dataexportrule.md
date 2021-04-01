@@ -389,7 +389,7 @@ The DataExportRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is this Log Analytics Data Export Rule when enabled? Possible values include `true` or `false`. Defaults to `false`.
+    <dd>{{% md %}}Is this Log Analytics Data Export Rule enabled? Possible values include `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -447,7 +447,7 @@ The DataExportRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is this Log Analytics Data Export Rule when enabled? Possible values include `true` or `false`. Defaults to `false`.
+    <dd>{{% md %}}Is this Log Analytics Data Export Rule enabled? Possible values include `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -505,7 +505,7 @@ The DataExportRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is this Log Analytics Data Export Rule when enabled? Possible values include `true` or `false`. Defaults to `false`.
+    <dd>{{% md %}}Is this Log Analytics Data Export Rule enabled? Possible values include `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -563,7 +563,7 @@ The DataExportRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is this Log Analytics Data Export Rule when enabled? Possible values include `true` or `false`. Defaults to `false`.
+    <dd>{{% md %}}Is this Log Analytics Data Export Rule enabled? Possible values include `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -808,7 +808,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is this Log Analytics Data Export Rule when enabled? Possible values include `true` or `false`. Defaults to `false`.
+    <dd>{{% md %}}Is this Log Analytics Data Export Rule enabled? Possible values include `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportruleid_csharp">
@@ -875,7 +875,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is this Log Analytics Data Export Rule when enabled? Possible values include `true` or `false`. Defaults to `false`.
+    <dd>{{% md %}}Is this Log Analytics Data Export Rule enabled? Possible values include `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportruleid_go">
@@ -942,7 +942,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is this Log Analytics Data Export Rule when enabled? Possible values include `true` or `false`. Defaults to `false`.
+    <dd>{{% md %}}Is this Log Analytics Data Export Rule enabled? Possible values include `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportruleid_nodejs">
@@ -1009,7 +1009,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is this Log Analytics Data Export Rule when enabled? Possible values include `true` or `false`. Defaults to `false`.
+    <dd>{{% md %}}Is this Log Analytics Data Export Rule enabled? Possible values include `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_export_rule_id_python">

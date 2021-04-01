@@ -310,15 +310,6 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="permissions_csharp">
-<a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#definitionpermission">List&lt;Definition<wbr>Permission<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A `permissions` block as defined below.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
@@ -355,6 +346,15 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The name of the Role Definition. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="permissions_csharp">
+<a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionpermission">List&lt;Definition<wbr>Permission<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `permissions` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="roledefinitionid_csharp">
 <a href="#roledefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
 </span>
@@ -367,15 +367,6 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="permissions_go">
-<a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#definitionpermission">[]Definition<wbr>Permission</a></span>
-    </dt>
-    <dd>{{% md %}}A `permissions` block as defined below.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -413,6 +404,15 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The name of the Role Definition. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="permissions_go">
+<a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionpermission">[]Definition<wbr>Permission</a></span>
+    </dt>
+    <dd>{{% md %}}A `permissions` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="roledefinitionid_go">
 <a href="#roledefinitionid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
 </span>
@@ -425,15 +425,6 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="permissions_nodejs">
-<a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#definitionpermission">Definition<wbr>Permission[]</a></span>
-    </dt>
-    <dd>{{% md %}}A `permissions` block as defined below.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -471,6 +462,15 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The name of the Role Definition. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="permissions_nodejs">
+<a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionpermission">Definition<wbr>Permission[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `permissions` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="roledefinitionid_nodejs">
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
 </span>
@@ -483,15 +483,6 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="permissions_python">
-<a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#definitionpermission">Sequence[Definition<wbr>Permission<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}A `permissions` block as defined below.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -527,6 +518,15 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Role Definition. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="permissions_python">
+<a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionpermission">Sequence[Definition<wbr>Permission<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `permissions` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_definition_id_python">

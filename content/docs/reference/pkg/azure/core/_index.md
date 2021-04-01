@@ -18,6 +18,7 @@ Explore the resources and functions of the azure.core module.
     <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
     <li><a href="subscriptiontemplatedeployment" title="SubscriptionTemplateDeployment"><span class="symbol resource"></span>SubscriptionTemplateDeployment</a></li>
     <li><a href="templatedeployment" title="TemplateDeployment"><span class="symbol resource"></span>TemplateDeployment</a></li>
+    <li><a href="tenanttemplatedeployment" title="TenantTemplateDeployment"><span class="symbol resource"></span>TenantTemplateDeployment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -27,6 +28,7 @@ Explore the resources and functions of the azure.core module.
     <li><a href="getresources" title="GetResources"><span class="symbol function"></span>GetResources</a></li>
     <li><a href="getsubscription" title="GetSubscription"><span class="symbol function"></span>GetSubscription</a></li>
     <li><a href="getsubscriptions" title="GetSubscriptions"><span class="symbol function"></span>GetSubscriptions</a></li>
+    <li><a href="gettemplatespecversion" title="GetTemplateSpecVersion"><span class="symbol function"></span>GetTemplateSpecVersion</a></li>
     <li><a href="getuserassignedidentity" title="GetUserAssignedIdentity"><span class="symbol function"></span>GetUserAssignedIdentity</a></li>
 </ul>
 
@@ -39,6 +41,6 @@ Explore the resources and functions of the azure.core module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.52.1</dd>
+	<dd>3.53.0</dd>
 </dl>
 

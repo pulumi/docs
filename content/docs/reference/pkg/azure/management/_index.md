@@ -12,6 +12,7 @@ Explore the resources and functions of the azure.management module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="grouptemplatedeployment" title="GroupTemplateDeployment"><span class="symbol resource"></span>GroupTemplateDeployment</a></li>
     <li><a href="lock" title="Lock"><span class="symbol resource"></span>Lock</a></li>
 </ul>
 
@@ -29,6 +30,6 @@ Explore the resources and functions of the azure.management module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.52.1</dd>
+	<dd>3.53.0</dd>
 </dl>
 
