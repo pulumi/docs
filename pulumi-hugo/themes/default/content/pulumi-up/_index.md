@@ -2,6 +2,7 @@
 title: PulumiUP
 type: page
 layout: pulumi-up
+meta_image: /images/pulumiup/pulumiup_social.png
 meta_desc: |
     On April 20th Pulumi presents PulumiUP, a 2 hour virtual event that will feature product updates, company news,
     and much more.
