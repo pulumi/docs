@@ -60,8 +60,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{matrix.pythonversion}}
-      - name: setup pipenv
-        uses: dschep/install-pipenv-action@v1
+      - name: Install Pipenv
+        run:  pip3 install pipenv
       - name: setup dotnet
         uses: actions/setup-dotnet@v1
         with:
