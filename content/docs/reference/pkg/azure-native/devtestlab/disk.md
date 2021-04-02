@@ -12,13 +12,131 @@ meta_desc: "Documentation for the azure-native.devtestlab.Disk resource with exa
 
 A Disk.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/disks/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Disks_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.DevTestLab.Disk("disk", new AzureNative.DevTestLab.DiskArgs
+        {
+            DiskSizeGiB = 1023,
+            DiskType = "Standard",
+            LabName = "{labName}",
+            LeasedByLabVmId = "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/vmName",
+            Name = "{diskName}",
+            ResourceGroupName = "resourceGroupName",
+            UserName = "{userId}",
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewDisk(ctx, "disk", &devtestlab.DiskArgs{
+			DiskSizeGiB:       pulumi.Int(1023),
+			DiskType:          pulumi.String("Standard"),
+			LabName:           pulumi.String("{labName}"),
+			LeasedByLabVmId:   pulumi.String("/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/vmName"),
+			Name:              pulumi.String("{diskName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			UserName:          pulumi.String("{userId}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.devtestlab.Disk("disk",
+    disk_size_gi_b=1023,
+    disk_type="Standard",
+    lab_name="{labName}",
+    leased_by_lab_vm_id="/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/vmName",
+    name="{diskName}",
+    resource_group_name="resourceGroupName",
+    user_name="{userId}")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.devtestlab.Disk("disk", {
+    diskSizeGiB: 1023,
+    diskType: "Standard",
+    labName: "{labName}",
+    leasedByLabVmId: "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/vmName",
+    name: "{diskName}",
+    resourceGroupName: "resourceGroupName",
+    userName: "{userId}",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -32,7 +150,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disk_blob_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gi_b</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageType]]</span> = None<span class="p">, </span><span class="nx">disk_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_caching</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">leased_by_lab_vm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disk_blob_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gi_b</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageType]]</span> = None<span class="p">, </span><span class="nx">disk_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_caching</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">leased_by_lab_vm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -212,7 +330,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The size of the disk in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_csharp">
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -270,6 +388,14 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The name of the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storageaccountid_csharp">
+<a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When backed by a blob, the storage account where the blob is.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -320,7 +446,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The size of the disk in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_go">
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -378,6 +504,14 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The name of the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storageaccountid_go">
+<a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When backed by a blob, the storage account where the blob is.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -428,7 +562,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The size of the disk in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_nodejs">
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
@@ -486,6 +620,14 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The name of the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storageaccountid_nodejs">
+<a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When backed by a blob, the storage account where the blob is.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -536,7 +678,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The size of the disk in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_type_python">
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
@@ -593,6 +735,14 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the disk.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_account_id_python">
+<a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}When backed by a blob, the storage account where the blob is.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -825,6 +975,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Premium</dd><dt>STANDARD_SSD</dt>
     <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:Disk {diskName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/l{labName}/users/{userId}/disks/{diskName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

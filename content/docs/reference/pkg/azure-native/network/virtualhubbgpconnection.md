@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.VirtualHubBgpConnection r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual Appliance Site resource.
-API Version: 2020-08-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 

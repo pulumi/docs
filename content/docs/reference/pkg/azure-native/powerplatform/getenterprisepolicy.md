@@ -148,7 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -156,7 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the EnterprisePolicy is located.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -164,7 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -180,7 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_csharp">
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -224,7 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -232,7 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the EnterprisePolicy is located.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -240,7 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -256,7 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_go">
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -300,7 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -308,7 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the EnterprisePolicy is located.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -316,7 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -332,7 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_nodejs">
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -376,7 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -384,7 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Region where the EnterprisePolicy is located.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -392,7 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -408,7 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_python">
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>

@@ -155,7 +155,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -223,7 +223,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -291,7 +291,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -359,7 +359,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>

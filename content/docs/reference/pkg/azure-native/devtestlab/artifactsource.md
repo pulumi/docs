@@ -12,13 +12,160 @@ meta_desc: "Documentation for the azure-native.devtestlab.ArtifactSource resourc
 
 Properties of an artifact source.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:ArtifactSource myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/artifactsources/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### ArtifactSources_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var artifactSource = new AzureNative.DevTestLab.ArtifactSource("artifactSource", new AzureNative.DevTestLab.ArtifactSourceArgs
+        {
+            ArmTemplateFolderPath = "{armTemplateFolderPath}",
+            BranchRef = "{branchRef}",
+            DisplayName = "{displayName}",
+            FolderPath = "{folderPath}",
+            LabName = "{labName}",
+            Name = "{artifactSourceName}",
+            ResourceGroupName = "resourceGroupName",
+            SecurityToken = "{securityToken}",
+            SourceType = "{VsoGit|GitHub|StorageAccount}",
+            Status = "{Enabled|Disabled}",
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+            Uri = "{artifactSourceUri}",
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewArtifactSource(ctx, "artifactSource", &devtestlab.ArtifactSourceArgs{
+			ArmTemplateFolderPath: pulumi.String("{armTemplateFolderPath}"),
+			BranchRef:             pulumi.String("{branchRef}"),
+			DisplayName:           pulumi.String("{displayName}"),
+			FolderPath:            pulumi.String("{folderPath}"),
+			LabName:               pulumi.String("{labName}"),
+			Name:                  pulumi.String("{artifactSourceName}"),
+			ResourceGroupName:     pulumi.String("resourceGroupName"),
+			SecurityToken:         pulumi.String("{securityToken}"),
+			SourceType:            pulumi.String("{VsoGit|GitHub|StorageAccount}"),
+			Status:                pulumi.String("{Enabled|Disabled}"),
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+			Uri: pulumi.String("{artifactSourceUri}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+artifact_source = azure_native.devtestlab.ArtifactSource("artifactSource",
+    arm_template_folder_path="{armTemplateFolderPath}",
+    branch_ref="{branchRef}",
+    display_name="{displayName}",
+    folder_path="{folderPath}",
+    lab_name="{labName}",
+    name="{artifactSourceName}",
+    resource_group_name="resourceGroupName",
+    security_token="{securityToken}",
+    source_type="{VsoGit|GitHub|StorageAccount}",
+    status="{Enabled|Disabled}",
+    tags={
+        "tagName1": "tagValue1",
+    },
+    uri="{artifactSourceUri}")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const artifactSource = new azure_native.devtestlab.ArtifactSource("artifactSource", {
+    armTemplateFolderPath: "{armTemplateFolderPath}",
+    branchRef: "{branchRef}",
+    displayName: "{displayName}",
+    folderPath: "{folderPath}",
+    labName: "{labName}",
+    name: "{artifactSourceName}",
+    resourceGroupName: "resourceGroupName",
+    securityToken: "{securityToken}",
+    sourceType: "{VsoGit|GitHub|StorageAccount}",
+    status: "{Enabled|Disabled}",
+    tags: {
+        tagName1: "tagValue1",
+    },
+    uri: "{artifactSourceUri}",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -827,26 +974,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Vso<wbr>Git</dt>
     <dd>VsoGit</dd><dt>Git<wbr>Hub</dt>
-    <dd>GitHub</dd></dl>
+    <dd>GitHub</dd><dt>Storage<wbr>Account</dt>
+    <dd>StorageAccount</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Source<wbr>Control<wbr>Type<wbr>Vso<wbr>Git</dt>
     <dd>VsoGit</dd><dt>Source<wbr>Control<wbr>Type<wbr>Git<wbr>Hub</dt>
-    <dd>GitHub</dd></dl>
+    <dd>GitHub</dd><dt>Source<wbr>Control<wbr>Type<wbr>Storage<wbr>Account</dt>
+    <dd>StorageAccount</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Vso<wbr>Git</dt>
     <dd>VsoGit</dd><dt>Git<wbr>Hub</dt>
-    <dd>GitHub</dd></dl>
+    <dd>GitHub</dd><dt>Storage<wbr>Account</dt>
+    <dd>StorageAccount</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>VSO_GIT</dt>
     <dd>VsoGit</dd><dt>GIT_HUB</dt>
-    <dd>GitHub</dd></dl>
+    <dd>GitHub</dd><dt>STORAGE_ACCOUNT</dt>
+    <dd>StorageAccount</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:ArtifactSource {artifactSourceName} /subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/artifactsources/{artifactSourceName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

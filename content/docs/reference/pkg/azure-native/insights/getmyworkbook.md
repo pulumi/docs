@@ -202,7 +202,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Managed<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#mymanagedidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>My<wbr>Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd><dt class="property-"
             title="">
@@ -334,7 +334,7 @@ The following output properties are available:
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#mymanagedidentityresponse">My<wbr>Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd><dt class="property-"
             title="">
@@ -466,7 +466,7 @@ The following output properties are available:
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#mymanagedidentityresponse">My<wbr>Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd><dt class="property-"
             title="">
@@ -598,7 +598,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#mymanagedidentityresponse">My<wbr>Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd><dt class="property-"
             title="">
@@ -673,7 +673,7 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="managedidentityresponse">Managed<wbr>Identity<wbr>Response</h4>
+<h4 id="mymanagedidentityresponse">My<wbr>Managed<wbr>Identity<wbr>Response</h4>
 
 
 
@@ -692,7 +692,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentitiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#myuserassignedidentitiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>My<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -712,7 +712,7 @@ The following output properties are available:
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
+        <span class="property-type"><a href="#myuserassignedidentitiesresponse">My<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -732,7 +732,7 @@ The following output properties are available:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
+        <span class="property-type"><a href="#myuserassignedidentitiesresponse">My<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -752,12 +752,12 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#myuserassignedidentitiesresponse">My<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response</h4>
+<h4 id="myuserassignedidentitiesresponse">My<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response</h4>
 
 
 

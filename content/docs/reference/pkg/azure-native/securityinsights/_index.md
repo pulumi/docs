@@ -13,6 +13,7 @@ Explore the resources and functions of the azure-native.securityinsights module.
 <ul class="api">
     <li><a href="action" title="Action"><span class="symbol resource"></span>Action</a></li>
     <li><a href="alertrule" title="AlertRule"><span class="symbol resource"></span>AlertRule</a></li>
+    <li><a href="automationrule" title="AutomationRule"><span class="symbol resource"></span>AutomationRule</a></li>
     <li><a href="bookmark" title="Bookmark"><span class="symbol resource"></span>Bookmark</a></li>
     <li><a href="bookmarkrelation" title="BookmarkRelation"><span class="symbol resource"></span>BookmarkRelation</a></li>
     <li><a href="dataconnector" title="DataConnector"><span class="symbol resource"></span>DataConnector</a></li>
@@ -29,6 +30,7 @@ Explore the resources and functions of the azure-native.securityinsights module.
 <ul class="api">
     <li><a href="getaction" title="GetAction"><span class="symbol function"></span>GetAction</a></li>
     <li><a href="getalertrule" title="GetAlertRule"><span class="symbol function"></span>GetAlertRule</a></li>
+    <li><a href="getautomationrule" title="GetAutomationRule"><span class="symbol function"></span>GetAutomationRule</a></li>
     <li><a href="getbookmark" title="GetBookmark"><span class="symbol function"></span>GetBookmark</a></li>
     <li><a href="getbookmarkrelation" title="GetBookmarkRelation"><span class="symbol function"></span>GetBookmarkRelation</a></li>
     <li><a href="getdataconnector" title="GetDataConnector"><span class="symbol function"></span>GetDataConnector</a></li>
@@ -50,6 +52,6 @@ Explore the resources and functions of the azure-native.securityinsights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

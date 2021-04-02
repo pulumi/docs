@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.documentdb.DatabaseAccount resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB database account.
-API Version: 2021-01-15.
+API Version: 2021-03-15.
 
 {{% examples %}}
 
@@ -63,6 +63,7 @@ class MyStack : Stack
                 },
             },
             DatabaseAccountOfferType = "Standard",
+            DefaultIdentity = "FirstPartyIdentity",
             EnableAnalyticalStorage = true,
             EnableFreeTier = false,
             Identity = new AzureNative.DocumentDB.Inputs.ManagedServiceIdentityArgs
@@ -165,6 +166,7 @@ database_account = azure_native.documentdb.DatabaseAccount("databaseAccount",
         allowed_origins="https://test",
     )],
     database_account_offer_type="Standard",
+    default_identity="FirstPartyIdentity",
     enable_analytical_storage=True,
     enable_free_tier=False,
     identity=azure_native.documentdb.ManagedServiceIdentityArgs(
@@ -241,6 +243,7 @@ const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAcc
         allowedOrigins: "https://test",
     }],
     databaseAccountOfferType: "Standard",
+    defaultIdentity: "FirstPartyIdentity",
     enableAnalyticalStorage: true,
     enableFreeTier: false,
     identity: {
@@ -436,7 +439,7 @@ const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAcc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[ApiPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">backup_policy</span><span class="p">:</span> <span class="nx">Optional[Union[ContinuousModeBackupPolicyArgs, PeriodicModeBackupPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectorOffer]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[ConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[CorsPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[DatabaseAccountOfferType]</span> = None<span class="p">, </span><span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpAddressOrRangeArgs]]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseAccountKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LocationArgs]]</span> = None<span class="p">, </span><span class="nx">network_acl_bypass</span><span class="p">:</span> <span class="nx">Optional[NetworkAclBypass]</span> = None<span class="p">, </span><span class="nx">network_acl_bypass_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[ApiPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">backup_policy</span><span class="p">:</span> <span class="nx">Optional[Union[ContinuousModeBackupPolicyArgs, PeriodicModeBackupPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectorOffer]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[ConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[CorsPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[DatabaseAccountOfferType]</span> = None<span class="p">, </span><span class="nx">default_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpAddressOrRangeArgs]]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseAccountKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LocationArgs]]</span> = None<span class="p">, </span><span class="nx">network_acl_bypass</span><span class="p">:</span> <span class="nx">Optional[NetworkAclBypass]</span> = None<span class="p">, </span><span class="nx">network_acl_bypass_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -658,6 +661,14 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="defaultidentity_csharp">
+<a href="#defaultidentity_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disablekeybasedmetadatawriteaccess_csharp">
 <a href="#disablekeybasedmetadatawriteaccess_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Key<wbr>Based<wbr>Metadata<wbr>Write<wbr>Access</a>
 </span>
@@ -877,6 +888,14 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#corspolicy">[]Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultidentity_go">
+<a href="#defaultidentity_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablekeybasedmetadatawriteaccess_go">
 <a href="#disablekeybasedmetadatawriteaccess_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Key<wbr>Based<wbr>Metadata<wbr>Write<wbr>Access</a>
@@ -1098,6 +1117,14 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="defaultidentity_nodejs">
+<a href="#defaultidentity_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disablekeybasedmetadatawriteaccess_nodejs">
 <a href="#disablekeybasedmetadatawriteaccess_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Key<wbr>Based<wbr>Metadata<wbr>Write<wbr>Access</a>
 </span>
@@ -1317,6 +1344,14 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#corspolicy">Sequence[Cors<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_identity_python">
+<a href="#default_identity_python" style="color: inherit; text-decoration: inherit;">default_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_key_based_metadata_write_access_python">
 <a href="#disable_key_based_metadata_write_access_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>key_<wbr>based_<wbr>metadata_<wbr>write_<wbr>access</a>

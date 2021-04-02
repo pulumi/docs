@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.documentdb.CassandraResourceCassa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB Cassandra table.
-API Version: 2021-01-15.
+API Version: 2021-03-15.
 
 {{% examples %}}
 
@@ -1543,6 +1543,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="analyticalstoragettl_csharp">
+<a href="#analyticalstoragettl_csharp" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="defaultttl_csharp">
 <a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
 </span>
@@ -1570,6 +1578,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="analyticalstoragettl_go">
+<a href="#analyticalstoragettl_go" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_go">
 <a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -1599,6 +1615,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="analyticalstoragettl_nodejs">
+<a href="#analyticalstoragettl_nodejs" style="color: inherit; text-decoration: inherit;">analytical<wbr>Storage<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="defaultttl_nodejs">
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
@@ -1626,6 +1650,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="analytical_storage_ttl_python">
+<a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ttl_python">
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>

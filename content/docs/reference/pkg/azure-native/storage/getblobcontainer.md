@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.storage.getBlobContainer function
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Properties of the blob container, including Id, resource name, resource type, Etag.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 
 

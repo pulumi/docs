@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.sql.ServerTrustGroup resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A server trust group.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 
@@ -52,6 +52,7 @@ class MyStack : Stack
             TrustScopes = 
             {
                 "GlobalTransactions",
+                "ServiceBroker",
             },
         });
     }
@@ -91,6 +92,7 @@ func main() {
 			ServerTrustGroupName: pulumi.String("server-trust-group-test"),
 			TrustScopes: pulumi.StringArray{
 				pulumi.String("GlobalTransactions"),
+				pulumi.String("ServiceBroker"),
 			},
 		})
 		if err != nil {
@@ -125,7 +127,10 @@ server_trust_group = azure_native.sql.ServerTrustGroup("serverTrustGroup",
     location_name="Japan East",
     resource_group_name="Default",
     server_trust_group_name="server-trust-group-test",
-    trust_scopes=["GlobalTransactions"])
+    trust_scopes=[
+        "GlobalTransactions",
+        "ServiceBroker",
+    ])
 
 ```
 
@@ -152,7 +157,10 @@ const serverTrustGroup = new azure_native.sql.ServerTrustGroup("serverTrustGroup
     locationName: "Japan East",
     resourceGroupName: "Default",
     serverTrustGroupName: "server-trust-group-test",
-    trustScopes: ["GlobalTransactions"],
+    trustScopes: [
+        "GlobalTransactions",
+        "ServiceBroker",
+    ],
 });
 
 ```

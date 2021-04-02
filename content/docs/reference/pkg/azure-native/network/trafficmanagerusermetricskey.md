@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.TrafficManagerUserMetrics
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing Traffic Manager User Metrics.
-API Version: 2018-04-01.
+API Version: 2018-08-01.
 
 {{% examples %}}
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.synapse.Workspace resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A workspace
-API Version: 2020-12-01.
+API Version: 2021-03-01.
 
 {{% examples %}}
 
@@ -67,6 +67,7 @@ class MyStack : Stack
                 LinkedAccessCheckOnTargetResource = false,
                 PreventDataExfiltration = false,
             },
+            PublicNetworkAccess = "Enabled",
             PurviewConfiguration = new AzureNative.Synapse.Inputs.PurviewConfigurationArgs
             {
                 PurviewResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
@@ -139,6 +140,7 @@ func main() {
 				LinkedAccessCheckOnTargetResource: pulumi.Bool(false),
 				PreventDataExfiltration:           pulumi.Bool(false),
 			},
+			PublicNetworkAccess: pulumi.String("Enabled"),
 			PurviewConfiguration: &synapse.PurviewConfigurationArgs{
 				PurviewResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1"),
 			},
@@ -203,6 +205,7 @@ workspace = azure_native.synapse.Workspace("workspace",
         linked_access_check_on_target_resource=False,
         prevent_data_exfiltration=False,
     ),
+    public_network_access="Enabled",
     purview_configuration=azure_native.synapse.PurviewConfigurationArgs(
         purview_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
     ),
@@ -260,6 +263,7 @@ const workspace = new azure_native.synapse.Workspace("workspace", {
         linkedAccessCheckOnTargetResource: false,
         preventDataExfiltration: false,
     },
+    publicNetworkAccess: "Enabled",
     purviewConfiguration: {
         purviewResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
     },
@@ -304,7 +308,7 @@ const workspace = new azure_native.synapse.Workspace("workspace", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_data_lake_storage</span><span class="p">:</span> <span class="nx">Optional[DataLakeStorageAccountDetailsArgs]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionDetailsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedVirtualNetworkSettingsArgs]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrivateEndpointConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">purview_configuration</span><span class="p">:</span> <span class="nx">Optional[PurviewConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_profile</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_repository_configuration</span><span class="p">:</span> <span class="nx">Optional[WorkspaceRepositoryConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_data_lake_storage</span><span class="p">:</span> <span class="nx">Optional[DataLakeStorageAccountDetailsArgs]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionDetailsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedVirtualNetworkSettingsArgs]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrivateEndpointConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, WorkspacePublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">purview_configuration</span><span class="p">:</span> <span class="nx">Optional[PurviewConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_profile</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_repository_configuration</span><span class="p">:</span> <span class="nx">Optional[WorkspaceRepositoryConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -526,6 +530,14 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Private endpoint connections to the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccess_csharp">
+<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#workspacepublicnetworkaccess">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="purviewconfiguration_csharp">
 <a href="#purviewconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Purview<wbr>Configuration</a>
 </span>
@@ -665,6 +677,14 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#privateendpointconnection">[]Private<wbr>Endpoint<wbr>Connection<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the workspace{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccess_go">
+<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#workspacepublicnetworkaccess">Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purviewconfiguration_go">
 <a href="#purviewconfiguration_go" style="color: inherit; text-decoration: inherit;">Purview<wbr>Configuration</a>
@@ -806,6 +826,14 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Private endpoint connections to the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccess_nodejs">
+<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#workspacepublicnetworkaccess">Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="purviewconfiguration_nodejs">
 <a href="#purviewconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">purview<wbr>Configuration</a>
 </span>
@@ -945,6 +973,14 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the workspace{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#workspacepublicnetworkaccess">Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purview_configuration_python">
 <a href="#purview_configuration_python" style="color: inherit; text-decoration: inherit;">purview_<wbr>configuration</a>
@@ -2974,6 +3010,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Workspace Key sub-resource name{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workspacepublicnetworkaccess">Workspace<wbr>Public<wbr>Network<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Workspace<wbr>Public<wbr>Network<wbr>Access<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Workspace<wbr>Public<wbr>Network<wbr>Access<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workspacerepositoryconfiguration">Workspace<wbr>Repository<wbr>Configuration</h4>

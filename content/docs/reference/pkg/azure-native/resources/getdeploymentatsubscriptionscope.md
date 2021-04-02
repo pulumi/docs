@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.resources.getDeploymentAtSubscrip
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Deployment information.
-API Version: 2020-10-01.
+API Version: 2021-01-01.
 
 
 

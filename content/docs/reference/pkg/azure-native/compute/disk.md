@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.compute.Disk resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Disk resource.
-API Version: 2020-09-30.
+API Version: 2020-12-01.
 
 {{% examples %}}
 
@@ -870,6 +870,277 @@ const disk = new azure_native.compute.Disk("disk", {
 
 
 
+### Create a managed disk with security profile
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "FromImage",
+                ImageReference = new AzureNative.Compute.Inputs.ImageDiskReferenceArgs
+                {
+                    Id = "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
+                },
+            },
+            DiskName = "myDisk",
+            Location = "North Central US",
+            OsType = "Windows",
+            ResourceGroupName = "myResourceGroup",
+            SecurityProfile = new AzureNative.Compute.Inputs.DiskSecurityProfileArgs
+            {
+                SecurityType = "TrustedLaunch",
+            },
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption: pulumi.String("FromImage"),
+				ImageReference: &compute.ImageDiskReferenceArgs{
+					Id: pulumi.String("/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}"),
+				},
+			},
+			DiskName:          pulumi.String("myDisk"),
+			Location:          pulumi.String("North Central US"),
+			OsType:            "Windows",
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			SecurityProfile: &compute.DiskSecurityProfileArgs{
+				SecurityType: pulumi.String("TrustedLaunch"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="FromImage",
+        image_reference=azure_native.compute.ImageDiskReferenceArgs(
+            id="/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
+        ),
+    ),
+    disk_name="myDisk",
+    location="North Central US",
+    os_type="Windows",
+    resource_group_name="myResourceGroup",
+    security_profile=azure_native.compute.DiskSecurityProfileArgs(
+        security_type="TrustedLaunch",
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "FromImage",
+        imageReference: {
+            id: "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
+        },
+    },
+    diskName: "myDisk",
+    location: "North Central US",
+    osType: "Windows",
+    resourceGroupName: "myResourceGroup",
+    securityProfile: {
+        securityType: "TrustedLaunch",
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Create a managed disk with ssd zrs account type.
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Empty",
+            },
+            DiskName = "myDisk",
+            DiskSizeGB = 200,
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureNative.Compute.Inputs.DiskSkuArgs
+            {
+                Name = "Premium_ZRS",
+            },
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption: pulumi.String("Empty"),
+			},
+			DiskName:          pulumi.String("myDisk"),
+			DiskSizeGB:        pulumi.Int(200),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Sku: &compute.DiskSkuArgs{
+				Name: pulumi.String("Premium_ZRS"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Empty",
+    ),
+    disk_name="myDisk",
+    disk_size_gb=200,
+    location="West US",
+    resource_group_name="myResourceGroup",
+    sku=azure_native.compute.DiskSkuArgs(
+        name="Premium_ZRS",
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Empty",
+    },
+    diskName: "myDisk",
+    diskSizeGB: 200,
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "Premium_ZRS",
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Create a managed upload disk.
 
 
@@ -1383,7 +1654,7 @@ const disk = new azure_native.compute.Disk("disk", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bursting_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[CreationDataArgs]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_only</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_only</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[EncryptionSettingsCollectionArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkAccessPolicy]]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">, </span><span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[PurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[DiskSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bursting_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[CreationDataArgs]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_only</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_only</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[EncryptionSettingsCollectionArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkAccessPolicy]]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">, </span><span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[PurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_profile</span><span class="p">:</span> <span class="nx">Optional[DiskSecurityProfileArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[DiskSkuArgs]</span> = None<span class="p">, </span><span class="nx">supports_hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1677,13 +1948,29 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securityprofile_csharp">
+<a href="#securityprofile_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#disksecurityprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Security<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the security related information for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#disksku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supportshibernation_csharp">
+<a href="#supportshibernation_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a disk supports hibernation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1865,13 +2152,29 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securityprofile_go">
+<a href="#securityprofile_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#disksecurityprofile">Disk<wbr>Security<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the security related information for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#disksku">Disk<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supportshibernation_go">
+<a href="#supportshibernation_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a disk supports hibernation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2053,13 +2356,29 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securityprofile_nodejs">
+<a href="#securityprofile_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#disksecurityprofile">Disk<wbr>Security<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the security related information for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#disksku">Disk<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supportshibernation_nodejs">
+<a href="#supportshibernation_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a disk supports hibernation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2241,13 +2560,29 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="security_profile_python">
+<a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#disksecurityprofile">Disk<wbr>Security<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the security related information for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#disksku">Disk<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supports_hibernation_python">
+<a href="#supports_hibernation_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a disk supports hibernation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2331,6 +2666,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="propertyupdatesinprogress_csharp">
+<a href="#propertyupdatesinprogress_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Updates<wbr>In<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyupdatesinprogressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Property<wbr>Updates<wbr>In<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the disk for which update is pending.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -2424,6 +2767,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="propertyupdatesinprogress_go">
+<a href="#propertyupdatesinprogress_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Updates<wbr>In<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyupdatesinprogressresponse">Property<wbr>Updates<wbr>In<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the disk for which update is pending.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -2516,6 +2867,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="propertyupdatesinprogress_nodejs">
+<a href="#propertyupdatesinprogress_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Updates<wbr>In<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyupdatesinprogressresponse">Property<wbr>Updates<wbr>In<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the disk for which update is pending.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
@@ -2607,6 +2966,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="property_updates_in_progress_python">
+<a href="#property_updates_in_progress_python" style="color: inherit; text-decoration: inherit;">property_<wbr>updates_<wbr>in_<wbr>progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyupdatesinprogressresponse">Property<wbr>Updates<wbr>In<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the disk for which update is pending.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -3285,6 +3652,128 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Upload{{% md %}}Create a new disk by obtaining a write token and using it to directly upload the contents of the disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="disksecurityprofile">Disk<wbr>Security<wbr>Profile</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_csharp">
+<a href="#securitytype_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#disksecuritytypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Disk<wbr>Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_go">
+<a href="#securitytype_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#disksecuritytypes">Disk<wbr>Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_nodejs">
+<a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#disksecuritytypes">Disk<wbr>Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="security_type_python">
+<a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#disksecuritytypes">Disk<wbr>Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="disksecurityprofileresponse">Disk<wbr>Security<wbr>Profile<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_csharp">
+<a href="#securitytype_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_go">
+<a href="#securitytype_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_nodejs">
+<a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="security_type_python">
+<a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="disksecuritytypes">Disk<wbr>Security<wbr>Types</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Trusted<wbr>Launch</dt>
+    <dd>TrustedLaunch{{% md %}}Trusted Launch provides security features such as secure boot and virtual Trusted Platform Module (vTPM){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Disk<wbr>Security<wbr>Types<wbr>Trusted<wbr>Launch</dt>
+    <dd>TrustedLaunch{{% md %}}Trusted Launch provides security features such as secure boot and virtual Trusted Platform Module (vTPM){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Trusted<wbr>Launch</dt>
+    <dd>TrustedLaunch{{% md %}}Trusted Launch provides security features such as secure boot and virtual Trusted Platform Module (vTPM){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TRUSTED_LAUNCH</dt>
+    <dd>TrustedLaunch{{% md %}}Trusted Launch provides security features such as secure boot and virtual Trusted Platform Module (vTPM){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="disksku">Disk<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
@@ -3424,7 +3913,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS{{% md %}}Standard HDD locally redundant storage. Best for backup, non-critical, and infrequent access.{{% /md %}}</dd><dt>Premium_LRS</dt>
     <dd>Premium_LRS{{% md %}}Premium SSD locally redundant storage. Best for production and performance sensitive workloads.{{% /md %}}</dd><dt>Standard<wbr>SSD_LRS</dt>
     <dd>StandardSSD_LRS{{% md %}}Standard SSD locally redundant storage. Best for web servers, lightly used enterprise applications and dev/test.{{% /md %}}</dd><dt>Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS{{% md %}}Ultra SSD locally redundant storage. Best for IO-intensive workloads such as SAP HANA, top tier databases (for example, SQL, Oracle), and other transaction-heavy workloads.{{% /md %}}</dd></dl>
+    <dd>UltraSSD_LRS{{% md %}}Ultra SSD locally redundant storage. Best for IO-intensive workloads such as SAP HANA, top tier databases (for example, SQL, Oracle), and other transaction-heavy workloads.{{% /md %}}</dd><dt>Premium_ZRS</dt>
+    <dd>Premium_ZRS{{% md %}}Premium SSD zone redundant storage. Best for the production workloads that need storage resiliency against zone failures.{{% /md %}}</dd><dt>Standard<wbr>SSD_ZRS</dt>
+    <dd>StandardSSD_ZRS{{% md %}}Standard SSD zone redundant storage. Best for web servers, lightly used enterprise applications and dev/test that need storage resiliency against zone failures.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3432,7 +3923,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS{{% md %}}Standard HDD locally redundant storage. Best for backup, non-critical, and infrequent access.{{% /md %}}</dd><dt>Disk<wbr>Storage<wbr>Account<wbr>Types_Premium_LRS</dt>
     <dd>Premium_LRS{{% md %}}Premium SSD locally redundant storage. Best for production and performance sensitive workloads.{{% /md %}}</dd><dt>Disk<wbr>Storage<wbr>Account<wbr>Types_Standard<wbr>SSD_LRS</dt>
     <dd>StandardSSD_LRS{{% md %}}Standard SSD locally redundant storage. Best for web servers, lightly used enterprise applications and dev/test.{{% /md %}}</dd><dt>Disk<wbr>Storage<wbr>Account<wbr>Types_Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS{{% md %}}Ultra SSD locally redundant storage. Best for IO-intensive workloads such as SAP HANA, top tier databases (for example, SQL, Oracle), and other transaction-heavy workloads.{{% /md %}}</dd></dl>
+    <dd>UltraSSD_LRS{{% md %}}Ultra SSD locally redundant storage. Best for IO-intensive workloads such as SAP HANA, top tier databases (for example, SQL, Oracle), and other transaction-heavy workloads.{{% /md %}}</dd><dt>Disk<wbr>Storage<wbr>Account<wbr>Types_Premium_ZRS</dt>
+    <dd>Premium_ZRS{{% md %}}Premium SSD zone redundant storage. Best for the production workloads that need storage resiliency against zone failures.{{% /md %}}</dd><dt>Disk<wbr>Storage<wbr>Account<wbr>Types_Standard<wbr>SSD_ZRS</dt>
+    <dd>StandardSSD_ZRS{{% md %}}Standard SSD zone redundant storage. Best for web servers, lightly used enterprise applications and dev/test that need storage resiliency against zone failures.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3440,7 +3933,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS{{% md %}}Standard HDD locally redundant storage. Best for backup, non-critical, and infrequent access.{{% /md %}}</dd><dt>Premium_LRS</dt>
     <dd>Premium_LRS{{% md %}}Premium SSD locally redundant storage. Best for production and performance sensitive workloads.{{% /md %}}</dd><dt>Standard<wbr>SSD_LRS</dt>
     <dd>StandardSSD_LRS{{% md %}}Standard SSD locally redundant storage. Best for web servers, lightly used enterprise applications and dev/test.{{% /md %}}</dd><dt>Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS{{% md %}}Ultra SSD locally redundant storage. Best for IO-intensive workloads such as SAP HANA, top tier databases (for example, SQL, Oracle), and other transaction-heavy workloads.{{% /md %}}</dd></dl>
+    <dd>UltraSSD_LRS{{% md %}}Ultra SSD locally redundant storage. Best for IO-intensive workloads such as SAP HANA, top tier databases (for example, SQL, Oracle), and other transaction-heavy workloads.{{% /md %}}</dd><dt>Premium_ZRS</dt>
+    <dd>Premium_ZRS{{% md %}}Premium SSD zone redundant storage. Best for the production workloads that need storage resiliency against zone failures.{{% /md %}}</dd><dt>Standard<wbr>SSD_ZRS</dt>
+    <dd>StandardSSD_ZRS{{% md %}}Standard SSD zone redundant storage. Best for web servers, lightly used enterprise applications and dev/test that need storage resiliency against zone failures.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3448,7 +3943,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS{{% md %}}Standard HDD locally redundant storage. Best for backup, non-critical, and infrequent access.{{% /md %}}</dd><dt>PREMIUM_LRS</dt>
     <dd>Premium_LRS{{% md %}}Premium SSD locally redundant storage. Best for production and performance sensitive workloads.{{% /md %}}</dd><dt>STANDARD_SS_D_LRS</dt>
     <dd>StandardSSD_LRS{{% md %}}Standard SSD locally redundant storage. Best for web servers, lightly used enterprise applications and dev/test.{{% /md %}}</dd><dt>ULTRA_SS_D_LRS</dt>
-    <dd>UltraSSD_LRS{{% md %}}Ultra SSD locally redundant storage. Best for IO-intensive workloads such as SAP HANA, top tier databases (for example, SQL, Oracle), and other transaction-heavy workloads.{{% /md %}}</dd></dl>
+    <dd>UltraSSD_LRS{{% md %}}Ultra SSD locally redundant storage. Best for IO-intensive workloads such as SAP HANA, top tier databases (for example, SQL, Oracle), and other transaction-heavy workloads.{{% /md %}}</dd><dt>PREMIUM_ZRS</dt>
+    <dd>Premium_ZRS{{% md %}}Premium SSD zone redundant storage. Best for the production workloads that need storage resiliency against zone failures.{{% /md %}}</dd><dt>STANDARD_SS_D_ZRS</dt>
+    <dd>StandardSSD_ZRS{{% md %}}Standard SSD zone redundant storage. Best for web servers, lightly used enterprise applications and dev/test that need storage resiliency against zone failures.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryption">Encryption</h4>
@@ -4795,6 +5292,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>WINDOWS</dt>
     <dd>Windows</dd><dt>LINUX</dt>
     <dd>Linux</dd></dl>
+{{% /choosable %}}
+
+<h4 id="propertyupdatesinprogressresponse">Property<wbr>Updates<wbr>In<wbr>Progress<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettier_csharp">
+<a href="#targettier_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target performance tier of the disk if a tier change operation is in progress.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettier_go">
+<a href="#targettier_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target performance tier of the disk if a tier change operation is in progress.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettier_nodejs">
+<a href="#targettier_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target performance tier of the disk if a tier change operation is in progress.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_tier_python">
+<a href="#target_tier_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target performance tier of the disk if a tier change operation is in progress.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="purchaseplan">Purchase<wbr>Plan</h4>

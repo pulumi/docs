@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.apimanagement.ProductGroup resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contract details.
-API Version: 2019-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 

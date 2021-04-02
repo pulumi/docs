@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.sql.getSyncGroup function with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL Database sync group.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 
 
@@ -278,14 +278,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}If conflict logging is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="hubdatabasepassword_csharp">
-<a href="#hubdatabasepassword_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Database<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for the sync group hub database credential.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="hubdatabaseusername_csharp">
 <a href="#hubdatabaseusername_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Database<wbr>User<wbr>Name</a>
 </span>
@@ -409,14 +401,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If conflict logging is enabled.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="hubdatabasepassword_go">
-<a href="#hubdatabasepassword_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Database<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for the sync group hub database credential.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hubdatabaseusername_go">
 <a href="#hubdatabaseusername_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Database<wbr>User<wbr>Name</a>
@@ -542,14 +526,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}If conflict logging is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="hubdatabasepassword_nodejs">
-<a href="#hubdatabasepassword_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Database<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for the sync group hub database credential.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="hubdatabaseusername_nodejs">
 <a href="#hubdatabaseusername_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Database<wbr>User<wbr>Name</a>
 </span>
@@ -673,14 +649,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If conflict logging is enabled.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="hub_database_password_python">
-<a href="#hub_database_password_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>database_<wbr>password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password for the sync group hub database credential.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hub_database_user_name_python">
 <a href="#hub_database_user_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>database_<wbr>user_<wbr>name</a>

@@ -35,10 +35,10 @@ class MyStack : Stack
     {
         var roleManagementPolicyAssignment = new AzureNative.Authorization.RoleManagementPolicyAssignment("roleManagementPolicyAssignment", new AzureNative.Authorization.RoleManagementPolicyAssignmentArgs
         {
-            PolicyId = "/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3/providers/Microsoft.Authorization/RoleManagementPolicies/477f2d04-0fdc-417f-ab1b-d9fff8137134",
-            RoleDefinitionId = "/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3/providers/Microsoft.Authorization/roleDefinitions/a37489be-9462-48fb-a3b6-7b9bc2debbad",
-            RoleManagementPolicyAssignmentName = "477f2d04-0fdc-417f-ab1b-d9fff8137134_a37489be-9462-48fb-a3b6-7b9bc2debbad",
-            Scope = "/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3",
+            PolicyId = "/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/RoleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
+            RoleDefinitionId = "/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+            RoleManagementPolicyAssignmentName = "b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+            Scope = "/subscriptions/129ff972-28f8-46b8-a726-e497be039368",
         });
     }
 
@@ -64,10 +64,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := authorization.NewRoleManagementPolicyAssignment(ctx, "roleManagementPolicyAssignment", &authorization.RoleManagementPolicyAssignmentArgs{
-			PolicyId:                           pulumi.String("/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3/providers/Microsoft.Authorization/RoleManagementPolicies/477f2d04-0fdc-417f-ab1b-d9fff8137134"),
-			RoleDefinitionId:                   pulumi.String("/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3/providers/Microsoft.Authorization/roleDefinitions/a37489be-9462-48fb-a3b6-7b9bc2debbad"),
-			RoleManagementPolicyAssignmentName: pulumi.String("477f2d04-0fdc-417f-ab1b-d9fff8137134_a37489be-9462-48fb-a3b6-7b9bc2debbad"),
-			Scope:                              pulumi.String("/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3"),
+			PolicyId:                           pulumi.String("/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/RoleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9"),
+			RoleDefinitionId:                   pulumi.String("/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24"),
+			RoleManagementPolicyAssignmentName: pulumi.String("b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24"),
+			Scope:                              pulumi.String("/subscriptions/129ff972-28f8-46b8-a726-e497be039368"),
 		})
 		if err != nil {
 			return err
@@ -90,10 +90,10 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 role_management_policy_assignment = azure_native.authorization.RoleManagementPolicyAssignment("roleManagementPolicyAssignment",
-    policy_id="/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3/providers/Microsoft.Authorization/RoleManagementPolicies/477f2d04-0fdc-417f-ab1b-d9fff8137134",
-    role_definition_id="/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3/providers/Microsoft.Authorization/roleDefinitions/a37489be-9462-48fb-a3b6-7b9bc2debbad",
-    role_management_policy_assignment_name="477f2d04-0fdc-417f-ab1b-d9fff8137134_a37489be-9462-48fb-a3b6-7b9bc2debbad",
-    scope="/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3")
+    policy_id="/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/RoleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
+    role_definition_id="/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+    role_management_policy_assignment_name="b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+    scope="/subscriptions/129ff972-28f8-46b8-a726-e497be039368")
 
 ```
 
@@ -109,10 +109,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const roleManagementPolicyAssignment = new azure_native.authorization.RoleManagementPolicyAssignment("roleManagementPolicyAssignment", {
-    policyId: "/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3/providers/Microsoft.Authorization/RoleManagementPolicies/477f2d04-0fdc-417f-ab1b-d9fff8137134",
-    roleDefinitionId: "/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3/providers/Microsoft.Authorization/roleDefinitions/a37489be-9462-48fb-a3b6-7b9bc2debbad",
-    roleManagementPolicyAssignmentName: "477f2d04-0fdc-417f-ab1b-d9fff8137134_a37489be-9462-48fb-a3b6-7b9bc2debbad",
-    scope: "/subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3",
+    policyId: "/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/RoleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
+    roleDefinitionId: "/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+    roleManagementPolicyAssignmentName: "b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
+    scope: "/subscriptions/129ff972-28f8-46b8-a726-e497be039368",
 });
 
 ```
@@ -447,6 +447,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The role management policy name.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="policyassignmentproperties_csharp">
+<a href="#policyassignmentproperties_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Assignment<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Outputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties of scope, role definition and policy{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -474,6 +482,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role management policy name.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="policyassignmentproperties_go">
+<a href="#policyassignmentproperties_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Assignment<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponse">Policy<wbr>Assignment<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties of scope, role definition and policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -503,6 +519,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The role management policy name.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="policyassignmentproperties_nodejs">
+<a href="#policyassignmentproperties_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Assignment<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponse">Policy<wbr>Assignment<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties of scope, role definition and policy{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -531,6 +555,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The role management policy name.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="policy_assignment_properties_python">
+<a href="#policy_assignment_properties_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>assignment_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponse">Policy<wbr>Assignment<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties of scope, role definition and policy{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -545,13 +577,619 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="policyassignmentpropertiesresponse">Policy<wbr>Assignment<wbr>Properties<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="policy_csharp">
+<a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the policy{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="roledefinition_csharp">
+<a href="#roledefinition_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the resource scope{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="policy_go">
+<a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the policy{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="roledefinition_go">
+<a href="#roledefinition_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition</a></span>
+    </dt>
+    <dd>{{% md %}}Details of role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the resource scope{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="policy_nodejs">
+<a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the policy{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="roledefinition_nodejs">
+<a href="#roledefinition_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition</a></span>
+    </dt>
+    <dd>{{% md %}}Details of role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the resource scope{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="policy_python">
+<a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the policy{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="role_definition_python">
+<a href="#role_definition_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the resource scope{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#principalresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Principal<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the entity last modified it{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the policy{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifieddatetime_csharp">
+<a href="#lastmodifieddatetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last modified date time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the entity last modified it{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the policy{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifieddatetime_go">
+<a href="#lastmodifieddatetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last modified date time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the entity last modified it{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the policy{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifieddatetime_nodejs">
+<a href="#lastmodifieddatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last modified date time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the entity last modified it{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Id of the policy{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_date_time_python">
+<a href="#last_modified_date_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>date_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The last modified date time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the role definition{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the role definition{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the role definition{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Display name of the role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Id of the role definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the role definition{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Scope id of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Scope id of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Scope id of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Display name of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Scope id of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="principalresponse">Principal<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the principal made changes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email of principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of the principal made changes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of principal such as user , group etc{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the principal made changes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email of principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of the principal made changes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of principal such as user , group etc{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the principal made changes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email of principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of the principal made changes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of principal such as user , group etc{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the principal made changes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Email of principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The id of the principal made changes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of principal such as user , group etc{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:authorization:RoleManagementPolicyAssignment 477f2d04-0fdc-417f-ab1b-d9fff8137134_a37489be-9462-48fb-a3b6-7b9bc2debbad /subscriptions/892f85f0-fd69-4fe8-8ee2-bda821252ac3/providers/Microsoft.Authorization/RoleManagementPolicyAssignment/477f2d04-0fdc-417f-ab1b-d9fff8137134_a37489be-9462-48fb-a3b6-7b9bc2debbad 
+$ pulumi import azure-native:authorization:RoleManagementPolicyAssignment b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 /providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/RoleManagementPolicyAssignment/b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 
 ```
 
 

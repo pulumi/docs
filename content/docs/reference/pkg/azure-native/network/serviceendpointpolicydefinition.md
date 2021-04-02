@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.ServiceEndpointPolicyDefi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Service Endpoint policy definitions.
-API Version: 2020-08-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 
@@ -704,7 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:network:ServiceEndpointPolicyDefinition rule1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/testnsg/securityRules/rule1 
+$ pulumi import azure-native:network:ServiceEndpointPolicyDefinition testDefinition /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/serviceEndpointPolicies/testPolicy/serviceEndpointPolicyDefinitions/testDefinition 
 ```
 
 

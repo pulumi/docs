@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.netapp.getVolume function with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Volume resource
-API Version: 2020-11-01.
+API Version: 2020-12-01.
 
 
 
@@ -342,6 +342,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ldapenabled_csharp">
+<a href="#ldapenabled_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether LDAP is enabled or not for a given NFS volume.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="protocoltypes_csharp">
 <a href="#protocoltypes_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Types</a>
 </span>
@@ -561,6 +569,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ldapenabled_go">
+<a href="#ldapenabled_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether LDAP is enabled or not for a given NFS volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocoltypes_go">
 <a href="#protocoltypes_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Types</a>
@@ -782,6 +798,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ldapenabled_nodejs">
+<a href="#ldapenabled_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether LDAP is enabled or not for a given NFS volume.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="protocoltypes_nodejs">
 <a href="#protocoltypes_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Types</a>
 </span>
@@ -1001,6 +1025,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ldap_enabled_python">
+<a href="#ldap_enabled_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether LDAP is enabled or not for a given NFS volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocol_types_python">
 <a href="#protocol_types_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>types</a>

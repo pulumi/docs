@@ -1673,7 +1673,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hypervgenerationtypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_csharp">
 <a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1741,7 +1741,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hypervgenerationtypes">Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_go">
 <a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1809,7 +1809,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hypervgenerationtypes">Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_nodejs">
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
@@ -1877,7 +1877,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#hypervgenerationtypes">Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_name_python">
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
@@ -3870,7 +3870,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS</dd><dt>Premium_LRS</dt>
     <dd>Premium_LRS</dd><dt>Standard<wbr>SSD_LRS</dt>
     <dd>StandardSSD_LRS</dd><dt>Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS</dd></dl>
+    <dd>UltraSSD_LRS</dd><dt>Premium_ZRS</dt>
+    <dd>Premium_ZRS</dd><dt>Standard<wbr>SSD_ZRS</dt>
+    <dd>StandardSSD_ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3878,7 +3880,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS</dd><dt>Storage<wbr>Account<wbr>Types_Premium_LRS</dt>
     <dd>Premium_LRS</dd><dt>Storage<wbr>Account<wbr>Types_Standard<wbr>SSD_LRS</dt>
     <dd>StandardSSD_LRS</dd><dt>Storage<wbr>Account<wbr>Types_Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS</dd></dl>
+    <dd>UltraSSD_LRS</dd><dt>Storage<wbr>Account<wbr>Types_Premium_ZRS</dt>
+    <dd>Premium_ZRS</dd><dt>Storage<wbr>Account<wbr>Types_Standard<wbr>SSD_ZRS</dt>
+    <dd>StandardSSD_ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3886,7 +3890,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS</dd><dt>Premium_LRS</dt>
     <dd>Premium_LRS</dd><dt>Standard<wbr>SSD_LRS</dt>
     <dd>StandardSSD_LRS</dd><dt>Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS</dd></dl>
+    <dd>UltraSSD_LRS</dd><dt>Premium_ZRS</dt>
+    <dd>Premium_ZRS</dd><dt>Standard<wbr>SSD_ZRS</dt>
+    <dd>StandardSSD_ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3894,7 +3900,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS</dd><dt>PREMIUM_LRS</dt>
     <dd>Premium_LRS</dd><dt>STANDARD_SS_D_LRS</dt>
     <dd>StandardSSD_LRS</dd><dt>ULTRA_SS_D_LRS</dt>
-    <dd>UltraSSD_LRS</dd></dl>
+    <dd>UltraSSD_LRS</dd><dt>PREMIUM_ZRS</dt>
+    <dd>Premium_ZRS</dd><dt>STANDARD_SS_D_ZRS</dt>
+    <dd>StandardSSD_ZRS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresource">Sub<wbr>Resource</h4>

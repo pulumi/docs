@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.desktopvirtualization.ScalingPlan
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a scaling plan definition.
-API Version: 2021-01-14-preview.
+API Version: 2021-02-01-preview.
 
 {{% examples %}}
 
@@ -49,6 +49,7 @@ class MyStack : Stack
             HostPoolType = "Personal",
             Location = "centralus",
             ResourceGroupName = "resourceGroup1",
+            Ring = 1,
             ScalingPlanName = "scalingPlan1",
             Schedules = 
             {
@@ -123,6 +124,7 @@ func main() {
 			HostPoolType:      pulumi.String("Personal"),
 			Location:          pulumi.String("centralus"),
 			ResourceGroupName: pulumi.String("resourceGroup1"),
+			Ring:              pulumi.Int(1),
 			ScalingPlanName:   pulumi.String("scalingPlan1"),
 			Schedules: desktopvirtualization.ScalingScheduleArray{
 				&desktopvirtualization.ScalingScheduleArgs{
@@ -188,6 +190,7 @@ scaling_plan = azure_native.desktopvirtualization.ScalingPlan("scalingPlan",
     host_pool_type="Personal",
     location="centralus",
     resource_group_name="resourceGroup1",
+    ring=1,
     scaling_plan_name="scalingPlan1",
     schedules=[azure_native.desktopvirtualization.ScalingScheduleArgs(
         days_of_week=[
@@ -244,6 +247,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
     hostPoolType: "Personal",
     location: "centralus",
     resourceGroupName: "resourceGroup1",
+    ring: 1,
     scalingPlanName: "scalingPlan1",
     schedules: [{
         daysOfWeek: [
@@ -300,7 +304,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclusion_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingHostPoolReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, HostPoolType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScalingPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclusion_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingHostPoolReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, HostPoolType]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceModelWithAllowedPropertySetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ResourceModelWithAllowedPropertySetPlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ring</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scaling_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceModelWithAllowedPropertySetSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -488,7 +492,23 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hostpooltype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Host<wbr>Pool<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -497,6 +517,30 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managedby_csharp">
+<a href="#managedby_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_csharp">
+<a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetplan">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ring_csharp">
+<a href="#ring_csharp" style="color: inherit; text-decoration: inherit;">Ring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ring number of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanname_csharp">
 <a href="#scalingplanname_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Name</a>
@@ -513,6 +557,14 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingschedule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Scaling<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetsku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Sku<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -580,7 +632,23 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hostpooltype">Host<wbr>Pool<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetidentity">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -589,6 +657,30 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managedby_go">
+<a href="#managedby_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_go">
+<a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetplan">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Plan</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ring_go">
+<a href="#ring_go" style="color: inherit; text-decoration: inherit;">Ring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ring number of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanname_go">
 <a href="#scalingplanname_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Name</a>
@@ -605,6 +697,14 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingschedule">[]Scaling<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetsku">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Sku</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -672,7 +772,23 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hostpooltype">Host<wbr>Pool<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetidentity">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -681,6 +797,30 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managedby_nodejs">
+<a href="#managedby_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_nodejs">
+<a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetplan">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Plan</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ring_nodejs">
+<a href="#ring_nodejs" style="color: inherit; text-decoration: inherit;">ring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The ring number of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanname_nodejs">
 <a href="#scalingplanname_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Plan<wbr>Name</a>
@@ -697,6 +837,14 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingschedule">Scaling<wbr>Schedule[]</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetsku">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Sku</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -764,7 +912,23 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#hostpooltype">Host<wbr>Pool<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetidentity">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -773,6 +937,30 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managed_by_python">
+<a href="#managed_by_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_python">
+<a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetplan">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ring_python">
+<a href="#ring_python" style="color: inherit; text-decoration: inherit;">ring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ring number of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_plan_name_python">
 <a href="#scaling_plan_name_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>plan_<wbr>name</a>
@@ -789,6 +977,14 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingschedule">Sequence[Scaling<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetsku">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Sku<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -817,6 +1013,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -833,6 +1037,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ObjectId of scaling plan. (internal use){{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -844,6 +1056,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -861,6 +1081,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ObjectId of scaling plan. (internal use){{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -872,6 +1100,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -889,6 +1125,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ObjectId of scaling plan. (internal use){{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -900,6 +1144,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -916,6 +1168,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ObjectId of scaling plan. (internal use){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -940,26 +1200,928 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Personal</dt>
-    <dd>Personal</dd><dt>Pooled</dt>
-    <dd>Pooled</dd></dl>
+    <dd>Personal{{% md %}}Users will be assigned a SessionHost either by administrators (PersonalDesktopAssignmentType = Direct) or upon connecting to the pool (PersonalDesktopAssignmentType = Automatic). They will always be redirected to their assigned SessionHost.{{% /md %}}</dd><dt>Pooled</dt>
+    <dd>Pooled{{% md %}}Users get a new (random) SessionHost every time it connects to the HostPool.{{% /md %}}</dd><dt>BYODesktop</dt>
+    <dd>BYODesktop{{% md %}}Users assign their own machines, load balancing logic remains the same as Personal. PersonalDesktopAssignmentType must be Direct.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Host<wbr>Pool<wbr>Type<wbr>Personal</dt>
-    <dd>Personal</dd><dt>Host<wbr>Pool<wbr>Type<wbr>Pooled</dt>
-    <dd>Pooled</dd></dl>
+    <dd>Personal{{% md %}}Users will be assigned a SessionHost either by administrators (PersonalDesktopAssignmentType = Direct) or upon connecting to the pool (PersonalDesktopAssignmentType = Automatic). They will always be redirected to their assigned SessionHost.{{% /md %}}</dd><dt>Host<wbr>Pool<wbr>Type<wbr>Pooled</dt>
+    <dd>Pooled{{% md %}}Users get a new (random) SessionHost every time it connects to the HostPool.{{% /md %}}</dd><dt>Host<wbr>Pool<wbr>Type<wbr>BYODesktop</dt>
+    <dd>BYODesktop{{% md %}}Users assign their own machines, load balancing logic remains the same as Personal. PersonalDesktopAssignmentType must be Direct.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Personal</dt>
-    <dd>Personal</dd><dt>Pooled</dt>
-    <dd>Pooled</dd></dl>
+    <dd>Personal{{% md %}}Users will be assigned a SessionHost either by administrators (PersonalDesktopAssignmentType = Direct) or upon connecting to the pool (PersonalDesktopAssignmentType = Automatic). They will always be redirected to their assigned SessionHost.{{% /md %}}</dd><dt>Pooled</dt>
+    <dd>Pooled{{% md %}}Users get a new (random) SessionHost every time it connects to the HostPool.{{% /md %}}</dd><dt>BYODesktop</dt>
+    <dd>BYODesktop{{% md %}}Users assign their own machines, load balancing logic remains the same as Personal. PersonalDesktopAssignmentType must be Direct.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>PERSONAL</dt>
-    <dd>Personal</dd><dt>POOLED</dt>
-    <dd>Pooled</dd></dl>
+    <dd>Personal{{% md %}}Users will be assigned a SessionHost either by administrators (PersonalDesktopAssignmentType = Direct) or upon connecting to the pool (PersonalDesktopAssignmentType = Automatic). They will always be redirected to their assigned SessionHost.{{% /md %}}</dd><dt>POOLED</dt>
+    <dd>Pooled{{% md %}}Users get a new (random) SessionHost every time it connects to the HostPool.{{% /md %}}</dd><dt>BYO_DESKTOP</dt>
+    <dd>BYODesktop{{% md %}}Users assign their own machines, load balancing logic remains the same as Personal. PersonalDesktopAssignmentType must be Direct.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourceidentitytype">Resource<wbr>Identity<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcemodelwithallowedpropertysetidentity">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcemodelwithallowedpropertysetplan">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Plan</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_csharp">
+<a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_csharp">
+<a href="#promotioncode_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_go">
+<a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_go">
+<a href="#promotioncode_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_nodejs">
+<a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_nodejs">
+<a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_python">
+<a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotion_code_python">
+<a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcemodelwithallowedpropertysetresponseidentity">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Response<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcemodelwithallowedpropertysetresponseplan">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Response<wbr>Plan</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_csharp">
+<a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_csharp">
+<a href="#promotioncode_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_go">
+<a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_go">
+<a href="#promotioncode_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_nodejs">
+<a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_nodejs">
+<a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_python">
+<a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotion_code_python">
+<a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcemodelwithallowedpropertysetresponsesku">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Response<wbr>Sku</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="family_csharp">
+<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="family_go">
+<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="family_nodejs">
+<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="family_python">
+<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcemodelwithallowedpropertysetsku">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Sku</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="family_csharp">
+<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skutier">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Sku<wbr>Tier</a></span>
+    </dt>
+    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="family_go">
+<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skutier">Sku<wbr>Tier</a></span>
+    </dt>
+    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="family_nodejs">
+<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skutier">Sku<wbr>Tier</a></span>
+    </dt>
+    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="family_python">
+<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skutier">Sku<wbr>Tier</a></span>
+    </dt>
+    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalinghostpoolreference">Scaling<wbr>Host<wbr>Pool<wbr>Reference</h4>
@@ -2338,6 +3500,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>BREADTH_FIRST</dt>
     <dd>BreadthFirst</dd><dt>DEPTH_FIRST</dt>
     <dd>DepthFirst</dd></dl>
+{{% /choosable %}}
+
+<h4 id="skutier">Sku<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Free</dt>
+    <dd>Free</dd><dt>Basic</dt>
+    <dd>Basic</dd><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Sku<wbr>Tier<wbr>Free</dt>
+    <dd>Free</dd><dt>Sku<wbr>Tier<wbr>Basic</dt>
+    <dd>Basic</dd><dt>Sku<wbr>Tier<wbr>Standard</dt>
+    <dd>Standard</dd><dt>Sku<wbr>Tier<wbr>Premium</dt>
+    <dd>Premium</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Free</dt>
+    <dd>Free</dd><dt>Basic</dt>
+    <dd>Basic</dd><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FREE</dt>
+    <dd>Free</dd><dt>BASIC</dt>
+    <dd>Basic</dd><dt>STANDARD</dt>
+    <dd>Standard</dd><dt>PREMIUM</dt>
+    <dd>Premium</dd></dl>
 {{% /choosable %}}
 
 <h4 id="stophostswhen">Stop<wbr>Hosts<wbr>When</h4>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.apimanagement.GatewayHostnameConf
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Gateway hostname configuration details.
-API Version: 2019-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 
@@ -39,9 +39,12 @@ class MyStack : Stack
             GatewayId = "gw1",
             HcId = "default",
             Hostname = "*",
+            Http2Enabled = true,
             NegotiateClientCertificate = false,
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
+            Tls10Enabled = false,
+            Tls11Enabled = false,
         });
     }
 
@@ -71,9 +74,12 @@ func main() {
 			GatewayId:                  pulumi.String("gw1"),
 			HcId:                       pulumi.String("default"),
 			Hostname:                   pulumi.String("*"),
+			Http2Enabled:               pulumi.Bool(true),
 			NegotiateClientCertificate: pulumi.Bool(false),
 			ResourceGroupName:          pulumi.String("rg1"),
 			ServiceName:                pulumi.String("apimService1"),
+			Tls10Enabled:               pulumi.Bool(false),
+			Tls11Enabled:               pulumi.Bool(false),
 		})
 		if err != nil {
 			return err
@@ -100,9 +106,12 @@ gateway_hostname_configuration = azure_native.apimanagement.GatewayHostnameConfi
     gateway_id="gw1",
     hc_id="default",
     hostname="*",
+    http2_enabled=True,
     negotiate_client_certificate=False,
     resource_group_name="rg1",
-    service_name="apimService1")
+    service_name="apimService1",
+    tls10_enabled=False,
+    tls11_enabled=False)
 
 ```
 
@@ -122,9 +131,12 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
     gatewayId: "gw1",
     hcId: "default",
     hostname: "*",
+    http2Enabled: true,
     negotiateClientCertificate: false,
     resourceGroupName: "rg1",
     serviceName: "apimService1",
+    tls10Enabled: false,
+    tls11Enabled: false,
 });
 
 ```
@@ -150,7 +162,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GatewayHostnameConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">negotiate_client_certificate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GatewayHostnameConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http2_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">negotiate_client_certificate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls10_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tls11_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -340,13 +352,37 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
     </dt>
     <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="http2enabled_csharp">
+<a href="#http2enabled_csharp" style="color: inherit; text-decoration: inherit;">Http2Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if HTTP/2.0 is supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls10enabled_csharp">
+<a href="#tls10enabled_csharp" style="color: inherit; text-decoration: inherit;">Tls10Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.0 is supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls11enabled_csharp">
+<a href="#tls11enabled_csharp" style="color: inherit; text-decoration: inherit;">Tls11Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.1 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -400,13 +436,37 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
     </dt>
     <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="http2enabled_go">
+<a href="#http2enabled_go" style="color: inherit; text-decoration: inherit;">Http2Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if HTTP/2.0 is supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls10enabled_go">
+<a href="#tls10enabled_go" style="color: inherit; text-decoration: inherit;">Tls10Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.0 is supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls11enabled_go">
+<a href="#tls11enabled_go" style="color: inherit; text-decoration: inherit;">Tls11Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.1 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -460,13 +520,37 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
     </dt>
     <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="http2enabled_nodejs">
+<a href="#http2enabled_nodejs" style="color: inherit; text-decoration: inherit;">http2Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if HTTP/2.0 is supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls10enabled_nodejs">
+<a href="#tls10enabled_nodejs" style="color: inherit; text-decoration: inherit;">tls10Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.0 is supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls11enabled_nodejs">
+<a href="#tls11enabled_nodejs" style="color: inherit; text-decoration: inherit;">tls11Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.1 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -520,13 +604,37 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
     </dt>
     <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="http2_enabled_python">
+<a href="#http2_enabled_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if HTTP/2.0 is supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls10_enabled_python">
+<a href="#tls10_enabled_python" style="color: inherit; text-decoration: inherit;">tls10_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.0 is supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tls11_enabled_python">
+<a href="#tls11_enabled_python" style="color: inherit; text-decoration: inherit;">tls11_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.1 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

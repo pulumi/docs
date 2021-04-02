@@ -228,7 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcevirtualmachine_csharp">
 <a href="#sourcevirtualmachine_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Virtual<wbr>Machine</a>
@@ -312,7 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcevirtualmachine_go">
 <a href="#sourcevirtualmachine_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Virtual<wbr>Machine</a>
@@ -396,7 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcevirtualmachine_nodejs">
 <a href="#sourcevirtualmachine_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Virtual<wbr>Machine</a>
@@ -480,7 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_virtual_machine_python">
 <a href="#source_virtual_machine_python" style="color: inherit; text-decoration: inherit;">source_<wbr>virtual_<wbr>machine</a>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.storagecache.getStorageTarget fun
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Type of the Storage Target.
-API Version: 2020-10-01.
+API Version: 2021-03-01.
 
 
 
@@ -75,7 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of Storage Target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -103,7 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of Storage Target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -131,7 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of Storage Target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -159,7 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of Storage Target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -221,6 +221,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="blobnfs_csharp">
+<a href="#blobnfs_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Nfs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobnfstargetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Blob<wbr>Nfs<wbr>Target<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties when targetType is blobNfs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clfs_csharp">
 <a href="#clfs_csharp" style="color: inherit; text-decoration: inherit;">Clfs</a>
@@ -314,6 +322,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="blobnfs_go">
+<a href="#blobnfs_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Nfs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobnfstargetresponse">Blob<wbr>Nfs<wbr>Target<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties when targetType is blobNfs.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="clfs_go">
 <a href="#clfs_go" style="color: inherit; text-decoration: inherit;">Clfs</a>
 </span>
@@ -405,6 +421,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="blobnfs_nodejs">
+<a href="#blobnfs_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Nfs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobnfstargetresponse">Blob<wbr>Nfs<wbr>Target<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties when targetType is blobNfs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clfs_nodejs">
 <a href="#clfs_nodejs" style="color: inherit; text-decoration: inherit;">clfs</a>
@@ -498,6 +522,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="blob_nfs_python">
+<a href="#blob_nfs_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>nfs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobnfstargetresponse">Blob<wbr>Nfs<wbr>Target<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties when targetType is blobNfs.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="clfs_python">
 <a href="#clfs_python" style="color: inherit; text-decoration: inherit;">clfs</a>
 </span>
@@ -544,6 +576,90 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="blobnfstargetresponse">Blob<wbr>Nfs<wbr>Target<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_csharp">
+<a href="#usagemodel_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_go">
+<a href="#usagemodel_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_nodejs">
+<a href="#usagemodel_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usage_model_python">
+<a href="#usage_model_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="clfstargetresponse">Clfs<wbr>Target<wbr>Response</h4>
 
@@ -766,7 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -786,7 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -806,7 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -826,7 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
@@ -1048,8 +1164,8 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknownmap_csharp">
-<a href="#unknownmap_csharp" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Map</a>
+        <span id="attributes_csharp">
+<a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
@@ -1060,8 +1176,8 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknownmap_go">
-<a href="#unknownmap_go" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Map</a>
+        <span id="attributes_go">
+<a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
@@ -1072,8 +1188,8 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknownmap_nodejs">
-<a href="#unknownmap_nodejs" style="color: inherit; text-decoration: inherit;">unknown<wbr>Map</a>
+        <span id="attributes_nodejs">
+<a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
@@ -1084,8 +1200,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknown_map_python">
-<a href="#unknown_map_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>map</a>
+        <span id="attributes_python">
+<a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>

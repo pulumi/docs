@@ -12,13 +12,261 @@ meta_desc: "Documentation for the azure-native.devtestlab.ServiceFabricSchedule 
 
 A schedule.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:ServiceFabricSchedule myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/servicefabrics/{serviceFabricName}/schedules/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### ServiceFabricSchedules_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceFabricSchedule = new AzureNative.DevTestLab.ServiceFabricSchedule("serviceFabricSchedule", new AzureNative.DevTestLab.ServiceFabricScheduleArgs
+        {
+            DailyRecurrence = new AzureNative.DevTestLab.Inputs.DayDetailsArgs
+            {
+                Time = "19:00",
+            },
+            HourlyRecurrence = new AzureNative.DevTestLab.Inputs.HourDetailsArgs
+            {
+                Minute = 0,
+            },
+            LabName = "{labName}",
+            Location = "{location}",
+            Name = "{scheduleName}",
+            NotificationSettings = new AzureNative.DevTestLab.Inputs.NotificationSettingsArgs
+            {
+                EmailRecipient = "{email}",
+                NotificationLocale = "EN",
+                Status = "{Enabled|Disabled}",
+                TimeInMinutes = 15,
+                WebhookUrl = "{webhoolUrl}",
+            },
+            ResourceGroupName = "resourceGroupName",
+            ServiceFabricName = "{serviceFrabicName}",
+            Status = "{Enabled|Disabled}",
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+            TargetResourceId = "/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/users/{uniqueIdentifier}/servicefabrics/{serviceFrabicName}",
+            TaskType = "{Unknown|LabVmsShutdownTask|LabVmsStartupTask|LabVmReclamationTask|ComputeVmShutdownTask}",
+            TimeZoneId = "Pacific Standard Time",
+            UserName = "@me",
+            WeeklyRecurrence = new AzureNative.DevTestLab.Inputs.WeekDetailsArgs
+            {
+                Time = "19:00",
+                Weekdays = 
+                {
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday",
+                },
+            },
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewServiceFabricSchedule(ctx, "serviceFabricSchedule", &devtestlab.ServiceFabricScheduleArgs{
+			DailyRecurrence: &devtestlab.DayDetailsArgs{
+				Time: pulumi.String("19:00"),
+			},
+			HourlyRecurrence: &devtestlab.HourDetailsArgs{
+				Minute: pulumi.Int(0),
+			},
+			LabName:  pulumi.String("{labName}"),
+			Location: pulumi.String("{location}"),
+			Name:     pulumi.String("{scheduleName}"),
+			NotificationSettings: &devtestlab.NotificationSettingsArgs{
+				EmailRecipient:     pulumi.String("{email}"),
+				NotificationLocale: pulumi.String("EN"),
+				Status:             pulumi.String("{Enabled|Disabled}"),
+				TimeInMinutes:      pulumi.Int(15),
+				WebhookUrl:         pulumi.String("{webhoolUrl}"),
+			},
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			ServiceFabricName: pulumi.String("{serviceFrabicName}"),
+			Status:            pulumi.String("{Enabled|Disabled}"),
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+			TargetResourceId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/users/{uniqueIdentifier}/servicefabrics/{serviceFrabicName}"),
+			TaskType:         pulumi.String("{Unknown|LabVmsShutdownTask|LabVmsStartupTask|LabVmReclamationTask|ComputeVmShutdownTask}"),
+			TimeZoneId:       pulumi.String("Pacific Standard Time"),
+			UserName:         pulumi.String("@me"),
+			WeeklyRecurrence: &devtestlab.WeekDetailsArgs{
+				Time: pulumi.String("19:00"),
+				Weekdays: pulumi.StringArray{
+					pulumi.String("Monday"),
+					pulumi.String("Tuesday"),
+					pulumi.String("Wednesday"),
+					pulumi.String("Thursday"),
+					pulumi.String("Friday"),
+					pulumi.String("Saturday"),
+					pulumi.String("Sunday"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+service_fabric_schedule = azure_native.devtestlab.ServiceFabricSchedule("serviceFabricSchedule",
+    daily_recurrence=azure_native.devtestlab.DayDetailsArgs(
+        time="19:00",
+    ),
+    hourly_recurrence=azure_native.devtestlab.HourDetailsArgs(
+        minute=0,
+    ),
+    lab_name="{labName}",
+    location="{location}",
+    name="{scheduleName}",
+    notification_settings=azure_native.devtestlab.NotificationSettingsArgs(
+        email_recipient="{email}",
+        notification_locale="EN",
+        status="{Enabled|Disabled}",
+        time_in_minutes=15,
+        webhook_url="{webhoolUrl}",
+    ),
+    resource_group_name="resourceGroupName",
+    service_fabric_name="{serviceFrabicName}",
+    status="{Enabled|Disabled}",
+    tags={
+        "tagName1": "tagValue1",
+    },
+    target_resource_id="/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/users/{uniqueIdentifier}/servicefabrics/{serviceFrabicName}",
+    task_type="{Unknown|LabVmsShutdownTask|LabVmsStartupTask|LabVmReclamationTask|ComputeVmShutdownTask}",
+    time_zone_id="Pacific Standard Time",
+    user_name="@me",
+    weekly_recurrence=azure_native.devtestlab.WeekDetailsArgs(
+        time="19:00",
+        weekdays=[
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+        ],
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const serviceFabricSchedule = new azure_native.devtestlab.ServiceFabricSchedule("serviceFabricSchedule", {
+    dailyRecurrence: {
+        time: "19:00",
+    },
+    hourlyRecurrence: {
+        minute: 0,
+    },
+    labName: "{labName}",
+    location: "{location}",
+    name: "{scheduleName}",
+    notificationSettings: {
+        emailRecipient: "{email}",
+        notificationLocale: "EN",
+        status: "{Enabled|Disabled}",
+        timeInMinutes: 15,
+        webhookUrl: "{webhoolUrl}",
+    },
+    resourceGroupName: "resourceGroupName",
+    serviceFabricName: "{serviceFrabicName}",
+    status: "{Enabled|Disabled}",
+    tags: {
+        tagName1: "tagValue1",
+    },
+    targetResourceId: "/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/users/{uniqueIdentifier}/servicefabrics/{serviceFrabicName}",
+    taskType: "{Unknown|LabVmsShutdownTask|LabVmsStartupTask|LabVmReclamationTask|ComputeVmShutdownTask}",
+    timeZoneId: "Pacific Standard Time",
+    userName: "@me",
+    weeklyRecurrence: {
+        time: "19:00",
+        weekdays: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+        ],
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -1605,6 +1853,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:ServiceFabricSchedule {scheduleName} /subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/users/{uniqueIdentifier}/servicefabrics/{serviceFrabicName}/schedules/{scheduleName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

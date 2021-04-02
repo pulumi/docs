@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.delegatednetwork.DelegatedSubnetS
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of a orchestrator.
-API Version: 2020-08-08-preview.
+API Version: 2021-03-15.
 
 {{% examples %}}
 
@@ -308,7 +308,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controllerdetails_csharp">
 <a href="#controllerdetails_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Details</a>
@@ -316,7 +316,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Delegated<wbr>Network.<wbr>Inputs.<wbr>Controller<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -340,7 +340,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Delegated<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}orchestrator details{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}subnet details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -360,7 +360,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controllerdetails_go">
 <a href="#controllerdetails_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Details</a>
@@ -368,7 +368,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -392,7 +392,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetdetails">Subnet<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}orchestrator details{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}subnet details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -412,7 +412,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controllerdetails_nodejs">
 <a href="#controllerdetails_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Details</a>
@@ -420,7 +420,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -444,7 +444,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetdetails">Subnet<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}orchestrator details{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}subnet details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -464,7 +464,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controller_details_python">
 <a href="#controller_details_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>details</a>
@@ -472,7 +472,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -496,7 +496,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetdetails">Subnet<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}orchestrator details{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}subnet details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

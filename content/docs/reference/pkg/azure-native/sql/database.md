@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.sql.Database resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A database resource.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 
@@ -253,122 +253,6 @@ const database = new azure_native.sql.Database("database", {
     sku: {
         capacity: 2,
         name: "BC_Gen4",
-    },
-});
-
-```
-
-
-{{< /example >}}
-
-
-
-
-### Creates a data warehouse by specifying service objective name.
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
-        {
-            DatabaseName = "testdw",
-            Location = "westus",
-            ResourceGroupName = "Default-SQL-SouthEastAsia",
-            ServerName = "testsvr",
-            Sku = new AzureNative.Sql.Inputs.SkuArgs
-            {
-                Name = "DW1000c",
-            },
-        });
-    }
-
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
-			DatabaseName:      pulumi.String("testdw"),
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("Default-SQL-SouthEastAsia"),
-			ServerName:        pulumi.String("testsvr"),
-			Sku: &sql.SkuArgs{
-				Name: pulumi.String("DW1000c"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-database = azure_native.sql.Database("database",
-    database_name="testdw",
-    location="westus",
-    resource_group_name="Default-SQL-SouthEastAsia",
-    server_name="testsvr",
-    sku=azure_native.sql.SkuArgs(
-        name="DW1000c",
-    ))
-
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const database = new azure_native.sql.Database("database", {
-    databaseName: "testdw",
-    location: "westus",
-    resourceGroupName: "Default-SQL-SouthEastAsia",
-    serverName: "testsvr",
-    sku: {
-        name: "DW1000c",
     },
 });
 
@@ -795,14 +679,9 @@ class MyStack : Stack
             DatabaseName = "dbpitr",
             Location = "southeastasia",
             ResourceGroupName = "Default-SQL-SouthEastAsia",
-            RestorePointInTime = "2017-07-14T05:35:31.503Z",
+            RestorePointInTime = "2020-10-22T05:35:31.503Z",
             ServerName = "testsvr",
-            Sku = new AzureNative.Sql.Inputs.SkuArgs
-            {
-                Name = "S0",
-                Tier = "Standard",
-            },
-            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SoutheastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
         });
     }
 
@@ -832,13 +711,9 @@ func main() {
 			DatabaseName:       pulumi.String("dbpitr"),
 			Location:           pulumi.String("southeastasia"),
 			ResourceGroupName:  pulumi.String("Default-SQL-SouthEastAsia"),
-			RestorePointInTime: pulumi.String("2017-07-14T05:35:31.503Z"),
+			RestorePointInTime: pulumi.String("2020-10-22T05:35:31.503Z"),
 			ServerName:         pulumi.String("testsvr"),
-			Sku: &sql.SkuArgs{
-				Name: pulumi.String("S0"),
-				Tier: pulumi.String("Standard"),
-			},
-			SourceDatabaseId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb"),
+			SourceDatabaseId:   pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SoutheastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb"),
 		})
 		if err != nil {
 			return err
@@ -865,13 +740,9 @@ database = azure_native.sql.Database("database",
     database_name="dbpitr",
     location="southeastasia",
     resource_group_name="Default-SQL-SouthEastAsia",
-    restore_point_in_time="2017-07-14T05:35:31.503Z",
+    restore_point_in_time="2020-10-22T05:35:31.503Z",
     server_name="testsvr",
-    sku=azure_native.sql.SkuArgs(
-        name="S0",
-        tier="Standard",
-    ),
-    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb")
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SoutheastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb")
 
 ```
 
@@ -891,401 +762,9 @@ const database = new azure_native.sql.Database("database", {
     databaseName: "dbpitr",
     location: "southeastasia",
     resourceGroupName: "Default-SQL-SouthEastAsia",
-    restorePointInTime: "2017-07-14T05:35:31.503Z",
+    restorePointInTime: "2020-10-22T05:35:31.503Z",
     serverName: "testsvr",
-    sku: {
-        name: "S0",
-        tier: "Standard",
-    },
-    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
-});
-
-```
-
-
-{{< /example >}}
-
-
-
-
-### Creates a database from recoverableDatabaseId.
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
-        {
-            CreateMode = "Restore",
-            DatabaseName = "dbrestore",
-            Location = "southeastasia",
-            ResourceGroupName = "Default-SQL-SouthEastAsia",
-            RestorableDroppedDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/restorableDroppedDatabases/testdb2,131444841315030000",
-            ServerName = "testsvr",
-            Sku = new AzureNative.Sql.Inputs.SkuArgs
-            {
-                Name = "S0",
-                Tier = "Standard",
-            },
-        });
-    }
-
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
-			CreateMode:                  pulumi.String("Restore"),
-			DatabaseName:                pulumi.String("dbrestore"),
-			Location:                    pulumi.String("southeastasia"),
-			ResourceGroupName:           pulumi.String("Default-SQL-SouthEastAsia"),
-			RestorableDroppedDatabaseId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/restorableDroppedDatabases/testdb2,131444841315030000"),
-			ServerName:                  pulumi.String("testsvr"),
-			Sku: &sql.SkuArgs{
-				Name: pulumi.String("S0"),
-				Tier: pulumi.String("Standard"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-database = azure_native.sql.Database("database",
-    create_mode="Restore",
-    database_name="dbrestore",
-    location="southeastasia",
-    resource_group_name="Default-SQL-SouthEastAsia",
-    restorable_dropped_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/restorableDroppedDatabases/testdb2,131444841315030000",
-    server_name="testsvr",
-    sku=azure_native.sql.SkuArgs(
-        name="S0",
-        tier="Standard",
-    ))
-
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const database = new azure_native.sql.Database("database", {
-    createMode: "Restore",
-    databaseName: "dbrestore",
-    location: "southeastasia",
-    resourceGroupName: "Default-SQL-SouthEastAsia",
-    restorableDroppedDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/restorableDroppedDatabases/testdb2,131444841315030000",
-    serverName: "testsvr",
-    sku: {
-        name: "S0",
-        tier: "Standard",
-    },
-});
-
-```
-
-
-{{< /example >}}
-
-
-
-
-### Creates a database from restore with database deletion time.
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
-        {
-            CreateMode = "Restore",
-            DatabaseName = "dbrestore",
-            Location = "southeastasia",
-            ResourceGroupName = "Default-SQL-SouthEastAsia",
-            ServerName = "testsvr",
-            Sku = new AzureNative.Sql.Inputs.SkuArgs
-            {
-                Name = "S0",
-                Tier = "Standard",
-            },
-            SourceDatabaseDeletionDate = "2017-07-14T06:41:06.613Z",
-            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
-        });
-    }
-
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
-			CreateMode:        pulumi.String("Restore"),
-			DatabaseName:      pulumi.String("dbrestore"),
-			Location:          pulumi.String("southeastasia"),
-			ResourceGroupName: pulumi.String("Default-SQL-SouthEastAsia"),
-			ServerName:        pulumi.String("testsvr"),
-			Sku: &sql.SkuArgs{
-				Name: pulumi.String("S0"),
-				Tier: pulumi.String("Standard"),
-			},
-			SourceDatabaseDeletionDate: pulumi.String("2017-07-14T06:41:06.613Z"),
-			SourceDatabaseId:           pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-database = azure_native.sql.Database("database",
-    create_mode="Restore",
-    database_name="dbrestore",
-    location="southeastasia",
-    resource_group_name="Default-SQL-SouthEastAsia",
-    server_name="testsvr",
-    sku=azure_native.sql.SkuArgs(
-        name="S0",
-        tier="Standard",
-    ),
-    source_database_deletion_date="2017-07-14T06:41:06.613Z",
-    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb")
-
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const database = new azure_native.sql.Database("database", {
-    createMode: "Restore",
-    databaseName: "dbrestore",
-    location: "southeastasia",
-    resourceGroupName: "Default-SQL-SouthEastAsia",
-    serverName: "testsvr",
-    sku: {
-        name: "S0",
-        tier: "Standard",
-    },
-    sourceDatabaseDeletionDate: "2017-07-14T06:41:06.613Z",
-    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
-});
-
-```
-
-
-{{< /example >}}
-
-
-
-
-### Creates a database from restore with restorableDroppedDatabaseId.
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
-        {
-            CreateMode = "Restore",
-            DatabaseName = "dbrestore",
-            Location = "southeastasia",
-            ResourceGroupName = "Default-SQL-SouthEastAsia",
-            ServerName = "testsvr",
-            Sku = new AzureNative.Sql.Inputs.SkuArgs
-            {
-                Name = "S0",
-                Tier = "Standard",
-            },
-            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/restorableDroppedDatabases/testdb,131403269876900000",
-        });
-    }
-
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
-			CreateMode:        pulumi.String("Restore"),
-			DatabaseName:      pulumi.String("dbrestore"),
-			Location:          pulumi.String("southeastasia"),
-			ResourceGroupName: pulumi.String("Default-SQL-SouthEastAsia"),
-			ServerName:        pulumi.String("testsvr"),
-			Sku: &sql.SkuArgs{
-				Name: pulumi.String("S0"),
-				Tier: pulumi.String("Standard"),
-			},
-			SourceDatabaseId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/restorableDroppedDatabases/testdb,131403269876900000"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-database = azure_native.sql.Database("database",
-    create_mode="Restore",
-    database_name="dbrestore",
-    location="southeastasia",
-    resource_group_name="Default-SQL-SouthEastAsia",
-    server_name="testsvr",
-    sku=azure_native.sql.SkuArgs(
-        name="S0",
-        tier="Standard",
-    ),
-    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/restorableDroppedDatabases/testdb,131403269876900000")
-
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const database = new azure_native.sql.Database("database", {
-    createMode: "Restore",
-    databaseName: "dbrestore",
-    location: "southeastasia",
-    resourceGroupName: "Default-SQL-SouthEastAsia",
-    serverName: "testsvr",
-    sku: {
-        name: "S0",
-        tier: "Standard",
-    },
-    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/restorableDroppedDatabases/testdb,131403269876900000",
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SoutheastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
 });
 
 ```
@@ -1667,6 +1146,113 @@ const database = new azure_native.sql.Database("database", {
 
 
 
+### Creates a database with specified backup storage redundancy.
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
+        {
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            RequestedBackupStorageRedundancy = "Zone",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			DatabaseName:                     pulumi.String("testdb"),
+			Location:                         pulumi.String("southeastasia"),
+			RequestedBackupStorageRedundancy: pulumi.String("Zone"),
+			ResourceGroupName:                pulumi.String("Default-SQL-SouthEastAsia"),
+			ServerName:                       pulumi.String("testsvr"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database = azure_native.sql.Database("database",
+    database_name="testdb",
+    location="southeastasia",
+    requested_backup_storage_redundancy="Zone",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const database = new azure_native.sql.Database("database", {
+    databaseName: "testdb",
+    location: "southeastasia",
+    requestedBackupStorageRedundancy: "Zone",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -1682,7 +1268,7 @@ const database = new azure_native.sql.Database("database", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">catalog_collation</span><span class="p">:</span> <span class="nx">Optional[Union[str, CatalogCollationType]]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, CreateMode]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">high_availability_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseLicenseType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_backup_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseReadScale]]</span> = None<span class="p">, </span><span class="nx">recoverable_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_services_recovery_point_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restorable_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[Union[str, SampleName]]</span> = None<span class="p">, </span><span class="nx">secondary_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecondaryType]]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">source_database_deletion_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageAccountType]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">catalog_collation</span><span class="p">:</span> <span class="nx">Optional[Union[str, CatalogCollationType]]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, CreateMode]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">high_availability_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseLicenseType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_backup_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseReadScale]]</span> = None<span class="p">, </span><span class="nx">recoverable_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_services_recovery_point_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requested_backup_storage_redundancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, RequestedBackupStorageRedundancy]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restorable_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[Union[str, SampleName]]</span> = None<span class="p">, </span><span class="nx">secondary_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecondaryType]]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">source_database_deletion_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1984,6 +1570,14 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
     </dt>
     <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestedbackupstorageredundancy_csharp">
+<a href="#requestedbackupstorageredundancy_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#requestedbackupstorageredundancy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a></span>
+    </dt>
+    <dd>{{% md %}}The storage account type to be used to store backups for this database.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="restorabledroppeddatabaseid_csharp">
 <a href="#restorabledroppeddatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
 </span>
@@ -2050,14 +1644,6 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storageaccounttype_csharp">
-<a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Storage<wbr>Account<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2239,6 +1825,14 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
     </dt>
     <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestedbackupstorageredundancy_go">
+<a href="#requestedbackupstorageredundancy_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#requestedbackupstorageredundancy">Requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a></span>
+    </dt>
+    <dd>{{% md %}}The storage account type to be used to store backups for this database.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="restorabledroppeddatabaseid_go">
 <a href="#restorabledroppeddatabaseid_go" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
 </span>
@@ -2305,14 +1899,6 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storageaccounttype_go">
-<a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2494,6 +2080,14 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
     </dt>
     <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestedbackupstorageredundancy_nodejs">
+<a href="#requestedbackupstorageredundancy_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#requestedbackupstorageredundancy">Requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a></span>
+    </dt>
+    <dd>{{% md %}}The storage account type to be used to store backups for this database.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="restorabledroppeddatabaseid_nodejs">
 <a href="#restorabledroppeddatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
 </span>
@@ -2560,14 +2154,6 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storageaccounttype_nodejs">
-<a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2749,6 +2335,14 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
     </dt>
     <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requested_backup_storage_redundancy_python">
+<a href="#requested_backup_storage_redundancy_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>backup_<wbr>storage_<wbr>redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#requestedbackupstorageredundancy">Requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a></span>
+    </dt>
+    <dd>{{% md %}}The storage account type to be used to store backups for this database.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="restorable_dropped_database_id_python">
 <a href="#restorable_dropped_database_id_python" style="color: inherit; text-decoration: inherit;">restorable_<wbr>dropped_<wbr>database_<wbr>id</a>
 </span>
@@ -2816,14 +2410,6 @@ Get-AzSqlServerServiceObjective -Location <location>
     </dt>
     <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="storage_account_type_python">
-<a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -2858,6 +2444,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="currentbackupstorageredundancy_csharp">
+<a href="#currentbackupstorageredundancy_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentserviceobjectivename_csharp">
 <a href="#currentserviceobjectivename_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -2999,6 +2593,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="currentbackupstorageredundancy_go">
+<a href="#currentbackupstorageredundancy_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="currentserviceobjectivename_go">
 <a href="#currentserviceobjectivename_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Service<wbr>Objective<wbr>Name</a>
 </span>
@@ -3139,6 +2741,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="currentbackupstorageredundancy_nodejs">
+<a href="#currentbackupstorageredundancy_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="currentserviceobjectivename_nodejs">
 <a href="#currentserviceobjectivename_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Service<wbr>Objective<wbr>Name</a>
 </span>
@@ -3278,6 +2888,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="current_backup_storage_redundancy_python">
+<a href="#current_backup_storage_redundancy_python" style="color: inherit; text-decoration: inherit;">current_<wbr>backup_<wbr>storage_<wbr>redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="current_service_objective_name_python">
 <a href="#current_service_objective_name_python" style="color: inherit; text-decoration: inherit;">current_<wbr>service_<wbr>objective_<wbr>name</a>
@@ -3552,6 +3170,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>ENABLED</dt>
     <dd>Enabled</dd><dt>DISABLED</dt>
     <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+<h4 id="requestedbackupstorageredundancy">Requested<wbr>Backup<wbr>Storage<wbr>Redundancy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Geo</dt>
+    <dd>Geo</dd><dt>Local</dt>
+    <dd>Local</dd><dt>Zone</dt>
+    <dd>Zone</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Requested<wbr>Backup<wbr>Storage<wbr>Redundancy<wbr>Geo</dt>
+    <dd>Geo</dd><dt>Requested<wbr>Backup<wbr>Storage<wbr>Redundancy<wbr>Local</dt>
+    <dd>Local</dd><dt>Requested<wbr>Backup<wbr>Storage<wbr>Redundancy<wbr>Zone</dt>
+    <dd>Zone</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Geo</dt>
+    <dd>Geo</dd><dt>Local</dt>
+    <dd>Local</dd><dt>Zone</dt>
+    <dd>Zone</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GEO</dt>
+    <dd>Geo</dd><dt>LOCAL</dt>
+    <dd>Local</dd><dt>ZONE</dt>
+    <dd>Zone</dd></dl>
 {{% /choosable %}}
 
 <h4 id="samplename">Sample<wbr>Name</h4>
@@ -3964,36 +3612,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="storageaccounttype">Storage<wbr>Account<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>GRS</dt>
-    <dd>GRS</dd><dt>LRS</dt>
-    <dd>LRS</dd><dt>ZRS</dt>
-    <dd>ZRS</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Storage<wbr>Account<wbr>Type<wbr>GRS</dt>
-    <dd>GRS</dd><dt>Storage<wbr>Account<wbr>Type<wbr>LRS</dt>
-    <dd>LRS</dd><dt>Storage<wbr>Account<wbr>Type<wbr>ZRS</dt>
-    <dd>ZRS</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>GRS</dt>
-    <dd>GRS</dd><dt>LRS</dt>
-    <dd>LRS</dd><dt>ZRS</dt>
-    <dd>ZRS</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>GRS</dt>
-    <dd>GRS</dd><dt>LRS</dt>
-    <dd>LRS</dd><dt>ZRS</dt>
-    <dd>ZRS</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.dataprotection.BackupVault resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Backup Vault Resource
-API Version: 2021-02-01-preview.
+API Version: 2021-01-01.
 
 {{% examples %}}
 
@@ -45,7 +45,7 @@ class MyStack : Stack
             {
                 new AzureNative.DataProtection.Inputs.StorageSettingArgs
                 {
-                    DataStoreType = "VaultStore",
+                    DatastoreType = "VaultStore",
                     Type = "LocallyRedundant",
                 },
             },
@@ -86,7 +86,7 @@ func main() {
 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
 			StorageSettings: dataprotection.StorageSettingArray{
 				&dataprotection.StorageSettingArgs{
-					DataStoreType: pulumi.String("VaultStore"),
+					DatastoreType: pulumi.String("VaultStore"),
 					Type:          pulumi.String("LocallyRedundant"),
 				},
 			},
@@ -122,7 +122,7 @@ backup_vault = azure_native.dataprotection.BackupVault("backupVault",
     location="WestUS",
     resource_group_name="SampleResourceGroup",
     storage_settings=[azure_native.dataprotection.StorageSettingArgs(
-        data_store_type="VaultStore",
+        datastore_type="VaultStore",
         type="LocallyRedundant",
     )],
     tags={
@@ -150,7 +150,7 @@ const backupVault = new azure_native.dataprotection.BackupVault("backupVault", {
     location: "WestUS",
     resourceGroupName: "SampleResourceGroup",
     storageSettings: [{
-        dataStoreType: "VaultStore",
+        datastoreType: "VaultStore",
         type: "LocallyRedundant",
     }],
     tags: {
@@ -192,7 +192,7 @@ class MyStack : Stack
             {
                 new AzureNative.DataProtection.Inputs.StorageSettingArgs
                 {
-                    DataStoreType = "VaultStore",
+                    DatastoreType = "VaultStore",
                     Type = "LocallyRedundant",
                 },
             },
@@ -233,7 +233,7 @@ func main() {
 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
 			StorageSettings: dataprotection.StorageSettingArray{
 				&dataprotection.StorageSettingArgs{
-					DataStoreType: pulumi.String("VaultStore"),
+					DatastoreType: pulumi.String("VaultStore"),
 					Type:          pulumi.String("LocallyRedundant"),
 				},
 			},
@@ -269,7 +269,7 @@ backup_vault = azure_native.dataprotection.BackupVault("backupVault",
     location="WestUS",
     resource_group_name="SampleResourceGroup",
     storage_settings=[azure_native.dataprotection.StorageSettingArgs(
-        data_store_type="VaultStore",
+        datastore_type="VaultStore",
         type="LocallyRedundant",
     )],
     tags={
@@ -297,7 +297,7 @@ const backupVault = new azure_native.dataprotection.BackupVault("backupVault", {
     location: "WestUS",
     resourceGroupName: "SampleResourceGroup",
     storageSettings: [{
-        dataStoreType: "VaultStore",
+        datastoreType: "VaultStore",
         type: "LocallyRedundant",
     }],
     tags: {
@@ -477,7 +477,15 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the backup vault is present.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where the backup vault is present.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagesettings_csharp">
+<a href="#storagesettings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Storage<wbr>Setting<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -502,14 +510,6 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storagesettings_csharp">
-<a href="#storagesettings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Storage<wbr>Setting<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -537,7 +537,15 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the backup vault is present.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where the backup vault is present.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagesettings_go">
+<a href="#storagesettings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesetting">[]Storage<wbr>Setting</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -562,14 +570,6 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storagesettings_go">
-<a href="#storagesettings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesetting">[]Storage<wbr>Setting</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -597,7 +597,15 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the backup vault is present.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where the backup vault is present.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagesettings_nodejs">
+<a href="#storagesettings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesetting">Storage<wbr>Setting[]</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -622,14 +630,6 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storagesettings_nodejs">
-<a href="#storagesettings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesetting">Storage<wbr>Setting[]</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -657,7 +657,15 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the backup vault is present.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where the backup vault is present.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storage_settings_python">
+<a href="#storage_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesetting">Sequence[Storage<wbr>Setting<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -682,14 +690,6 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storage_settings_python">
-<a href="#storage_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesetting">Sequence[Storage<wbr>Setting<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1071,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastoretype_csharp">
-<a href="#datastoretype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type</a>
+<a href="#datastoretype_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagesettingstoretypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Storage<wbr>Setting<wbr>Store<wbr>Types</a></span>
@@ -1091,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastoretype_go">
-<a href="#datastoretype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type</a>
+<a href="#datastoretype_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagesettingstoretypes">Storage<wbr>Setting<wbr>Store<wbr>Types</a></span>
@@ -1111,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastoretype_nodejs">
-<a href="#datastoretype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Type</a>
+<a href="#datastoretype_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagesettingstoretypes">Storage<wbr>Setting<wbr>Store<wbr>Types</a></span>
@@ -1130,8 +1130,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="data_store_type_python">
-<a href="#data_store_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>type</a>
+        <span id="datastore_type_python">
+<a href="#datastore_type_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#storagesettingstoretypes">Storage<wbr>Setting<wbr>Store<wbr>Types</a></span>
@@ -1153,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastoretype_csharp">
-<a href="#datastoretype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type</a>
+<a href="#datastoretype_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1173,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastoretype_go">
-<a href="#datastoretype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type</a>
+<a href="#datastoretype_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1193,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastoretype_nodejs">
-<a href="#datastoretype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Type</a>
+<a href="#datastoretype_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1212,8 +1212,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="data_store_type_python">
-<a href="#data_store_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>type</a>
+        <span id="datastore_type_python">
+<a href="#datastore_type_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

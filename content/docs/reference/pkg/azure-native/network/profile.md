@@ -11,13 +11,166 @@ meta_desc: "Documentation for the azure-native.network.Profile resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a Traffic Manager profile.
-API Version: 2018-04-01.
+API Version: 2018-08-01.
 
 {{% examples %}}
 
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Profile-PUT-MultiValue
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var profile = new AzureNative.Network.Profile("profile", new AzureNative.Network.ProfileArgs
+        {
+            DnsConfig = new AzureNative.Network.Inputs.DnsConfigArgs
+            {
+                RelativeName = "azsmnet6386",
+                Ttl = 35,
+            },
+            Location = "global",
+            MaxReturn = 2,
+            MonitorConfig = new AzureNative.Network.Inputs.MonitorConfigArgs
+            {
+                Path = "/testpath.aspx",
+                Port = 80,
+                Protocol = "HTTP",
+            },
+            ProfileName = "azsmnet6386",
+            ProfileStatus = "Enabled",
+            ResourceGroupName = "azuresdkfornetautoresttrafficmanager1421",
+            TrafficRoutingMethod = "MultiValue",
+            TrafficViewEnrollmentStatus = "Disabled",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewProfile(ctx, "profile", &network.ProfileArgs{
+			DnsConfig: &network.DnsConfigArgs{
+				RelativeName: pulumi.String("azsmnet6386"),
+				Ttl:          pulumi.Float64(35),
+			},
+			Location:  pulumi.String("global"),
+			MaxReturn: pulumi.Float64(2),
+			MonitorConfig: &network.MonitorConfigArgs{
+				Path:     pulumi.String("/testpath.aspx"),
+				Port:     pulumi.Float64(80),
+				Protocol: pulumi.String("HTTP"),
+			},
+			ProfileName:                 pulumi.String("azsmnet6386"),
+			ProfileStatus:               pulumi.String("Enabled"),
+			ResourceGroupName:           pulumi.String("azuresdkfornetautoresttrafficmanager1421"),
+			TrafficRoutingMethod:        pulumi.String("MultiValue"),
+			TrafficViewEnrollmentStatus: pulumi.String("Disabled"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+profile = azure_native.network.Profile("profile",
+    dns_config=azure_native.network.DnsConfigArgs(
+        relative_name="azsmnet6386",
+        ttl=35,
+    ),
+    location="global",
+    max_return=2,
+    monitor_config=azure_native.network.MonitorConfigArgs(
+        path="/testpath.aspx",
+        port=80,
+        protocol="HTTP",
+    ),
+    profile_name="azsmnet6386",
+    profile_status="Enabled",
+    resource_group_name="azuresdkfornetautoresttrafficmanager1421",
+    traffic_routing_method="MultiValue",
+    traffic_view_enrollment_status="Disabled")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const profile = new azure_native.network.Profile("profile", {
+    dnsConfig: {
+        relativeName: "azsmnet6386",
+        ttl: 35,
+    },
+    location: "global",
+    maxReturn: 2,
+    monitorConfig: {
+        path: "/testpath.aspx",
+        port: 80,
+        protocol: "HTTP",
+    },
+    profileName: "azsmnet6386",
+    profileStatus: "Enabled",
+    resourceGroupName: "azuresdkfornetautoresttrafficmanager1421",
+    trafficRoutingMethod: "MultiValue",
+    trafficViewEnrollmentStatus: "Disabled",
+});
+
+```
+
+
+{{< /example >}}
+
+
 
 
 ### Profile-PUT-NoEndpoints
@@ -154,6 +307,206 @@ const profile = new azure_native.network.Profile("profile", {
     profileName: "azsmnet6386",
     profileStatus: "Enabled",
     resourceGroupName: "azuresdkfornetautoresttrafficmanager1421",
+    trafficRoutingMethod: "Performance",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Profile-PUT-WithAliasing
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var profile = new AzureNative.Network.Profile("profile", new AzureNative.Network.ProfileArgs
+        {
+            AllowedEndpointRecordTypes = 
+            {
+                "DomainName",
+            },
+            DnsConfig = new AzureNative.Network.Inputs.DnsConfigArgs
+            {
+                RelativeName = "azuresdkfornetautoresttrafficmanager6192",
+                Ttl = 35,
+            },
+            Endpoints = 
+            {
+                new AzureNative.Network.Inputs.EndpointArgs
+                {
+                    EndpointLocation = "North Europe",
+                    EndpointStatus = "Enabled",
+                    Name = "My external endpoint",
+                    Target = "foobar.contoso.com",
+                    Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+                },
+            },
+            Location = "global",
+            MonitorConfig = new AzureNative.Network.Inputs.MonitorConfigArgs
+            {
+                IntervalInSeconds = 10,
+                Path = "/testpath.aspx",
+                Port = 80,
+                Protocol = "HTTP",
+                TimeoutInSeconds = 5,
+                ToleratedNumberOfFailures = 2,
+            },
+            ProfileName = "azuresdkfornetautoresttrafficmanager6192",
+            ProfileStatus = "Enabled",
+            ResourceGroupName = "azuresdkfornetautoresttrafficmanager2583",
+            TrafficRoutingMethod = "Performance",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewProfile(ctx, "profile", &network.ProfileArgs{
+			AllowedEndpointRecordTypes: pulumi.StringArray{
+				pulumi.String("DomainName"),
+			},
+			DnsConfig: &network.DnsConfigArgs{
+				RelativeName: pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
+				Ttl:          pulumi.Float64(35),
+			},
+			Endpoints: network.EndpointArray{
+				&network.EndpointArgs{
+					EndpointLocation: pulumi.String("North Europe"),
+					EndpointStatus:   pulumi.String("Enabled"),
+					Name:             pulumi.String("My external endpoint"),
+					Target:           pulumi.String("foobar.contoso.com"),
+					Type:             pulumi.String("Microsoft.network/TrafficManagerProfiles/ExternalEndpoints"),
+				},
+			},
+			Location: pulumi.String("global"),
+			MonitorConfig: &network.MonitorConfigArgs{
+				IntervalInSeconds:         pulumi.Float64(10),
+				Path:                      pulumi.String("/testpath.aspx"),
+				Port:                      pulumi.Float64(80),
+				Protocol:                  pulumi.String("HTTP"),
+				TimeoutInSeconds:          pulumi.Float64(5),
+				ToleratedNumberOfFailures: pulumi.Float64(2),
+			},
+			ProfileName:          pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
+			ProfileStatus:        pulumi.String("Enabled"),
+			ResourceGroupName:    pulumi.String("azuresdkfornetautoresttrafficmanager2583"),
+			TrafficRoutingMethod: pulumi.String("Performance"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+profile = azure_native.network.Profile("profile",
+    allowed_endpoint_record_types=["DomainName"],
+    dns_config=azure_native.network.DnsConfigArgs(
+        relative_name="azuresdkfornetautoresttrafficmanager6192",
+        ttl=35,
+    ),
+    endpoints=[azure_native.network.EndpointArgs(
+        endpoint_location="North Europe",
+        endpoint_status="Enabled",
+        name="My external endpoint",
+        target="foobar.contoso.com",
+        type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+    )],
+    location="global",
+    monitor_config=azure_native.network.MonitorConfigArgs(
+        interval_in_seconds=10,
+        path="/testpath.aspx",
+        port=80,
+        protocol="HTTP",
+        timeout_in_seconds=5,
+        tolerated_number_of_failures=2,
+    ),
+    profile_name="azuresdkfornetautoresttrafficmanager6192",
+    profile_status="Enabled",
+    resource_group_name="azuresdkfornetautoresttrafficmanager2583",
+    traffic_routing_method="Performance")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const profile = new azure_native.network.Profile("profile", {
+    allowedEndpointRecordTypes: ["DomainName"],
+    dnsConfig: {
+        relativeName: "azuresdkfornetautoresttrafficmanager6192",
+        ttl: 35,
+    },
+    endpoints: [{
+        endpointLocation: "North Europe",
+        endpointStatus: "Enabled",
+        name: "My external endpoint",
+        target: "foobar.contoso.com",
+        type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+    }],
+    location: "global",
+    monitorConfig: {
+        intervalInSeconds: 10,
+        path: "/testpath.aspx",
+        port: 80,
+        protocol: "HTTP",
+        timeoutInSeconds: 5,
+        toleratedNumberOfFailures: 2,
+    },
+    profileName: "azuresdkfornetautoresttrafficmanager6192",
+    profileStatus: "Enabled",
+    resourceGroupName: "azuresdkfornetautoresttrafficmanager2583",
     trafficRoutingMethod: "Performance",
 });
 
@@ -659,6 +1012,262 @@ const profile = new azure_native.network.Profile("profile", {
 
 
 
+### Profile-PUT-WithNestedEndpoints
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var profile = new AzureNative.Network.Profile("profile", new AzureNative.Network.ProfileArgs
+        {
+            DnsConfig = new AzureNative.Network.Inputs.DnsConfigArgs
+            {
+                RelativeName = "parentprofile",
+                Ttl = 35,
+            },
+            Endpoints = 
+            {
+                new AzureNative.Network.Inputs.EndpointArgs
+                {
+                    EndpointStatus = "Enabled",
+                    MinChildEndpoints = 2,
+                    MinChildEndpointsIPv4 = 1,
+                    MinChildEndpointsIPv6 = 2,
+                    Name = "MyFirstNestedEndpoint",
+                    Priority = 1,
+                    Target = "firstnestedprofile.tmpreview.watmtest.azure-test.net",
+                    Type = "Microsoft.Network/trafficManagerProfiles/nestedEndpoints",
+                    Weight = 1,
+                },
+                new AzureNative.Network.Inputs.EndpointArgs
+                {
+                    EndpointStatus = "Enabled",
+                    MinChildEndpoints = 2,
+                    MinChildEndpointsIPv4 = 2,
+                    MinChildEndpointsIPv6 = 1,
+                    Name = "MySecondNestedEndpoint",
+                    Priority = 2,
+                    Target = "secondnestedprofile.tmpreview.watmtest.azure-test.net",
+                    Type = "Microsoft.Network/trafficManagerProfiles/nestedEndpoints",
+                    Weight = 1,
+                },
+            },
+            Location = "global",
+            MonitorConfig = new AzureNative.Network.Inputs.MonitorConfigArgs
+            {
+                IntervalInSeconds = 10,
+                Path = "/testpath.aspx",
+                Port = 80,
+                Protocol = "HTTP",
+                TimeoutInSeconds = 5,
+                ToleratedNumberOfFailures = 2,
+            },
+            ProfileName = "parentprofile",
+            ProfileStatus = "Enabled",
+            ResourceGroupName = "myresourcegroup",
+            TrafficRoutingMethod = "Priority",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewProfile(ctx, "profile", &network.ProfileArgs{
+			DnsConfig: &network.DnsConfigArgs{
+				RelativeName: pulumi.String("parentprofile"),
+				Ttl:          pulumi.Float64(35),
+			},
+			Endpoints: network.EndpointArray{
+				&network.EndpointArgs{
+					EndpointStatus:        pulumi.String("Enabled"),
+					MinChildEndpoints:     pulumi.Float64(2),
+					MinChildEndpointsIPv4: pulumi.Float64(1),
+					MinChildEndpointsIPv6: pulumi.Float64(2),
+					Name:                  pulumi.String("MyFirstNestedEndpoint"),
+					Priority:              pulumi.Float64(1),
+					Target:                pulumi.String("firstnestedprofile.tmpreview.watmtest.azure-test.net"),
+					Type:                  pulumi.String("Microsoft.Network/trafficManagerProfiles/nestedEndpoints"),
+					Weight:                pulumi.Float64(1),
+				},
+				&network.EndpointArgs{
+					EndpointStatus:        pulumi.String("Enabled"),
+					MinChildEndpoints:     pulumi.Float64(2),
+					MinChildEndpointsIPv4: pulumi.Float64(2),
+					MinChildEndpointsIPv6: pulumi.Float64(1),
+					Name:                  pulumi.String("MySecondNestedEndpoint"),
+					Priority:              pulumi.Float64(2),
+					Target:                pulumi.String("secondnestedprofile.tmpreview.watmtest.azure-test.net"),
+					Type:                  pulumi.String("Microsoft.Network/trafficManagerProfiles/nestedEndpoints"),
+					Weight:                pulumi.Float64(1),
+				},
+			},
+			Location: pulumi.String("global"),
+			MonitorConfig: &network.MonitorConfigArgs{
+				IntervalInSeconds:         pulumi.Float64(10),
+				Path:                      pulumi.String("/testpath.aspx"),
+				Port:                      pulumi.Float64(80),
+				Protocol:                  pulumi.String("HTTP"),
+				TimeoutInSeconds:          pulumi.Float64(5),
+				ToleratedNumberOfFailures: pulumi.Float64(2),
+			},
+			ProfileName:          pulumi.String("parentprofile"),
+			ProfileStatus:        pulumi.String("Enabled"),
+			ResourceGroupName:    pulumi.String("myresourcegroup"),
+			TrafficRoutingMethod: pulumi.String("Priority"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+profile = azure_native.network.Profile("profile",
+    dns_config=azure_native.network.DnsConfigArgs(
+        relative_name="parentprofile",
+        ttl=35,
+    ),
+    endpoints=[
+        azure_native.network.EndpointArgs(
+            endpoint_status="Enabled",
+            min_child_endpoints=2,
+            min_child_endpoints_i_pv4=1,
+            min_child_endpoints_i_pv6=2,
+            name="MyFirstNestedEndpoint",
+            priority=1,
+            target="firstnestedprofile.tmpreview.watmtest.azure-test.net",
+            type="Microsoft.Network/trafficManagerProfiles/nestedEndpoints",
+            weight=1,
+        ),
+        azure_native.network.EndpointArgs(
+            endpoint_status="Enabled",
+            min_child_endpoints=2,
+            min_child_endpoints_i_pv4=2,
+            min_child_endpoints_i_pv6=1,
+            name="MySecondNestedEndpoint",
+            priority=2,
+            target="secondnestedprofile.tmpreview.watmtest.azure-test.net",
+            type="Microsoft.Network/trafficManagerProfiles/nestedEndpoints",
+            weight=1,
+        ),
+    ],
+    location="global",
+    monitor_config=azure_native.network.MonitorConfigArgs(
+        interval_in_seconds=10,
+        path="/testpath.aspx",
+        port=80,
+        protocol="HTTP",
+        timeout_in_seconds=5,
+        tolerated_number_of_failures=2,
+    ),
+    profile_name="parentprofile",
+    profile_status="Enabled",
+    resource_group_name="myresourcegroup",
+    traffic_routing_method="Priority")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const profile = new azure_native.network.Profile("profile", {
+    dnsConfig: {
+        relativeName: "parentprofile",
+        ttl: 35,
+    },
+    endpoints: [
+        {
+            endpointStatus: "Enabled",
+            minChildEndpoints: 2,
+            minChildEndpointsIPv4: 1,
+            minChildEndpointsIPv6: 2,
+            name: "MyFirstNestedEndpoint",
+            priority: 1,
+            target: "firstnestedprofile.tmpreview.watmtest.azure-test.net",
+            type: "Microsoft.Network/trafficManagerProfiles/nestedEndpoints",
+            weight: 1,
+        },
+        {
+            endpointStatus: "Enabled",
+            minChildEndpoints: 2,
+            minChildEndpointsIPv4: 2,
+            minChildEndpointsIPv6: 1,
+            name: "MySecondNestedEndpoint",
+            priority: 2,
+            target: "secondnestedprofile.tmpreview.watmtest.azure-test.net",
+            type: "Microsoft.Network/trafficManagerProfiles/nestedEndpoints",
+            weight: 1,
+        },
+    ],
+    location: "global",
+    monitorConfig: {
+        intervalInSeconds: 10,
+        path: "/testpath.aspx",
+        port: 80,
+        protocol: "HTTP",
+        timeoutInSeconds: 5,
+        toleratedNumberOfFailures: 2,
+    },
+    profileName: "parentprofile",
+    profileStatus: "Enabled",
+    resourceGroupName: "myresourcegroup",
+    trafficRoutingMethod: "Priority",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -674,7 +1283,7 @@ const profile = new azure_native.network.Profile("profile", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[DnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[MonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProfileStatus]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficRoutingMethod]]</span> = None<span class="p">, </span><span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficViewEnrollmentStatus]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_endpoint_record_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, AllowedEndpointRecordType]]]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[DnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[MonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProfileStatus]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficRoutingMethod]]</span> = None<span class="p">, </span><span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficViewEnrollmentStatus]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -824,6 +1433,14 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowedendpointrecordtypes_csharp">
+<a href="#allowedendpointrecordtypes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Endpoint<wbr>Record<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Allowed<wbr>Endpoint<wbr>Record<wbr>Type&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of allowed endpoint record types.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dnsconfig_csharp">
 <a href="#dnsconfig_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
@@ -939,6 +1556,14 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowedendpointrecordtypes_go">
+<a href="#allowedendpointrecordtypes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Endpoint<wbr>Record<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of allowed endpoint record types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsconfig_go">
 <a href="#dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
@@ -1056,6 +1681,14 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowedendpointrecordtypes_nodejs">
+<a href="#allowedendpointrecordtypes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Endpoint<wbr>Record<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | Allowed<wbr>Endpoint<wbr>Record<wbr>Type[]</span>
+    </dt>
+    <dd>{{% md %}}The list of allowed endpoint record types.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dnsconfig_nodejs">
 <a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
@@ -1171,6 +1804,14 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowed_endpoint_record_types_python">
+<a href="#allowed_endpoint_record_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>endpoint_<wbr>record_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Union[str, Allowed<wbr>Endpoint<wbr>Record<wbr>Type]]</span>
+    </dt>
+    <dd>{{% md %}}The list of allowed endpoint record types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_config_python">
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
@@ -1341,6 +1982,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="allowedendpointrecordtype">Allowed<wbr>Endpoint<wbr>Record<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Domain<wbr>Name</dt>
+    <dd>DomainName</dd><dt>IPv4Address</dt>
+    <dd>IPv4Address</dd><dt>IPv6Address</dt>
+    <dd>IPv6Address</dd><dt>Any</dt>
+    <dd>Any</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Allowed<wbr>Endpoint<wbr>Record<wbr>Type<wbr>Domain<wbr>Name</dt>
+    <dd>DomainName</dd><dt>Allowed<wbr>Endpoint<wbr>Record<wbr>Type<wbr>IPv4Address</dt>
+    <dd>IPv4Address</dd><dt>Allowed<wbr>Endpoint<wbr>Record<wbr>Type<wbr>IPv6Address</dt>
+    <dd>IPv6Address</dd><dt>Allowed<wbr>Endpoint<wbr>Record<wbr>Type<wbr>Any</dt>
+    <dd>Any</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Domain<wbr>Name</dt>
+    <dd>DomainName</dd><dt>IPv4Address</dt>
+    <dd>IPv4Address</dd><dt>IPv6Address</dt>
+    <dd>IPv6Address</dd><dt>Any</dt>
+    <dd>Any</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DOMAIN_NAME</dt>
+    <dd>DomainName</dd><dt>I_PV4_ADDRESS</dt>
+    <dd>IPv4Address</dd><dt>I_PV6_ADDRESS</dt>
+    <dd>IPv6Address</dd><dt>ANY</dt>
+    <dd>Any</dd></dl>
+{{% /choosable %}}
 
 <h4 id="dnsconfig">Dns<wbr>Config</h4>
 
@@ -1599,6 +2274,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minchildendpointsipv4_csharp">
+<a href="#minchildendpointsipv4_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minchildendpointsipv6_csharp">
+<a href="#minchildendpointsipv6_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1714,6 +2405,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minchildendpointsipv4_go">
+<a href="#minchildendpointsipv4_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minchildendpointsipv6_go">
+<a href="#minchildendpointsipv6_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1831,6 +2538,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minchildendpointsipv4_nodejs">
+<a href="#minchildendpointsipv4_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minchildendpointsipv6_nodejs">
+<a href="#minchildendpointsipv6_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1946,6 +2669,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_child_endpoints_i_pv4_python">
+<a href="#min_child_endpoints_i_pv4_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_child_endpoints_i_pv6_python">
+<a href="#min_child_endpoints_i_pv6_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2499,6 +3238,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minchildendpointsipv4_csharp">
+<a href="#minchildendpointsipv4_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minchildendpointsipv6_csharp">
+<a href="#minchildendpointsipv6_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -2614,6 +3369,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minchildendpointsipv4_go">
+<a href="#minchildendpointsipv4_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minchildendpointsipv6_go">
+<a href="#minchildendpointsipv6_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2731,6 +3502,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minchildendpointsipv4_nodejs">
+<a href="#minchildendpointsipv4_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minchildendpointsipv6_nodejs">
+<a href="#minchildendpointsipv6_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -2846,6 +3633,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_child_endpoints_i_pv4_python">
+<a href="#min_child_endpoints_i_pv4_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_child_endpoints_i_pv6_python">
+<a href="#min_child_endpoints_i_pv6_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4037,7 +4840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:network:Profile azuresdkfornetautoresttrafficmanager6192 /subscriptions/{subscription-id}/resourceGroups/azuresdkfornetautoresttrafficmanager2583/providers/Microsoft.Network/trafficManagerProfiles/azuresdkfornetautoresttrafficmanager6192 
+$ pulumi import azure-native:network:Profile parentprofile /subscriptions/{subscription-id}/resourceGroups/myresourcegroup/providers/Microsoft.Network/trafficManagerProfiles/parentprofile 
 ```
 
 

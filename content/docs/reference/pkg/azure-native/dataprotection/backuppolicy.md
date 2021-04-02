@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.dataprotection.BackupPolicy resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 BaseBackupPolicy resource
-API Version: 2021-02-01-preview.
+API Version: 2021-01-01.
 
 {{% examples %}}
 

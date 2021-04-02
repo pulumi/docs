@@ -1460,14 +1460,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="maxeventsperbatch_csharp">
 <a href="#maxeventsperbatch_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span>
@@ -1495,14 +1487,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxeventsperbatch_go">
 <a href="#maxeventsperbatch_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
@@ -1532,14 +1516,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="maxeventsperbatch_nodejs">
 <a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span>
@@ -1567,14 +1543,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_events_per_batch_python">
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
@@ -1606,14 +1574,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="maxeventsperbatch_csharp">
 <a href="#maxeventsperbatch_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span>
@@ -1641,14 +1601,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxeventsperbatch_go">
 <a href="#maxeventsperbatch_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
@@ -1678,14 +1630,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="maxeventsperbatch_nodejs">
 <a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span>
@@ -1713,14 +1657,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_events_per_batch_python">
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
@@ -1911,170 +1847,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="dynamicdeliveryattributemapping">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourcefield_csharp">
-<a href="#sourcefield_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}JSON path in the event which contains attribute value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourcefield_go">
-<a href="#sourcefield_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}JSON path in the event which contains attribute value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourcefield_nodejs">
-<a href="#sourcefield_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}JSON path in the event which contains attribute value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="source_field_python">
-<a href="#source_field_python" style="color: inherit; text-decoration: inherit;">source_<wbr>field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}JSON path in the event which contains attribute value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="dynamicdeliveryattributemappingresponse">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourcefield_csharp">
-<a href="#sourcefield_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}JSON path in the event which contains attribute value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourcefield_go">
-<a href="#sourcefield_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}JSON path in the event which contains attribute value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourcefield_nodejs">
-<a href="#sourcefield_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}JSON path in the event which contains attribute value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="source_field_python">
-<a href="#source_field_python" style="color: inherit; text-decoration: inherit;">source_<wbr>field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}JSON path in the event which contains attribute value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="eventdeliveryschema">Event<wbr>Delivery<wbr>Schema</h4>
 
 {{% choosable language csharp %}}
@@ -2110,14 +1882,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
@@ -2129,14 +1893,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -2150,14 +1906,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
@@ -2169,14 +1917,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -2192,14 +1932,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
@@ -2211,14 +1943,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -2232,14 +1956,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
@@ -2251,14 +1967,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -2281,14 +1989,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enableadvancedfilteringonarrays_csharp">
-<a href="#enableadvancedfilteringonarrays_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Advanced<wbr>Filtering<wbr>On<wbr>Arrays</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedeventtypes_csharp">
 <a href="#includedeventtypes_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
@@ -2338,14 +2038,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="enableadvancedfilteringonarrays_go">
-<a href="#enableadvancedfilteringonarrays_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Advanced<wbr>Filtering<wbr>On<wbr>Arrays</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="includedeventtypes_go">
 <a href="#includedeventtypes_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
 </span>
@@ -2390,17 +2082,9 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter | Is<wbr>Not<wbr>Null<wbr>Advanced<wbr>Filter | Is<wbr>Null<wbr>Or<wbr>Undefined<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>In<wbr>Advanced<wbr>Filter | Number<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter | Number<wbr>Not<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>Contains<wbr>Advanced<wbr>Filter | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Not<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>Not<wbr>Contains<wbr>Advanced<wbr>Filter | String<wbr>Not<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter[]</span>
+        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>In<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>Contains<wbr>Advanced<wbr>Filter | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter[]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enableadvancedfilteringonarrays_nodejs">
-<a href="#enableadvancedfilteringonarrays_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Advanced<wbr>Filtering<wbr>On<wbr>Arrays</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedeventtypes_nodejs">
 <a href="#includedeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Event<wbr>Types</a>
@@ -2446,17 +2130,9 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Is<wbr>Not<wbr>Null<wbr>Advanced<wbr>Filter<wbr>Args, Is<wbr>Null<wbr>Or<wbr>Undefined<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Not<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enable_advanced_filtering_on_arrays_python">
-<a href="#enable_advanced_filtering_on_arrays_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>advanced_<wbr>filtering_<wbr>on_<wbr>arrays</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_event_types_python">
 <a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
@@ -2508,14 +2184,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="enableadvancedfilteringonarrays_csharp">
-<a href="#enableadvancedfilteringonarrays_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Advanced<wbr>Filtering<wbr>On<wbr>Arrays</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="includedeventtypes_csharp">
 <a href="#includedeventtypes_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
 </span>
@@ -2564,14 +2232,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="enableadvancedfilteringonarrays_go">
-<a href="#enableadvancedfilteringonarrays_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Advanced<wbr>Filtering<wbr>On<wbr>Arrays</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="includedeventtypes_go">
 <a href="#includedeventtypes_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
 </span>
@@ -2616,17 +2276,9 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Is<wbr>Not<wbr>Null<wbr>Advanced<wbr>Filter<wbr>Response | Is<wbr>Null<wbr>Or<wbr>Undefined<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Not<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Not<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Not<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Not<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response[]</span>
+        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enableadvancedfilteringonarrays_nodejs">
-<a href="#enableadvancedfilteringonarrays_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Advanced<wbr>Filtering<wbr>On<wbr>Arrays</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedeventtypes_nodejs">
 <a href="#includedeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Event<wbr>Types</a>
@@ -2672,17 +2324,9 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Is<wbr>Not<wbr>Null<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Is<wbr>Null<wbr>Or<wbr>Undefined<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enable_advanced_filtering_on_arrays_python">
-<a href="#enable_advanced_filtering_on_arrays_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>advanced_<wbr>filtering_<wbr>on_<wbr>arrays</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_event_types_python">
 <a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
@@ -2726,14 +2370,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
@@ -2745,14 +2381,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -2766,14 +2394,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
@@ -2785,14 +2405,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -2808,14 +2420,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
@@ -2827,14 +2431,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -2848,14 +2444,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
@@ -2868,14 +2456,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
@@ -2883,206 +2463,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of an hybrid connection that is the destination of an event subscription.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="isnotnulladvancedfilter">Is<wbr>Not<wbr>Null<wbr>Advanced<wbr>Filter</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="isnotnulladvancedfilterresponse">Is<wbr>Not<wbr>Null<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="isnullorundefinedadvancedfilter">Is<wbr>Null<wbr>Or<wbr>Undefined<wbr>Advanced<wbr>Filter</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="isnullorundefinedadvancedfilterresponse">Is<wbr>Null<wbr>Or<wbr>Undefined<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="numbergreaterthanadvancedfilter">Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter</h4>
@@ -3573,170 +2953,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[float]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="numberinrangeadvancedfilter">Number<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Array&lt;double&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[][]float64</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number[][]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Sequence[float]]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="numberinrangeadvancedfilterresponse">Number<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Array&lt;double&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[][]float64</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number[][]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Sequence[float]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4233,170 +3449,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="numbernotinrangeadvancedfilter">Number<wbr>Not<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Array&lt;double&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[][]float64</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number[][]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Sequence[float]]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="numbernotinrangeadvancedfilterresponse">Number<wbr>Not<wbr>In<wbr>Range<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Array&lt;double&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[][]float64</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number[][]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Sequence[float]]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="retrypolicy">Retry<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
@@ -4566,14 +3618,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
@@ -4585,14 +3629,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -4606,14 +3642,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
@@ -4625,14 +3653,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -4648,14 +3668,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
@@ -4667,14 +3679,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -4688,14 +3692,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
@@ -4707,14 +3703,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -4730,14 +3718,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
@@ -4749,14 +3729,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -4770,14 +3742,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
@@ -4789,14 +3753,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -4812,14 +3768,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
@@ -4831,14 +3779,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -4852,14 +3792,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
@@ -4872,14 +3804,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
@@ -4887,234 +3811,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="staticdeliveryattributemapping">Static<wbr>Delivery<wbr>Attribute<wbr>Mapping</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="issecret_csharp">
-<a href="#issecret_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to tell if the attribute contains sensitive information .{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value of the delivery attribute.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="issecret_go">
-<a href="#issecret_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to tell if the attribute contains sensitive information .{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value of the delivery attribute.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="issecret_nodejs">
-<a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to tell if the attribute contains sensitive information .{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value of the delivery attribute.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="is_secret_python">
-<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to tell if the attribute contains sensitive information .{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Value of the delivery attribute.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="staticdeliveryattributemappingresponse">Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="issecret_csharp">
-<a href="#issecret_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to tell if the attribute contains sensitive information .{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value of the delivery attribute.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="issecret_go">
-<a href="#issecret_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to tell if the attribute contains sensitive information .{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value of the delivery attribute.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="issecret_nodejs">
-<a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to tell if the attribute contains sensitive information .{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value of the delivery attribute.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="is_secret_python">
-<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to tell if the attribute contains sensitive information .{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the delivery attribute or header.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Value of the delivery attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</h4>
@@ -5286,14 +3982,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="queuemessagetimetoliveinseconds_csharp">
-<a href="#queuemessagetimetoliveinseconds_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message<wbr>Time<wbr>To<wbr>Live<wbr>In<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}Storage queue message time to live in seconds.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="queuename_csharp">
 <a href="#queuename_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
 </span>
@@ -5313,14 +4001,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="queuemessagetimetoliveinseconds_go">
-<a href="#queuemessagetimetoliveinseconds_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message<wbr>Time<wbr>To<wbr>Live<wbr>In<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}Storage queue message time to live in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queuename_go">
 <a href="#queuename_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
@@ -5342,14 +4022,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="queuemessagetimetoliveinseconds_nodejs">
-<a href="#queuemessagetimetoliveinseconds_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Message<wbr>Time<wbr>To<wbr>Live<wbr>In<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Storage queue message time to live in seconds.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="queuename_nodejs">
 <a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
 </span>
@@ -5369,14 +4041,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="queue_message_time_to_live_in_seconds_python">
-<a href="#queue_message_time_to_live_in_seconds_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message_<wbr>time_<wbr>to_<wbr>live_<wbr>in_<wbr>seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Storage queue message time to live in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queue_name_python">
 <a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
@@ -5400,14 +4064,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="queuemessagetimetoliveinseconds_csharp">
-<a href="#queuemessagetimetoliveinseconds_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message<wbr>Time<wbr>To<wbr>Live<wbr>In<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}Storage queue message time to live in seconds.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="queuename_csharp">
 <a href="#queuename_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
 </span>
@@ -5427,14 +4083,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="queuemessagetimetoliveinseconds_go">
-<a href="#queuemessagetimetoliveinseconds_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message<wbr>Time<wbr>To<wbr>Live<wbr>In<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}Storage queue message time to live in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queuename_go">
 <a href="#queuename_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
@@ -5456,14 +4104,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="queuemessagetimetoliveinseconds_nodejs">
-<a href="#queuemessagetimetoliveinseconds_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Message<wbr>Time<wbr>To<wbr>Live<wbr>In<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Storage queue message time to live in seconds.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="queuename_nodejs">
 <a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
 </span>
@@ -5483,14 +4123,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="queue_message_time_to_live_in_seconds_python">
-<a href="#queue_message_time_to_live_in_seconds_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message_<wbr>time_<wbr>to_<wbr>live_<wbr>in_<wbr>seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Storage queue message time to live in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queue_name_python">
 <a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
@@ -6165,498 +4797,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="stringnotbeginswithadvancedfilter">String<wbr>Not<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="stringnotbeginswithadvancedfilterresponse">String<wbr>Not<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="stringnotcontainsadvancedfilter">String<wbr>Not<wbr>Contains<wbr>Advanced<wbr>Filter</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="stringnotcontainsadvancedfilterresponse">String<wbr>Not<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="stringnotendswithadvancedfilter">String<wbr>Not<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="stringnotendswithadvancedfilterresponse">String<wbr>Not<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="stringnotinadvancedfilter">String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
@@ -7052,14 +5192,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="endpointurl_csharp">
 <a href="#endpointurl_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Url</a>
 </span>
@@ -7103,14 +5235,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointurl_go">
 <a href="#endpointurl_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Url</a>
@@ -7156,14 +5280,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="endpointurl_nodejs">
 <a href="#endpointurl_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
 </span>
@@ -7207,14 +5323,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_url_python">
 <a href="#endpoint_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>url</a>
@@ -7270,14 +5378,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_csharp">
-<a href="#deliveryattributemappings_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="endpointurl_csharp">
 <a href="#endpointurl_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Url</a>
 </span>
@@ -7329,14 +5429,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="deliveryattributemappings_go">
-<a href="#deliveryattributemappings_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointurl_go">
 <a href="#endpointurl_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Url</a>
@@ -7390,14 +5482,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="deliveryattributemappings_nodejs">
-<a href="#deliveryattributemappings_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Attribute<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response | Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response[]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="endpointurl_nodejs">
 <a href="#endpointurl_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
 </span>
@@ -7449,14 +5533,6 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="delivery_attribute_mappings_python">
-<a href="#delivery_attribute_mappings_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>attribute_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args, Static<wbr>Delivery<wbr>Attribute<wbr>Mapping<wbr>Response<wbr>Args]]</span>
-    </dt>
-    <dd>{{% md %}}Delivery attribute details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_url_python">
 <a href="#endpoint_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>url</a>

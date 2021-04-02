@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.documentdb.NotebookWorkspace reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A notebook workspace resource
-API Version: 2021-01-15.
+API Version: 2021-03-15.
 
 {{% examples %}}
 

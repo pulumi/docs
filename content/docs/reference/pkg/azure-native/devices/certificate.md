@@ -646,6 +646,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="certificate_csharp">
+<a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}base-64 representation of X509 certificate .cer file or just .pem file content.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
 </span>
@@ -697,6 +705,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificate_go">
+<a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}base-64 representation of X509 certificate .cer file or just .pem file content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -750,6 +766,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="certificate_nodejs">
+<a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}base-64 representation of X509 certificate .cer file or just .pem file content.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
@@ -801,6 +825,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificate_python">
+<a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}base-64 representation of X509 certificate .cer file or just .pem file content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>

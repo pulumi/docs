@@ -36,12 +36,12 @@ class MyStack : Stack
         var lab = new AzureNative.DevTestLab.Lab("lab", new AzureNative.DevTestLab.LabArgs
         {
             LabStorageType = "{Standard|Premium}",
-            Location = "{azure-location}",
-            Name = "{devtestlab-name}",
-            ResourceGroupName = "myResourceGroup",
+            Location = "{location}",
+            Name = "{labName}",
+            ResourceGroupName = "resourceGroupName",
             Tags = 
             {
-                { "MyTag", "MyValue" },
+                { "tagName1", "tagValue1" },
             },
         });
     }
@@ -69,11 +69,11 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := devtestlab.NewLab(ctx, "lab", &devtestlab.LabArgs{
 			LabStorageType:    pulumi.String("{Standard|Premium}"),
-			Location:          pulumi.String("{azure-location}"),
-			Name:              pulumi.String("{devtestlab-name}"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Location:          pulumi.String("{location}"),
+			Name:              pulumi.String("{labName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
 			Tags: pulumi.StringMap{
-				"MyTag": pulumi.String("MyValue"),
+				"tagName1": pulumi.String("tagValue1"),
 			},
 		})
 		if err != nil {
@@ -98,11 +98,11 @@ import pulumi_azure_native as azure_native
 
 lab = azure_native.devtestlab.Lab("lab",
     lab_storage_type="{Standard|Premium}",
-    location="{azure-location}",
-    name="{devtestlab-name}",
-    resource_group_name="myResourceGroup",
+    location="{location}",
+    name="{labName}",
+    resource_group_name="resourceGroupName",
     tags={
-        "MyTag": "MyValue",
+        "tagName1": "tagValue1",
     })
 
 ```
@@ -120,11 +120,11 @@ import * as azure_native from "@pulumi/azure-native";
 
 const lab = new azure_native.devtestlab.Lab("lab", {
     labStorageType: "{Standard|Premium}",
-    location: "{azure-location}",
-    name: "{devtestlab-name}",
-    resourceGroupName: "myResourceGroup",
+    location: "{location}",
+    name: "{labName}",
+    resourceGroupName: "resourceGroupName",
     tags: {
-        MyTag: "MyValue",
+        tagName1: "tagValue1",
     },
 });
 
@@ -1876,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:devtestlab:Lab {devtestlab-name} /subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name} 
+$ pulumi import azure-native:devtestlab:Lab {labName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName} 
 ```
 
 

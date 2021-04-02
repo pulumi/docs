@@ -12,13 +12,158 @@ meta_desc: "Documentation for the azure-native.devtestlab.CustomImage resource w
 
 A custom image.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/customimages/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### CustomImages_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customImage = new AzureNative.DevTestLab.CustomImage("customImage", new AzureNative.DevTestLab.CustomImageArgs
+        {
+            Description = "My Custom Image",
+            LabName = "{labName}",
+            Name = "{customImageName}",
+            ResourceGroupName = "resourceGroupName",
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+            Vm = new AzureNative.DevTestLab.Inputs.CustomImagePropertiesFromVmArgs
+            {
+                LinuxOsInfo = new AzureNative.DevTestLab.Inputs.LinuxOsInfoArgs
+                {
+                    LinuxOsState = "NonDeprovisioned",
+                },
+                SourceVmId = "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/{vmName}",
+            },
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewCustomImage(ctx, "customImage", &devtestlab.CustomImageArgs{
+			Description:       pulumi.String("My Custom Image"),
+			LabName:           pulumi.String("{labName}"),
+			Name:              pulumi.String("{customImageName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+			Vm: &devtestlab.CustomImagePropertiesFromVmArgs{
+				LinuxOsInfo: &devtestlab.LinuxOsInfoArgs{
+					LinuxOsState: pulumi.String("NonDeprovisioned"),
+				},
+				SourceVmId: pulumi.String("/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/{vmName}"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+custom_image = azure_native.devtestlab.CustomImage("customImage",
+    description="My Custom Image",
+    lab_name="{labName}",
+    name="{customImageName}",
+    resource_group_name="resourceGroupName",
+    tags={
+        "tagName1": "tagValue1",
+    },
+    vm=azure_native.devtestlab.CustomImagePropertiesFromVmArgs(
+        linux_os_info=azure_native.devtestlab.LinuxOsInfoArgs(
+            linux_os_state="NonDeprovisioned",
+        ),
+        source_vm_id="/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/{vmName}",
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const customImage = new azure_native.devtestlab.CustomImage("customImage", {
+    description: "My Custom Image",
+    labName: "{labName}",
+    name: "{customImageName}",
+    resourceGroupName: "resourceGroupName",
+    tags: {
+        tagName1: "tagValue1",
+    },
+    vm: {
+        linuxOsInfo: {
+            linuxOsState: "NonDeprovisioned",
+        },
+        sourceVmId: "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/{vmName}",
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -1995,6 +2140,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SysprepRequested</dd><dt>SYSPREP_APPLIED</dt>
     <dd>SysprepApplied</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:CustomImage {customImageName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/customimages/{customImageName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

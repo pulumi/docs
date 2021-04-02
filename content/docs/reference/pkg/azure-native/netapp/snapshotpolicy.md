@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.netapp.SnapshotPolicy resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Snapshot policy information
-API Version: 2020-11-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 
@@ -725,7 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -761,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -797,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -833,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>

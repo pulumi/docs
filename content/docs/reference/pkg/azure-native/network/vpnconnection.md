@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.VpnConnection resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VpnConnection Resource.
-API Version: 2020-08-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 
@@ -42,6 +42,7 @@ class MyStack : Stack
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
             },
             ResourceGroupName = "rg1",
+            TrafficSelectorPolicies = {},
             VpnLinkConnections = 
             {
                 new AzureNative.Network.Inputs.VpnSiteLinkConnectionArgs
@@ -49,6 +50,7 @@ class MyStack : Stack
                     ConnectionBandwidth = 200,
                     Name = "Connection-Link1",
                     SharedKey = "key",
+                    UsePolicyBasedTrafficSelectors = false,
                     VpnConnectionProtocolType = "IKEv2",
                     VpnLinkConnectionMode = "Default",
                     VpnSiteLink = new AzureNative.Network.Inputs.SubResourceArgs
@@ -87,14 +89,16 @@ func main() {
 			RemoteVpnSite: &network.SubResourceArgs{
 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1"),
 			},
-			ResourceGroupName: pulumi.String("rg1"),
+			ResourceGroupName:       pulumi.String("rg1"),
+			TrafficSelectorPolicies: network.TrafficSelectorPolicyArray{},
 			VpnLinkConnections: network.VpnSiteLinkConnectionArray{
 				&network.VpnSiteLinkConnectionArgs{
-					ConnectionBandwidth:       pulumi.Int(200),
-					Name:                      pulumi.String("Connection-Link1"),
-					SharedKey:                 pulumi.String("key"),
-					VpnConnectionProtocolType: pulumi.String("IKEv2"),
-					VpnLinkConnectionMode:     pulumi.String("Default"),
+					ConnectionBandwidth:            pulumi.Int(200),
+					Name:                           pulumi.String("Connection-Link1"),
+					SharedKey:                      pulumi.String("key"),
+					UsePolicyBasedTrafficSelectors: pulumi.Bool(false),
+					VpnConnectionProtocolType:      pulumi.String("IKEv2"),
+					VpnLinkConnectionMode:          pulumi.String("Default"),
 					VpnSiteLink: &network.SubResourceArgs{
 						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1"),
 					},
@@ -128,10 +132,12 @@ vpn_connection = azure_native.network.VpnConnection("vpnConnection",
         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
     ),
     resource_group_name="rg1",
+    traffic_selector_policies=[],
     vpn_link_connections=[azure_native.network.VpnSiteLinkConnectionArgs(
         connection_bandwidth=200,
         name="Connection-Link1",
         shared_key="key",
+        use_policy_based_traffic_selectors=False,
         vpn_connection_protocol_type="IKEv2",
         vpn_link_connection_mode="Default",
         vpn_site_link=azure_native.network.SubResourceArgs(
@@ -159,10 +165,12 @@ const vpnConnection = new azure_native.network.VpnConnection("vpnConnection", {
         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
     },
     resourceGroupName: "rg1",
+    trafficSelectorPolicies: [],
     vpnLinkConnections: [{
         connectionBandwidth: 200,
         name: "Connection-Link1",
         sharedKey: "key",
+        usePolicyBasedTrafficSelectors: false,
         vpnConnectionProtocolType: "IKEv2",
         vpnLinkConnectionMode: "Default",
         vpnSiteLink: {
@@ -194,7 +202,7 @@ const vpnConnection = new azure_native.network.VpnConnection("vpnConnection", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_internet_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_rate_limiting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpsecPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_vpn_site</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_configuration</span><span class="p">:</span> <span class="nx">Optional[RoutingConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_local_azure_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vpn_connection_protocol_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualNetworkGatewayConnectionProtocol]]</span> = None<span class="p">, </span><span class="nx">vpn_link_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnSiteLinkConnectionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_internet_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_rate_limiting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpsecPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_vpn_site</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_configuration</span><span class="p">:</span> <span class="nx">Optional[RoutingConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_selector_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrafficSelectorPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">use_local_azure_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vpn_connection_protocol_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualNetworkGatewayConnectionProtocol]]</span> = None<span class="p">, </span><span class="nx">vpn_link_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnSiteLinkConnectionArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -456,6 +464,14 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trafficselectorpolicies_csharp">
+<a href="#trafficselectorpolicies_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="uselocalazureipaddress_csharp">
 <a href="#uselocalazureipaddress_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
 </span>
@@ -611,6 +627,14 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trafficselectorpolicies_go">
+<a href="#trafficselectorpolicies_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">[]Traffic<wbr>Selector<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uselocalazureipaddress_go">
 <a href="#uselocalazureipaddress_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
@@ -768,6 +792,14 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trafficselectorpolicies_nodejs">
+<a href="#trafficselectorpolicies_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">Traffic<wbr>Selector<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="uselocalazureipaddress_nodejs">
 <a href="#uselocalazureipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
 </span>
@@ -923,6 +955,14 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="traffic_selector_policies_python">
+<a href="#traffic_selector_policies_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">Sequence[Traffic<wbr>Selector<wbr>Policy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_local_azure_ip_address_python">
 <a href="#use_local_azure_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>azure_<wbr>ip_<wbr>address</a>
@@ -2736,6 +2776,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="trafficselectorpolicy">Traffic<wbr>Selector<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_csharp">
+<a href="#localaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_csharp">
+<a href="#remoteaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_go">
+<a href="#localaddressranges_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_go">
+<a href="#remoteaddressranges_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_nodejs">
+<a href="#localaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_nodejs">
+<a href="#remoteaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="local_address_ranges_python">
+<a href="#local_address_ranges_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remote_address_ranges_python">
+<a href="#remote_address_ranges_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="trafficselectorpolicyresponse">Traffic<wbr>Selector<wbr>Policy<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_csharp">
+<a href="#localaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_csharp">
+<a href="#remoteaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_go">
+<a href="#localaddressranges_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_go">
+<a href="#remoteaddressranges_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_nodejs">
+<a href="#localaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_nodejs">
+<a href="#remoteaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="local_address_ranges_python">
+<a href="#local_address_ranges_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remote_address_ranges_python">
+<a href="#remote_address_ranges_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkgatewayconnectionprotocol">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol</h4>

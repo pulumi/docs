@@ -166,6 +166,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="forecastspend_csharp">
+<a href="#forecastspend_csharp" style="color: inherit; text-decoration: inherit;">Forecast<wbr>Spend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#forecastspendresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Outputs.<wbr>Forecast<wbr>Spend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The forecasted cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -257,6 +265,14 @@ The following output properties are available:
         <span class="property-type"><a href="#currentspendresponse">Current<wbr>Spend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="forecastspend_go">
+<a href="#forecastspend_go" style="color: inherit; text-decoration: inherit;">Forecast<wbr>Spend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#forecastspendresponse">Forecast<wbr>Spend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The forecasted cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -350,6 +366,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="forecastspend_nodejs">
+<a href="#forecastspend_nodejs" style="color: inherit; text-decoration: inherit;">forecast<wbr>Spend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#forecastspendresponse">Forecast<wbr>Spend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The forecasted cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -441,6 +465,14 @@ The following output properties are available:
         <span class="property-type"><a href="#currentspendresponse">Current<wbr>Spend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="forecast_spend_python">
+<a href="#forecast_spend_python" style="color: inherit; text-decoration: inherit;">forecast_<wbr>spend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#forecastspendresponse">Forecast<wbr>Spend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The forecasted cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1029,6 +1061,90 @@ The following output properties are available:
     <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="forecastspendresponse">Forecast<wbr>Spend<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="amount_csharp">
+<a href="#amount_csharp" style="color: inherit; text-decoration: inherit;">Amount</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="amount_go">
+<a href="#amount_go" style="color: inherit; text-decoration: inherit;">Amount</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="amount_nodejs">
+<a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="amount_python">
+<a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="notificationresponse">Notification<wbr>Response</h4>
 
 
@@ -1042,7 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1074,7 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactroles_csharp">
 <a href="#contactroles_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Roles</a>
@@ -1082,7 +1198,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locale_csharp">
+<a href="#locale_csharp" style="color: inherit; text-decoration: inherit;">Locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language in which the recipient will receive the notification{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_csharp">
+<a href="#thresholdtype_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of threshold{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1094,7 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1126,7 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactroles_go">
 <a href="#contactroles_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Roles</a>
@@ -1134,7 +1266,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locale_go">
+<a href="#locale_go" style="color: inherit; text-decoration: inherit;">Locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language in which the recipient will receive the notification{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_go">
+<a href="#thresholdtype_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of threshold{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1146,7 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1178,7 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactroles_nodejs">
 <a href="#contactroles_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Roles</a>
@@ -1186,7 +1334,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locale_nodejs">
+<a href="#locale_nodejs" style="color: inherit; text-decoration: inherit;">locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language in which the recipient will receive the notification{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_nodejs">
+<a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of threshold{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1198,7 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1230,7 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contact_roles_python">
 <a href="#contact_roles_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>roles</a>
@@ -1238,7 +1402,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locale_python">
+<a href="#locale_python" style="color: inherit; text-decoration: inherit;">locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Language in which the recipient will receive the notification{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_type_python">
+<a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of threshold{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

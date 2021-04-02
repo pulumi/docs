@@ -12,13 +12,111 @@ meta_desc: "Documentation for the azure-native.authorization.ManagementLockAtSub
 
 The lock information.
 API Version: 2016-09-01.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:authorization:ManagementLockAtSubscriptionLevel myresource1 /subscriptions/{subscriptionId}/providers/Microsoft.Authorization/locks/{lockName} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Create management lock at subscription level
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managementLockAtSubscriptionLevel = new AzureNative.Authorization.ManagementLockAtSubscriptionLevel("managementLockAtSubscriptionLevel", new AzureNative.Authorization.ManagementLockAtSubscriptionLevelArgs
+        {
+            Level = "ReadOnly",
+            LockName = "testlock",
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := authorization.NewManagementLockAtSubscriptionLevel(ctx, "managementLockAtSubscriptionLevel", &authorization.ManagementLockAtSubscriptionLevelArgs{
+			Level:    pulumi.String("ReadOnly"),
+			LockName: pulumi.String("testlock"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+management_lock_at_subscription_level = azure_native.authorization.ManagementLockAtSubscriptionLevel("managementLockAtSubscriptionLevel",
+    level="ReadOnly",
+    lock_name="testlock")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managementLockAtSubscriptionLevel = new azure_native.authorization.ManagementLockAtSubscriptionLevel("managementLockAtSubscriptionLevel", {
+    level: "ReadOnly",
+    lockName: "testlock",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -573,6 +671,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:authorization:ManagementLockAtSubscriptionLevel testlock /providers/Microsoft.Authorization/locks/testlock 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

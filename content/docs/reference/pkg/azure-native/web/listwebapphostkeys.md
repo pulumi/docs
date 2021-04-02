@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.web.listWebAppHostKeys function w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Functions host level keys.
-API Version: 2020-10-01.
+API Version: 2020-12-01.
 
 
 

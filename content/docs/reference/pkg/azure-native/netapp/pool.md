@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.netapp.Pool resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Capacity pool resource
-API Version: 2020-11-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 

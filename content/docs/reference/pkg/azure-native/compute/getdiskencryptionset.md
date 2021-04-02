@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.compute.getDiskEncryptionSet func
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 disk encryption set resource.
-API Version: 2020-09-30.
+API Version: 2020-12-01.
 
 
 
@@ -150,6 +150,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="lastkeyrotationtimestamp_csharp">
+<a href="#lastkeyrotationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Key<wbr>Rotation<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the active key of this disk encryption set was updated.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -214,6 +222,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="rotationtolatestkeyversionenabled_csharp">
+<a href="#rotationtolatestkeyversionenabled_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>To<wbr>Latest<wbr>Key<wbr>Version<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -233,6 +249,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastkeyrotationtimestamp_go">
+<a href="#lastkeyrotationtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Key<wbr>Rotation<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the active key of this disk encryption set was updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -298,6 +322,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="rotationtolatestkeyversionenabled_go">
+<a href="#rotationtolatestkeyversionenabled_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>To<wbr>Latest<wbr>Key<wbr>Version<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -317,6 +349,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastkeyrotationtimestamp_nodejs">
+<a href="#lastkeyrotationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Key<wbr>Rotation<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the active key of this disk encryption set was updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -382,6 +422,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="rotationtolatestkeyversionenabled_nodejs">
+<a href="#rotationtolatestkeyversionenabled_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>To<wbr>Latest<wbr>Key<wbr>Version<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -401,6 +449,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="last_key_rotation_timestamp_python">
+<a href="#last_key_rotation_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>key_<wbr>rotation_<wbr>timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time when the active key of this disk encryption set was updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -465,6 +521,14 @@ The following output properties are available:
         <span class="property-type"><a href="#encryptionsetidentityresponse">Encryption<wbr>Set<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rotation_to_latest_key_version_enabled_python">
+<a href="#rotation_to_latest_key_version_enabled_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>to_<wbr>latest_<wbr>key_<wbr>version_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -610,7 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
@@ -630,7 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
@@ -650,7 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
@@ -670,7 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>

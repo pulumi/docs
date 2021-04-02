@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.datadog.listMonitorHosts function
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response of a list operation.
-API Version: 2020-02-01-preview.
+API Version: 2021-03-01.
 
 
 
@@ -67,7 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -87,7 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -107,7 +107,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -127,7 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

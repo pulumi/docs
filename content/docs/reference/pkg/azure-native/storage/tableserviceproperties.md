@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.storage.TableServiceProperties re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The properties of a storage account’s Table service.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 {{% examples %}}
 

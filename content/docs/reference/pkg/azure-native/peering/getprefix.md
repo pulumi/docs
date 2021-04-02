@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.peering.getPrefix function with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The peering service prefix class.
-API Version: 2020-10-01.
+API Version: 2021-01-01.
 
 
 

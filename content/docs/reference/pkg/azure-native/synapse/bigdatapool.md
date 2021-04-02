@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.synapse.BigDataPool resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Big Data pool
-API Version: 2020-12-01.
+API Version: 2021-03-01.
 
 {{% examples %}}
 

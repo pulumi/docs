@@ -340,7 +340,7 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -392,7 +392,7 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -444,7 +444,7 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -496,7 +496,7 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -531,7 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -547,7 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lockbox_csharp">
 <a href="#lockbox_csharp" style="color: inherit; text-decoration: inherit;">Lockbox</a>
@@ -575,7 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -591,7 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lockbox_go">
 <a href="#lockbox_go" style="color: inherit; text-decoration: inherit;">Lockbox</a>
@@ -619,7 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -635,7 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lockbox_nodejs">
 <a href="#lockbox_nodejs" style="color: inherit; text-decoration: inherit;">lockbox</a>
@@ -663,7 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -679,7 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lockbox_python">
 <a href="#lockbox_python" style="color: inherit; text-decoration: inherit;">lockbox</a>

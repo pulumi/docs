@@ -205,14 +205,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="targetcontainerhostcredentialsbase64_csharp">
-<a href="#targetcontainerhostcredentialsbase64_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Credentials<wbr>Base64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="targetcontainerhostresourceid_csharp">
 <a href="#targetcontainerhostresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Resource<wbr>Id</a>
 </span>
@@ -304,14 +296,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="targetcontainerhostcredentialsbase64_go">
-<a href="#targetcontainerhostcredentialsbase64_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Credentials<wbr>Base64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetcontainerhostresourceid_go">
 <a href="#targetcontainerhostresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Resource<wbr>Id</a>
@@ -405,14 +389,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="targetcontainerhostcredentialsbase64_nodejs">
-<a href="#targetcontainerhostcredentialsbase64_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Container<wbr>Host<wbr>Credentials<wbr>Base64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="targetcontainerhostresourceid_nodejs">
 <a href="#targetcontainerhostresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Container<wbr>Host<wbr>Resource<wbr>Id</a>
 </span>
@@ -504,14 +480,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="target_container_host_credentials_base64_python">
-<a href="#target_container_host_credentials_base64_python" style="color: inherit; text-decoration: inherit;">target_<wbr>container_<wbr>host_<wbr>credentials_<wbr>base64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_container_host_resource_id_python">
 <a href="#target_container_host_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>container_<wbr>host_<wbr>resource_<wbr>id</a>

@@ -230,13 +230,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="isenterprisesensor_csharp">
-<a href="#isenterprisesensor_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enterprise<wbr>Sensor</a>
+        <span id="sensortype_csharp">
+<a href="#sensortype_csharp" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tiautomaticupdates_csharp">
 <a href="#tiautomaticupdates_csharp" style="color: inherit; text-decoration: inherit;">Ti<wbr>Automatic<wbr>Updates</a>
@@ -346,13 +346,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="isenterprisesensor_go">
-<a href="#isenterprisesensor_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enterprise<wbr>Sensor</a>
+        <span id="sensortype_go">
+<a href="#sensortype_go" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tiautomaticupdates_go">
 <a href="#tiautomaticupdates_go" style="color: inherit; text-decoration: inherit;">Ti<wbr>Automatic<wbr>Updates</a>
@@ -462,13 +462,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="isenterprisesensor_nodejs">
-<a href="#isenterprisesensor_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enterprise<wbr>Sensor</a>
+        <span id="sensortype_nodejs">
+<a href="#sensortype_nodejs" style="color: inherit; text-decoration: inherit;">sensor<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tiautomaticupdates_nodejs">
 <a href="#tiautomaticupdates_nodejs" style="color: inherit; text-decoration: inherit;">ti<wbr>Automatic<wbr>Updates</a>
@@ -578,13 +578,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="is_enterprise_sensor_python">
-<a href="#is_enterprise_sensor_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enterprise_<wbr>sensor</a>
+        <span id="sensor_type_python">
+<a href="#sensor_type_python" style="color: inherit; text-decoration: inherit;">sensor_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ti_automatic_updates_python">
 <a href="#ti_automatic_updates_python" style="color: inherit; text-decoration: inherit;">ti_<wbr>automatic_<wbr>updates</a>

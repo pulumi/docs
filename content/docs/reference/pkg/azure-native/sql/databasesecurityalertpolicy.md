@@ -11,13 +11,170 @@ meta_desc: "Documentation for the azure-native.sql.DatabaseSecurityAlertPolicy r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A database security alert policy.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Update a database&#39;s threat detection policy with all parameters
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var databaseSecurityAlertPolicy = new AzureNative.Sql.DatabaseSecurityAlertPolicy("databaseSecurityAlertPolicy", new AzureNative.Sql.DatabaseSecurityAlertPolicyArgs
+        {
+            DatabaseName = "testdb",
+            DisabledAlerts = 
+            {
+                "Sql_Injection",
+                "Usage_Anomaly",
+            },
+            EmailAccountAdmins = true,
+            EmailAddresses = 
+            {
+                "test@microsoft.com",
+                "user@microsoft.com",
+            },
+            ResourceGroupName = "securityalert-4799",
+            RetentionDays = 6,
+            SecurityAlertPolicyName = "default",
+            ServerName = "securityalert-6440",
+            State = "Enabled",
+            StorageAccountAccessKey = "sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+            StorageEndpoint = "https://mystorage.blob.core.windows.net",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabaseSecurityAlertPolicy(ctx, "databaseSecurityAlertPolicy", &sql.DatabaseSecurityAlertPolicyArgs{
+			DatabaseName: pulumi.String("testdb"),
+			DisabledAlerts: pulumi.StringArray{
+				pulumi.String("Sql_Injection"),
+				pulumi.String("Usage_Anomaly"),
+			},
+			EmailAccountAdmins: pulumi.Bool(true),
+			EmailAddresses: pulumi.StringArray{
+				pulumi.String("test@microsoft.com"),
+				pulumi.String("user@microsoft.com"),
+			},
+			ResourceGroupName:       pulumi.String("securityalert-4799"),
+			RetentionDays:           pulumi.Int(6),
+			SecurityAlertPolicyName: pulumi.String("default"),
+			ServerName:              pulumi.String("securityalert-6440"),
+			State:                   "Enabled",
+			StorageAccountAccessKey: pulumi.String("sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD=="),
+			StorageEndpoint:         pulumi.String("https://mystorage.blob.core.windows.net"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database_security_alert_policy = azure_native.sql.DatabaseSecurityAlertPolicy("databaseSecurityAlertPolicy",
+    database_name="testdb",
+    disabled_alerts=[
+        "Sql_Injection",
+        "Usage_Anomaly",
+    ],
+    email_account_admins=True,
+    email_addresses=[
+        "test@microsoft.com",
+        "user@microsoft.com",
+    ],
+    resource_group_name="securityalert-4799",
+    retention_days=6,
+    security_alert_policy_name="default",
+    server_name="securityalert-6440",
+    state="Enabled",
+    storage_account_access_key="sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+    storage_endpoint="https://mystorage.blob.core.windows.net")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const databaseSecurityAlertPolicy = new azure_native.sql.DatabaseSecurityAlertPolicy("databaseSecurityAlertPolicy", {
+    databaseName: "testdb",
+    disabledAlerts: [
+        "Sql_Injection",
+        "Usage_Anomaly",
+    ],
+    emailAccountAdmins: true,
+    emailAddresses: [
+        "test@microsoft.com",
+        "user@microsoft.com",
+    ],
+    resourceGroupName: "securityalert-4799",
+    retentionDays: 6,
+    securityAlertPolicyName: "default",
+    serverName: "securityalert-6440",
+    state: "Enabled",
+    storageAccountAccessKey: "sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+    storageEndpoint: "https://mystorage.blob.core.windows.net",
+});
+
+```
+
+
+{{< /example >}}
+
+
 
 
 ### Update a database&#39;s threat detection policy with minimal parameters
@@ -142,7 +299,7 @@ const databaseSecurityAlertPolicy = new azure_native.sql.DatabaseSecurityAlertPo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseSecurityAlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_alert_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[SecurityAlertsPolicyState]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseSecurityAlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled_alerts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">email_account_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">email_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">security_alert_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[SecurityAlertsPolicyState]</span> = None<span class="p">, </span><span class="nx">storage_account_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -316,13 +473,61 @@ The DatabaseSecurityAlertPolicy resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disabledalerts_csharp">
+<a href="#disabledalerts_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaccountadmins_csharp">
+<a href="#emailaccountadmins_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies that the alert is sent to the account administrators.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddresses_csharp">
+<a href="#emailaddresses_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_csharp">
+<a href="#retentiondays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="securityalertpolicyname_csharp">
 <a href="#securityalertpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Alert<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the security alert policy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the security alert policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountaccesskey_csharp">
+<a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageendpoint_csharp">
+<a href="#storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -360,13 +565,61 @@ The DatabaseSecurityAlertPolicy resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disabledalerts_go">
+<a href="#disabledalerts_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaccountadmins_go">
+<a href="#emailaccountadmins_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies that the alert is sent to the account administrators.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddresses_go">
+<a href="#emailaddresses_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_go">
+<a href="#retentiondays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="securityalertpolicyname_go">
 <a href="#securityalertpolicyname_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Alert<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the security alert policy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the security alert policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountaccesskey_go">
+<a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageendpoint_go">
+<a href="#storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -404,13 +657,61 @@ The DatabaseSecurityAlertPolicy resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disabledalerts_nodejs">
+<a href="#disabledalerts_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Alerts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaccountadmins_nodejs">
+<a href="#emailaccountadmins_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Account<wbr>Admins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies that the alert is sent to the account administrators.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddresses_nodejs">
+<a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_nodejs">
+<a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="securityalertpolicyname_nodejs">
 <a href="#securityalertpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Alert<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the security alert policy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the security alert policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountaccesskey_nodejs">
+<a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageendpoint_nodejs">
+<a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -448,13 +749,61 @@ The DatabaseSecurityAlertPolicy resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disabled_alerts_python">
+<a href="#disabled_alerts_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>alerts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_account_admins_python">
+<a href="#email_account_admins_python" style="color: inherit; text-decoration: inherit;">email_<wbr>account_<wbr>admins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies that the alert is sent to the account administrators.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_addresses_python">
+<a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_days_python">
+<a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="security_alert_policy_name_python">
 <a href="#security_alert_policy_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>alert_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the security alert policy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the security alert policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_account_access_key_python">
+<a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_endpoint_python">
+<a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -490,6 +839,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SystemData of SecurityAlertPolicyResource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -527,6 +884,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SystemData of SecurityAlertPolicyResource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -563,6 +928,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SystemData of SecurityAlertPolicyResource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -598,6 +971,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SystemData of SecurityAlertPolicyResource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -642,6 +1023,216 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>ENABLED</dt>
     <dd>Enabled</dd><dt>DISABLED</dt>
     <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.web.getWebAppSourceControl functi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Source control configuration for an app.
-API Version: 2020-10-01.
+API Version: 2020-12-01.
 
 
 
@@ -158,14 +158,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_csharp">
-<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -189,6 +181,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable deployment rollback; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="githubactionconfiguration_csharp">
+<a href="#githubactionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Action<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubactionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>Git<wbr>Hub<wbr>Action<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}If GitHub Action is selected, than the associated configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isgithubaction_csharp">
 <a href="#isgithubaction_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Git<wbr>Hub<wbr>Action</a>
@@ -250,14 +250,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_go">
-<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -281,6 +273,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable deployment rollback; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="githubactionconfiguration_go">
+<a href="#githubactionconfiguration_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Action<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubactionconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}If GitHub Action is selected, than the associated configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isgithubaction_go">
 <a href="#isgithubaction_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Git<wbr>Hub<wbr>Action</a>
@@ -342,14 +342,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_nodejs">
-<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -373,6 +365,14 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable deployment rollback; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="githubactionconfiguration_nodejs">
+<a href="#githubactionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Action<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubactionconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}If GitHub Action is selected, than the associated configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isgithubaction_nodejs">
 <a href="#isgithubaction_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Git<wbr>Hub<wbr>Action</a>
@@ -434,14 +434,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="system_data_python">
-<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -465,6 +457,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable deployment rollback; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="git_hub_action_configuration_python">
+<a href="#git_hub_action_configuration_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>action_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubactionconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}If GitHub Action is selected, than the associated configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_git_hub_action_python">
 <a href="#is_git_hub_action_python" style="color: inherit; text-decoration: inherit;">is_<wbr>git_<wbr>hub_<wbr>action</a>
@@ -513,216 +513,384 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+<h4 id="githubactioncodeconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response</h4>
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="createdat_csharp">
-<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+        <span id="runtimestack_csharp">
+<a href="#runtimestack_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Stack</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Runtime stack is used to determine the workflow file content for code base apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdby_csharp">
-<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+        <span id="runtimeversion_csharp">
+<a href="#runtimeversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_csharp">
-<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_csharp">
-<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_csharp">
-<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_csharp">
-<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Runtime version is used to determine what build version to set in the workflow file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="createdat_go">
-<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+        <span id="runtimestack_go">
+<a href="#runtimestack_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Stack</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Runtime stack is used to determine the workflow file content for code base apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdby_go">
-<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+        <span id="runtimeversion_go">
+<a href="#runtimeversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_go">
-<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_go">
-<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_go">
-<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_go">
-<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Runtime version is used to determine what build version to set in the workflow file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="createdat_nodejs">
-<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+        <span id="runtimestack_nodejs">
+<a href="#runtimestack_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Stack</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Runtime stack is used to determine the workflow file content for code base apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdby_nodejs">
-<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+        <span id="runtimeversion_nodejs">
+<a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_nodejs">
-<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_nodejs">
-<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_nodejs">
-<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_nodejs">
-<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Runtime version is used to determine what build version to set in the workflow file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="created_at_python">
-<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+        <span id="runtime_stack_python">
+<a href="#runtime_stack_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>stack</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Runtime stack is used to determine the workflow file content for code base apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="created_by_python">
-<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+        <span id="runtime_version_python">
+<a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Runtime version is used to determine what build version to set in the workflow file.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="githubactionconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Configuration<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="created_by_type_python">
-<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+        <span id="codeconfiguration_csharp">
+<a href="#codeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="last_modified_at_python">
-<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+        <span id="containerconfiguration_csharp">
+<a href="#containerconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="last_modified_by_python">
-<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+        <span id="generateworkflowfile_csharp">
+<a href="#generateworkflowfile_csharp" style="color: inherit; text-decoration: inherit;">Generate<wbr>Workflow<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Workflow option to determine whether the workflow file should be generated and written to the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="last_modified_by_type_python">
-<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+        <span id="islinux_csharp">
+<a href="#islinux_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will help determine the workflow configuration to select.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="codeconfiguration_go">
+<a href="#codeconfiguration_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="containerconfiguration_go">
+<a href="#containerconfiguration_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="generateworkflowfile_go">
+<a href="#generateworkflowfile_go" style="color: inherit; text-decoration: inherit;">Generate<wbr>Workflow<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Workflow option to determine whether the workflow file should be generated and written to the repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="islinux_go">
+<a href="#islinux_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will help determine the workflow configuration to select.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="codeconfiguration_nodejs">
+<a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="containerconfiguration_nodejs">
+<a href="#containerconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="generateworkflowfile_nodejs">
+<a href="#generateworkflowfile_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Workflow<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Workflow option to determine whether the workflow file should be generated and written to the repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="islinux_nodejs">
+<a href="#islinux_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This will help determine the workflow configuration to select.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_configuration_python">
+<a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="container_configuration_python">
+<a href="#container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="generate_workflow_file_python">
+<a href="#generate_workflow_file_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>workflow_<wbr>file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Workflow option to determine whether the workflow file should be generated and written to the repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_linux_python">
+<a href="#is_linux_python" style="color: inherit; text-decoration: inherit;">is_<wbr>linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will help determine the workflow configuration to select.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="githubactioncontainerconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="imagename_csharp">
+<a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image name for the build.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password used to upload the image to the container registry.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serverurl_csharp">
+<a href="#serverurl_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The server URL for the container registry where the build will be hosted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username used to upload the image to the container registry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="imagename_go">
+<a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image name for the build.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password used to upload the image to the container registry.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serverurl_go">
+<a href="#serverurl_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The server URL for the container registry where the build will be hosted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username used to upload the image to the container registry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="imagename_nodejs">
+<a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image name for the build.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password used to upload the image to the container registry.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serverurl_nodejs">
+<a href="#serverurl_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The server URL for the container registry where the build will be hosted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username used to upload the image to the container registry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="image_name_python">
+<a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The image name for the build.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password used to upload the image to the container registry.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="server_url_python">
+<a href="#server_url_python" style="color: inherit; text-decoration: inherit;">server_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The server URL for the container registry where the build will be hosted.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The username used to upload the image to the container registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

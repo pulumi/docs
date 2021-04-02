@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.FirewallPolicyRuleCollect
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Rule Collection Group resource.
-API Version: 2020-08-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 
@@ -204,9 +204,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNative.Network.Inputs.FirewallPolicyNatRuleCollectionArgs
+                new AzureNative.Network.Inputs.FirewallPolicyFilterRuleCollectionArgs
                 {
-                    Action = new AzureNative.Network.Inputs.FirewallPolicyNatRuleCollectionActionArgs
+                    Action = new AzureNative.Network.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
                     {
                         Type = "Deny",
                     },
@@ -269,8 +269,8 @@ firewall_policy_rule_collection_group = azure_native.network.FirewallPolicyRuleC
     priority=100,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[azure_native.network.FirewallPolicyNatRuleCollectionArgs(
-        action=azure_native.network.FirewallPolicyNatRuleCollectionActionArgs(
+    rule_collections=[azure_native.network.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_native.network.FirewallPolicyFilterRuleCollectionActionArgs(
             type="Deny",
         ),
         name="Example-Filter-Rule-Collection",

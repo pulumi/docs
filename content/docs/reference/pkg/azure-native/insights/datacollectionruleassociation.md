@@ -276,14 +276,6 @@ The DataCollectionRuleAssociation resource accepts the following [input]({{< rel
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="datacollectionruleid_csharp">
-<a href="#datacollectionruleid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection<wbr>Rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourceuri_csharp">
 <a href="#resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
 </span>
@@ -298,7 +290,15 @@ The DataCollectionRuleAssociation resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the association.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the association. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datacollectionruleid_csharp">
+<a href="#datacollectionruleid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -311,14 +311,6 @@ The DataCollectionRuleAssociation resource accepts the following [input]({{< rel
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="datacollectionruleid_go">
-<a href="#datacollectionruleid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection<wbr>Rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceuri_go">
 <a href="#resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -334,7 +326,15 @@ The DataCollectionRuleAssociation resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the association.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the association. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datacollectionruleid_go">
+<a href="#datacollectionruleid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -347,14 +347,6 @@ The DataCollectionRuleAssociation resource accepts the following [input]({{< rel
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="datacollectionruleid_nodejs">
-<a href="#datacollectionruleid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Collection<wbr>Rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceuri_nodejs">
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
@@ -370,7 +362,15 @@ The DataCollectionRuleAssociation resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the association.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the association. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datacollectionruleid_nodejs">
+<a href="#datacollectionruleid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Collection<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -383,14 +383,6 @@ The DataCollectionRuleAssociation resource accepts the following [input]({{< rel
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="data_collection_rule_id_python">
-<a href="#data_collection_rule_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>collection_<wbr>rule_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_uri_python">
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
@@ -406,7 +398,15 @@ The DataCollectionRuleAssociation resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the association.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the association. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_collection_rule_id_python">
+<a href="#data_collection_rule_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>collection_<wbr>rule_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

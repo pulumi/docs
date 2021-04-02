@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.peering.getPeerAsn function with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The essential information related to the peer's ASN.
-API Version: 2020-10-01.
+API Version: 2021-01-01.
 
 
 

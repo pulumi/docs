@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.delegatednetwork.OrchestratorInst
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of a orchestrator.
-API Version: 2020-08-08-preview.
+API Version: 2021-03-15.
 
 {{% examples %}}
 
@@ -49,6 +49,7 @@ class MyStack : Stack
             Location = "West US",
             OrchestratorAppId = "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
             OrchestratorTenantId = "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
+            PrivateLinkResourceId = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/privateLinkServices/plresource1",
             ResourceGroupName = "TestRG",
             ResourceName = "testk8s1",
         });
@@ -84,12 +85,13 @@ func main() {
 			Identity: &delegatednetwork.OrchestratorIdentityArgs{
 				Type: "SystemAssigned",
 			},
-			Kind:                 pulumi.String("Kubernetes"),
-			Location:             pulumi.String("West US"),
-			OrchestratorAppId:    pulumi.String("546192d7-503f-477a-9cfe-4efc3ee2b6e1"),
-			OrchestratorTenantId: pulumi.String("da6192d7-503f-477a-9cfe-4efc3ee2b6c3"),
-			ResourceGroupName:    pulumi.String("TestRG"),
-			ResourceName:         pulumi.String("testk8s1"),
+			Kind:                  pulumi.String("Kubernetes"),
+			Location:              pulumi.String("West US"),
+			OrchestratorAppId:     pulumi.String("546192d7-503f-477a-9cfe-4efc3ee2b6e1"),
+			OrchestratorTenantId:  pulumi.String("da6192d7-503f-477a-9cfe-4efc3ee2b6c3"),
+			PrivateLinkResourceId: pulumi.String("/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/privateLinkServices/plresource1"),
+			ResourceGroupName:     pulumi.String("TestRG"),
+			ResourceName:          pulumi.String("testk8s1"),
 		})
 		if err != nil {
 			return err
@@ -124,6 +126,7 @@ orchestrator_instance_service_details = azure_native.delegatednetwork.Orchestrat
     location="West US",
     orchestrator_app_id="546192d7-503f-477a-9cfe-4efc3ee2b6e1",
     orchestrator_tenant_id="da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
+    private_link_resource_id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/privateLinkServices/plresource1",
     resource_group_name="TestRG",
     resource_name="testk8s1")
 
@@ -153,6 +156,7 @@ const orchestratorInstanceServiceDetails = new azure_native.delegatednetwork.Orc
     location: "West US",
     orchestratorAppId: "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
     orchestratorTenantId: "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
+    privateLinkResourceId: "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/privateLinkServices/plresource1",
     resourceGroupName: "TestRG",
     resourceName: "testk8s1",
 });
@@ -180,7 +184,7 @@ const orchestratorInstanceServiceDetails = new azure_native.delegatednetwork.Orc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrchestratorInstanceServiceDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_server_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_root_ca</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">controller_details</span><span class="p">:</span> <span class="nx">Optional[ControllerDetailsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[OrchestratorIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, OrchestratorKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">orchestrator_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">orchestrator_tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrchestratorInstanceServiceDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_server_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_root_ca</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">controller_details</span><span class="p">:</span> <span class="nx">Optional[ControllerDetailsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[OrchestratorIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, OrchestratorKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">orchestrator_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">orchestrator_tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -328,7 +332,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Delegated<wbr>Network.<wbr>Inputs.<wbr>Controller<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -344,7 +348,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiserverendpoint_csharp">
 <a href="#apiserverendpoint_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Endpoint</a>
@@ -352,7 +356,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}K8s APIServer url{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterrootca_csharp">
 <a href="#clusterrootca_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Root<wbr>CA</a>
@@ -394,6 +398,14 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
     </dt>
     <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatelinkresourceid_csharp">
+<a href="#privatelinkresourceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
 </span>
@@ -420,7 +432,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -436,7 +448,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiserverendpoint_go">
 <a href="#apiserverendpoint_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Endpoint</a>
@@ -444,7 +456,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}K8s APIServer url{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterrootca_go">
 <a href="#clusterrootca_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Root<wbr>CA</a>
@@ -486,6 +498,14 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
     </dt>
     <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatelinkresourceid_go">
+<a href="#privatelinkresourceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
 </span>
@@ -512,7 +532,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -528,7 +548,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiserverendpoint_nodejs">
 <a href="#apiserverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server<wbr>Endpoint</a>
@@ -536,7 +556,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}K8s APIServer url{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterrootca_nodejs">
 <a href="#clusterrootca_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Root<wbr>CA</a>
@@ -578,6 +598,14 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
     </dt>
     <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatelinkresourceid_nodejs">
+<a href="#privatelinkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
@@ -604,7 +632,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -620,7 +648,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_server_endpoint_python">
 <a href="#api_server_endpoint_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server_<wbr>endpoint</a>
@@ -628,7 +656,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}K8s APIServer url{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_root_ca_python">
 <a href="#cluster_root_ca_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>root_<wbr>ca</a>
@@ -669,6 +697,14 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_resource_id_python">
+<a href="#private_link_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>

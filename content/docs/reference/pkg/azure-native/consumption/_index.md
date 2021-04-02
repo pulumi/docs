@@ -12,13 +12,11 @@ Explore the resources and functions of the azure-native.consumption module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="budget" title="Budget"><span class="symbol resource"></span>Budget</a></li>
-    <li><a href="budgetbyresourcegroupname" title="BudgetByResourceGroupName"><span class="symbol resource"></span>BudgetByResourceGroupName</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getbudget" title="GetBudget"><span class="symbol function"></span>GetBudget</a></li>
-    <li><a href="getbudgetbyresourcegroupname" title="GetBudgetByResourceGroupName"><span class="symbol function"></span>GetBudgetByResourceGroupName</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +26,6 @@ Explore the resources and functions of the azure-native.consumption module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

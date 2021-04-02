@@ -1964,6 +1964,298 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_csharp">
+<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_csharp">
+<a href="#folderpath_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_go">
+<a href="#filename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_go">
+<a href="#folderpath_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_nodejs">
+<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_nodejs">
+<a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_name_python">
+<a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_path_python">
+<a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_csharp">
+<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_csharp">
+<a href="#folderpath_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_go">
+<a href="#filename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_go">
+<a href="#folderpath_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_nodejs">
+<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_nodejs">
+<a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_name_python">
+<a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_path_python">
+<a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="amazons3dataset">Amazon<wbr>S3Dataset</h4>
 
 {{% choosable language csharp %}}
@@ -3307,7 +3599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3391,7 +3683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3475,7 +3767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3559,7 +3851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3645,7 +3937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3729,7 +4021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3813,7 +4105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3897,7 +4189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13207,7 +13499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13283,7 +13575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13359,7 +13651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13435,7 +13727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13513,7 +13805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13589,7 +13881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13665,7 +13957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13741,7 +14033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18899,7 +19191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19039,7 +19331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19179,7 +19471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19319,7 +19611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19461,7 +19753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19601,7 +19893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19741,7 +20033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19881,7 +20173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23375,7 +23667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23483,7 +23775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23591,7 +23883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23699,7 +23991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23809,7 +24101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23917,7 +24209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24025,7 +24317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24133,7 +24425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -32323,7 +32615,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32407,7 +32699,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32491,7 +32783,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32575,7 +32867,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32661,7 +32953,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32745,7 +33037,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32829,7 +33121,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32913,7 +33205,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40424,6 +40716,298 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_csharp">
+<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_csharp">
+<a href="#folderpath_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_go">
+<a href="#filename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_go">
+<a href="#folderpath_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_nodejs">
+<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_nodejs">
+<a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_name_python">
+<a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_path_python">
+<a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_csharp">
+<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_csharp">
+<a href="#folderpath_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_go">
+<a href="#filename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_go">
+<a href="#folderpath_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_nodejs">
+<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folderpath_nodejs">
+<a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_name_python">
+<a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the file name of dataset. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_path_python">
+<a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the folder path of dataset. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="oracleservicecloudobjectdataset">Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset</h4>
 
 {{% choosable language csharp %}}
@@ -41635,7 +42219,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41711,7 +42295,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41787,7 +42371,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41863,7 +42447,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41941,7 +42525,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42017,7 +42601,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42093,7 +42677,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42169,7 +42753,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42621,7 +43205,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42697,7 +43281,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42773,7 +43357,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42849,7 +43433,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42927,7 +43511,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43003,7 +43587,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43079,7 +43663,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43155,7 +43739,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61025,7 +61609,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61117,7 +61701,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61209,7 +61793,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61301,7 +61885,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61395,7 +61979,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61487,7 +62071,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61579,7 +62163,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61671,7 +62255,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.netapp.getAccount function with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NetApp account resource
-API Version: 2020-11-01.
+API Version: 2020-12-01.
 
 
 
@@ -548,6 +548,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowlocalnfsuserswithldap_csharp">
+<a href="#allowlocalnfsuserswithldap_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Local<wbr>Nfs<wbr>Users<wbr>With<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_csharp">
 <a href="#backupoperators_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Operators</a>
 </span>
@@ -695,6 +703,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowlocalnfsuserswithldap_go">
+<a href="#allowlocalnfsuserswithldap_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Local<wbr>Nfs<wbr>Users<wbr>With<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupoperators_go">
 <a href="#backupoperators_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Operators</a>
@@ -844,6 +860,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowlocalnfsuserswithldap_nodejs">
+<a href="#allowlocalnfsuserswithldap_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Local<wbr>Nfs<wbr>Users<wbr>With<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_nodejs">
 <a href="#backupoperators_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Operators</a>
 </span>
@@ -991,6 +1015,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_local_nfs_users_with_ldap_python">
+<a href="#allow_local_nfs_users_with_ldap_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>local_<wbr>nfs_<wbr>users_<wbr>with_<wbr>ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_operators_python">
 <a href="#backup_operators_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>operators</a>

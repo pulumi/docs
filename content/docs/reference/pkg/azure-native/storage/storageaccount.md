@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.storage.StorageAccount resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage account.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 {{% examples %}}
 
@@ -229,6 +229,10 @@ class MyStack : Stack
                 Type = "EdgeZone",
             },
             IsHnsEnabled = true,
+            KeyPolicy = new AzureNative.Storage.Inputs.KeyPolicyArgs
+            {
+                KeyExpirationPeriodInDays = 20,
+            },
             Kind = "Storage",
             Location = "eastus",
             MinimumTlsVersion = "TLS1_2",
@@ -238,6 +242,11 @@ class MyStack : Stack
                 PublishInternetEndpoints = true,
                 PublishMicrosoftEndpoints = true,
                 RoutingChoice = "MicrosoftRouting",
+            },
+            SasPolicy = new AzureNative.Storage.Inputs.SasPolicyArgs
+            {
+                ExpirationAction = "Log",
+                SasExpirationPeriod = "1.15:59:59",
             },
             Sku = new AzureNative.Storage.Inputs.SkuArgs
             {
@@ -294,7 +303,10 @@ func main() {
 				Name: pulumi.String("losangeles001"),
 				Type: pulumi.String("EdgeZone"),
 			},
-			IsHnsEnabled:      pulumi.Bool(true),
+			IsHnsEnabled: pulumi.Bool(true),
+			KeyPolicy: &storage.KeyPolicyArgs{
+				KeyExpirationPeriodInDays: pulumi.Int(20),
+			},
 			Kind:              pulumi.String("Storage"),
 			Location:          pulumi.String("eastus"),
 			MinimumTlsVersion: pulumi.String("TLS1_2"),
@@ -303,6 +315,10 @@ func main() {
 				PublishInternetEndpoints:  pulumi.Bool(true),
 				PublishMicrosoftEndpoints: pulumi.Bool(true),
 				RoutingChoice:             pulumi.String("MicrosoftRouting"),
+			},
+			SasPolicy: &storage.SasPolicyArgs{
+				ExpirationAction:    pulumi.String("Log"),
+				SasExpirationPeriod: pulumi.String("1.15:59:59"),
 			},
 			Sku: &storage.SkuArgs{
 				Name: pulumi.String("Standard_GRS"),
@@ -355,6 +371,9 @@ storage_account = azure_native.storage.StorageAccount("storageAccount",
         type="EdgeZone",
     ),
     is_hns_enabled=True,
+    key_policy=azure_native.storage.KeyPolicyArgs(
+        key_expiration_period_in_days=20,
+    ),
     kind="Storage",
     location="eastus",
     minimum_tls_version="TLS1_2",
@@ -363,6 +382,10 @@ storage_account = azure_native.storage.StorageAccount("storageAccount",
         publish_internet_endpoints=True,
         publish_microsoft_endpoints=True,
         routing_choice="MicrosoftRouting",
+    ),
+    sas_policy=azure_native.storage.SasPolicyArgs(
+        expiration_action="Log",
+        sas_expiration_period="1.15:59:59",
     ),
     sku=azure_native.storage.SkuArgs(
         name="Standard_GRS",
@@ -408,6 +431,9 @@ const storageAccount = new azure_native.storage.StorageAccount("storageAccount",
         type: "EdgeZone",
     },
     isHnsEnabled: true,
+    keyPolicy: {
+        keyExpirationPeriodInDays: 20,
+    },
     kind: "Storage",
     location: "eastus",
     minimumTlsVersion: "TLS1_2",
@@ -416,6 +442,10 @@ const storageAccount = new azure_native.storage.StorageAccount("storageAccount",
         publishInternetEndpoints: true,
         publishMicrosoftEndpoints: true,
         routingChoice: "MicrosoftRouting",
+    },
+    sasPolicy: {
+        expirationAction: "Log",
+        sasExpirationPeriod: "1.15:59:59",
     },
     sku: {
         name: "Standard_GRS",
@@ -681,7 +711,7 @@ const storageAccount = new azure_native.storage.StorageAccount("storageAccount",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[AccessTier]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_shared_key_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[AzureFilesIdentityBasedAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[CustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_nfs_v3</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, LargeFileSharesState]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, MinimumTlsVersion]]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[RoutingPreferenceArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[AccessTier]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_shared_key_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[AzureFilesIdentityBasedAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[CustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_nfs_v3</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_policy</span><span class="p">:</span> <span class="nx">Optional[KeyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, LargeFileSharesState]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, MinimumTlsVersion]]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[RoutingPreferenceArgs]</span> = None<span class="p">, </span><span class="nx">sas_policy</span><span class="p">:</span> <span class="nx">Optional[SasPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -943,6 +973,14 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Account HierarchicalNamespace enabled if sets to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keypolicy_csharp">
+<a href="#keypolicy_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keypolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Key<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}KeyPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="largefilesharesstate_csharp">
 <a href="#largefilesharesstate_csharp" style="color: inherit; text-decoration: inherit;">Large<wbr>File<wbr>Shares<wbr>State</a>
 </span>
@@ -982,6 +1020,14 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#routingpreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Routing<wbr>Preference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintains information about the network routing choice opted by the user for data transfer{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saspolicy_csharp">
+<a href="#saspolicy_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#saspolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Sas<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SasPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1115,6 +1161,14 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Account HierarchicalNamespace enabled if sets to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keypolicy_go">
+<a href="#keypolicy_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keypolicy">Key<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}KeyPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="largefilesharesstate_go">
 <a href="#largefilesharesstate_go" style="color: inherit; text-decoration: inherit;">Large<wbr>File<wbr>Shares<wbr>State</a>
 </span>
@@ -1154,6 +1208,14 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#routingpreference">Routing<wbr>Preference</a></span>
     </dt>
     <dd>{{% md %}}Maintains information about the network routing choice opted by the user for data transfer{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saspolicy_go">
+<a href="#saspolicy_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#saspolicy">Sas<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}SasPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1287,6 +1349,14 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Account HierarchicalNamespace enabled if sets to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keypolicy_nodejs">
+<a href="#keypolicy_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keypolicy">Key<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}KeyPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="largefilesharesstate_nodejs">
 <a href="#largefilesharesstate_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>File<wbr>Shares<wbr>State</a>
 </span>
@@ -1326,6 +1396,14 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#routingpreference">Routing<wbr>Preference</a></span>
     </dt>
     <dd>{{% md %}}Maintains information about the network routing choice opted by the user for data transfer{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saspolicy_nodejs">
+<a href="#saspolicy_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#saspolicy">Sas<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}SasPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1459,6 +1537,14 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Account HierarchicalNamespace enabled if sets to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="key_policy_python">
+<a href="#key_policy_python" style="color: inherit; text-decoration: inherit;">key_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keypolicy">Key<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}KeyPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="large_file_shares_state_python">
 <a href="#large_file_shares_state_python" style="color: inherit; text-decoration: inherit;">large_<wbr>file_<wbr>shares_<wbr>state</a>
 </span>
@@ -1498,6 +1584,14 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#routingpreference">Routing<wbr>Preference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintains information about the network routing choice opted by the user for data transfer{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sas_policy_python">
+<a href="#sas_policy_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#saspolicy">Sas<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SasPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1557,6 +1651,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="keycreationtime_csharp">
+<a href="#keycreationtime_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Creation<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastgeofailovertime_csharp">
 <a href="#lastgeofailovertime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Geo<wbr>Failover<wbr>Time</a>
@@ -1690,6 +1792,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="keycreationtime_go">
+<a href="#keycreationtime_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Creation<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="lastgeofailovertime_go">
 <a href="#lastgeofailovertime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Geo<wbr>Failover<wbr>Time</a>
 </span>
@@ -1822,6 +1932,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="keycreationtime_nodejs">
+<a href="#keycreationtime_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Creation<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="lastgeofailovertime_nodejs">
 <a href="#lastgeofailovertime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Geo<wbr>Failover<wbr>Time</a>
 </span>
@@ -1953,6 +2071,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="key_creation_time_python">
+<a href="#key_creation_time_python" style="color: inherit; text-decoration: inherit;">key_<wbr>creation_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_geo_failover_time_python">
 <a href="#last_geo_failover_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>geo_<wbr>failover_<wbr>time</a>
@@ -4467,6 +4593,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="expirationaction">Expiration<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Log</dt>
+    <dd>Log</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Expiration<wbr>Action<wbr>Log</dt>
+    <dd>Log</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Log</dt>
+    <dd>Log</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOG</dt>
+    <dd>Log</dd></dl>
+{{% /choosable %}}
+
 <h4 id="extendedlocation">Extended<wbr>Location</h4>
 
 {{% choosable language csharp %}}
@@ -5191,6 +5339,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SystemAssigned</dd><dt>USER_ASSIGNED</dt>
     <dd>UserAssigned</dd><dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
     <dd>SystemAssigned,UserAssigned</dd></dl>
+{{% /choosable %}}
+
+<h4 id="keypolicy">Key<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyexpirationperiodindays_csharp">
+<a href="#keyexpirationperiodindays_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Expiration<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyexpirationperiodindays_go">
+<a href="#keyexpirationperiodindays_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Expiration<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyexpirationperiodindays_nodejs">
+<a href="#keyexpirationperiodindays_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Expiration<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_expiration_period_in_days_python">
+<a href="#key_expiration_period_in_days_python" style="color: inherit; text-decoration: inherit;">key_<wbr>expiration_<wbr>period_<wbr>in_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="keypolicyresponse">Key<wbr>Policy<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyexpirationperiodindays_csharp">
+<a href="#keyexpirationperiodindays_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Expiration<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyexpirationperiodindays_go">
+<a href="#keyexpirationperiodindays_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Expiration<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyexpirationperiodindays_nodejs">
+<a href="#keyexpirationperiodindays_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Expiration<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_expiration_period_in_days_python">
+<a href="#key_expiration_period_in_days_python" style="color: inherit; text-decoration: inherit;">key_<wbr>expiration_<wbr>period_<wbr>in_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keysource">Key<wbr>Source</h4>
@@ -6777,6 +7025,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Routing Choice defines the kind of network routing opted by the user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="saspolicy">Sas<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationaction_csharp">
+<a href="#expirationaction_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#expirationaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Expiration<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sasexpirationperiod_csharp">
+<a href="#sasexpirationperiod_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Expiration<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationaction_go">
+<a href="#expirationaction_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#expirationaction">Expiration<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sasexpirationperiod_go">
+<a href="#sasexpirationperiod_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Expiration<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationaction_nodejs">
+<a href="#expirationaction_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#expirationaction">Expiration<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sasexpirationperiod_nodejs">
+<a href="#sasexpirationperiod_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Expiration<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expiration_action_python">
+<a href="#expiration_action_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#expirationaction">Expiration<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sas_expiration_period_python">
+<a href="#sas_expiration_period_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>expiration_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="saspolicyresponse">Sas<wbr>Policy<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationaction_csharp">
+<a href="#expirationaction_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sasexpirationperiod_csharp">
+<a href="#sasexpirationperiod_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Expiration<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationaction_go">
+<a href="#expirationaction_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sasexpirationperiod_go">
+<a href="#sasexpirationperiod_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Expiration<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationaction_nodejs">
+<a href="#expirationaction_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sasexpirationperiod_nodejs">
+<a href="#sasexpirationperiod_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Expiration<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expiration_action_python">
+<a href="#expiration_action_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sas_expiration_period_python">
+<a href="#sas_expiration_period_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>expiration_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sku">Sku</h4>

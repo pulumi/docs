@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.apimanagement.GatewayCertificateA
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Gateway certificate authority details.
-API Version: 2020-06-01-preview.
+API Version: 2020-12-01.
 
 {{% examples %}}
 

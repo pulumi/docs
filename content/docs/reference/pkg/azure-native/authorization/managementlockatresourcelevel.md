@@ -12,13 +12,131 @@ meta_desc: "Documentation for the azure-native.authorization.ManagementLockAtRes
 
 The lock information.
 API Version: 2016-09-01.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresource1 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}/providers/Microsoft.Authorization/locks/{lockName} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Create management lock at resource level
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managementLockAtResourceLevel = new AzureNative.Authorization.ManagementLockAtResourceLevel("managementLockAtResourceLevel", new AzureNative.Authorization.ManagementLockAtResourceLevelArgs
+        {
+            Level = "ReadOnly",
+            LockName = "testlock",
+            ParentResourcePath = "parentResourcePath",
+            ResourceGroupName = "resourcegroupname",
+            ResourceName = "teststorageaccount",
+            ResourceProviderNamespace = "Microsoft.Storage",
+            ResourceType = "storageAccounts",
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := authorization.NewManagementLockAtResourceLevel(ctx, "managementLockAtResourceLevel", &authorization.ManagementLockAtResourceLevelArgs{
+			Level:                     pulumi.String("ReadOnly"),
+			LockName:                  pulumi.String("testlock"),
+			ParentResourcePath:        pulumi.String("parentResourcePath"),
+			ResourceGroupName:         pulumi.String("resourcegroupname"),
+			ResourceName:              pulumi.String("teststorageaccount"),
+			ResourceProviderNamespace: pulumi.String("Microsoft.Storage"),
+			ResourceType:              pulumi.String("storageAccounts"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+management_lock_at_resource_level = azure_native.authorization.ManagementLockAtResourceLevel("managementLockAtResourceLevel",
+    level="ReadOnly",
+    lock_name="testlock",
+    parent_resource_path="parentResourcePath",
+    resource_group_name="resourcegroupname",
+    resource_name="teststorageaccount",
+    resource_provider_namespace="Microsoft.Storage",
+    resource_type="storageAccounts")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managementLockAtResourceLevel = new azure_native.authorization.ManagementLockAtResourceLevel("managementLockAtResourceLevel", {
+    level: "ReadOnly",
+    lockName: "testlock",
+    parentResourcePath: "parentResourcePath",
+    resourceGroupName: "resourcegroupname",
+    resourceName: "teststorageaccount",
+    resourceProviderNamespace: "Microsoft.Storage",
+    resourceType: "storageAccounts",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -733,6 +851,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:authorization:ManagementLockAtResourceLevel testlock /providers/Microsoft.Authorization/locks/testlock 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

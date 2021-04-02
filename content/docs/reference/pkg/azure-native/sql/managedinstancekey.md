@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.sql.ManagedInstanceKey resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A managed instance key.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 
@@ -467,6 +467,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="autorotationenabled_csharp">
+<a href="#autorotationenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rotation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Key auto rotation opt-in flag. Either true or false.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
 </span>
@@ -518,6 +526,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="autorotationenabled_go">
+<a href="#autorotationenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rotation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Key auto rotation opt-in flag. Either true or false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -571,6 +587,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="autorotationenabled_nodejs">
+<a href="#autorotationenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Rotation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Key auto rotation opt-in flag. Either true or false.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
 </span>
@@ -622,6 +646,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="auto_rotation_enabled_python">
+<a href="#auto_rotation_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>rotation_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Key auto rotation opt-in flag. Either true or false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>

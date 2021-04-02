@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.sql.getInstanceFailoverGroup func
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An instance failover group.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 
 

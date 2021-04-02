@@ -39,6 +39,10 @@ class MyStack : Stack
             ContactDetails = new AzureNative.EdgeOrder.Inputs.ContactDetailsArgs
             {
                 ContactName = "Petr Cech",
+                EmailList = 
+                {
+                    "ssemcr@microsoft.com",
+                },
                 Phone = "123344334",
                 PhoneExtension = "",
             },
@@ -82,7 +86,10 @@ func main() {
 		_, err := edgeorder.NewAddressByName(ctx, "addressByName", &edgeorder.AddressByNameArgs{
 			AddressName: pulumi.String("TestMSAddressName"),
 			ContactDetails: &edgeorder.ContactDetailsArgs{
-				ContactName:    pulumi.String("Petr Cech"),
+				ContactName: pulumi.String("Petr Cech"),
+				EmailList: pulumi.StringArray{
+					pulumi.String("ssemcr@microsoft.com"),
+				},
 				Phone:          pulumi.String("123344334"),
 				PhoneExtension: pulumi.String(""),
 			},
@@ -123,6 +130,7 @@ address_by_name = azure_native.edgeorder.AddressByName("addressByName",
     address_name="TestMSAddressName",
     contact_details=azure_native.edgeorder.ContactDetailsArgs(
         contact_name="Petr Cech",
+        email_list=["ssemcr@microsoft.com"],
         phone="123344334",
         phone_extension="",
     ),
@@ -156,6 +164,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
     addressName: "TestMSAddressName",
     contactDetails: {
         contactName: "Petr Cech",
+        emailList: ["ssemcr@microsoft.com"],
         phone: "123344334",
         phoneExtension: "",
     },
@@ -747,6 +756,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="emaillist_csharp">
+<a href="#emaillist_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
 </span>
@@ -782,6 +799,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="emaillist_go">
+<a href="#emaillist_go" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -819,6 +844,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="emaillist_nodejs">
+<a href="#emaillist_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
@@ -854,6 +887,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="email_list_python">
+<a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -893,6 +934,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="emaillist_csharp">
+<a href="#emaillist_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
 </span>
@@ -928,6 +977,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="emaillist_go">
+<a href="#emaillist_go" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -965,6 +1022,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="emaillist_nodejs">
+<a href="#emaillist_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
@@ -1000,6 +1065,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="email_list_python">
+<a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>

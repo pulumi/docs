@@ -12,17 +12,18 @@ Explore the resources and functions of the azure-native.web module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="appserviceenvironment" title="AppServiceEnvironment"><span class="symbol resource"></span>AppServiceEnvironment</a></li>
+    <li><a href="appserviceenvironmentprivateendpointconnection" title="AppServiceEnvironmentPrivateEndpointConnection"><span class="symbol resource"></span>AppServiceEnvironmentPrivateEndpointConnection</a></li>
     <li><a href="appserviceplan" title="AppServicePlan"><span class="symbol resource"></span>AppServicePlan</a></li>
     <li><a href="appserviceplanrouteforvnet" title="AppServicePlanRouteForVnet"><span class="symbol resource"></span>AppServicePlanRouteForVnet</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="certificatecsr" title="CertificateCsr"><span class="symbol resource"></span>CertificateCsr</a></li>
     <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
     <li><a href="connectiongateway" title="ConnectionGateway"><span class="symbol resource"></span>ConnectionGateway</a></li>
     <li><a href="customapi" title="CustomApi"><span class="symbol resource"></span>CustomApi</a></li>
-    <li><a href="managedhostingenvironment" title="ManagedHostingEnvironment"><span class="symbol resource"></span>ManagedHostingEnvironment</a></li>
-    <li><a href="siteinstancedeployment" title="SiteInstanceDeployment"><span class="symbol resource"></span>SiteInstanceDeployment</a></li>
-    <li><a href="siteinstancedeploymentslot" title="SiteInstanceDeploymentSlot"><span class="symbol resource"></span>SiteInstanceDeploymentSlot</a></li>
     <li><a href="staticsite" title="StaticSite"><span class="symbol resource"></span>StaticSite</a></li>
+    <li><a href="staticsitecustomdomain" title="StaticSiteCustomDomain"><span class="symbol resource"></span>StaticSiteCustomDomain</a></li>
+    <li><a href="staticsiteprivateendpointconnection" title="StaticSitePrivateEndpointConnection"><span class="symbol resource"></span>StaticSitePrivateEndpointConnection</a></li>
+    <li><a href="staticsiteuserprovidedfunctionappforstaticsite" title="StaticSiteUserProvidedFunctionAppForStaticSite"><span class="symbol resource"></span>StaticSiteUserProvidedFunctionAppForStaticSite</a></li>
+    <li><a href="staticsiteuserprovidedfunctionappforstaticsitebuild" title="StaticSiteUserProvidedFunctionAppForStaticSiteBuild"><span class="symbol resource"></span>StaticSiteUserProvidedFunctionAppForStaticSiteBuild</a></li>
     <li><a href="webapp" title="WebApp"><span class="symbol resource"></span>WebApp</a></li>
     <li><a href="webappapplicationsettings" title="WebAppApplicationSettings"><span class="symbol resource"></span>WebAppApplicationSettings</a></li>
     <li><a href="webappapplicationsettingsslot" title="WebAppApplicationSettingsSlot"><span class="symbol resource"></span>WebAppApplicationSettingsSlot</a></li>
@@ -52,6 +53,7 @@ Explore the resources and functions of the azure-native.web module.
     <li><a href="webapppremieraddon" title="WebAppPremierAddOn"><span class="symbol resource"></span>WebAppPremierAddOn</a></li>
     <li><a href="webapppremieraddonslot" title="WebAppPremierAddOnSlot"><span class="symbol resource"></span>WebAppPremierAddOnSlot</a></li>
     <li><a href="webappprivateendpointconnection" title="WebAppPrivateEndpointConnection"><span class="symbol resource"></span>WebAppPrivateEndpointConnection</a></li>
+    <li><a href="webappprivateendpointconnectionslot" title="WebAppPrivateEndpointConnectionSlot"><span class="symbol resource"></span>WebAppPrivateEndpointConnectionSlot</a></li>
     <li><a href="webapppubliccertificate" title="WebAppPublicCertificate"><span class="symbol resource"></span>WebAppPublicCertificate</a></li>
     <li><a href="webapppubliccertificateslot" title="WebAppPublicCertificateSlot"><span class="symbol resource"></span>WebAppPublicCertificateSlot</a></li>
     <li><a href="webapprelayserviceconnection" title="WebAppRelayServiceConnection"><span class="symbol resource"></span>WebAppRelayServiceConnection</a></li>
@@ -73,16 +75,17 @@ Explore the resources and functions of the azure-native.web module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getappserviceenvironment" title="GetAppServiceEnvironment"><span class="symbol function"></span>GetAppServiceEnvironment</a></li>
+    <li><a href="getappserviceenvironmentprivateendpointconnection" title="GetAppServiceEnvironmentPrivateEndpointConnection"><span class="symbol function"></span>GetAppServiceEnvironmentPrivateEndpointConnection</a></li>
     <li><a href="getappserviceplan" title="GetAppServicePlan"><span class="symbol function"></span>GetAppServicePlan</a></li>
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
-    <li><a href="getcertificatecsr" title="GetCertificateCsr"><span class="symbol function"></span>GetCertificateCsr</a></li>
     <li><a href="getconnection" title="GetConnection"><span class="symbol function"></span>GetConnection</a></li>
     <li><a href="getconnectiongateway" title="GetConnectionGateway"><span class="symbol function"></span>GetConnectionGateway</a></li>
     <li><a href="getcustomapi" title="GetCustomApi"><span class="symbol function"></span>GetCustomApi</a></li>
-    <li><a href="getmanagedhostingenvironment" title="GetManagedHostingEnvironment"><span class="symbol function"></span>GetManagedHostingEnvironment</a></li>
-    <li><a href="getsiteinstancedeployment" title="GetSiteInstanceDeployment"><span class="symbol function"></span>GetSiteInstanceDeployment</a></li>
-    <li><a href="getsiteinstancedeploymentslot" title="GetSiteInstanceDeploymentSlot"><span class="symbol function"></span>GetSiteInstanceDeploymentSlot</a></li>
     <li><a href="getstaticsite" title="GetStaticSite"><span class="symbol function"></span>GetStaticSite</a></li>
+    <li><a href="getstaticsitecustomdomain" title="GetStaticSiteCustomDomain"><span class="symbol function"></span>GetStaticSiteCustomDomain</a></li>
+    <li><a href="getstaticsiteprivateendpointconnection" title="GetStaticSitePrivateEndpointConnection"><span class="symbol function"></span>GetStaticSitePrivateEndpointConnection</a></li>
+    <li><a href="getstaticsiteuserprovidedfunctionappforstaticsite" title="GetStaticSiteUserProvidedFunctionAppForStaticSite"><span class="symbol function"></span>GetStaticSiteUserProvidedFunctionAppForStaticSite</a></li>
+    <li><a href="getstaticsiteuserprovidedfunctionappforstaticsitebuild" title="GetStaticSiteUserProvidedFunctionAppForStaticSiteBuild"><span class="symbol function"></span>GetStaticSiteUserProvidedFunctionAppForStaticSiteBuild</a></li>
     <li><a href="getwebapp" title="GetWebApp"><span class="symbol function"></span>GetWebApp</a></li>
     <li><a href="getwebappdeployment" title="GetWebAppDeployment"><span class="symbol function"></span>GetWebAppDeployment</a></li>
     <li><a href="getwebappdeploymentslot" title="GetWebAppDeploymentSlot"><span class="symbol function"></span>GetWebAppDeploymentSlot</a></li>
@@ -98,6 +101,7 @@ Explore the resources and functions of the azure-native.web module.
     <li><a href="getwebapppremieraddon" title="GetWebAppPremierAddOn"><span class="symbol function"></span>GetWebAppPremierAddOn</a></li>
     <li><a href="getwebapppremieraddonslot" title="GetWebAppPremierAddOnSlot"><span class="symbol function"></span>GetWebAppPremierAddOnSlot</a></li>
     <li><a href="getwebappprivateendpointconnection" title="GetWebAppPrivateEndpointConnection"><span class="symbol function"></span>GetWebAppPrivateEndpointConnection</a></li>
+    <li><a href="getwebappprivateendpointconnectionslot" title="GetWebAppPrivateEndpointConnectionSlot"><span class="symbol function"></span>GetWebAppPrivateEndpointConnectionSlot</a></li>
     <li><a href="getwebapppubliccertificate" title="GetWebAppPublicCertificate"><span class="symbol function"></span>GetWebAppPublicCertificate</a></li>
     <li><a href="getwebapppubliccertificateslot" title="GetWebAppPublicCertificateSlot"><span class="symbol function"></span>GetWebAppPublicCertificateSlot</a></li>
     <li><a href="getwebapprelayserviceconnection" title="GetWebAppRelayServiceConnection"><span class="symbol function"></span>GetWebAppRelayServiceConnection</a></li>
@@ -117,7 +121,10 @@ Explore the resources and functions of the azure-native.web module.
     <li><a href="listconnectionkeys" title="ListConnectionKeys"><span class="symbol function"></span>ListConnectionKeys</a></li>
     <li><a href="listcustomapiwsdlinterfaces" title="ListCustomApiWsdlInterfaces"><span class="symbol function"></span>ListCustomApiWsdlInterfaces</a></li>
     <li><a href="listsiteidentifiersassignedtohostname" title="ListSiteIdentifiersAssignedToHostName"><span class="symbol function"></span>ListSiteIdentifiersAssignedToHostName</a></li>
+    <li><a href="liststaticsiteappsettings" title="ListStaticSiteAppSettings"><span class="symbol function"></span>ListStaticSiteAppSettings</a></li>
+    <li><a href="liststaticsitebuildappsettings" title="ListStaticSiteBuildAppSettings"><span class="symbol function"></span>ListStaticSiteBuildAppSettings</a></li>
     <li><a href="liststaticsitebuildfunctionappsettings" title="ListStaticSiteBuildFunctionAppSettings"><span class="symbol function"></span>ListStaticSiteBuildFunctionAppSettings</a></li>
+    <li><a href="liststaticsiteconfiguredroles" title="ListStaticSiteConfiguredRoles"><span class="symbol function"></span>ListStaticSiteConfiguredRoles</a></li>
     <li><a href="liststaticsitefunctionappsettings" title="ListStaticSiteFunctionAppSettings"><span class="symbol function"></span>ListStaticSiteFunctionAppSettings</a></li>
     <li><a href="liststaticsitesecrets" title="ListStaticSiteSecrets"><span class="symbol function"></span>ListStaticSiteSecrets</a></li>
     <li><a href="liststaticsiteusers" title="ListStaticSiteUsers"><span class="symbol function"></span>ListStaticSiteUsers</a></li>
@@ -160,6 +167,6 @@ Explore the resources and functions of the azure-native.web module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

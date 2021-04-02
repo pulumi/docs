@@ -142,22 +142,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="dataflows_csharp">
-<a href="#dataflows_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flows</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Data<wbr>Flow<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="destinations_csharp">
-<a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations</a></span>
-    </dt>
-    <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -173,6 +157,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified ID of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="immutableid_csharp">
+<a href="#immutableid_csharp" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The immutable ID of this data collection rule. This property is READ-ONLY.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -206,6 +198,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dataflows_csharp">
+<a href="#dataflows_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Data<wbr>Flow<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="datasources_csharp">
 <a href="#datasources_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Sources</a>
 </span>
@@ -223,6 +223,22 @@ This property is optional and can be omitted if the rule is meant to be used via
     </dt>
     <dd>{{% md %}}Description of the data collection rule.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="destinations_csharp">
+<a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations</a></span>
+    </dt>
+    <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The kind of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -234,22 +250,6 @@ This property is optional and can be omitted if the rule is meant to be used via
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="dataflows_go">
-<a href="#dataflows_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Flows</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponse">[]Data<wbr>Flow<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="destinations_go">
-<a href="#destinations_go" style="color: inherit; text-decoration: inherit;">Destinations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations</a></span>
-    </dt>
-    <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -266,6 +266,14 @@ This property is optional and can be omitted if the rule is meant to be used via
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified ID of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="immutableid_go">
+<a href="#immutableid_go" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The immutable ID of this data collection rule. This property is READ-ONLY.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -299,6 +307,14 @@ This property is optional and can be omitted if the rule is meant to be used via
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dataflows_go">
+<a href="#dataflows_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Flows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponse">[]Data<wbr>Flow<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="datasources_go">
 <a href="#datasources_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Sources</a>
 </span>
@@ -316,6 +332,22 @@ This property is optional and can be omitted if the rule is meant to be used via
     </dt>
     <dd>{{% md %}}Description of the data collection rule.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="destinations_go">
+<a href="#destinations_go" style="color: inherit; text-decoration: inherit;">Destinations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations</a></span>
+    </dt>
+    <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The kind of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -327,22 +359,6 @@ This property is optional and can be omitted if the rule is meant to be used via
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="dataflows_nodejs">
-<a href="#dataflows_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Flows</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponse">Data<wbr>Flow<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="destinations_nodejs">
-<a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations</a></span>
-    </dt>
-    <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -359,6 +375,14 @@ This property is optional and can be omitted if the rule is meant to be used via
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified ID of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="immutableid_nodejs">
+<a href="#immutableid_nodejs" style="color: inherit; text-decoration: inherit;">immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The immutable ID of this data collection rule. This property is READ-ONLY.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -392,6 +416,14 @@ This property is optional and can be omitted if the rule is meant to be used via
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dataflows_nodejs">
+<a href="#dataflows_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Flows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponse">Data<wbr>Flow<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="datasources_nodejs">
 <a href="#datasources_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Sources</a>
 </span>
@@ -409,6 +441,22 @@ This property is optional and can be omitted if the rule is meant to be used via
     </dt>
     <dd>{{% md %}}Description of the data collection rule.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="destinations_nodejs">
+<a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations</a></span>
+    </dt>
+    <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The kind of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -420,22 +468,6 @@ This property is optional and can be omitted if the rule is meant to be used via
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="data_flows_python">
-<a href="#data_flows_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flows</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponse">Sequence[Data<wbr>Flow<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="destinations_python">
-<a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations</a></span>
-    </dt>
-    <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -452,6 +484,14 @@ This property is optional and can be omitted if the rule is meant to be used via
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified ID of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="immutable_id_python">
+<a href="#immutable_id_python" style="color: inherit; text-decoration: inherit;">immutable_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The immutable ID of this data collection rule. This property is READ-ONLY.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -485,6 +525,14 @@ This property is optional and can be omitted if the rule is meant to be used via
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="data_flows_python">
+<a href="#data_flows_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponse">Sequence[Data<wbr>Flow<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="data_sources_python">
 <a href="#data_sources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sources</a>
 </span>
@@ -501,6 +549,22 @@ This property is optional and can be omitted if the rule is meant to be used via
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the data collection rule.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="destinations_python">
+<a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations</a></span>
+    </dt>
+    <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The kind of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -754,16 +818,16 @@ This property is optional and can be omitted if the rule is meant to be used via
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="destinations_csharp">
 <a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_csharp">
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span>
@@ -774,16 +838,16 @@ This property is optional and can be omitted if the rule is meant to be used via
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="destinations_go">
 <a href="#destinations_go" style="color: inherit; text-decoration: inherit;">Destinations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_go">
 <a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span>
@@ -794,16 +858,16 @@ This property is optional and can be omitted if the rule is meant to be used via
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="destinations_nodejs">
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_nodejs">
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
@@ -814,16 +878,16 @@ This property is optional and can be omitted if the rule is meant to be used via
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="destinations_python">
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_python">
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
@@ -838,8 +902,8 @@ This property is optional and can be omitted if the rule is meant to be used via
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -851,8 +915,8 @@ This name should be unique across all destinations (regardless of type) within t
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -864,8 +928,8 @@ This name should be unique across all destinations (regardless of type) within t
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -877,8 +941,8 @@ This name should be unique across all destinations (regardless of type) within t
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -902,25 +966,7 @@ This name should be unique across all destinations (regardless of type) within t
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="streams_csharp">
-<a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extensionsettings_csharp">
 <a href="#extensionsettings_csharp" style="color: inherit; text-decoration: inherit;">Extension<wbr>Settings</a>
@@ -928,7 +974,33 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The extension settings. The format is specific for particular extension.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The extension settings. The format is specific for particular extension.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inputdatasources_csharp">
+<a href="#inputdatasources_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Data<wbr>Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of data sources this extension needs data from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the data source. 
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="streams_csharp">
+<a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of streams that this data source will be sent to.
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -940,25 +1012,7 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="streams_go">
-<a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extensionsettings_go">
 <a href="#extensionsettings_go" style="color: inherit; text-decoration: inherit;">Extension<wbr>Settings</a>
@@ -966,7 +1020,33 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The extension settings. The format is specific for particular extension.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The extension settings. The format is specific for particular extension.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inputdatasources_go">
+<a href="#inputdatasources_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Data<wbr>Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of data sources this extension needs data from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the data source. 
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="streams_go">
+<a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of streams that this data source will be sent to.
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -978,25 +1058,7 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="streams_nodejs">
-<a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extensionsettings_nodejs">
 <a href="#extensionsettings_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Settings</a>
@@ -1004,7 +1066,33 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The extension settings. The format is specific for particular extension.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The extension settings. The format is specific for particular extension.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inputdatasources_nodejs">
+<a href="#inputdatasources_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Data<wbr>Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of data sources this extension needs data from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the data source. 
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="streams_nodejs">
+<a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of streams that this data source will be sent to.
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1016,25 +1104,7 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="streams_python">
-<a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extension_settings_python">
 <a href="#extension_settings_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>settings</a>
@@ -1042,7 +1112,33 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The extension settings. The format is specific for particular extension.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The extension settings. The format is specific for particular extension.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="input_data_sources_python">
+<a href="#input_data_sources_python" style="color: inherit; text-decoration: inherit;">input_<wbr>data_<wbr>sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of data sources this extension needs data from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the data source. 
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="streams_python">
+<a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of streams that this data source will be sent to.
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loganalyticsdestinationresponse">Log<wbr>Analytics<wbr>Destination<wbr>Response</h4>
@@ -1052,6 +1148,14 @@ A stream indicates what schema will be used for this data and usually what table
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="workspaceid_csharp">
+<a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Customer ID of the Log Analytics workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1059,8 +1163,8 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
-This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workspaceresourceid_csharp">
 <a href="#workspaceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
 </span>
@@ -1073,6 +1177,14 @@ This name should be unique across all destinations (regardless of type) within t
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="workspaceid_go">
+<a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Customer ID of the Log Analytics workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1080,8 +1192,8 @@ This name should be unique across all destinations (regardless of type) within t
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
-This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workspaceresourceid_go">
 <a href="#workspaceresourceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
 </span>
@@ -1094,6 +1206,14 @@ This name should be unique across all destinations (regardless of type) within t
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="workspaceid_nodejs">
+<a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Customer ID of the Log Analytics workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1101,8 +1221,8 @@ This name should be unique across all destinations (regardless of type) within t
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
-This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workspaceresourceid_nodejs">
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
 </span>
@@ -1115,6 +1235,14 @@ This name should be unique across all destinations (regardless of type) within t
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="workspace_id_python">
+<a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Customer ID of the Log Analytics workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1122,8 +1250,8 @@ This name should be unique across all destinations (regardless of type) within t
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
-This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workspace_resource_id_python">
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
 </span>
@@ -1138,8 +1266,8 @@ This name should be unique across all destinations (regardless of type) within t
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="counterspecifiers_csharp">
 <a href="#counterspecifiers_csharp" style="color: inherit; text-decoration: inherit;">Counter<wbr>Specifiers</a>
 </span>
@@ -1148,8 +1276,8 @@ This name should be unique across all destinations (regardless of type) within t
     </dt>
     <dd>{{% md %}}A list of specifier names of the performance counters you want to collect.
 Use a wildcard (*) to collect a counter for all instances.
-To get a list of performance counters on Windows, run the command 'typeperf'.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+To get a list of performance counters on Windows, run the command 'typeperf'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1157,24 +1285,16 @@ To get a list of performance counters on Windows, run the command 'typeperf'.{{%
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="samplingfrequencyinseconds_csharp">
 <a href="#samplingfrequencyinseconds_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduledtransferperiod_csharp">
-<a href="#scheduledtransferperiod_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Transfer<wbr>Period</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_csharp">
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span>
@@ -1186,8 +1306,8 @@ A stream indicates what schema will be used for this data and usually what table
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="counterspecifiers_go">
 <a href="#counterspecifiers_go" style="color: inherit; text-decoration: inherit;">Counter<wbr>Specifiers</a>
 </span>
@@ -1196,8 +1316,8 @@ A stream indicates what schema will be used for this data and usually what table
     </dt>
     <dd>{{% md %}}A list of specifier names of the performance counters you want to collect.
 Use a wildcard (*) to collect a counter for all instances.
-To get a list of performance counters on Windows, run the command 'typeperf'.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+To get a list of performance counters on Windows, run the command 'typeperf'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1205,24 +1325,16 @@ To get a list of performance counters on Windows, run the command 'typeperf'.{{%
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="samplingfrequencyinseconds_go">
 <a href="#samplingfrequencyinseconds_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduledtransferperiod_go">
-<a href="#scheduledtransferperiod_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Transfer<wbr>Period</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_go">
 <a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span>
@@ -1234,8 +1346,8 @@ A stream indicates what schema will be used for this data and usually what table
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="counterspecifiers_nodejs">
 <a href="#counterspecifiers_nodejs" style="color: inherit; text-decoration: inherit;">counter<wbr>Specifiers</a>
 </span>
@@ -1244,8 +1356,8 @@ A stream indicates what schema will be used for this data and usually what table
     </dt>
     <dd>{{% md %}}A list of specifier names of the performance counters you want to collect.
 Use a wildcard (*) to collect a counter for all instances.
-To get a list of performance counters on Windows, run the command 'typeperf'.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+To get a list of performance counters on Windows, run the command 'typeperf'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1253,24 +1365,16 @@ To get a list of performance counters on Windows, run the command 'typeperf'.{{%
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="samplingfrequencyinseconds_nodejs">
 <a href="#samplingfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduledtransferperiod_nodejs">
-<a href="#scheduledtransferperiod_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Transfer<wbr>Period</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_nodejs">
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
@@ -1282,8 +1386,8 @@ A stream indicates what schema will be used for this data and usually what table
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="counter_specifiers_python">
 <a href="#counter_specifiers_python" style="color: inherit; text-decoration: inherit;">counter_<wbr>specifiers</a>
 </span>
@@ -1292,8 +1396,8 @@ A stream indicates what schema will be used for this data and usually what table
     </dt>
     <dd>{{% md %}}A list of specifier names of the performance counters you want to collect.
 Use a wildcard (*) to collect a counter for all instances.
-To get a list of performance counters on Windows, run the command 'typeperf'.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+To get a list of performance counters on Windows, run the command 'typeperf'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1301,24 +1405,16 @@ To get a list of performance counters on Windows, run the command 'typeperf'.{{%
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sampling_frequency_in_seconds_python">
 <a href="#sampling_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduled_transfer_period_python">
-<a href="#scheduled_transfer_period_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>transfer_<wbr>period</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_python">
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
@@ -1334,33 +1430,15 @@ A stream indicates what schema will be used for this data and usually what table
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="facilitynames_csharp">
 <a href="#facilitynames_csharp" style="color: inherit; text-decoration: inherit;">Facility<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="streams_csharp">
-<a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevels_csharp">
 <a href="#loglevels_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Levels</a>
@@ -1368,130 +1446,8 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="facilitynames_go">
-<a href="#facilitynames_go" style="color: inherit; text-decoration: inherit;">Facility<wbr>Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="streams_go">
-<a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="loglevels_go">
-<a href="#loglevels_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Levels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="facilitynames_nodejs">
-<a href="#facilitynames_nodejs" style="color: inherit; text-decoration: inherit;">facility<wbr>Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="streams_nodejs">
-<a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="loglevels_nodejs">
-<a href="#loglevels_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Levels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="facility_names_python">
-<a href="#facility_names_python" style="color: inherit; text-decoration: inherit;">facility_<wbr>names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="streams_python">
-<a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="log_levels_python">
-<a href="#log_levels_python" style="color: inherit; text-decoration: inherit;">log_<wbr>levels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="windowseventlogdatasourceresponse">Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1499,16 +1455,8 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduledtransferperiod_csharp">
-<a href="#scheduledtransferperiod_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Transfer<wbr>Period</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_csharp">
 <a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span>
@@ -1516,8 +1464,148 @@ This name should be unique across all data sources (regardless of type) within t
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="facilitynames_go">
+<a href="#facilitynames_go" style="color: inherit; text-decoration: inherit;">Facility<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loglevels_go">
+<a href="#loglevels_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Levels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the data source. 
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="streams_go">
+<a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of streams that this data source will be sent to.
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="facilitynames_nodejs">
+<a href="#facilitynames_nodejs" style="color: inherit; text-decoration: inherit;">facility<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loglevels_nodejs">
+<a href="#loglevels_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Levels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the data source. 
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="streams_nodejs">
+<a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of streams that this data source will be sent to.
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="facility_names_python">
+<a href="#facility_names_python" style="color: inherit; text-decoration: inherit;">facility_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="log_levels_python">
+<a href="#log_levels_python" style="color: inherit; text-decoration: inherit;">log_<wbr>levels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the data source. 
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="streams_python">
+<a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of streams that this data source will be sent to.
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="windowseventlogdatasourceresponse">Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the data source. 
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="streams_csharp">
+<a href="#streams_csharp" style="color: inherit; text-decoration: inherit;">Streams</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of streams that this data source will be sent to.
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="xpathqueries_csharp">
 <a href="#xpathqueries_csharp" style="color: inherit; text-decoration: inherit;">XPath<wbr>Queries</a>
 </span>
@@ -1528,8 +1616,8 @@ A stream indicates what schema will be used for this data and usually what table
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1537,16 +1625,8 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduledtransferperiod_go">
-<a href="#scheduledtransferperiod_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Transfer<wbr>Period</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_go">
 <a href="#streams_go" style="color: inherit; text-decoration: inherit;">Streams</a>
 </span>
@@ -1554,8 +1634,8 @@ This name should be unique across all data sources (regardless of type) within t
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="xpathqueries_go">
 <a href="#xpathqueries_go" style="color: inherit; text-decoration: inherit;">XPath<wbr>Queries</a>
 </span>
@@ -1566,8 +1646,8 @@ A stream indicates what schema will be used for this data and usually what table
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1575,16 +1655,8 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduledtransferperiod_nodejs">
-<a href="#scheduledtransferperiod_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Transfer<wbr>Period</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_nodejs">
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
@@ -1592,8 +1664,8 @@ This name should be unique across all data sources (regardless of type) within t
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="xpathqueries_nodejs">
 <a href="#xpathqueries_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Path<wbr>Queries</a>
 </span>
@@ -1604,8 +1676,8 @@ A stream indicates what schema will be used for this data and usually what table
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1613,16 +1685,8 @@ A stream indicates what schema will be used for this data and usually what table
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduled_transfer_period_python">
-<a href="#scheduled_transfer_period_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>transfer_<wbr>period</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The interval between data uploads (scheduled transfers), rounded up to the nearest minute.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="streams_python">
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
@@ -1630,8 +1694,8 @@ This name should be unique across all data sources (regardless of type) within t
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="x_path_queries_python">
 <a href="#x_path_queries_python" style="color: inherit; text-decoration: inherit;">x_<wbr>path_<wbr>queries</a>
 </span>

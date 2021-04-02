@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.netapp.Backup resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Backup of a Volume
-API Version: 2020-11-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 
@@ -553,7 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of backup adhoc or scheduled{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of backup Manual or Scheduled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -629,7 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of backup adhoc or scheduled{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of backup Manual or Scheduled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -705,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of backup adhoc or scheduled{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of backup Manual or Scheduled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -781,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of backup adhoc or scheduled{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of backup Manual or Scheduled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>

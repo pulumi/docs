@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.netapp.Volume resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Volume resource
-API Version: 2020-11-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 
@@ -37,6 +37,7 @@ class MyStack : Stack
         {
             AccountName = "account1",
             CreationToken = "my-unique-file-path",
+            EncryptionKeySource = "Microsoft.KeyVault",
             Location = "eastus",
             PoolName = "pool1",
             ResourceGroupName = "myRG",
@@ -70,16 +71,17 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := netapp.NewVolume(ctx, "volume", &netapp.VolumeArgs{
-			AccountName:       pulumi.String("account1"),
-			CreationToken:     pulumi.String("my-unique-file-path"),
-			Location:          pulumi.String("eastus"),
-			PoolName:          pulumi.String("pool1"),
-			ResourceGroupName: pulumi.String("myRG"),
-			ServiceLevel:      pulumi.String("Premium"),
-			SubnetId:          pulumi.String("/subscriptions/9760acf5-4638-11e7-9bdb-020073ca7778/resourceGroups/myRP/providers/Microsoft.Network/virtualNetworks/testvnet3/subnets/testsubnet3"),
-			ThroughputMibps:   pulumi.Float64(128),
-			UsageThreshold:    pulumi.Float64(107374182400),
-			VolumeName:        pulumi.String("volume1"),
+			AccountName:         pulumi.String("account1"),
+			CreationToken:       pulumi.String("my-unique-file-path"),
+			EncryptionKeySource: pulumi.String("Microsoft.KeyVault"),
+			Location:            pulumi.String("eastus"),
+			PoolName:            pulumi.String("pool1"),
+			ResourceGroupName:   pulumi.String("myRG"),
+			ServiceLevel:        pulumi.String("Premium"),
+			SubnetId:            pulumi.String("/subscriptions/9760acf5-4638-11e7-9bdb-020073ca7778/resourceGroups/myRP/providers/Microsoft.Network/virtualNetworks/testvnet3/subnets/testsubnet3"),
+			ThroughputMibps:     pulumi.Float64(128),
+			UsageThreshold:      pulumi.Float64(107374182400),
+			VolumeName:          pulumi.String("volume1"),
 		})
 		if err != nil {
 			return err
@@ -104,6 +106,7 @@ import pulumi_azure_native as azure_native
 volume = azure_native.netapp.Volume("volume",
     account_name="account1",
     creation_token="my-unique-file-path",
+    encryption_key_source="Microsoft.KeyVault",
     location="eastus",
     pool_name="pool1",
     resource_group_name="myRG",
@@ -129,6 +132,7 @@ import * as azure_native from "@pulumi/azure-native";
 const volume = new azure_native.netapp.Volume("volume", {
     accountName: "account1",
     creationToken: "my-unique-file-path",
+    encryptionKeySource: "Microsoft.KeyVault",
     location: "eastus",
     poolName: "pool1",
     resourceGroupName: "myRG",
@@ -162,7 +166,7 @@ const volume = new azure_native.netapp.Volume("volume", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesDataProtectionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_key_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesExportPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecurityStyle]]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">, </span><span class="nx">smb_continuously_available</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">smb_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesDataProtectionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_key_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesExportPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ldap_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecurityStyle]]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">, </span><span class="nx">smb_continuously_available</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">smb_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -400,6 +404,14 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ldapenabled_csharp">
+<a href="#ldapenabled_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether LDAP is enabled or not for a given NFS volume.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -595,6 +607,14 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ldapenabled_go">
+<a href="#ldapenabled_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether LDAP is enabled or not for a given NFS volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -792,6 +812,14 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ldapenabled_nodejs">
+<a href="#ldapenabled_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether LDAP is enabled or not for a given NFS volume.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -987,6 +1015,14 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ldap_enabled_python">
+<a href="#ldap_enabled_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether LDAP is enabled or not for a given NFS volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.compute.getDiskAccess function wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 disk access resource.
-API Version: 2020-09-30.
+API Version: 2020-12-01.
 
 
 
@@ -440,6 +440,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}private endpoint connection name{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="privateendpoint_csharp">
+<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
@@ -462,15 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}private endpoint connection type{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateendpoint_csharp">
-<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}private endpoint connection type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -491,6 +491,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}private endpoint connection name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privateendpoint_go">
+<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -514,15 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}private endpoint connection type{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateendpoint_go">
-<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}private endpoint connection type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -543,6 +543,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}private endpoint connection name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privateendpoint_nodejs">
+<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -566,15 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}private endpoint connection type{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateendpoint_nodejs">
-<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}private endpoint connection type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -595,6 +595,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}private endpoint connection name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="private_endpoint_python">
+<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -618,15 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}private endpoint connection type{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_endpoint_python">
-<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}private endpoint connection type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>

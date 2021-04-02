@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.sql.getJobCredential function wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A stored credential that can be used by a job to connect to target databases.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 
 
@@ -222,14 +222,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="password_csharp">
-<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The credential password.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -265,14 +257,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="password_go">
-<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The credential password.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -310,14 +294,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="password_nodejs">
-<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The credential password.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -353,14 +329,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="password_python">
-<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The credential password.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>

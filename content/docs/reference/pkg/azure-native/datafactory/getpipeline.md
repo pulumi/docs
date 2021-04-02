@@ -1413,6 +1413,378 @@ The following output properties are available:
     <dd>{{% md %}}Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="deletefilesaftercompletion_csharp">
+<a href="#deletefilesaftercompletion_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Files<wbr>After<wbr>Completion</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablepartitiondiscovery_csharp">
+<a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable partition discovery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filelistpath_csharp">
+<a href="#filelistpath_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>List<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentconnections_csharp">
+<a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimeend_csharp">
+<a href="#modifieddatetimeend_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>Datetime<wbr>End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The end of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimestart_csharp">
+<a href="#modifieddatetimestart_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>Datetime<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The start of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionrootpath_csharp">
+<a href="#partitionrootpath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Root<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The prefix filter for the S3 Compatible object name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recursive_csharp">
+<a href="#recursive_csharp" style="color: inherit; text-decoration: inherit;">Recursive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfilename_csharp">
+<a href="#wildcardfilename_csharp" style="color: inherit; text-decoration: inherit;">Wildcard<wbr>File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Amazon S3 Compatible wildcardFileName. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfolderpath_csharp">
+<a href="#wildcardfolderpath_csharp" style="color: inherit; text-decoration: inherit;">Wildcard<wbr>Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Amazon S3 Compatible wildcardFolderPath. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="deletefilesaftercompletion_go">
+<a href="#deletefilesaftercompletion_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Files<wbr>After<wbr>Completion</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablepartitiondiscovery_go">
+<a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable partition discovery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filelistpath_go">
+<a href="#filelistpath_go" style="color: inherit; text-decoration: inherit;">File<wbr>List<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentconnections_go">
+<a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimeend_go">
+<a href="#modifieddatetimeend_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>Datetime<wbr>End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The end of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimestart_go">
+<a href="#modifieddatetimestart_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>Datetime<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The start of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionrootpath_go">
+<a href="#partitionrootpath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Root<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The prefix filter for the S3 Compatible object name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recursive_go">
+<a href="#recursive_go" style="color: inherit; text-decoration: inherit;">Recursive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfilename_go">
+<a href="#wildcardfilename_go" style="color: inherit; text-decoration: inherit;">Wildcard<wbr>File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Amazon S3 Compatible wildcardFileName. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfolderpath_go">
+<a href="#wildcardfolderpath_go" style="color: inherit; text-decoration: inherit;">Wildcard<wbr>Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Amazon S3 Compatible wildcardFolderPath. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="deletefilesaftercompletion_nodejs">
+<a href="#deletefilesaftercompletion_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Files<wbr>After<wbr>Completion</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablepartitiondiscovery_nodejs">
+<a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable partition discovery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filelistpath_nodejs">
+<a href="#filelistpath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>List<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentconnections_nodejs">
+<a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimeend_nodejs">
+<a href="#modifieddatetimeend_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Datetime<wbr>End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The end of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimestart_nodejs">
+<a href="#modifieddatetimestart_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Datetime<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The start of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionrootpath_nodejs">
+<a href="#partitionrootpath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Root<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The prefix filter for the S3 Compatible object name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recursive_nodejs">
+<a href="#recursive_nodejs" style="color: inherit; text-decoration: inherit;">recursive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfilename_nodejs">
+<a href="#wildcardfilename_nodejs" style="color: inherit; text-decoration: inherit;">wildcard<wbr>File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Amazon S3 Compatible wildcardFileName. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfolderpath_nodejs">
+<a href="#wildcardfolderpath_nodejs" style="color: inherit; text-decoration: inherit;">wildcard<wbr>Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Amazon S3 Compatible wildcardFolderPath. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="delete_files_after_completion_python">
+<a href="#delete_files_after_completion_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>files_<wbr>after_<wbr>completion</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_partition_discovery_python">
+<a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable partition discovery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_list_path_python">
+<a href="#file_list_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>list_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_concurrent_connections_python">
+<a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modified_datetime_end_python">
+<a href="#modified_datetime_end_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>datetime_<wbr>end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The end of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modified_datetime_start_python">
+<a href="#modified_datetime_start_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>datetime_<wbr>start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The start of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partition_root_path_python">
+<a href="#partition_root_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>root_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The prefix filter for the S3 Compatible object name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recursive_python">
+<a href="#recursive_python" style="color: inherit; text-decoration: inherit;">recursive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_file_name_python">
+<a href="#wildcard_file_name_python" style="color: inherit; text-decoration: inherit;">wildcard_<wbr>file_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Amazon S3 Compatible wildcardFileName. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_folder_path_python">
+<a href="#wildcard_folder_path_python" style="color: inherit; text-decoration: inherit;">wildcard_<wbr>folder_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Amazon S3 Compatible wildcardFolderPath. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</h4>
 
 
@@ -2284,7 +2656,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Avro store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2328,7 +2700,7 @@ The following output properties are available:
 <a href="#storesettings_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Avro store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2372,7 +2744,7 @@ The following output properties are available:
 <a href="#storesettings_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Avro store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2416,7 +2788,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Avro store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11372,7 +11744,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Binary store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11416,7 +11788,7 @@ The following output properties are available:
 <a href="#storesettings_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Binary store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11460,7 +11832,7 @@ The following output properties are available:
 <a href="#storesettings_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Binary store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11504,7 +11876,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Binary store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17784,7 +18156,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delete activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17884,7 +18256,7 @@ The following output properties are available:
 <a href="#storesettings_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Delete activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17984,7 +18356,7 @@ The following output properties are available:
 <a href="#storesettings_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Delete activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18084,7 +18456,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delete activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18476,7 +18848,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18528,7 +18900,7 @@ The following output properties are available:
 <a href="#storesettings_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18580,7 +18952,7 @@ The following output properties are available:
 <a href="#storesettings_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18632,7 +19004,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21012,7 +21384,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Excel store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21056,7 +21428,7 @@ The following output properties are available:
 <a href="#storesettings_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Excel store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21100,7 +21472,7 @@ The following output properties are available:
 <a href="#storesettings_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Excel store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21144,7 +21516,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Excel store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24524,7 +24896,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24608,7 +24980,7 @@ The following output properties are available:
 <a href="#storesettings_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24692,7 +25064,7 @@ The following output properties are available:
 <a href="#storesettings_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24776,7 +25148,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31336,7 +31708,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -31388,7 +31760,7 @@ The following output properties are available:
 <a href="#storesettings_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Json store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -31440,7 +31812,7 @@ The following output properties are available:
 <a href="#storesettings_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Json store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -31492,7 +31864,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -35777,6 +36149,378 @@ The following output properties are available:
     <dd>{{% md %}}The user scope uri. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="deletefilesaftercompletion_csharp">
+<a href="#deletefilesaftercompletion_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Files<wbr>After<wbr>Completion</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablepartitiondiscovery_csharp">
+<a href="#enablepartitiondiscovery_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable partition discovery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filelistpath_csharp">
+<a href="#filelistpath_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>List<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentconnections_csharp">
+<a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimeend_csharp">
+<a href="#modifieddatetimeend_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>Datetime<wbr>End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The end of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimestart_csharp">
+<a href="#modifieddatetimestart_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>Datetime<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The start of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionrootpath_csharp">
+<a href="#partitionrootpath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Root<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The prefix filter for the Oracle Cloud Storage object name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recursive_csharp">
+<a href="#recursive_csharp" style="color: inherit; text-decoration: inherit;">Recursive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfilename_csharp">
+<a href="#wildcardfilename_csharp" style="color: inherit; text-decoration: inherit;">Wildcard<wbr>File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Oracle Cloud Storage wildcardFileName. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfolderpath_csharp">
+<a href="#wildcardfolderpath_csharp" style="color: inherit; text-decoration: inherit;">Wildcard<wbr>Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Oracle Cloud Storage wildcardFolderPath. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="deletefilesaftercompletion_go">
+<a href="#deletefilesaftercompletion_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Files<wbr>After<wbr>Completion</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablepartitiondiscovery_go">
+<a href="#enablepartitiondiscovery_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partition<wbr>Discovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable partition discovery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filelistpath_go">
+<a href="#filelistpath_go" style="color: inherit; text-decoration: inherit;">File<wbr>List<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentconnections_go">
+<a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimeend_go">
+<a href="#modifieddatetimeend_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>Datetime<wbr>End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The end of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimestart_go">
+<a href="#modifieddatetimestart_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>Datetime<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The start of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionrootpath_go">
+<a href="#partitionrootpath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Root<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The prefix filter for the Oracle Cloud Storage object name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recursive_go">
+<a href="#recursive_go" style="color: inherit; text-decoration: inherit;">Recursive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfilename_go">
+<a href="#wildcardfilename_go" style="color: inherit; text-decoration: inherit;">Wildcard<wbr>File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Oracle Cloud Storage wildcardFileName. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfolderpath_go">
+<a href="#wildcardfolderpath_go" style="color: inherit; text-decoration: inherit;">Wildcard<wbr>Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Oracle Cloud Storage wildcardFolderPath. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="deletefilesaftercompletion_nodejs">
+<a href="#deletefilesaftercompletion_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Files<wbr>After<wbr>Completion</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablepartitiondiscovery_nodejs">
+<a href="#enablepartitiondiscovery_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partition<wbr>Discovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable partition discovery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filelistpath_nodejs">
+<a href="#filelistpath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>List<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentconnections_nodejs">
+<a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimeend_nodejs">
+<a href="#modifieddatetimeend_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Datetime<wbr>End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The end of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifieddatetimestart_nodejs">
+<a href="#modifieddatetimestart_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Datetime<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The start of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionrootpath_nodejs">
+<a href="#partitionrootpath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Root<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The prefix filter for the Oracle Cloud Storage object name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recursive_nodejs">
+<a href="#recursive_nodejs" style="color: inherit; text-decoration: inherit;">recursive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfilename_nodejs">
+<a href="#wildcardfilename_nodejs" style="color: inherit; text-decoration: inherit;">wildcard<wbr>File<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Oracle Cloud Storage wildcardFileName. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcardfolderpath_nodejs">
+<a href="#wildcardfolderpath_nodejs" style="color: inherit; text-decoration: inherit;">wildcard<wbr>Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Oracle Cloud Storage wildcardFolderPath. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="delete_files_after_completion_python">
+<a href="#delete_files_after_completion_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>files_<wbr>after_<wbr>completion</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_partition_discovery_python">
+<a href="#enable_partition_discovery_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partition_<wbr>discovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable partition discovery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_list_path_python">
+<a href="#file_list_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>list_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_concurrent_connections_python">
+<a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modified_datetime_end_python">
+<a href="#modified_datetime_end_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>datetime_<wbr>end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The end of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modified_datetime_start_python">
+<a href="#modified_datetime_start_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>datetime_<wbr>start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The start of file's modified datetime. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partition_root_path_python">
+<a href="#partition_root_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>root_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The prefix filter for the Oracle Cloud Storage object name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recursive_python">
+<a href="#recursive_python" style="color: inherit; text-decoration: inherit;">recursive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_file_name_python">
+<a href="#wildcard_file_name_python" style="color: inherit; text-decoration: inherit;">wildcard_<wbr>file_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Oracle Cloud Storage wildcardFileName. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_folder_path_python">
+<a href="#wildcard_folder_path_python" style="color: inherit; text-decoration: inherit;">wildcard_<wbr>folder_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Oracle Cloud Storage wildcardFolderPath. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="oraclepartitionsettingsresponse">Oracle<wbr>Partition<wbr>Settings<wbr>Response</h4>
 
 
@@ -36912,7 +37656,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ORC store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -36956,7 +37700,7 @@ The following output properties are available:
 <a href="#storesettings_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ORC store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -37000,7 +37744,7 @@ The following output properties are available:
 <a href="#storesettings_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ORC store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -37044,7 +37788,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ORC store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -37504,7 +38248,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parquet store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -37548,7 +38292,7 @@ The following output properties are available:
 <a href="#storesettings_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parquet store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -37592,7 +38336,7 @@ The following output properties are available:
 <a href="#storesettings_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parquet store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -37636,7 +38380,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parquet store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -54860,7 +55604,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xml store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -54912,7 +55656,7 @@ The following output properties are available:
 <a href="#storesettings_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Xml store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -54964,7 +55708,7 @@ The following output properties are available:
 <a href="#storesettings_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Xml store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -55016,7 +55760,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xml store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -12,13 +12,123 @@ meta_desc: "Documentation for the azure-native.devtestlab.Secret resource with e
 
 A secret.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:Secret myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/secrets/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Secrets_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var secret = new AzureNative.DevTestLab.Secret("secret", new AzureNative.DevTestLab.SecretArgs
+        {
+            LabName = "{labName}",
+            Name = "{secretName}",
+            ResourceGroupName = "resourceGroupName",
+            UserName = "{userName}",
+            Value = "{secret}",
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewSecret(ctx, "secret", &devtestlab.SecretArgs{
+			LabName:           pulumi.String("{labName}"),
+			Name:              pulumi.String("{secretName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			UserName:          pulumi.String("{userName}"),
+			Value:             pulumi.String("{secret}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+secret = azure_native.devtestlab.Secret("secret",
+    lab_name="{labName}",
+    name="{secretName}",
+    resource_group_name="resourceGroupName",
+    user_name="{userName}",
+    value="{secret}")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const secret = new azure_native.devtestlab.Secret("secret", {
+    labName: "{labName}",
+    name: "{secretName}",
+    resourceGroupName: "resourceGroupName",
+    userName: "{userName}",
+    value: "{secret}",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -565,6 +675,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:Secret {secretName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/users/{userName}/secrets/{secretName} 
+```
 
 
 

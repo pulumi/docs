@@ -11,8 +11,6 @@ Explore the resources and functions of the azure-native.solutions module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="appliance" title="Appliance"><span class="symbol resource"></span>Appliance</a></li>
-    <li><a href="appliancedefinition" title="ApplianceDefinition"><span class="symbol resource"></span>ApplianceDefinition</a></li>
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
     <li><a href="applicationdefinition" title="ApplicationDefinition"><span class="symbol resource"></span>ApplicationDefinition</a></li>
     <li><a href="jitrequest" title="JitRequest"><span class="symbol resource"></span>JitRequest</a></li>
@@ -20,8 +18,6 @@ Explore the resources and functions of the azure-native.solutions module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getappliance" title="GetAppliance"><span class="symbol function"></span>GetAppliance</a></li>
-    <li><a href="getappliancedefinition" title="GetApplianceDefinition"><span class="symbol function"></span>GetApplianceDefinition</a></li>
     <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
     <li><a href="getapplicationdefinition" title="GetApplicationDefinition"><span class="symbol function"></span>GetApplicationDefinition</a></li>
     <li><a href="getjitrequest" title="GetJitRequest"><span class="symbol function"></span>GetJitRequest</a></li>
@@ -34,6 +30,6 @@ Explore the resources and functions of the azure-native.solutions module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

@@ -11,13 +11,150 @@ meta_desc: "Documentation for the azure-native.providerhub.OperationByProviderRe
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 API Version: 2020-11-20.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:providerhub:OperationByProviderRegistration myresource1  
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Operations_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var operationByProviderRegistration = new AzureNative.ProviderHub.OperationByProviderRegistration("operationByProviderRegistration", new AzureNative.ProviderHub.OperationByProviderRegistrationArgs
+        {
+            Contents = 
+            {
+                new AzureNative.ProviderHub.Inputs.OperationsDefinitionArgs
+                {
+                    Display = new AzureNative.ProviderHub.Inputs.OperationsDefinitionDisplayArgs
+                    {
+                        Description = "Read employees",
+                        Operation = "Gets/List employee resources",
+                        Provider = "Microsoft.Contoso",
+                        Resource = "Employees",
+                    },
+                    Name = "Microsoft.Contoso/Employees/Read",
+                },
+            },
+            ProviderNamespace = "Microsoft.Contoso",
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	providerhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/providerhub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providerhub.NewOperationByProviderRegistration(ctx, "operationByProviderRegistration", &providerhub.OperationByProviderRegistrationArgs{
+			Contents: providerhub.OperationsDefinitionArray{
+				&providerhub.OperationsDefinitionArgs{
+					Display: &providerhub.OperationsDefinitionDisplayArgs{
+						Description: pulumi.String("Read employees"),
+						Operation:   pulumi.String("Gets/List employee resources"),
+						Provider:    pulumi.String("Microsoft.Contoso"),
+						Resource:    pulumi.String("Employees"),
+					},
+					Name: pulumi.String("Microsoft.Contoso/Employees/Read"),
+				},
+			},
+			ProviderNamespace: pulumi.String("Microsoft.Contoso"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+operation_by_provider_registration = azure_native.providerhub.OperationByProviderRegistration("operationByProviderRegistration",
+    contents=[azure_native.providerhub.OperationsDefinitionArgs(
+        display=azure_native.providerhub.OperationsDefinitionDisplayArgs(
+            description="Read employees",
+            operation="Gets/List employee resources",
+            provider="Microsoft.Contoso",
+            resource="Employees",
+        ),
+        name="Microsoft.Contoso/Employees/Read",
+    )],
+    provider_namespace="Microsoft.Contoso")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const operationByProviderRegistration = new azure_native.providerhub.OperationByProviderRegistration("operationByProviderRegistration", {
+    contents: [{
+        display: {
+            description: "Read employees",
+            operation: "Gets/List employee resources",
+            provider: "Microsoft.Contoso",
+            resource: "Employees",
+        },
+        name: "Microsoft.Contoso/Employees/Read",
+    }],
+    providerNamespace: "Microsoft.Contoso",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -1040,6 +1177,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:providerhub:OperationByProviderRegistration myresource1 /subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/operations/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

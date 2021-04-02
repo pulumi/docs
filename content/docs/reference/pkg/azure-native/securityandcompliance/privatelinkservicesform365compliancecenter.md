@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.securityandcompliance.PrivateLink
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The description of the service.
-API Version: 2021-01-11.
+API Version: 2021-03-08.
 
 {{% examples %}}
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.peering.Peering resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Peering is a logical representation of a set of connections to the Microsoft Cloud Edge at a location.
-API Version: 2020-10-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 

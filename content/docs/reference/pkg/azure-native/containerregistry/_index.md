@@ -12,8 +12,6 @@ Explore the resources and functions of the azure-native.containerregistry module
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="agentpool" title="AgentPool"><span class="symbol resource"></span>AgentPool</a></li>
-    <li><a href="buildstep" title="BuildStep"><span class="symbol resource"></span>BuildStep</a></li>
-    <li><a href="buildtask" title="BuildTask"><span class="symbol resource"></span>BuildTask</a></li>
     <li><a href="connectedregistry" title="ConnectedRegistry"><span class="symbol resource"></span>ConnectedRegistry</a></li>
     <li><a href="exportpipeline" title="ExportPipeline"><span class="symbol resource"></span>ExportPipeline</a></li>
     <li><a href="importpipeline" title="ImportPipeline"><span class="symbol resource"></span>ImportPipeline</a></li>
@@ -32,8 +30,6 @@ Explore the resources and functions of the azure-native.containerregistry module
 <ul class="api">
     <li><a href="getagentpool" title="GetAgentPool"><span class="symbol function"></span>GetAgentPool</a></li>
     <li><a href="getbuildloglink" title="GetBuildLogLink"><span class="symbol function"></span>GetBuildLogLink</a></li>
-    <li><a href="getbuildstep" title="GetBuildStep"><span class="symbol function"></span>GetBuildStep</a></li>
-    <li><a href="getbuildtask" title="GetBuildTask"><span class="symbol function"></span>GetBuildTask</a></li>
     <li><a href="getconnectedregistry" title="GetConnectedRegistry"><span class="symbol function"></span>GetConnectedRegistry</a></li>
     <li><a href="getexportpipeline" title="GetExportPipeline"><span class="symbol function"></span>GetExportPipeline</a></li>
     <li><a href="getimportpipeline" title="GetImportPipeline"><span class="symbol function"></span>GetImportPipeline</a></li>
@@ -67,6 +63,6 @@ Explore the resources and functions of the azure-native.containerregistry module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

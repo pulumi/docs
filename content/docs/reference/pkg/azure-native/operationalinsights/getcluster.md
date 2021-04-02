@@ -246,14 +246,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="isdoubleencryptionenabled_csharp">
-<a href="#isdoubleencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Double<wbr>Encryption<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="keyvaultproperties_csharp">
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
@@ -385,14 +377,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="isdoubleencryptionenabled_go">
-<a href="#isdoubleencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Double<wbr>Encryption<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultproperties_go">
 <a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
@@ -526,14 +510,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="isdoubleencryptionenabled_nodejs">
-<a href="#isdoubleencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Double<wbr>Encryption<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="keyvaultproperties_nodejs">
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
@@ -665,14 +641,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="is_double_encryption_enabled_python">
-<a href="#is_double_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>double_<wbr>encryption_<wbr>enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_vault_properties_python">
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.authorization.RoleAssignment reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Role Assignments
-API Version: 2020-04-01-preview.
+API Version: 2020-08-01-preview.
 
 {{% examples %}}
 
@@ -20,7 +20,7 @@ API Version: 2020-04-01-preview.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Create role assignment
+### Create role assignment for resource
 
 
 {{< example csharp >}}
@@ -35,15 +35,11 @@ class MyStack : Stack
     {
         var roleAssignment = new AzureNative.Authorization.RoleAssignment("roleAssignment", new AzureNative.Authorization.RoleAssignmentArgs
         {
-            CanDelegate = false,
-            Condition = "@Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'",
-            ConditionVersion = "1.0",
-            Description = "Grants UserFoo role assignment bar in scope baz",
-            PrincipalId = "d93a38bc-d029-4160-bfb0-fbda779ac214",
+            PrincipalId = "ce2ce14e-85d7-4629-bdbc-454d0519d987",
             PrincipalType = "User",
-            RoleAssignmentName = "roleAssignmentName",
-            RoleDefinitionId = "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
-            Scope = "scope",
+            RoleAssignmentName = "05c5a614-a7d6-4502-b150-c2fb455033ff",
+            RoleDefinitionId = "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+            Scope = "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg/providers/Microsoft.DocumentDb/databaseAccounts/test-db-account",
         });
     }
 
@@ -69,15 +65,11 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := authorization.NewRoleAssignment(ctx, "roleAssignment", &authorization.RoleAssignmentArgs{
-			CanDelegate:        pulumi.Bool(false),
-			Condition:          pulumi.String("@Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'"),
-			ConditionVersion:   pulumi.String("1.0"),
-			Description:        pulumi.String("Grants UserFoo role assignment bar in scope baz"),
-			PrincipalId:        pulumi.String("d93a38bc-d029-4160-bfb0-fbda779ac214"),
+			PrincipalId:        pulumi.String("ce2ce14e-85d7-4629-bdbc-454d0519d987"),
 			PrincipalType:      pulumi.String("User"),
-			RoleAssignmentName: pulumi.String("roleAssignmentName"),
-			RoleDefinitionId:   pulumi.String("/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772"),
-			Scope:              pulumi.String("scope"),
+			RoleAssignmentName: pulumi.String("05c5a614-a7d6-4502-b150-c2fb455033ff"),
+			RoleDefinitionId:   pulumi.String("/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d"),
+			Scope:              pulumi.String("subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg/providers/Microsoft.DocumentDb/databaseAccounts/test-db-account"),
 		})
 		if err != nil {
 			return err
@@ -100,15 +92,11 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 role_assignment = azure_native.authorization.RoleAssignment("roleAssignment",
-    can_delegate=False,
-    condition="@Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'",
-    condition_version="1.0",
-    description="Grants UserFoo role assignment bar in scope baz",
-    principal_id="d93a38bc-d029-4160-bfb0-fbda779ac214",
+    principal_id="ce2ce14e-85d7-4629-bdbc-454d0519d987",
     principal_type="User",
-    role_assignment_name="roleAssignmentName",
-    role_definition_id="/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
-    scope="scope")
+    role_assignment_name="05c5a614-a7d6-4502-b150-c2fb455033ff",
+    role_definition_id="/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+    scope="subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg/providers/Microsoft.DocumentDb/databaseAccounts/test-db-account")
 
 ```
 
@@ -124,15 +112,225 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssignment", {
-    canDelegate: false,
-    condition: "@Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'",
-    conditionVersion: "1.0",
-    description: "Grants UserFoo role assignment bar in scope baz",
-    principalId: "d93a38bc-d029-4160-bfb0-fbda779ac214",
+    principalId: "ce2ce14e-85d7-4629-bdbc-454d0519d987",
     principalType: "User",
-    roleAssignmentName: "roleAssignmentName",
-    roleDefinitionId: "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
-    scope: "scope",
+    roleAssignmentName: "05c5a614-a7d6-4502-b150-c2fb455033ff",
+    roleDefinitionId: "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+    scope: "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg/providers/Microsoft.DocumentDb/databaseAccounts/test-db-account",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Create role assignment for resource group
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleAssignment = new AzureNative.Authorization.RoleAssignment("roleAssignment", new AzureNative.Authorization.RoleAssignmentArgs
+        {
+            PrincipalId = "ce2ce14e-85d7-4629-bdbc-454d0519d987",
+            PrincipalType = "User",
+            RoleAssignmentName = "05c5a614-a7d6-4502-b150-c2fb455033ff",
+            RoleDefinitionId = "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+            Scope = "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := authorization.NewRoleAssignment(ctx, "roleAssignment", &authorization.RoleAssignmentArgs{
+			PrincipalId:        pulumi.String("ce2ce14e-85d7-4629-bdbc-454d0519d987"),
+			PrincipalType:      pulumi.String("User"),
+			RoleAssignmentName: pulumi.String("05c5a614-a7d6-4502-b150-c2fb455033ff"),
+			RoleDefinitionId:   pulumi.String("/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d"),
+			Scope:              pulumi.String("subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+role_assignment = azure_native.authorization.RoleAssignment("roleAssignment",
+    principal_id="ce2ce14e-85d7-4629-bdbc-454d0519d987",
+    principal_type="User",
+    role_assignment_name="05c5a614-a7d6-4502-b150-c2fb455033ff",
+    role_definition_id="/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+    scope="subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssignment", {
+    principalId: "ce2ce14e-85d7-4629-bdbc-454d0519d987",
+    principalType: "User",
+    roleAssignmentName: "05c5a614-a7d6-4502-b150-c2fb455033ff",
+    roleDefinitionId: "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+    scope: "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Create role assignment for subscription
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleAssignment = new AzureNative.Authorization.RoleAssignment("roleAssignment", new AzureNative.Authorization.RoleAssignmentArgs
+        {
+            PrincipalId = "ce2ce14e-85d7-4629-bdbc-454d0519d987",
+            PrincipalType = "User",
+            RoleAssignmentName = "05c5a614-a7d6-4502-b150-c2fb455033ff",
+            RoleDefinitionId = "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+            Scope = "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := authorization.NewRoleAssignment(ctx, "roleAssignment", &authorization.RoleAssignmentArgs{
+			PrincipalId:        pulumi.String("ce2ce14e-85d7-4629-bdbc-454d0519d987"),
+			PrincipalType:      pulumi.String("User"),
+			RoleAssignmentName: pulumi.String("05c5a614-a7d6-4502-b150-c2fb455033ff"),
+			RoleDefinitionId:   pulumi.String("/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d"),
+			Scope:              pulumi.String("subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+role_assignment = azure_native.authorization.RoleAssignment("roleAssignment",
+    principal_id="ce2ce14e-85d7-4629-bdbc-454d0519d987",
+    principal_type="User",
+    role_assignment_name="05c5a614-a7d6-4502-b150-c2fb455033ff",
+    role_definition_id="/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+    scope="subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssignment", {
+    principalId: "ce2ce14e-85d7-4629-bdbc-454d0519d987",
+    principalType: "User",
+    roleAssignmentName: "05c5a614-a7d6-4502-b150-c2fb455033ff",
+    roleDefinitionId: "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+    scope: "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2",
 });
 
 ```
@@ -158,7 +356,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_delegate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PrincipalType]]</span> = None<span class="p">, </span><span class="nx">role_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delegated_managed_identity_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PrincipalType]]</span> = None<span class="p">, </span><span class="nx">role_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +504,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The principal ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roledefinitionid_csharp">
 <a href="#roledefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -314,7 +512,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -322,15 +520,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="candelegate_csharp">
-<a href="#candelegate_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Delegate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -347,6 +537,14 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delegatedmanagedidentityresourceid_csharp">
+<a href="#delegatedmanagedidentityresourceid_csharp" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -370,7 +568,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the role assignment. It can be any valid GUID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -382,7 +580,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The principal ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roledefinitionid_go">
 <a href="#roledefinitionid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -390,7 +588,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -398,15 +596,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="candelegate_go">
-<a href="#candelegate_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Delegate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -423,6 +613,14 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delegatedmanagedidentityresourceid_go">
+<a href="#delegatedmanagedidentityresourceid_go" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -446,7 +644,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the role assignment. It can be any valid GUID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -458,7 +656,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The principal ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roledefinitionid_nodejs">
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
@@ -466,7 +664,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -474,15 +672,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="candelegate_nodejs">
-<a href="#candelegate_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Delegate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -499,6 +689,14 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delegatedmanagedidentityresourceid_nodejs">
+<a href="#delegatedmanagedidentityresourceid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -522,7 +720,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the role assignment. It can be any valid GUID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -534,7 +732,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The principal ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_definition_id_python">
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
@@ -542,7 +740,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -550,15 +748,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="can_delegate_python">
-<a href="#can_delegate_python" style="color: inherit; text-decoration: inherit;">can_<wbr>delegate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -575,6 +765,14 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delegated_managed_identity_resource_id_python">
+<a href="#delegated_managed_identity_resource_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>managed_<wbr>identity_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -598,7 +796,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the role assignment. It can be any valid GUID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -610,6 +808,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="createdon_csharp">
+<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -635,30 +849,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="createdby_csharp">
-<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="createdon_csharp">
-<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="delegatedmanagedidentityresourceid_csharp">
-<a href="#delegatedmanagedidentityresourceid_csharp" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="updatedby_csharp">
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
@@ -678,6 +868,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="createdon_go">
+<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -703,30 +909,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="createdby_go">
-<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="createdon_go">
-<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="delegatedmanagedidentityresourceid_go">
-<a href="#delegatedmanagedidentityresourceid_go" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="updatedby_go">
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
@@ -746,6 +928,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="createdon_nodejs">
+<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -771,30 +969,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="createdby_nodejs">
-<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="createdon_nodejs">
-<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="delegatedmanagedidentityresourceid_nodejs">
-<a href="#delegatedmanagedidentityresourceid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="updatedby_nodejs">
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
 </span>
@@ -814,6 +988,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="created_on_python">
+<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -838,30 +1028,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="created_by_python">
-<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="created_on_python">
-<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="delegated_managed_identity_resource_id_python">
-<a href="#delegated_managed_identity_resource_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>managed_<wbr>identity_<wbr>resource_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_by_python">
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
@@ -953,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:authorization:RoleAssignment roleassignmentId /subscriptions/subId/resourcegroups/rgname/providers/Microsoft.Authorization/roleAssignments/roleassignmentId 
+$ pulumi import azure-native:authorization:RoleAssignment 05c5a614-a7d6-4502-b150-c2fb455033ff /subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleAssignments/05c5a614-a7d6-4502-b150-c2fb455033ff 
 ```
 
 

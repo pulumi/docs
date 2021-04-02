@@ -41,7 +41,6 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="hubroutetable" title="HubRouteTable"><span class="symbol resource"></span>HubRouteTable</a></li>
     <li><a href="hubvirtualnetworkconnection" title="HubVirtualNetworkConnection"><span class="symbol resource"></span>HubVirtualNetworkConnection</a></li>
     <li><a href="inboundnatrule" title="InboundNatRule"><span class="symbol resource"></span>InboundNatRule</a></li>
-    <li><a href="interfaceendpoint" title="InterfaceEndpoint"><span class="symbol resource"></span>InterfaceEndpoint</a></li>
     <li><a href="ipallocation" title="IpAllocation"><span class="symbol resource"></span>IpAllocation</a></li>
     <li><a href="ipgroup" title="IpGroup"><span class="symbol resource"></span>IpGroup</a></li>
     <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
@@ -142,7 +141,6 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="gethubroutetable" title="GetHubRouteTable"><span class="symbol function"></span>GetHubRouteTable</a></li>
     <li><a href="gethubvirtualnetworkconnection" title="GetHubVirtualNetworkConnection"><span class="symbol function"></span>GetHubVirtualNetworkConnection</a></li>
     <li><a href="getinboundnatrule" title="GetInboundNatRule"><span class="symbol function"></span>GetInboundNatRule</a></li>
-    <li><a href="getinterfaceendpoint" title="GetInterfaceEndpoint"><span class="symbol function"></span>GetInterfaceEndpoint</a></li>
     <li><a href="getipallocation" title="GetIpAllocation"><span class="symbol function"></span>GetIpAllocation</a></li>
     <li><a href="getipgroup" title="GetIpGroup"><span class="symbol function"></span>GetIpGroup</a></li>
     <li><a href="getloadbalancer" title="GetLoadBalancer"><span class="symbol function"></span>GetLoadBalancer</a></li>
@@ -224,6 +222,6 @@ Explore the resources and functions of the azure-native.network module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

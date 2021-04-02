@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.storage.FileShare resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Properties of the file share, including Id, resource name, resource type, Etag.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 {{% examples %}}
 

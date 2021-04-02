@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.storage.ObjectReplicationPolicy r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The replication policy between two storage accounts. Multiple rules can be defined in one policy.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 {{% examples %}}
 

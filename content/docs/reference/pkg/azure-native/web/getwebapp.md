@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.web.getWebApp function with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A web app, a mobile app backend, or an API app.
-API Version: 2020-10-01.
+API Version: 2020-12-01.
 
 
 
@@ -288,14 +288,6 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
     </dt>
     <dd>{{% md %}}App suspended till in case memory-time quota is exceeded.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_csharp">
-<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="targetswapslot_csharp">
 <a href="#targetswapslot_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Swap<wbr>Slot</a>
 </span>
@@ -362,14 +354,6 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 - ClientCertEnabled: false means ClientCert is ignored.
 - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
 - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="cloninginfo_csharp">
-<a href="#cloninginfo_csharp" style="color: inherit; text-decoration: inherit;">Cloning<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloninginforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>Cloning<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}If specified during app creation, the app is cloned from a source app.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containersize_csharp">
 <a href="#containersize_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Size</a>
@@ -460,6 +444,14 @@ http requests{{% /md %}}</dd><dt class="property-"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Obsolete: Hyper-V sandbox.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="keyvaultreferenceidentity_csharp">
+<a href="#keyvaultreferenceidentity_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -675,14 +667,6 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
     </dt>
     <dd>{{% md %}}App suspended till in case memory-time quota is exceeded.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_go">
-<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="targetswapslot_go">
 <a href="#targetswapslot_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Swap<wbr>Slot</a>
 </span>
@@ -749,14 +733,6 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 - ClientCertEnabled: false means ClientCert is ignored.
 - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
 - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="cloninginfo_go">
-<a href="#cloninginfo_go" style="color: inherit; text-decoration: inherit;">Cloning<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloninginforesponse">Cloning<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}If specified during app creation, the app is cloned from a source app.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containersize_go">
 <a href="#containersize_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Size</a>
@@ -847,6 +823,14 @@ http requests{{% /md %}}</dd><dt class="property-"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Obsolete: Hyper-V sandbox.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="keyvaultreferenceidentity_go">
+<a href="#keyvaultreferenceidentity_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1062,14 +1046,6 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
     </dt>
     <dd>{{% md %}}App suspended till in case memory-time quota is exceeded.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_nodejs">
-<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="targetswapslot_nodejs">
 <a href="#targetswapslot_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Swap<wbr>Slot</a>
 </span>
@@ -1136,14 +1112,6 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 - ClientCertEnabled: false means ClientCert is ignored.
 - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
 - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="cloninginfo_nodejs">
-<a href="#cloninginfo_nodejs" style="color: inherit; text-decoration: inherit;">cloning<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloninginforesponse">Cloning<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}If specified during app creation, the app is cloned from a source app.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containersize_nodejs">
 <a href="#containersize_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Size</a>
@@ -1234,6 +1202,14 @@ http requests{{% /md %}}</dd><dt class="property-"
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Obsolete: Hyper-V sandbox.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="keyvaultreferenceidentity_nodejs">
+<a href="#keyvaultreferenceidentity_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Reference<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1449,14 +1425,6 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
     </dt>
     <dd>{{% md %}}App suspended till in case memory-time quota is exceeded.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="system_data_python">
-<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="target_swap_slot_python">
 <a href="#target_swap_slot_python" style="color: inherit; text-decoration: inherit;">target_<wbr>swap_<wbr>slot</a>
 </span>
@@ -1523,14 +1491,6 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 - ClientCertEnabled: false means ClientCert is ignored.
 - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
 - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="cloning_info_python">
-<a href="#cloning_info_python" style="color: inherit; text-decoration: inherit;">cloning_<wbr>info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloninginforesponse">Cloning<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}If specified during app creation, the app is cloned from a source app.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="container_size_python">
 <a href="#container_size_python" style="color: inherit; text-decoration: inherit;">container_<wbr>size</a>
@@ -1621,6 +1581,14 @@ http requests{{% /md %}}</dd><dt class="property-"
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Obsolete: Hyper-V sandbox.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="key_vault_reference_identity_python">
+<a href="#key_vault_reference_identity_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -2116,13 +2084,29 @@ before taking the action{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="slowrequestswithpath_csharp">
+<a href="#slowrequestswithpath_csharp" style="color: inherit; text-decoration: inherit;">Slow<wbr>Requests<wbr>With<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A rule based on multiple Slow Requests Rule with path{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="statuscodes_csharp">
 <a href="#statuscodes_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statuscodesbasedtriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statuscodesrange_csharp">
+<a href="#statuscodesrange_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#statuscodesrangebasedtriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A rule based on status codes ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2152,13 +2136,29 @@ before taking the action{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="slowrequestswithpath_go">
+<a href="#slowrequestswithpath_go" style="color: inherit; text-decoration: inherit;">Slow<wbr>Requests<wbr>With<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">[]Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A rule based on multiple Slow Requests Rule with path{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="statuscodes_go">
 <a href="#statuscodes_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statuscodesbasedtriggerresponse">[]Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statuscodesrange_go">
+<a href="#statuscodesrange_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#statuscodesrangebasedtriggerresponse">[]Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A rule based on status codes ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2188,13 +2188,29 @@ before taking the action{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="slowrequestswithpath_nodejs">
+<a href="#slowrequestswithpath_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Requests<wbr>With<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}A rule based on multiple Slow Requests Rule with path{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="statuscodes_nodejs">
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statuscodesbasedtriggerresponse">Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statuscodesrange_nodejs">
+<a href="#statuscodesrange_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#statuscodesrangebasedtriggerresponse">Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}A rule based on status codes ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2224,405 +2240,241 @@ before taking the action{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="slow_requests_with_path_python">
+<a href="#slow_requests_with_path_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>requests_<wbr>with_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Sequence[Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A rule based on multiple Slow Requests Rule with path{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="status_codes_python">
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statuscodesbasedtriggerresponse">Sequence[Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_codes_range_python">
+<a href="#status_codes_range_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#statuscodesrangebasedtriggerresponse">Sequence[Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A rule based on status codes ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="cloninginforesponse">Cloning<wbr>Info<wbr>Response</h4>
+<h4 id="azurestorageinfovalueresponse">Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Response</h4>
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="sourcewebappid_csharp">
-<a href="#sourcewebappid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Web<wbr>App<wbr>Id</a>
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource ID of the source app. App resource ID is of the form 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}State of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="appsettingsoverrides_csharp">
-<a href="#appsettingsoverrides_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Application setting overrides for cloned app. If specified, these settings override the settings cloned 
-from source app. Otherwise, application settings from source app are retained.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clonecustomhostnames_csharp">
-<a href="#clonecustomhostnames_csharp" style="color: inherit; text-decoration: inherit;">Clone<wbr>Custom<wbr>Host<wbr>Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clonesourcecontrol_csharp">
-<a href="#clonesourcecontrol_csharp" style="color: inherit; text-decoration: inherit;">Clone<wbr>Source<wbr>Control</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to clone source control from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="configureloadbalancing_csharp">
-<a href="#configureloadbalancing_csharp" style="color: inherit; text-decoration: inherit;">Configure<wbr>Load<wbr>Balancing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to configure load balancing for source and destination app.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="correlationid_csharp">
-<a href="#correlationid_csharp" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Id</a>
+        <span id="accesskey_csharp">
+<a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Correlation ID of cloning operation. This ID ties multiple cloning operations
-together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Access key for the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hostingenvironment_csharp">
-<a href="#hostingenvironment_csharp" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment</a>
+        <span id="accountname_csharp">
+<a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}App Service Environment.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="overwrite_csharp">
-<a href="#overwrite_csharp" style="color: inherit; text-decoration: inherit;">Overwrite</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to overwrite destination app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourcewebapplocation_csharp">
-<a href="#sourcewebapplocation_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Web<wbr>App<wbr>Location</a>
+        <span id="mountpath_csharp">
+<a href="#mountpath_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of source app ex: West US or North Europe{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Path to mount the storage within the site's runtime environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trafficmanagerprofileid_csharp">
-<a href="#trafficmanagerprofileid_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Manager<wbr>Profile<wbr>Id</a>
+        <span id="sharename_csharp">
+<a href="#sharename_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the file share (container name, for Blob storage).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trafficmanagerprofilename_csharp">
-<a href="#trafficmanagerprofilename_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Manager<wbr>Profile<wbr>Name</a>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type of storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="sourcewebappid_go">
-<a href="#sourcewebappid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Web<wbr>App<wbr>Id</a>
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource ID of the source app. App resource ID is of the form 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}State of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="appsettingsoverrides_go">
-<a href="#appsettingsoverrides_go" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Application setting overrides for cloned app. If specified, these settings override the settings cloned 
-from source app. Otherwise, application settings from source app are retained.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clonecustomhostnames_go">
-<a href="#clonecustomhostnames_go" style="color: inherit; text-decoration: inherit;">Clone<wbr>Custom<wbr>Host<wbr>Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clonesourcecontrol_go">
-<a href="#clonesourcecontrol_go" style="color: inherit; text-decoration: inherit;">Clone<wbr>Source<wbr>Control</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to clone source control from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="configureloadbalancing_go">
-<a href="#configureloadbalancing_go" style="color: inherit; text-decoration: inherit;">Configure<wbr>Load<wbr>Balancing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to configure load balancing for source and destination app.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="correlationid_go">
-<a href="#correlationid_go" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Id</a>
+        <span id="accesskey_go">
+<a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Correlation ID of cloning operation. This ID ties multiple cloning operations
-together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Access key for the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hostingenvironment_go">
-<a href="#hostingenvironment_go" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment</a>
+        <span id="accountname_go">
+<a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}App Service Environment.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="overwrite_go">
-<a href="#overwrite_go" style="color: inherit; text-decoration: inherit;">Overwrite</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to overwrite destination app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourcewebapplocation_go">
-<a href="#sourcewebapplocation_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Web<wbr>App<wbr>Location</a>
+        <span id="mountpath_go">
+<a href="#mountpath_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of source app ex: West US or North Europe{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Path to mount the storage within the site's runtime environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trafficmanagerprofileid_go">
-<a href="#trafficmanagerprofileid_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Manager<wbr>Profile<wbr>Id</a>
+        <span id="sharename_go">
+<a href="#sharename_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the file share (container name, for Blob storage).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trafficmanagerprofilename_go">
-<a href="#trafficmanagerprofilename_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Manager<wbr>Profile<wbr>Name</a>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type of storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="sourcewebappid_nodejs">
-<a href="#sourcewebappid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Web<wbr>App<wbr>Id</a>
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource ID of the source app. App resource ID is of the form 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}State of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="appsettingsoverrides_nodejs">
-<a href="#appsettingsoverrides_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Application setting overrides for cloned app. If specified, these settings override the settings cloned 
-from source app. Otherwise, application settings from source app are retained.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clonecustomhostnames_nodejs">
-<a href="#clonecustomhostnames_nodejs" style="color: inherit; text-decoration: inherit;">clone<wbr>Custom<wbr>Host<wbr>Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clonesourcecontrol_nodejs">
-<a href="#clonesourcecontrol_nodejs" style="color: inherit; text-decoration: inherit;">clone<wbr>Source<wbr>Control</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to clone source control from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="configureloadbalancing_nodejs">
-<a href="#configureloadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">configure<wbr>Load<wbr>Balancing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to configure load balancing for source and destination app.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="correlationid_nodejs">
-<a href="#correlationid_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Id</a>
+        <span id="accesskey_nodejs">
+<a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Correlation ID of cloning operation. This ID ties multiple cloning operations
-together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Access key for the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hostingenvironment_nodejs">
-<a href="#hostingenvironment_nodejs" style="color: inherit; text-decoration: inherit;">hosting<wbr>Environment</a>
+        <span id="accountname_nodejs">
+<a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}App Service Environment.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="overwrite_nodejs">
-<a href="#overwrite_nodejs" style="color: inherit; text-decoration: inherit;">overwrite</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to overwrite destination app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourcewebapplocation_nodejs">
-<a href="#sourcewebapplocation_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Web<wbr>App<wbr>Location</a>
+        <span id="mountpath_nodejs">
+<a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of source app ex: West US or North Europe{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Path to mount the storage within the site's runtime environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trafficmanagerprofileid_nodejs">
-<a href="#trafficmanagerprofileid_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Manager<wbr>Profile<wbr>Id</a>
+        <span id="sharename_nodejs">
+<a href="#sharename_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the file share (container name, for Blob storage).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trafficmanagerprofilename_nodejs">
-<a href="#trafficmanagerprofilename_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Manager<wbr>Profile<wbr>Name</a>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type of storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="source_web_app_id_python">
-<a href="#source_web_app_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>web_<wbr>app_<wbr>id</a>
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource ID of the source app. App resource ID is of the form 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}State of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="app_settings_overrides_python">
-<a href="#app_settings_overrides_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Application setting overrides for cloned app. If specified, these settings override the settings cloned 
-from source app. Otherwise, application settings from source app are retained.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clone_custom_host_names_python">
-<a href="#clone_custom_host_names_python" style="color: inherit; text-decoration: inherit;">clone_<wbr>custom_<wbr>host_<wbr>names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="clone_source_control_python">
-<a href="#clone_source_control_python" style="color: inherit; text-decoration: inherit;">clone_<wbr>source_<wbr>control</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to clone source control from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="configure_load_balancing_python">
-<a href="#configure_load_balancing_python" style="color: inherit; text-decoration: inherit;">configure_<wbr>load_<wbr>balancing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to configure load balancing for source and destination app.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="correlation_id_python">
-<a href="#correlation_id_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>id</a>
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Correlation ID of cloning operation. This ID ties multiple cloning operations
-together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Access key for the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="hosting_environment_python">
-<a href="#hosting_environment_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>environment</a>
+        <span id="account_name_python">
+<a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}App Service Environment.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="overwrite_python">
-<a href="#overwrite_python" style="color: inherit; text-decoration: inherit;">overwrite</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}<code>true</code> to overwrite destination app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="source_web_app_location_python">
-<a href="#source_web_app_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>web_<wbr>app_<wbr>location</a>
+        <span id="mount_path_python">
+<a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location of source app ex: West US or North Europe{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Path to mount the storage within the site's runtime environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="traffic_manager_profile_id_python">
-<a href="#traffic_manager_profile_id_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>manager_<wbr>profile_<wbr>id</a>
+        <span id="share_name_python">
+<a href="#share_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form 
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the file share (container name, for Blob storage).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="traffic_manager_profile_name_python">
-<a href="#traffic_manager_profile_name_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>manager_<wbr>profile_<wbr>name</a>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type of storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connstringinforesponse">Conn<wbr>String<wbr>Info<wbr>Response</h4>
@@ -4124,14 +3976,6 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="systemdata_csharp">
-<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -4202,14 +4046,6 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="systemdata_go">
-<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4282,14 +4118,6 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="systemdata_nodejs">
-<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -4360,14 +4188,6 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="system_data_python">
-<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4864,6 +4684,14 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
     </dt>
     <dd>{{% md %}}Auto-swap slot name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azurestorageaccounts_csharp">
+<a href="#azurestorageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of Azure Storage Accounts.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="connectionstrings_csharp">
 <a href="#connectionstrings_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
@@ -4919,6 +4747,25 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionappscalelimit_csharp">
+<a href="#functionappscalelimit_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>App<wbr>Scale<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers that a site can scale out to.
+This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionsruntimescalemonitoringenabled_csharp">
+<a href="#functionsruntimescalemonitoringenabled_csharp" style="color: inherit; text-decoration: inherit;">Functions<wbr>Runtime<wbr>Scale<wbr>Monitoring<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
+the ScaleController will not monitor event sources directly, but will instead call to the
+runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="handlermappings_csharp">
 <a href="#handlermappings_csharp" style="color: inherit; text-decoration: inherit;">Handler<wbr>Mappings</a>
@@ -4984,6 +4831,14 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
     </dt>
     <dd>{{% md %}}Java version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keyvaultreferenceidentity_csharp">
+<a href="#keyvaultreferenceidentity_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="limits_csharp">
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
@@ -5047,6 +4902,15 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumelasticinstancecount_csharp">
+<a href="#minimumelasticinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Elastic<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of minimum instance count for a site
+This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netframeworkversion_csharp">
 <a href="#netframeworkversion_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Framework<wbr>Version</a>
@@ -5241,6 +5105,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}<code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="websitetimezone_csharp">
+<a href="#websitetimezone_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="windowsfxversion_csharp">
 <a href="#windowsfxversion_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Fx<wbr>Version</a>
 </span>
@@ -5333,6 +5205,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}Auto-swap slot name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azurestorageaccounts_go">
+<a href="#azurestorageaccounts_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}List of Azure Storage Accounts.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="connectionstrings_go">
 <a href="#connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
@@ -5388,6 +5268,25 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionappscalelimit_go">
+<a href="#functionappscalelimit_go" style="color: inherit; text-decoration: inherit;">Function<wbr>App<wbr>Scale<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers that a site can scale out to.
+This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionsruntimescalemonitoringenabled_go">
+<a href="#functionsruntimescalemonitoringenabled_go" style="color: inherit; text-decoration: inherit;">Functions<wbr>Runtime<wbr>Scale<wbr>Monitoring<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
+the ScaleController will not monitor event sources directly, but will instead call to the
+runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="handlermappings_go">
 <a href="#handlermappings_go" style="color: inherit; text-decoration: inherit;">Handler<wbr>Mappings</a>
@@ -5453,6 +5352,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}Java version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keyvaultreferenceidentity_go">
+<a href="#keyvaultreferenceidentity_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="limits_go">
 <a href="#limits_go" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
@@ -5516,6 +5423,15 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumelasticinstancecount_go">
+<a href="#minimumelasticinstancecount_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Elastic<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of minimum instance count for a site
+This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netframeworkversion_go">
 <a href="#netframeworkversion_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Framework<wbr>Version</a>
@@ -5710,6 +5626,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}<code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="websitetimezone_go">
+<a href="#websitetimezone_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="windowsfxversion_go">
 <a href="#windowsfxversion_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Fx<wbr>Version</a>
 </span>
@@ -5802,6 +5726,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}Auto-swap slot name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azurestorageaccounts_nodejs">
+<a href="#azurestorageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}List of Azure Storage Accounts.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="connectionstrings_nodejs">
 <a href="#connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
 </span>
@@ -5857,6 +5789,25 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionappscalelimit_nodejs">
+<a href="#functionappscalelimit_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Scale<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers that a site can scale out to.
+This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionsruntimescalemonitoringenabled_nodejs">
+<a href="#functionsruntimescalemonitoringenabled_nodejs" style="color: inherit; text-decoration: inherit;">functions<wbr>Runtime<wbr>Scale<wbr>Monitoring<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
+the ScaleController will not monitor event sources directly, but will instead call to the
+runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="handlermappings_nodejs">
 <a href="#handlermappings_nodejs" style="color: inherit; text-decoration: inherit;">handler<wbr>Mappings</a>
@@ -5922,6 +5873,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}Java version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keyvaultreferenceidentity_nodejs">
+<a href="#keyvaultreferenceidentity_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Reference<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="limits_nodejs">
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
@@ -5985,6 +5944,15 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumelasticinstancecount_nodejs">
+<a href="#minimumelasticinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Elastic<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of minimum instance count for a site
+This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netframeworkversion_nodejs">
 <a href="#netframeworkversion_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Framework<wbr>Version</a>
@@ -6179,6 +6147,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}<code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="websitetimezone_nodejs">
+<a href="#websitetimezone_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="windowsfxversion_nodejs">
 <a href="#windowsfxversion_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Fx<wbr>Version</a>
 </span>
@@ -6271,6 +6247,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}Auto-swap slot name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azure_storage_accounts_python">
+<a href="#azure_storage_accounts_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}List of Azure Storage Accounts.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="connection_strings_python">
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span>
@@ -6326,6 +6310,25 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="function_app_scale_limit_python">
+<a href="#function_app_scale_limit_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>scale_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers that a site can scale out to.
+This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functions_runtime_scale_monitoring_enabled_python">
+<a href="#functions_runtime_scale_monitoring_enabled_python" style="color: inherit; text-decoration: inherit;">functions_<wbr>runtime_<wbr>scale_<wbr>monitoring_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
+the ScaleController will not monitor event sources directly, but will instead call to the
+runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="handler_mappings_python">
 <a href="#handler_mappings_python" style="color: inherit; text-decoration: inherit;">handler_<wbr>mappings</a>
@@ -6391,6 +6394,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}Java version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="key_vault_reference_identity_python">
+<a href="#key_vault_reference_identity_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="limits_python">
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
@@ -6454,6 +6465,15 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_elastic_instance_count_python">
+<a href="#minimum_elastic_instance_count_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>elastic_<wbr>instance_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of minimum instance count for a site
+This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_framework_version_python">
 <a href="#net_framework_version_python" style="color: inherit; text-decoration: inherit;">net_<wbr>framework_<wbr>version</a>
@@ -6647,6 +6667,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="website_time_zone_python">
+<a href="#website_time_zone_python" style="color: inherit; text-decoration: inherit;">website_<wbr>time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_fx_version_python">
 <a href="#windows_fx_version_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>fx_<wbr>version</a>
@@ -7060,6 +7088,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request Path.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timeinterval_csharp">
 <a href="#timeinterval_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Interval</a>
 </span>
@@ -7087,6 +7123,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request Path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeinterval_go">
 <a href="#timeinterval_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Interval</a>
@@ -7116,6 +7160,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request Path.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timeinterval_nodejs">
 <a href="#timeinterval_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Interval</a>
 </span>
@@ -7143,6 +7195,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Request Path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_interval_python">
 <a href="#time_interval_python" style="color: inherit; text-decoration: inherit;">time_<wbr>interval</a>
@@ -7175,6 +7235,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request Path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -7220,6 +7288,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request Path{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -7263,6 +7339,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request Path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -7308,6 +7392,14 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Request Path{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -7341,216 +7433,152 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
     <dd>{{% md %}}Win32 error code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+<h4 id="statuscodesrangebasedtriggerresponse">Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Response</h4>
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="createdat_csharp">
-<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdby_csharp">
-<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdbytype_csharp">
-<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+        <span id="statuscodes_csharp">
+<a href="#statuscodes_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastmodifiedat_csharp">
-<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+        <span id="timeinterval_csharp">
+<a href="#timeinterval_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_csharp">
-<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_csharp">
-<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="createdat_go">
-<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdby_go">
-<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdbytype_go">
-<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+        <span id="statuscodes_go">
+<a href="#statuscodes_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastmodifiedat_go">
-<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+        <span id="timeinterval_go">
+<a href="#timeinterval_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_go">
-<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_go">
-<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="createdat_nodejs">
-<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdby_nodejs">
-<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdbytype_nodejs">
-<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+        <span id="statuscodes_nodejs">
+<a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastmodifiedat_nodejs">
-<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+        <span id="timeinterval_nodejs">
+<a href="#timeinterval_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_nodejs">
-<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_nodejs">
-<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="created_at_python">
-<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="created_by_python">
-<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="created_by_type_python">
-<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+        <span id="status_codes_python">
+<a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="last_modified_at_python">
-<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+        <span id="time_interval_python">
+<a href="#time_interval_python" style="color: inherit; text-decoration: inherit;">time_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="last_modified_by_python">
-<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="last_modified_by_type_python">
-<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualapplicationresponse">Virtual<wbr>Application<wbr>Response</h4>

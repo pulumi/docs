@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.documentdb.MongoDBResourceMongoDB
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB MongoDB database.
-API Version: 2021-01-15.
+API Version: 2021-03-15.
 
 {{% examples %}}
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.synapse.getSqlPoolTransparentData
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a Sql pool transparent data encryption configuration.
-API Version: 2020-12-01.
+API Version: 2021-03-01.
 
 
 

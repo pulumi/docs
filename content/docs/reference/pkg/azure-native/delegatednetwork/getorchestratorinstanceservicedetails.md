@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.delegatednetwork.getOrchestratorI
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of a orchestrator.
-API Version: 2020-08-08-preview.
+API Version: 2021-03-15.
 
 
 
@@ -59,7 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -79,7 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -99,7 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -119,7 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -148,7 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Delegated<wbr>Network.<wbr>Outputs.<wbr>Controller<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -204,7 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}K8s APIServer url{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterrootca_csharp">
 <a href="#clusterrootca_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Root<wbr>CA</a>
@@ -246,6 +246,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privatelinkresourceid_csharp">
+<a href="#privatelinkresourceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -264,7 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetailsresponse">Controller<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -320,7 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}K8s APIServer url{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterrootca_go">
 <a href="#clusterrootca_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Root<wbr>CA</a>
@@ -362,6 +370,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privatelinkresourceid_go">
+<a href="#privatelinkresourceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -380,7 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetailsresponse">Controller<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -436,7 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}K8s APIServer url{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterrootca_nodejs">
 <a href="#clusterrootca_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Root<wbr>CA</a>
@@ -478,6 +494,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privatelinkresourceid_nodejs">
+<a href="#privatelinkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -496,7 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetailsresponse">Controller<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -552,7 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}K8s APIServer url{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_root_ca_python">
 <a href="#cluster_root_ca_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>root_<wbr>ca</a>
@@ -593,6 +617,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="private_link_resource_id_python">
+<a href="#private_link_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

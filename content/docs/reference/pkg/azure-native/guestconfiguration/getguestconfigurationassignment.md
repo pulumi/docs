@@ -1164,7 +1164,7 @@ The following output properties are available:
 <a href="#allowmoduleoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Module<wbr>Overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1188,7 @@ The following output properties are available:
 <a href="#rebootifneeded_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>If<wbr>Needed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1216,7 +1216,7 @@ The following output properties are available:
 <a href="#allowmoduleoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Module<wbr>Overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1240,7 +1240,7 @@ The following output properties are available:
 <a href="#rebootifneeded_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>If<wbr>Needed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1268,7 +1268,7 @@ The following output properties are available:
 <a href="#allowmoduleoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Module<wbr>Overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1292,7 +1292,7 @@ The following output properties are available:
 <a href="#rebootifneeded_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>If<wbr>Needed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1320,7 +1320,7 @@ The following output properties are available:
 <a href="#allow_module_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>module_<wbr>overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1344,7 +1344,7 @@ The following output properties are available:
 <a href="#reboot_if_needed_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>if_<wbr>needed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

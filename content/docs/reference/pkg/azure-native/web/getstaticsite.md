@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.web.getStaticSite function with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Static Site ARM resource.
-API Version: 2020-10-01.
+API Version: 2020-12-01.
 
 
 
@@ -142,6 +142,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="contentdistributionendpoint_csharp">
+<a href="#contentdistributionendpoint_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Distribution<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content distribution endpoint for the static site.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="customdomains_csharp">
 <a href="#customdomains_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domains</a>
 </span>
@@ -166,6 +174,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="keyvaultreferenceidentity_csharp">
+<a href="#keyvaultreferenceidentity_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -182,13 +198,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_csharp">
-<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+        <span id="provider_csharp">
+<a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider that submitted the last deployment to the primary environment of the static site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -197,6 +213,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userprovidedfunctionapps_csharp">
+<a href="#userprovidedfunctionapps_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Provided<wbr>Function<wbr>Apps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticsiteuserprovidedfunctionappresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>Static<wbr>Site<wbr>User<wbr>Provided<wbr>Function<wbr>App<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}User provided function apps registered with the static site{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="branch_csharp">
 <a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -213,6 +237,14 @@ The following output properties are available:
         <span class="property-type"><a href="#staticsitebuildpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>Static<wbr>Site<wbr>Build<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Build properties to configure on the repository.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -252,11 +284,27 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="templateproperties_csharp">
+<a href="#templateproperties_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticsitetemplateoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>Static<wbr>Site<wbr>Template<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Template options for generating a new repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="contentdistributionendpoint_go">
+<a href="#contentdistributionendpoint_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Distribution<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content distribution endpoint for the static site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customdomains_go">
 <a href="#customdomains_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domains</a>
@@ -282,6 +330,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="keyvaultreferenceidentity_go">
+<a href="#keyvaultreferenceidentity_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -298,13 +354,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_go">
-<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+        <span id="provider_go">
+<a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider that submitted the last deployment to the primary environment of the static site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -313,6 +369,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userprovidedfunctionapps_go">
+<a href="#userprovidedfunctionapps_go" style="color: inherit; text-decoration: inherit;">User<wbr>Provided<wbr>Function<wbr>Apps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticsiteuserprovidedfunctionappresponse">[]Static<wbr>Site<wbr>User<wbr>Provided<wbr>Function<wbr>App<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}User provided function apps registered with the static site{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="branch_go">
 <a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -329,6 +393,14 @@ The following output properties are available:
         <span class="property-type"><a href="#staticsitebuildpropertiesresponse">Static<wbr>Site<wbr>Build<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Build properties to configure on the repository.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -368,11 +440,27 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="templateproperties_go">
+<a href="#templateproperties_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticsitetemplateoptionsresponse">Static<wbr>Site<wbr>Template<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Template options for generating a new repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="contentdistributionendpoint_nodejs">
+<a href="#contentdistributionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Distribution<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content distribution endpoint for the static site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customdomains_nodejs">
 <a href="#customdomains_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domains</a>
@@ -398,6 +486,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="keyvaultreferenceidentity_nodejs">
+<a href="#keyvaultreferenceidentity_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Reference<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -414,13 +510,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_nodejs">
-<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+        <span id="provider_nodejs">
+<a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider that submitted the last deployment to the primary environment of the static site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -429,6 +525,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userprovidedfunctionapps_nodejs">
+<a href="#userprovidedfunctionapps_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Provided<wbr>Function<wbr>Apps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticsiteuserprovidedfunctionappresponse">Static<wbr>Site<wbr>User<wbr>Provided<wbr>Function<wbr>App<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}User provided function apps registered with the static site{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="branch_nodejs">
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -445,6 +549,14 @@ The following output properties are available:
         <span class="property-type"><a href="#staticsitebuildpropertiesresponse">Static<wbr>Site<wbr>Build<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Build properties to configure on the repository.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -484,11 +596,27 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="templateproperties_nodejs">
+<a href="#templateproperties_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticsitetemplateoptionsresponse">Static<wbr>Site<wbr>Template<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Template options for generating a new repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="content_distribution_endpoint_python">
+<a href="#content_distribution_endpoint_python" style="color: inherit; text-decoration: inherit;">content_<wbr>distribution_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The content distribution endpoint for the static site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="custom_domains_python">
 <a href="#custom_domains_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domains</a>
@@ -514,6 +642,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="key_vault_reference_identity_python">
+<a href="#key_vault_reference_identity_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -530,13 +666,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="system_data_python">
-<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+        <span id="provider_python">
+<a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The provider that submitted the last deployment to the primary environment of the static site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -545,6 +681,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="user_provided_function_apps_python">
+<a href="#user_provided_function_apps_python" style="color: inherit; text-decoration: inherit;">user_<wbr>provided_<wbr>function_<wbr>apps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticsiteuserprovidedfunctionappresponse">Sequence[Static<wbr>Site<wbr>User<wbr>Provided<wbr>Function<wbr>App<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}User provided function apps registered with the static site{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="branch_python">
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -561,6 +705,14 @@ The following output properties are available:
         <span class="property-type"><a href="#staticsitebuildpropertiesresponse">Static<wbr>Site<wbr>Build<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Build properties to configure on the repository.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -600,7 +752,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="template_properties_python">
+<a href="#template_properties_python" style="color: inherit; text-decoration: inherit;">template_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticsitetemplateoptionsresponse">Static<wbr>Site<wbr>Template<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Template options for generating a new repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -725,6 +885,238 @@ The following output properties are available:
     <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedserviceidentityresponseuserassignedidentities">Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client Id of user assigned identity{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of user assigned identity{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client Id of user assigned identity{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of user assigned identity{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client Id of user assigned identity{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of user assigned identity{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Client Id of user assigned identity{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of user assigned identity{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="skucapacityresponse">Sku<wbr>Capacity<wbr>Response</h4>
 
 
@@ -739,6 +1131,14 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="elasticmaximum_csharp">
+<a href="#elasticmaximum_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of Elastic workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
 <a href="#maximum_csharp" style="color: inherit; text-decoration: inherit;">Maximum</a>
@@ -776,6 +1176,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="elasticmaximum_go">
+<a href="#elasticmaximum_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of Elastic workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maximum_go">
 <a href="#maximum_go" style="color: inherit; text-decoration: inherit;">Maximum</a>
 </span>
@@ -812,6 +1220,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="elasticmaximum_nodejs">
+<a href="#elasticmaximum_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of Elastic workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maximum_nodejs">
 <a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span>
@@ -847,6 +1263,14 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="elastic_maximum_python">
+<a href="#elastic_maximum_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of Elastic workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
@@ -1156,6 +1580,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="apibuildcommand_csharp">
+<a href="#apibuildcommand_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Build<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom command to run during deployment of the Azure Functions API application.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="apilocation_csharp">
 <a href="#apilocation_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Location</a>
 </span>
@@ -1170,7 +1602,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path of the app artifacts after building.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appbuildcommand_csharp">
+<a href="#appbuildcommand_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Build<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom command to run during deployment of the static content application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applocation_csharp">
 <a href="#applocation_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Location</a>
@@ -1178,11 +1618,43 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the app code within the repository.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path to the app code within the repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="githubactionsecretnameoverride_csharp">
+<a href="#githubactionsecretnameoverride_csharp" style="color: inherit; text-decoration: inherit;">Github<wbr>Action<wbr>Secret<wbr>Name<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Github Action secret name override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="outputlocation_csharp">
+<a href="#outputlocation_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The output path of the app after building.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgithubactionworkflowgeneration_csharp">
+<a href="#skipgithubactionworkflowgeneration_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Github<wbr>Action<wbr>Workflow<wbr>Generation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip Github Action workflow generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="apibuildcommand_go">
+<a href="#apibuildcommand_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Build<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom command to run during deployment of the Azure Functions API application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apilocation_go">
 <a href="#apilocation_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Location</a>
@@ -1198,7 +1670,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path of the app artifacts after building.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appbuildcommand_go">
+<a href="#appbuildcommand_go" style="color: inherit; text-decoration: inherit;">App<wbr>Build<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom command to run during deployment of the static content application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applocation_go">
 <a href="#applocation_go" style="color: inherit; text-decoration: inherit;">App<wbr>Location</a>
@@ -1206,11 +1686,43 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the app code within the repository.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path to the app code within the repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="githubactionsecretnameoverride_go">
+<a href="#githubactionsecretnameoverride_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Action<wbr>Secret<wbr>Name<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Github Action secret name override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="outputlocation_go">
+<a href="#outputlocation_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The output path of the app after building.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgithubactionworkflowgeneration_go">
+<a href="#skipgithubactionworkflowgeneration_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Github<wbr>Action<wbr>Workflow<wbr>Generation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip Github Action workflow generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="apibuildcommand_nodejs">
+<a href="#apibuildcommand_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Build<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom command to run during deployment of the Azure Functions API application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apilocation_nodejs">
 <a href="#apilocation_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Location</a>
@@ -1226,7 +1738,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path of the app artifacts after building.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appbuildcommand_nodejs">
+<a href="#appbuildcommand_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Build<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom command to run during deployment of the static content application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applocation_nodejs">
 <a href="#applocation_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Location</a>
@@ -1234,11 +1754,43 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the app code within the repository.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path to the app code within the repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="githubactionsecretnameoverride_nodejs">
+<a href="#githubactionsecretnameoverride_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Action<wbr>Secret<wbr>Name<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Github Action secret name override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="outputlocation_nodejs">
+<a href="#outputlocation_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The output path of the app after building.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgithubactionworkflowgeneration_nodejs">
+<a href="#skipgithubactionworkflowgeneration_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Github<wbr>Action<wbr>Workflow<wbr>Generation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Skip Github Action workflow generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="api_build_command_python">
+<a href="#api_build_command_python" style="color: inherit; text-decoration: inherit;">api_<wbr>build_<wbr>command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A custom command to run during deployment of the Azure Functions API application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_location_python">
 <a href="#api_location_python" style="color: inherit; text-decoration: inherit;">api_<wbr>location</a>
@@ -1254,7 +1806,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path of the app artifacts after building.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="app_build_command_python">
+<a href="#app_build_command_python" style="color: inherit; text-decoration: inherit;">app_<wbr>build_<wbr>command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A custom command to run during deployment of the static content application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_location_python">
 <a href="#app_location_python" style="color: inherit; text-decoration: inherit;">app_<wbr>location</a>
@@ -1262,219 +1822,455 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to the app code within the repository.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The path to the app code within the repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="github_action_secret_name_override_python">
+<a href="#github_action_secret_name_override_python" style="color: inherit; text-decoration: inherit;">github_<wbr>action_<wbr>secret_<wbr>name_<wbr>override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Github Action secret name override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="output_location_python">
+<a href="#output_location_python" style="color: inherit; text-decoration: inherit;">output_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The output path of the app after building.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_github_action_workflow_generation_python">
+<a href="#skip_github_action_workflow_generation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>github_<wbr>action_<wbr>workflow_<wbr>generation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip Github Action workflow generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+<h4 id="staticsitetemplateoptionsresponse">Static<wbr>Site<wbr>Template<wbr>Options<wbr>Response</h4>
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="createdat_csharp">
-<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Description of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdby_csharp">
-<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+        <span id="isprivate_csharp">
+<a href="#isprivate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Private</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdbytype_csharp">
-<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+        <span id="owner_csharp">
+<a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Owner of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastmodifiedat_csharp">
-<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+        <span id="repositoryname_csharp">
+<a href="#repositoryname_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastmodifiedby_csharp">
-<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+        <span id="templaterepositoryurl_csharp">
+<a href="#templaterepositoryurl_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Repository<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_csharp">
-<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}URL of the template repository. The newly generated repository will be based on this one.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="createdat_go">
-<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Description of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdby_go">
-<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+        <span id="isprivate_go">
+<a href="#isprivate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Private</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdbytype_go">
-<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+        <span id="owner_go">
+<a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Owner of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastmodifiedat_go">
-<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+        <span id="repositoryname_go">
+<a href="#repositoryname_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastmodifiedby_go">
-<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+        <span id="templaterepositoryurl_go">
+<a href="#templaterepositoryurl_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Repository<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_go">
-<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}URL of the template repository. The newly generated repository will be based on this one.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="createdat_nodejs">
-<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Description of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdby_nodejs">
-<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+        <span id="isprivate_nodejs">
+<a href="#isprivate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Private</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="createdbytype_nodejs">
-<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+        <span id="owner_nodejs">
+<a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Owner of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastmodifiedat_nodejs">
-<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+        <span id="repositoryname_nodejs">
+<a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastmodifiedby_nodejs">
-<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+        <span id="templaterepositoryurl_nodejs">
+<a href="#templaterepositoryurl_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Repository<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_nodejs">
-<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}URL of the template repository. The newly generated repository will be based on this one.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="created_at_python">
-<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Description of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="created_by_python">
-<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+        <span id="is_private_python">
+<a href="#is_private_python" style="color: inherit; text-decoration: inherit;">is_<wbr>private</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="created_by_type_python">
-<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+        <span id="owner_python">
+<a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Owner of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="last_modified_at_python">
-<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the newly generated repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="last_modified_by_python">
-<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+        <span id="template_repository_url_python">
+<a href="#template_repository_url_python" style="color: inherit; text-decoration: inherit;">template_<wbr>repository_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the template repository. The newly generated repository will be based on this one.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="staticsiteuserprovidedfunctionappresponse">Static<wbr>Site<wbr>User<wbr>Provided<wbr>Function<wbr>App<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="createdon_csharp">
+<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The date and time on which the function app was registered with the static site.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="last_modified_by_type_python">
-<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+        <span id="functionappregion_csharp">
+<a href="#functionappregion_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>App<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the function app registered with the static site{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionappresourceid_csharp">
+<a href="#functionappresourceid_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>App<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the function app registered with the static site{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="createdon_go">
+<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The date and time on which the function app was registered with the static site.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionappregion_go">
+<a href="#functionappregion_go" style="color: inherit; text-decoration: inherit;">Function<wbr>App<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the function app registered with the static site{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionappresourceid_go">
+<a href="#functionappresourceid_go" style="color: inherit; text-decoration: inherit;">Function<wbr>App<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the function app registered with the static site{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="createdon_nodejs">
+<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The date and time on which the function app was registered with the static site.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionappregion_nodejs">
+<a href="#functionappregion_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the function app registered with the static site{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="functionappresourceid_nodejs">
+<a href="#functionappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the function app registered with the static site{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="created_on_python">
+<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The date and time on which the function app was registered with the static site.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="function_app_region_python">
+<a href="#function_app_region_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region of the function app registered with the static site{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="function_app_resource_id_python">
+<a href="#function_app_resource_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource id of the function app registered with the static site{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

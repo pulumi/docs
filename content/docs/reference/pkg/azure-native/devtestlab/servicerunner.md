@@ -12,13 +12,157 @@ meta_desc: "Documentation for the azure-native.devtestlab.ServiceRunner resource
 
 A container for a managed identity to execute DevTest lab services.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:ServiceRunner myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/servicerunners/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### ServiceRunners_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceRunner = new AzureNative.DevTestLab.ServiceRunner("serviceRunner", new AzureNative.DevTestLab.ServiceRunnerArgs
+        {
+            Identity = new AzureNative.DevTestLab.Inputs.IdentityPropertiesArgs
+            {
+                ClientSecretUrl = "{identityClientSecretUrl}",
+                PrincipalId = "{identityPrincipalId}",
+                TenantId = "{identityTenantId}",
+                Type = "{identityType}",
+            },
+            LabName = "{devtestlabName}",
+            Location = "{location}",
+            Name = "{servicerunnerName}",
+            ResourceGroupName = "resourceGroupName",
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewServiceRunner(ctx, "serviceRunner", &devtestlab.ServiceRunnerArgs{
+			Identity: &devtestlab.IdentityPropertiesArgs{
+				ClientSecretUrl: pulumi.String("{identityClientSecretUrl}"),
+				PrincipalId:     pulumi.String("{identityPrincipalId}"),
+				TenantId:        pulumi.String("{identityTenantId}"),
+				Type:            pulumi.String("{identityType}"),
+			},
+			LabName:           pulumi.String("{devtestlabName}"),
+			Location:          pulumi.String("{location}"),
+			Name:              pulumi.String("{servicerunnerName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+service_runner = azure_native.devtestlab.ServiceRunner("serviceRunner",
+    identity=azure_native.devtestlab.IdentityPropertiesArgs(
+        client_secret_url="{identityClientSecretUrl}",
+        principal_id="{identityPrincipalId}",
+        tenant_id="{identityTenantId}",
+        type="{identityType}",
+    ),
+    lab_name="{devtestlabName}",
+    location="{location}",
+    name="{servicerunnerName}",
+    resource_group_name="resourceGroupName",
+    tags={
+        "tagName1": "tagValue1",
+    })
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const serviceRunner = new azure_native.devtestlab.ServiceRunner("serviceRunner", {
+    identity: {
+        clientSecretUrl: "{identityClientSecretUrl}",
+        principalId: "{identityPrincipalId}",
+        tenantId: "{identityTenantId}",
+        type: "{identityType}",
+    },
+    labName: "{devtestlabName}",
+    location: "{location}",
+    name: "{servicerunnerName}",
+    resourceGroupName: "resourceGroupName",
+    tags: {
+        tagName1: "tagValue1",
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -509,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#managedidentitytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Managed<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -545,7 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#managedidentitytype">Managed<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -581,7 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#managedidentitytype">Managed<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -617,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#managedidentitytype">Managed<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -767,6 +911,50 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
+
+<h4 id="managedidentitytype">Managed<wbr>Identity<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned,UserAssigned</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Managed<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None</dd><dt>Managed<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>Managed<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>Managed<wbr>Identity<wbr>Type_System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned,UserAssigned</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned,UserAssigned</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned</dd><dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned</dd><dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
+    <dd>SystemAssigned,UserAssigned</dd></dl>
+{{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:ServiceRunner myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/servicerunners/{name} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

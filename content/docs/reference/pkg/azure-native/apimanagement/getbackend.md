@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.apimanagement.getBackend function
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Backend details.
-API Version: 2019-12-01.
+API Version: 2020-12-01.
 
 
 
@@ -682,7 +682,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificateids_csharp">
+<a href="#certificateids_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of Client Certificate Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_csharp">
 <a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -718,7 +726,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificateids_go">
+<a href="#certificateids_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of Client Certificate Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_go">
 <a href="#header_go" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -754,7 +770,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificateids_nodejs">
+<a href="#certificateids_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of Client Certificate Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_nodejs">
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
@@ -790,7 +814,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_ids_python">
+<a href="#certificate_ids_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of Client Certificate Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_python">
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
@@ -984,14 +1016,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clientcertificatethumbprint_csharp">
-<a href="#clientcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificatethumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="managementendpoints_csharp">
 <a href="#managementendpoints_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Endpoints</a>
 </span>
@@ -999,6 +1023,22 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificateid_csharp">
+<a href="#clientcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate id for the management endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificatethumbprint_csharp">
+<a href="#clientcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificatethumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpartitionresolutionretries_csharp">
 <a href="#maxpartitionresolutionretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Partition<wbr>Resolution<wbr>Retries</a>
@@ -1028,14 +1068,6 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clientcertificatethumbprint_go">
-<a href="#clientcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificatethumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="managementendpoints_go">
 <a href="#managementendpoints_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Endpoints</a>
 </span>
@@ -1043,6 +1075,22 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificateid_go">
+<a href="#clientcertificateid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate id for the management endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificatethumbprint_go">
+<a href="#clientcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificatethumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpartitionresolutionretries_go">
 <a href="#maxpartitionresolutionretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Partition<wbr>Resolution<wbr>Retries</a>
@@ -1072,14 +1120,6 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clientcertificatethumbprint_nodejs">
-<a href="#clientcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificatethumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="managementendpoints_nodejs">
 <a href="#managementendpoints_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Endpoints</a>
 </span>
@@ -1087,6 +1127,22 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificateid_nodejs">
+<a href="#clientcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate id for the management endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificatethumbprint_nodejs">
+<a href="#clientcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificatethumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpartitionresolutionretries_nodejs">
 <a href="#maxpartitionresolutionretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Partition<wbr>Resolution<wbr>Retries</a>
@@ -1116,14 +1172,6 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="client_certificatethumbprint_python">
-<a href="#client_certificatethumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificatethumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="management_endpoints_python">
 <a href="#management_endpoints_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoints</a>
 </span>
@@ -1131,6 +1179,22 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_certificate_id_python">
+<a href="#client_certificate_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client certificate id for the management endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_certificatethumbprint_python">
+<a href="#client_certificatethumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificatethumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_partition_resolution_retries_python">
 <a href="#max_partition_resolution_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>partition_<wbr>resolution_<wbr>retries</a>

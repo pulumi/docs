@@ -12,13 +12,237 @@ meta_desc: "Documentation for the azure-native.devtestlab.Schedule resource with
 
 A schedule.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:Schedule myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/schedules/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Schedules_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var schedule = new AzureNative.DevTestLab.Schedule("schedule", new AzureNative.DevTestLab.ScheduleArgs
+        {
+            DailyRecurrence = new AzureNative.DevTestLab.Inputs.DayDetailsArgs
+            {
+                Time = "{timeOfTheDayTheScheduleWillOccurEveryDay}",
+            },
+            HourlyRecurrence = new AzureNative.DevTestLab.Inputs.HourDetailsArgs
+            {
+                Minute = 30,
+            },
+            LabName = "{labName}",
+            Location = "{location}",
+            Name = "{scheduleName}",
+            NotificationSettings = new AzureNative.DevTestLab.Inputs.NotificationSettingsArgs
+            {
+                EmailRecipient = "{email}",
+                NotificationLocale = "EN",
+                Status = "{Enabled|Disabled}",
+                TimeInMinutes = 15,
+                WebhookUrl = "{webhookUrl}",
+            },
+            ResourceGroupName = "resourceGroupName",
+            Status = "{Enabled|Disabled}",
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+            TargetResourceId = "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}",
+            TaskType = "{myLabVmTaskType}",
+            TimeZoneId = "Pacific Standard Time",
+            WeeklyRecurrence = new AzureNative.DevTestLab.Inputs.WeekDetailsArgs
+            {
+                Time = "{timeOfTheDayTheScheduleWillOccurOnThoseDays}",
+                Weekdays = 
+                {
+                    "Monday",
+                    "Wednesday",
+                    "Friday",
+                },
+            },
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewSchedule(ctx, "schedule", &devtestlab.ScheduleArgs{
+			DailyRecurrence: &devtestlab.DayDetailsArgs{
+				Time: pulumi.String("{timeOfTheDayTheScheduleWillOccurEveryDay}"),
+			},
+			HourlyRecurrence: &devtestlab.HourDetailsArgs{
+				Minute: pulumi.Int(30),
+			},
+			LabName:  pulumi.String("{labName}"),
+			Location: pulumi.String("{location}"),
+			Name:     pulumi.String("{scheduleName}"),
+			NotificationSettings: &devtestlab.NotificationSettingsArgs{
+				EmailRecipient:     pulumi.String("{email}"),
+				NotificationLocale: pulumi.String("EN"),
+				Status:             pulumi.String("{Enabled|Disabled}"),
+				TimeInMinutes:      pulumi.Int(15),
+				WebhookUrl:         pulumi.String("{webhookUrl}"),
+			},
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			Status:            pulumi.String("{Enabled|Disabled}"),
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+			TargetResourceId: pulumi.String("/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}"),
+			TaskType:         pulumi.String("{myLabVmTaskType}"),
+			TimeZoneId:       pulumi.String("Pacific Standard Time"),
+			WeeklyRecurrence: &devtestlab.WeekDetailsArgs{
+				Time: pulumi.String("{timeOfTheDayTheScheduleWillOccurOnThoseDays}"),
+				Weekdays: pulumi.StringArray{
+					pulumi.String("Monday"),
+					pulumi.String("Wednesday"),
+					pulumi.String("Friday"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+schedule = azure_native.devtestlab.Schedule("schedule",
+    daily_recurrence=azure_native.devtestlab.DayDetailsArgs(
+        time="{timeOfTheDayTheScheduleWillOccurEveryDay}",
+    ),
+    hourly_recurrence=azure_native.devtestlab.HourDetailsArgs(
+        minute=30,
+    ),
+    lab_name="{labName}",
+    location="{location}",
+    name="{scheduleName}",
+    notification_settings=azure_native.devtestlab.NotificationSettingsArgs(
+        email_recipient="{email}",
+        notification_locale="EN",
+        status="{Enabled|Disabled}",
+        time_in_minutes=15,
+        webhook_url="{webhookUrl}",
+    ),
+    resource_group_name="resourceGroupName",
+    status="{Enabled|Disabled}",
+    tags={
+        "tagName1": "tagValue1",
+    },
+    target_resource_id="/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}",
+    task_type="{myLabVmTaskType}",
+    time_zone_id="Pacific Standard Time",
+    weekly_recurrence=azure_native.devtestlab.WeekDetailsArgs(
+        time="{timeOfTheDayTheScheduleWillOccurOnThoseDays}",
+        weekdays=[
+            "Monday",
+            "Wednesday",
+            "Friday",
+        ],
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const schedule = new azure_native.devtestlab.Schedule("schedule", {
+    dailyRecurrence: {
+        time: "{timeOfTheDayTheScheduleWillOccurEveryDay}",
+    },
+    hourlyRecurrence: {
+        minute: 30,
+    },
+    labName: "{labName}",
+    location: "{location}",
+    name: "{scheduleName}",
+    notificationSettings: {
+        emailRecipient: "{email}",
+        notificationLocale: "EN",
+        status: "{Enabled|Disabled}",
+        timeInMinutes: 15,
+        webhookUrl: "{webhookUrl}",
+    },
+    resourceGroupName: "resourceGroupName",
+    status: "{Enabled|Disabled}",
+    tags: {
+        tagName1: "tagValue1",
+    },
+    targetResourceId: "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}",
+    taskType: "{myLabVmTaskType}",
+    timeZoneId: "Pacific Standard Time",
+    weeklyRecurrence: {
+        time: "{timeOfTheDayTheScheduleWillOccurOnThoseDays}",
+        weekdays: [
+            "Monday",
+            "Wednesday",
+            "Friday",
+        ],
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -1541,6 +1765,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:Schedule {scheduleName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/schedules/{scheduleName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

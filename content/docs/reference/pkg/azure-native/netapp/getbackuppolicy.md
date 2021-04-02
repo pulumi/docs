@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.netapp.getBackupPolicy function w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Backup policy information
-API Version: 2020-11-01.
+API Version: 2020-12-01.
 
 
 

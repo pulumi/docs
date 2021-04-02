@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.sql.ManagedInstance resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL managed instance.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 
@@ -36,7 +36,15 @@ class MyStack : Stack
         var managedInstance = new AzureNative.Sql.ManagedInstance("managedInstance", new AzureNative.Sql.ManagedInstanceArgs
         {
             AdministratorLogin = "dummylogin",
-            AdministratorLoginPassword = "<administratorLoginPassword>",
+            AdministratorLoginPassword = "PLACEHOLDER",
+            Administrators = new AzureNative.Sql.Inputs.ManagedInstanceExternalAdministratorArgs
+            {
+                AzureADOnlyAuthentication = true,
+                Login = "bob@contoso.com",
+                PrincipalType = "User",
+                Sid = "00000011-1111-2222-2222-123456789111",
+                TenantId = "00000011-1111-2222-2222-123456789111",
+            },
             Collation = "SQL_Latin1_General_CP1_CI_AS",
             DnsZonePartner = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance",
             InstancePoolId = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1",
@@ -44,6 +52,7 @@ class MyStack : Stack
             Location = "Japan East",
             MaintenanceConfigurationId = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_JapanEast_MI_1",
             ManagedInstanceName = "testinstance",
+            MinimalTlsVersion = "1.2",
             ProxyOverride = "Redirect",
             PublicDataEndpointEnabled = false,
             ResourceGroupName = "testrg",
@@ -87,7 +96,14 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.NewManagedInstance(ctx, "managedInstance", &sql.ManagedInstanceArgs{
 			AdministratorLogin:         pulumi.String("dummylogin"),
-			AdministratorLoginPassword: pulumi.String("<administratorLoginPassword>"),
+			AdministratorLoginPassword: pulumi.String("PLACEHOLDER"),
+			Administrators: &sql.ManagedInstanceExternalAdministratorArgs{
+				AzureADOnlyAuthentication: pulumi.Bool(true),
+				Login:                     pulumi.String("bob@contoso.com"),
+				PrincipalType:             pulumi.String("User"),
+				Sid:                       pulumi.String("00000011-1111-2222-2222-123456789111"),
+				TenantId:                  pulumi.String("00000011-1111-2222-2222-123456789111"),
+			},
 			Collation:                  pulumi.String("SQL_Latin1_General_CP1_CI_AS"),
 			DnsZonePartner:             pulumi.String("/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance"),
 			InstancePoolId:             pulumi.String("/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1"),
@@ -95,6 +111,7 @@ func main() {
 			Location:                   pulumi.String("Japan East"),
 			MaintenanceConfigurationId: pulumi.String("/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_JapanEast_MI_1"),
 			ManagedInstanceName:        pulumi.String("testinstance"),
+			MinimalTlsVersion:          pulumi.String("1.2"),
 			ProxyOverride:              pulumi.String("Redirect"),
 			PublicDataEndpointEnabled:  pulumi.Bool(false),
 			ResourceGroupName:          pulumi.String("testrg"),
@@ -133,7 +150,14 @@ import pulumi_azure_native as azure_native
 
 managed_instance = azure_native.sql.ManagedInstance("managedInstance",
     administrator_login="dummylogin",
-    administrator_login_password="<administratorLoginPassword>",
+    administrator_login_password="PLACEHOLDER",
+    administrators=azure_native.sql.ManagedInstanceExternalAdministratorArgs(
+        azure_ad_only_authentication=True,
+        login="bob@contoso.com",
+        principal_type="User",
+        sid="00000011-1111-2222-2222-123456789111",
+        tenant_id="00000011-1111-2222-2222-123456789111",
+    ),
     collation="SQL_Latin1_General_CP1_CI_AS",
     dns_zone_partner="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance",
     instance_pool_id="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1",
@@ -141,6 +165,7 @@ managed_instance = azure_native.sql.ManagedInstance("managedInstance",
     location="Japan East",
     maintenance_configuration_id="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_JapanEast_MI_1",
     managed_instance_name="testinstance",
+    minimal_tls_version="1.2",
     proxy_override="Redirect",
     public_data_endpoint_enabled=False,
     resource_group_name="testrg",
@@ -172,7 +197,14 @@ import * as azure_native from "@pulumi/azure-native";
 
 const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", {
     administratorLogin: "dummylogin",
-    administratorLoginPassword: "<administratorLoginPassword>",
+    administratorLoginPassword: "PLACEHOLDER",
+    administrators: {
+        azureADOnlyAuthentication: true,
+        login: "bob@contoso.com",
+        principalType: "User",
+        sid: "00000011-1111-2222-2222-123456789111",
+        tenantId: "00000011-1111-2222-2222-123456789111",
+    },
     collation: "SQL_Latin1_General_CP1_CI_AS",
     dnsZonePartner: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance",
     instancePoolId: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1",
@@ -180,6 +212,7 @@ const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", 
     location: "Japan East",
     maintenanceConfigurationId: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_JapanEast_MI_1",
     managedInstanceName: "testinstance",
+    minimalTlsVersion: "1.2",
     proxyOverride: "Redirect",
     publicDataEndpointEnabled: false,
     resourceGroupName: "testrg",
@@ -221,7 +254,7 @@ class MyStack : Stack
         var managedInstance = new AzureNative.Sql.ManagedInstance("managedInstance", new AzureNative.Sql.ManagedInstanceArgs
         {
             AdministratorLogin = "dummylogin",
-            AdministratorLoginPassword = "<administratorLoginPassword>",
+            AdministratorLoginPassword = "PLACEHOLDER",
             LicenseType = "LicenseIncluded",
             Location = "Japan East",
             ManagedInstanceName = "testinstance",
@@ -260,7 +293,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.NewManagedInstance(ctx, "managedInstance", &sql.ManagedInstanceArgs{
 			AdministratorLogin:         pulumi.String("dummylogin"),
-			AdministratorLoginPassword: pulumi.String("<administratorLoginPassword>"),
+			AdministratorLoginPassword: pulumi.String("PLACEHOLDER"),
 			LicenseType:                pulumi.String("LicenseIncluded"),
 			Location:                   pulumi.String("Japan East"),
 			ManagedInstanceName:        pulumi.String("testinstance"),
@@ -295,7 +328,7 @@ import pulumi_azure_native as azure_native
 
 managed_instance = azure_native.sql.ManagedInstance("managedInstance",
     administrator_login="dummylogin",
-    administrator_login_password="<administratorLoginPassword>",
+    administrator_login_password="PLACEHOLDER",
     license_type="LicenseIncluded",
     location="Japan East",
     managed_instance_name="testinstance",
@@ -323,7 +356,7 @@ import * as azure_native from "@pulumi/azure-native";
 
 const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", {
     administratorLogin: "dummylogin",
-    administratorLoginPassword: "<administratorLoginPassword>",
+    administratorLoginPassword: "PLACEHOLDER",
     licenseType: "LicenseIncluded",
     location: "Japan East",
     managedInstanceName: "testinstance",
@@ -360,7 +393,7 @@ const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_zone_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">instance_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedInstanceLicenseType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_create_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedServerCreateMode]]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimal_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_override</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedInstanceProxyOverride]]</span> = None<span class="p">, </span><span class="nx">public_data_endpoint_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">source_managed_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageAccountType]]</span> = None<span class="p">, </span><span class="nx">storage_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">v_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrators</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceExternalAdministratorArgs]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_zone_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityWithUserAssignedIdentitiesArgs]</span> = None<span class="p">, </span><span class="nx">instance_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedInstanceLicenseType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_create_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedServerCreateMode]]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimal_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_user_assigned_identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_override</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedInstanceProxyOverride]]</span> = None<span class="p">, </span><span class="nx">public_data_endpoint_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">source_managed_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageAccountType]]</span> = None<span class="p">, </span><span class="nx">storage_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">v_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -526,6 +559,14 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The administrator login password (required for managed instance creation).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="administrators_csharp">
+<a href="#administrators_csharp" style="color: inherit; text-decoration: inherit;">Administrators</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceexternaladministrator">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>External<wbr>Administrator<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory administrator of the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="collation_csharp">
 <a href="#collation_csharp" style="color: inherit; text-decoration: inherit;">Collation</a>
 </span>
@@ -546,7 +587,7 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,6 +598,14 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the instance pool this managed server belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyid_csharp">
+<a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A CMK URI of the key to use for encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -609,6 +658,14 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primaryuserassignedidentityid_csharp">
+<a href="#primaryuserassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of a user assigned identity to be used by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyoverride_csharp">
 <a href="#proxyoverride_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Override</a>
@@ -739,6 +796,14 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
     </dt>
     <dd>{{% md %}}The administrator login password (required for managed instance creation).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="administrators_go">
+<a href="#administrators_go" style="color: inherit; text-decoration: inherit;">Administrators</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceexternaladministrator">Managed<wbr>Instance<wbr>External<wbr>Administrator</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory administrator of the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="collation_go">
 <a href="#collation_go" style="color: inherit; text-decoration: inherit;">Collation</a>
 </span>
@@ -759,7 +824,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,6 +835,14 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the instance pool this managed server belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyid_go">
+<a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A CMK URI of the key to use for encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -822,6 +895,14 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primaryuserassignedidentityid_go">
+<a href="#primaryuserassignedidentityid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of a user assigned identity to be used by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyoverride_go">
 <a href="#proxyoverride_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Override</a>
@@ -952,6 +1033,14 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
     </dt>
     <dd>{{% md %}}The administrator login password (required for managed instance creation).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="administrators_nodejs">
+<a href="#administrators_nodejs" style="color: inherit; text-decoration: inherit;">administrators</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceexternaladministrator">Managed<wbr>Instance<wbr>External<wbr>Administrator</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory administrator of the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="collation_nodejs">
 <a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
@@ -972,7 +1061,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -983,6 +1072,14 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the instance pool this managed server belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyid_nodejs">
+<a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A CMK URI of the key to use for encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -1035,6 +1132,14 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primaryuserassignedidentityid_nodejs">
+<a href="#primaryuserassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of a user assigned identity to be used by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyoverride_nodejs">
 <a href="#proxyoverride_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Override</a>
@@ -1165,6 +1270,14 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
     </dt>
     <dd>{{% md %}}The administrator login password (required for managed instance creation).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="administrators_python">
+<a href="#administrators_python" style="color: inherit; text-decoration: inherit;">administrators</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceexternaladministrator">Managed<wbr>Instance<wbr>External<wbr>Administrator<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory administrator of the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="collation_python">
 <a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
@@ -1185,7 +1298,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1196,6 +1309,14 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of the instance pool this managed server belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_id_python">
+<a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A CMK URI of the key to use for encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -1248,6 +1369,14 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_user_assigned_identity_id_python">
+<a href="#primary_user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>user_<wbr>assigned_<wbr>identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource id of a user assigned identity to be used by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_override_python">
 <a href="#proxy_override_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>override</a>
@@ -1640,6 +1769,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="administratortype">Administrator<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active<wbr>Directory</dt>
+    <dd>ActiveDirectory</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Administrator<wbr>Type<wbr>Active<wbr>Directory</dt>
+    <dd>ActiveDirectory</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active<wbr>Directory</dt>
+    <dd>ActiveDirectory</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE_DIRECTORY</dt>
+    <dd>ActiveDirectory</dd></dl>
+{{% /choosable %}}
+
 <h4 id="identitytype">Identity<wbr>Type</h4>
 
 {{% choosable language csharp %}}
@@ -1668,6 +1819,426 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>None</dd><dt>SYSTEM_ASSIGNED</dt>
     <dd>SystemAssigned</dd><dt>USER_ASSIGNED</dt>
     <dd>UserAssigned</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedinstanceexternaladministrator">Managed<wbr>Instance<wbr>External<wbr>Administrator</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="administratortype_csharp">
+<a href="#administratortype_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#administratortype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Administrator<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azureadonlyauthentication_csharp">
+<a href="#azureadonlyauthentication_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>ADOnly<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_csharp">
+<a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principaltype_csharp">
+<a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#principaltype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Principal<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_csharp">
+<a href="#sid_csharp" style="color: inherit; text-decoration: inherit;">Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="administratortype_go">
+<a href="#administratortype_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#administratortype">Administrator<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azureadonlyauthentication_go">
+<a href="#azureadonlyauthentication_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>ADOnly<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_go">
+<a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principaltype_go">
+<a href="#principaltype_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#principaltype">Principal<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_go">
+<a href="#sid_go" style="color: inherit; text-decoration: inherit;">Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="administratortype_nodejs">
+<a href="#administratortype_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#administratortype">Administrator<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azureadonlyauthentication_nodejs">
+<a href="#azureadonlyauthentication_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>ADOnly<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_nodejs">
+<a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principaltype_nodejs">
+<a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#principaltype">Principal<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_nodejs">
+<a href="#sid_nodejs" style="color: inherit; text-decoration: inherit;">sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="administrator_type_python">
+<a href="#administrator_type_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#administratortype">Administrator<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azure_ad_only_authentication_python">
+<a href="#azure_ad_only_authentication_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>ad_<wbr>only_<wbr>authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_python">
+<a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_type_python">
+<a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#principaltype">Principal<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_python">
+<a href="#sid_python" style="color: inherit; text-decoration: inherit;">sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedinstanceexternaladministratorresponse">Managed<wbr>Instance<wbr>External<wbr>Administrator<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="administratortype_csharp">
+<a href="#administratortype_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azureadonlyauthentication_csharp">
+<a href="#azureadonlyauthentication_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>ADOnly<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_csharp">
+<a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principaltype_csharp">
+<a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_csharp">
+<a href="#sid_csharp" style="color: inherit; text-decoration: inherit;">Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="administratortype_go">
+<a href="#administratortype_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azureadonlyauthentication_go">
+<a href="#azureadonlyauthentication_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>ADOnly<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_go">
+<a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principaltype_go">
+<a href="#principaltype_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_go">
+<a href="#sid_go" style="color: inherit; text-decoration: inherit;">Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="administratortype_nodejs">
+<a href="#administratortype_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azureadonlyauthentication_nodejs">
+<a href="#azureadonlyauthentication_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>ADOnly<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_nodejs">
+<a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principaltype_nodejs">
+<a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_nodejs">
+<a href="#sid_nodejs" style="color: inherit; text-decoration: inherit;">sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="administrator_type_python">
+<a href="#administrator_type_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azure_ad_only_authentication_python">
+<a href="#azure_ad_only_authentication_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>ad_<wbr>only_<wbr>authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="login_python">
+<a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_type_python">
+<a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_python">
+<a href="#sid_python" style="color: inherit; text-decoration: inherit;">sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedinstancelicensetype">Managed<wbr>Instance<wbr>License<wbr>Type</h4>
@@ -2112,7 +2683,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PointInTimeRestore</dd></dl>
 {{% /choosable %}}
 
-<h4 id="resourceidentity">Resource<wbr>Identity</h4>
+<h4 id="principaltype">Principal<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>User</dt>
+    <dd>User</dd><dt>Group</dt>
+    <dd>Group</dd><dt>Application</dt>
+    <dd>Application</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Principal<wbr>Type<wbr>User</dt>
+    <dd>User</dd><dt>Principal<wbr>Type<wbr>Group</dt>
+    <dd>Group</dd><dt>Principal<wbr>Type<wbr>Application</dt>
+    <dd>Application</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>User</dt>
+    <dd>User</dd><dt>Group</dt>
+    <dd>Group</dd><dt>Application</dt>
+    <dd>Application</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USER</dt>
+    <dd>User</dd><dt>GROUP</dt>
+    <dd>Group</dd><dt>APPLICATION</dt>
+    <dd>Application</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -2123,7 +2724,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#identitytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2135,7 +2744,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#identitytype">Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2147,7 +2764,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#identitytype">Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2159,10 +2784,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#identitytype">Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="resourceidentityresponse">Resource<wbr>Identity<wbr>Response</h4>
+<h4 id="resourceidentitywithuserassignedidentitiesresponse">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -2189,7 +2822,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2217,7 +2858,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]User<wbr>Identity<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2245,7 +2894,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2273,7 +2930,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sku">Sku</h4>
@@ -2660,6 +3325,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>GRS</dd><dt>LRS</dt>
     <dd>LRS</dd><dt>ZRS</dt>
     <dd>ZRS</dd></dl>
+{{% /choosable %}}
+
+<h4 id="useridentityresponse">User<wbr>Identity<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory client id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory client id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory client id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory client id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

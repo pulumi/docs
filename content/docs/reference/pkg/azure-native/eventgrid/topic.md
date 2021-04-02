@@ -198,7 +198,7 @@ const topic = new azure_native.eventgrid.Topic("topic", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[InboundIpRuleArgs]]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[Union[str, InputSchema]]</span> = None<span class="p">, </span><span class="nx">input_schema_mapping</span><span class="p">:</span> <span class="nx">Optional[JsonInputSchemaMappingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrivateEndpointConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[InboundIpRuleArgs]]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[Union[str, InputSchema]]</span> = None<span class="p">, </span><span class="nx">input_schema_mapping</span><span class="p">:</span> <span class="nx">Optional[JsonInputSchemaMappingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -380,14 +380,6 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="privateendpointconnections_csharp">
-<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -456,14 +448,6 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateendpointconnections_go">
-<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">[]Private<wbr>Endpoint<wbr>Connection<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -534,14 +518,6 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="privateendpointconnections_nodejs">
-<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
@@ -611,14 +587,6 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="private_endpoint_connections_python">
-<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
@@ -687,6 +655,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privateendpointconnections_csharp">
+<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -746,6 +722,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateendpointconnections_go">
+<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -807,6 +791,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privateendpointconnections_nodejs">
+<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
@@ -867,6 +859,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="private_endpoint_connections_python">
+<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
@@ -901,120 +901,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
-
-<h4 id="connectionstate">Connection<wbr>State</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actionsrequired_csharp">
-<a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Actions required (if any).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Description of the connection state.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#persistedconnectionstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Persisted<wbr>Connection<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}Status of the connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actionsrequired_go">
-<a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Actions required (if any).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Description of the connection state.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#persistedconnectionstatus">Persisted<wbr>Connection<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}Status of the connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actionsrequired_nodejs">
-<a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Actions required (if any).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Description of the connection state.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#persistedconnectionstatus">Persisted<wbr>Connection<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}Status of the connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actions_required_python">
-<a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Actions required (if any).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the connection state.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#persistedconnectionstatus">Persisted<wbr>Connection<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}Status of the connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
 
 <h4 id="connectionstateresponse">Connection<wbr>State<wbr>Response</h4>
 
@@ -2030,236 +1916,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="persistedconnectionstatus">Persisted<wbr>Connection<wbr>Status</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Pending</dt>
-    <dd>Pending</dd><dt>Approved</dt>
-    <dd>Approved</dd><dt>Rejected</dt>
-    <dd>Rejected</dd><dt>Disconnected</dt>
-    <dd>Disconnected</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Persisted<wbr>Connection<wbr>Status<wbr>Pending</dt>
-    <dd>Pending</dd><dt>Persisted<wbr>Connection<wbr>Status<wbr>Approved</dt>
-    <dd>Approved</dd><dt>Persisted<wbr>Connection<wbr>Status<wbr>Rejected</dt>
-    <dd>Rejected</dd><dt>Persisted<wbr>Connection<wbr>Status<wbr>Disconnected</dt>
-    <dd>Disconnected</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Pending</dt>
-    <dd>Pending</dd><dt>Approved</dt>
-    <dd>Approved</dd><dt>Rejected</dt>
-    <dd>Rejected</dd><dt>Disconnected</dt>
-    <dd>Disconnected</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>PENDING</dt>
-    <dd>Pending</dd><dt>APPROVED</dt>
-    <dd>Approved</dd><dt>REJECTED</dt>
-    <dd>Rejected</dd><dt>DISCONNECTED</dt>
-    <dd>Disconnected</dd></dl>
-{{% /choosable %}}
-
-<h4 id="privateendpoint">Private<wbr>Endpoint</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="privateendpointconnection">Private<wbr>Endpoint<wbr>Connection</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="groupids_csharp">
-<a href="#groupids_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateendpoint_csharp">
-<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_csharp">
-<a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourceprovisioningstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="groupids_go">
-<a href="#groupids_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateendpoint_go">
-<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Private<wbr>Endpoint</a></span>
-    </dt>
-    <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_go">
-<a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstate">Connection<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourceprovisioningstate">Resource<wbr>Provisioning<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="groupids_nodejs">
-<a href="#groupids_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateendpoint_nodejs">
-<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Private<wbr>Endpoint</a></span>
-    </dt>
-    <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_nodejs">
-<a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstate">Connection<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourceprovisioningstate">Resource<wbr>Provisioning<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="group_ids_python">
-<a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_endpoint_python">
-<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Private<wbr>Endpoint<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_link_service_connection_state_python">
-<a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstate">Connection<wbr>State<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#resourceprovisioningstate">Resource<wbr>Provisioning<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -2576,48 +2232,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>ENABLED</dt>
     <dd>Enabled</dd><dt>DISABLED</dt>
     <dd>Disabled</dd></dl>
-{{% /choosable %}}
-
-<h4 id="resourceprovisioningstate">Resource<wbr>Provisioning<wbr>State</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Creating</dt>
-    <dd>Creating</dd><dt>Updating</dt>
-    <dd>Updating</dd><dt>Deleting</dt>
-    <dd>Deleting</dd><dt>Succeeded</dt>
-    <dd>Succeeded</dd><dt>Canceled</dt>
-    <dd>Canceled</dd><dt>Failed</dt>
-    <dd>Failed</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Resource<wbr>Provisioning<wbr>State<wbr>Creating</dt>
-    <dd>Creating</dd><dt>Resource<wbr>Provisioning<wbr>State<wbr>Updating</dt>
-    <dd>Updating</dd><dt>Resource<wbr>Provisioning<wbr>State<wbr>Deleting</dt>
-    <dd>Deleting</dd><dt>Resource<wbr>Provisioning<wbr>State<wbr>Succeeded</dt>
-    <dd>Succeeded</dd><dt>Resource<wbr>Provisioning<wbr>State<wbr>Canceled</dt>
-    <dd>Canceled</dd><dt>Resource<wbr>Provisioning<wbr>State<wbr>Failed</dt>
-    <dd>Failed</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Creating</dt>
-    <dd>Creating</dd><dt>Updating</dt>
-    <dd>Updating</dd><dt>Deleting</dt>
-    <dd>Deleting</dd><dt>Succeeded</dt>
-    <dd>Succeeded</dd><dt>Canceled</dt>
-    <dd>Canceled</dd><dt>Failed</dt>
-    <dd>Failed</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>CREATING</dt>
-    <dd>Creating</dd><dt>UPDATING</dt>
-    <dd>Updating</dd><dt>DELETING</dt>
-    <dd>Deleting</dd><dt>SUCCEEDED</dt>
-    <dd>Succeeded</dd><dt>CANCELED</dt>
-    <dd>Canceled</dd><dt>FAILED</dt>
-    <dd>Failed</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>

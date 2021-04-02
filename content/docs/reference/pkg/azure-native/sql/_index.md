@@ -11,6 +11,7 @@ Explore the resources and functions of the azure-native.sql module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="datamaskingpolicy" title="DataMaskingPolicy"><span class="symbol resource"></span>DataMaskingPolicy</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="databasesecurityalertpolicy" title="DatabaseSecurityAlertPolicy"><span class="symbol resource"></span>DatabaseSecurityAlertPolicy</a></li>
     <li><a href="databasevulnerabilityassessment" title="DatabaseVulnerabilityAssessment"><span class="symbol resource"></span>DatabaseVulnerabilityAssessment</a></li>
@@ -58,6 +59,7 @@ Explore the resources and functions of the azure-native.sql module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getdatamaskingpolicy" title="GetDataMaskingPolicy"><span class="symbol function"></span>GetDataMaskingPolicy</a></li>
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
     <li><a href="getdatabasesecurityalertpolicy" title="GetDatabaseSecurityAlertPolicy"><span class="symbol function"></span>GetDatabaseSecurityAlertPolicy</a></li>
     <li><a href="getdatabasevulnerabilityassessment" title="GetDatabaseVulnerabilityAssessment"><span class="symbol function"></span>GetDatabaseVulnerabilityAssessment</a></li>
@@ -110,6 +112,6 @@ Explore the resources and functions of the azure-native.sql module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

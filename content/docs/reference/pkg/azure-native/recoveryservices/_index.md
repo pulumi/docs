@@ -26,6 +26,7 @@ Explore the resources and functions of the azure-native.recoveryservices module.
     <li><a href="replicationrecoveryservicesprovider" title="ReplicationRecoveryServicesProvider"><span class="symbol resource"></span>ReplicationRecoveryServicesProvider</a></li>
     <li><a href="replicationstorageclassificationmapping" title="ReplicationStorageClassificationMapping"><span class="symbol resource"></span>ReplicationStorageClassificationMapping</a></li>
     <li><a href="replicationvcenter" title="ReplicationvCenter"><span class="symbol resource"></span>ReplicationvCenter</a></li>
+    <li><a href="resourceguardproxy" title="ResourceGuardProxy"><span class="symbol resource"></span>ResourceGuardProxy</a></li>
     <li><a href="vault" title="Vault"><span class="symbol resource"></span>Vault</a></li>
 </ul>
 
@@ -46,6 +47,7 @@ Explore the resources and functions of the azure-native.recoveryservices module.
     <li><a href="getreplicationrecoveryservicesprovider" title="GetReplicationRecoveryServicesProvider"><span class="symbol function"></span>GetReplicationRecoveryServicesProvider</a></li>
     <li><a href="getreplicationstorageclassificationmapping" title="GetReplicationStorageClassificationMapping"><span class="symbol function"></span>GetReplicationStorageClassificationMapping</a></li>
     <li><a href="getreplicationvcenter" title="GetReplicationvCenter"><span class="symbol function"></span>GetReplicationvCenter</a></li>
+    <li><a href="getresourceguardproxy" title="GetResourceGuardProxy"><span class="symbol function"></span>GetResourceGuardProxy</a></li>
     <li><a href="getvault" title="GetVault"><span class="symbol function"></span>GetVault</a></li>
 </ul>
 
@@ -56,6 +58,6 @@ Explore the resources and functions of the azure-native.recoveryservices module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

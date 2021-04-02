@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.dataprotection.getBackupVault fun
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Backup Vault Resource
-API Version: 2021-02-01-preview.
+API Version: 2021-01-01.
 
 
 
@@ -150,6 +150,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Id represents the complete path to the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -165,6 +173,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storagesettings_csharp">
+<a href="#storagesettings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>Storage<wbr>Setting<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -198,22 +214,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Input Managed Identity Details{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="storagesettings_csharp">
-<a href="#storagesettings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>Storage<wbr>Setting<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -234,6 +234,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Id represents the complete path to the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -249,6 +257,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storagesettings_go">
+<a href="#storagesettings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesettingresponse">[]Storage<wbr>Setting<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -282,22 +298,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Input Managed Identity Details{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="storagesettings_go">
-<a href="#storagesettings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesettingresponse">[]Storage<wbr>Setting<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -318,6 +318,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Id represents the complete path to the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -333,6 +341,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storagesettings_nodejs">
+<a href="#storagesettings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesettingresponse">Storage<wbr>Setting<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -366,22 +382,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Input Managed Identity Details{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="storagesettings_nodejs">
-<a href="#storagesettings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesettingresponse">Storage<wbr>Setting<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -402,6 +402,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource Id represents the complete path to the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -417,6 +425,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the BackupVault resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="storage_settings_python">
+<a href="#storage_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagesettingresponse">Sequence[Storage<wbr>Setting<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -449,22 +465,6 @@ The following output properties are available:
         <span class="property-type"><a href="#dppidentitydetailsresponse">Dpp<wbr>Identity<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Input Managed Identity Details{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="storage_settings_python">
-<a href="#storage_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesettingresponse">Sequence[Storage<wbr>Setting<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Storage Settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -605,7 +605,7 @@ The following output properties are available:
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastoretype_csharp">
-<a href="#datastoretype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type</a>
+<a href="#datastoretype_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -625,7 +625,7 @@ The following output properties are available:
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastoretype_go">
-<a href="#datastoretype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type</a>
+<a href="#datastoretype_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -645,7 +645,7 @@ The following output properties are available:
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastoretype_nodejs">
-<a href="#datastoretype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Type</a>
+<a href="#datastoretype_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -664,8 +664,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="data_store_type_python">
-<a href="#data_store_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>type</a>
+        <span id="datastore_type_python">
+<a href="#datastore_type_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

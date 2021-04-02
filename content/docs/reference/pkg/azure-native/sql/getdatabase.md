@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.sql.getDatabase function with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A database resource.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 
 
@@ -182,6 +182,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="currentbackupstorageredundancy_csharp">
+<a href="#currentbackupstorageredundancy_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="currentserviceobjectivename_csharp">
 <a href="#currentserviceobjectivename_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Service<wbr>Objective<wbr>Name</a>
 </span>
@@ -342,30 +350,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The collation of the database.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="createmode_csharp">
-<a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the mode of database creation.
-
-Default: regular database creation.
-
-Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database.
-
-Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database.
-
-PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
-
-Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore.
-
-Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database's original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time.
-
-RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
-
-Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="elasticpoolid_csharp">
 <a href="#elasticpoolid_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Id</a>
 </span>
@@ -389,14 +373,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="longtermretentionbackupresourceid_csharp">
-<a href="#longtermretentionbackupresourceid_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Term<wbr>Retention<wbr>Backup<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenanceconfigurationid_csharp">
 <a href="#maintenanceconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Configuration<wbr>Id</a>
@@ -430,45 +406,13 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
     </dt>
     <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="recoverabledatabaseid_csharp">
-<a href="#recoverabledatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Recoverable<wbr>Database<wbr>Id</a>
+        <span id="requestedbackupstorageredundancy_csharp">
+<a href="#requestedbackupstorageredundancy_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="recoveryservicesrecoverypointid_csharp">
-<a href="#recoveryservicesrecoverypointid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Services<wbr>Recovery<wbr>Point<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="restorabledroppeddatabaseid_csharp">
-<a href="#restorabledroppeddatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="restorepointintime_csharp">
-<a href="#restorepointintime_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="samplename_csharp">
-<a href="#samplename_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The storage account type to be used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytype_csharp">
 <a href="#secondarytype_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Type</a>
@@ -497,30 +441,6 @@ Get-AzSqlServerServiceObjective -Location <location>
 ````
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="sourcedatabasedeletiondate_csharp">
-<a href="#sourcedatabasedeletiondate_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Deletion<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="sourcedatabaseid_csharp">
-<a href="#sourcedatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="storageaccounttype_csharp">
-<a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -548,6 +468,14 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="currentbackupstorageredundancy_go">
+<a href="#currentbackupstorageredundancy_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentserviceobjectivename_go">
 <a href="#currentserviceobjectivename_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -709,30 +637,6 @@ Get-AzSqlServerServiceObjective -Location <location>
     </dt>
     <dd>{{% md %}}The collation of the database.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="createmode_go">
-<a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the mode of database creation.
-
-Default: regular database creation.
-
-Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database.
-
-Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database.
-
-PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
-
-Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore.
-
-Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database's original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time.
-
-RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
-
-Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="elasticpoolid_go">
 <a href="#elasticpoolid_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Id</a>
 </span>
@@ -756,14 +660,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="longtermretentionbackupresourceid_go">
-<a href="#longtermretentionbackupresourceid_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Term<wbr>Retention<wbr>Backup<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenanceconfigurationid_go">
 <a href="#maintenanceconfigurationid_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Configuration<wbr>Id</a>
@@ -797,45 +693,13 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
     </dt>
     <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="recoverabledatabaseid_go">
-<a href="#recoverabledatabaseid_go" style="color: inherit; text-decoration: inherit;">Recoverable<wbr>Database<wbr>Id</a>
+        <span id="requestedbackupstorageredundancy_go">
+<a href="#requestedbackupstorageredundancy_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="recoveryservicesrecoverypointid_go">
-<a href="#recoveryservicesrecoverypointid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Services<wbr>Recovery<wbr>Point<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="restorabledroppeddatabaseid_go">
-<a href="#restorabledroppeddatabaseid_go" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="restorepointintime_go">
-<a href="#restorepointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="samplename_go">
-<a href="#samplename_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The storage account type to be used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytype_go">
 <a href="#secondarytype_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Type</a>
@@ -864,30 +728,6 @@ Get-AzSqlServerServiceObjective -Location <location>
 ````
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="sourcedatabasedeletiondate_go">
-<a href="#sourcedatabasedeletiondate_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Deletion<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="sourcedatabaseid_go">
-<a href="#sourcedatabaseid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="storageaccounttype_go">
-<a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -915,6 +755,14 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="currentbackupstorageredundancy_nodejs">
+<a href="#currentbackupstorageredundancy_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentserviceobjectivename_nodejs">
 <a href="#currentserviceobjectivename_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -1076,30 +924,6 @@ Get-AzSqlServerServiceObjective -Location <location>
     </dt>
     <dd>{{% md %}}The collation of the database.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="createmode_nodejs">
-<a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the mode of database creation.
-
-Default: regular database creation.
-
-Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database.
-
-Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database.
-
-PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
-
-Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore.
-
-Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database's original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time.
-
-RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
-
-Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="elasticpoolid_nodejs">
 <a href="#elasticpoolid_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Pool<wbr>Id</a>
 </span>
@@ -1123,14 +947,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="longtermretentionbackupresourceid_nodejs">
-<a href="#longtermretentionbackupresourceid_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Term<wbr>Retention<wbr>Backup<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenanceconfigurationid_nodejs">
 <a href="#maintenanceconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Configuration<wbr>Id</a>
@@ -1164,45 +980,13 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
     </dt>
     <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="recoverabledatabaseid_nodejs">
-<a href="#recoverabledatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">recoverable<wbr>Database<wbr>Id</a>
+        <span id="requestedbackupstorageredundancy_nodejs">
+<a href="#requestedbackupstorageredundancy_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="recoveryservicesrecoverypointid_nodejs">
-<a href="#recoveryservicesrecoverypointid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Services<wbr>Recovery<wbr>Point<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="restorabledroppeddatabaseid_nodejs">
-<a href="#restorabledroppeddatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="restorepointintime_nodejs">
-<a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="samplename_nodejs">
-<a href="#samplename_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The storage account type to be used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytype_nodejs">
 <a href="#secondarytype_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Type</a>
@@ -1231,30 +1015,6 @@ Get-AzSqlServerServiceObjective -Location <location>
 ````
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="sourcedatabasedeletiondate_nodejs">
-<a href="#sourcedatabasedeletiondate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Deletion<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="sourcedatabaseid_nodejs">
-<a href="#sourcedatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="storageaccounttype_nodejs">
-<a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1282,6 +1042,14 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="current_backup_storage_redundancy_python">
+<a href="#current_backup_storage_redundancy_python" style="color: inherit; text-decoration: inherit;">current_<wbr>backup_<wbr>storage_<wbr>redundancy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="current_service_objective_name_python">
 <a href="#current_service_objective_name_python" style="color: inherit; text-decoration: inherit;">current_<wbr>service_<wbr>objective_<wbr>name</a>
@@ -1443,30 +1211,6 @@ Get-AzSqlServerServiceObjective -Location <location>
     </dt>
     <dd>{{% md %}}The collation of the database.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="create_mode_python">
-<a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the mode of database creation.
-
-Default: regular database creation.
-
-Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database.
-
-Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database.
-
-PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
-
-Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore.
-
-Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database's original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time.
-
-RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
-
-Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="elastic_pool_id_python">
 <a href="#elastic_pool_id_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>pool_<wbr>id</a>
 </span>
@@ -1490,14 +1234,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="long_term_retention_backup_resource_id_python">
-<a href="#long_term_retention_backup_resource_id_python" style="color: inherit; text-decoration: inherit;">long_<wbr>term_<wbr>retention_<wbr>backup_<wbr>resource_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenance_configuration_id_python">
 <a href="#maintenance_configuration_id_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>configuration_<wbr>id</a>
@@ -1531,45 +1267,13 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
     </dt>
     <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="recoverable_database_id_python">
-<a href="#recoverable_database_id_python" style="color: inherit; text-decoration: inherit;">recoverable_<wbr>database_<wbr>id</a>
+        <span id="requested_backup_storage_redundancy_python">
+<a href="#requested_backup_storage_redundancy_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>backup_<wbr>storage_<wbr>redundancy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="recovery_services_recovery_point_id_python">
-<a href="#recovery_services_recovery_point_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>services_<wbr>recovery_<wbr>point_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="restorable_dropped_database_id_python">
-<a href="#restorable_dropped_database_id_python" style="color: inherit; text-decoration: inherit;">restorable_<wbr>dropped_<wbr>database_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="restore_point_in_time_python">
-<a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="sample_name_python">
-<a href="#sample_name_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The storage account type to be used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_type_python">
 <a href="#secondary_type_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>type</a>
@@ -1597,30 +1301,6 @@ az sql db list-editions -l <location> -o table
 Get-AzSqlServerServiceObjective -Location <location>
 ````
 {{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="source_database_deletion_date_python">
-<a href="#source_database_deletion_date_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>deletion_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="source_database_id_python">
-<a href="#source_database_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="storage_account_type_python">
-<a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

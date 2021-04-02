@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.apimanagement.Cache resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Cache details.
-API Version: 2019-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 
@@ -35,12 +35,13 @@ class MyStack : Stack
     {
         var cache = new AzureNative.ApiManagement.Cache("cache", new AzureNative.ApiManagement.CacheArgs
         {
-            CacheId = "westindia",
-            ConnectionString = "contoso5.redis.cache.windows.net,ssl=true,password=...",
+            CacheId = "c1",
+            ConnectionString = "apim.redis.cache.windows.net:6380,password=xc,ssl=True,abortConnect=False",
             Description = "Redis cache instances in West India",
             ResourceGroupName = "rg1",
-            ResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/contoso5",
+            ResourceId = "https://management.azure.com/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redis/apimservice1",
             ServiceName = "apimService1",
+            UseFromLocation = "default",
         });
     }
 
@@ -66,12 +67,13 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := apimanagement.NewCache(ctx, "cache", &apimanagement.CacheArgs{
-			CacheId:           pulumi.String("westindia"),
-			ConnectionString:  pulumi.String("contoso5.redis.cache.windows.net,ssl=true,password=..."),
+			CacheId:           pulumi.String("c1"),
+			ConnectionString:  pulumi.String("apim.redis.cache.windows.net:6380,password=xc,ssl=True,abortConnect=False"),
 			Description:       pulumi.String("Redis cache instances in West India"),
 			ResourceGroupName: pulumi.String("rg1"),
-			ResourceId:        pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/contoso5"),
+			ResourceId:        pulumi.String("https://management.azure.com/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redis/apimservice1"),
 			ServiceName:       pulumi.String("apimService1"),
+			UseFromLocation:   pulumi.String("default"),
 		})
 		if err != nil {
 			return err
@@ -94,12 +96,13 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 cache = azure_native.apimanagement.Cache("cache",
-    cache_id="westindia",
-    connection_string="contoso5.redis.cache.windows.net,ssl=true,password=...",
+    cache_id="c1",
+    connection_string="apim.redis.cache.windows.net:6380,password=xc,ssl=True,abortConnect=False",
     description="Redis cache instances in West India",
     resource_group_name="rg1",
-    resource_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/contoso5",
-    service_name="apimService1")
+    resource_id="https://management.azure.com/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redis/apimservice1",
+    service_name="apimService1",
+    use_from_location="default")
 
 ```
 
@@ -115,12 +118,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const cache = new azure_native.apimanagement.Cache("cache", {
-    cacheId: "westindia",
-    connectionString: "contoso5.redis.cache.windows.net,ssl=true,password=...",
+    cacheId: "c1",
+    connectionString: "apim.redis.cache.windows.net:6380,password=xc,ssl=True,abortConnect=False",
     description: "Redis cache instances in West India",
     resourceGroupName: "rg1",
-    resourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/contoso5",
+    resourceId: "https://management.azure.com/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redis/apimservice1",
     serviceName: "apimService1",
+    useFromLocation: "default",
 });
 
 ```
@@ -146,7 +150,7 @@ const cache = new azure_native.apimanagement.Cache("cache", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_from_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -310,7 +314,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="usefromlocation_csharp">
+<a href="#usefromlocation_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>From<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location identifier to use cache from (should be either 'default' or valid Azure region identifier){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheid_csharp">
 <a href="#cacheid_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Id</a>
@@ -362,7 +374,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="usefromlocation_go">
+<a href="#usefromlocation_go" style="color: inherit; text-decoration: inherit;">Use<wbr>From<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location identifier to use cache from (should be either 'default' or valid Azure region identifier){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheid_go">
 <a href="#cacheid_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Id</a>
@@ -414,7 +434,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="usefromlocation_nodejs">
+<a href="#usefromlocation_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>From<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location identifier to use cache from (should be either 'default' or valid Azure region identifier){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheid_nodejs">
 <a href="#cacheid_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Id</a>
@@ -466,7 +494,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="use_from_location_python">
+<a href="#use_from_location_python" style="color: inherit; text-decoration: inherit;">use_<wbr>from_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Location identifier to use cache from (should be either 'default' or valid Azure region identifier){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_id_python">
 <a href="#cache_id_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>id</a>
@@ -623,7 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:apimanagement:Cache westindia /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/caches/westindia 
+$ pulumi import azure-native:apimanagement:Cache c1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/caches/c1 
 ```
 
 

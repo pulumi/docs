@@ -1288,6 +1288,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="hsmpoolresourceid_csharp">
+<a href="#hsmpoolresourceid_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of HSM Pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
@@ -1319,14 +1327,6 @@ The following output properties are available:
         <span class="property-type"><a href="#accesspolicyentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createmode_csharp">
-<a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_csharp">
 <a href="#enablepurgeprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Purge<wbr>Protection</a>
@@ -1412,6 +1412,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="hsmpoolresourceid_go">
+<a href="#hsmpoolresourceid_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of HSM Pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
@@ -1443,14 +1451,6 @@ The following output properties are available:
         <span class="property-type"><a href="#accesspolicyentryresponse">[]Access<wbr>Policy<wbr>Entry<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createmode_go">
-<a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_go">
 <a href="#enablepurgeprotection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Purge<wbr>Protection</a>
@@ -1536,6 +1536,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="hsmpoolresourceid_nodejs">
+<a href="#hsmpoolresourceid_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Pool<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource id of HSM Pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
@@ -1567,14 +1575,6 @@ The following output properties are available:
         <span class="property-type"><a href="#accesspolicyentryresponse">Access<wbr>Policy<wbr>Entry<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createmode_nodejs">
-<a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_nodejs">
 <a href="#enablepurgeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Purge<wbr>Protection</a>
@@ -1660,6 +1660,14 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="hsm_pool_resource_id_python">
+<a href="#hsm_pool_resource_id_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>pool_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource id of HSM Pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
@@ -1691,14 +1699,6 @@ The following output properties are available:
         <span class="property-type"><a href="#accesspolicyentryresponse">Sequence[Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="create_mode_python">
-<a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_purge_protection_python">
 <a href="#enable_purge_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>purge_<wbr>protection</a>

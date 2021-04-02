@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.synapse.getSqlPoolWorkloadClassif
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Workload classifier operations for a data warehouse
-API Version: 2020-12-01.
+API Version: 2021-03-01.
 
 
 

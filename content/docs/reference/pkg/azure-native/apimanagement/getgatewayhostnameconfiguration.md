@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.apimanagement.getGatewayHostnameC
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Gateway hostname configuration details.
-API Version: 2019-12-01.
+API Version: 2020-12-01.
 
 
 
@@ -246,13 +246,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="http2enabled_csharp">
+<a href="#http2enabled_csharp" style="color: inherit; text-decoration: inherit;">Http2Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if HTTP/2.0 is supported{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tls10enabled_csharp">
+<a href="#tls10enabled_csharp" style="color: inherit; text-decoration: inherit;">Tls10Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.0 is supported{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tls11enabled_csharp">
+<a href="#tls11enabled_csharp" style="color: inherit; text-decoration: inherit;">Tls11Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.1 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -298,13 +322,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="http2enabled_go">
+<a href="#http2enabled_go" style="color: inherit; text-decoration: inherit;">Http2Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if HTTP/2.0 is supported{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tls10enabled_go">
+<a href="#tls10enabled_go" style="color: inherit; text-decoration: inherit;">Tls10Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.0 is supported{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tls11enabled_go">
+<a href="#tls11enabled_go" style="color: inherit; text-decoration: inherit;">Tls11Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.1 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -350,13 +398,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="http2enabled_nodejs">
+<a href="#http2enabled_nodejs" style="color: inherit; text-decoration: inherit;">http2Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if HTTP/2.0 is supported{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tls10enabled_nodejs">
+<a href="#tls10enabled_nodejs" style="color: inherit; text-decoration: inherit;">tls10Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.0 is supported{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tls11enabled_nodejs">
+<a href="#tls11enabled_nodejs" style="color: inherit; text-decoration: inherit;">tls11Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.1 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -402,13 +474,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="http2_enabled_python">
+<a href="#http2_enabled_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if HTTP/2.0 is supported{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tls10_enabled_python">
+<a href="#tls10_enabled_python" style="color: inherit; text-decoration: inherit;">tls10_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.0 is supported{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tls11_enabled_python">
+<a href="#tls11_enabled_python" style="color: inherit; text-decoration: inherit;">tls11_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if TLS 1.1 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

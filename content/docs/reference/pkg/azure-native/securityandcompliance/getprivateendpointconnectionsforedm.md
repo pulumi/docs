@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.securityandcompliance.getPrivateE
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Private Endpoint Connection resource.
-API Version: 2021-01-11.
+API Version: 2021-03-08.
 
 
 

@@ -172,7 +172,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variable: `ARM_AUXILIARY_TENANT_IDS`{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Any additional Tenant IDs which should be used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_csharp">
 <a href="#clientcertificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Password</a>
@@ -272,7 +272,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variable: `ARM_AUXILIARY_TENANT_IDS`{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Any additional Tenant IDs which should be used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_go">
 <a href="#clientcertificatepassword_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Password</a>
@@ -372,7 +372,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variable: `ARM_AUXILIARY_TENANT_IDS`{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Any additional Tenant IDs which should be used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_nodejs">
 <a href="#clientcertificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Password</a>
@@ -472,7 +472,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variable: `ARM_AUXILIARY_TENANT_IDS`{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Any additional Tenant IDs which should be used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_certificate_password_python">
 <a href="#client_certificate_password_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>password</a>
