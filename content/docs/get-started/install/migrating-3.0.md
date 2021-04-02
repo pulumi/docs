@@ -96,7 +96,7 @@ containerDef := image.ImageName.ApplyT(func(name string) (string, error) {
 }).(pulumi.StringOutput)
 ```
 
-Notice that the difference would be casting the result of the ApplyT to the Output type
+When using ApplyT, remember to cast the result to the Output type
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
