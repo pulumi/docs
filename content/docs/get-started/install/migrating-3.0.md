@@ -71,7 +71,7 @@ require (
 
 Then run `go mod download`
 
-### Removing use of Apply<TypeName>
+### Go SDK removes Apply<TypeName>
 
 In order to improve the performance of our Go SDK, we have removed:
 
