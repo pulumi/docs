@@ -600,14 +600,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="storageaccountprimarykey_csharp">
-<a href="#storageaccountprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Primary<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="storageaccounturl_csharp">
 <a href="#storageaccounturl_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
 </span>
@@ -667,14 +659,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storageaccountprimarykey_go">
-<a href="#storageaccountprimarykey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Primary<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_go">
 <a href="#storageaccounturl_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -736,14 +720,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="storageaccountprimarykey_nodejs">
-<a href="#storageaccountprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Primary<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="storageaccounturl_nodejs">
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
 </span>
@@ -803,14 +779,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storage_account_primary_key_python">
-<a href="#storage_account_primary_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>primary_<wbr>key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_url_python">
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>

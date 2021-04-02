@@ -246,14 +246,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="credentialssecret_csharp">
-<a href="#credentialssecret_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="defaultmanagementgroupid_csharp">
 <a href="#defaultmanagementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Management<wbr>Group<wbr>Id</a>
 </span>
@@ -401,14 +393,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="credentialssecret_go">
-<a href="#credentialssecret_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultmanagementgroupid_go">
 <a href="#defaultmanagementgroupid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Management<wbr>Group<wbr>Id</a>
@@ -558,14 +542,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="credentialssecret_nodejs">
-<a href="#credentialssecret_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="defaultmanagementgroupid_nodejs">
 <a href="#defaultmanagementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Management<wbr>Group<wbr>Id</a>
 </span>
@@ -714,14 +690,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="credentials_secret_python">
-<a href="#credentials_secret_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="default_management_group_id_python">
 <a href="#default_management_group_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>management_<wbr>group_<wbr>id</a>
 </span>
@@ -782,7 +750,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Short error code{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="errorinnermessage_csharp">
+<a href="#errorinnermessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Inner<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External Provider error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -798,7 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -810,7 +786,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Short error code{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="errorinnermessage_go">
+<a href="#errorinnermessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Inner<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External Provider error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -826,7 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -838,7 +822,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Short error code{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="errorinnermessage_nodejs">
+<a href="#errorinnermessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Inner<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External Provider error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -854,7 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -866,7 +858,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Short error code{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="error_inner_message_python">
+<a href="#error_inner_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>inner_<wbr>message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}External Provider error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -882,7 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</h4>
@@ -892,13 +892,13 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="lastrun_csharp">
-<a href="#lastrun_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
+        <span id="lastchecked_csharp">
+<a href="#lastchecked_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Checked</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_csharp">
 <a href="#lastupdated_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
@@ -928,13 +928,13 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="lastrun_go">
-<a href="#lastrun_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
+        <span id="lastchecked_go">
+<a href="#lastchecked_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Checked</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_go">
 <a href="#lastupdated_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
@@ -964,13 +964,13 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="lastrun_nodejs">
-<a href="#lastrun_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run</a>
+        <span id="lastchecked_nodejs">
+<a href="#lastchecked_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Checked</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_nodejs">
 <a href="#lastupdated_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated</a>
@@ -1000,13 +1000,13 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="last_run_python">
-<a href="#last_run_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run</a>
+        <span id="last_checked_python">
+<a href="#last_checked_python" style="color: inherit; text-decoration: inherit;">last_<wbr>checked</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_updated_python">
 <a href="#last_updated_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated</a>

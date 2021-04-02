@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.synapse.IntegrationRuntime resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Integration runtime resource type.
-API Version: 2020-12-01.
+API Version: 2021-03-01.
 
 {{% examples %}}
 

@@ -940,22 +940,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Daily</dt>
-    <dd>Daily</dd></dl>
+    <dd>Daily</dd><dt>Hourly</dt>
+    <dd>Hourly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Granularity<wbr>Type<wbr>Daily</dt>
-    <dd>Daily</dd></dl>
+    <dd>Daily</dd><dt>Granularity<wbr>Type<wbr>Hourly</dt>
+    <dd>Hourly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Daily</dt>
-    <dd>Daily</dd></dl>
+    <dd>Daily</dd><dt>Hourly</dt>
+    <dd>Hourly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>DAILY</dt>
-    <dd>Daily</dd></dl>
+    <dd>Daily</dd><dt>HOURLY</dt>
+    <dd>Hourly</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operatortype">Operator<wbr>Type</h4>
@@ -3641,32 +3645,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Week<wbr>To<wbr>Date</dt>
     <dd>WeekToDate</dd><dt>Month<wbr>To<wbr>Date</dt>
-    <dd>MonthToDate</dd><dt>Year<wbr>To<wbr>Date</dt>
-    <dd>YearToDate</dd><dt>Custom</dt>
+    <dd>MonthToDate</dd><dt>Custom</dt>
     <dd>Custom</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Timeframe<wbr>Type<wbr>Week<wbr>To<wbr>Date</dt>
     <dd>WeekToDate</dd><dt>Timeframe<wbr>Type<wbr>Month<wbr>To<wbr>Date</dt>
-    <dd>MonthToDate</dd><dt>Timeframe<wbr>Type<wbr>Year<wbr>To<wbr>Date</dt>
-    <dd>YearToDate</dd><dt>Timeframe<wbr>Type<wbr>Custom</dt>
+    <dd>MonthToDate</dd><dt>Timeframe<wbr>Type<wbr>Custom</dt>
     <dd>Custom</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Week<wbr>To<wbr>Date</dt>
     <dd>WeekToDate</dd><dt>Month<wbr>To<wbr>Date</dt>
-    <dd>MonthToDate</dd><dt>Year<wbr>To<wbr>Date</dt>
-    <dd>YearToDate</dd><dt>Custom</dt>
+    <dd>MonthToDate</dd><dt>Custom</dt>
     <dd>Custom</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>WEEK_TO_DATE</dt>
     <dd>WeekToDate</dd><dt>MONTH_TO_DATE</dt>
-    <dd>MonthToDate</dd><dt>YEAR_TO_DATE</dt>
-    <dd>YearToDate</dd><dt>CUSTOM</dt>
+    <dd>MonthToDate</dd><dt>CUSTOM</dt>
     <dd>Custom</dd></dl>
 {{% /choosable %}}
 ## Import

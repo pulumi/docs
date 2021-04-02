@@ -73,6 +73,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="deploymentmanager/" title="deploymentmanager"><span class="symbol module"></span>deploymentmanager</a></li>
     <li><a href="desktopvirtualization/" title="desktopvirtualization"><span class="symbol module"></span>desktopvirtualization</a></li>
     <li><a href="devices/" title="devices"><span class="symbol module"></span>devices</a></li>
+    <li><a href="deviceupdate/" title="deviceupdate"><span class="symbol module"></span>deviceupdate</a></li>
     <li><a href="devops/" title="devops"><span class="symbol module"></span>devops</a></li>
     <li><a href="devspaces/" title="devspaces"><span class="symbol module"></span>devspaces</a></li>
     <li><a href="devtestlab/" title="devtestlab"><span class="symbol module"></span>devtestlab</a></li>
@@ -80,10 +81,12 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="documentdb/" title="documentdb"><span class="symbol module"></span>documentdb</a></li>
     <li><a href="domainregistration/" title="domainregistration"><span class="symbol module"></span>domainregistration</a></li>
     <li><a href="edgeorder/" title="edgeorder"><span class="symbol module"></span>edgeorder</a></li>
+    <li><a href="elastic/" title="elastic"><span class="symbol module"></span>elastic</a></li>
     <li><a href="engagementfabric/" title="engagementfabric"><span class="symbol module"></span>engagementfabric</a></li>
     <li><a href="enterpriseknowledgegraph/" title="enterpriseknowledgegraph"><span class="symbol module"></span>enterpriseknowledgegraph</a></li>
     <li><a href="eventgrid/" title="eventgrid"><span class="symbol module"></span>eventgrid</a></li>
     <li><a href="eventhub/" title="eventhub"><span class="symbol module"></span>eventhub</a></li>
+    <li><a href="extendedlocation/" title="extendedlocation"><span class="symbol module"></span>extendedlocation</a></li>
     <li><a href="guestconfiguration/" title="guestconfiguration"><span class="symbol module"></span>guestconfiguration</a></li>
     <li><a href="hanaonazure/" title="hanaonazure"><span class="symbol module"></span>hanaonazure</a></li>
     <li><a href="hardwaresecuritymodules/" title="hardwaresecuritymodules"><span class="symbol module"></span>hardwaresecuritymodules</a></li>
@@ -105,6 +108,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="kusto/" title="kusto"><span class="symbol module"></span>kusto</a></li>
     <li><a href="labservices/" title="labservices"><span class="symbol module"></span>labservices</a></li>
     <li><a href="logic/" title="logic"><span class="symbol module"></span>logic</a></li>
+    <li><a href="logz/" title="logz"><span class="symbol module"></span>logz</a></li>
     <li><a href="machinelearning/" title="machinelearning"><span class="symbol module"></span>machinelearning</a></li>
     <li><a href="machinelearningcompute/" title="machinelearningcompute"><span class="symbol module"></span>machinelearningcompute</a></li>
     <li><a href="machinelearningexperimentation/" title="machinelearningexperimentation"><span class="symbol module"></span>machinelearningexperimentation</a></li>
@@ -185,6 +189,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.peering.getRegisteredAsn function
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The customer's ASN that is registered by the peering service provider.
-API Version: 2020-10-01.
+API Version: 2021-01-01.
 
 
 

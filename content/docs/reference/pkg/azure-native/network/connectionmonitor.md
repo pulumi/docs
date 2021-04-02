@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.ConnectionMonitor resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about the connection monitor.
-API Version: 2020-08-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 

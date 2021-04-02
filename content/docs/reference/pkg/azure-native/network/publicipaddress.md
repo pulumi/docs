@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.PublicIPAddress resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Public IP address resource.
-API Version: 2020-08-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 
@@ -374,7 +374,7 @@ const publicIPAddress = new azure_native.network.PublicIPAddress("publicIPAddres
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PublicIPAddress</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ddos_settings</span><span class="p">:</span> <span class="nx">Optional[DdosSettingsArgs]</span> = None<span class="p">, </span><span class="nx">dns_settings</span><span class="p">:</span> <span class="nx">Optional[PublicIPAddressDnsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">idle_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpTagArgs]]</span> = None<span class="p">, </span><span class="nx">linked_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[PublicIPAddressArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migration_phase</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicIpAddressMigrationPhase]]</span> = None<span class="p">, </span><span class="nx">nat_gateway</span><span class="p">:</span> <span class="nx">Optional[NatGatewayArgs]</span> = None<span class="p">, </span><span class="nx">public_ip_address_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, IPVersion]]</span> = None<span class="p">, </span><span class="nx">public_ip_allocation_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, IPAllocationMethod]]</span> = None<span class="p">, </span><span class="nx">public_ip_prefix</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">public_ip_address_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[PublicIPAddressArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[PublicIPAddressSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PublicIPAddress</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ddos_settings</span><span class="p">:</span> <span class="nx">Optional[DdosSettingsArgs]</span> = None<span class="p">, </span><span class="nx">dns_settings</span><span class="p">:</span> <span class="nx">Optional[PublicIPAddressDnsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">idle_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpTagArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, IPVersion]]</span> = None<span class="p">, </span><span class="nx">public_ip_allocation_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, IPAllocationMethod]]</span> = None<span class="p">, </span><span class="nx">public_ip_prefix</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">public_ip_address_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[PublicIPAddressSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -580,14 +580,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="linkedpublicipaddress_csharp">
-<a href="#linkedpublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -595,22 +587,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migrationphase_csharp">
-<a href="#migrationphase_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicipaddressmigrationphase">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase</a></span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="natgateway_csharp">
-<a href="#natgateway_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgateway">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddressversion_csharp">
 <a href="#publicipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
@@ -643,14 +619,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicepublicipaddress_csharp">
-<a href="#servicepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -744,14 +712,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="linkedpublicipaddress_go">
-<a href="#linkedpublicipaddress_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -759,22 +719,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migrationphase_go">
-<a href="#migrationphase_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicipaddressmigrationphase">Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase</a></span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="natgateway_go">
-<a href="#natgateway_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgateway">Nat<wbr>Gateway<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddressversion_go">
 <a href="#publicipaddressversion_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
@@ -807,14 +751,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicepublicipaddress_go">
-<a href="#servicepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -908,14 +844,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="linkedpublicipaddress_nodejs">
-<a href="#linkedpublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -923,22 +851,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migrationphase_nodejs">
-<a href="#migrationphase_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicipaddressmigrationphase">Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase</a></span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="natgateway_nodejs">
-<a href="#natgateway_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgateway">Nat<wbr>Gateway</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddressversion_nodejs">
 <a href="#publicipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Version</a>
@@ -971,14 +883,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicepublicipaddress_nodejs">
-<a href="#servicepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1072,14 +976,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="linked_public_ip_address_python">
-<a href="#linked_public_ip_address_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>public_<wbr>ip_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1087,22 +983,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migration_phase_python">
-<a href="#migration_phase_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#publicipaddressmigrationphase">Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase</a></span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nat_gateway_python">
-<a href="#nat_gateway_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgateway">Nat<wbr>Gateway<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_name_python">
 <a href="#public_ip_address_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>name</a>
@@ -1135,14 +1015,6 @@ The PublicIPAddress resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="service_public_ip_address_python">
-<a href="#service_public_ip_address_python" style="color: inherit; text-decoration: inherit;">service_<wbr>public_<wbr>ip_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1748,216 +1620,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="applicationgatewayipconfigurationresponse">Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_csharp">
-<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the application gateway IP configuration resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the IP configuration that is unique within an Application Gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnet_csharp">
-<a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Reference to the subnet resource. A subnet from where application gateway gets its private address.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_go">
-<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the application gateway IP configuration resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the IP configuration that is unique within an Application Gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnet_go">
-<a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Reference to the subnet resource. A subnet from where application gateway gets its private address.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_nodejs">
-<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the application gateway IP configuration resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the IP configuration that is unique within an Application Gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnet_nodejs">
-<a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Reference to the subnet resource. A subnet from where application gateway gets its private address.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_python">
-<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the application gateway IP configuration resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the IP configuration that is unique within an Application Gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnet_python">
-<a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Reference to the subnet resource. A subnet from where application gateway gets its private address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="applicationsecuritygroupresponse">Application<wbr>Security<wbr>Group<wbr>Response</h4>
@@ -2991,15 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3051,15 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3111,15 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3171,15 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="extendedlocation">Extended<wbr>Location</h4>
@@ -5617,6 +5247,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Name of the backend address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subnet_csharp">
+<a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Reference to an existing subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="virtualnetwork_csharp">
 <a href="#virtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network</a>
 </span>
@@ -5660,6 +5298,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backend address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_go">
+<a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Reference to an existing subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetwork_go">
 <a href="#virtualnetwork_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network</a>
@@ -5705,6 +5351,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Name of the backend address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subnet_nodejs">
+<a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Reference to an existing subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="virtualnetwork_nodejs">
 <a href="#virtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network</a>
 </span>
@@ -5749,6 +5403,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Name of the backend address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subnet_python">
+<a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Reference to an existing subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="virtual_network_python">
 <a href="#virtual_network_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network</a>
 </span>
@@ -5756,868 +5418,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to an existing virtual network.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="natgateway">Nat<wbr>Gateway</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idletimeoutinminutes_csharp">
-<a href="#idletimeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddresses_csharp">
-<a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipprefixes_csharp">
-<a href="#publicipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefixes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_csharp">
-<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaysku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_csharp">
-<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idletimeoutinminutes_go">
-<a href="#idletimeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddresses_go">
-<a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipprefixes_go">
-<a href="#publicipprefixes_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefixes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_go">
-<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaysku">Nat<wbr>Gateway<wbr>Sku</a></span>
-    </dt>
-    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_go">
-<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idletimeoutinminutes_nodejs">
-<a href="#idletimeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddresses_nodejs">
-<a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipprefixes_nodejs">
-<a href="#publicipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Prefixes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_nodejs">
-<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaysku">Nat<wbr>Gateway<wbr>Sku</a></span>
-    </dt>
-    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_nodejs">
-<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idle_timeout_in_minutes_python">
-<a href="#idle_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>in_<wbr>minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_ip_addresses_python">
-<a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_ip_prefixes_python">
-<a href="#public_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefixes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_python">
-<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaysku">Nat<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_python">
-<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="natgatewayresponse">Nat<wbr>Gateway<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_csharp">
-<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourceguid_csharp">
-<a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource GUID property of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnets_csharp">
-<a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the subnets using this nat gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idletimeoutinminutes_csharp">
-<a href="#idletimeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddresses_csharp">
-<a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipprefixes_csharp">
-<a href="#publicipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefixes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_csharp">
-<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewayskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_csharp">
-<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_go">
-<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourceguid_go">
-<a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource GUID property of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnets_go">
-<a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the subnets using this nat gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idletimeoutinminutes_go">
-<a href="#idletimeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddresses_go">
-<a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipprefixes_go">
-<a href="#publicipprefixes_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefixes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_go">
-<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewayskuresponse">Nat<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_go">
-<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_nodejs">
-<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourceguid_nodejs">
-<a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource GUID property of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnets_nodejs">
-<a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the subnets using this nat gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idletimeoutinminutes_nodejs">
-<a href="#idletimeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddresses_nodejs">
-<a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipprefixes_nodejs">
-<a href="#publicipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Prefixes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_nodejs">
-<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewayskuresponse">Nat<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_nodejs">
-<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_python">
-<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resource_guid_python">
-<a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource GUID property of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnets_python">
-<a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the subnets using this nat gateway resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idle_timeout_in_minutes_python">
-<a href="#idle_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>in_<wbr>minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_ip_addresses_python">
-<a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_ip_prefixes_python">
-<a href="#public_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefixes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_python">
-<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewayskuresponse">Nat<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_python">
-<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="natgatewaysku">Nat<wbr>Gateway<wbr>Sku</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#natgatewayskuname">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Nat<wbr>Gateway<wbr>Sku<wbr>Name</a></span>
-    </dt>
-    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#natgatewayskuname">Nat<wbr>Gateway<wbr>Sku<wbr>Name</a></span>
-    </dt>
-    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#natgatewayskuname">Nat<wbr>Gateway<wbr>Sku<wbr>Name</a></span>
-    </dt>
-    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#natgatewayskuname">Nat<wbr>Gateway<wbr>Sku<wbr>Name</a></span>
-    </dt>
-    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="natgatewayskuname">Nat<wbr>Gateway<wbr>Sku<wbr>Name</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Standard</dt>
-    <dd>Standard</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Nat<wbr>Gateway<wbr>Sku<wbr>Name<wbr>Standard</dt>
-    <dd>Standard</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Standard</dt>
-    <dd>Standard</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>STANDARD</dt>
-    <dd>Standard</dd></dl>
-{{% /choosable %}}
-
-<h4 id="natgatewayskuresponse">Nat<wbr>Gateway<wbr>Sku<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkinterfacednssettingsresponse">Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Response</h4>
@@ -7037,14 +5837,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Subnet bound to the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="virtualnetworktaps_csharp">
 <a href="#virtualnetworktaps_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Taps</a>
 </span>
@@ -7176,14 +5968,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Subnet bound to the IP configuration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworktaps_go">
 <a href="#virtualnetworktaps_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Taps</a>
@@ -7317,14 +6101,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Subnet bound to the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="virtualnetworktaps_nodejs">
 <a href="#virtualnetworktaps_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Taps</a>
 </span>
@@ -7456,14 +6232,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Subnet bound to the IP configuration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_taps_python">
 <a href="#virtual_network_taps_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>taps</a>
@@ -7631,14 +6399,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="migrationphase_csharp">
-<a href="#migrationphase_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="networksecuritygroup_csharp">
 <a href="#networksecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
 </span>
@@ -7646,22 +6406,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#networksecuritygroupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nictype_csharp">
-<a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkservice_csharp">
-<a href="#privatelinkservice_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Privatelinkservice of the network interface resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -7827,14 +6571,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="migrationphase_go">
-<a href="#migrationphase_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="networksecuritygroup_go">
 <a href="#networksecuritygroup_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
 </span>
@@ -7842,22 +6578,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#networksecuritygroupresponse">Network<wbr>Security<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nictype_go">
-<a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkservice_go">
-<a href="#privatelinkservice_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceresponse">Private<wbr>Link<wbr>Service<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Privatelinkservice of the network interface resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -8023,14 +6743,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="migrationphase_nodejs">
-<a href="#migrationphase_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="networksecuritygroup_nodejs">
 <a href="#networksecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group</a>
 </span>
@@ -8038,22 +6750,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#networksecuritygroupresponse">Network<wbr>Security<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nictype_nodejs">
-<a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkservice_nodejs">
-<a href="#privatelinkservice_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceresponse">Private<wbr>Link<wbr>Service<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Privatelinkservice of the network interface resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -8219,14 +6915,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="migration_phase_python">
-<a href="#migration_phase_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="network_security_group_python">
 <a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
 </span>
@@ -8234,22 +6922,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#networksecuritygroupresponse">Network<wbr>Security<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nic_type_python">
-<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_link_service_python">
-<a href="#private_link_service_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceresponse">Private<wbr>Link<wbr>Service<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Privatelinkservice of the network interface resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -8902,280 +7574,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_csharp">
-<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="linkidentifier_csharp">
-<a href="#linkidentifier_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Identifier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The consumer link id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privateendpoint_csharp">
-<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_csharp">
-<a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_go">
-<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="linkidentifier_go">
-<a href="#linkidentifier_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Identifier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The consumer link id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privateendpoint_go">
-<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_go">
-<a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_nodejs">
-<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="linkidentifier_nodejs">
-<a href="#linkidentifier_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Identifier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The consumer link id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privateendpoint_nodejs">
-<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_nodejs">
-<a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_python">
-<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="link_identifier_python">
-<a href="#link_identifier_python" style="color: inherit; text-decoration: inherit;">link_<wbr>identifier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The consumer link id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="private_endpoint_python">
-<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_link_service_connection_state_python">
-<a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
@@ -10032,1600 +8430,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="privatelinkserviceipconfigurationresponse">Private<wbr>Link<wbr>Service<wbr>Ip<wbr>Configuration<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_csharp">
-<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private link service IP configuration resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of private link service ip configuration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="primary_csharp">
-<a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the ip configuration is primary or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateipaddress_csharp">
-<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateipaddressversion_csharp">
-<a href="#privateipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateipallocationmethod_csharp">
-<a href="#privateipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnet_csharp">
-<a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_go">
-<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private link service IP configuration resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of private link service ip configuration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="primary_go">
-<a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the ip configuration is primary or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateipaddress_go">
-<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateipaddressversion_go">
-<a href="#privateipaddressversion_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateipallocationmethod_go">
-<a href="#privateipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnet_go">
-<a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_nodejs">
-<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private link service IP configuration resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of private link service ip configuration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="primary_nodejs">
-<a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether the ip configuration is primary or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateipaddress_nodejs">
-<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateipaddressversion_nodejs">
-<a href="#privateipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateipallocationmethod_nodejs">
-<a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnet_nodejs">
-<a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="etag_python">
-<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private link service IP configuration resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of private link service ip configuration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="primary_python">
-<a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the ip configuration is primary or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_ip_address_python">
-<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_ip_address_version_python">
-<a href="#private_ip_address_version_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_ip_allocation_method_python">
-<a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnet_python">
-<a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="privatelinkservicepropertiesresponseautoapproval">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Auto<wbr>Approval</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="subscriptions_csharp">
-<a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="subscriptions_go">
-<a href="#subscriptions_go" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="subscriptions_nodejs">
-<a href="#subscriptions_nodejs" style="color: inherit; text-decoration: inherit;">subscriptions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="subscriptions_python">
-<a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="privatelinkservicepropertiesresponsevisibility">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Visibility</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="subscriptions_csharp">
-<a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="subscriptions_go">
-<a href="#subscriptions_go" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="subscriptions_nodejs">
-<a href="#subscriptions_nodejs" style="color: inherit; text-decoration: inherit;">subscriptions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="subscriptions_python">
-<a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="privatelinkserviceresponse">Private<wbr>Link<wbr>Service<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="alias_csharp">
-<a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias of the private link service.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="etag_csharp">
-<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="networkinterfaces_csharp">
-<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the network interfaces created for this private link service.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privateendpointconnections_csharp">
-<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of list about connections to the private endpoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private link service resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="autoapproval_csharp">
-<a href="#autoapproval_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Approval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkservicepropertiesresponseautoapproval">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Auto<wbr>Approval<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The auto-approval list of the private link service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enableproxyprotocol_csharp">
-<a href="#enableproxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the private link service is enabled for proxy protocol or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="extendedlocation_csharp">
-<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="fqdns_csharp">
-<a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The list of Fqdn.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipconfigurations_csharp">
-<a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Ip<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of private link service IP configurations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="loadbalancerfrontendipconfigurations_csharp">
-<a href="#loadbalancerfrontendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the load balancer IP configurations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="visibility_csharp">
-<a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkservicepropertiesresponsevisibility">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Visibility<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The visibility list of the private link service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="alias_go">
-<a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias of the private link service.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="etag_go">
-<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="networkinterfaces_go">
-<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">[]Network<wbr>Interface<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the network interfaces created for this private link service.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privateendpointconnections_go">
-<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An array of list about connections to the private endpoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private link service resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="autoapproval_go">
-<a href="#autoapproval_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Approval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkservicepropertiesresponseautoapproval">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Auto<wbr>Approval</a></span>
-    </dt>
-    <dd>{{% md %}}The auto-approval list of the private link service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enableproxyprotocol_go">
-<a href="#enableproxyprotocol_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the private link service is enabled for proxy protocol or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="extendedlocation_go">
-<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="fqdns_go">
-<a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of Fqdn.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipconfigurations_go">
-<a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceipconfigurationresponse">[]Private<wbr>Link<wbr>Service<wbr>Ip<wbr>Configuration<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An array of private link service IP configurations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="loadbalancerfrontendipconfigurations_go">
-<a href="#loadbalancerfrontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendipconfigurationresponse">[]Frontend<wbr>IPConfiguration<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the load balancer IP configurations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="visibility_go">
-<a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkservicepropertiesresponsevisibility">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Visibility</a></span>
-    </dt>
-    <dd>{{% md %}}The visibility list of the private link service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="alias_nodejs">
-<a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias of the private link service.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="etag_nodejs">
-<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="networkinterfaces_nodejs">
-<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Network<wbr>Interface<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the network interfaces created for this private link service.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privateendpointconnections_nodejs">
-<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of list about connections to the private endpoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private link service resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="autoapproval_nodejs">
-<a href="#autoapproval_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Approval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkservicepropertiesresponseautoapproval">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Auto<wbr>Approval</a></span>
-    </dt>
-    <dd>{{% md %}}The auto-approval list of the private link service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enableproxyprotocol_nodejs">
-<a href="#enableproxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Proxy<wbr>Protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether the private link service is enabled for proxy protocol or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="extendedlocation_nodejs">
-<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="fqdns_nodejs">
-<a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The list of Fqdn.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipconfigurations_nodejs">
-<a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceipconfigurationresponse">Private<wbr>Link<wbr>Service<wbr>Ip<wbr>Configuration<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of private link service IP configurations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="loadbalancerfrontendipconfigurations_nodejs">
-<a href="#loadbalancerfrontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendipconfigurationresponse">Frontend<wbr>IPConfiguration<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the load balancer IP configurations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="visibility_nodejs">
-<a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkservicepropertiesresponsevisibility">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Visibility</a></span>
-    </dt>
-    <dd>{{% md %}}The visibility list of the private link service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="alias_python">
-<a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The alias of the private link service.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="etag_python">
-<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="network_interfaces_python">
-<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the network interfaces created for this private link service.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="private_endpoint_connections_python">
-<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of list about connections to the private endpoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The provisioning state of the private link service resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="auto_approval_python">
-<a href="#auto_approval_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>approval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkservicepropertiesresponseautoapproval">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Auto<wbr>Approval<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The auto-approval list of the private link service.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enable_proxy_protocol_python">
-<a href="#enable_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>proxy_<wbr>protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the private link service is enabled for proxy protocol or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="extended_location_python">
-<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="fqdns_python">
-<a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of Fqdn.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ip_configurations_python">
-<a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceipconfigurationresponse">Sequence[Private<wbr>Link<wbr>Service<wbr>Ip<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of private link service IP configurations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="load_balancer_frontend_ip_configurations_python">
-<a href="#load_balancer_frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>frontend_<wbr>ip_<wbr>configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendipconfigurationresponse">Sequence[Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of references to the load balancer IP configurations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="visibility_python">
-<a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkservicepropertiesresponsevisibility">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Visibility<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The visibility list of the private link service.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="publicipaddress">Public<wbr>IPAddress</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="ddossettings_csharp">
-<a href="#ddossettings_csharp" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ddossettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ddos<wbr>Settings<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The DDoS protection custom policy associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dnssettings_csharp">
-<a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressdnssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The FQDN of the DNS record associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="extendedlocation_csharp">
-<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of the public ip address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idletimeoutinminutes_csharp">
-<a href="#idletimeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipaddress_csharp">
-<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IP address associated with the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iptags_csharp">
-<a href="#iptags_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iptag">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ip<wbr>Tag<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="linkedpublicipaddress_csharp">
-<a href="#linkedpublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migrationphase_csharp">
-<a href="#migrationphase_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicipaddressmigrationphase">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase</a></span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="natgateway_csharp">
-<a href="#natgateway_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgateway">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddressversion_csharp">
-<a href="#publicipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipversion">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>IPVersion</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipallocationmethod_csharp">
-<a href="#publicipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAllocation<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipallocationmethod">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>IPAllocation<wbr>Method</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipprefix_csharp">
-<a href="#publicipprefix_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicepublicipaddress_csharp">
-<a href="#servicepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_csharp">
-<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddresssku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_csharp">
-<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the IP allocated for the resource needs to come from.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="ddossettings_go">
-<a href="#ddossettings_go" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ddossettings">Ddos<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}The DDoS protection custom policy associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dnssettings_go">
-<a href="#dnssettings_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressdnssettings">Public<wbr>IPAddress<wbr>Dns<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}The FQDN of the DNS record associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="extendedlocation_go">
-<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of the public ip address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idletimeoutinminutes_go">
-<a href="#idletimeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipaddress_go">
-<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IP address associated with the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iptags_go">
-<a href="#iptags_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iptag">[]Ip<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="linkedpublicipaddress_go">
-<a href="#linkedpublicipaddress_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migrationphase_go">
-<a href="#migrationphase_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicipaddressmigrationphase">Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase</a></span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="natgateway_go">
-<a href="#natgateway_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgateway">Nat<wbr>Gateway<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddressversion_go">
-<a href="#publicipaddressversion_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipversion">IPVersion</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipallocationmethod_go">
-<a href="#publicipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAllocation<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipallocationmethod">IPAllocation<wbr>Method</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipprefix_go">
-<a href="#publicipprefix_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
-    </dt>
-    <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicepublicipaddress_go">
-<a href="#servicepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_go">
-<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddresssku">Public<wbr>IPAddress<wbr>Sku</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_go">
-<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the IP allocated for the resource needs to come from.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="ddossettings_nodejs">
-<a href="#ddossettings_nodejs" style="color: inherit; text-decoration: inherit;">ddos<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ddossettings">Ddos<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}The DDoS protection custom policy associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dnssettings_nodejs">
-<a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressdnssettings">Public<wbr>IPAddress<wbr>Dns<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}The FQDN of the DNS record associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="extendedlocation_nodejs">
-<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of the public ip address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idletimeoutinminutes_nodejs">
-<a href="#idletimeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipaddress_nodejs">
-<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IP address associated with the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iptags_nodejs">
-<a href="#iptags_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iptag">Ip<wbr>Tag[]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="linkedpublicipaddress_nodejs">
-<a href="#linkedpublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migrationphase_nodejs">
-<a href="#migrationphase_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicipaddressmigrationphase">Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase</a></span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="natgateway_nodejs">
-<a href="#natgateway_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgateway">Nat<wbr>Gateway</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipaddressversion_nodejs">
-<a href="#publicipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipversion">IPVersion</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipallocationmethod_nodejs">
-<a href="#publicipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAllocation<wbr>Method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipallocationmethod">IPAllocation<wbr>Method</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicipprefix_nodejs">
-<a href="#publicipprefix_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPPrefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
-    </dt>
-    <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicepublicipaddress_nodejs">
-<a href="#servicepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_nodejs">
-<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddresssku">Public<wbr>IPAddress<wbr>Sku</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_nodejs">
-<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the IP allocated for the resource needs to come from.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="ddos_settings_python">
-<a href="#ddos_settings_python" style="color: inherit; text-decoration: inherit;">ddos_<wbr>settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ddossettings">Ddos<wbr>Settings<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The DDoS protection custom policy associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dns_settings_python">
-<a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressdnssettings">Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The FQDN of the DNS record associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="extended_location_python">
-<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of the public ip address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="idle_timeout_in_minutes_python">
-<a href="#idle_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>in_<wbr>minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The idle timeout of the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ip_address_python">
-<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IP address associated with the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ip_tags_python">
-<a href="#ip_tags_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iptag">Sequence[Ip<wbr>Tag<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="linked_public_ip_address_python">
-<a href="#linked_public_ip_address_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>public_<wbr>ip_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migration_phase_python">
-<a href="#migration_phase_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#publicipaddressmigrationphase">Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase</a></span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nat_gateway_python">
-<a href="#nat_gateway_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgateway">Nat<wbr>Gateway<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_ip_address_version_python">
-<a href="#public_ip_address_version_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ipversion">IPVersion</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_ip_allocation_method_python">
-<a href="#public_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>allocation_<wbr>method</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ipallocationmethod">IPAllocation<wbr>Method</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_ip_prefix_python">
-<a href="#public_ip_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="service_public_ip_address_python">
-<a href="#service_public_ip_address_python" style="color: inherit; text-decoration: inherit;">service_<wbr>public_<wbr>ip_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddress">Public<wbr>IPAddress<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sku_python">
-<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddresssku">Public<wbr>IPAddress<wbr>Sku<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The public IP address SKU.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zones_python">
-<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of availability zones denoting the IP allocated for the resource needs to come from.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="publicipaddressdnssettings">Public<wbr>IPAddress<wbr>Dns<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
@@ -11963,14 +8767,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="linkedpublicipaddress_csharp">
-<a href="#linkedpublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -11978,22 +8774,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migrationphase_csharp">
-<a href="#migrationphase_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="natgateway_csharp">
-<a href="#natgateway_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewayresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddressversion_csharp">
 <a href="#publicipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
@@ -12018,14 +8798,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicepublicipaddress_csharp">
-<a href="#servicepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -12159,14 +8931,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="linkedpublicipaddress_go">
-<a href="#linkedpublicipaddress_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -12174,22 +8938,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migrationphase_go">
-<a href="#migrationphase_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="natgateway_go">
-<a href="#natgateway_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewayresponse">Nat<wbr>Gateway<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddressversion_go">
 <a href="#publicipaddressversion_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
@@ -12214,14 +8962,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicepublicipaddress_go">
-<a href="#servicepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -12355,14 +9095,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="linkedpublicipaddress_nodejs">
-<a href="#linkedpublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -12370,22 +9102,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migrationphase_nodejs">
-<a href="#migrationphase_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="natgateway_nodejs">
-<a href="#natgateway_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewayresponse">Nat<wbr>Gateway<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddressversion_nodejs">
 <a href="#publicipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Version</a>
@@ -12410,14 +9126,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicepublicipaddress_nodejs">
-<a href="#servicepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Public<wbr>IPAddress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -12551,14 +9259,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="linked_public_ip_address_python">
-<a href="#linked_public_ip_address_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>public_<wbr>ip_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The source Public IP Address (IPv6) that links to this address (IPv4).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -12566,22 +9266,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="migration_phase_python">
-<a href="#migration_phase_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>phase</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="nat_gateway_python">
-<a href="#nat_gateway_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewayresponse">Nat<wbr>Gateway<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_version_python">
 <a href="#public_ip_address_version_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>version</a>
@@ -12606,14 +9290,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="service_public_ip_address_python">
-<a href="#service_public_ip_address_python" style="color: inherit; text-decoration: inherit;">service_<wbr>public_<wbr>ip_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -12854,44 +9530,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>REGIONAL</dt>
     <dd>Regional</dd><dt>GLOBAL_</dt>
     <dd>Global</dd></dl>
-{{% /choosable %}}
-
-<h4 id="publicipaddressmigrationphase">Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>None</dt>
-    <dd>None</dd><dt>Prepare</dt>
-    <dd>Prepare</dd><dt>Commit</dt>
-    <dd>Commit</dd><dt>Abort</dt>
-    <dd>Abort</dd><dt>Committed</dt>
-    <dd>Committed</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase<wbr>None</dt>
-    <dd>None</dd><dt>Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase<wbr>Prepare</dt>
-    <dd>Prepare</dd><dt>Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase<wbr>Commit</dt>
-    <dd>Commit</dd><dt>Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase<wbr>Abort</dt>
-    <dd>Abort</dd><dt>Public<wbr>Ip<wbr>Address<wbr>Migration<wbr>Phase<wbr>Committed</dt>
-    <dd>Committed</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>None</dt>
-    <dd>None</dd><dt>Prepare</dt>
-    <dd>Prepare</dd><dt>Commit</dt>
-    <dd>Commit</dd><dt>Abort</dt>
-    <dd>Abort</dd><dt>Committed</dt>
-    <dd>Committed</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>NONE</dt>
-    <dd>None</dd><dt>PREPARE</dt>
-    <dd>Prepare</dd><dt>COMMIT</dt>
-    <dd>Commit</dd><dt>ABORT</dt>
-    <dd>Abort</dd><dt>COMMITTED</dt>
-    <dd>Committed</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcenavigationlinkresponse">Resource<wbr>Navigation<wbr>Link<wbr>Response</h4>
@@ -15113,6 +11751,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kind of service endpoint policy. This is metadata used for the Azure portal experience.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -15196,6 +11842,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kind of service endpoint policy. This is metadata used for the Azure portal experience.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -15281,6 +11935,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kind of service endpoint policy. This is metadata used for the Azure portal experience.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -15364,6 +12026,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Kind of service endpoint policy. This is metadata used for the Azure portal experience.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -15737,14 +12407,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of address prefixes for the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="applicationgatewayipconfigurations_csharp">
-<a href="#applicationgatewayipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Ip<wbr>Configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Application gateway IP configurations of virtual network resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="delegations_csharp">
 <a href="#delegations_csharp" style="color: inherit; text-decoration: inherit;">Delegations</a>
 </span>
@@ -15831,15 +12493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -15924,14 +12578,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of address prefixes for the subnet.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="applicationgatewayipconfigurations_go">
-<a href="#applicationgatewayipconfigurations_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Ip<wbr>Configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">[]Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Application gateway IP configurations of virtual network resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegations_go">
 <a href="#delegations_go" style="color: inherit; text-decoration: inherit;">Delegations</a>
@@ -16019,15 +12665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">[]Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -16112,14 +12750,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of address prefixes for the subnet.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="applicationgatewayipconfigurations_nodejs">
-<a href="#applicationgatewayipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Ip<wbr>Configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}Application gateway IP configurations of virtual network resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegations_nodejs">
 <a href="#delegations_nodejs" style="color: inherit; text-decoration: inherit;">delegations</a>
@@ -16207,15 +12837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -16300,14 +12922,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of address prefixes for the subnet.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="application_gateway_ip_configurations_python">
-<a href="#application_gateway_ip_configurations_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>ip_<wbr>configurations</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Application gateway IP configurations of virtual network resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegations_python">
 <a href="#delegations_python" style="color: inherit; text-decoration: inherit;">delegations</a>
@@ -16395,15 +13009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">Sequence[Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response</h4>

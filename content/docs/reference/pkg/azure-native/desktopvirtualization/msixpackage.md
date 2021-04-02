@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.desktopvirtualization.MSIXPackage
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Schema for MSIX Package properties.
-API Version: 2021-01-14-preview.
+API Version: 2021-02-01-preview.
 
 {{% examples %}}
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.documentdb.getDatabaseAccount fun
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure Cosmos DB database account.
-API Version: 2021-01-15.
+API Version: 2021-03-15.
 
 
 
@@ -277,6 +277,14 @@ The following output properties are available:
         <span class="property-type"><a href="#corspolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Outputs.<wbr>Cors<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="defaultidentity_csharp">
+<a href="#defaultidentity_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disablekeybasedmetadatawriteaccess_csharp">
 <a href="#disablekeybasedmetadatawriteaccess_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Key<wbr>Based<wbr>Metadata<wbr>Write<wbr>Access</a>
@@ -554,6 +562,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultidentity_go">
+<a href="#defaultidentity_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="disablekeybasedmetadatawriteaccess_go">
 <a href="#disablekeybasedmetadatawriteaccess_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Key<wbr>Based<wbr>Metadata<wbr>Write<wbr>Access</a>
 </span>
@@ -830,6 +846,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultidentity_nodejs">
+<a href="#defaultidentity_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="disablekeybasedmetadatawriteaccess_nodejs">
 <a href="#disablekeybasedmetadatawriteaccess_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Key<wbr>Based<wbr>Metadata<wbr>Write<wbr>Access</a>
 </span>
@@ -1105,6 +1129,14 @@ The following output properties are available:
         <span class="property-type"><a href="#corspolicyresponse">Sequence[Cors<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="default_identity_python">
+<a href="#default_identity_python" style="color: inherit; text-decoration: inherit;">default_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disable_key_based_metadata_write_access_python">
 <a href="#disable_key_based_metadata_write_access_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>key_<wbr>based_<wbr>metadata_<wbr>write_<wbr>access</a>

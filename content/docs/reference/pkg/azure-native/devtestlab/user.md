@@ -12,13 +12,178 @@ meta_desc: "Documentation for the azure-native.devtestlab.User resource with exa
 
 Profile of a lab user.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:User myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Users_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var user = new AzureNative.DevTestLab.User("user", new AzureNative.DevTestLab.UserArgs
+        {
+            Identity = new AzureNative.DevTestLab.Inputs.UserIdentityArgs
+            {
+                AppId = "{appId}",
+                ObjectId = "{objectId}",
+                PrincipalId = "{principalId}",
+                PrincipalName = "{principalName}",
+                TenantId = "{tenantId}",
+            },
+            LabName = "{devtestlabName}",
+            Location = "{location}",
+            Name = "{userName}",
+            ResourceGroupName = "resourceGroupName",
+            SecretStore = new AzureNative.DevTestLab.Inputs.UserSecretStoreArgs
+            {
+                KeyVaultId = "{keyVaultId}",
+                KeyVaultUri = "{keyVaultUri}",
+            },
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewUser(ctx, "user", &devtestlab.UserArgs{
+			Identity: &devtestlab.UserIdentityArgs{
+				AppId:         pulumi.String("{appId}"),
+				ObjectId:      pulumi.String("{objectId}"),
+				PrincipalId:   pulumi.String("{principalId}"),
+				PrincipalName: pulumi.String("{principalName}"),
+				TenantId:      pulumi.String("{tenantId}"),
+			},
+			LabName:           pulumi.String("{devtestlabName}"),
+			Location:          pulumi.String("{location}"),
+			Name:              pulumi.String("{userName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			SecretStore: &devtestlab.UserSecretStoreArgs{
+				KeyVaultId:  pulumi.String("{keyVaultId}"),
+				KeyVaultUri: pulumi.String("{keyVaultUri}"),
+			},
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+user = azure_native.devtestlab.User("user",
+    identity=azure_native.devtestlab.UserIdentityArgs(
+        app_id="{appId}",
+        object_id="{objectId}",
+        principal_id="{principalId}",
+        principal_name="{principalName}",
+        tenant_id="{tenantId}",
+    ),
+    lab_name="{devtestlabName}",
+    location="{location}",
+    name="{userName}",
+    resource_group_name="resourceGroupName",
+    secret_store=azure_native.devtestlab.UserSecretStoreArgs(
+        key_vault_id="{keyVaultId}",
+        key_vault_uri="{keyVaultUri}",
+    ),
+    tags={
+        "tagName1": "tagValue1",
+    })
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const user = new azure_native.devtestlab.User("user", {
+    identity: {
+        appId: "{appId}",
+        objectId: "{objectId}",
+        principalId: "{principalId}",
+        principalName: "{principalName}",
+        tenantId: "{tenantId}",
+    },
+    labName: "{devtestlabName}",
+    location: "{location}",
+    name: "{userName}",
+    resourceGroupName: "resourceGroupName",
+    secretStore: {
+        keyVaultId: "{keyVaultId}",
+        keyVaultUri: "{keyVaultUri}",
+    },
+    tags: {
+        tagName1: "tagValue1",
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -1123,6 +1288,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The URI of the user's Key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:User myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{name} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

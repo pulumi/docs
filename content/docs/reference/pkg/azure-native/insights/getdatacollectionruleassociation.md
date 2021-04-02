@@ -59,7 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the association.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the association. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceuri_csharp">
 <a href="#resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -79,7 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the association.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the association. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceuri_go">
 <a href="#resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -99,7 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the association.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the association. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceuri_nodejs">
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
@@ -119,7 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the association.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the association. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_uri_python">
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
@@ -141,14 +141,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="datacollectionruleid_csharp">
-<a href="#datacollectionruleid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection<wbr>Rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -190,6 +182,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="datacollectionruleid_csharp">
+<a href="#datacollectionruleid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -201,14 +201,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="datacollectionruleid_go">
-<a href="#datacollectionruleid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection<wbr>Rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -250,6 +242,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="datacollectionruleid_go">
+<a href="#datacollectionruleid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -261,14 +261,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="datacollectionruleid_nodejs">
-<a href="#datacollectionruleid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Collection<wbr>Rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -310,6 +302,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="datacollectionruleid_nodejs">
+<a href="#datacollectionruleid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Collection<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -321,14 +321,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="data_collection_rule_id_python">
-<a href="#data_collection_rule_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>collection_<wbr>rule_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -369,6 +361,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="data_collection_rule_id_python">
+<a href="#data_collection_rule_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>collection_<wbr>rule_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the data collection rule that is to be associated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.synapse.Key resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A workspace key
-API Version: 2020-12-01.
+API Version: 2021-03-01.
 
 {{% examples %}}
 

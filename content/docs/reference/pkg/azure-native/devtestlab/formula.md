@@ -12,13 +12,263 @@ meta_desc: "Documentation for the azure-native.devtestlab.Formula resource with 
 
 A formula for creating a VM, specifying an image base and other parameters
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:Formula myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/formulas/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Formulas_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var formula = new AzureNative.DevTestLab.Formula("formula", new AzureNative.DevTestLab.FormulaArgs
+        {
+            Description = "Formula using a Linux base",
+            FormulaContent = new AzureNative.DevTestLab.Inputs.LabVirtualMachineCreationParameterArgs
+            {
+                AllowClaim = false,
+                Artifacts = 
+                {
+                    new AzureNative.DevTestLab.Inputs.ArtifactInstallPropertiesArgs
+                    {
+                        ArtifactId = "/artifactsources/{artifactSourceName}/artifacts/linux-install-nodejs",
+                        Parameters = {},
+                    },
+                },
+                DisallowPublicIpAddress = true,
+                GalleryImageReference = new AzureNative.DevTestLab.Inputs.GalleryImageReferenceArgs
+                {
+                    Offer = "0001-com-ubuntu-server-groovy",
+                    OsType = "Linux",
+                    Publisher = "canonical",
+                    Sku = "20_10",
+                    Version = "latest",
+                },
+                IsAuthenticationWithSshKey = false,
+                LabSubnetName = "Dtl{labName}Subnet",
+                LabVirtualNetworkId = "/virtualnetworks/dtl{labName}",
+                Location = "{location}",
+                NetworkInterface = new AzureNative.DevTestLab.Inputs.NetworkInterfacePropertiesArgs
+                {
+                    SharedPublicIpAddressConfiguration = new AzureNative.DevTestLab.Inputs.SharedPublicIpAddressConfigurationArgs
+                    {
+                        InboundNatRules = 
+                        {
+                            new AzureNative.DevTestLab.Inputs.InboundNatRuleArgs
+                            {
+                                BackendPort = 22,
+                                TransportProtocol = "Tcp",
+                            },
+                        },
+                    },
+                },
+                Notes = "Ubuntu Server 20.10",
+                Size = "Standard_B1ms",
+                StorageType = "Standard",
+                UserName = "user",
+            },
+            LabName = "{labName}",
+            Location = "{location}",
+            Name = "{formulaName}",
+            ResourceGroupName = "resourceGroupName",
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewFormula(ctx, "formula", &devtestlab.FormulaArgs{
+			Description: pulumi.String("Formula using a Linux base"),
+			FormulaContent: &devtestlab.LabVirtualMachineCreationParameterArgs{
+				AllowClaim: pulumi.Bool(false),
+				Artifacts: devtestlab.ArtifactInstallPropertiesArray{
+					&devtestlab.ArtifactInstallPropertiesArgs{
+						ArtifactId: pulumi.String("/artifactsources/{artifactSourceName}/artifacts/linux-install-nodejs"),
+						Parameters: devtestlab.ArtifactParameterPropertiesArray{},
+					},
+				},
+				DisallowPublicIpAddress: pulumi.Bool(true),
+				GalleryImageReference: &devtestlab.GalleryImageReferenceArgs{
+					Offer:     pulumi.String("0001-com-ubuntu-server-groovy"),
+					OsType:    pulumi.String("Linux"),
+					Publisher: pulumi.String("canonical"),
+					Sku:       pulumi.String("20_10"),
+					Version:   pulumi.String("latest"),
+				},
+				IsAuthenticationWithSshKey: pulumi.Bool(false),
+				LabSubnetName:              pulumi.String("Dtl{labName}Subnet"),
+				LabVirtualNetworkId:        pulumi.String("/virtualnetworks/dtl{labName}"),
+				Location:                   pulumi.String("{location}"),
+				NetworkInterface: &devtestlab.NetworkInterfacePropertiesArgs{
+					SharedPublicIpAddressConfiguration: &devtestlab.SharedPublicIpAddressConfigurationArgs{
+						InboundNatRules: devtestlab.InboundNatRuleArray{
+							&devtestlab.InboundNatRuleArgs{
+								BackendPort:       pulumi.Int(22),
+								TransportProtocol: pulumi.String("Tcp"),
+							},
+						},
+					},
+				},
+				Notes:       pulumi.String("Ubuntu Server 20.10"),
+				Size:        pulumi.String("Standard_B1ms"),
+				StorageType: pulumi.String("Standard"),
+				UserName:    pulumi.String("user"),
+			},
+			LabName:           pulumi.String("{labName}"),
+			Location:          pulumi.String("{location}"),
+			Name:              pulumi.String("{formulaName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+formula = azure_native.devtestlab.Formula("formula",
+    description="Formula using a Linux base",
+    formula_content=azure_native.devtestlab.LabVirtualMachineCreationParameterArgs(
+        allow_claim=False,
+        artifacts=[azure_native.devtestlab.ArtifactInstallPropertiesArgs(
+            artifact_id="/artifactsources/{artifactSourceName}/artifacts/linux-install-nodejs",
+            parameters=[],
+        )],
+        disallow_public_ip_address=True,
+        gallery_image_reference=azure_native.devtestlab.GalleryImageReferenceArgs(
+            offer="0001-com-ubuntu-server-groovy",
+            os_type="Linux",
+            publisher="canonical",
+            sku="20_10",
+            version="latest",
+        ),
+        is_authentication_with_ssh_key=False,
+        lab_subnet_name="Dtl{labName}Subnet",
+        lab_virtual_network_id="/virtualnetworks/dtl{labName}",
+        location="{location}",
+        network_interface=azure_native.devtestlab.NetworkInterfacePropertiesArgs(
+            shared_public_ip_address_configuration=azure_native.devtestlab.SharedPublicIpAddressConfigurationArgs(
+                inbound_nat_rules=[azure_native.devtestlab.InboundNatRuleArgs(
+                    backend_port=22,
+                    transport_protocol="Tcp",
+                )],
+            ),
+        ),
+        notes="Ubuntu Server 20.10",
+        size="Standard_B1ms",
+        storage_type="Standard",
+        user_name="user",
+    ),
+    lab_name="{labName}",
+    location="{location}",
+    name="{formulaName}",
+    resource_group_name="resourceGroupName")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const formula = new azure_native.devtestlab.Formula("formula", {
+    description: "Formula using a Linux base",
+    formulaContent: {
+        allowClaim: false,
+        artifacts: [{
+            artifactId: "/artifactsources/{artifactSourceName}/artifacts/linux-install-nodejs",
+            parameters: [],
+        }],
+        disallowPublicIpAddress: true,
+        galleryImageReference: {
+            offer: "0001-com-ubuntu-server-groovy",
+            osType: "Linux",
+            publisher: "canonical",
+            sku: "20_10",
+            version: "latest",
+        },
+        isAuthenticationWithSshKey: false,
+        labSubnetName: "Dtl{labName}Subnet",
+        labVirtualNetworkId: "/virtualnetworks/dtl{labName}",
+        location: "{location}",
+        networkInterface: {
+            sharedPublicIpAddressConfiguration: {
+                inboundNatRules: [{
+                    backendPort: 22,
+                    transportProtocol: "Tcp",
+                }],
+            },
+        },
+        notes: "Ubuntu Server 20.10",
+        size: "Standard_B1ms",
+        storageType: "Standard",
+        userName: "user",
+    },
+    labName: "{labName}",
+    location: "{location}",
+    name: "{formulaName}",
+    resourceGroupName: "resourceGroupName",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -32,7 +282,7 @@ $ pulumi import azure-native:devtestlab:Formula myresource1 /subscriptions/{subs
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Formula</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">formula_content</span><span class="p">:</span> <span class="nx">Optional[LabVirtualMachineCreationParameterArgs]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm</span><span class="p">:</span> <span class="nx">Optional[FormulaPropertiesFromVmArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Formula</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">formula_content</span><span class="p">:</span> <span class="nx">Optional[LabVirtualMachineCreationParameterArgs]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm</span><span class="p">:</span> <span class="nx">Optional[FormulaPropertiesFromVmArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -190,14 +440,6 @@ The Formula resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="author_csharp">
-<a href="#author_csharp" style="color: inherit; text-decoration: inherit;">Author</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The author of the formula.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -273,14 +515,6 @@ The Formula resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="author_go">
-<a href="#author_go" style="color: inherit; text-decoration: inherit;">Author</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The author of the formula.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -358,14 +592,6 @@ The Formula resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="author_nodejs">
-<a href="#author_nodejs" style="color: inherit; text-decoration: inherit;">author</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The author of the formula.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -442,14 +668,6 @@ The Formula resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="author_python">
-<a href="#author_python" style="color: inherit; text-decoration: inherit;">author</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The author of the formula.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -517,6 +735,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="author_csharp">
+<a href="#author_csharp" style="color: inherit; text-decoration: inherit;">Author</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The author of the formula.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
 </span>
@@ -560,6 +786,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="author_go">
+<a href="#author_go" style="color: inherit; text-decoration: inherit;">Author</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The author of the formula.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -605,6 +839,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="author_nodejs">
+<a href="#author_nodejs" style="color: inherit; text-decoration: inherit;">author</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The author of the formula.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
 </span>
@@ -648,6 +890,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="author_python">
+<a href="#author_python" style="color: inherit; text-decoration: inherit;">author</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The author of the formula.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -699,234 +949,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
-
-<h4 id="artifactdeploymentstatusproperties">Artifact<wbr>Deployment<wbr>Status<wbr>Properties</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="artifactsapplied_csharp">
-<a href="#artifactsapplied_csharp" style="color: inherit; text-decoration: inherit;">Artifacts<wbr>Applied</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="deploymentstatus_csharp">
-<a href="#deploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="totalartifacts_csharp">
-<a href="#totalartifacts_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="artifactsapplied_go">
-<a href="#artifactsapplied_go" style="color: inherit; text-decoration: inherit;">Artifacts<wbr>Applied</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="deploymentstatus_go">
-<a href="#deploymentstatus_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="totalartifacts_go">
-<a href="#totalartifacts_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="artifactsapplied_nodejs">
-<a href="#artifactsapplied_nodejs" style="color: inherit; text-decoration: inherit;">artifacts<wbr>Applied</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="deploymentstatus_nodejs">
-<a href="#deploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="totalartifacts_nodejs">
-<a href="#totalartifacts_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="artifacts_applied_python">
-<a href="#artifacts_applied_python" style="color: inherit; text-decoration: inherit;">artifacts_<wbr>applied</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="deployment_status_python">
-<a href="#deployment_status_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="total_artifacts_python">
-<a href="#total_artifacts_python" style="color: inherit; text-decoration: inherit;">total_<wbr>artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="artifactdeploymentstatuspropertiesresponse">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="artifactsapplied_csharp">
-<a href="#artifactsapplied_csharp" style="color: inherit; text-decoration: inherit;">Artifacts<wbr>Applied</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="deploymentstatus_csharp">
-<a href="#deploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="totalartifacts_csharp">
-<a href="#totalartifacts_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="artifactsapplied_go">
-<a href="#artifactsapplied_go" style="color: inherit; text-decoration: inherit;">Artifacts<wbr>Applied</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="deploymentstatus_go">
-<a href="#deploymentstatus_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="totalartifacts_go">
-<a href="#totalartifacts_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="artifactsapplied_nodejs">
-<a href="#artifactsapplied_nodejs" style="color: inherit; text-decoration: inherit;">artifacts<wbr>Applied</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="deploymentstatus_nodejs">
-<a href="#deploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="totalartifacts_nodejs">
-<a href="#totalartifacts_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="artifacts_applied_python">
-<a href="#artifacts_applied_python" style="color: inherit; text-decoration: inherit;">artifacts_<wbr>applied</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="deployment_status_python">
-<a href="#deployment_status_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="total_artifacts_python">
-<a href="#total_artifacts_python" style="color: inherit; text-decoration: inherit;">total_<wbr>artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd></dl>
-{{% /choosable %}}
 
 <h4 id="artifactinstallproperties">Artifact<wbr>Install<wbr>Properties</h4>
 
@@ -1595,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the disk to be attached in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_csharp">
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -1623,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the disk to be attached in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_go">
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -1651,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the disk to be attached in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_nodejs">
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
@@ -1679,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the disk to be attached in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_type_python">
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
@@ -1709,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the disk to be attached in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_csharp">
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -1737,7 +1759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the disk to be attached in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_go">
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -1765,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the disk to be attached in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_nodejs">
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
@@ -1793,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the disk to be attached in Gibibytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_type_python">
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
@@ -3085,14 +3107,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="artifactdeploymentstatus_csharp">
-<a href="#artifactdeploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactdeploymentstatusproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="artifacts_csharp">
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
@@ -3108,30 +3122,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bulkcreationparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Bulk<wbr>Creation<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="computeid_csharp">
-<a href="#computeid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuser_csharp">
-<a href="#createdbyuser_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuserid_csharp">
-<a href="#createdbyuserid_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -3181,14 +3171,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="fqdn_csharp">
-<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="galleryimagereference_csharp">
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
@@ -3221,14 +3203,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastknownpowerstate_csharp">
-<a href="#lastknownpowerstate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Known<wbr>Power<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -3260,14 +3234,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ostype_csharp">
-<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_csharp">
 <a href="#ownerobjectid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Object<wbr>Id</a>
@@ -3347,15 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinecreationsource_csharp">
-<a href="#virtualmachinecreationsource_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#virtualmachinecreationsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Source</a></span>
-    </dt>
-    <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3368,14 +3326,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="artifactdeploymentstatus_go">
-<a href="#artifactdeploymentstatus_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactdeploymentstatusproperties">Artifact<wbr>Deployment<wbr>Status<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacts_go">
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
@@ -3392,30 +3342,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bulkcreationparameters">Bulk<wbr>Creation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="computeid_go">
-<a href="#computeid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuser_go">
-<a href="#createdbyuser_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuserid_go">
-<a href="#createdbyuserid_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -3465,14 +3391,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="fqdn_go">
-<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="galleryimagereference_go">
 <a href="#galleryimagereference_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
@@ -3505,14 +3423,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastknownpowerstate_go">
-<a href="#lastknownpowerstate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Known<wbr>Power<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -3544,14 +3454,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ostype_go">
-<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_go">
 <a href="#ownerobjectid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Object<wbr>Id</a>
@@ -3631,15 +3533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinecreationsource_go">
-<a href="#virtualmachinecreationsource_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#virtualmachinecreationsource">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a></span>
-    </dt>
-    <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3652,14 +3546,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="artifactdeploymentstatus_nodejs">
-<a href="#artifactdeploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactdeploymentstatusproperties">Artifact<wbr>Deployment<wbr>Status<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacts_nodejs">
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -3676,30 +3562,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bulkcreationparameters">Bulk<wbr>Creation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="computeid_nodejs">
-<a href="#computeid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuser_nodejs">
-<a href="#createdbyuser_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>User</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuserid_nodejs">
-<a href="#createdbyuserid_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>User<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -3749,14 +3611,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="fqdn_nodejs">
-<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="galleryimagereference_nodejs">
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
 </span>
@@ -3789,14 +3643,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastknownpowerstate_nodejs">
-<a href="#lastknownpowerstate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Known<wbr>Power<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -3828,14 +3674,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ostype_nodejs">
-<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_nodejs">
 <a href="#ownerobjectid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Object<wbr>Id</a>
@@ -3915,15 +3753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinecreationsource_nodejs">
-<a href="#virtualmachinecreationsource_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#virtualmachinecreationsource">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a></span>
-    </dt>
-    <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3936,14 +3766,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="artifact_deployment_status_python">
-<a href="#artifact_deployment_status_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>deployment_<wbr>status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactdeploymentstatusproperties">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacts_python">
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -3960,30 +3782,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bulkcreationparameters">Bulk<wbr>Creation<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="compute_id_python">
-<a href="#compute_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="created_by_user_python">
-<a href="#created_by_user_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>user</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="created_by_user_id_python">
-<a href="#created_by_user_id_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>user_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -4033,14 +3831,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="fqdn_python">
-<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="gallery_image_reference_python">
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span>
@@ -4073,14 +3863,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="last_known_power_state_python">
-<a href="#last_known_power_state_python" style="color: inherit; text-decoration: inherit;">last_<wbr>known_<wbr>power_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -4112,14 +3894,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="os_type_python">
-<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_object_id_python">
 <a href="#owner_object_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>object_<wbr>id</a>
@@ -4199,15 +3973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtual_machine_creation_source_python">
-<a href="#virtual_machine_creation_source_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>creation_<wbr>source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#virtualmachinecreationsource">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a></span>
-    </dt>
-    <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labvirtualmachinecreationparameterresponse">Lab<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Parameter<wbr>Response</h4>
@@ -4222,14 +3988,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="artifactdeploymentstatus_csharp">
-<a href="#artifactdeploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactdeploymentstatuspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacts_csharp">
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
@@ -4246,30 +4004,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bulkcreationparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Bulk<wbr>Creation<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="computeid_csharp">
-<a href="#computeid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuser_csharp">
-<a href="#createdbyuser_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuserid_csharp">
-<a href="#createdbyuserid_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -4319,14 +4053,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="fqdn_csharp">
-<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="galleryimagereference_csharp">
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
@@ -4359,14 +4085,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastknownpowerstate_csharp">
-<a href="#lastknownpowerstate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Known<wbr>Power<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -4398,14 +4116,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ostype_csharp">
-<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_csharp">
 <a href="#ownerobjectid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Object<wbr>Id</a>
@@ -4485,15 +4195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinecreationsource_csharp">
-<a href="#virtualmachinecreationsource_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4506,14 +4208,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="artifactdeploymentstatus_go">
-<a href="#artifactdeploymentstatus_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactdeploymentstatuspropertiesresponse">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacts_go">
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
@@ -4530,30 +4224,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="computeid_go">
-<a href="#computeid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuser_go">
-<a href="#createdbyuser_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuserid_go">
-<a href="#createdbyuserid_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -4603,14 +4273,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="fqdn_go">
-<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="galleryimagereference_go">
 <a href="#galleryimagereference_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
@@ -4643,14 +4305,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastknownpowerstate_go">
-<a href="#lastknownpowerstate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Known<wbr>Power<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -4682,14 +4336,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ostype_go">
-<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_go">
 <a href="#ownerobjectid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Object<wbr>Id</a>
@@ -4769,15 +4415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinecreationsource_go">
-<a href="#virtualmachinecreationsource_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4790,14 +4428,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="artifactdeploymentstatus_nodejs">
-<a href="#artifactdeploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Deployment<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactdeploymentstatuspropertiesresponse">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacts_nodejs">
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -4814,30 +4444,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="computeid_nodejs">
-<a href="#computeid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuser_nodejs">
-<a href="#createdbyuser_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>User</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbyuserid_nodejs">
-<a href="#createdbyuserid_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>User<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -4887,14 +4493,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="fqdn_nodejs">
-<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="galleryimagereference_nodejs">
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
 </span>
@@ -4927,14 +4525,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="lastknownpowerstate_nodejs">
-<a href="#lastknownpowerstate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Known<wbr>Power<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -4966,14 +4556,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ostype_nodejs">
-<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_nodejs">
 <a href="#ownerobjectid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Object<wbr>Id</a>
@@ -5053,15 +4635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualmachinecreationsource_nodejs">
-<a href="#virtualmachinecreationsource_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5074,14 +4648,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="artifact_deployment_status_python">
-<a href="#artifact_deployment_status_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>deployment_<wbr>status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactdeploymentstatuspropertiesresponse">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacts_python">
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -5098,30 +4664,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="compute_id_python">
-<a href="#compute_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="created_by_user_python">
-<a href="#created_by_user_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>user</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="created_by_user_id_python">
-<a href="#created_by_user_id_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>user_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -5171,14 +4713,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="fqdn_python">
-<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="gallery_image_reference_python">
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span>
@@ -5211,14 +4745,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="last_known_power_state_python">
-<a href="#last_known_power_state_python" style="color: inherit; text-decoration: inherit;">last_<wbr>known_<wbr>power_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -5250,14 +4776,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="os_type_python">
-<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_object_id_python">
 <a href="#owner_object_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>object_<wbr>id</a>
@@ -5337,15 +4855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtual_machine_creation_source_python">
-<a href="#virtual_machine_creation_source_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>creation_<wbr>source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkinterfaceproperties">Network<wbr>Interface<wbr>Properties</h4>
@@ -7212,36 +6722,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Udp</dd></dl>
 {{% /choosable %}}
 
-<h4 id="virtualmachinecreationsource">Virtual<wbr>Machine<wbr>Creation<wbr>Source</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>From<wbr>Custom<wbr>Image</dt>
-    <dd>FromCustomImage</dd><dt>From<wbr>Gallery<wbr>Image</dt>
-    <dd>FromGalleryImage</dd><dt>From<wbr>Shared<wbr>Gallery<wbr>Image</dt>
-    <dd>FromSharedGalleryImage</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Virtual<wbr>Machine<wbr>Creation<wbr>Source<wbr>From<wbr>Custom<wbr>Image</dt>
-    <dd>FromCustomImage</dd><dt>Virtual<wbr>Machine<wbr>Creation<wbr>Source<wbr>From<wbr>Gallery<wbr>Image</dt>
-    <dd>FromGalleryImage</dd><dt>Virtual<wbr>Machine<wbr>Creation<wbr>Source<wbr>From<wbr>Shared<wbr>Gallery<wbr>Image</dt>
-    <dd>FromSharedGalleryImage</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>From<wbr>Custom<wbr>Image</dt>
-    <dd>FromCustomImage</dd><dt>From<wbr>Gallery<wbr>Image</dt>
-    <dd>FromGalleryImage</dd><dt>From<wbr>Shared<wbr>Gallery<wbr>Image</dt>
-    <dd>FromSharedGalleryImage</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>FROM_CUSTOM_IMAGE</dt>
-    <dd>FromCustomImage</dd><dt>FROM_GALLERY_IMAGE</dt>
-    <dd>FromGalleryImage</dd><dt>FROM_SHARED_GALLERY_IMAGE</dt>
-    <dd>FromSharedGalleryImage</dd></dl>
-{{% /choosable %}}
-
 <h4 id="weekdetails">Week<wbr>Details</h4>
 
 {{% choosable language csharp %}}
@@ -7405,6 +6885,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:Formula {formulaName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/formulas/{formulaName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

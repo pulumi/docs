@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.compute.getDisk function with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Disk resource.
-API Version: 2020-09-30.
+API Version: 2020-12-01.
 
 
 
@@ -206,6 +206,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="propertyupdatesinprogress_csharp">
+<a href="#propertyupdatesinprogress_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Updates<wbr>In<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyupdatesinprogressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Property<wbr>Updates<wbr>In<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the disk for which update is pending.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -366,13 +374,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="securityprofile_csharp">
+<a href="#securityprofile_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#disksecurityprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Disk<wbr>Security<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the security related information for the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Disk<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="supportshibernation_csharp">
+<a href="#supportshibernation_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a disk supports hibernation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -465,6 +489,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="propertyupdatesinprogress_go">
+<a href="#propertyupdatesinprogress_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Updates<wbr>In<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyupdatesinprogressresponse">Property<wbr>Updates<wbr>In<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the disk for which update is pending.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -626,13 +658,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="securityprofile_go">
+<a href="#securityprofile_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#disksecurityprofileresponse">Disk<wbr>Security<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the security related information for the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskskuresponse">Disk<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="supportshibernation_go">
+<a href="#supportshibernation_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a disk supports hibernation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -725,6 +773,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="propertyupdatesinprogress_nodejs">
+<a href="#propertyupdatesinprogress_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Updates<wbr>In<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyupdatesinprogressresponse">Property<wbr>Updates<wbr>In<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the disk for which update is pending.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -886,13 +942,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="securityprofile_nodejs">
+<a href="#securityprofile_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#disksecurityprofileresponse">Disk<wbr>Security<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the security related information for the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskskuresponse">Disk<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="supportshibernation_nodejs">
+<a href="#supportshibernation_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a disk supports hibernation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -985,6 +1057,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="property_updates_in_progress_python">
+<a href="#property_updates_in_progress_python" style="color: inherit; text-decoration: inherit;">property_<wbr>updates_<wbr>in_<wbr>progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyupdatesinprogressresponse">Property<wbr>Updates<wbr>In<wbr>Progress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the disk for which update is pending.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1146,13 +1226,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="security_profile_python">
+<a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#disksecurityprofileresponse">Disk<wbr>Security<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains the security related information for the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskskuresponse">Disk<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="supports_hibernation_python">
+<a href="#supports_hibernation_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a disk supports hibernation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1491,6 +1587,58 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="disksecurityprofileresponse">Disk<wbr>Security<wbr>Profile<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_csharp">
+<a href="#securitytype_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_go">
+<a href="#securitytype_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_nodejs">
+<a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="security_type_python">
+<a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="diskskuresponse">Disk<wbr>Sku<wbr>Response</h4>
@@ -2195,6 +2343,58 @@ The following output properties are available:
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="propertyupdatesinprogressresponse">Property<wbr>Updates<wbr>In<wbr>Progress<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettier_csharp">
+<a href="#targettier_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target performance tier of the disk if a tier change operation is in progress.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettier_go">
+<a href="#targettier_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target performance tier of the disk if a tier change operation is in progress.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettier_nodejs">
+<a href="#targettier_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target performance tier of the disk if a tier change operation is in progress.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_tier_python">
+<a href="#target_tier_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target performance tier of the disk if a tier change operation is in progress.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</h4>

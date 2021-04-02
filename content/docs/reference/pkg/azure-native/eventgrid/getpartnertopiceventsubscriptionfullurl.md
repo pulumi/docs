@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.eventgrid.getPartnerTopicEventSub
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Full endpoint url of an event subscription
-API Version: 2020-10-15-preview.
+API Version: 2020-04-01-preview.
 
 
 

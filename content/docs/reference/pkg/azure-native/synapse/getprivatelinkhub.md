@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.synapse.getPrivateLinkHub functio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A privateLinkHub
-API Version: 2020-12-01.
+API Version: 2021-03-01.
 
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.apimanagement.getCertificate func
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Certificate details.
-API Version: 2019-12-01.
+API Version: 2020-12-01.
 
 
 
@@ -221,7 +221,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="keyvault_csharp">
+<a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontractpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Key<wbr>Vault<wbr>Contract<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}KeyVault location details of the certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,7 +282,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="keyvault_go">
+<a href="#keyvault_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontractpropertiesresponse">Key<wbr>Vault<wbr>Contract<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}KeyVault location details of the certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -327,7 +343,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="keyvault_nodejs">
+<a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontractpropertiesresponse">Key<wbr>Vault<wbr>Contract<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}KeyVault location details of the certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -380,7 +404,257 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="key_vault_python">
+<a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontractpropertiesresponse">Key<wbr>Vault<wbr>Contract<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}KeyVault location details of the certificate.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="keyvaultcontractpropertiesresponse">Key<wbr>Vault<wbr>Contract<wbr>Properties<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identityclientid_csharp">
+<a href="#identityclientid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="laststatus_csharp">
+<a href="#laststatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultlastaccessstatuscontractpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Last<wbr>Access<wbr>Status<wbr>Contract<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Last time sync and refresh status of secret from key vault.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretidentifier_csharp">
+<a href="#secretidentifier_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identityclientid_go">
+<a href="#identityclientid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="laststatus_go">
+<a href="#laststatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultlastaccessstatuscontractpropertiesresponse">Key<wbr>Vault<wbr>Last<wbr>Access<wbr>Status<wbr>Contract<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Last time sync and refresh status of secret from key vault.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretidentifier_go">
+<a href="#secretidentifier_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identityclientid_nodejs">
+<a href="#identityclientid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="laststatus_nodejs">
+<a href="#laststatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultlastaccessstatuscontractpropertiesresponse">Key<wbr>Vault<wbr>Last<wbr>Access<wbr>Status<wbr>Contract<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Last time sync and refresh status of secret from key vault.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretidentifier_nodejs">
+<a href="#secretidentifier_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identity_client_id_python">
+<a href="#identity_client_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_status_python">
+<a href="#last_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultlastaccessstatuscontractpropertiesresponse">Key<wbr>Vault<wbr>Last<wbr>Access<wbr>Status<wbr>Contract<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Last time sync and refresh status of secret from key vault.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secret_identifier_python">
+<a href="#secret_identifier_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="keyvaultlastaccessstatuscontractpropertiesresponse">Key<wbr>Vault<wbr>Last<wbr>Access<wbr>Status<wbr>Contract<wbr>Properties<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last status code for sync and refresh of secret from key vault.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Details of the error else empty.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timestamputc_csharp">
+<a href="#timestamputc_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Stamp<wbr>Utc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last status code for sync and refresh of secret from key vault.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Details of the error else empty.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timestamputc_go">
+<a href="#timestamputc_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Stamp<wbr>Utc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last status code for sync and refresh of secret from key vault.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Details of the error else empty.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timestamputc_nodejs">
+<a href="#timestamputc_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Stamp<wbr>Utc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Last status code for sync and refresh of secret from key vault.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Details of the error else empty.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="time_stamp_utc_python">
+<a href="#time_stamp_utc_python" style="color: inherit; text-decoration: inherit;">time_<wbr>stamp_<wbr>utc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

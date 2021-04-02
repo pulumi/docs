@@ -11,21 +11,13 @@ Explore the resources and functions of the azure-native.azuredata module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="datacontroller" title="DataController"><span class="symbol resource"></span>DataController</a></li>
-    <li><a href="postgresinstance" title="PostgresInstance"><span class="symbol resource"></span>PostgresInstance</a></li>
-    <li><a href="sqlmanagedinstance" title="SqlManagedInstance"><span class="symbol resource"></span>SqlManagedInstance</a></li>
     <li><a href="sqlserver" title="SqlServer"><span class="symbol resource"></span>SqlServer</a></li>
-    <li><a href="sqlserverinstance" title="SqlServerInstance"><span class="symbol resource"></span>SqlServerInstance</a></li>
     <li><a href="sqlserverregistration" title="SqlServerRegistration"><span class="symbol resource"></span>SqlServerRegistration</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdatacontroller" title="GetDataController"><span class="symbol function"></span>GetDataController</a></li>
-    <li><a href="getpostgresinstance" title="GetPostgresInstance"><span class="symbol function"></span>GetPostgresInstance</a></li>
-    <li><a href="getsqlmanagedinstance" title="GetSqlManagedInstance"><span class="symbol function"></span>GetSqlManagedInstance</a></li>
     <li><a href="getsqlserver" title="GetSqlServer"><span class="symbol function"></span>GetSqlServer</a></li>
-    <li><a href="getsqlserverinstance" title="GetSqlServerInstance"><span class="symbol function"></span>GetSqlServerInstance</a></li>
     <li><a href="getsqlserverregistration" title="GetSqlServerRegistration"><span class="symbol function"></span>GetSqlServerRegistration</a></li>
 </ul>
 
@@ -36,6 +28,6 @@ Explore the resources and functions of the azure-native.azuredata module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

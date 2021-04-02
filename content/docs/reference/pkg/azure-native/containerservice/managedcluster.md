@@ -20,6 +20,279 @@ API Version: 2021-02-01.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+### Create Managed Cluster with Azure KeyVault Secrets Provider Addon
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureNative.ContainerService.ManagedCluster("managedCluster", new AzureNative.ContainerService.ManagedClusterArgs
+        {
+            AddonProfiles = 
+            {
+                { "azureKeyvaultSecretsProvider", new AzureNative.ContainerService.Inputs.ManagedClusterAddonProfileArgs
+                {
+                    Config = 
+                    {
+                        { "enableSecretRotation", "true" },
+                    },
+                    Enabled = true,
+                } },
+            },
+            AgentPoolProfiles = 
+            {
+                new AzureNative.ContainerService.Inputs.ManagedClusterAgentPoolProfileArgs
+                {
+                    Count = 3,
+                    EnableNodePublicIP = true,
+                    Mode = "System",
+                    Name = "nodepool1",
+                    OsType = "Linux",
+                    Type = "VirtualMachineScaleSets",
+                    VmSize = "Standard_DS2_v2",
+                },
+            },
+            AutoScalerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            {
+                ScaleDownDelayAfterAdd = "15m",
+                ScanInterval = "20s",
+            },
+            DiskEncryptionSetID = "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+            DnsPrefix = "dnsprefix1",
+            EnablePodSecurityPolicy = true,
+            EnableRBAC = true,
+            KubernetesVersion = "",
+            LinuxProfile = new AzureNative.ContainerService.Inputs.ContainerServiceLinuxProfileArgs
+            {
+                AdminUsername = "azureuser",
+                Ssh = new AzureNative.ContainerService.Inputs.ContainerServiceSshConfigurationArgs
+                {
+                    PublicKeys = 
+                    {
+                        new AzureNative.ContainerService.Inputs.ContainerServiceSshPublicKeyArgs
+                        {
+                            KeyData = "keydata",
+                        },
+                    },
+                },
+            },
+            Location = "location1",
+            NetworkProfile = new AzureNative.ContainerService.Inputs.ContainerServiceNetworkProfileArgs
+            {
+                LoadBalancerProfile = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileArgs
+                {
+                    ManagedOutboundIPs = new AzureNative.ContainerService.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    {
+                        Count = 2,
+                    },
+                },
+                LoadBalancerSku = "standard",
+                OutboundType = "loadBalancer",
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ServicePrincipalProfile = new AzureNative.ContainerService.Inputs.ManagedClusterServicePrincipalProfileArgs
+            {
+                ClientId = "clientid",
+                Secret = "secret",
+            },
+            Sku = new AzureNative.ContainerService.Inputs.ManagedClusterSKUArgs
+            {
+                Name = "Basic",
+                Tier = "Free",
+            },
+            Tags = 
+            {
+                { "archv2", "" },
+                { "tier", "production" },
+            },
+            WindowsProfile = new AzureNative.ContainerService.Inputs.ManagedClusterWindowsProfileArgs
+            {
+                AdminPassword = "replacePassword1234$",
+                AdminUsername = "azureuser",
+            },
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+managed_cluster = azure_native.containerservice.ManagedCluster("managedCluster",
+    addon_profiles={
+        "azureKeyvaultSecretsProvider": azure_native.containerservice.ManagedClusterAddonProfileArgs(
+            config={
+                "enableSecretRotation": "true",
+            },
+            enabled=True,
+        ),
+    },
+    agent_pool_profiles=[azure_native.containerservice.ManagedClusterAgentPoolProfileArgs(
+        count=3,
+        enable_node_public_ip=True,
+        mode="System",
+        name="nodepool1",
+        os_type="Linux",
+        type="VirtualMachineScaleSets",
+        vm_size="Standard_DS2_v2",
+    )],
+    auto_scaler_profile=azure_native.containerservice.ManagedClusterPropertiesAutoScalerProfileArgs(
+        scale_down_delay_after_add="15m",
+        scan_interval="20s",
+    ),
+    disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dns_prefix="dnsprefix1",
+    enable_pod_security_policy=True,
+    enable_rbac=True,
+    kubernetes_version="",
+    linux_profile=azure_native.containerservice.ContainerServiceLinuxProfileArgs(
+        admin_username="azureuser",
+        ssh=azure_native.containerservice.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_native.containerservice.ContainerServiceSshPublicKeyArgs(
+                key_data="keydata",
+            )],
+        ),
+    ),
+    location="location1",
+    network_profile=azure_native.containerservice.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_native.containerservice.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_native.containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+                count=2,
+            ),
+        ),
+        load_balancer_sku="standard",
+        outbound_type="loadBalancer",
+    ),
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    service_principal_profile=azure_native.containerservice.ManagedClusterServicePrincipalProfileArgs(
+        client_id="clientid",
+        secret="secret",
+    ),
+    sku=azure_native.containerservice.ManagedClusterSKUArgs(
+        name="Basic",
+        tier="Free",
+    ),
+    tags={
+        "archv2": "",
+        "tier": "production",
+    },
+    windows_profile=azure_native.containerservice.ManagedClusterWindowsProfileArgs(
+        admin_password="replacePassword1234$",
+        admin_username="azureuser",
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managedCluster = new azure_native.containerservice.ManagedCluster("managedCluster", {
+    addonProfiles: {
+        azureKeyvaultSecretsProvider: {
+            config: {
+                enableSecretRotation: "true",
+            },
+            enabled: true,
+        },
+    },
+    agentPoolProfiles: [{
+        count: 3,
+        enableNodePublicIP: true,
+        mode: "System",
+        name: "nodepool1",
+        osType: "Linux",
+        type: "VirtualMachineScaleSets",
+        vmSize: "Standard_DS2_v2",
+    }],
+    autoScalerProfile: {
+        scaleDownDelayAfterAdd: "15m",
+        scanInterval: "20s",
+    },
+    diskEncryptionSetID: "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dnsPrefix: "dnsprefix1",
+    enablePodSecurityPolicy: true,
+    enableRBAC: true,
+    kubernetesVersion: "",
+    linuxProfile: {
+        adminUsername: "azureuser",
+        ssh: {
+            publicKeys: [{
+                keyData: "keydata",
+            }],
+        },
+    },
+    location: "location1",
+    networkProfile: {
+        loadBalancerProfile: {
+            managedOutboundIPs: {
+                count: 2,
+            },
+        },
+        loadBalancerSku: "standard",
+        outboundType: "loadBalancer",
+    },
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    servicePrincipalProfile: {
+        clientId: "clientid",
+        secret: "secret",
+    },
+    sku: {
+        name: "Basic",
+        tier: "Free",
+    },
+    tags: {
+        archv2: "",
+        tier: "production",
+    },
+    windowsProfile: {
+        adminPassword: `replacePassword1234$`,
+        adminUsername: "azureuser",
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Create Managed Cluster with EncryptionAtHost enabled
 
 
@@ -1131,93 +1404,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	"fmt"
-
-	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
-			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
-				&containerservice.ManagedClusterAgentPoolProfileArgs{
-					Count:              pulumi.Int(3),
-					EnableNodePublicIP: pulumi.Bool(true),
-					Mode:               pulumi.String("System"),
-					Name:               pulumi.String("nodepool1"),
-					OsType:             pulumi.String("Linux"),
-					Type:               pulumi.String("VirtualMachineScaleSets"),
-					VmSize:             pulumi.String("Standard_DS2_v2"),
-				},
-			},
-			AutoScalerProfile: &containerservice.ManagedClusterPropertiesAutoScalerProfileArgs{
-				ScaleDownDelayAfterAdd: pulumi.String("15m"),
-				ScanInterval:           pulumi.String("20s"),
-			},
-			DiskEncryptionSetID:     pulumi.String("/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des"),
-			DnsPrefix:               pulumi.String("dnsprefix1"),
-			EnablePodSecurityPolicy: pulumi.Bool(true),
-			EnableRBAC:              pulumi.Bool(true),
-			KubernetesVersion:       pulumi.String(""),
-			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
-				AdminUsername: pulumi.String("azureuser"),
-				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
-						&containerservice.ContainerServiceSshPublicKeyArgs{
-							KeyData: pulumi.String("keydata"),
-						},
-					},
-				},
-			},
-			Location: pulumi.String("location1"),
-			NetworkProfile: &containerservice.ContainerServiceNetworkProfileArgs{
-				LoadBalancerProfile: &containerservice.ManagedClusterLoadBalancerProfileArgs{
-					ManagedOutboundIPs: &containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs{
-						Count: pulumi.Int(2),
-					},
-				},
-				LoadBalancerSku: pulumi.String("standard"),
-				OutboundType:    pulumi.String("loadBalancer"),
-			},
-			PodIdentityProfile: &containerservice.ManagedClusterPodIdentityProfileArgs{
-				AllowNetworkPluginKubenet: pulumi.Bool(true),
-				Enabled:                   pulumi.Bool(true),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			ResourceName:      pulumi.String("clustername1"),
-			ServicePrincipalProfile: &containerservice.ManagedClusterServicePrincipalProfileArgs{
-				ClientId: pulumi.String("clientid"),
-				Secret:   pulumi.String("secret"),
-			},
-			Sku: &containerservice.ManagedClusterSKUArgs{
-				Name: pulumi.String("Basic"),
-				Tier: pulumi.String("Free"),
-			},
-			Tags: pulumi.StringMap{
-				"archv2": pulumi.String(""),
-				"tier":   pulumi.String("production"),
-			},
-			WindowsProfile: &containerservice.ManagedClusterWindowsProfileArgs{
-				AdminPassword: pulumi.String(fmt.Sprintf("%v%v", "replacePassword1234", "$")),
-				AdminUsername: pulumi.String("azureuser"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

@@ -2222,14 +2222,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="password_csharp">
-<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="retentionperiod_csharp">
 <a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
 </span>
@@ -2237,14 +2229,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storageaccesskey_csharp">
-<a href="#storageaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Access<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_csharp">
 <a href="#storageaccounturl_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -2322,14 +2306,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="password_go">
-<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="retentionperiod_go">
 <a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
 </span>
@@ -2337,14 +2313,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storageaccesskey_go">
-<a href="#storageaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Access<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_go">
 <a href="#storageaccounturl_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -2422,14 +2390,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="password_nodejs">
-<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="retentionperiod_nodejs">
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
 </span>
@@ -2437,14 +2397,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storageaccesskey_nodejs">
-<a href="#storageaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Access<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_nodejs">
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
@@ -2522,14 +2474,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="password_python">
-<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="retention_period_python">
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
 </span>
@@ -2537,14 +2481,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storage_access_key_python">
-<a href="#storage_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>access_<wbr>key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_url_python">
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
@@ -3240,15 +3176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="serviceprincipalsecret_csharp">
-<a href="#serviceprincipalsecret_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3284,15 +3212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="serviceprincipalsecret_go">
-<a href="#serviceprincipalsecret_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3328,15 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="serviceprincipalsecret_nodejs">
-<a href="#serviceprincipalsecret_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3372,15 +3284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="service_principal_secret_python">
-<a href="#service_principal_secret_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>secret</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidentity">Resource<wbr>Identity</h4>
@@ -4168,23 +4072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sqlauthupdatepassword_csharp">
-<a href="#sqlauthupdatepassword_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sqlauthupdateusername_csharp">
-<a href="#sqlauthupdateusername_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>User<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4204,23 +4092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sqlauthupdatepassword_go">
-<a href="#sqlauthupdatepassword_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sqlauthupdateusername_go">
-<a href="#sqlauthupdateusername_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>User<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4240,23 +4112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sqlauthupdatepassword_nodejs">
-<a href="#sqlauthupdatepassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Auth<wbr>Update<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sqlauthupdateusername_nodejs">
-<a href="#sqlauthupdateusername_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Auth<wbr>Update<wbr>User<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4276,23 +4132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sql_auth_update_password_python">
-<a href="#sql_auth_update_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>auth_<wbr>update_<wbr>password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sql_auth_update_user_name_python">
-<a href="#sql_auth_update_user_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>auth_<wbr>update_<wbr>user_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlimagesku">Sql<wbr>Image<wbr>Sku</h4>

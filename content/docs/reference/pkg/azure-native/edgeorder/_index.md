@@ -12,15 +12,13 @@ Explore the resources and functions of the azure-native.edgeorder module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="addressbyname" title="AddressByName"><span class="symbol resource"></span>AddressByName</a></li>
-    <li><a href="orderbyname" title="OrderByName"><span class="symbol resource"></span>OrderByName</a></li>
-    <li><a href="ordercollectionbyname" title="OrderCollectionByName"><span class="symbol resource"></span>OrderCollectionByName</a></li>
+    <li><a href="orderitembyname" title="OrderItemByName"><span class="symbol resource"></span>OrderItemByName</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaddressbyname" title="GetAddressByName"><span class="symbol function"></span>GetAddressByName</a></li>
-    <li><a href="getorderbyname" title="GetOrderByName"><span class="symbol function"></span>GetOrderByName</a></li>
-    <li><a href="getordercollectionbyname" title="GetOrderCollectionByName"><span class="symbol function"></span>GetOrderCollectionByName</a></li>
+    <li><a href="getorderitembyname" title="GetOrderItemByName"><span class="symbol function"></span>GetOrderItemByName</a></li>
     <li><a href="listconfigurations" title="ListConfigurations"><span class="symbol function"></span>ListConfigurations</a></li>
     <li><a href="listproductfamilies" title="ListProductFamilies"><span class="symbol function"></span>ListProductFamilies</a></li>
 </ul>
@@ -32,6 +30,6 @@ Explore the resources and functions of the azure-native.edgeorder module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

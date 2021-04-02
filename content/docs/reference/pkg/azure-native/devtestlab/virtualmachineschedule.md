@@ -12,13 +12,241 @@ meta_desc: "Documentation for the azure-native.devtestlab.VirtualMachineSchedule
 
 A schedule.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:VirtualMachineSchedule myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{virtualMachineName}/schedules/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### VirtualMachineSchedules_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineSchedule = new AzureNative.DevTestLab.VirtualMachineSchedule("virtualMachineSchedule", new AzureNative.DevTestLab.VirtualMachineScheduleArgs
+        {
+            DailyRecurrence = new AzureNative.DevTestLab.Inputs.DayDetailsArgs
+            {
+                Time = "1900",
+            },
+            HourlyRecurrence = new AzureNative.DevTestLab.Inputs.HourDetailsArgs
+            {
+                Minute = 30,
+            },
+            LabName = "{labName}",
+            Location = "{location}",
+            Name = "LabVmsShutdown",
+            NotificationSettings = new AzureNative.DevTestLab.Inputs.NotificationSettingsArgs
+            {
+                EmailRecipient = "{email}",
+                NotificationLocale = "EN",
+                Status = "Enabled",
+                TimeInMinutes = 30,
+                WebhookUrl = "{webhookUrl}",
+            },
+            ResourceGroupName = "resourceGroupName",
+            Status = "Enabled",
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+            TargetResourceId = "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualMachines/{vmName}",
+            TaskType = "LabVmsShutdownTask",
+            TimeZoneId = "Pacific Standard Time",
+            VirtualMachineName = "{vmName}",
+            WeeklyRecurrence = new AzureNative.DevTestLab.Inputs.WeekDetailsArgs
+            {
+                Time = "1700",
+                Weekdays = 
+                {
+                    "Friday",
+                    "Saturday",
+                    "Sunday",
+                },
+            },
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewVirtualMachineSchedule(ctx, "virtualMachineSchedule", &devtestlab.VirtualMachineScheduleArgs{
+			DailyRecurrence: &devtestlab.DayDetailsArgs{
+				Time: pulumi.String("1900"),
+			},
+			HourlyRecurrence: &devtestlab.HourDetailsArgs{
+				Minute: pulumi.Int(30),
+			},
+			LabName:  pulumi.String("{labName}"),
+			Location: pulumi.String("{location}"),
+			Name:     pulumi.String("LabVmsShutdown"),
+			NotificationSettings: &devtestlab.NotificationSettingsArgs{
+				EmailRecipient:     pulumi.String("{email}"),
+				NotificationLocale: pulumi.String("EN"),
+				Status:             pulumi.String("Enabled"),
+				TimeInMinutes:      pulumi.Int(30),
+				WebhookUrl:         pulumi.String("{webhookUrl}"),
+			},
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			Status:            pulumi.String("Enabled"),
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+			TargetResourceId:   pulumi.String("/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualMachines/{vmName}"),
+			TaskType:           pulumi.String("LabVmsShutdownTask"),
+			TimeZoneId:         pulumi.String("Pacific Standard Time"),
+			VirtualMachineName: pulumi.String("{vmName}"),
+			WeeklyRecurrence: &devtestlab.WeekDetailsArgs{
+				Time: pulumi.String("1700"),
+				Weekdays: pulumi.StringArray{
+					pulumi.String("Friday"),
+					pulumi.String("Saturday"),
+					pulumi.String("Sunday"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+virtual_machine_schedule = azure_native.devtestlab.VirtualMachineSchedule("virtualMachineSchedule",
+    daily_recurrence=azure_native.devtestlab.DayDetailsArgs(
+        time="1900",
+    ),
+    hourly_recurrence=azure_native.devtestlab.HourDetailsArgs(
+        minute=30,
+    ),
+    lab_name="{labName}",
+    location="{location}",
+    name="LabVmsShutdown",
+    notification_settings=azure_native.devtestlab.NotificationSettingsArgs(
+        email_recipient="{email}",
+        notification_locale="EN",
+        status="Enabled",
+        time_in_minutes=30,
+        webhook_url="{webhookUrl}",
+    ),
+    resource_group_name="resourceGroupName",
+    status="Enabled",
+    tags={
+        "tagName1": "tagValue1",
+    },
+    target_resource_id="/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualMachines/{vmName}",
+    task_type="LabVmsShutdownTask",
+    time_zone_id="Pacific Standard Time",
+    virtual_machine_name="{vmName}",
+    weekly_recurrence=azure_native.devtestlab.WeekDetailsArgs(
+        time="1700",
+        weekdays=[
+            "Friday",
+            "Saturday",
+            "Sunday",
+        ],
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const virtualMachineSchedule = new azure_native.devtestlab.VirtualMachineSchedule("virtualMachineSchedule", {
+    dailyRecurrence: {
+        time: "1900",
+    },
+    hourlyRecurrence: {
+        minute: 30,
+    },
+    labName: "{labName}",
+    location: "{location}",
+    name: "LabVmsShutdown",
+    notificationSettings: {
+        emailRecipient: "{email}",
+        notificationLocale: "EN",
+        status: "Enabled",
+        timeInMinutes: 30,
+        webhookUrl: "{webhookUrl}",
+    },
+    resourceGroupName: "resourceGroupName",
+    status: "Enabled",
+    tags: {
+        tagName1: "tagValue1",
+    },
+    targetResourceId: "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualMachines/{vmName}",
+    taskType: "LabVmsShutdownTask",
+    timeZoneId: "Pacific Standard Time",
+    virtualMachineName: "{vmName}",
+    weeklyRecurrence: {
+        time: "1700",
+        weekdays: [
+            "Friday",
+            "Saturday",
+            "Sunday",
+        ],
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -1573,6 +1801,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:VirtualMachineSchedule LabVmsShutdown /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualMachines/{vmName}/schedules/LabVmsShutdown 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

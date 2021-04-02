@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.compute.getCloudService function 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes the cloud service.
-API Version: 2020-10-01-preview.
+API Version: 2021-03-01.
 
 
 
@@ -774,7 +774,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swappablecloudservice_csharp">
 <a href="#swappablecloudservice_csharp" style="color: inherit; text-decoration: inherit;">Swappable<wbr>Cloud<wbr>Service</a>
@@ -782,7 +782,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -794,7 +794,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationresponse">[]Load<wbr>Balancer<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swappablecloudservice_go">
 <a href="#swappablecloudservice_go" style="color: inherit; text-decoration: inherit;">Swappable<wbr>Cloud<wbr>Service</a>
@@ -802,7 +802,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -814,7 +814,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swappablecloudservice_nodejs">
 <a href="#swappablecloudservice_nodejs" style="color: inherit; text-decoration: inherit;">swappable<wbr>Cloud<wbr>Service</a>
@@ -822,7 +822,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -834,7 +834,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationresponse">Sequence[Load<wbr>Balancer<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swappable_cloud_service_python">
 <a href="#swappable_cloud_service_python" style="color: inherit; text-decoration: inherit;">swappable_<wbr>cloud_<wbr>service</a>
@@ -842,7 +842,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudserviceosprofileresponse">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response</h4>
@@ -919,6 +919,15 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the cloud service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmodeloverride_csharp">
+<a href="#allowmodeloverride_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Model<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
+The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -1017,6 +1026,15 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
     </dt>
     <dd>{{% md %}}The unique identifier for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowmodeloverride_go">
+<a href="#allowmodeloverride_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Model<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
+The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
@@ -1114,6 +1132,15 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
     </dt>
     <dd>{{% md %}}The unique identifier for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowmodeloverride_nodejs">
+<a href="#allowmodeloverride_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Model<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
+The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
@@ -1210,6 +1237,15 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the cloud service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_model_override_python">
+<a href="#allow_model_override_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>model_<wbr>override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
+The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -1850,51 +1886,51 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="frontendipconfigurations_csharp">
 <a href="#frontendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of IP{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="frontendipconfigurations_go">
 <a href="#frontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">[]Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of IP{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="frontendipconfigurations_nodejs">
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of IP{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="frontend_ip_configurations_python">
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">Sequence[Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of IP{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loadbalancerconfigurationresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Response</h4>
@@ -1902,83 +1938,115 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The name of the Load balancer{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Properties of the load balancer configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The name of the Load balancer{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Properties of the load balancer configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The name of the Load balancer{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Properties of the load balancer configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The name of the Load balancer{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Properties of the load balancer configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response</h4>
@@ -1994,7 +2062,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The virtual network private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
@@ -2002,7 +2070,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The reference to the public ip address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -2010,7 +2078,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The reference to the virtual network subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2022,7 +2090,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The virtual network private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
@@ -2030,7 +2098,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The reference to the public ip address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -2038,7 +2106,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The reference to the virtual network subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2050,7 +2118,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The virtual network private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
@@ -2058,7 +2126,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The reference to the public ip address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -2066,7 +2134,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The reference to the virtual network subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2078,7 +2146,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The virtual network private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
@@ -2086,7 +2154,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The reference to the public ip address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -2094,7 +2162,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The reference to the virtual network subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loadbalancerfrontendipconfigurationresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response</h4>
@@ -2102,83 +2170,83 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Properties of load balancer frontend ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Properties of load balancer frontend ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Properties of load balancer frontend ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Properties of load balancer frontend ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>

@@ -12,13 +12,149 @@ meta_desc: "Documentation for the azure-native.devtestlab.NotificationChannel re
 
 A notification.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:NotificationChannel myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/notificationchannels/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### NotificationChannels_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var notificationChannel = new AzureNative.DevTestLab.NotificationChannel("notificationChannel", new AzureNative.DevTestLab.NotificationChannelArgs
+        {
+            Description = "Integration configured for auto-shutdown",
+            EmailRecipient = "{email}",
+            Events = 
+            {
+                new AzureNative.DevTestLab.Inputs.EventArgs
+                {
+                    EventName = "AutoShutdown",
+                },
+            },
+            LabName = "{labName}",
+            Name = "{notificationChannelName}",
+            NotificationLocale = "en",
+            ResourceGroupName = "resourceGroupName",
+            WebHookUrl = "{webhookUrl}",
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewNotificationChannel(ctx, "notificationChannel", &devtestlab.NotificationChannelArgs{
+			Description:    pulumi.String("Integration configured for auto-shutdown"),
+			EmailRecipient: pulumi.String("{email}"),
+			Events: devtestlab.EventArray{
+				&devtestlab.EventArgs{
+					EventName: pulumi.String("AutoShutdown"),
+				},
+			},
+			LabName:            pulumi.String("{labName}"),
+			Name:               pulumi.String("{notificationChannelName}"),
+			NotificationLocale: pulumi.String("en"),
+			ResourceGroupName:  pulumi.String("resourceGroupName"),
+			WebHookUrl:         pulumi.String("{webhookUrl}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+notification_channel = azure_native.devtestlab.NotificationChannel("notificationChannel",
+    description="Integration configured for auto-shutdown",
+    email_recipient="{email}",
+    events=[azure_native.devtestlab.EventArgs(
+        event_name="AutoShutdown",
+    )],
+    lab_name="{labName}",
+    name="{notificationChannelName}",
+    notification_locale="en",
+    resource_group_name="resourceGroupName",
+    web_hook_url="{webhookUrl}")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const notificationChannel = new azure_native.devtestlab.NotificationChannel("notificationChannel", {
+    description: "Integration configured for auto-shutdown",
+    emailRecipient: "{email}",
+    events: [{
+        eventName: "AutoShutdown",
+    }],
+    labName: "{labName}",
+    name: "{notificationChannelName}",
+    notificationLocale: "en",
+    resourceGroupName: "resourceGroupName",
+    webHookUrl: "{webhookUrl}",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -825,6 +961,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>AutoShutdown</dd><dt>COST</dt>
     <dd>Cost</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:NotificationChannel {notificationChannelName} /subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/notificationChannels/{notificationChannelName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

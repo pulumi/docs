@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.netapp.getBackup function with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Backup of a Volume
-API Version: 2020-11-01.
+API Version: 2020-12-01.
 
 
 
@@ -252,7 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of backup adhoc or scheduled{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of backup Manual or Scheduled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -318,6 +318,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="volumename_csharp">
+<a href="#volumename_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume name{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
@@ -344,7 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of backup adhoc or scheduled{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of backup Manual or Scheduled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -410,6 +418,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="volumename_go">
+<a href="#volumename_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume name{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
@@ -436,7 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of backup adhoc or scheduled{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of backup Manual or Scheduled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -502,6 +518,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="volumename_nodejs">
+<a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume name{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
@@ -528,7 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of backup adhoc or scheduled{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of backup Manual or Scheduled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -593,6 +617,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="volume_name_python">
+<a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Volume name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>

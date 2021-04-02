@@ -12,7 +12,6 @@ Explore the resources and functions of the azure-native.containerservice module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="agentpool" title="AgentPool"><span class="symbol resource"></span>AgentPool</a></li>
-    <li><a href="containerservice" title="ContainerService"><span class="symbol resource"></span>ContainerService</a></li>
     <li><a href="maintenanceconfiguration" title="MaintenanceConfiguration"><span class="symbol resource"></span>MaintenanceConfiguration</a></li>
     <li><a href="managedcluster" title="ManagedCluster"><span class="symbol resource"></span>ManagedCluster</a></li>
     <li><a href="openshiftmanagedcluster" title="OpenShiftManagedCluster"><span class="symbol resource"></span>OpenShiftManagedCluster</a></li>
@@ -22,7 +21,6 @@ Explore the resources and functions of the azure-native.containerservice module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getagentpool" title="GetAgentPool"><span class="symbol function"></span>GetAgentPool</a></li>
-    <li><a href="getcontainerservice" title="GetContainerService"><span class="symbol function"></span>GetContainerService</a></li>
     <li><a href="getmaintenanceconfiguration" title="GetMaintenanceConfiguration"><span class="symbol function"></span>GetMaintenanceConfiguration</a></li>
     <li><a href="getmanagedcluster" title="GetManagedCluster"><span class="symbol function"></span>GetManagedCluster</a></li>
     <li><a href="getopenshiftmanagedcluster" title="GetOpenShiftManagedCluster"><span class="symbol function"></span>GetOpenShiftManagedCluster</a></li>
@@ -40,6 +38,6 @@ Explore the resources and functions of the azure-native.containerservice module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

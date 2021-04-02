@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.netapp.Account resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 NetApp account resource
-API Version: 2020-11-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 
@@ -733,7 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#keysource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Key<wbr>Source</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#keysource">Key<wbr>Source</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -757,7 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#keysource">Key<wbr>Source</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -769,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#keysource">Key<wbr>Source</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -852,6 +852,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowlocalnfsuserswithldap_csharp">
+<a href="#allowlocalnfsuserswithldap_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Local<wbr>Nfs<wbr>Users<wbr>With<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupoperators_csharp">
 <a href="#backupoperators_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Operators</a>
@@ -985,6 +993,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowlocalnfsuserswithldap_go">
+<a href="#allowlocalnfsuserswithldap_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Local<wbr>Nfs<wbr>Users<wbr>With<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_go">
 <a href="#backupoperators_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Operators</a>
 </span>
@@ -1117,6 +1133,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowlocalnfsuserswithldap_nodejs">
+<a href="#allowlocalnfsuserswithldap_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Local<wbr>Nfs<wbr>Users<wbr>With<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_nodejs">
 <a href="#backupoperators_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Operators</a>
 </span>
@@ -1248,6 +1272,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_local_nfs_users_with_ldap_python">
+<a href="#allow_local_nfs_users_with_ldap_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>local_<wbr>nfs_<wbr>users_<wbr>with_<wbr>ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_operators_python">
 <a href="#backup_operators_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>operators</a>
@@ -1399,6 +1431,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowlocalnfsuserswithldap_csharp">
+<a href="#allowlocalnfsuserswithldap_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Local<wbr>Nfs<wbr>Users<wbr>With<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_csharp">
 <a href="#backupoperators_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Operators</a>
 </span>
@@ -1546,6 +1586,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowlocalnfsuserswithldap_go">
+<a href="#allowlocalnfsuserswithldap_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Local<wbr>Nfs<wbr>Users<wbr>With<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupoperators_go">
 <a href="#backupoperators_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Operators</a>
@@ -1695,6 +1743,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowlocalnfsuserswithldap_nodejs">
+<a href="#allowlocalnfsuserswithldap_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Local<wbr>Nfs<wbr>Users<wbr>With<wbr>Ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="backupoperators_nodejs">
 <a href="#backupoperators_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Operators</a>
 </span>
@@ -1843,6 +1899,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allow_local_nfs_users_with_ldap_python">
+<a href="#allow_local_nfs_users_with_ldap_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>local_<wbr>nfs_<wbr>users_<wbr>with_<wbr>ldap</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="backup_operators_python">
 <a href="#backup_operators_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>operators</a>
 </span>
@@ -1946,28 +2010,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username of Active Directory domain administrator{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="keysource">Key<wbr>Source</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Microsoft_Net<wbr>App</dt>
-    <dd>Microsoft.NetApp{{% md %}}The service manages the keys.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Key<wbr>Source_Microsoft_Net<wbr>App</dt>
-    <dd>Microsoft.NetApp{{% md %}}The service manages the keys.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Microsoft_Net<wbr>App</dt>
-    <dd>Microsoft.NetApp{{% md %}}The service manages the keys.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>MICROSOFT_NET_APP</dt>
-    <dd>Microsoft.NetApp{{% md %}}The service manages the keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.apimanagement.getCache function w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Cache details.
-API Version: 2019-12-01.
+API Version: 2020-12-01.
 
 
 
@@ -206,6 +206,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="usefromlocation_csharp">
+<a href="#usefromlocation_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>From<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location identifier to use cache from (should be either 'default' or valid Azure region identifier){{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -257,6 +265,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="usefromlocation_go">
+<a href="#usefromlocation_go" style="color: inherit; text-decoration: inherit;">Use<wbr>From<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location identifier to use cache from (should be either 'default' or valid Azure region identifier){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -310,6 +326,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="usefromlocation_nodejs">
+<a href="#usefromlocation_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>From<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location identifier to use cache from (should be either 'default' or valid Azure region identifier){{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -361,6 +385,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="use_from_location_python">
+<a href="#use_from_location_python" style="color: inherit; text-decoration: inherit;">use_<wbr>from_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Location identifier to use cache from (should be either 'default' or valid Azure region identifier){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

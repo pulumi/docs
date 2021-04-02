@@ -14,7 +14,6 @@ Explore the resources and functions of the azure-native.datamigration module.
     <li><a href="file" title="File"><span class="symbol resource"></span>File</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="servicetask" title="ServiceTask"><span class="symbol resource"></span>ServiceTask</a></li>
     <li><a href="task" title="Task"><span class="symbol resource"></span>Task</a></li>
 </ul>
 
@@ -23,7 +22,6 @@ Explore the resources and functions of the azure-native.datamigration module.
     <li><a href="getfile" title="GetFile"><span class="symbol function"></span>GetFile</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="getservicetask" title="GetServiceTask"><span class="symbol function"></span>GetServiceTask</a></li>
     <li><a href="gettask" title="GetTask"><span class="symbol function"></span>GetTask</a></li>
 </ul>
 
@@ -34,6 +32,6 @@ Explore the resources and functions of the azure-native.datamigration module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

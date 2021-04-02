@@ -202,7 +202,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a> | <a href="#amazonredshiftlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a> | <a href="#azurebatchlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azureblobfslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a> | <a href="#azureblobstoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredataexplorerlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakeanalyticslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakestorelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabricksdeltalakelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabrickslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefilestoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefunctionlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurekeyvaultlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>MLLinked<wbr>Service<wbr>Response</a> | <a href="#azuremlservicelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremariadblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#azuremysqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurepostgresqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresearchlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqldwlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a> | <a href="#azuresqldatabaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqlmilinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a> | <a href="#azurestoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuretablestoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cassandralinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cassandra<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#commondataserviceforappslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#concurlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Concur<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdbmongodbapilinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#couchbaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Couchbase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#customdatasourcelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#db2linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Db2Linked<wbr>Service<wbr>Response</a> | <a href="#drilllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Drill<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicsaxlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a> | <a href="#dynamicscrmlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#eloqualinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Eloqua<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#fileserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#ftpserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googleadwordslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlebigquerylinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlecloudstoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#greenplumlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Greenplum<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hbaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HBase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HDInsight<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightondemandlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdfslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hdfs<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hivelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hive<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#httplinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Http<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hubspotlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hubspot<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#impalalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Impala<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#informixlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Informix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#jiralinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Jira<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#magentolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Magento<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mariadblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#marketolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Marketo<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#microsoftaccesslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbatlaslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbv2linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a> | <a href="#mysqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#netezzalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Netezza<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odatalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>OData<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odbclinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Odbc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#office365linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Office365Linked<wbr>Service<wbr>Response</a> | <a href="#oraclelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Oracle<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oracleservicecloudlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#paypallinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Paypal<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#phoenixlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Phoenix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#postgresqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#prestolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Presto<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#quickbookslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#responsyslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Responsys<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#restservicelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcemarketingcloudlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforceservicecloudlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapbwlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>BWLinked<wbr>Service<wbr>Response</a> | <a href="#sapcloudforcustomerlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapecclinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saphanalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapopenhublinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saptablelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#servicenowlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sftpserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sharepointonlinelistlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#shopifylinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Shopify<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#snowflakelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Snowflake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sparklinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Spark<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sqlserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#squarelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Square<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sybaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sybase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#teradatalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Teradata<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#verticalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Vertica<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#weblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Web<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#xerolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Xero<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#zoholinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a> | <a href="#amazonredshiftlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3compatiblelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>S3Compatible<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a> | <a href="#azurebatchlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azureblobfslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a> | <a href="#azureblobstoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredataexplorerlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakeanalyticslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakestorelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabricksdeltalakelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabrickslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefilestoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefunctionlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurekeyvaultlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>MLLinked<wbr>Service<wbr>Response</a> | <a href="#azuremlservicelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremariadblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#azuremysqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurepostgresqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresearchlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqldwlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a> | <a href="#azuresqldatabaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqlmilinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a> | <a href="#azurestoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuretablestoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cassandralinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cassandra<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#commondataserviceforappslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#concurlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Concur<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdbmongodbapilinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#couchbaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Couchbase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#customdatasourcelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#db2linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Db2Linked<wbr>Service<wbr>Response</a> | <a href="#drilllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Drill<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicsaxlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a> | <a href="#dynamicscrmlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Dynamics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#eloqualinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Eloqua<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#fileserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#ftpserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googleadwordslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlebigquerylinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlecloudstoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#greenplumlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Greenplum<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hbaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HBase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HDInsight<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightondemandlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdfslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hdfs<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hivelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hive<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#httplinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Http<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hubspotlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Hubspot<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#impalalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Impala<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#informixlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Informix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#jiralinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Jira<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#magentolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Magento<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mariadblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#marketolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Marketo<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#microsoftaccesslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbatlaslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbv2linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a> | <a href="#mysqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#netezzalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Netezza<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odatalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>OData<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odbclinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Odbc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#office365linkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Office365Linked<wbr>Service<wbr>Response</a> | <a href="#oraclecloudstoragelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oraclelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Oracle<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oracleservicecloudlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#paypallinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Paypal<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#phoenixlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Phoenix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#postgresqllinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#prestolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Presto<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#quickbookslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#responsyslinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Responsys<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#restservicelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcemarketingcloudlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforceservicecloudlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapbwlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>BWLinked<wbr>Service<wbr>Response</a> | <a href="#sapcloudforcustomerlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapecclinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saphanalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapopenhublinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saptablelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#servicenowlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sftpserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sharepointonlinelistlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#shopifylinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Shopify<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#snowflakelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Snowflake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sparklinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Spark<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sqlserverlinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#squarelinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Square<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sybaselinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Sybase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#teradatalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Teradata<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#verticalinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Vertica<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#weblinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Web<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#xerolinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Xero<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#zoholinkedserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of linked service.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -246,7 +246,7 @@ The following output properties are available:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a> | <a href="#amazonredshiftlinkedserviceresponse">Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3linkedserviceresponse">Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a> | <a href="#azurebatchlinkedserviceresponse">Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azureblobfslinkedserviceresponse">Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a> | <a href="#azureblobstoragelinkedserviceresponse">Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredataexplorerlinkedserviceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakeanalyticslinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakestorelinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabricksdeltalakelinkedserviceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabrickslinkedserviceresponse">Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefilestoragelinkedserviceresponse">Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefunctionlinkedserviceresponse">Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurekeyvaultlinkedserviceresponse">Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremllinkedserviceresponse">Azure<wbr>MLLinked<wbr>Service<wbr>Response</a> | <a href="#azuremlservicelinkedserviceresponse">Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremariadblinkedserviceresponse">Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#azuremysqllinkedserviceresponse">Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurepostgresqllinkedserviceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresearchlinkedserviceresponse">Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqldwlinkedserviceresponse">Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a> | <a href="#azuresqldatabaselinkedserviceresponse">Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqlmilinkedserviceresponse">Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a> | <a href="#azurestoragelinkedserviceresponse">Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuretablestoragelinkedserviceresponse">Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cassandralinkedserviceresponse">Cassandra<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#commondataserviceforappslinkedserviceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#concurlinkedserviceresponse">Concur<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdblinkedserviceresponse">Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdbmongodbapilinkedserviceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#couchbaselinkedserviceresponse">Couchbase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#customdatasourcelinkedserviceresponse">Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#db2linkedserviceresponse">Db2Linked<wbr>Service<wbr>Response</a> | <a href="#drilllinkedserviceresponse">Drill<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicsaxlinkedserviceresponse">Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a> | <a href="#dynamicscrmlinkedserviceresponse">Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicslinkedserviceresponse">Dynamics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#eloqualinkedserviceresponse">Eloqua<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#fileserverlinkedserviceresponse">File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#ftpserverlinkedserviceresponse">Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googleadwordslinkedserviceresponse">Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlebigquerylinkedserviceresponse">Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlecloudstoragelinkedserviceresponse">Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#greenplumlinkedserviceresponse">Greenplum<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hbaselinkedserviceresponse">HBase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightlinkedserviceresponse">HDInsight<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightondemandlinkedserviceresponse">HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdfslinkedserviceresponse">Hdfs<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hivelinkedserviceresponse">Hive<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#httplinkedserviceresponse">Http<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hubspotlinkedserviceresponse">Hubspot<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#impalalinkedserviceresponse">Impala<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#informixlinkedserviceresponse">Informix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#jiralinkedserviceresponse">Jira<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#magentolinkedserviceresponse">Magento<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mariadblinkedserviceresponse">Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#marketolinkedserviceresponse">Marketo<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#microsoftaccesslinkedserviceresponse">Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbatlaslinkedserviceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodblinkedserviceresponse">Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbv2linkedserviceresponse">Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a> | <a href="#mysqllinkedserviceresponse">My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#netezzalinkedserviceresponse">Netezza<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odatalinkedserviceresponse">OData<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odbclinkedserviceresponse">Odbc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#office365linkedserviceresponse">Office365Linked<wbr>Service<wbr>Response</a> | <a href="#oraclelinkedserviceresponse">Oracle<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oracleservicecloudlinkedserviceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#paypallinkedserviceresponse">Paypal<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#phoenixlinkedserviceresponse">Phoenix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#postgresqllinkedserviceresponse">Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#prestolinkedserviceresponse">Presto<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#quickbookslinkedserviceresponse">Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#responsyslinkedserviceresponse">Responsys<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#restservicelinkedserviceresponse">Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcelinkedserviceresponse">Salesforce<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcemarketingcloudlinkedserviceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforceservicecloudlinkedserviceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapbwlinkedserviceresponse">Sap<wbr>BWLinked<wbr>Service<wbr>Response</a> | <a href="#sapcloudforcustomerlinkedserviceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapecclinkedserviceresponse">Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saphanalinkedserviceresponse">Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapopenhublinkedserviceresponse">Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saptablelinkedserviceresponse">Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#servicenowlinkedserviceresponse">Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sftpserverlinkedserviceresponse">Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sharepointonlinelistlinkedserviceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#shopifylinkedserviceresponse">Shopify<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#snowflakelinkedserviceresponse">Snowflake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sparklinkedserviceresponse">Spark<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sqlserverlinkedserviceresponse">Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#squarelinkedserviceresponse">Square<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sybaselinkedserviceresponse">Sybase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#teradatalinkedserviceresponse">Teradata<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#verticalinkedserviceresponse">Vertica<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#weblinkedserviceresponse">Web<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#xerolinkedserviceresponse">Xero<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#zoholinkedserviceresponse">Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a> | <a href="#amazonredshiftlinkedserviceresponse">Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3compatiblelinkedserviceresponse">Amazon<wbr>S3Compatible<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3linkedserviceresponse">Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a> | <a href="#azurebatchlinkedserviceresponse">Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azureblobfslinkedserviceresponse">Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a> | <a href="#azureblobstoragelinkedserviceresponse">Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredataexplorerlinkedserviceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakeanalyticslinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakestorelinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabricksdeltalakelinkedserviceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabrickslinkedserviceresponse">Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefilestoragelinkedserviceresponse">Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefunctionlinkedserviceresponse">Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurekeyvaultlinkedserviceresponse">Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremllinkedserviceresponse">Azure<wbr>MLLinked<wbr>Service<wbr>Response</a> | <a href="#azuremlservicelinkedserviceresponse">Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremariadblinkedserviceresponse">Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#azuremysqllinkedserviceresponse">Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurepostgresqllinkedserviceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresearchlinkedserviceresponse">Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqldwlinkedserviceresponse">Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a> | <a href="#azuresqldatabaselinkedserviceresponse">Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqlmilinkedserviceresponse">Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a> | <a href="#azurestoragelinkedserviceresponse">Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuretablestoragelinkedserviceresponse">Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cassandralinkedserviceresponse">Cassandra<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#commondataserviceforappslinkedserviceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#concurlinkedserviceresponse">Concur<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdblinkedserviceresponse">Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdbmongodbapilinkedserviceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#couchbaselinkedserviceresponse">Couchbase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#customdatasourcelinkedserviceresponse">Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#db2linkedserviceresponse">Db2Linked<wbr>Service<wbr>Response</a> | <a href="#drilllinkedserviceresponse">Drill<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicsaxlinkedserviceresponse">Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a> | <a href="#dynamicscrmlinkedserviceresponse">Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicslinkedserviceresponse">Dynamics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#eloqualinkedserviceresponse">Eloqua<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#fileserverlinkedserviceresponse">File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#ftpserverlinkedserviceresponse">Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googleadwordslinkedserviceresponse">Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlebigquerylinkedserviceresponse">Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlecloudstoragelinkedserviceresponse">Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#greenplumlinkedserviceresponse">Greenplum<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hbaselinkedserviceresponse">HBase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightlinkedserviceresponse">HDInsight<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightondemandlinkedserviceresponse">HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdfslinkedserviceresponse">Hdfs<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hivelinkedserviceresponse">Hive<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#httplinkedserviceresponse">Http<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hubspotlinkedserviceresponse">Hubspot<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#impalalinkedserviceresponse">Impala<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#informixlinkedserviceresponse">Informix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#jiralinkedserviceresponse">Jira<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#magentolinkedserviceresponse">Magento<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mariadblinkedserviceresponse">Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#marketolinkedserviceresponse">Marketo<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#microsoftaccesslinkedserviceresponse">Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbatlaslinkedserviceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodblinkedserviceresponse">Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbv2linkedserviceresponse">Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a> | <a href="#mysqllinkedserviceresponse">My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#netezzalinkedserviceresponse">Netezza<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odatalinkedserviceresponse">OData<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odbclinkedserviceresponse">Odbc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#office365linkedserviceresponse">Office365Linked<wbr>Service<wbr>Response</a> | <a href="#oraclecloudstoragelinkedserviceresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oraclelinkedserviceresponse">Oracle<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oracleservicecloudlinkedserviceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#paypallinkedserviceresponse">Paypal<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#phoenixlinkedserviceresponse">Phoenix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#postgresqllinkedserviceresponse">Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#prestolinkedserviceresponse">Presto<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#quickbookslinkedserviceresponse">Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#responsyslinkedserviceresponse">Responsys<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#restservicelinkedserviceresponse">Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcelinkedserviceresponse">Salesforce<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcemarketingcloudlinkedserviceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforceservicecloudlinkedserviceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapbwlinkedserviceresponse">Sap<wbr>BWLinked<wbr>Service<wbr>Response</a> | <a href="#sapcloudforcustomerlinkedserviceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapecclinkedserviceresponse">Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saphanalinkedserviceresponse">Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapopenhublinkedserviceresponse">Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saptablelinkedserviceresponse">Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#servicenowlinkedserviceresponse">Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sftpserverlinkedserviceresponse">Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sharepointonlinelistlinkedserviceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#shopifylinkedserviceresponse">Shopify<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#snowflakelinkedserviceresponse">Snowflake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sparklinkedserviceresponse">Spark<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sqlserverlinkedserviceresponse">Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#squarelinkedserviceresponse">Square<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sybaselinkedserviceresponse">Sybase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#teradatalinkedserviceresponse">Teradata<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#verticalinkedserviceresponse">Vertica<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#weblinkedserviceresponse">Web<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#xerolinkedserviceresponse">Xero<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#zoholinkedserviceresponse">Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of linked service.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -290,7 +290,7 @@ The following output properties are available:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a> | <a href="#amazonredshiftlinkedserviceresponse">Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3linkedserviceresponse">Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a> | <a href="#azurebatchlinkedserviceresponse">Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azureblobfslinkedserviceresponse">Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a> | <a href="#azureblobstoragelinkedserviceresponse">Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredataexplorerlinkedserviceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakeanalyticslinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakestorelinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabricksdeltalakelinkedserviceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabrickslinkedserviceresponse">Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefilestoragelinkedserviceresponse">Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefunctionlinkedserviceresponse">Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurekeyvaultlinkedserviceresponse">Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremllinkedserviceresponse">Azure<wbr>MLLinked<wbr>Service<wbr>Response</a> | <a href="#azuremlservicelinkedserviceresponse">Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremariadblinkedserviceresponse">Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#azuremysqllinkedserviceresponse">Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurepostgresqllinkedserviceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresearchlinkedserviceresponse">Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqldwlinkedserviceresponse">Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a> | <a href="#azuresqldatabaselinkedserviceresponse">Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqlmilinkedserviceresponse">Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a> | <a href="#azurestoragelinkedserviceresponse">Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuretablestoragelinkedserviceresponse">Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cassandralinkedserviceresponse">Cassandra<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#commondataserviceforappslinkedserviceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#concurlinkedserviceresponse">Concur<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdblinkedserviceresponse">Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdbmongodbapilinkedserviceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#couchbaselinkedserviceresponse">Couchbase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#customdatasourcelinkedserviceresponse">Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#db2linkedserviceresponse">Db2Linked<wbr>Service<wbr>Response</a> | <a href="#drilllinkedserviceresponse">Drill<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicsaxlinkedserviceresponse">Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a> | <a href="#dynamicscrmlinkedserviceresponse">Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicslinkedserviceresponse">Dynamics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#eloqualinkedserviceresponse">Eloqua<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#fileserverlinkedserviceresponse">File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#ftpserverlinkedserviceresponse">Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googleadwordslinkedserviceresponse">Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlebigquerylinkedserviceresponse">Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlecloudstoragelinkedserviceresponse">Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#greenplumlinkedserviceresponse">Greenplum<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hbaselinkedserviceresponse">HBase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightlinkedserviceresponse">HDInsight<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightondemandlinkedserviceresponse">HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdfslinkedserviceresponse">Hdfs<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hivelinkedserviceresponse">Hive<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#httplinkedserviceresponse">Http<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hubspotlinkedserviceresponse">Hubspot<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#impalalinkedserviceresponse">Impala<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#informixlinkedserviceresponse">Informix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#jiralinkedserviceresponse">Jira<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#magentolinkedserviceresponse">Magento<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mariadblinkedserviceresponse">Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#marketolinkedserviceresponse">Marketo<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#microsoftaccesslinkedserviceresponse">Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbatlaslinkedserviceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodblinkedserviceresponse">Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbv2linkedserviceresponse">Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a> | <a href="#mysqllinkedserviceresponse">My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#netezzalinkedserviceresponse">Netezza<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odatalinkedserviceresponse">OData<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odbclinkedserviceresponse">Odbc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#office365linkedserviceresponse">Office365Linked<wbr>Service<wbr>Response</a> | <a href="#oraclelinkedserviceresponse">Oracle<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oracleservicecloudlinkedserviceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#paypallinkedserviceresponse">Paypal<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#phoenixlinkedserviceresponse">Phoenix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#postgresqllinkedserviceresponse">Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#prestolinkedserviceresponse">Presto<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#quickbookslinkedserviceresponse">Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#responsyslinkedserviceresponse">Responsys<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#restservicelinkedserviceresponse">Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcelinkedserviceresponse">Salesforce<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcemarketingcloudlinkedserviceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforceservicecloudlinkedserviceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapbwlinkedserviceresponse">Sap<wbr>BWLinked<wbr>Service<wbr>Response</a> | <a href="#sapcloudforcustomerlinkedserviceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapecclinkedserviceresponse">Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saphanalinkedserviceresponse">Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapopenhublinkedserviceresponse">Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saptablelinkedserviceresponse">Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#servicenowlinkedserviceresponse">Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sftpserverlinkedserviceresponse">Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sharepointonlinelistlinkedserviceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#shopifylinkedserviceresponse">Shopify<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#snowflakelinkedserviceresponse">Snowflake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sparklinkedserviceresponse">Spark<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sqlserverlinkedserviceresponse">Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#squarelinkedserviceresponse">Square<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sybaselinkedserviceresponse">Sybase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#teradatalinkedserviceresponse">Teradata<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#verticalinkedserviceresponse">Vertica<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#weblinkedserviceresponse">Web<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#xerolinkedserviceresponse">Xero<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#zoholinkedserviceresponse">Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a> | <a href="#amazonredshiftlinkedserviceresponse">Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3compatiblelinkedserviceresponse">Amazon<wbr>S3Compatible<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3linkedserviceresponse">Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a> | <a href="#azurebatchlinkedserviceresponse">Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azureblobfslinkedserviceresponse">Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a> | <a href="#azureblobstoragelinkedserviceresponse">Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredataexplorerlinkedserviceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakeanalyticslinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakestorelinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabricksdeltalakelinkedserviceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabrickslinkedserviceresponse">Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefilestoragelinkedserviceresponse">Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefunctionlinkedserviceresponse">Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurekeyvaultlinkedserviceresponse">Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremllinkedserviceresponse">Azure<wbr>MLLinked<wbr>Service<wbr>Response</a> | <a href="#azuremlservicelinkedserviceresponse">Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremariadblinkedserviceresponse">Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#azuremysqllinkedserviceresponse">Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurepostgresqllinkedserviceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresearchlinkedserviceresponse">Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqldwlinkedserviceresponse">Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a> | <a href="#azuresqldatabaselinkedserviceresponse">Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqlmilinkedserviceresponse">Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a> | <a href="#azurestoragelinkedserviceresponse">Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuretablestoragelinkedserviceresponse">Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cassandralinkedserviceresponse">Cassandra<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#commondataserviceforappslinkedserviceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#concurlinkedserviceresponse">Concur<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdblinkedserviceresponse">Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdbmongodbapilinkedserviceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#couchbaselinkedserviceresponse">Couchbase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#customdatasourcelinkedserviceresponse">Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#db2linkedserviceresponse">Db2Linked<wbr>Service<wbr>Response</a> | <a href="#drilllinkedserviceresponse">Drill<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicsaxlinkedserviceresponse">Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a> | <a href="#dynamicscrmlinkedserviceresponse">Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicslinkedserviceresponse">Dynamics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#eloqualinkedserviceresponse">Eloqua<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#fileserverlinkedserviceresponse">File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#ftpserverlinkedserviceresponse">Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googleadwordslinkedserviceresponse">Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlebigquerylinkedserviceresponse">Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlecloudstoragelinkedserviceresponse">Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#greenplumlinkedserviceresponse">Greenplum<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hbaselinkedserviceresponse">HBase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightlinkedserviceresponse">HDInsight<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightondemandlinkedserviceresponse">HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdfslinkedserviceresponse">Hdfs<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hivelinkedserviceresponse">Hive<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#httplinkedserviceresponse">Http<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hubspotlinkedserviceresponse">Hubspot<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#impalalinkedserviceresponse">Impala<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#informixlinkedserviceresponse">Informix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#jiralinkedserviceresponse">Jira<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#magentolinkedserviceresponse">Magento<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mariadblinkedserviceresponse">Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#marketolinkedserviceresponse">Marketo<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#microsoftaccesslinkedserviceresponse">Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbatlaslinkedserviceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodblinkedserviceresponse">Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbv2linkedserviceresponse">Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a> | <a href="#mysqllinkedserviceresponse">My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#netezzalinkedserviceresponse">Netezza<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odatalinkedserviceresponse">OData<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odbclinkedserviceresponse">Odbc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#office365linkedserviceresponse">Office365Linked<wbr>Service<wbr>Response</a> | <a href="#oraclecloudstoragelinkedserviceresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oraclelinkedserviceresponse">Oracle<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oracleservicecloudlinkedserviceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#paypallinkedserviceresponse">Paypal<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#phoenixlinkedserviceresponse">Phoenix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#postgresqllinkedserviceresponse">Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#prestolinkedserviceresponse">Presto<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#quickbookslinkedserviceresponse">Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#responsyslinkedserviceresponse">Responsys<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#restservicelinkedserviceresponse">Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcelinkedserviceresponse">Salesforce<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcemarketingcloudlinkedserviceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforceservicecloudlinkedserviceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapbwlinkedserviceresponse">Sap<wbr>BWLinked<wbr>Service<wbr>Response</a> | <a href="#sapcloudforcustomerlinkedserviceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapecclinkedserviceresponse">Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saphanalinkedserviceresponse">Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapopenhublinkedserviceresponse">Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saptablelinkedserviceresponse">Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#servicenowlinkedserviceresponse">Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sftpserverlinkedserviceresponse">Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sharepointonlinelistlinkedserviceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#shopifylinkedserviceresponse">Shopify<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#snowflakelinkedserviceresponse">Snowflake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sparklinkedserviceresponse">Spark<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sqlserverlinkedserviceresponse">Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#squarelinkedserviceresponse">Square<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sybaselinkedserviceresponse">Sybase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#teradatalinkedserviceresponse">Teradata<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#verticalinkedserviceresponse">Vertica<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#weblinkedserviceresponse">Web<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#xerolinkedserviceresponse">Xero<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#zoholinkedserviceresponse">Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of linked service.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -334,7 +334,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a> | <a href="#amazonredshiftlinkedserviceresponse">Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3linkedserviceresponse">Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a> | <a href="#azurebatchlinkedserviceresponse">Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azureblobfslinkedserviceresponse">Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a> | <a href="#azureblobstoragelinkedserviceresponse">Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredataexplorerlinkedserviceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakeanalyticslinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakestorelinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabricksdeltalakelinkedserviceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabrickslinkedserviceresponse">Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefilestoragelinkedserviceresponse">Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefunctionlinkedserviceresponse">Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurekeyvaultlinkedserviceresponse">Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremllinkedserviceresponse">Azure<wbr>MLLinked<wbr>Service<wbr>Response</a> | <a href="#azuremlservicelinkedserviceresponse">Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremariadblinkedserviceresponse">Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#azuremysqllinkedserviceresponse">Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurepostgresqllinkedserviceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresearchlinkedserviceresponse">Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqldwlinkedserviceresponse">Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a> | <a href="#azuresqldatabaselinkedserviceresponse">Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqlmilinkedserviceresponse">Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a> | <a href="#azurestoragelinkedserviceresponse">Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuretablestoragelinkedserviceresponse">Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cassandralinkedserviceresponse">Cassandra<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#commondataserviceforappslinkedserviceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#concurlinkedserviceresponse">Concur<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdblinkedserviceresponse">Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdbmongodbapilinkedserviceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#couchbaselinkedserviceresponse">Couchbase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#customdatasourcelinkedserviceresponse">Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#db2linkedserviceresponse">Db2Linked<wbr>Service<wbr>Response</a> | <a href="#drilllinkedserviceresponse">Drill<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicsaxlinkedserviceresponse">Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a> | <a href="#dynamicscrmlinkedserviceresponse">Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicslinkedserviceresponse">Dynamics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#eloqualinkedserviceresponse">Eloqua<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#fileserverlinkedserviceresponse">File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#ftpserverlinkedserviceresponse">Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googleadwordslinkedserviceresponse">Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlebigquerylinkedserviceresponse">Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlecloudstoragelinkedserviceresponse">Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#greenplumlinkedserviceresponse">Greenplum<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hbaselinkedserviceresponse">HBase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightlinkedserviceresponse">HDInsight<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightondemandlinkedserviceresponse">HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdfslinkedserviceresponse">Hdfs<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hivelinkedserviceresponse">Hive<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#httplinkedserviceresponse">Http<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hubspotlinkedserviceresponse">Hubspot<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#impalalinkedserviceresponse">Impala<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#informixlinkedserviceresponse">Informix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#jiralinkedserviceresponse">Jira<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#magentolinkedserviceresponse">Magento<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mariadblinkedserviceresponse">Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#marketolinkedserviceresponse">Marketo<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#microsoftaccesslinkedserviceresponse">Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbatlaslinkedserviceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodblinkedserviceresponse">Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbv2linkedserviceresponse">Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a> | <a href="#mysqllinkedserviceresponse">My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#netezzalinkedserviceresponse">Netezza<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odatalinkedserviceresponse">OData<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odbclinkedserviceresponse">Odbc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#office365linkedserviceresponse">Office365Linked<wbr>Service<wbr>Response</a> | <a href="#oraclelinkedserviceresponse">Oracle<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oracleservicecloudlinkedserviceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#paypallinkedserviceresponse">Paypal<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#phoenixlinkedserviceresponse">Phoenix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#postgresqllinkedserviceresponse">Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#prestolinkedserviceresponse">Presto<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#quickbookslinkedserviceresponse">Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#responsyslinkedserviceresponse">Responsys<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#restservicelinkedserviceresponse">Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcelinkedserviceresponse">Salesforce<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcemarketingcloudlinkedserviceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforceservicecloudlinkedserviceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapbwlinkedserviceresponse">Sap<wbr>BWLinked<wbr>Service<wbr>Response</a> | <a href="#sapcloudforcustomerlinkedserviceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapecclinkedserviceresponse">Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saphanalinkedserviceresponse">Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapopenhublinkedserviceresponse">Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saptablelinkedserviceresponse">Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#servicenowlinkedserviceresponse">Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sftpserverlinkedserviceresponse">Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sharepointonlinelistlinkedserviceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#shopifylinkedserviceresponse">Shopify<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#snowflakelinkedserviceresponse">Snowflake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sparklinkedserviceresponse">Spark<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sqlserverlinkedserviceresponse">Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#squarelinkedserviceresponse">Square<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sybaselinkedserviceresponse">Sybase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#teradatalinkedserviceresponse">Teradata<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#verticalinkedserviceresponse">Vertica<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#weblinkedserviceresponse">Web<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#xerolinkedserviceresponse">Xero<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#zoholinkedserviceresponse">Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazonmwslinkedserviceresponse">Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</a> | <a href="#amazonredshiftlinkedserviceresponse">Amazon<wbr>Redshift<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3compatiblelinkedserviceresponse">Amazon<wbr>S3Compatible<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#amazons3linkedserviceresponse">Amazon<wbr>S3Linked<wbr>Service<wbr>Response</a> | <a href="#azurebatchlinkedserviceresponse">Azure<wbr>Batch<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azureblobfslinkedserviceresponse">Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</a> | <a href="#azureblobstoragelinkedserviceresponse">Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredataexplorerlinkedserviceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakeanalyticslinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatalakestorelinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabricksdeltalakelinkedserviceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuredatabrickslinkedserviceresponse">Azure<wbr>Databricks<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefilestoragelinkedserviceresponse">Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurefunctionlinkedserviceresponse">Azure<wbr>Function<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurekeyvaultlinkedserviceresponse">Azure<wbr>Key<wbr>Vault<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremllinkedserviceresponse">Azure<wbr>MLLinked<wbr>Service<wbr>Response</a> | <a href="#azuremlservicelinkedserviceresponse">Azure<wbr>MLService<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuremariadblinkedserviceresponse">Azure<wbr>Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#azuremysqllinkedserviceresponse">Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azurepostgresqllinkedserviceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresearchlinkedserviceresponse">Azure<wbr>Search<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqldwlinkedserviceresponse">Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</a> | <a href="#azuresqldatabaselinkedserviceresponse">Azure<wbr>Sql<wbr>Database<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuresqlmilinkedserviceresponse">Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</a> | <a href="#azurestoragelinkedserviceresponse">Azure<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#azuretablestoragelinkedserviceresponse">Azure<wbr>Table<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cassandralinkedserviceresponse">Cassandra<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#commondataserviceforappslinkedserviceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#concurlinkedserviceresponse">Concur<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdblinkedserviceresponse">Cosmos<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#cosmosdbmongodbapilinkedserviceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#couchbaselinkedserviceresponse">Couchbase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#customdatasourcelinkedserviceresponse">Custom<wbr>Data<wbr>Source<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#db2linkedserviceresponse">Db2Linked<wbr>Service<wbr>Response</a> | <a href="#drilllinkedserviceresponse">Drill<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicsaxlinkedserviceresponse">Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</a> | <a href="#dynamicscrmlinkedserviceresponse">Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#dynamicslinkedserviceresponse">Dynamics<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#eloqualinkedserviceresponse">Eloqua<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#fileserverlinkedserviceresponse">File<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#ftpserverlinkedserviceresponse">Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googleadwordslinkedserviceresponse">Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlebigquerylinkedserviceresponse">Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#googlecloudstoragelinkedserviceresponse">Google<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#greenplumlinkedserviceresponse">Greenplum<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hbaselinkedserviceresponse">HBase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightlinkedserviceresponse">HDInsight<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdinsightondemandlinkedserviceresponse">HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hdfslinkedserviceresponse">Hdfs<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hivelinkedserviceresponse">Hive<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#httplinkedserviceresponse">Http<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#hubspotlinkedserviceresponse">Hubspot<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#impalalinkedserviceresponse">Impala<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#informixlinkedserviceresponse">Informix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#jiralinkedserviceresponse">Jira<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#magentolinkedserviceresponse">Magento<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mariadblinkedserviceresponse">Maria<wbr>DBLinked<wbr>Service<wbr>Response</a> | <a href="#marketolinkedserviceresponse">Marketo<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#microsoftaccesslinkedserviceresponse">Microsoft<wbr>Access<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbatlaslinkedserviceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodblinkedserviceresponse">Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#mongodbv2linkedserviceresponse">Mongo<wbr>Db<wbr>V2Linked<wbr>Service<wbr>Response</a> | <a href="#mysqllinkedserviceresponse">My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#netezzalinkedserviceresponse">Netezza<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odatalinkedserviceresponse">OData<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#odbclinkedserviceresponse">Odbc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#office365linkedserviceresponse">Office365Linked<wbr>Service<wbr>Response</a> | <a href="#oraclecloudstoragelinkedserviceresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oraclelinkedserviceresponse">Oracle<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#oracleservicecloudlinkedserviceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#paypallinkedserviceresponse">Paypal<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#phoenixlinkedserviceresponse">Phoenix<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#postgresqllinkedserviceresponse">Postgre<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#prestolinkedserviceresponse">Presto<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#quickbookslinkedserviceresponse">Quick<wbr>Books<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#responsyslinkedserviceresponse">Responsys<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#restservicelinkedserviceresponse">Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcelinkedserviceresponse">Salesforce<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforcemarketingcloudlinkedserviceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#salesforceservicecloudlinkedserviceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapbwlinkedserviceresponse">Sap<wbr>BWLinked<wbr>Service<wbr>Response</a> | <a href="#sapcloudforcustomerlinkedserviceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapecclinkedserviceresponse">Sap<wbr>Ecc<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saphanalinkedserviceresponse">Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sapopenhublinkedserviceresponse">Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#saptablelinkedserviceresponse">Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#servicenowlinkedserviceresponse">Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sftpserverlinkedserviceresponse">Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sharepointonlinelistlinkedserviceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#shopifylinkedserviceresponse">Shopify<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#snowflakelinkedserviceresponse">Snowflake<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sparklinkedserviceresponse">Spark<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sqlserverlinkedserviceresponse">Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#squarelinkedserviceresponse">Square<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#sybaselinkedserviceresponse">Sybase<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#teradatalinkedserviceresponse">Teradata<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#verticalinkedserviceresponse">Vertica<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#weblinkedserviceresponse">Web<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#xerolinkedserviceresponse">Xero<wbr>Linked<wbr>Service<wbr>Response</a> | <a href="#zoholinkedserviceresponse">Zoho<wbr>Linked<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of linked service.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1159,6 +1159,314 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The username of the Amazon Redshift source. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="amazons3compatiblelinkedserviceresponse">Amazon<wbr>S3Compatible<wbr>Linked<wbr>Service<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesskeyid_csharp">
+<a href="#accesskeyid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The access key identifier of the Amazon S3 Compatible Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectvia_csharp">
+<a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptedcredential_csharp">
+<a href="#encryptedcredential_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forcepathstyle_csharp">
+<a href="#forcepathstyle_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Path<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, use S3 path-style access instead of virtual hosted-style access. Default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretaccesskey_csharp">
+<a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The secret access key of the Amazon S3 Compatible Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceurl_csharp">
+<a href="#serviceurl_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}This value specifies the endpoint to access with the Amazon S3 Compatible Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesskeyid_go">
+<a href="#accesskeyid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The access key identifier of the Amazon S3 Compatible Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectvia_go">
+<a href="#connectvia_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptedcredential_go">
+<a href="#encryptedcredential_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forcepathstyle_go">
+<a href="#forcepathstyle_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Path<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, use S3 path-style access instead of virtual hosted-style access. Default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Parameter<wbr>Specification<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretaccesskey_go">
+<a href="#secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The secret access key of the Amazon S3 Compatible Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceurl_go">
+<a href="#serviceurl_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}This value specifies the endpoint to access with the Amazon S3 Compatible Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesskeyid_nodejs">
+<a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The access key identifier of the Amazon S3 Compatible Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectvia_nodejs">
+<a href="#connectvia_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptedcredential_nodejs">
+<a href="#encryptedcredential_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forcepathstyle_nodejs">
+<a href="#forcepathstyle_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Path<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, use S3 path-style access instead of virtual hosted-style access. Default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretaccesskey_nodejs">
+<a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The secret access key of the Amazon S3 Compatible Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceurl_nodejs">
+<a href="#serviceurl_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}This value specifies the endpoint to access with the Amazon S3 Compatible Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="access_key_id_python">
+<a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The access key identifier of the Amazon S3 Compatible Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="force_path_style_python">
+<a href="#force_path_style_python" style="color: inherit; text-decoration: inherit;">force_<wbr>path_<wbr>style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, use S3 path-style access instead of virtual hosted-style access. Default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secret_access_key_python">
+<a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The secret access key of the Amazon S3 Compatible Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_url_python">
+<a href="#service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}This value specifies the endpoint to access with the Amazon S3 Compatible Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="amazons3linkedserviceresponse">Amazon<wbr>S3Linked<wbr>Service<wbr>Response</h4>
@@ -2228,6 +2536,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accountkind_csharp">
+<a href="#accountkind_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span>
@@ -2343,6 +2659,14 @@ The following output properties are available:
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accountkind_go">
+<a href="#accountkind_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -2460,6 +2784,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accountkind_nodejs">
+<a href="#accountkind_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -2575,6 +2907,14 @@ The following output properties are available:
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="account_kind_python">
+<a href="#account_kind_python" style="color: inherit; text-decoration: inherit;">account_<wbr>kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -2702,31 +3042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalid_csharp">
-<a href="#serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalkey_csharp">
-<a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tenant_csharp">
-<a href="#tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -2758,7 +3074,31 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_csharp">
+<a href="#serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_csharp">
+<a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_csharp">
+<a href="#tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2778,31 +3118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalid_go">
-<a href="#serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalkey_go">
-<a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tenant_go">
-<a href="#tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -2834,7 +3150,31 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Parameter<wbr>Specification<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_go">
+<a href="#serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_go">
+<a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_go">
+<a href="#tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2854,31 +3194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalid_nodejs">
-<a href="#serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalkey_nodejs">
-<a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tenant_nodejs">
-<a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -2910,7 +3226,31 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_nodejs">
+<a href="#serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_nodejs">
+<a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_nodejs">
+<a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2930,31 +3270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="service_principal_id_python">
-<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="service_principal_key_python">
-<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tenant_python">
-<a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -2986,7 +3302,31 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_python">
+<a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azuredatalakeanalyticslinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</h4>
@@ -10596,6 +10936,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azurecloudtype_csharp">
+<a href="#azurecloudtype_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Cloud<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="connectvia_csharp">
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
@@ -10603,6 +10951,14 @@ The following output properties are available:
         <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectionmode_csharp">
+<a href="#connectionmode_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -10642,7 +10998,39 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalcredential_csharp">
+<a href="#serviceprincipalcredential_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalcredentialtype_csharp">
+<a href="#serviceprincipalcredentialtype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_csharp">
+<a href="#serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_csharp">
+<a href="#tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -10672,6 +11060,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azurecloudtype_go">
+<a href="#azurecloudtype_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Cloud<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="connectvia_go">
 <a href="#connectvia_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
@@ -10679,6 +11075,14 @@ The following output properties are available:
         <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectionmode_go">
+<a href="#connectionmode_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -10718,7 +11122,39 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Parameter<wbr>Specification<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalcredential_go">
+<a href="#serviceprincipalcredential_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalcredentialtype_go">
+<a href="#serviceprincipalcredentialtype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_go">
+<a href="#serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_go">
+<a href="#tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -10748,6 +11184,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azurecloudtype_nodejs">
+<a href="#azurecloudtype_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="connectvia_nodejs">
 <a href="#connectvia_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
 </span>
@@ -10755,6 +11199,14 @@ The following output properties are available:
         <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectionmode_nodejs">
+<a href="#connectionmode_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -10794,7 +11246,39 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalcredential_nodejs">
+<a href="#serviceprincipalcredential_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalcredentialtype_nodejs">
+<a href="#serviceprincipalcredentialtype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Credential<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_nodejs">
+<a href="#serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_nodejs">
+<a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -10824,6 +11308,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azure_cloud_type_python">
+<a href="#azure_cloud_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="connect_via_python">
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
@@ -10831,6 +11323,14 @@ The following output properties are available:
         <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connection_mode_python">
+<a href="#connection_mode_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -10870,7 +11370,39 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_credential_python">
+<a href="#service_principal_credential_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_credential_type_python">
+<a href="#service_principal_credential_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_python">
+<a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cosmosdbmongodbapilinkedserviceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Linked<wbr>Service<wbr>Response</h4>
@@ -19296,6 +19828,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="authheaders_csharp">
+<a href="#authheaders_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
 </span>
@@ -19395,6 +19935,14 @@ The following output properties are available:
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authheaders_go">
+<a href="#authheaders_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -19496,6 +20044,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="authheaders_nodejs">
+<a href="#authheaders_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
 </span>
@@ -19595,6 +20151,14 @@ The following output properties are available:
         <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auth_headers_python">
+<a href="#auth_headers_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -24272,6 +24836,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="authheaders_csharp">
+<a href="#authheaders_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
 </span>
@@ -24411,6 +24983,14 @@ The following output properties are available:
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authheaders_go">
+<a href="#authheaders_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -24552,6 +25132,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="authheaders_nodejs">
+<a href="#authheaders_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
 </span>
@@ -24691,6 +25279,14 @@ The following output properties are available:
         <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auth_headers_python">
+<a href="#auth_headers_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -25443,6 +26039,282 @@ The following output properties are available:
         <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oraclecloudstoragelinkedserviceresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesskeyid_csharp">
+<a href="#accesskeyid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The access key identifier of the Oracle Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectvia_csharp">
+<a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptedcredential_csharp">
+<a href="#encryptedcredential_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretaccesskey_csharp">
+<a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceurl_csharp">
+<a href="#serviceurl_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}This value specifies the endpoint to access with the Oracle Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesskeyid_go">
+<a href="#accesskeyid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The access key identifier of the Oracle Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectvia_go">
+<a href="#connectvia_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptedcredential_go">
+<a href="#encryptedcredential_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Parameter<wbr>Specification<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretaccesskey_go">
+<a href="#secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceurl_go">
+<a href="#serviceurl_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}This value specifies the endpoint to access with the Oracle Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesskeyid_nodejs">
+<a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The access key identifier of the Oracle Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectvia_nodejs">
+<a href="#connectvia_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptedcredential_nodejs">
+<a href="#encryptedcredential_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretaccesskey_nodejs">
+<a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceurl_nodejs">
+<a href="#serviceurl_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}This value specifies the endpoint to access with the Oracle Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="access_key_id_python">
+<a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The access key identifier of the Oracle Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connect_via_python">
+<a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_credential_python">
+<a href="#encrypted_credential_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secret_access_key_python">
+<a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_url_python">
+<a href="#service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}This value specifies the endpoint to access with the Oracle Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oraclelinkedserviceresponse">Oracle<wbr>Linked<wbr>Service<wbr>Response</h4>
@@ -28736,6 +29608,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="authheaders_csharp">
+<a href="#authheaders_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="azurecloudtype_csharp">
 <a href="#azurecloudtype_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Cloud<wbr>Type</a>
 </span>
@@ -28859,6 +29739,14 @@ The following output properties are available:
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="authheaders_go">
+<a href="#authheaders_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurecloudtype_go">
 <a href="#azurecloudtype_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Cloud<wbr>Type</a>
@@ -28984,6 +29872,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="authheaders_nodejs">
+<a href="#authheaders_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="azurecloudtype_nodejs">
 <a href="#azurecloudtype_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Type</a>
 </span>
@@ -29107,6 +30003,14 @@ The following output properties are available:
         <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auth_headers_python">
+<a href="#auth_headers_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_cloud_type_python">
 <a href="#azure_cloud_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>type</a>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.apimanagement.Logger resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Logger details.
-API Version: 2019-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 
@@ -161,7 +161,7 @@ class MyStack : Stack
                 { "name", "hydraeventhub" },
             },
             Description = "adding a new logger",
-            LoggerId = "loggerId",
+            LoggerId = "eh1",
             LoggerType = "azureEventHub",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
@@ -195,7 +195,7 @@ func main() {
 				"name":              pulumi.String("hydraeventhub"),
 			},
 			Description:       pulumi.String("adding a new logger"),
-			LoggerId:          pulumi.String("loggerId"),
+			LoggerId:          pulumi.String("eh1"),
 			LoggerType:        pulumi.String("azureEventHub"),
 			ResourceGroupName: pulumi.String("rg1"),
 			ServiceName:       pulumi.String("apimService1"),
@@ -226,7 +226,7 @@ logger = azure_native.apimanagement.Logger("logger",
         "name": "hydraeventhub",
     },
     description="adding a new logger",
-    logger_id="loggerId",
+    logger_id="eh1",
     logger_type="azureEventHub",
     resource_group_name="rg1",
     service_name="apimService1")
@@ -250,7 +250,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
         name: "hydraeventhub",
     },
     description: "adding a new logger",
-    loggerId: "loggerId",
+    loggerId: "eh1",
     loggerType: "azureEventHub",
     resourceGroupName: "rg1",
     serviceName: "apimService1",
@@ -421,15 +421,6 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="credentials_csharp">
-<a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="loggertype_csharp">
 <a href="#loggertype_csharp" style="color: inherit; text-decoration: inherit;">Logger<wbr>Type</a>
 </span>
@@ -453,6 +444,15 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="pr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="credentials_csharp">
+<a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
+Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -490,15 +490,6 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="pr
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="credentials_go">
-<a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="loggertype_go">
 <a href="#loggertype_go" style="color: inherit; text-decoration: inherit;">Logger<wbr>Type</a>
 </span>
@@ -522,6 +513,15 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="pr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="credentials_go">
+<a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
+Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -559,15 +559,6 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="pr
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="credentials_nodejs">
-<a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="loggertype_nodejs">
 <a href="#loggertype_nodejs" style="color: inherit; text-decoration: inherit;">logger<wbr>Type</a>
 </span>
@@ -591,6 +582,15 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="pr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="credentials_nodejs">
+<a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
+Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -628,15 +628,6 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="pr
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="credentials_python">
-<a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="logger_type_python">
 <a href="#logger_type_python" style="color: inherit; text-decoration: inherit;">logger_<wbr>type</a>
 </span>
@@ -660,6 +651,15 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="pr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="credentials_python">
+<a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
+Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -828,25 +828,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Azure<wbr>Event<wbr>Hub</dt>
     <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd><dt>Application<wbr>Insights</dt>
-    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd></dl>
+    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd><dt>Azure<wbr>Monitor</dt>
+    <dd>azureMonitor{{% md %}}Azure Monitor{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Logger<wbr>Type<wbr>Azure<wbr>Event<wbr>Hub</dt>
     <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd><dt>Logger<wbr>Type<wbr>Application<wbr>Insights</dt>
-    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd></dl>
+    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd><dt>Logger<wbr>Type<wbr>Azure<wbr>Monitor</dt>
+    <dd>azureMonitor{{% md %}}Azure Monitor{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Azure<wbr>Event<wbr>Hub</dt>
     <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd><dt>Application<wbr>Insights</dt>
-    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd></dl>
+    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd><dt>Azure<wbr>Monitor</dt>
+    <dd>azureMonitor{{% md %}}Azure Monitor{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>AZURE_EVENT_HUB</dt>
     <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd><dt>APPLICATION_INSIGHTS</dt>
-    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd></dl>
+    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd><dt>AZURE_MONITOR</dt>
+    <dd>azureMonitor{{% md %}}Azure Monitor{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -854,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:apimanagement:Logger loggerId /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/loggers/loggerId 
+$ pulumi import azure-native:apimanagement:Logger eh1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/loggers/eh1 
 ```
 
 

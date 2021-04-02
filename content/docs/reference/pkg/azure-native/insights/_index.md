@@ -33,6 +33,7 @@ Explore the resources and functions of the azure-native.insights module.
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="privatelinkscope" title="PrivateLinkScope"><span class="symbol resource"></span>PrivateLinkScope</a></li>
     <li><a href="privatelinkscopedresource" title="PrivateLinkScopedResource"><span class="symbol resource"></span>PrivateLinkScopedResource</a></li>
+    <li><a href="proactivedetectionconfiguration" title="ProactiveDetectionConfiguration"><span class="symbol resource"></span>ProactiveDetectionConfiguration</a></li>
     <li><a href="scheduledqueryrule" title="ScheduledQueryRule"><span class="symbol resource"></span>ScheduledQueryRule</a></li>
     <li><a href="subscriptiondiagnosticsetting" title="SubscriptionDiagnosticSetting"><span class="symbol resource"></span>SubscriptionDiagnosticSetting</a></li>
     <li><a href="webtest" title="WebTest"><span class="symbol resource"></span>WebTest</a></li>
@@ -63,6 +64,7 @@ Explore the resources and functions of the azure-native.insights module.
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getprivatelinkscope" title="GetPrivateLinkScope"><span class="symbol function"></span>GetPrivateLinkScope</a></li>
     <li><a href="getprivatelinkscopedresource" title="GetPrivateLinkScopedResource"><span class="symbol function"></span>GetPrivateLinkScopedResource</a></li>
+    <li><a href="getproactivedetectionconfiguration" title="GetProactiveDetectionConfiguration"><span class="symbol function"></span>GetProactiveDetectionConfiguration</a></li>
     <li><a href="getscheduledqueryrule" title="GetScheduledQueryRule"><span class="symbol function"></span>GetScheduledQueryRule</a></li>
     <li><a href="getsubscriptiondiagnosticsetting" title="GetSubscriptionDiagnosticSetting"><span class="symbol function"></span>GetSubscriptionDiagnosticSetting</a></li>
     <li><a href="gettestresultfile" title="GetTestResultFile"><span class="symbol function"></span>GetTestResultFile</a></li>
@@ -80,6 +82,6 @@ Explore the resources and functions of the azure-native.insights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

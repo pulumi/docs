@@ -44,8 +44,14 @@ class MyStack : Stack
                         Action = "Block",
                         MatchConditions = 
                         {
-                            new AzureNative.Network.Inputs.MatchConditionArgs
+                            new AzureNative.Network.Inputs.FrontDoorMatchConditionArgs
                             {
+                                MatchValue = 
+                                {
+                                    "192.168.1.0/24",
+                                    "10.0.0.0/24",
+                                },
+                                MatchVariable = "RemoteAddr",
                                 Operator = "IPMatch",
                             },
                         },
@@ -59,13 +65,24 @@ class MyStack : Stack
                         Action = "Block",
                         MatchConditions = 
                         {
-                            new AzureNative.Network.Inputs.MatchConditionArgs
+                            new AzureNative.Network.Inputs.FrontDoorMatchConditionArgs
                             {
+                                MatchValue = 
+                                {
+                                    "CH",
+                                },
+                                MatchVariable = "RemoteAddr",
                                 Operator = "GeoMatch",
                             },
-                            new AzureNative.Network.Inputs.MatchConditionArgs
+                            new AzureNative.Network.Inputs.FrontDoorMatchConditionArgs
                             {
+                                MatchValue = 
+                                {
+                                    "windows",
+                                },
+                                MatchVariable = "RequestHeader",
                                 Operator = "Contains",
+                                Selector = "UserAgent",
                                 Transforms = 
                                 {
                                     "Lowercase",
@@ -82,35 +99,70 @@ class MyStack : Stack
             {
                 ManagedRuleSets = 
                 {
-                    new AzureNative.Network.Inputs.ManagedRuleSetArgs
+                    new AzureNative.Network.Inputs.FrontDoorManagedRuleSetArgs
                     {
+                        Exclusions = 
+                        {
+                            new AzureNative.Network.Inputs.ManagedRuleExclusionArgs
+                            {
+                                MatchVariable = "RequestHeaderNames",
+                                Selector = "User-Agent",
+                                SelectorMatchOperator = "Equals",
+                            },
+                        },
                         RuleGroupOverrides = 
                         {
-                            new AzureNative.Network.Inputs.ManagedRuleGroupOverrideArgs
+                            new AzureNative.Network.Inputs.FrontDoorManagedRuleGroupOverrideArgs
                             {
+                                Exclusions = 
+                                {
+                                    new AzureNative.Network.Inputs.ManagedRuleExclusionArgs
+                                    {
+                                        MatchVariable = "RequestCookieNames",
+                                        Selector = "token",
+                                        SelectorMatchOperator = "StartsWith",
+                                    },
+                                },
                                 RuleGroupName = "SQLI",
                                 Rules = 
                                 {
-                                    new AzureNative.Network.Inputs.ManagedRuleOverrideArgs
+                                    new AzureNative.Network.Inputs.FrontDoorManagedRuleOverrideArgs
                                     {
+                                        Action = "Redirect",
+                                        EnabledState = "Enabled",
+                                        Exclusions = 
+                                        {
+                                            new AzureNative.Network.Inputs.ManagedRuleExclusionArgs
+                                            {
+                                                MatchVariable = "QueryStringArgNames",
+                                                Selector = "query",
+                                                SelectorMatchOperator = "Equals",
+                                            },
+                                        },
                                         RuleId = "942100",
                                     },
-                                    new AzureNative.Network.Inputs.ManagedRuleOverrideArgs
+                                    new AzureNative.Network.Inputs.FrontDoorManagedRuleOverrideArgs
                                     {
+                                        EnabledState = "Disabled",
                                         RuleId = "942110",
                                     },
                                 },
                             },
                         },
+                        RuleSetAction = "Block",
                         RuleSetType = "DefaultRuleSet",
                         RuleSetVersion = "1.0",
                     },
                 },
             },
             PolicyName = "Policy1",
-            PolicySettings = new AzureNative.Network.Inputs.PolicySettingsArgs
+            PolicySettings = new AzureNative.Network.Inputs.FrontDoorPolicySettingsArgs
             {
+                CustomBlockResponseBody = "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+                CustomBlockResponseStatusCode = 499,
+                EnabledState = "Enabled",
                 Mode = "Prevention",
+                RedirectUrl = "http://www.bing.com",
                 RequestBodyCheck = "Disabled",
             },
             ResourceGroupName = "rg1",
@@ -147,9 +199,14 @@ func main() {
 				Rules: network.CustomRuleArray{
 					&network.CustomRuleArgs{
 						Action: pulumi.String("Block"),
-						MatchConditions: network.MatchConditionArray{
-							&network.MatchConditionArgs{
-								Operator: pulumi.String("IPMatch"),
+						MatchConditions: network.FrontDoorMatchConditionArray{
+							&network.FrontDoorMatchConditionArgs{
+								MatchValue: pulumi.StringArray{
+									pulumi.String("192.168.1.0/24"),
+									pulumi.String("10.0.0.0/24"),
+								},
+								MatchVariable: pulumi.String("RemoteAddr"),
+								Operator:      pulumi.String("IPMatch"),
 							},
 						},
 						Name:               pulumi.String("Rule1"),
@@ -159,12 +216,21 @@ func main() {
 					},
 					&network.CustomRuleArgs{
 						Action: pulumi.String("Block"),
-						MatchConditions: network.MatchConditionArray{
-							&network.MatchConditionArgs{
-								Operator: pulumi.String("GeoMatch"),
+						MatchConditions: network.FrontDoorMatchConditionArray{
+							&network.FrontDoorMatchConditionArgs{
+								MatchValue: pulumi.StringArray{
+									pulumi.String("CH"),
+								},
+								MatchVariable: pulumi.String("RemoteAddr"),
+								Operator:      pulumi.String("GeoMatch"),
 							},
-							&network.MatchConditionArgs{
-								Operator: pulumi.String("Contains"),
+							&network.FrontDoorMatchConditionArgs{
+								MatchValue: pulumi.StringArray{
+									pulumi.String("windows"),
+								},
+								MatchVariable: pulumi.String("RequestHeader"),
+								Operator:      pulumi.String("Contains"),
+								Selector:      pulumi.String("UserAgent"),
 								Transforms: pulumi.StringArray{
 									pulumi.String("Lowercase"),
 								},
@@ -177,30 +243,59 @@ func main() {
 				},
 			},
 			ManagedRules: &network.ManagedRuleSetListArgs{
-				ManagedRuleSets: network.ManagedRuleSetArray{
-					&network.ManagedRuleSetArgs{
-						RuleGroupOverrides: network.ManagedRuleGroupOverrideArray{
-							&network.ManagedRuleGroupOverrideArgs{
+				ManagedRuleSets: network.FrontDoorManagedRuleSetArray{
+					&network.FrontDoorManagedRuleSetArgs{
+						Exclusions: network.ManagedRuleExclusionArray{
+							&network.ManagedRuleExclusionArgs{
+								MatchVariable:         pulumi.String("RequestHeaderNames"),
+								Selector:              pulumi.String("User-Agent"),
+								SelectorMatchOperator: pulumi.String("Equals"),
+							},
+						},
+						RuleGroupOverrides: network.FrontDoorManagedRuleGroupOverrideArray{
+							&network.FrontDoorManagedRuleGroupOverrideArgs{
+								Exclusions: network.ManagedRuleExclusionArray{
+									&network.ManagedRuleExclusionArgs{
+										MatchVariable:         pulumi.String("RequestCookieNames"),
+										Selector:              pulumi.String("token"),
+										SelectorMatchOperator: pulumi.String("StartsWith"),
+									},
+								},
 								RuleGroupName: pulumi.String("SQLI"),
-								Rules: network.ManagedRuleOverrideArray{
-									&network.ManagedRuleOverrideArgs{
+								Rules: network.FrontDoorManagedRuleOverrideArray{
+									&network.FrontDoorManagedRuleOverrideArgs{
+										Action:       pulumi.String("Redirect"),
+										EnabledState: pulumi.String("Enabled"),
+										Exclusions: network.ManagedRuleExclusionArray{
+											&network.ManagedRuleExclusionArgs{
+												MatchVariable:         pulumi.String("QueryStringArgNames"),
+												Selector:              pulumi.String("query"),
+												SelectorMatchOperator: pulumi.String("Equals"),
+											},
+										},
 										RuleId: pulumi.String("942100"),
 									},
-									&network.ManagedRuleOverrideArgs{
-										RuleId: pulumi.String("942110"),
+									&network.FrontDoorManagedRuleOverrideArgs{
+										EnabledState: pulumi.String("Disabled"),
+										RuleId:       pulumi.String("942110"),
 									},
 								},
 							},
 						},
+						RuleSetAction:  pulumi.String("Block"),
 						RuleSetType:    pulumi.String("DefaultRuleSet"),
 						RuleSetVersion: pulumi.String("1.0"),
 					},
 				},
 			},
 			PolicyName: pulumi.String("Policy1"),
-			PolicySettings: &network.PolicySettingsArgs{
-				Mode:             pulumi.String("Prevention"),
-				RequestBodyCheck: pulumi.Bool("Disabled"),
+			PolicySettings: &network.FrontDoorPolicySettingsArgs{
+				CustomBlockResponseBody:       pulumi.String("PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg=="),
+				CustomBlockResponseStatusCode: pulumi.Int(499),
+				EnabledState:                  pulumi.String("Enabled"),
+				Mode:                          pulumi.String("Prevention"),
+				RedirectUrl:                   pulumi.String("http://www.bing.com"),
+				RequestBodyCheck:              pulumi.String("Disabled"),
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 			Sku: &network.SkuArgs{
@@ -232,7 +327,12 @@ policy = azure_native.network.Policy("policy",
         rules=[
             azure_native.network.CustomRuleArgs(
                 action="Block",
-                match_conditions=[azure_native.network.MatchConditionArgs(
+                match_conditions=[azure_native.network.FrontDoorMatchConditionArgs(
+                    match_value=[
+                        "192.168.1.0/24",
+                        "10.0.0.0/24",
+                    ],
+                    match_variable="RemoteAddr",
                     operator="IPMatch",
                 )],
                 name="Rule1",
@@ -243,11 +343,16 @@ policy = azure_native.network.Policy("policy",
             azure_native.network.CustomRuleArgs(
                 action="Block",
                 match_conditions=[
-                    azure_native.network.MatchConditionArgs(
+                    azure_native.network.FrontDoorMatchConditionArgs(
+                        match_value=["CH"],
+                        match_variable="RemoteAddr",
                         operator="GeoMatch",
                     ),
-                    azure_native.network.MatchConditionArgs(
+                    azure_native.network.FrontDoorMatchConditionArgs(
+                        match_value=["windows"],
+                        match_variable="RequestHeader",
                         operator="Contains",
+                        selector="UserAgent",
                         transforms=["Lowercase"],
                     ),
                 ],
@@ -258,25 +363,48 @@ policy = azure_native.network.Policy("policy",
         ],
     ),
     managed_rules=azure_native.network.ManagedRuleSetListArgs(
-        managed_rule_sets=[azure_native.network.ManagedRuleSetArgs(
-            rule_group_overrides=[azure_native.network.ManagedRuleGroupOverrideArgs(
+        managed_rule_sets=[azure_native.network.FrontDoorManagedRuleSetArgs(
+            exclusions=[azure_native.network.ManagedRuleExclusionArgs(
+                match_variable="RequestHeaderNames",
+                selector="User-Agent",
+                selector_match_operator="Equals",
+            )],
+            rule_group_overrides=[azure_native.network.FrontDoorManagedRuleGroupOverrideArgs(
+                exclusions=[azure_native.network.ManagedRuleExclusionArgs(
+                    match_variable="RequestCookieNames",
+                    selector="token",
+                    selector_match_operator="StartsWith",
+                )],
                 rule_group_name="SQLI",
                 rules=[
-                    azure_native.network.ManagedRuleOverrideArgs(
+                    azure_native.network.FrontDoorManagedRuleOverrideArgs(
+                        action="Redirect",
+                        enabled_state="Enabled",
+                        exclusions=[azure_native.network.ManagedRuleExclusionArgs(
+                            match_variable="QueryStringArgNames",
+                            selector="query",
+                            selector_match_operator="Equals",
+                        )],
                         rule_id="942100",
                     ),
-                    azure_native.network.ManagedRuleOverrideArgs(
+                    azure_native.network.FrontDoorManagedRuleOverrideArgs(
+                        enabled_state="Disabled",
                         rule_id="942110",
                     ),
                 ],
             )],
+            rule_set_action="Block",
             rule_set_type="DefaultRuleSet",
             rule_set_version="1.0",
         )],
     ),
     policy_name="Policy1",
-    policy_settings=azure_native.network.PolicySettingsArgs(
+    policy_settings=azure_native.network.FrontDoorPolicySettingsArgs(
+        custom_block_response_body="PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+        custom_block_response_status_code=499,
+        enabled_state="Enabled",
         mode="Prevention",
+        redirect_url="http://www.bing.com",
         request_body_check="Disabled",
     ),
     resource_group_name="rg1",
@@ -303,6 +431,11 @@ const policy = new azure_native.network.Policy("policy", {
             {
                 action: "Block",
                 matchConditions: [{
+                    matchValue: [
+                        "192.168.1.0/24",
+                        "10.0.0.0/24",
+                    ],
+                    matchVariable: "RemoteAddr",
                     operator: "IPMatch",
                 }],
                 name: "Rule1",
@@ -314,10 +447,15 @@ const policy = new azure_native.network.Policy("policy", {
                 action: "Block",
                 matchConditions: [
                     {
+                        matchValue: ["CH"],
+                        matchVariable: "RemoteAddr",
                         operator: "GeoMatch",
                     },
                     {
+                        matchValue: ["windows"],
+                        matchVariable: "RequestHeader",
                         operator: "Contains",
+                        selector: "UserAgent",
                         transforms: ["Lowercase"],
                     },
                 ],
@@ -329,24 +467,47 @@ const policy = new azure_native.network.Policy("policy", {
     },
     managedRules: {
         managedRuleSets: [{
+            exclusions: [{
+                matchVariable: "RequestHeaderNames",
+                selector: "User-Agent",
+                selectorMatchOperator: "Equals",
+            }],
             ruleGroupOverrides: [{
+                exclusions: [{
+                    matchVariable: "RequestCookieNames",
+                    selector: "token",
+                    selectorMatchOperator: "StartsWith",
+                }],
                 ruleGroupName: "SQLI",
                 rules: [
                     {
+                        action: "Redirect",
+                        enabledState: "Enabled",
+                        exclusions: [{
+                            matchVariable: "QueryStringArgNames",
+                            selector: "query",
+                            selectorMatchOperator: "Equals",
+                        }],
                         ruleId: "942100",
                     },
                     {
+                        enabledState: "Disabled",
                         ruleId: "942110",
                     },
                 ],
             }],
+            ruleSetAction: "Block",
             ruleSetType: "DefaultRuleSet",
             ruleSetVersion: "1.0",
         }],
     },
     policyName: "Policy1",
     policySettings: {
+        customBlockResponseBody: "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+        customBlockResponseStatusCode: 499,
+        enabledState: "Enabled",
         mode: "Prevention",
+        redirectUrl: "http://www.bing.com",
         requestBodyCheck: "Disabled",
     },
     resourceGroupName: "rg1",
@@ -378,7 +539,7 @@ const policy = new azure_native.network.Policy("policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[CustomRuleListArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[ManagedRuleSetListArgs]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[PolicySettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[CustomRuleListArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[ManagedRuleSetListArgs]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[FrontDoorPolicySettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -572,7 +733,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policysettings_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Policy<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontdoorpolicysettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -648,7 +809,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policysettings_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysettings">Policy<wbr>Settings</a></span>
+        <span class="property-type"><a href="#frontdoorpolicysettings">Front<wbr>Door<wbr>Policy<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +885,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policysettings_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysettings">Policy<wbr>Settings</a></span>
+        <span class="property-type"><a href="#frontdoorpolicysettings">Front<wbr>Door<wbr>Policy<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +961,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policy_settings_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysettings">Policy<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontdoorpolicysettings">Front<wbr>Door<wbr>Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormatchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1229,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">[]Match<wbr>Condition</a></span>
+        <span class="property-type"><a href="#frontdoormatchcondition">[]Front<wbr>Door<wbr>Match<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1297,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">Match<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#frontdoormatchcondition">Front<wbr>Door<wbr>Match<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1365,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">Sequence[Match<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormatchcondition">Sequence[Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1561,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormatchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1629,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">[]Match<wbr>Condition<wbr>Response</a></span>
+        <span class="property-type"><a href="#frontdoormatchconditionresponse">[]Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1697,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">Match<wbr>Condition<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#frontdoormatchconditionresponse">Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1765,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormatchconditionresponse">Sequence[Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1816,6 +1977,1776 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of allowed requests per client within the time window.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="frontdoormanagedrulegroupoverride">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulegroupname_csharp">
+<a href="#rulegroupname_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_csharp">
+<a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rules_csharp">
+<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulegroupname_go">
+<a href="#rulegroupname_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_go">
+<a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">[]Managed<wbr>Rule<wbr>Exclusion</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rules_go">
+<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverride">[]Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override</a></span>
+    </dt>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulegroupname_nodejs">
+<a href="#rulegroupname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_nodejs">
+<a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">Managed<wbr>Rule<wbr>Exclusion[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rules_nodejs">
+<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverride">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rule_group_name_python">
+<a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes the managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_python">
+<a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rules_python">
+<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverride">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="frontdoormanagedrulegroupoverrideresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulegroupname_csharp">
+<a href="#rulegroupname_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_csharp">
+<a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rules_csharp">
+<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulegroupname_go">
+<a href="#rulegroupname_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_go">
+<a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">[]Managed<wbr>Rule<wbr>Exclusion<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rules_go">
+<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverrideresponse">[]Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulegroupname_nodejs">
+<a href="#rulegroupname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_nodejs">
+<a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Managed<wbr>Rule<wbr>Exclusion<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rules_nodejs">
+<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverrideresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rule_group_name_python">
+<a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes the managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_python">
+<a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rules_python">
+<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverrideresponse">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="frontdoormanagedruleoverride">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ruleid_csharp">
+<a href="#ruleid_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#actiontype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the override action to be applied when rule matches.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_csharp">
+<a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedruleenabledstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Managed<wbr>Rule<wbr>Enabled<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_csharp">
+<a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ruleid_go">
+<a href="#ruleid_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#actiontype">Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the override action to be applied when rule matches.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_go">
+<a href="#enabledstate_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedruleenabledstate">Managed<wbr>Rule<wbr>Enabled<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_go">
+<a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">[]Managed<wbr>Rule<wbr>Exclusion</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ruleid_nodejs">
+<a href="#ruleid_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#actiontype">Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the override action to be applied when rule matches.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_nodejs">
+<a href="#enabledstate_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedruleenabledstate">Managed<wbr>Rule<wbr>Enabled<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_nodejs">
+<a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">Managed<wbr>Rule<wbr>Exclusion[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rule_id_python">
+<a href="#rule_id_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#actiontype">Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the override action to be applied when rule matches.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_state_python">
+<a href="#enabled_state_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#managedruleenabledstate">Managed<wbr>Rule<wbr>Enabled<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_python">
+<a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="frontdoormanagedruleoverrideresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ruleid_csharp">
+<a href="#ruleid_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the override action to be applied when rule matches.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_csharp">
+<a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_csharp">
+<a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ruleid_go">
+<a href="#ruleid_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the override action to be applied when rule matches.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_go">
+<a href="#enabledstate_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_go">
+<a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">[]Managed<wbr>Rule<wbr>Exclusion<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ruleid_nodejs">
+<a href="#ruleid_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the override action to be applied when rule matches.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_nodejs">
+<a href="#enabledstate_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_nodejs">
+<a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Managed<wbr>Rule<wbr>Exclusion<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rule_id_python">
+<a href="#rule_id_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes the override action to be applied when rule matches.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_state_python">
+<a href="#enabled_state_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_python">
+<a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="frontdoormanagedruleset">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulesettype_csharp">
+<a href="#rulesettype_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rulesetversion_csharp">
+<a href="#rulesetversion_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_csharp">
+<a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulegroupoverrides_csharp">
+<a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulesetaction_csharp">
+<a href="#rulesetaction_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedrulesetactiontype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the action to take when a managed rule set score threshold is met.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulesettype_go">
+<a href="#rulesettype_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rulesetversion_go">
+<a href="#rulesetversion_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_go">
+<a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">[]Managed<wbr>Rule<wbr>Exclusion</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulegroupoverrides_go">
+<a href="#rulegroupoverrides_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverride">[]Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulesetaction_go">
+<a href="#rulesetaction_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedrulesetactiontype">Managed<wbr>Rule<wbr>Set<wbr>Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the action to take when a managed rule set score threshold is met.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulesettype_nodejs">
+<a href="#rulesettype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rulesetversion_nodejs">
+<a href="#rulesetversion_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_nodejs">
+<a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">Managed<wbr>Rule<wbr>Exclusion[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulegroupoverrides_nodejs">
+<a href="#rulegroupoverrides_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverride">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override[]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulesetaction_nodejs">
+<a href="#rulesetaction_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedrulesetactiontype">Managed<wbr>Rule<wbr>Set<wbr>Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the action to take when a managed rule set score threshold is met.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rule_set_type_python">
+<a href="#rule_set_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rule_set_version_python">
+<a href="#rule_set_version_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_python">
+<a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusion">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rule_group_overrides_python">
+<a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverride">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rule_set_action_python">
+<a href="#rule_set_action_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#managedrulesetactiontype">Managed<wbr>Rule<wbr>Set<wbr>Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the action to take when a managed rule set score threshold is met.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="frontdoormanagedrulesetresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulesettype_csharp">
+<a href="#rulesettype_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rulesetversion_csharp">
+<a href="#rulesetversion_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_csharp">
+<a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulegroupoverrides_csharp">
+<a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulesetaction_csharp">
+<a href="#rulesetaction_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the action to take when a managed rule set score threshold is met.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulesettype_go">
+<a href="#rulesettype_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rulesetversion_go">
+<a href="#rulesetversion_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_go">
+<a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">[]Managed<wbr>Rule<wbr>Exclusion<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulegroupoverrides_go">
+<a href="#rulegroupoverrides_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverrideresponse">[]Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulesetaction_go">
+<a href="#rulesetaction_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the action to take when a managed rule set score threshold is met.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulesettype_nodejs">
+<a href="#rulesettype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rulesetversion_nodejs">
+<a href="#rulesetversion_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_nodejs">
+<a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Managed<wbr>Rule<wbr>Exclusion<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulegroupoverrides_nodejs">
+<a href="#rulegroupoverrides_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverrideresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulesetaction_nodejs">
+<a href="#rulesetaction_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the action to take when a managed rule set score threshold is met.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rule_set_type_python">
+<a href="#rule_set_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rule_set_version_python">
+<a href="#rule_set_version_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_python">
+<a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rule_group_overrides_python">
+<a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverrideresponse">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rule_set_action_python">
+<a href="#rule_set_action_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Defines the action to take when a managed rule set score threshold is met.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="frontdoormatchcondition">Front<wbr>Door<wbr>Match<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="matchvalue_csharp">
+<a href="#matchvalue_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of possible match values.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchvariable_csharp">
+<a href="#matchvariable_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#frontdoormatchvariable">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Front<wbr>Door<wbr>Match<wbr>Variable</a></span>
+    </dt>
+    <dd>{{% md %}}Request variable to compare with.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Operator</a></span>
+    </dt>
+    <dd>{{% md %}}Comparison type to use for matching with the variable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Describes if the result of this condition should be negated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selector_csharp">
+<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Transform<wbr>Type&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="matchvalue_go">
+<a href="#matchvalue_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of possible match values.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchvariable_go">
+<a href="#matchvariable_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#frontdoormatchvariable">Front<wbr>Door<wbr>Match<wbr>Variable</a></span>
+    </dt>
+    <dd>{{% md %}}Request variable to compare with.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#operator">Operator</a></span>
+    </dt>
+    <dd>{{% md %}}Comparison type to use for matching with the variable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Describes if the result of this condition should be negated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selector_go">
+<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="matchvalue_nodejs">
+<a href="#matchvalue_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of possible match values.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchvariable_nodejs">
+<a href="#matchvariable_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#frontdoormatchvariable">Front<wbr>Door<wbr>Match<wbr>Variable</a></span>
+    </dt>
+    <dd>{{% md %}}Request variable to compare with.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#operator">Operator</a></span>
+    </dt>
+    <dd>{{% md %}}Comparison type to use for matching with the variable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Describes if the result of this condition should be negated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selector_nodejs">
+<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | Transform<wbr>Type[]</span>
+    </dt>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_value_python">
+<a href="#match_value_python" style="color: inherit; text-decoration: inherit;">match_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of possible match values.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#frontdoormatchvariable">Front<wbr>Door<wbr>Match<wbr>Variable</a></span>
+    </dt>
+    <dd>{{% md %}}Request variable to compare with.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#operator">Operator</a></span>
+    </dt>
+    <dd>{{% md %}}Comparison type to use for matching with the variable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Describes if the result of this condition should be negated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selector_python">
+<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Union[str, Transform<wbr>Type]]</span>
+    </dt>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="frontdoormatchconditionresponse">Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="matchvalue_csharp">
+<a href="#matchvalue_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of possible match values.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchvariable_csharp">
+<a href="#matchvariable_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request variable to compare with.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comparison type to use for matching with the variable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Describes if the result of this condition should be negated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selector_csharp">
+<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="matchvalue_go">
+<a href="#matchvalue_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of possible match values.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchvariable_go">
+<a href="#matchvariable_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request variable to compare with.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comparison type to use for matching with the variable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Describes if the result of this condition should be negated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selector_go">
+<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="matchvalue_nodejs">
+<a href="#matchvalue_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of possible match values.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchvariable_nodejs">
+<a href="#matchvariable_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request variable to compare with.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comparison type to use for matching with the variable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Describes if the result of this condition should be negated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selector_nodejs">
+<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_value_python">
+<a href="#match_value_python" style="color: inherit; text-decoration: inherit;">match_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of possible match values.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Request variable to compare with.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Comparison type to use for matching with the variable value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Describes if the result of this condition should be negated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="selector_python">
+<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="frontdoormatchvariable">Front<wbr>Door<wbr>Match<wbr>Variable</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Remote<wbr>Addr</dt>
+    <dd>RemoteAddr</dd><dt>Request<wbr>Method</dt>
+    <dd>RequestMethod</dd><dt>Query<wbr>String</dt>
+    <dd>QueryString</dd><dt>Post<wbr>Args</dt>
+    <dd>PostArgs</dd><dt>Request<wbr>Uri</dt>
+    <dd>RequestUri</dd><dt>Request<wbr>Header</dt>
+    <dd>RequestHeader</dd><dt>Request<wbr>Body</dt>
+    <dd>RequestBody</dd><dt>Cookies</dt>
+    <dd>Cookies</dd><dt>Socket<wbr>Addr</dt>
+    <dd>SocketAddr</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Front<wbr>Door<wbr>Match<wbr>Variable<wbr>Remote<wbr>Addr</dt>
+    <dd>RemoteAddr</dd><dt>Front<wbr>Door<wbr>Match<wbr>Variable<wbr>Request<wbr>Method</dt>
+    <dd>RequestMethod</dd><dt>Front<wbr>Door<wbr>Match<wbr>Variable<wbr>Query<wbr>String</dt>
+    <dd>QueryString</dd><dt>Front<wbr>Door<wbr>Match<wbr>Variable<wbr>Post<wbr>Args</dt>
+    <dd>PostArgs</dd><dt>Front<wbr>Door<wbr>Match<wbr>Variable<wbr>Request<wbr>Uri</dt>
+    <dd>RequestUri</dd><dt>Front<wbr>Door<wbr>Match<wbr>Variable<wbr>Request<wbr>Header</dt>
+    <dd>RequestHeader</dd><dt>Front<wbr>Door<wbr>Match<wbr>Variable<wbr>Request<wbr>Body</dt>
+    <dd>RequestBody</dd><dt>Front<wbr>Door<wbr>Match<wbr>Variable<wbr>Cookies</dt>
+    <dd>Cookies</dd><dt>Front<wbr>Door<wbr>Match<wbr>Variable<wbr>Socket<wbr>Addr</dt>
+    <dd>SocketAddr</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Remote<wbr>Addr</dt>
+    <dd>RemoteAddr</dd><dt>Request<wbr>Method</dt>
+    <dd>RequestMethod</dd><dt>Query<wbr>String</dt>
+    <dd>QueryString</dd><dt>Post<wbr>Args</dt>
+    <dd>PostArgs</dd><dt>Request<wbr>Uri</dt>
+    <dd>RequestUri</dd><dt>Request<wbr>Header</dt>
+    <dd>RequestHeader</dd><dt>Request<wbr>Body</dt>
+    <dd>RequestBody</dd><dt>Cookies</dt>
+    <dd>Cookies</dd><dt>Socket<wbr>Addr</dt>
+    <dd>SocketAddr</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REMOTE_ADDR</dt>
+    <dd>RemoteAddr</dd><dt>REQUEST_METHOD</dt>
+    <dd>RequestMethod</dd><dt>QUERY_STRING</dt>
+    <dd>QueryString</dd><dt>POST_ARGS</dt>
+    <dd>PostArgs</dd><dt>REQUEST_URI</dt>
+    <dd>RequestUri</dd><dt>REQUEST_HEADER</dt>
+    <dd>RequestHeader</dd><dt>REQUEST_BODY</dt>
+    <dd>RequestBody</dd><dt>COOKIES</dt>
+    <dd>Cookies</dd><dt>SOCKET_ADDR</dt>
+    <dd>SocketAddr</dd></dl>
+{{% /choosable %}}
+
+<h4 id="frontdoorpolicysettings">Front<wbr>Door<wbr>Policy<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsebody_csharp">
+<a href="#customblockresponsebody_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Block<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response body. The body must be specified in base64 encoding.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsestatuscode_csharp">
+<a href="#customblockresponsestatuscode_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Block<wbr>Response<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response status code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_csharp">
+<a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#policyenabledstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Policy<wbr>Enabled<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#policymode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Policy<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at policy level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirecturl_csharp">
+<a href="#redirecturl_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If action type is redirect, this field represents redirect URL for the client.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestbodycheck_csharp">
+<a href="#requestbodycheck_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#policyrequestbodycheck">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Policy<wbr>Request<wbr>Body<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if policy managed rules will inspect the request body content.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsebody_go">
+<a href="#customblockresponsebody_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Block<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response body. The body must be specified in base64 encoding.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsestatuscode_go">
+<a href="#customblockresponsestatuscode_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Block<wbr>Response<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response status code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_go">
+<a href="#enabledstate_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#policyenabledstate">Policy<wbr>Enabled<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#policymode">Policy<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at policy level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirecturl_go">
+<a href="#redirecturl_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If action type is redirect, this field represents redirect URL for the client.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestbodycheck_go">
+<a href="#requestbodycheck_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#policyrequestbodycheck">Policy<wbr>Request<wbr>Body<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if policy managed rules will inspect the request body content.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsebody_nodejs">
+<a href="#customblockresponsebody_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Block<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response body. The body must be specified in base64 encoding.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsestatuscode_nodejs">
+<a href="#customblockresponsestatuscode_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Block<wbr>Response<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response status code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_nodejs">
+<a href="#enabledstate_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#policyenabledstate">Policy<wbr>Enabled<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#policymode">Policy<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at policy level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirecturl_nodejs">
+<a href="#redirecturl_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If action type is redirect, this field represents redirect URL for the client.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestbodycheck_nodejs">
+<a href="#requestbodycheck_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#policyrequestbodycheck">Policy<wbr>Request<wbr>Body<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if policy managed rules will inspect the request body content.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_block_response_body_python">
+<a href="#custom_block_response_body_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>block_<wbr>response_<wbr>body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response body. The body must be specified in base64 encoding.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_block_response_status_code_python">
+<a href="#custom_block_response_status_code_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>block_<wbr>response_<wbr>status_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response status code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_state_python">
+<a href="#enabled_state_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#policyenabledstate">Policy<wbr>Enabled<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#policymode">Policy<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at policy level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirect_url_python">
+<a href="#redirect_url_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If action type is redirect, this field represents redirect URL for the client.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_body_check_python">
+<a href="#request_body_check_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#policyrequestbodycheck">Policy<wbr>Request<wbr>Body<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if policy managed rules will inspect the request body content.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="frontdoorpolicysettingsresponse">Front<wbr>Door<wbr>Policy<wbr>Settings<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsebody_csharp">
+<a href="#customblockresponsebody_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Block<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response body. The body must be specified in base64 encoding.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsestatuscode_csharp">
+<a href="#customblockresponsestatuscode_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Block<wbr>Response<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response status code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_csharp">
+<a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at policy level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirecturl_csharp">
+<a href="#redirecturl_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If action type is redirect, this field represents redirect URL for the client.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestbodycheck_csharp">
+<a href="#requestbodycheck_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if policy managed rules will inspect the request body content.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsebody_go">
+<a href="#customblockresponsebody_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Block<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response body. The body must be specified in base64 encoding.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsestatuscode_go">
+<a href="#customblockresponsestatuscode_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Block<wbr>Response<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response status code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_go">
+<a href="#enabledstate_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at policy level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirecturl_go">
+<a href="#redirecturl_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If action type is redirect, this field represents redirect URL for the client.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestbodycheck_go">
+<a href="#requestbodycheck_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if policy managed rules will inspect the request body content.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsebody_nodejs">
+<a href="#customblockresponsebody_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Block<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response body. The body must be specified in base64 encoding.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customblockresponsestatuscode_nodejs">
+<a href="#customblockresponsestatuscode_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Block<wbr>Response<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response status code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledstate_nodejs">
+<a href="#enabledstate_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at policy level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirecturl_nodejs">
+<a href="#redirecturl_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If action type is redirect, this field represents redirect URL for the client.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestbodycheck_nodejs">
+<a href="#requestbodycheck_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes if policy managed rules will inspect the request body content.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_block_response_body_python">
+<a href="#custom_block_response_body_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>block_<wbr>response_<wbr>body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response body. The body must be specified in base64 encoding.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_block_response_status_code_python">
+<a href="#custom_block_response_status_code_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>block_<wbr>response_<wbr>status_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If the action type is block, customer can override the response status code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_state_python">
+<a href="#enabled_state_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes if it is in detection mode or prevention mode at policy level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirect_url_python">
+<a href="#redirect_url_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If action type is redirect, this field represents redirect URL for the client.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_body_check_python">
+<a href="#request_body_check_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes if policy managed rules will inspect the request body content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="frontendendpointlinkresponse">Frontend<wbr>Endpoint<wbr>Link<wbr>Response</h4>
@@ -1890,446 +3821,338 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
-<h4 id="managedrulegroupoverride">Managed<wbr>Rule<wbr>Group<wbr>Override</h4>
+<h4 id="managedruleexclusion">Managed<wbr>Rule<wbr>Exclusion</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="rulegroupname_csharp">
-<a href="#rulegroupname_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
+        <span id="matchvariable_csharp">
+<a href="#matchvariable_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedruleexclusionmatchvariable">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Match<wbr>Variable</a></span>
+    </dt>
+    <dd>{{% md %}}The variable type to be excluded.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selector_csharp">
+<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rules_csharp">
-<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+    <dd>{{% md %}}Selector value for which elements in the collection this exclusion applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selectormatchoperator_csharp">
+<a href="#selectormatchoperator_csharp" style="color: inherit; text-decoration: inherit;">Selector<wbr>Match<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type">string | <a href="#managedruleexclusionselectormatchoperator">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Selector<wbr>Match<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="rulegroupname_go">
-<a href="#rulegroupname_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
+        <span id="matchvariable_go">
+<a href="#matchvariable_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedruleexclusionmatchvariable">Managed<wbr>Rule<wbr>Exclusion<wbr>Match<wbr>Variable</a></span>
+    </dt>
+    <dd>{{% md %}}The variable type to be excluded.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selector_go">
+<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rules_go">
-<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+    <dd>{{% md %}}Selector value for which elements in the collection this exclusion applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selectormatchoperator_go">
+<a href="#selectormatchoperator_go" style="color: inherit; text-decoration: inherit;">Selector<wbr>Match<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverride">[]Managed<wbr>Rule<wbr>Override</a></span>
+        <span class="property-type">string | <a href="#managedruleexclusionselectormatchoperator">Managed<wbr>Rule<wbr>Exclusion<wbr>Selector<wbr>Match<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="rulegroupname_nodejs">
-<a href="#rulegroupname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
+        <span id="matchvariable_nodejs">
+<a href="#matchvariable_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedruleexclusionmatchvariable">Managed<wbr>Rule<wbr>Exclusion<wbr>Match<wbr>Variable</a></span>
+    </dt>
+    <dd>{{% md %}}The variable type to be excluded.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selector_nodejs">
+<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rules_nodejs">
-<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+    <dd>{{% md %}}Selector value for which elements in the collection this exclusion applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selectormatchoperator_nodejs">
+<a href="#selectormatchoperator_nodejs" style="color: inherit; text-decoration: inherit;">selector<wbr>Match<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverride">Managed<wbr>Rule<wbr>Override[]</a></span>
+        <span class="property-type">string | <a href="#managedruleexclusionselectormatchoperator">Managed<wbr>Rule<wbr>Exclusion<wbr>Selector<wbr>Match<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="rule_group_name_python">
-<a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#managedruleexclusionmatchvariable">Managed<wbr>Rule<wbr>Exclusion<wbr>Match<wbr>Variable</a></span>
+    </dt>
+    <dd>{{% md %}}The variable type to be excluded.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selector_python">
+<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rules_python">
-<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+    <dd>{{% md %}}Selector value for which elements in the collection this exclusion applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selector_match_operator_python">
+<a href="#selector_match_operator_python" style="color: inherit; text-decoration: inherit;">selector_<wbr>match_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverride">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type">str | <a href="#managedruleexclusionselectormatchoperator">Managed<wbr>Rule<wbr>Exclusion<wbr>Selector<wbr>Match<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="managedrulegroupoverrideresponse">Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response</h4>
+<h4 id="managedruleexclusionmatchvariable">Managed<wbr>Rule<wbr>Exclusion<wbr>Match<wbr>Variable</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Request<wbr>Header<wbr>Names</dt>
+    <dd>RequestHeaderNames</dd><dt>Request<wbr>Cookie<wbr>Names</dt>
+    <dd>RequestCookieNames</dd><dt>Query<wbr>String<wbr>Arg<wbr>Names</dt>
+    <dd>QueryStringArgNames</dd><dt>Request<wbr>Body<wbr>Post<wbr>Arg<wbr>Names</dt>
+    <dd>RequestBodyPostArgNames</dd><dt>Request<wbr>Body<wbr>Json<wbr>Arg<wbr>Names</dt>
+    <dd>RequestBodyJsonArgNames</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Managed<wbr>Rule<wbr>Exclusion<wbr>Match<wbr>Variable<wbr>Request<wbr>Header<wbr>Names</dt>
+    <dd>RequestHeaderNames</dd><dt>Managed<wbr>Rule<wbr>Exclusion<wbr>Match<wbr>Variable<wbr>Request<wbr>Cookie<wbr>Names</dt>
+    <dd>RequestCookieNames</dd><dt>Managed<wbr>Rule<wbr>Exclusion<wbr>Match<wbr>Variable<wbr>Query<wbr>String<wbr>Arg<wbr>Names</dt>
+    <dd>QueryStringArgNames</dd><dt>Managed<wbr>Rule<wbr>Exclusion<wbr>Match<wbr>Variable<wbr>Request<wbr>Body<wbr>Post<wbr>Arg<wbr>Names</dt>
+    <dd>RequestBodyPostArgNames</dd><dt>Managed<wbr>Rule<wbr>Exclusion<wbr>Match<wbr>Variable<wbr>Request<wbr>Body<wbr>Json<wbr>Arg<wbr>Names</dt>
+    <dd>RequestBodyJsonArgNames</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Request<wbr>Header<wbr>Names</dt>
+    <dd>RequestHeaderNames</dd><dt>Request<wbr>Cookie<wbr>Names</dt>
+    <dd>RequestCookieNames</dd><dt>Query<wbr>String<wbr>Arg<wbr>Names</dt>
+    <dd>QueryStringArgNames</dd><dt>Request<wbr>Body<wbr>Post<wbr>Arg<wbr>Names</dt>
+    <dd>RequestBodyPostArgNames</dd><dt>Request<wbr>Body<wbr>Json<wbr>Arg<wbr>Names</dt>
+    <dd>RequestBodyJsonArgNames</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REQUEST_HEADER_NAMES</dt>
+    <dd>RequestHeaderNames</dd><dt>REQUEST_COOKIE_NAMES</dt>
+    <dd>RequestCookieNames</dd><dt>QUERY_STRING_ARG_NAMES</dt>
+    <dd>QueryStringArgNames</dd><dt>REQUEST_BODY_POST_ARG_NAMES</dt>
+    <dd>RequestBodyPostArgNames</dd><dt>REQUEST_BODY_JSON_ARG_NAMES</dt>
+    <dd>RequestBodyJsonArgNames</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedruleexclusionresponse">Managed<wbr>Rule<wbr>Exclusion<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="rulegroupname_csharp">
-<a href="#rulegroupname_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
+        <span id="matchvariable_csharp">
+<a href="#matchvariable_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Variable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rules_csharp">
-<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+    <dd>{{% md %}}The variable type to be excluded.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selector_csharp">
+<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Selector value for which elements in the collection this exclusion applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selectormatchoperator_csharp">
+<a href="#selectormatchoperator_csharp" style="color: inherit; text-decoration: inherit;">Selector<wbr>Match<wbr>Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="rulegroupname_go">
-<a href="#rulegroupname_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
+        <span id="matchvariable_go">
+<a href="#matchvariable_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Variable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rules_go">
-<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+    <dd>{{% md %}}The variable type to be excluded.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selector_go">
+<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">[]Managed<wbr>Rule<wbr>Override<wbr>Response</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Selector value for which elements in the collection this exclusion applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selectormatchoperator_go">
+<a href="#selectormatchoperator_go" style="color: inherit; text-decoration: inherit;">Selector<wbr>Match<wbr>Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="rulegroupname_nodejs">
-<a href="#rulegroupname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
+        <span id="matchvariable_nodejs">
+<a href="#matchvariable_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rules_nodejs">
-<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+    <dd>{{% md %}}The variable type to be excluded.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selector_nodejs">
+<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">Managed<wbr>Rule<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Selector value for which elements in the collection this exclusion applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selectormatchoperator_nodejs">
+<a href="#selectormatchoperator_nodejs" style="color: inherit; text-decoration: inherit;">selector<wbr>Match<wbr>Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="rule_group_name_python">
-<a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rules_python">
-<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+    <dd>{{% md %}}The variable type to be excluded.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selector_python">
+<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Selector value for which elements in the collection this exclusion applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="selector_match_operator_python">
+<a href="#selector_match_operator_python" style="color: inherit; text-decoration: inherit;">selector_<wbr>match_<wbr>operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="managedruleoverride">Managed<wbr>Rule<wbr>Override</h4>
+<h4 id="managedruleexclusionselectormatchoperator">Managed<wbr>Rule<wbr>Exclusion<wbr>Selector<wbr>Match<wbr>Operator</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="ruleid_csharp">
-<a href="#ruleid_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_csharp">
-<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedruleenabledstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Managed<wbr>Rule<wbr>Enabled<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Equals<wbr>Value</dt>
+    <dd>Equals</dd><dt>Contains</dt>
+    <dd>Contains</dd><dt>Starts<wbr>With</dt>
+    <dd>StartsWith</dd><dt>Ends<wbr>With</dt>
+    <dd>EndsWith</dd><dt>Equals<wbr>Any</dt>
+    <dd>EqualsAny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="ruleid_go">
-<a href="#ruleid_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_go">
-<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedruleenabledstate">Managed<wbr>Rule<wbr>Enabled<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Managed<wbr>Rule<wbr>Exclusion<wbr>Selector<wbr>Match<wbr>Operator<wbr>Equals</dt>
+    <dd>Equals</dd><dt>Managed<wbr>Rule<wbr>Exclusion<wbr>Selector<wbr>Match<wbr>Operator<wbr>Contains</dt>
+    <dd>Contains</dd><dt>Managed<wbr>Rule<wbr>Exclusion<wbr>Selector<wbr>Match<wbr>Operator<wbr>Starts<wbr>With</dt>
+    <dd>StartsWith</dd><dt>Managed<wbr>Rule<wbr>Exclusion<wbr>Selector<wbr>Match<wbr>Operator<wbr>Ends<wbr>With</dt>
+    <dd>EndsWith</dd><dt>Managed<wbr>Rule<wbr>Exclusion<wbr>Selector<wbr>Match<wbr>Operator<wbr>Equals<wbr>Any</dt>
+    <dd>EqualsAny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="ruleid_nodejs">
-<a href="#ruleid_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_nodejs">
-<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedruleenabledstate">Managed<wbr>Rule<wbr>Enabled<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Equals</dt>
+    <dd>Equals</dd><dt>Contains</dt>
+    <dd>Contains</dd><dt>Starts<wbr>With</dt>
+    <dd>StartsWith</dd><dt>Ends<wbr>With</dt>
+    <dd>EndsWith</dd><dt>Equals<wbr>Any</dt>
+    <dd>EqualsAny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rule_id_python">
-<a href="#rule_id_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_python">
-<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#managedruleenabledstate">Managed<wbr>Rule<wbr>Enabled<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>EQUALS</dt>
+    <dd>Equals</dd><dt>CONTAINS</dt>
+    <dd>Contains</dd><dt>STARTS_WITH</dt>
+    <dd>StartsWith</dd><dt>ENDS_WITH</dt>
+    <dd>EndsWith</dd><dt>EQUALS_ANY</dt>
+    <dd>EqualsAny</dd></dl>
 {{% /choosable %}}
 
-<h4 id="managedruleoverrideresponse">Managed<wbr>Rule<wbr>Override<wbr>Response</h4>
+<h4 id="managedrulesetactiontype">Managed<wbr>Rule<wbr>Set<wbr>Action<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="ruleid_csharp">
-<a href="#ruleid_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_csharp">
-<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Block</dt>
+    <dd>Block</dd><dt>Log</dt>
+    <dd>Log</dd><dt>Redirect</dt>
+    <dd>Redirect</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="ruleid_go">
-<a href="#ruleid_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_go">
-<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Managed<wbr>Rule<wbr>Set<wbr>Action<wbr>Type<wbr>Block</dt>
+    <dd>Block</dd><dt>Managed<wbr>Rule<wbr>Set<wbr>Action<wbr>Type<wbr>Log</dt>
+    <dd>Log</dd><dt>Managed<wbr>Rule<wbr>Set<wbr>Action<wbr>Type<wbr>Redirect</dt>
+    <dd>Redirect</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="ruleid_nodejs">
-<a href="#ruleid_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_nodejs">
-<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Block</dt>
+    <dd>Block</dd><dt>Log</dt>
+    <dd>Log</dd><dt>Redirect</dt>
+    <dd>Redirect</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rule_id_python">
-<a href="#rule_id_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_python">
-<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="managedruleset">Managed<wbr>Rule<wbr>Set</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rulesettype_csharp">
-<a href="#rulesettype_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rulesetversion_csharp">
-<a href="#rulesetversion_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rulegroupoverrides_csharp">
-<a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rulesettype_go">
-<a href="#rulesettype_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rulesetversion_go">
-<a href="#rulesetversion_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rulegroupoverrides_go">
-<a href="#rulegroupoverrides_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverride">[]Managed<wbr>Rule<wbr>Group<wbr>Override</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rulesettype_nodejs">
-<a href="#rulesettype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rulesetversion_nodejs">
-<a href="#rulesetversion_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rulegroupoverrides_nodejs">
-<a href="#rulegroupoverrides_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverride">Managed<wbr>Rule<wbr>Group<wbr>Override[]</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rule_set_type_python">
-<a href="#rule_set_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rule_set_version_python">
-<a href="#rule_set_version_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rule_group_overrides_python">
-<a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverride">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>BLOCK</dt>
+    <dd>Block</dd><dt>LOG</dt>
+    <dd>Log</dd><dt>REDIRECT</dt>
+    <dd>Redirect</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedrulesetlist">Managed<wbr>Rule<wbr>Set<wbr>List</h4>
@@ -2341,7 +4164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2353,7 +4176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleset">[]Managed<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleset">[]Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2365,7 +4188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleset">Managed<wbr>Rule<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleset">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2377,7 +4200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleset">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleset">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2391,7 +4214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2403,7 +4226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">[]Managed<wbr>Rule<wbr>Set<wbr>Response</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulesetresponse">[]Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2415,7 +4238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">Managed<wbr>Rule<wbr>Set<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulesetresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2427,999 +4250,153 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulesetresponse">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="managedrulesetresponse">Managed<wbr>Rule<wbr>Set<wbr>Response</h4>
+<h4 id="operator">Operator</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rulesettype_csharp">
-<a href="#rulesettype_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rulesetversion_csharp">
-<a href="#rulesetversion_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rulegroupoverrides_csharp">
-<a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Any</dt>
+    <dd>Any</dd><dt>IPMatch</dt>
+    <dd>IPMatch</dd><dt>Geo<wbr>Match</dt>
+    <dd>GeoMatch</dd><dt>Equal</dt>
+    <dd>Equal</dd><dt>Contains</dt>
+    <dd>Contains</dd><dt>Less<wbr>Than</dt>
+    <dd>LessThan</dd><dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd><dt>Begins<wbr>With</dt>
+    <dd>BeginsWith</dd><dt>Ends<wbr>With</dt>
+    <dd>EndsWith</dd><dt>Reg<wbr>Ex</dt>
+    <dd>RegEx</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rulesettype_go">
-<a href="#rulesettype_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rulesetversion_go">
-<a href="#rulesetversion_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rulegroupoverrides_go">
-<a href="#rulegroupoverrides_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">[]Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Operator<wbr>Any</dt>
+    <dd>Any</dd><dt>Operator<wbr>IPMatch</dt>
+    <dd>IPMatch</dd><dt>Operator<wbr>Geo<wbr>Match</dt>
+    <dd>GeoMatch</dd><dt>Operator<wbr>Equal</dt>
+    <dd>Equal</dd><dt>Operator<wbr>Contains</dt>
+    <dd>Contains</dd><dt>Operator<wbr>Less<wbr>Than</dt>
+    <dd>LessThan</dd><dt>Operator<wbr>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Operator<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd><dt>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd><dt>Operator<wbr>Begins<wbr>With</dt>
+    <dd>BeginsWith</dd><dt>Operator<wbr>Ends<wbr>With</dt>
+    <dd>EndsWith</dd><dt>Operator<wbr>Reg<wbr>Ex</dt>
+    <dd>RegEx</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rulesettype_nodejs">
-<a href="#rulesettype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rulesetversion_nodejs">
-<a href="#rulesetversion_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rulegroupoverrides_nodejs">
-<a href="#rulegroupoverrides_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Any</dt>
+    <dd>Any</dd><dt>IPMatch</dt>
+    <dd>IPMatch</dd><dt>Geo<wbr>Match</dt>
+    <dd>GeoMatch</dd><dt>Equal</dt>
+    <dd>Equal</dd><dt>Contains</dt>
+    <dd>Contains</dd><dt>Less<wbr>Than</dt>
+    <dd>LessThan</dd><dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd><dt>Begins<wbr>With</dt>
+    <dd>BeginsWith</dd><dt>Ends<wbr>With</dt>
+    <dd>EndsWith</dd><dt>Reg<wbr>Ex</dt>
+    <dd>RegEx</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rule_set_type_python">
-<a href="#rule_set_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rule_set_version_python">
-<a href="#rule_set_version_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rule_group_overrides_python">
-<a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>ANY</dt>
+    <dd>Any</dd><dt>IP_MATCH</dt>
+    <dd>IPMatch</dd><dt>GEO_MATCH</dt>
+    <dd>GeoMatch</dd><dt>EQUAL</dt>
+    <dd>Equal</dd><dt>CONTAINS</dt>
+    <dd>Contains</dd><dt>LESS_THAN</dt>
+    <dd>LessThan</dd><dt>GREATER_THAN</dt>
+    <dd>GreaterThan</dd><dt>LESS_THAN_OR_EQUAL</dt>
+    <dd>LessThanOrEqual</dd><dt>GREATER_THAN_OR_EQUAL</dt>
+    <dd>GreaterThanOrEqual</dd><dt>BEGINS_WITH</dt>
+    <dd>BeginsWith</dd><dt>ENDS_WITH</dt>
+    <dd>EndsWith</dd><dt>REG_EX</dt>
+    <dd>RegEx</dd></dl>
 {{% /choosable %}}
 
-<h4 id="matchcondition">Match<wbr>Condition</h4>
+<h4 id="policyenabledstate">Policy<wbr>Enabled<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchvariables_csharp">
-<a href="#matchvariables_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchvariable">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Match<wbr>Variable<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operator_csharp">
-<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewalloperator">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Web<wbr>Application<wbr>Firewall<wbr>Operator</a></span>
-    </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="negationconditon_csharp">
-<a href="#negationconditon_csharp" style="color: inherit; text-decoration: inherit;">Negation<wbr>Conditon</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="transforms_csharp">
-<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Web<wbr>Application<wbr>Firewall<wbr>Transform&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchvariables_go">
-<a href="#matchvariables_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchvariable">[]Match<wbr>Variable</a></span>
-    </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operator_go">
-<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewalloperator">Web<wbr>Application<wbr>Firewall<wbr>Operator</a></span>
-    </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="negationconditon_go">
-<a href="#negationconditon_go" style="color: inherit; text-decoration: inherit;">Negation<wbr>Conditon</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="transforms_go">
-<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Policy<wbr>Enabled<wbr>State<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Policy<wbr>Enabled<wbr>State<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchvariables_nodejs">
-<a href="#matchvariables_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchvariable">Match<wbr>Variable[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operator_nodejs">
-<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewalloperator">Web<wbr>Application<wbr>Firewall<wbr>Operator</a></span>
-    </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="negationconditon_nodejs">
-<a href="#negationconditon_nodejs" style="color: inherit; text-decoration: inherit;">negation<wbr>Conditon</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="transforms_nodejs">
-<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | Web<wbr>Application<wbr>Firewall<wbr>Transform[]</span>
-    </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="match_values_python">
-<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="match_variables_python">
-<a href="#match_variables_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchvariable">Sequence[Match<wbr>Variable<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operator_python">
-<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#webapplicationfirewalloperator">Web<wbr>Application<wbr>Firewall<wbr>Operator</a></span>
-    </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="negation_conditon_python">
-<a href="#negation_conditon_python" style="color: inherit; text-decoration: inherit;">negation_<wbr>conditon</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="transforms_python">
-<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Web<wbr>Application<wbr>Firewall<wbr>Transform]]</span>
-    </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
-<h4 id="matchconditionresponse">Match<wbr>Condition<wbr>Response</h4>
+<h4 id="policymode">Policy<wbr>Mode</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchvariables_csharp">
-<a href="#matchvariables_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Match<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operator_csharp">
-<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="negationconditon_csharp">
-<a href="#negationconditon_csharp" style="color: inherit; text-decoration: inherit;">Negation<wbr>Conditon</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="transforms_csharp">
-<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Prevention</dt>
+    <dd>Prevention</dd><dt>Detection</dt>
+    <dd>Detection</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchvariables_go">
-<a href="#matchvariables_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchvariableresponse">[]Match<wbr>Variable<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operator_go">
-<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="negationconditon_go">
-<a href="#negationconditon_go" style="color: inherit; text-decoration: inherit;">Negation<wbr>Conditon</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="transforms_go">
-<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Policy<wbr>Mode<wbr>Prevention</dt>
+    <dd>Prevention</dd><dt>Policy<wbr>Mode<wbr>Detection</dt>
+    <dd>Detection</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchvariables_nodejs">
-<a href="#matchvariables_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchvariableresponse">Match<wbr>Variable<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operator_nodejs">
-<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="negationconditon_nodejs">
-<a href="#negationconditon_nodejs" style="color: inherit; text-decoration: inherit;">negation<wbr>Conditon</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="transforms_nodejs">
-<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Prevention</dt>
+    <dd>Prevention</dd><dt>Detection</dt>
+    <dd>Detection</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="match_values_python">
-<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="match_variables_python">
-<a href="#match_variables_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchvariableresponse">Sequence[Match<wbr>Variable<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="operator_python">
-<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="negation_conditon_python">
-<a href="#negation_conditon_python" style="color: inherit; text-decoration: inherit;">negation_<wbr>conditon</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="transforms_python">
-<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>PREVENTION</dt>
+    <dd>Prevention</dd><dt>DETECTION</dt>
+    <dd>Detection</dd></dl>
 {{% /choosable %}}
 
-<h4 id="matchvariable">Match<wbr>Variable</h4>
+<h4 id="policyrequestbodycheck">Policy<wbr>Request<wbr>Body<wbr>Check</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="variablename_csharp">
-<a href="#variablename_csharp" style="color: inherit; text-decoration: inherit;">Variable<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewallmatchvariable">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable</a></span>
-    </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="selector_csharp">
-<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="variablename_go">
-<a href="#variablename_go" style="color: inherit; text-decoration: inherit;">Variable<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewallmatchvariable">Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable</a></span>
-    </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="selector_go">
-<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Policy<wbr>Request<wbr>Body<wbr>Check<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Policy<wbr>Request<wbr>Body<wbr>Check<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="variablename_nodejs">
-<a href="#variablename_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewallmatchvariable">Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable</a></span>
-    </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="selector_nodejs">
-<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="variable_name_python">
-<a href="#variable_name_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#webapplicationfirewallmatchvariable">Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable</a></span>
-    </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="selector_python">
-<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="matchvariableresponse">Match<wbr>Variable<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="variablename_csharp">
-<a href="#variablename_csharp" style="color: inherit; text-decoration: inherit;">Variable<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="selector_csharp">
-<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="variablename_go">
-<a href="#variablename_go" style="color: inherit; text-decoration: inherit;">Variable<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="selector_go">
-<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="variablename_nodejs">
-<a href="#variablename_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="selector_nodejs">
-<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="variable_name_python">
-<a href="#variable_name_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="selector_python">
-<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="policysettings">Policy<wbr>Settings</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="fileuploadlimitinmb_csharp">
-<a href="#fileuploadlimitinmb_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="maxrequestbodysizeinkb_csharp">
-<a href="#maxrequestbodysizeinkb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mode_csharp">
-<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewallmode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Web<wbr>Application<wbr>Firewall<wbr>Mode</a></span>
-    </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requestbodycheck_csharp">
-<a href="#requestbodycheck_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_csharp">
-<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewallenabledstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Web<wbr>Application<wbr>Firewall<wbr>Enabled<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="fileuploadlimitinmb_go">
-<a href="#fileuploadlimitinmb_go" style="color: inherit; text-decoration: inherit;">File<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="maxrequestbodysizeinkb_go">
-<a href="#maxrequestbodysizeinkb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mode_go">
-<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewallmode">Web<wbr>Application<wbr>Firewall<wbr>Mode</a></span>
-    </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requestbodycheck_go">
-<a href="#requestbodycheck_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_go">
-<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewallenabledstate">Web<wbr>Application<wbr>Firewall<wbr>Enabled<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="fileuploadlimitinmb_nodejs">
-<a href="#fileuploadlimitinmb_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="maxrequestbodysizeinkb_nodejs">
-<a href="#maxrequestbodysizeinkb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mode_nodejs">
-<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewallmode">Web<wbr>Application<wbr>Firewall<wbr>Mode</a></span>
-    </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requestbodycheck_nodejs">
-<a href="#requestbodycheck_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Check</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_nodejs">
-<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#webapplicationfirewallenabledstate">Web<wbr>Application<wbr>Firewall<wbr>Enabled<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="file_upload_limit_in_mb_python">
-<a href="#file_upload_limit_in_mb_python" style="color: inherit; text-decoration: inherit;">file_<wbr>upload_<wbr>limit_<wbr>in_<wbr>mb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="max_request_body_size_in_kb_python">
-<a href="#max_request_body_size_in_kb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>body_<wbr>size_<wbr>in_<wbr>kb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mode_python">
-<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#webapplicationfirewallmode">Web<wbr>Application<wbr>Firewall<wbr>Mode</a></span>
-    </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="request_body_check_python">
-<a href="#request_body_check_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>check</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_python">
-<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#webapplicationfirewallenabledstate">Web<wbr>Application<wbr>Firewall<wbr>Enabled<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="policysettingsresponse">Policy<wbr>Settings<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="fileuploadlimitinmb_csharp">
-<a href="#fileuploadlimitinmb_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="maxrequestbodysizeinkb_csharp">
-<a href="#maxrequestbodysizeinkb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mode_csharp">
-<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requestbodycheck_csharp">
-<a href="#requestbodycheck_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_csharp">
-<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="fileuploadlimitinmb_go">
-<a href="#fileuploadlimitinmb_go" style="color: inherit; text-decoration: inherit;">File<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="maxrequestbodysizeinkb_go">
-<a href="#maxrequestbodysizeinkb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mode_go">
-<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requestbodycheck_go">
-<a href="#requestbodycheck_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_go">
-<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="fileuploadlimitinmb_nodejs">
-<a href="#fileuploadlimitinmb_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="maxrequestbodysizeinkb_nodejs">
-<a href="#maxrequestbodysizeinkb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mode_nodejs">
-<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requestbodycheck_nodejs">
-<a href="#requestbodycheck_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Check</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_nodejs">
-<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="file_upload_limit_in_mb_python">
-<a href="#file_upload_limit_in_mb_python" style="color: inherit; text-decoration: inherit;">file_<wbr>upload_<wbr>limit_<wbr>in_<wbr>mb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="max_request_body_size_in_kb_python">
-<a href="#max_request_body_size_in_kb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>body_<wbr>size_<wbr>in_<wbr>kb</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mode_python">
-<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="request_body_check_python">
-<a href="#request_body_check_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>check</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_python">
-<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingrulelinkresponse">Routing<wbr>Rule<wbr>Link<wbr>Response</h4>
@@ -3678,210 +4655,46 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="webapplicationfirewallenabledstate">Web<wbr>Application<wbr>Firewall<wbr>Enabled<wbr>State</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Disabled</dt>
-    <dd>Disabled</dd><dt>Enabled</dt>
-    <dd>Enabled</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Web<wbr>Application<wbr>Firewall<wbr>Enabled<wbr>State<wbr>Disabled</dt>
-    <dd>Disabled</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Enabled<wbr>State<wbr>Enabled</dt>
-    <dd>Enabled</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Disabled</dt>
-    <dd>Disabled</dd><dt>Enabled</dt>
-    <dd>Enabled</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>DISABLED</dt>
-    <dd>Disabled</dd><dt>ENABLED</dt>
-    <dd>Enabled</dd></dl>
-{{% /choosable %}}
-
-<h4 id="webapplicationfirewallmatchvariable">Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Remote<wbr>Addr</dt>
-    <dd>RemoteAddr</dd><dt>Request<wbr>Method</dt>
-    <dd>RequestMethod</dd><dt>Query<wbr>String</dt>
-    <dd>QueryString</dd><dt>Post<wbr>Args</dt>
-    <dd>PostArgs</dd><dt>Request<wbr>Uri</dt>
-    <dd>RequestUri</dd><dt>Request<wbr>Headers</dt>
-    <dd>RequestHeaders</dd><dt>Request<wbr>Body</dt>
-    <dd>RequestBody</dd><dt>Request<wbr>Cookies</dt>
-    <dd>RequestCookies</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable<wbr>Remote<wbr>Addr</dt>
-    <dd>RemoteAddr</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable<wbr>Request<wbr>Method</dt>
-    <dd>RequestMethod</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable<wbr>Query<wbr>String</dt>
-    <dd>QueryString</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable<wbr>Post<wbr>Args</dt>
-    <dd>PostArgs</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable<wbr>Request<wbr>Uri</dt>
-    <dd>RequestUri</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable<wbr>Request<wbr>Headers</dt>
-    <dd>RequestHeaders</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable<wbr>Request<wbr>Body</dt>
-    <dd>RequestBody</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Match<wbr>Variable<wbr>Request<wbr>Cookies</dt>
-    <dd>RequestCookies</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Remote<wbr>Addr</dt>
-    <dd>RemoteAddr</dd><dt>Request<wbr>Method</dt>
-    <dd>RequestMethod</dd><dt>Query<wbr>String</dt>
-    <dd>QueryString</dd><dt>Post<wbr>Args</dt>
-    <dd>PostArgs</dd><dt>Request<wbr>Uri</dt>
-    <dd>RequestUri</dd><dt>Request<wbr>Headers</dt>
-    <dd>RequestHeaders</dd><dt>Request<wbr>Body</dt>
-    <dd>RequestBody</dd><dt>Request<wbr>Cookies</dt>
-    <dd>RequestCookies</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>REMOTE_ADDR</dt>
-    <dd>RemoteAddr</dd><dt>REQUEST_METHOD</dt>
-    <dd>RequestMethod</dd><dt>QUERY_STRING</dt>
-    <dd>QueryString</dd><dt>POST_ARGS</dt>
-    <dd>PostArgs</dd><dt>REQUEST_URI</dt>
-    <dd>RequestUri</dd><dt>REQUEST_HEADERS</dt>
-    <dd>RequestHeaders</dd><dt>REQUEST_BODY</dt>
-    <dd>RequestBody</dd><dt>REQUEST_COOKIES</dt>
-    <dd>RequestCookies</dd></dl>
-{{% /choosable %}}
-
-<h4 id="webapplicationfirewallmode">Web<wbr>Application<wbr>Firewall<wbr>Mode</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Prevention</dt>
-    <dd>Prevention</dd><dt>Detection</dt>
-    <dd>Detection</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Web<wbr>Application<wbr>Firewall<wbr>Mode<wbr>Prevention</dt>
-    <dd>Prevention</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Mode<wbr>Detection</dt>
-    <dd>Detection</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Prevention</dt>
-    <dd>Prevention</dd><dt>Detection</dt>
-    <dd>Detection</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>PREVENTION</dt>
-    <dd>Prevention</dd><dt>DETECTION</dt>
-    <dd>Detection</dd></dl>
-{{% /choosable %}}
-
-<h4 id="webapplicationfirewalloperator">Web<wbr>Application<wbr>Firewall<wbr>Operator</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>IPMatch</dt>
-    <dd>IPMatch</dd><dt>Equal</dt>
-    <dd>Equal</dd><dt>Contains</dt>
-    <dd>Contains</dd><dt>Less<wbr>Than</dt>
-    <dd>LessThan</dd><dt>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>LessThanOrEqual</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>GreaterThanOrEqual</dd><dt>Begins<wbr>With</dt>
-    <dd>BeginsWith</dd><dt>Ends<wbr>With</dt>
-    <dd>EndsWith</dd><dt>Regex</dt>
-    <dd>Regex</dd><dt>Geo<wbr>Match</dt>
-    <dd>GeoMatch</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Web<wbr>Application<wbr>Firewall<wbr>Operator<wbr>IPMatch</dt>
-    <dd>IPMatch</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Operator<wbr>Equal</dt>
-    <dd>Equal</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Operator<wbr>Contains</dt>
-    <dd>Contains</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Operator<wbr>Less<wbr>Than</dt>
-    <dd>LessThan</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Operator<wbr>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Operator<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>LessThanOrEqual</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>GreaterThanOrEqual</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Operator<wbr>Begins<wbr>With</dt>
-    <dd>BeginsWith</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Operator<wbr>Ends<wbr>With</dt>
-    <dd>EndsWith</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Operator<wbr>Regex</dt>
-    <dd>Regex</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Operator<wbr>Geo<wbr>Match</dt>
-    <dd>GeoMatch</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>IPMatch</dt>
-    <dd>IPMatch</dd><dt>Equal</dt>
-    <dd>Equal</dd><dt>Contains</dt>
-    <dd>Contains</dd><dt>Less<wbr>Than</dt>
-    <dd>LessThan</dd><dt>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>LessThanOrEqual</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>GreaterThanOrEqual</dd><dt>Begins<wbr>With</dt>
-    <dd>BeginsWith</dd><dt>Ends<wbr>With</dt>
-    <dd>EndsWith</dd><dt>Regex</dt>
-    <dd>Regex</dd><dt>Geo<wbr>Match</dt>
-    <dd>GeoMatch</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>IP_MATCH</dt>
-    <dd>IPMatch</dd><dt>EQUAL</dt>
-    <dd>Equal</dd><dt>CONTAINS</dt>
-    <dd>Contains</dd><dt>LESS_THAN</dt>
-    <dd>LessThan</dd><dt>GREATER_THAN</dt>
-    <dd>GreaterThan</dd><dt>LESS_THAN_OR_EQUAL</dt>
-    <dd>LessThanOrEqual</dd><dt>GREATER_THAN_OR_EQUAL</dt>
-    <dd>GreaterThanOrEqual</dd><dt>BEGINS_WITH</dt>
-    <dd>BeginsWith</dd><dt>ENDS_WITH</dt>
-    <dd>EndsWith</dd><dt>REGEX</dt>
-    <dd>Regex</dd><dt>GEO_MATCH</dt>
-    <dd>GeoMatch</dd></dl>
-{{% /choosable %}}
-
-<h4 id="webapplicationfirewalltransform">Web<wbr>Application<wbr>Firewall<wbr>Transform</h4>
+<h4 id="transformtype">Transform<wbr>Type</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Lowercase</dt>
-    <dd>Lowercase</dd><dt>Trim</dt>
+    <dd>Lowercase</dd><dt>Uppercase</dt>
+    <dd>Uppercase</dd><dt>Trim</dt>
     <dd>Trim</dd><dt>Url<wbr>Decode</dt>
     <dd>UrlDecode</dd><dt>Url<wbr>Encode</dt>
     <dd>UrlEncode</dd><dt>Remove<wbr>Nulls</dt>
-    <dd>RemoveNulls</dd><dt>Html<wbr>Entity<wbr>Decode</dt>
-    <dd>HtmlEntityDecode</dd></dl>
+    <dd>RemoveNulls</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Web<wbr>Application<wbr>Firewall<wbr>Transform<wbr>Lowercase</dt>
-    <dd>Lowercase</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Transform<wbr>Trim</dt>
-    <dd>Trim</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Transform<wbr>Url<wbr>Decode</dt>
-    <dd>UrlDecode</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Transform<wbr>Url<wbr>Encode</dt>
-    <dd>UrlEncode</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Transform<wbr>Remove<wbr>Nulls</dt>
-    <dd>RemoveNulls</dd><dt>Web<wbr>Application<wbr>Firewall<wbr>Transform<wbr>Html<wbr>Entity<wbr>Decode</dt>
-    <dd>HtmlEntityDecode</dd></dl>
+<dl class="tabular"><dt>Transform<wbr>Type<wbr>Lowercase</dt>
+    <dd>Lowercase</dd><dt>Transform<wbr>Type<wbr>Uppercase</dt>
+    <dd>Uppercase</dd><dt>Transform<wbr>Type<wbr>Trim</dt>
+    <dd>Trim</dd><dt>Transform<wbr>Type<wbr>Url<wbr>Decode</dt>
+    <dd>UrlDecode</dd><dt>Transform<wbr>Type<wbr>Url<wbr>Encode</dt>
+    <dd>UrlEncode</dd><dt>Transform<wbr>Type<wbr>Remove<wbr>Nulls</dt>
+    <dd>RemoveNulls</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Lowercase</dt>
-    <dd>Lowercase</dd><dt>Trim</dt>
+    <dd>Lowercase</dd><dt>Uppercase</dt>
+    <dd>Uppercase</dd><dt>Trim</dt>
     <dd>Trim</dd><dt>Url<wbr>Decode</dt>
     <dd>UrlDecode</dd><dt>Url<wbr>Encode</dt>
     <dd>UrlEncode</dd><dt>Remove<wbr>Nulls</dt>
-    <dd>RemoveNulls</dd><dt>Html<wbr>Entity<wbr>Decode</dt>
-    <dd>HtmlEntityDecode</dd></dl>
+    <dd>RemoveNulls</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>LOWERCASE</dt>
-    <dd>Lowercase</dd><dt>TRIM</dt>
+    <dd>Lowercase</dd><dt>UPPERCASE</dt>
+    <dd>Uppercase</dd><dt>TRIM</dt>
     <dd>Trim</dd><dt>URL_DECODE</dt>
     <dd>UrlDecode</dd><dt>URL_ENCODE</dt>
     <dd>UrlEncode</dd><dt>REMOVE_NULLS</dt>
-    <dd>RemoveNulls</dd><dt>HTML_ENTITY_DECODE</dt>
-    <dd>HtmlEntityDecode</dd></dl>
+    <dd>RemoveNulls</dd></dl>
 {{% /choosable %}}
 ## Import
 

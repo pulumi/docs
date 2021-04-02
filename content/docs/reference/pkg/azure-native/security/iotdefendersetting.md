@@ -36,6 +36,7 @@ class MyStack : Stack
         var iotDefenderSetting = new AzureNative.Security.IotDefenderSetting("iotDefenderSetting", new AzureNative.Security.IotDefenderSettingArgs
         {
             DeviceQuota = 2000,
+            OnboardingKind = "Default",
             SentinelWorkspaceResourceIds = 
             {
                 "/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1",
@@ -65,7 +66,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := security.NewIotDefenderSetting(ctx, "iotDefenderSetting", &security.IotDefenderSettingArgs{
-			DeviceQuota: pulumi.Int(2000),
+			DeviceQuota:    pulumi.Int(2000),
+			OnboardingKind: pulumi.String("Default"),
 			SentinelWorkspaceResourceIds: pulumi.StringArray{
 				pulumi.String("/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1"),
 			},
@@ -92,6 +94,7 @@ import pulumi_azure_native as azure_native
 
 iot_defender_setting = azure_native.security.IotDefenderSetting("iotDefenderSetting",
     device_quota=2000,
+    onboarding_kind="Default",
     sentinel_workspace_resource_ids=["/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1"])
 
 ```
@@ -109,6 +112,7 @@ import * as azure_native from "@pulumi/azure-native";
 
 const iotDefenderSetting = new azure_native.security.IotDefenderSetting("iotDefenderSetting", {
     deviceQuota: 2000,
+    onboardingKind: "Default",
     sentinelWorkspaceResourceIds: ["/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1"],
 });
 
@@ -135,7 +139,7 @@ const iotDefenderSetting = new azure_native.security.IotDefenderSetting("iotDefe
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotDefenderSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sentinel_workspace_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotDefenderSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">onboarding_kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, OnboardingKind]]</span> = None<span class="p">, </span><span class="nx">sentinel_workspace_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -285,6 +289,14 @@ The IotDefenderSetting resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="onboardingkind_csharp">
+<a href="#onboardingkind_csharp" style="color: inherit; text-decoration: inherit;">Onboarding<wbr>Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#onboardingkind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Onboarding<wbr>Kind</a></span>
+    </dt>
+    <dd>{{% md %}}The kind of onboarding for the subscription{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="sentinelworkspaceresourceids_csharp">
 <a href="#sentinelworkspaceresourceids_csharp" style="color: inherit; text-decoration: inherit;">Sentinel<wbr>Workspace<wbr>Resource<wbr>Ids</a>
 </span>
@@ -304,6 +316,14 @@ The IotDefenderSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onboardingkind_go">
+<a href="#onboardingkind_go" style="color: inherit; text-decoration: inherit;">Onboarding<wbr>Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#onboardingkind">Onboarding<wbr>Kind</a></span>
+    </dt>
+    <dd>{{% md %}}The kind of onboarding for the subscription{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sentinelworkspaceresourceids_go">
 <a href="#sentinelworkspaceresourceids_go" style="color: inherit; text-decoration: inherit;">Sentinel<wbr>Workspace<wbr>Resource<wbr>Ids</a>
@@ -325,6 +345,14 @@ The IotDefenderSetting resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="onboardingkind_nodejs">
+<a href="#onboardingkind_nodejs" style="color: inherit; text-decoration: inherit;">onboarding<wbr>Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#onboardingkind">Onboarding<wbr>Kind</a></span>
+    </dt>
+    <dd>{{% md %}}The kind of onboarding for the subscription{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="sentinelworkspaceresourceids_nodejs">
 <a href="#sentinelworkspaceresourceids_nodejs" style="color: inherit; text-decoration: inherit;">sentinel<wbr>Workspace<wbr>Resource<wbr>Ids</a>
 </span>
@@ -344,6 +372,14 @@ The IotDefenderSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onboarding_kind_python">
+<a href="#onboarding_kind_python" style="color: inherit; text-decoration: inherit;">onboarding_<wbr>kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#onboardingkind">Onboarding<wbr>Kind</a></span>
+    </dt>
+    <dd>{{% md %}}The kind of onboarding for the subscription{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sentinel_workspace_resource_ids_python">
 <a href="#sentinel_workspace_resource_ids_python" style="color: inherit; text-decoration: inherit;">sentinel_<wbr>workspace_<wbr>resource_<wbr>ids</a>
@@ -478,6 +514,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="onboardingkind">Onboarding<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>Default</dd><dt>Migrated<wbr>To<wbr>Azure</dt>
+    <dd>MigratedToAzure</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Onboarding<wbr>Kind<wbr>Default</dt>
+    <dd>Default</dd><dt>Onboarding<wbr>Kind<wbr>Migrated<wbr>To<wbr>Azure</dt>
+    <dd>MigratedToAzure</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>Default</dd><dt>Migrated<wbr>To<wbr>Azure</dt>
+    <dd>MigratedToAzure</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEFAULT</dt>
+    <dd>Default</dd><dt>MIGRATED_TO_AZURE</dt>
+    <dd>MigratedToAzure</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

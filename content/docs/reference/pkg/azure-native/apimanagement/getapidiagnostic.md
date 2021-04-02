@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.apimanagement.getApiDiagnostic fu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Diagnostic details.
-API Version: 2019-12-01.
+API Version: 2020-12-01.
 
 
 
@@ -278,6 +278,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="operationnameformat_csharp">
+<a href="#operationnameformat_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Default is Name.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sampling_csharp">
 <a href="#sampling_csharp" style="color: inherit; text-decoration: inherit;">Sampling</a>
 </span>
@@ -369,6 +377,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="operationnameformat_go">
+<a href="#operationnameformat_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Default is Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sampling_go">
 <a href="#sampling_go" style="color: inherit; text-decoration: inherit;">Sampling</a>
@@ -462,6 +478,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="operationnameformat_nodejs">
+<a href="#operationnameformat_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Default is Name.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sampling_nodejs">
 <a href="#sampling_nodejs" style="color: inherit; text-decoration: inherit;">sampling</a>
 </span>
@@ -554,6 +578,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="operation_name_format_python">
+<a href="#operation_name_format_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name_<wbr>format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Default is Name.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sampling_python">
 <a href="#sampling_python" style="color: inherit; text-decoration: inherit;">sampling</a>
 </span>
@@ -629,6 +661,174 @@ The following output properties are available:
     <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="datamaskingentityresponse">Data<wbr>Masking<wbr>Entity<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data masking mode.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of an entity to mask (e.g. a name of a header or a query parameter).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data masking mode.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of an entity to mask (e.g. a name of a header or a query parameter).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data masking mode.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of an entity to mask (e.g. a name of a header or a query parameter).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Data masking mode.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of an entity to mask (e.g. a name of a header or a query parameter).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datamaskingresponse">Data<wbr>Masking<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_csharp">
+<a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">[]Data<wbr>Masking<wbr>Entity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_go">
+<a href="#queryparams_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">[]Data<wbr>Masking<wbr>Entity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">Data<wbr>Masking<wbr>Entity<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_nodejs">
+<a href="#queryparams_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">Data<wbr>Masking<wbr>Entity<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_params_python">
+<a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</h4>
 
 
@@ -643,6 +843,14 @@ The following output properties are available:
         <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datamasking_csharp">
+<a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -664,6 +872,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_go">
+<a href="#datamasking_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingresponse">Data<wbr>Masking<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
@@ -684,6 +900,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_nodejs">
+<a href="#datamasking_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingresponse">Data<wbr>Masking<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
@@ -703,6 +927,14 @@ The following output properties are available:
         <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_masking_python">
+<a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datamaskingresponse">Data<wbr>Masking<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>

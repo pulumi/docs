@@ -12869,7 +12869,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS</dd><dt>Premium_LRS</dt>
     <dd>Premium_LRS</dd><dt>Standard<wbr>SSD_LRS</dt>
     <dd>StandardSSD_LRS</dd><dt>Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS</dd></dl>
+    <dd>UltraSSD_LRS</dd><dt>Premium_ZRS</dt>
+    <dd>Premium_ZRS</dd><dt>Standard<wbr>SSD_ZRS</dt>
+    <dd>StandardSSD_ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -12877,7 +12879,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS</dd><dt>Storage<wbr>Account<wbr>Types_Premium_LRS</dt>
     <dd>Premium_LRS</dd><dt>Storage<wbr>Account<wbr>Types_Standard<wbr>SSD_LRS</dt>
     <dd>StandardSSD_LRS</dd><dt>Storage<wbr>Account<wbr>Types_Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS</dd></dl>
+    <dd>UltraSSD_LRS</dd><dt>Storage<wbr>Account<wbr>Types_Premium_ZRS</dt>
+    <dd>Premium_ZRS</dd><dt>Storage<wbr>Account<wbr>Types_Standard<wbr>SSD_ZRS</dt>
+    <dd>StandardSSD_ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -12885,7 +12889,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS</dd><dt>Premium_LRS</dt>
     <dd>Premium_LRS</dd><dt>Standard<wbr>SSD_LRS</dt>
     <dd>StandardSSD_LRS</dd><dt>Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS</dd></dl>
+    <dd>UltraSSD_LRS</dd><dt>Premium_ZRS</dt>
+    <dd>Premium_ZRS</dd><dt>Standard<wbr>SSD_ZRS</dt>
+    <dd>StandardSSD_ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -12893,7 +12899,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_LRS</dd><dt>PREMIUM_LRS</dt>
     <dd>Premium_LRS</dd><dt>STANDARD_SS_D_LRS</dt>
     <dd>StandardSSD_LRS</dd><dt>ULTRA_SS_D_LRS</dt>
-    <dd>UltraSSD_LRS</dd></dl>
+    <dd>UltraSSD_LRS</dd><dt>PREMIUM_ZRS</dt>
+    <dd>Premium_ZRS</dd><dt>STANDARD_SS_D_ZRS</dt>
+    <dd>StandardSSD_ZRS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresource">Sub<wbr>Resource</h4>

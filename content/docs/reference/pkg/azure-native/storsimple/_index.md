@@ -14,17 +14,10 @@ Explore the resources and functions of the azure-native.storsimple module.
     <li><a href="accesscontrolrecord" title="AccessControlRecord"><span class="symbol resource"></span>AccessControlRecord</a></li>
     <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
     <li><a href="backupschedule" title="BackupSchedule"><span class="symbol resource"></span>BackupSchedule</a></li>
-    <li><a href="backupschedulegroup" title="BackupScheduleGroup"><span class="symbol resource"></span>BackupScheduleGroup</a></li>
     <li><a href="bandwidthsetting" title="BandwidthSetting"><span class="symbol resource"></span>BandwidthSetting</a></li>
-    <li><a href="chapsetting" title="ChapSetting"><span class="symbol resource"></span>ChapSetting</a></li>
-    <li><a href="fileserver" title="FileServer"><span class="symbol resource"></span>FileServer</a></li>
-    <li><a href="fileshare" title="FileShare"><span class="symbol resource"></span>FileShare</a></li>
-    <li><a href="iscsidisk" title="IscsiDisk"><span class="symbol resource"></span>IscsiDisk</a></li>
-    <li><a href="iscsiserver" title="IscsiServer"><span class="symbol resource"></span>IscsiServer</a></li>
     <li><a href="manager" title="Manager"><span class="symbol resource"></span>Manager</a></li>
     <li><a href="managerextendedinfo" title="ManagerExtendedInfo"><span class="symbol resource"></span>ManagerExtendedInfo</a></li>
     <li><a href="storageaccountcredential" title="StorageAccountCredential"><span class="symbol resource"></span>StorageAccountCredential</a></li>
-    <li><a href="storagedomain" title="StorageDomain"><span class="symbol resource"></span>StorageDomain</a></li>
     <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
     <li><a href="volumecontainer" title="VolumeContainer"><span class="symbol resource"></span>VolumeContainer</a></li>
 </ul>
@@ -34,18 +27,10 @@ Explore the resources and functions of the azure-native.storsimple module.
     <li><a href="getaccesscontrolrecord" title="GetAccessControlRecord"><span class="symbol function"></span>GetAccessControlRecord</a></li>
     <li><a href="getbackuppolicy" title="GetBackupPolicy"><span class="symbol function"></span>GetBackupPolicy</a></li>
     <li><a href="getbackupschedule" title="GetBackupSchedule"><span class="symbol function"></span>GetBackupSchedule</a></li>
-    <li><a href="getbackupschedulegroup" title="GetBackupScheduleGroup"><span class="symbol function"></span>GetBackupScheduleGroup</a></li>
     <li><a href="getbandwidthsetting" title="GetBandwidthSetting"><span class="symbol function"></span>GetBandwidthSetting</a></li>
-    <li><a href="getchapsetting" title="GetChapSetting"><span class="symbol function"></span>GetChapSetting</a></li>
-    <li><a href="getfileserver" title="GetFileServer"><span class="symbol function"></span>GetFileServer</a></li>
-    <li><a href="getfileshare" title="GetFileShare"><span class="symbol function"></span>GetFileShare</a></li>
-    <li><a href="getiscsidisk" title="GetIscsiDisk"><span class="symbol function"></span>GetIscsiDisk</a></li>
-    <li><a href="getiscsiserver" title="GetIscsiServer"><span class="symbol function"></span>GetIscsiServer</a></li>
     <li><a href="getmanager" title="GetManager"><span class="symbol function"></span>GetManager</a></li>
-    <li><a href="getmanagerencryptionkey" title="GetManagerEncryptionKey"><span class="symbol function"></span>GetManagerEncryptionKey</a></li>
     <li><a href="getmanagerextendedinfo" title="GetManagerExtendedInfo"><span class="symbol function"></span>GetManagerExtendedInfo</a></li>
     <li><a href="getstorageaccountcredential" title="GetStorageAccountCredential"><span class="symbol function"></span>GetStorageAccountCredential</a></li>
-    <li><a href="getstoragedomain" title="GetStorageDomain"><span class="symbol function"></span>GetStorageDomain</a></li>
     <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
     <li><a href="getvolumecontainer" title="GetVolumeContainer"><span class="symbol function"></span>GetVolumeContainer</a></li>
     <li><a href="listdevicefailoversets" title="ListDeviceFailoverSets"><span class="symbol function"></span>ListDeviceFailoverSets</a></li>
@@ -61,6 +46,6 @@ Explore the resources and functions of the azure-native.storsimple module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

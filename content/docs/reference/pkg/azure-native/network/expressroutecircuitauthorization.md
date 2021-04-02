@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.ExpressRouteCircuitAuthor
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Authorization in an ExpressRouteCircuit resource.
-API Version: 2020-08-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.storage.listStorageAccountService
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The List service SAS credentials operation response.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.sql.ServerDnsAlias resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A server DNS alias.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 {{% examples %}}
 

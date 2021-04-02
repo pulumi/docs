@@ -16,15 +16,6 @@ Explore the resources and functions of the azure-native.documentdb module.
     <li><a href="cassandraresourcecassandrakeyspace" title="CassandraResourceCassandraKeyspace"><span class="symbol resource"></span>CassandraResourceCassandraKeyspace</a></li>
     <li><a href="cassandraresourcecassandratable" title="CassandraResourceCassandraTable"><span class="symbol resource"></span>CassandraResourceCassandraTable</a></li>
     <li><a href="databaseaccount" title="DatabaseAccount"><span class="symbol resource"></span>DatabaseAccount</a></li>
-    <li><a href="databaseaccountcassandrakeyspace" title="DatabaseAccountCassandraKeyspace"><span class="symbol resource"></span>DatabaseAccountCassandraKeyspace</a></li>
-    <li><a href="databaseaccountcassandratable" title="DatabaseAccountCassandraTable"><span class="symbol resource"></span>DatabaseAccountCassandraTable</a></li>
-    <li><a href="databaseaccountgremlindatabase" title="DatabaseAccountGremlinDatabase"><span class="symbol resource"></span>DatabaseAccountGremlinDatabase</a></li>
-    <li><a href="databaseaccountgremlingraph" title="DatabaseAccountGremlinGraph"><span class="symbol resource"></span>DatabaseAccountGremlinGraph</a></li>
-    <li><a href="databaseaccountmongodbcollection" title="DatabaseAccountMongoDBCollection"><span class="symbol resource"></span>DatabaseAccountMongoDBCollection</a></li>
-    <li><a href="databaseaccountmongodbdatabase" title="DatabaseAccountMongoDBDatabase"><span class="symbol resource"></span>DatabaseAccountMongoDBDatabase</a></li>
-    <li><a href="databaseaccountsqlcontainer" title="DatabaseAccountSqlContainer"><span class="symbol resource"></span>DatabaseAccountSqlContainer</a></li>
-    <li><a href="databaseaccountsqldatabase" title="DatabaseAccountSqlDatabase"><span class="symbol resource"></span>DatabaseAccountSqlDatabase</a></li>
-    <li><a href="databaseaccounttable" title="DatabaseAccountTable"><span class="symbol resource"></span>DatabaseAccountTable</a></li>
     <li><a href="gremlinresourcegremlindatabase" title="GremlinResourceGremlinDatabase"><span class="symbol resource"></span>GremlinResourceGremlinDatabase</a></li>
     <li><a href="gremlinresourcegremlingraph" title="GremlinResourceGremlinGraph"><span class="symbol resource"></span>GremlinResourceGremlinGraph</a></li>
     <li><a href="mongodbresourcemongodbcollection" title="MongoDBResourceMongoDBCollection"><span class="symbol resource"></span>MongoDBResourceMongoDBCollection</a></li>
@@ -48,15 +39,6 @@ Explore the resources and functions of the azure-native.documentdb module.
     <li><a href="getcassandraresourcecassandrakeyspace" title="GetCassandraResourceCassandraKeyspace"><span class="symbol function"></span>GetCassandraResourceCassandraKeyspace</a></li>
     <li><a href="getcassandraresourcecassandratable" title="GetCassandraResourceCassandraTable"><span class="symbol function"></span>GetCassandraResourceCassandraTable</a></li>
     <li><a href="getdatabaseaccount" title="GetDatabaseAccount"><span class="symbol function"></span>GetDatabaseAccount</a></li>
-    <li><a href="getdatabaseaccountcassandrakeyspace" title="GetDatabaseAccountCassandraKeyspace"><span class="symbol function"></span>GetDatabaseAccountCassandraKeyspace</a></li>
-    <li><a href="getdatabaseaccountcassandratable" title="GetDatabaseAccountCassandraTable"><span class="symbol function"></span>GetDatabaseAccountCassandraTable</a></li>
-    <li><a href="getdatabaseaccountgremlindatabase" title="GetDatabaseAccountGremlinDatabase"><span class="symbol function"></span>GetDatabaseAccountGremlinDatabase</a></li>
-    <li><a href="getdatabaseaccountgremlingraph" title="GetDatabaseAccountGremlinGraph"><span class="symbol function"></span>GetDatabaseAccountGremlinGraph</a></li>
-    <li><a href="getdatabaseaccountmongodbcollection" title="GetDatabaseAccountMongoDBCollection"><span class="symbol function"></span>GetDatabaseAccountMongoDBCollection</a></li>
-    <li><a href="getdatabaseaccountmongodbdatabase" title="GetDatabaseAccountMongoDBDatabase"><span class="symbol function"></span>GetDatabaseAccountMongoDBDatabase</a></li>
-    <li><a href="getdatabaseaccountsqlcontainer" title="GetDatabaseAccountSqlContainer"><span class="symbol function"></span>GetDatabaseAccountSqlContainer</a></li>
-    <li><a href="getdatabaseaccountsqldatabase" title="GetDatabaseAccountSqlDatabase"><span class="symbol function"></span>GetDatabaseAccountSqlDatabase</a></li>
-    <li><a href="getdatabaseaccounttable" title="GetDatabaseAccountTable"><span class="symbol function"></span>GetDatabaseAccountTable</a></li>
     <li><a href="getgremlinresourcegremlindatabase" title="GetGremlinResourceGremlinDatabase"><span class="symbol function"></span>GetGremlinResourceGremlinDatabase</a></li>
     <li><a href="getgremlinresourcegremlingraph" title="GetGremlinResourceGremlinGraph"><span class="symbol function"></span>GetGremlinResourceGremlinGraph</a></li>
     <li><a href="getmongodbresourcemongodbcollection" title="GetMongoDBResourceMongoDBCollection"><span class="symbol function"></span>GetMongoDBResourceMongoDBCollection</a></li>
@@ -83,6 +65,6 @@ Explore the resources and functions of the azure-native.documentdb module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

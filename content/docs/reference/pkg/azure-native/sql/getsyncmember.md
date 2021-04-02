@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.sql.getSyncMember function with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure SQL Database sync member.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 
 
@@ -294,14 +294,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="password_csharp">
-<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
 </span>
@@ -417,14 +409,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="password_go">
-<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -542,14 +526,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="password_nodejs">
-<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
@@ -665,14 +641,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="password_python">
-<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.peering.getPeeringService functio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Peering Service
-API Version: 2020-10-01.
+API Version: 2021-01-01.
 
 
 
@@ -188,7 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PeeringServiceLocation of the Customer.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The location (state/province) of the customer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peeringserviceprovider_csharp">
 <a href="#peeringserviceprovider_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Service<wbr>Provider</a>
@@ -196,7 +196,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAPS Provider Name.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the service provider.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providerbackuppeeringlocation_csharp">
+<a href="#providerbackuppeeringlocation_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The backup peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providerprimarypeeringlocation_csharp">
+<a href="#providerprimarypeeringlocation_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Primary<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -264,7 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PeeringServiceLocation of the Customer.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The location (state/province) of the customer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peeringserviceprovider_go">
 <a href="#peeringserviceprovider_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Service<wbr>Provider</a>
@@ -272,7 +288,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAPS Provider Name.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the service provider.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providerbackuppeeringlocation_go">
+<a href="#providerbackuppeeringlocation_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The backup peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providerprimarypeeringlocation_go">
+<a href="#providerprimarypeeringlocation_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Primary<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -340,7 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PeeringServiceLocation of the Customer.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The location (state/province) of the customer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peeringserviceprovider_nodejs">
 <a href="#peeringserviceprovider_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Service<wbr>Provider</a>
@@ -348,7 +380,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAPS Provider Name.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the service provider.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providerbackuppeeringlocation_nodejs">
+<a href="#providerbackuppeeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Backup<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The backup peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="providerprimarypeeringlocation_nodejs">
+<a href="#providerprimarypeeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Primary<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -416,7 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The PeeringServiceLocation of the Customer.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The location (state/province) of the customer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peering_service_provider_python">
 <a href="#peering_service_provider_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>service_<wbr>provider</a>
@@ -424,7 +472,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MAPS Provider Name.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the service provider.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="provider_backup_peering_location_python">
+<a href="#provider_backup_peering_location_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>backup_<wbr>peering_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The backup peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="provider_primary_peering_location_python">
+<a href="#provider_primary_peering_location_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>primary_<wbr>peering_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The primary peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>

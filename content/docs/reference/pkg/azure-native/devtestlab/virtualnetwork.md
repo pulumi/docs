@@ -35,13 +35,13 @@ class MyStack : Stack
     {
         var virtualNetwork = new AzureNative.DevTestLab.VirtualNetwork("virtualNetwork", new AzureNative.DevTestLab.VirtualNetworkArgs
         {
-            LabName = "{devtestlab-name}",
-            Location = "{azure-location}",
-            Name = "{virtualnetwork-name}",
-            ResourceGroupName = "myResourceGroup",
+            LabName = "{labName}",
+            Location = "{location}",
+            Name = "{virtualNetworkName}",
+            ResourceGroupName = "resourceGroupName",
             Tags = 
             {
-                { "MyTag", "MyValue" },
+                { "tagName1", "tagValue1" },
             },
         });
     }
@@ -68,12 +68,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := devtestlab.NewVirtualNetwork(ctx, "virtualNetwork", &devtestlab.VirtualNetworkArgs{
-			LabName:           pulumi.String("{devtestlab-name}"),
-			Location:          pulumi.String("{azure-location}"),
-			Name:              pulumi.String("{virtualnetwork-name}"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
+			LabName:           pulumi.String("{labName}"),
+			Location:          pulumi.String("{location}"),
+			Name:              pulumi.String("{virtualNetworkName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
 			Tags: pulumi.StringMap{
-				"MyTag": pulumi.String("MyValue"),
+				"tagName1": pulumi.String("tagValue1"),
 			},
 		})
 		if err != nil {
@@ -97,12 +97,12 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 virtual_network = azure_native.devtestlab.VirtualNetwork("virtualNetwork",
-    lab_name="{devtestlab-name}",
-    location="{azure-location}",
-    name="{virtualnetwork-name}",
-    resource_group_name="myResourceGroup",
+    lab_name="{labName}",
+    location="{location}",
+    name="{virtualNetworkName}",
+    resource_group_name="resourceGroupName",
     tags={
-        "MyTag": "MyValue",
+        "tagName1": "tagValue1",
     })
 
 ```
@@ -119,12 +119,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwork", {
-    labName: "{devtestlab-name}",
-    location: "{azure-location}",
-    name: "{virtualnetwork-name}",
-    resourceGroupName: "myResourceGroup",
+    labName: "{labName}",
+    location: "{location}",
+    name: "{virtualNetworkName}",
+    resourceGroupName: "resourceGroupName",
     tags: {
-        MyTag: "MyValue",
+        tagName1: "tagValue1",
     },
 });
 
@@ -1874,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:devtestlab:VirtualNetwork {virtualnetwork-name} /subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name} 
+$ pulumi import azure-native:devtestlab:VirtualNetwork {virtualNetworkName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualnetworks/{virtualNetworkName} 
 ```
 
 

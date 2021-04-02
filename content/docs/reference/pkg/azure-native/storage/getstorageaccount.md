@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.storage.getStorageAccount functio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage account.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 
 
@@ -238,6 +238,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="keycreationtime_csharp">
+<a href="#keycreationtime_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Creation<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="keypolicy_csharp">
+<a href="#keypolicy_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Outputs.<wbr>Key<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}KeyPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -309,6 +325,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the status of the storage account at the time the operation was called.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="saspolicy_csharp">
+<a href="#saspolicy_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#saspolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Outputs.<wbr>Sas<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SasPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryendpoints_csharp">
 <a href="#secondaryendpoints_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Endpoints</a>
@@ -522,6 +546,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="keycreationtime_go">
+<a href="#keycreationtime_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Creation<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="keypolicy_go">
+<a href="#keypolicy_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keypolicyresponse">Key<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}KeyPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -593,6 +633,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the status of the storage account at the time the operation was called.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="saspolicy_go">
+<a href="#saspolicy_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#saspolicyresponse">Sas<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SasPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryendpoints_go">
 <a href="#secondaryendpoints_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Endpoints</a>
@@ -806,6 +854,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="keycreationtime_nodejs">
+<a href="#keycreationtime_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Creation<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="keypolicy_nodejs">
+<a href="#keypolicy_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keypolicyresponse">Key<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}KeyPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -877,6 +941,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the status of the storage account at the time the operation was called.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="saspolicy_nodejs">
+<a href="#saspolicy_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#saspolicyresponse">Sas<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SasPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryendpoints_nodejs">
 <a href="#secondaryendpoints_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Endpoints</a>
@@ -1090,6 +1162,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="key_creation_time_python">
+<a href="#key_creation_time_python" style="color: inherit; text-decoration: inherit;">key_<wbr>creation_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="key_policy_python">
+<a href="#key_policy_python" style="color: inherit; text-decoration: inherit;">key_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keypolicyresponse">Key<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}KeyPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -1161,6 +1249,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the status of the storage account at the time the operation was called.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sas_policy_python">
+<a href="#sas_policy_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#saspolicyresponse">Sas<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SasPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_endpoints_python">
 <a href="#secondary_endpoints_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>endpoints</a>
@@ -3213,6 +3309,58 @@ The following output properties are available:
     <dd>{{% md %}}Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="keypolicyresponse">Key<wbr>Policy<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyexpirationperiodindays_csharp">
+<a href="#keyexpirationperiodindays_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Expiration<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyexpirationperiodindays_go">
+<a href="#keyexpirationperiodindays_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Expiration<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyexpirationperiodindays_nodejs">
+<a href="#keyexpirationperiodindays_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Expiration<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_expiration_period_in_days_python">
+<a href="#key_expiration_period_in_days_python" style="color: inherit; text-decoration: inherit;">key_<wbr>expiration_<wbr>period_<wbr>in_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The key expiration period in days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</h4>
 
 
@@ -4151,6 +4299,90 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Routing Choice defines the kind of network routing opted by the user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="saspolicyresponse">Sas<wbr>Policy<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationaction_csharp">
+<a href="#expirationaction_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sasexpirationperiod_csharp">
+<a href="#sasexpirationperiod_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Expiration<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationaction_go">
+<a href="#expirationaction_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sasexpirationperiod_go">
+<a href="#sasexpirationperiod_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Expiration<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationaction_nodejs">
+<a href="#expirationaction_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sasexpirationperiod_nodejs">
+<a href="#sasexpirationperiod_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Expiration<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expiration_action_python">
+<a href="#expiration_action_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration action. Can only be Log.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sas_expiration_period_python">
+<a href="#sas_expiration_period_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>expiration_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SAS expiration period, DD.HH:MM:SS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>

@@ -8088,15 +8088,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharepassword_csharp">
-<a href="#sharepassword_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -8116,15 +8108,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharepassword_go">
-<a href="#sharepassword_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -8144,15 +8128,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharepassword_nodejs">
-<a href="#sharepassword_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -8172,15 +8148,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="share_password_python">
-<a href="#share_password_python" style="color: inherit; text-decoration: inherit;">share_<wbr>password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationpreference">Notification<wbr>Preference</h4>
@@ -9986,15 +9954,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharepassword_csharp">
-<a href="#sharepassword_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -10006,15 +9966,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharepassword_go">
-<a href="#sharepassword_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -10026,15 +9978,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharepassword_nodejs">
-<a href="#sharepassword_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -10046,15 +9990,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="share_password_python">
-<a href="#share_password_python" style="color: inherit; text-decoration: inherit;">share_<wbr>password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>

@@ -20,7 +20,7 @@ API Version: 2019-01-01-preview.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Create or update a security automation for all assessments
+### Create or update a security automation for all assessments (including all severities)
 
 
 {{< example csharp >}}
@@ -2378,54 +2378,54 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Equals<wbr>Value</dt>
-    <dd>Equals</dd><dt>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>GreaterThanOrEqualTo</dd><dt>Lesser<wbr>Than</dt>
-    <dd>LesserThan</dd><dt>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>LesserThanOrEqualTo</dd><dt>Not<wbr>Equals</dt>
-    <dd>NotEquals</dd><dt>Contains</dt>
-    <dd>Contains</dd><dt>Starts<wbr>With</dt>
-    <dd>StartsWith</dd><dt>Ends<wbr>With</dt>
-    <dd>EndsWith</dd></dl>
+    <dd>Equals{{% md %}}Applies for decimal and non-decimal operands{{% /md %}}</dd><dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>GreaterThanOrEqualTo{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Lesser<wbr>Than</dt>
+    <dd>LesserThan{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>LesserThanOrEqualTo{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Not<wbr>Equals</dt>
+    <dd>NotEquals{{% md %}}Applies  for decimal and non-decimal operands{{% /md %}}</dd><dt>Contains</dt>
+    <dd>Contains{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd><dt>Starts<wbr>With</dt>
+    <dd>StartsWith{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd><dt>Ends<wbr>With</dt>
+    <dd>EndsWith{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Operator<wbr>Equals</dt>
-    <dd>Equals</dd><dt>Operator<wbr>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd><dt>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>GreaterThanOrEqualTo</dd><dt>Operator<wbr>Lesser<wbr>Than</dt>
-    <dd>LesserThan</dd><dt>Operator<wbr>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>LesserThanOrEqualTo</dd><dt>Operator<wbr>Not<wbr>Equals</dt>
-    <dd>NotEquals</dd><dt>Operator<wbr>Contains</dt>
-    <dd>Contains</dd><dt>Operator<wbr>Starts<wbr>With</dt>
-    <dd>StartsWith</dd><dt>Operator<wbr>Ends<wbr>With</dt>
-    <dd>EndsWith</dd></dl>
+    <dd>Equals{{% md %}}Applies for decimal and non-decimal operands{{% /md %}}</dd><dt>Operator<wbr>Greater<wbr>Than</dt>
+    <dd>GreaterThan{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>GreaterThanOrEqualTo{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Operator<wbr>Lesser<wbr>Than</dt>
+    <dd>LesserThan{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Operator<wbr>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>LesserThanOrEqualTo{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Operator<wbr>Not<wbr>Equals</dt>
+    <dd>NotEquals{{% md %}}Applies  for decimal and non-decimal operands{{% /md %}}</dd><dt>Operator<wbr>Contains</dt>
+    <dd>Contains{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd><dt>Operator<wbr>Starts<wbr>With</dt>
+    <dd>StartsWith{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd><dt>Operator<wbr>Ends<wbr>With</dt>
+    <dd>EndsWith{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Equals</dt>
-    <dd>Equals</dd><dt>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>GreaterThanOrEqualTo</dd><dt>Lesser<wbr>Than</dt>
-    <dd>LesserThan</dd><dt>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>LesserThanOrEqualTo</dd><dt>Not<wbr>Equals</dt>
-    <dd>NotEquals</dd><dt>Contains</dt>
-    <dd>Contains</dd><dt>Starts<wbr>With</dt>
-    <dd>StartsWith</dd><dt>Ends<wbr>With</dt>
-    <dd>EndsWith</dd></dl>
+    <dd>Equals{{% md %}}Applies for decimal and non-decimal operands{{% /md %}}</dd><dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>GreaterThanOrEqualTo{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Lesser<wbr>Than</dt>
+    <dd>LesserThan{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>LesserThanOrEqualTo{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>Not<wbr>Equals</dt>
+    <dd>NotEquals{{% md %}}Applies  for decimal and non-decimal operands{{% /md %}}</dd><dt>Contains</dt>
+    <dd>Contains{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd><dt>Starts<wbr>With</dt>
+    <dd>StartsWith{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd><dt>Ends<wbr>With</dt>
+    <dd>EndsWith{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>EQUALS</dt>
-    <dd>Equals</dd><dt>GREATER_THAN</dt>
-    <dd>GreaterThan</dd><dt>GREATER_THAN_OR_EQUAL_TO</dt>
-    <dd>GreaterThanOrEqualTo</dd><dt>LESSER_THAN</dt>
-    <dd>LesserThan</dd><dt>LESSER_THAN_OR_EQUAL_TO</dt>
-    <dd>LesserThanOrEqualTo</dd><dt>NOT_EQUALS</dt>
-    <dd>NotEquals</dd><dt>CONTAINS</dt>
-    <dd>Contains</dd><dt>STARTS_WITH</dt>
-    <dd>StartsWith</dd><dt>ENDS_WITH</dt>
-    <dd>EndsWith</dd></dl>
+    <dd>Equals{{% md %}}Applies for decimal and non-decimal operands{{% /md %}}</dd><dt>GREATER_THAN</dt>
+    <dd>GreaterThan{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>GREATER_THAN_OR_EQUAL_TO</dt>
+    <dd>GreaterThanOrEqualTo{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>LESSER_THAN</dt>
+    <dd>LesserThan{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>LESSER_THAN_OR_EQUAL_TO</dt>
+    <dd>LesserThanOrEqualTo{{% md %}}Applies only for decimal operands{{% /md %}}</dd><dt>NOT_EQUALS</dt>
+    <dd>NotEquals{{% md %}}Applies  for decimal and non-decimal operands{{% /md %}}</dd><dt>CONTAINS</dt>
+    <dd>Contains{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd><dt>STARTS_WITH</dt>
+    <dd>StartsWith{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd><dt>ENDS_WITH</dt>
+    <dd>EndsWith{{% md %}}Applies only for non-decimal operands{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="propertytype">Property<wbr>Type</h4>

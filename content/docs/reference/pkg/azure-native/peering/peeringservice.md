@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.peering.PeeringService resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Peering Service
-API Version: 2020-10-01.
+API Version: 2021-01-01.
 
 {{% examples %}}
 
@@ -39,6 +39,8 @@ class MyStack : Stack
             PeeringServiceLocation = "state1",
             PeeringServiceName = "peeringServiceName",
             PeeringServiceProvider = "serviceProvider1",
+            ProviderBackupPeeringLocation = "peeringLocation2",
+            ProviderPrimaryPeeringLocation = "peeringLocation1",
             ResourceGroupName = "rgName",
         });
     }
@@ -65,11 +67,13 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := peering.NewPeeringService(ctx, "peeringService", &peering.PeeringServiceArgs{
-			Location:               pulumi.String("eastus"),
-			PeeringServiceLocation: pulumi.String("state1"),
-			PeeringServiceName:     pulumi.String("peeringServiceName"),
-			PeeringServiceProvider: pulumi.String("serviceProvider1"),
-			ResourceGroupName:      pulumi.String("rgName"),
+			Location:                       pulumi.String("eastus"),
+			PeeringServiceLocation:         pulumi.String("state1"),
+			PeeringServiceName:             pulumi.String("peeringServiceName"),
+			PeeringServiceProvider:         pulumi.String("serviceProvider1"),
+			ProviderBackupPeeringLocation:  pulumi.String("peeringLocation2"),
+			ProviderPrimaryPeeringLocation: pulumi.String("peeringLocation1"),
+			ResourceGroupName:              pulumi.String("rgName"),
 		})
 		if err != nil {
 			return err
@@ -96,6 +100,8 @@ peering_service = azure_native.peering.PeeringService("peeringService",
     peering_service_location="state1",
     peering_service_name="peeringServiceName",
     peering_service_provider="serviceProvider1",
+    provider_backup_peering_location="peeringLocation2",
+    provider_primary_peering_location="peeringLocation1",
     resource_group_name="rgName")
 
 ```
@@ -116,6 +122,8 @@ const peeringService = new azure_native.peering.PeeringService("peeringService",
     peeringServiceLocation: "state1",
     peeringServiceName: "peeringServiceName",
     peeringServiceProvider: "serviceProvider1",
+    providerBackupPeeringLocation: "peeringLocation2",
+    providerPrimaryPeeringLocation: "peeringLocation1",
     resourceGroupName: "rgName",
 });
 
@@ -142,7 +150,7 @@ const peeringService = new azure_native.peering.PeeringService("peeringService",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PeeringService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_service_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_service_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[PeeringServiceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PeeringService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_service_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_service_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_backup_peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_primary_peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[PeeringServiceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +314,7 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PeeringServiceLocation of the Customer.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location (state/province) of the customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peeringservicename_csharp">
 <a href="#peeringservicename_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Service<wbr>Name</a>
@@ -322,7 +330,23 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAPS Provider Name.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the service provider.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="providerbackuppeeringlocation_csharp">
+<a href="#providerbackuppeeringlocation_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The backup peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="providerprimarypeeringlocation_csharp">
+<a href="#providerprimarypeeringlocation_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Primary<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -366,7 +390,7 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PeeringServiceLocation of the Customer.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location (state/province) of the customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peeringservicename_go">
 <a href="#peeringservicename_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Service<wbr>Name</a>
@@ -382,7 +406,23 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAPS Provider Name.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the service provider.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="providerbackuppeeringlocation_go">
+<a href="#providerbackuppeeringlocation_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The backup peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="providerprimarypeeringlocation_go">
+<a href="#providerprimarypeeringlocation_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Primary<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -426,7 +466,7 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PeeringServiceLocation of the Customer.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location (state/province) of the customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peeringservicename_nodejs">
 <a href="#peeringservicename_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Service<wbr>Name</a>
@@ -442,7 +482,23 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAPS Provider Name.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the service provider.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="providerbackuppeeringlocation_nodejs">
+<a href="#providerbackuppeeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Backup<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The backup peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="providerprimarypeeringlocation_nodejs">
+<a href="#providerprimarypeeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Primary<wbr>Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -486,7 +542,7 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The PeeringServiceLocation of the Customer.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The location (state/province) of the customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peering_service_name_python">
 <a href="#peering_service_name_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>service_<wbr>name</a>
@@ -502,7 +558,23 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MAPS Provider Name.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the service provider.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provider_backup_peering_location_python">
+<a href="#provider_backup_peering_location_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>backup_<wbr>peering_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The backup peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provider_primary_peering_location_python">
+<a href="#provider_primary_peering_location_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>primary_<wbr>peering_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The primary peering (Microsoft/service provider) location to be used for customer traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>

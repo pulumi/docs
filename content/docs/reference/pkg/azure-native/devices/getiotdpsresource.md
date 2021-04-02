@@ -476,7 +476,7 @@ The following output properties are available:
 <a href="#ipfilterrules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetipfilterruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +568,7 @@ The following output properties are available:
 <a href="#ipfilterrules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterruleresponse">[]Ip<wbr>Filter<wbr>Rule<wbr>Response</a></span>
+        <span class="property-type"><a href="#targetipfilterruleresponse">[]Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +660,7 @@ The following output properties are available:
 <a href="#ipfilterrules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterruleresponse">Ip<wbr>Filter<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#targetipfilterruleresponse">Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -752,7 +752,7 @@ The following output properties are available:
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterruleresponse">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetipfilterruleresponse">Sequence[Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,122 +1083,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}flag for applying allocationPolicy or not for a given iot hub.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="ipfilterruleresponse">Ip<wbr>Filter<wbr>Rule<wbr>Response</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_csharp">
-<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="filtername_csharp">
-<a href="#filtername_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ipmask_csharp">
-<a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_go">
-<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="filtername_go">
-<a href="#filtername_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ipmask_go">
-<a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_nodejs">
-<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="filtername_nodejs">
-<a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ipmask_nodejs">
-<a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_python">
-<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="filter_name_python">
-<a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ip_mask_python">
-<a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</h4>
@@ -1747,6 +1631,154 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="targetipfilterruleresponse">Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filtername_csharp">
+<a href="#filtername_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipmask_csharp">
+<a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target for requests captured by this rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filtername_go">
+<a href="#filtername_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipmask_go">
+<a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target for requests captured by this rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filtername_nodejs">
+<a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipmask_nodejs">
+<a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target for requests captured by this rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filter_name_python">
+<a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ip_mask_python">
+<a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Target for requests captured by this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

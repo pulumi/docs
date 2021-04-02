@@ -12,13 +12,160 @@ meta_desc: "Documentation for the azure-native.devtestlab.Policy resource with e
 
 A Policy.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{policySetName}/policies/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Policies_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var policy = new AzureNative.DevTestLab.Policy("policy", new AzureNative.DevTestLab.PolicyArgs
+        {
+            Description = "{policyDescription}",
+            EvaluatorType = "{policyEvaluatorType}",
+            FactData = "{policyFactData}",
+            FactName = "{policyFactName}",
+            LabName = "{labName}",
+            Location = "{location}",
+            Name = "{policyName}",
+            PolicySetName = "{policySetName}",
+            ResourceGroupName = "resourceGroupName",
+            Status = "{policyStatus}",
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+            Threshold = "{policyThreshold}",
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewPolicy(ctx, "policy", &devtestlab.PolicyArgs{
+			Description:       pulumi.String("{policyDescription}"),
+			EvaluatorType:     pulumi.String("{policyEvaluatorType}"),
+			FactData:          pulumi.String("{policyFactData}"),
+			FactName:          pulumi.String("{policyFactName}"),
+			LabName:           pulumi.String("{labName}"),
+			Location:          pulumi.String("{location}"),
+			Name:              pulumi.String("{policyName}"),
+			PolicySetName:     pulumi.String("{policySetName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			Status:            pulumi.String("{policyStatus}"),
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+			Threshold: pulumi.String("{policyThreshold}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+policy = azure_native.devtestlab.Policy("policy",
+    description="{policyDescription}",
+    evaluator_type="{policyEvaluatorType}",
+    fact_data="{policyFactData}",
+    fact_name="{policyFactName}",
+    lab_name="{labName}",
+    location="{location}",
+    name="{policyName}",
+    policy_set_name="{policySetName}",
+    resource_group_name="resourceGroupName",
+    status="{policyStatus}",
+    tags={
+        "tagName1": "tagValue1",
+    },
+    threshold="{policyThreshold}")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const policy = new azure_native.devtestlab.Policy("policy", {
+    description: "{policyDescription}",
+    evaluatorType: "{policyEvaluatorType}",
+    factData: "{policyFactData}",
+    factName: "{policyFactName}",
+    labName: "{labName}",
+    location: "{location}",
+    name: "{policyName}",
+    policySetName: "{policySetName}",
+    resourceGroupName: "resourceGroupName",
+    status: "{policyStatus}",
+    tags: {
+        tagName1: "tagValue1",
+    },
+    threshold: "{policyThreshold}",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -873,6 +1020,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Enabled</dd><dt>DISABLED</dt>
     <dd>Disabled</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:Policy {labName} /subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{policySetName}/policies/{policyName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

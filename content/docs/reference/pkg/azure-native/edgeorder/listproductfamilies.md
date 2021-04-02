@@ -27,7 +27,7 @@ API Version: 2020-12-01-preview.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_product_families(</span><span class="nx">customer_subscription_details</span><span class="p">:</span> <span class="nx">Optional[CustomerSubscriptionDetailsArgs]</span> = None<span class="p">, </span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filterable_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, FilterablePropertyArgs]]</span> = None<span class="p">, </span><span class="nx">skip_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListProductFamiliesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_product_families(</span><span class="nx">customer_subscription_details</span><span class="p">:</span> <span class="nx">Optional[CustomerSubscriptionDetailsArgs]</span> = None<span class="p">, </span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filterable_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Sequence[FilterablePropertyArgs]]]</span> = None<span class="p">, </span><span class="nx">skip_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListProductFamiliesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -57,7 +57,7 @@ The following arguments are supported:
 <a href="#filterableproperties_csharp" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -93,7 +93,7 @@ The following arguments are supported:
 <a href="#filterableproperties_go" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Filterable<wbr>Property</span>
+        <span class="property-type">map[string][]Filterable<wbr>Property</span>
     </dt>
     <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -129,7 +129,7 @@ The following arguments are supported:
 <a href="#filterableproperties_nodejs" style="color: inherit; text-decoration: inherit;">filterable<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Filterable<wbr>Property}</span>
+        <span class="property-type">{[key: string]: Filterable<wbr>Property[]}</span>
     </dt>
     <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -165,7 +165,7 @@ The following arguments are supported:
 <a href="#filterable_properties_python" style="color: inherit; text-decoration: inherit;">filterable_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Filterable<wbr>Property<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Sequence[Filterable<wbr>Property<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -405,56 +405,152 @@ The following output properties are available:
     <dd>{{% md %}}Message for why the product is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="billingmodelresponse">Billing<wbr>Model<wbr>Response</h4>
+<h4 id="billingmeterdetailsresponse">Billing<wbr>Meter<wbr>Details<wbr>Response</h4>
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="model_csharp">
-<a href="#model_csharp" style="color: inherit; text-decoration: inherit;">Model</a>
+        <span id="frequency_csharp">
+<a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Frequency of recurrence{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="meterdetails_csharp">
+<a href="#meterdetails_csharp" style="color: inherit; text-decoration: inherit;">Meter<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#meterdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Meter<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Represents MeterDetails{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="meteringtype_csharp">
+<a href="#meteringtype_csharp" style="color: inherit; text-decoration: inherit;">Metering<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Represents Metering type (eg one-time or recurrent){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Represents Billing type name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="model_go">
-<a href="#model_go" style="color: inherit; text-decoration: inherit;">Model</a>
+        <span id="frequency_go">
+<a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Frequency of recurrence{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="meterdetails_go">
+<a href="#meterdetails_go" style="color: inherit; text-decoration: inherit;">Meter<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#meterdetailsresponse">Meter<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Represents MeterDetails{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="meteringtype_go">
+<a href="#meteringtype_go" style="color: inherit; text-decoration: inherit;">Metering<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Represents Metering type (eg one-time or recurrent){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Represents Billing type name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="model_nodejs">
-<a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
+        <span id="frequency_nodejs">
+<a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Frequency of recurrence{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="meterdetails_nodejs">
+<a href="#meterdetails_nodejs" style="color: inherit; text-decoration: inherit;">meter<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#meterdetailsresponse">Meter<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Represents MeterDetails{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="meteringtype_nodejs">
+<a href="#meteringtype_nodejs" style="color: inherit; text-decoration: inherit;">metering<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Represents Metering type (eg one-time or recurrent){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Represents Billing type name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="model_python">
-<a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
+        <span id="frequency_python">
+<a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Frequency of recurrence{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="meter_details_python">
+<a href="#meter_details_python" style="color: inherit; text-decoration: inherit;">meter_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#meterdetailsresponse">Meter<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Represents MeterDetails{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="metering_type_python">
+<a href="#metering_type_python" style="color: inherit; text-decoration: inherit;">metering_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Represents Metering type (eg one-time or recurrent){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Represents Billing type name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationresponse">Configuration<wbr>Response</h4>
@@ -740,81 +836,81 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="meterdetails_csharp">
-<a href="#meterdetails_csharp" style="color: inherit; text-decoration: inherit;">Meter<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meterdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Meter<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="primarymetertype_csharp">
-<a href="#primarymetertype_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Meter<wbr>Type</a>
+        <span id="billinginfourl_csharp">
+<a href="#billinginfourl_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Info<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Default url to display billing information{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="billingmeterdetails_csharp">
+<a href="#billingmeterdetails_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Meter<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#billingmeterdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Billing<wbr>Meter<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="meterdetails_go">
-<a href="#meterdetails_go" style="color: inherit; text-decoration: inherit;">Meter<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meterdetailsresponse">[]Meter<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="primarymetertype_go">
-<a href="#primarymetertype_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Meter<wbr>Type</a>
+        <span id="billinginfourl_go">
+<a href="#billinginfourl_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Info<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Default url to display billing information{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="billingmeterdetails_go">
+<a href="#billingmeterdetails_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Meter<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#billingmeterdetailsresponse">[]Billing<wbr>Meter<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="meterdetails_nodejs">
-<a href="#meterdetails_nodejs" style="color: inherit; text-decoration: inherit;">meter<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meterdetailsresponse">Meter<wbr>Details<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="primarymetertype_nodejs">
-<a href="#primarymetertype_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Meter<wbr>Type</a>
+        <span id="billinginfourl_nodejs">
+<a href="#billinginfourl_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Info<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Default url to display billing information{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="billingmeterdetails_nodejs">
+<a href="#billingmeterdetails_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Meter<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#billingmeterdetailsresponse">Billing<wbr>Meter<wbr>Details<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="meter_details_python">
-<a href="#meter_details_python" style="color: inherit; text-decoration: inherit;">meter_<wbr>details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meterdetailsresponse">Sequence[Meter<wbr>Details<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="primary_meter_type_python">
-<a href="#primary_meter_type_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>meter_<wbr>type</a>
+        <span id="billing_info_url_python">
+<a href="#billing_info_url_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>info_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Default url to display billing information{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="billing_meter_details_python">
+<a href="#billing_meter_details_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>meter_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#billingmeterdetailsresponse">Sequence[Billing<wbr>Meter<wbr>Details<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customersubscriptiondetails">Customer<wbr>Subscription<wbr>Details</h4>
@@ -1236,25 +1332,33 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#supportedfiltertypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Supported<wbr>Filter<wbr>Types</a></span>
-    </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="supportedvalues_csharp">
 <a href="#supportedvalues_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#supportedfiltertypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Supported<wbr>Filter<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="supportedvalues_go">
+<a href="#supportedvalues_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1262,19 +1366,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#supportedfiltertypes">Supported<wbr>Filter<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="supportedvalues_go">
-<a href="#supportedvalues_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="supportedvalues_nodejs">
+<a href="#supportedvalues_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1282,19 +1386,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#supportedfiltertypes">Supported<wbr>Filter<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="supportedvalues_nodejs">
-<a href="#supportedvalues_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="supported_values_python">
+<a href="#supported_values_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1302,15 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#supportedfiltertypes">Supported<wbr>Filter<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="supported_values_python">
-<a href="#supported_values_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filterablepropertyresponse">Filterable<wbr>Property<wbr>Response</h4>
@@ -1320,25 +1416,33 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="supportedvalues_csharp">
 <a href="#supportedvalues_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="supportedvalues_go">
+<a href="#supportedvalues_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1346,19 +1450,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="supportedvalues_go">
-<a href="#supportedvalues_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="supportedvalues_nodejs">
+<a href="#supportedvalues_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1366,19 +1470,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="supportedvalues_nodejs">
-<a href="#supportedvalues_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="supported_values_python">
+<a href="#supported_values_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1386,15 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="supported_values_python">
-<a href="#supported_values_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</h4>
@@ -1720,113 +1816,113 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingmodel_csharp">
-<a href="#billingmodel_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingmodelresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Billing<wbr>Model<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="meterid_csharp">
-<a href="#meterid_csharp" style="color: inherit; text-decoration: inherit;">Meter<wbr>Id</a>
+        <span id="billingtype_csharp">
+<a href="#billingtype_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Represents billing type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="metertype_csharp">
-<a href="#metertype_csharp" style="color: inherit; text-decoration: inherit;">Meter<wbr>Type</a>
+        <span id="chargingtype_csharp">
+<a href="#chargingtype_csharp" style="color: inherit; text-decoration: inherit;">Charging<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Charging type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="multiplier_csharp">
+<a href="#multiplier_csharp" style="color: inherit; text-decoration: inherit;">Multiplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Billing unit applicable for Pav2 billing{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingmodel_go">
-<a href="#billingmodel_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingmodelresponse">Billing<wbr>Model<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="meterid_go">
-<a href="#meterid_go" style="color: inherit; text-decoration: inherit;">Meter<wbr>Id</a>
+        <span id="billingtype_go">
+<a href="#billingtype_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Represents billing type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="metertype_go">
-<a href="#metertype_go" style="color: inherit; text-decoration: inherit;">Meter<wbr>Type</a>
+        <span id="chargingtype_go">
+<a href="#chargingtype_go" style="color: inherit; text-decoration: inherit;">Charging<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Charging type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="multiplier_go">
+<a href="#multiplier_go" style="color: inherit; text-decoration: inherit;">Multiplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Billing unit applicable for Pav2 billing{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingmodel_nodejs">
-<a href="#billingmodel_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingmodelresponse">Billing<wbr>Model<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="meterid_nodejs">
-<a href="#meterid_nodejs" style="color: inherit; text-decoration: inherit;">meter<wbr>Id</a>
+        <span id="billingtype_nodejs">
+<a href="#billingtype_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Represents billing type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="metertype_nodejs">
-<a href="#metertype_nodejs" style="color: inherit; text-decoration: inherit;">meter<wbr>Type</a>
+        <span id="chargingtype_nodejs">
+<a href="#chargingtype_nodejs" style="color: inherit; text-decoration: inherit;">charging<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Charging type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="multiplier_nodejs">
+<a href="#multiplier_nodejs" style="color: inherit; text-decoration: inherit;">multiplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Billing unit applicable for Pav2 billing{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billing_model_python">
-<a href="#billing_model_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingmodelresponse">Billing<wbr>Model<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="meter_id_python">
-<a href="#meter_id_python" style="color: inherit; text-decoration: inherit;">meter_<wbr>id</a>
+        <span id="billing_type_python">
+<a href="#billing_type_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Represents billing type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="meter_type_python">
-<a href="#meter_type_python" style="color: inherit; text-decoration: inherit;">meter_<wbr>type</a>
+        <span id="charging_type_python">
+<a href="#charging_type_python" style="color: inherit; text-decoration: inherit;">charging_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Charging type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="multiplier_python">
+<a href="#multiplier_python" style="color: inherit; text-decoration: inherit;">multiplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Billing unit applicable for Pav2 billing{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="productfamilyresponse">Product<wbr>Family<wbr>Response</h4>

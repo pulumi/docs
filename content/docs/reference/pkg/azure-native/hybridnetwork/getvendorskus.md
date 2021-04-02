@@ -1630,15 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vhd_csharp">
-<a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1666,15 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vhd_go">
-<a href="#vhd_go" style="color: inherit; text-decoration: inherit;">Vhd</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1702,15 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vhd_nodejs">
-<a href="#vhd_nodejs" style="color: inherit; text-decoration: inherit;">vhd</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1738,15 +1714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="vhd_python">
-<a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="osprofileresponse">Os<wbr>Profile<wbr>Response</h4>
@@ -2147,58 +2115,6 @@ The following output properties are available:
         <span class="property-type"><a href="#osdiskresponse">Os<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="uri_csharp">
-<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="uri_go">
-<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="uri_nodejs">
-<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="uri_python">
-<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

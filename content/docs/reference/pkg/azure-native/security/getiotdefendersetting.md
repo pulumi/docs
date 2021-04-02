@@ -102,6 +102,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="onboardingkind_csharp">
+<a href="#onboardingkind_csharp" style="color: inherit; text-decoration: inherit;">Onboarding<wbr>Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The kind of onboarding for the subscription{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sentinelworkspaceresourceids_csharp">
 <a href="#sentinelworkspaceresourceids_csharp" style="color: inherit; text-decoration: inherit;">Sentinel<wbr>Workspace<wbr>Resource<wbr>Ids</a>
 </span>
@@ -145,6 +153,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onboardingkind_go">
+<a href="#onboardingkind_go" style="color: inherit; text-decoration: inherit;">Onboarding<wbr>Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The kind of onboarding for the subscription{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sentinelworkspaceresourceids_go">
 <a href="#sentinelworkspaceresourceids_go" style="color: inherit; text-decoration: inherit;">Sentinel<wbr>Workspace<wbr>Resource<wbr>Ids</a>
@@ -190,6 +206,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="onboardingkind_nodejs">
+<a href="#onboardingkind_nodejs" style="color: inherit; text-decoration: inherit;">onboarding<wbr>Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The kind of onboarding for the subscription{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sentinelworkspaceresourceids_nodejs">
 <a href="#sentinelworkspaceresourceids_nodejs" style="color: inherit; text-decoration: inherit;">sentinel<wbr>Workspace<wbr>Resource<wbr>Ids</a>
 </span>
@@ -233,6 +257,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="onboarding_kind_python">
+<a href="#onboarding_kind_python" style="color: inherit; text-decoration: inherit;">onboarding_<wbr>kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The kind of onboarding for the subscription{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sentinel_workspace_resource_ids_python">
 <a href="#sentinel_workspace_resource_ids_python" style="color: inherit; text-decoration: inherit;">sentinel_<wbr>workspace_<wbr>resource_<wbr>ids</a>

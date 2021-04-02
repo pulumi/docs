@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.FirewallPolicy resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 FirewallPolicy Resource.
-API Version: 2020-08-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 
@@ -45,6 +45,37 @@ class MyStack : Stack
                 },
             },
             FirewallPolicyName = "firewallPolicy",
+            Insights = new AzureNative.Network.Inputs.FirewallPolicyInsightsArgs
+            {
+                IsEnabled = true,
+                LogAnalyticsResources = new AzureNative.Network.Inputs.FirewallPolicyLogAnalyticsResourcesArgs
+                {
+                    DefaultWorkspaceId = new AzureNative.Network.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace",
+                    },
+                    Workspaces = 
+                    {
+                        new AzureNative.Network.Inputs.FirewallPolicyLogAnalyticsWorkspaceArgs
+                        {
+                            Region = "westus",
+                            WorkspaceId = new AzureNative.Network.Inputs.SubResourceArgs
+                            {
+                                Id = "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1",
+                            },
+                        },
+                        new AzureNative.Network.Inputs.FirewallPolicyLogAnalyticsWorkspaceArgs
+                        {
+                            Region = "eastus",
+                            WorkspaceId = new AzureNative.Network.Inputs.SubResourceArgs
+                            {
+                                Id = "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2",
+                            },
+                        },
+                    },
+                },
+                RetentionDays = 100,
+            },
             IntrusionDetection = new AzureNative.Network.Inputs.FirewallPolicyIntrusionDetectionArgs
             {
                 Configuration = new AzureNative.Network.Inputs.FirewallPolicyIntrusionDetectionConfigurationArgs
@@ -86,6 +117,13 @@ class MyStack : Stack
             Sku = new AzureNative.Network.Inputs.FirewallPolicySkuArgs
             {
                 Tier = "Premium",
+            },
+            Snat = new AzureNative.Network.Inputs.FirewallPolicySNATArgs
+            {
+                PrivateRanges = 
+                {
+                    "IANAPrivateRanges",
+                },
             },
             Tags = 
             {
@@ -144,6 +182,29 @@ func main() {
 				},
 			},
 			FirewallPolicyName: pulumi.String("firewallPolicy"),
+			Insights: &network.FirewallPolicyInsightsArgs{
+				IsEnabled: pulumi.Bool(true),
+				LogAnalyticsResources: &network.FirewallPolicyLogAnalyticsResourcesArgs{
+					DefaultWorkspaceId: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace"),
+					},
+					Workspaces: network.FirewallPolicyLogAnalyticsWorkspaceArray{
+						&network.FirewallPolicyLogAnalyticsWorkspaceArgs{
+							Region: pulumi.String("westus"),
+							WorkspaceId: &network.SubResourceArgs{
+								Id: pulumi.String("/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1"),
+							},
+						},
+						&network.FirewallPolicyLogAnalyticsWorkspaceArgs{
+							Region: pulumi.String("eastus"),
+							WorkspaceId: &network.SubResourceArgs{
+								Id: pulumi.String("/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2"),
+							},
+						},
+					},
+				},
+				RetentionDays: pulumi.Int(100),
+			},
 			IntrusionDetection: &network.FirewallPolicyIntrusionDetectionArgs{
 				Configuration: &network.FirewallPolicyIntrusionDetectionConfigurationArgs{
 					BypassTrafficSettings: network.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArray{
@@ -175,6 +236,11 @@ func main() {
 			ResourceGroupName: pulumi.String("rg1"),
 			Sku: &network.FirewallPolicySkuArgs{
 				Tier: pulumi.String("Premium"),
+			},
+			Snat: &network.FirewallPolicySNATArgs{
+				PrivateRanges: pulumi.StringArray{
+					pulumi.String("IANAPrivateRanges"),
+				},
 			},
 			Tags: pulumi.StringMap{
 				"key1": pulumi.String("value1"),
@@ -222,6 +288,29 @@ firewall_policy = azure_native.network.FirewallPolicy("firewallPolicy",
         servers=["30.3.4.5"],
     ),
     firewall_policy_name="firewallPolicy",
+    insights=azure_native.network.FirewallPolicyInsightsArgs(
+        is_enabled=True,
+        log_analytics_resources=azure_native.network.FirewallPolicyLogAnalyticsResourcesArgs(
+            default_workspace_id=azure_native.network.SubResourceArgs(
+                id="/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace",
+            ),
+            workspaces=[
+                azure_native.network.FirewallPolicyLogAnalyticsWorkspaceArgs(
+                    region="westus",
+                    workspace_id=azure_native.network.SubResourceArgs(
+                        id="/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1",
+                    ),
+                ),
+                azure_native.network.FirewallPolicyLogAnalyticsWorkspaceArgs(
+                    region="eastus",
+                    workspace_id=azure_native.network.SubResourceArgs(
+                        id="/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2",
+                    ),
+                ),
+            ],
+        ),
+        retention_days=100,
+    ),
     intrusion_detection=azure_native.network.FirewallPolicyIntrusionDetectionArgs(
         configuration=azure_native.network.FirewallPolicyIntrusionDetectionConfigurationArgs(
             bypass_traffic_settings=[azure_native.network.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs(
@@ -243,6 +332,9 @@ firewall_policy = azure_native.network.FirewallPolicy("firewallPolicy",
     resource_group_name="rg1",
     sku=azure_native.network.FirewallPolicySkuArgs(
         tier="Premium",
+    ),
+    snat=azure_native.network.FirewallPolicySNATArgs(
+        private_ranges=["IANAPrivateRanges"],
     ),
     tags={
         "key1": "value1",
@@ -279,6 +371,29 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
         servers: ["30.3.4.5"],
     },
     firewallPolicyName: "firewallPolicy",
+    insights: {
+        isEnabled: true,
+        logAnalyticsResources: {
+            defaultWorkspaceId: {
+                id: "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace",
+            },
+            workspaces: [
+                {
+                    region: "westus",
+                    workspaceId: {
+                        id: "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1",
+                    },
+                },
+                {
+                    region: "eastus",
+                    workspaceId: {
+                        id: "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2",
+                    },
+                },
+            ],
+        },
+        retentionDays: 100,
+    },
     intrusionDetection: {
         configuration: {
             bypassTrafficSettings: [{
@@ -300,6 +415,9 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
     resourceGroupName: "rg1",
     sku: {
         tier: "Premium",
+    },
+    snat: {
+        privateRanges: ["IANAPrivateRanges"],
     },
     tags: {
         key1: "value1",
@@ -340,7 +458,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">base_policy</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">dns_settings</span><span class="p">:</span> <span class="nx">Optional[DnsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">intrusion_detection</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIntrusionDetectionArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicySkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, AzureFirewallThreatIntelMode]]</span> = None<span class="p">, </span><span class="nx">threat_intel_whitelist</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyThreatIntelWhitelistArgs]</span> = None<span class="p">, </span><span class="nx">transport_security</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyTransportSecurityArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">base_policy</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">dns_settings</span><span class="p">:</span> <span class="nx">Optional[DnsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">insights</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyInsightsArgs]</span> = None<span class="p">, </span><span class="nx">intrusion_detection</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIntrusionDetectionArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicySkuArgs]</span> = None<span class="p">, </span><span class="nx">snat</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicySNATArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, AzureFirewallThreatIntelMode]]</span> = None<span class="p">, </span><span class="nx">threat_intel_whitelist</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyThreatIntelWhitelistArgs]</span> = None<span class="p">, </span><span class="nx">transport_security</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyTransportSecurityArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -530,6 +648,14 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="insights_csharp">
+<a href="#insights_csharp" style="color: inherit; text-decoration: inherit;">Insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Insights<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Insights on Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="intrusiondetection_csharp">
 <a href="#intrusiondetection_csharp" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
 </span>
@@ -553,6 +679,14 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicysku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snat_csharp">
+<a href="#snat_csharp" style="color: inherit; text-decoration: inherit;">Snat</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicysnat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>SNATArgs</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP addresses/IP ranges to which traffic will not be SNAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -638,6 +772,14 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="insights_go">
+<a href="#insights_go" style="color: inherit; text-decoration: inherit;">Insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights</a></span>
+    </dt>
+    <dd>{{% md %}}Insights on Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="intrusiondetection_go">
 <a href="#intrusiondetection_go" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
 </span>
@@ -661,6 +803,14 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicysku">Firewall<wbr>Policy<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snat_go">
+<a href="#snat_go" style="color: inherit; text-decoration: inherit;">Snat</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicysnat">Firewall<wbr>Policy<wbr>SNAT</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP addresses/IP ranges to which traffic will not be SNAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -746,6 +896,14 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="insights_nodejs">
+<a href="#insights_nodejs" style="color: inherit; text-decoration: inherit;">insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights</a></span>
+    </dt>
+    <dd>{{% md %}}Insights on Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="intrusiondetection_nodejs">
 <a href="#intrusiondetection_nodejs" style="color: inherit; text-decoration: inherit;">intrusion<wbr>Detection</a>
 </span>
@@ -769,6 +927,14 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicysku">Firewall<wbr>Policy<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snat_nodejs">
+<a href="#snat_nodejs" style="color: inherit; text-decoration: inherit;">snat</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicysnat">Firewall<wbr>Policy<wbr>SNAT</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP addresses/IP ranges to which traffic will not be SNAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -854,6 +1020,14 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="insights_python">
+<a href="#insights_python" style="color: inherit; text-decoration: inherit;">insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Insights on Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="intrusion_detection_python">
 <a href="#intrusion_detection_python" style="color: inherit; text-decoration: inherit;">intrusion_<wbr>detection</a>
 </span>
@@ -877,6 +1051,14 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicysku">Firewall<wbr>Policy<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snat_python">
+<a href="#snat_python" style="color: inherit; text-decoration: inherit;">snat</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicysnat">Firewall<wbr>Policy<wbr>SNATArgs</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP addresses/IP ranges to which traffic will not be SNAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1620,6 +1802,234 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isenabled_csharp">
+<a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate if the insights are enabled on the policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loganalyticsresources_csharp">
+<a href="#loganalyticsresources_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresources">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_csharp">
+<a href="#retentiondays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days the insights should be enabled on the policy.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isenabled_go">
+<a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate if the insights are enabled on the policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loganalyticsresources_go">
+<a href="#loganalyticsresources_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresources">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources</a></span>
+    </dt>
+    <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_go">
+<a href="#retentiondays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days the insights should be enabled on the policy.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isenabled_nodejs">
+<a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate if the insights are enabled on the policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loganalyticsresources_nodejs">
+<a href="#loganalyticsresources_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresources">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources</a></span>
+    </dt>
+    <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_nodejs">
+<a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of days the insights should be enabled on the policy.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate if the insights are enabled on the policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="log_analytics_resources_python">
+<a href="#log_analytics_resources_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresources">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_days_python">
+<a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days the insights should be enabled on the policy.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyinsightsresponse">Firewall<wbr>Policy<wbr>Insights<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isenabled_csharp">
+<a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate if the insights are enabled on the policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loganalyticsresources_csharp">
+<a href="#loganalyticsresources_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_csharp">
+<a href="#retentiondays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days the insights should be enabled on the policy.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isenabled_go">
+<a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate if the insights are enabled on the policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loganalyticsresources_go">
+<a href="#loganalyticsresources_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_go">
+<a href="#retentiondays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days the insights should be enabled on the policy.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="isenabled_nodejs">
+<a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate if the insights are enabled on the policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loganalyticsresources_nodejs">
+<a href="#loganalyticsresources_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_nodejs">
+<a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of days the insights should be enabled on the policy.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag to indicate if the insights are enabled on the policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="log_analytics_resources_python">
+<a href="#log_analytics_resources_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_days_python">
+<a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days the insights should be enabled on the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection</h4>
@@ -2724,6 +3134,434 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Off</dd><dt>ALERT</dt>
     <dd>Alert</dd><dt>DENY</dt>
     <dd>Deny</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyloganalyticsresources">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultworkspaceid_csharp">
+<a href="#defaultworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaces_csharp">
+<a href="#workspaces_csharp" style="color: inherit; text-decoration: inherit;">Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspace">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultworkspaceid_go">
+<a href="#defaultworkspaceid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+    </dt>
+    <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaces_go">
+<a href="#workspaces_go" style="color: inherit; text-decoration: inherit;">Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspace">[]Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace</a></span>
+    </dt>
+    <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultworkspaceid_nodejs">
+<a href="#defaultworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+    </dt>
+    <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaces_nodejs">
+<a href="#workspaces_nodejs" style="color: inherit; text-decoration: inherit;">workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspace">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_workspace_id_python">
+<a href="#default_workspace_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>workspace_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaces_python">
+<a href="#workspaces_python" style="color: inherit; text-decoration: inherit;">workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspace">Sequence[Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyloganalyticsresourcesresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultworkspaceid_csharp">
+<a href="#defaultworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaces_csharp">
+<a href="#workspaces_csharp" style="color: inherit; text-decoration: inherit;">Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultworkspaceid_go">
+<a href="#defaultworkspaceid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaces_go">
+<a href="#workspaces_go" style="color: inherit; text-decoration: inherit;">Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">[]Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultworkspaceid_nodejs">
+<a href="#defaultworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaces_nodejs">
+<a href="#workspaces_nodejs" style="color: inherit; text-decoration: inherit;">workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_workspace_id_python">
+<a href="#default_workspace_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>workspace_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaces_python">
+<a href="#workspaces_python" style="color: inherit; text-decoration: inherit;">workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">Sequence[Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyloganalyticsworkspace">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region to configure the Workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaceid_csharp">
+<a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region to configure the Workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaceid_go">
+<a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region to configure the Workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaceid_nodejs">
+<a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Region to configure the Workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspace_id_python">
+<a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyloganalyticsworkspaceresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region to configure the Workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaceid_csharp">
+<a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region to configure the Workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaceid_go">
+<a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region to configure the Workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspaceid_nodejs">
+<a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Region to configure the Workspace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workspace_id_python">
+<a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicysnat">Firewall<wbr>Policy<wbr>SNAT</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="privateranges_csharp">
+<a href="#privateranges_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of private IP addresses/IP address ranges to not be SNAT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="privateranges_go">
+<a href="#privateranges_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of private IP addresses/IP address ranges to not be SNAT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="privateranges_nodejs">
+<a href="#privateranges_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of private IP addresses/IP address ranges to not be SNAT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="private_ranges_python">
+<a href="#private_ranges_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of private IP addresses/IP address ranges to not be SNAT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicysnatresponse">Firewall<wbr>Policy<wbr>SNATResponse</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="privateranges_csharp">
+<a href="#privateranges_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of private IP addresses/IP address ranges to not be SNAT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="privateranges_go">
+<a href="#privateranges_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of private IP addresses/IP address ranges to not be SNAT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="privateranges_nodejs">
+<a href="#privateranges_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of private IP addresses/IP address ranges to not be SNAT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="private_ranges_python">
+<a href="#private_ranges_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of private IP addresses/IP address ranges to not be SNAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicysku">Firewall<wbr>Policy<wbr>Sku</h4>

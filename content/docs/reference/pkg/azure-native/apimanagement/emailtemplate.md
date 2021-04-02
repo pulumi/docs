@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.apimanagement.EmailTemplate resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Email Template details.
-API Version: 2019-12-01.
+API Version: 2020-12-01.
 
 {{% examples %}}
 
@@ -20,7 +20,7 @@ API Version: 2019-12-01.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### ApiManagementCreateEmailTemplate
+### ApiManagementCreateTemplate
 
 
 {{< example csharp >}}

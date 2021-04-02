@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.sql.getServerKey function with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A server key.
-API Version: 2020-08-01-preview.
+API Version: 2020-11-01-preview.
 
 
 
@@ -174,6 +174,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="autorotationenabled_csharp">
+<a href="#autorotationenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rotation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Key auto rotation opt-in flag. Either true or false.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
 </span>
@@ -214,14 +222,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="serverkeytype_csharp">
-<a href="#serverkeytype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Key<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="subregion_csharp">
 <a href="#subregion_csharp" style="color: inherit; text-decoration: inherit;">Subregion</a>
 </span>
@@ -244,19 +244,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="uri_csharp">
-<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="autorotationenabled_go">
+<a href="#autorotationenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rotation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Key auto rotation opt-in flag. Either true or false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -298,14 +298,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="serverkeytype_go">
-<a href="#serverkeytype_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Key<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="subregion_go">
 <a href="#subregion_go" style="color: inherit; text-decoration: inherit;">Subregion</a>
 </span>
@@ -328,19 +320,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="uri_go">
-<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="autorotationenabled_nodejs">
+<a href="#autorotationenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Rotation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Key auto rotation opt-in flag. Either true or false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -382,14 +374,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="serverkeytype_nodejs">
-<a href="#serverkeytype_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Key<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The server key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="subregion_nodejs">
 <a href="#subregion_nodejs" style="color: inherit; text-decoration: inherit;">subregion</a>
 </span>
@@ -412,19 +396,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="uri_nodejs">
-<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="auto_rotation_enabled_python">
+<a href="#auto_rotation_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>rotation_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Key auto rotation opt-in flag. Either true or false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -466,14 +450,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="server_key_type_python">
-<a href="#server_key_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>key_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The server key type like 'ServiceManaged', 'AzureKeyVault'.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="subregion_python">
 <a href="#subregion_python" style="color: inherit; text-decoration: inherit;">subregion</a>
 </span>
@@ -496,15 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="uri_python">
-<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

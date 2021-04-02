@@ -12,13 +12,144 @@ meta_desc: "Documentation for the azure-native.devtestlab.ServiceFabric resource
 
 A Service Fabric.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:ServiceFabric myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/servicefabrics/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### ServiceFabrics_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceFabric = new AzureNative.DevTestLab.ServiceFabric("serviceFabric", new AzureNative.DevTestLab.ServiceFabricArgs
+        {
+            EnvironmentId = "{environmentId}",
+            ExternalServiceFabricId = "{serviceFabricId}",
+            LabName = "{labName}",
+            Location = "{location}",
+            Name = "{serviceFabricName}",
+            ResourceGroupName = "resourceGroupName",
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+            UserName = "{userName}",
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewServiceFabric(ctx, "serviceFabric", &devtestlab.ServiceFabricArgs{
+			EnvironmentId:           pulumi.String("{environmentId}"),
+			ExternalServiceFabricId: pulumi.String("{serviceFabricId}"),
+			LabName:                 pulumi.String("{labName}"),
+			Location:                pulumi.String("{location}"),
+			Name:                    pulumi.String("{serviceFabricName}"),
+			ResourceGroupName:       pulumi.String("resourceGroupName"),
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+			UserName: pulumi.String("{userName}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+service_fabric = azure_native.devtestlab.ServiceFabric("serviceFabric",
+    environment_id="{environmentId}",
+    external_service_fabric_id="{serviceFabricId}",
+    lab_name="{labName}",
+    location="{location}",
+    name="{serviceFabricName}",
+    resource_group_name="resourceGroupName",
+    tags={
+        "tagName1": "tagValue1",
+    },
+    user_name="{userName}")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const serviceFabric = new azure_native.devtestlab.ServiceFabric("serviceFabric", {
+    environmentId: "{environmentId}",
+    externalServiceFabricId: "{serviceFabricId}",
+    labName: "{labName}",
+    location: "{location}",
+    name: "{serviceFabricName}",
+    resourceGroupName: "resourceGroupName",
+    tags: {
+        tagName1: "tagValue1",
+    },
+    userName: "{userName}",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -1767,6 +1898,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:ServiceFabric {serviceFabricName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/users/{userName}/servicefabrics/{serviceFabricName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

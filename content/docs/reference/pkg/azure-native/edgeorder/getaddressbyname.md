@@ -432,6 +432,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="emaillist_csharp">
+<a href="#emaillist_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
 </span>
@@ -467,6 +475,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="emaillist_go">
+<a href="#emaillist_go" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -504,6 +520,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="emaillist_nodejs">
+<a href="#emaillist_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
@@ -539,6 +563,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="email_list_python">
+<a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>

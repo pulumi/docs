@@ -12,13 +12,169 @@ meta_desc: "Documentation for the azure-native.devtestlab.GlobalSchedule resourc
 
 A schedule.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:GlobalSchedule myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/schedules/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### GlobalSchedules_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var globalSchedule = new AzureNative.DevTestLab.GlobalSchedule("globalSchedule", new AzureNative.DevTestLab.GlobalScheduleArgs
+        {
+            Name = "labvmautostart",
+            ResourceGroupName = "resourceGroupName",
+            Status = "Enabled",
+            TaskType = "LabVmsStartupTask",
+            TimeZoneId = "Hawaiian Standard Time",
+            WeeklyRecurrence = new AzureNative.DevTestLab.Inputs.WeekDetailsArgs
+            {
+                Time = "0700",
+                Weekdays = 
+                {
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                },
+            },
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewGlobalSchedule(ctx, "globalSchedule", &devtestlab.GlobalScheduleArgs{
+			Name:              pulumi.String("labvmautostart"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			Status:            pulumi.String("Enabled"),
+			TaskType:          pulumi.String("LabVmsStartupTask"),
+			TimeZoneId:        pulumi.String("Hawaiian Standard Time"),
+			WeeklyRecurrence: &devtestlab.WeekDetailsArgs{
+				Time: pulumi.String("0700"),
+				Weekdays: pulumi.StringArray{
+					pulumi.String("Monday"),
+					pulumi.String("Tuesday"),
+					pulumi.String("Wednesday"),
+					pulumi.String("Thursday"),
+					pulumi.String("Friday"),
+					pulumi.String("Saturday"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+global_schedule = azure_native.devtestlab.GlobalSchedule("globalSchedule",
+    name="labvmautostart",
+    resource_group_name="resourceGroupName",
+    status="Enabled",
+    task_type="LabVmsStartupTask",
+    time_zone_id="Hawaiian Standard Time",
+    weekly_recurrence=azure_native.devtestlab.WeekDetailsArgs(
+        time="0700",
+        weekdays=[
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+        ],
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const globalSchedule = new azure_native.devtestlab.GlobalSchedule("globalSchedule", {
+    name: "labvmautostart",
+    resourceGroupName: "resourceGroupName",
+    status: "Enabled",
+    taskType: "LabVmsStartupTask",
+    timeZoneId: "Hawaiian Standard Time",
+    weeklyRecurrence: {
+        time: "0700",
+        weekdays: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+        ],
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -1509,6 +1665,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:GlobalSchedule LabVmAutoStart /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/schedules/labvmautostart 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

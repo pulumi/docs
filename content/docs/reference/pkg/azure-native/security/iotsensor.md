@@ -36,8 +36,8 @@ class MyStack : Stack
         var iotSensor = new AzureNative.Security.IotSensor("iotSensor", new AzureNative.Security.IotSensorArgs
         {
             IotSensorName = "mySensor",
-            IsEnterpriseSensor = false,
             Scope = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
+            SensorType = "Ot",
             TiAutomaticUpdates = true,
             Zone = "Zone Name",
         });
@@ -66,8 +66,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := security.NewIotSensor(ctx, "iotSensor", &security.IotSensorArgs{
 			IotSensorName:      pulumi.String("mySensor"),
-			IsEnterpriseSensor: pulumi.Bool(false),
 			Scope:              pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub"),
+			SensorType:         pulumi.String("Ot"),
 			TiAutomaticUpdates: pulumi.Bool(true),
 			Zone:               pulumi.String("Zone Name"),
 		})
@@ -93,8 +93,8 @@ import pulumi_azure_native as azure_native
 
 iot_sensor = azure_native.security.IotSensor("iotSensor",
     iot_sensor_name="mySensor",
-    is_enterprise_sensor=False,
     scope="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
+    sensor_type="Ot",
     ti_automatic_updates=True,
     zone="Zone Name")
 
@@ -113,8 +113,8 @@ import * as azure_native from "@pulumi/azure-native";
 
 const iotSensor = new azure_native.security.IotSensor("iotSensor", {
     iotSensorName: "mySensor",
-    isEnterpriseSensor: false,
     scope: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
+    sensorType: "Ot",
     tiAutomaticUpdates: true,
     zone: "Zone Name",
 });
@@ -142,7 +142,7 @@ const iotSensor = new azure_native.security.IotSensor("iotSensor", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotSensor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">iot_sensor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enterprise_sensor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ti_automatic_updates</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotSensor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">iot_sensor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sensor_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SensorType]]</span> = None<span class="p">, </span><span class="nx">ti_automatic_updates</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -300,13 +300,13 @@ The IotSensor resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="isenterprisesensor_csharp">
-<a href="#isenterprisesensor_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enterprise<wbr>Sensor</a>
+        <span id="sensortype_csharp">
+<a href="#sensortype_csharp" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string | <a href="#sensortype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Sensor<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of sensor{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiautomaticupdates_csharp">
 <a href="#tiautomaticupdates_csharp" style="color: inherit; text-decoration: inherit;">Ti<wbr>Automatic<wbr>Updates</a>
@@ -344,13 +344,13 @@ The IotSensor resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="isenterprisesensor_go">
-<a href="#isenterprisesensor_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enterprise<wbr>Sensor</a>
+        <span id="sensortype_go">
+<a href="#sensortype_go" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string | <a href="#sensortype">Sensor<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of sensor{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiautomaticupdates_go">
 <a href="#tiautomaticupdates_go" style="color: inherit; text-decoration: inherit;">Ti<wbr>Automatic<wbr>Updates</a>
@@ -388,13 +388,13 @@ The IotSensor resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="isenterprisesensor_nodejs">
-<a href="#isenterprisesensor_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enterprise<wbr>Sensor</a>
+        <span id="sensortype_nodejs">
+<a href="#sensortype_nodejs" style="color: inherit; text-decoration: inherit;">sensor<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string | <a href="#sensortype">Sensor<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of sensor{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiautomaticupdates_nodejs">
 <a href="#tiautomaticupdates_nodejs" style="color: inherit; text-decoration: inherit;">ti<wbr>Automatic<wbr>Updates</a>
@@ -432,13 +432,13 @@ The IotSensor resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="is_enterprise_sensor_python">
-<a href="#is_enterprise_sensor_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enterprise_<wbr>sensor</a>
+        <span id="sensor_type_python">
+<a href="#sensor_type_python" style="color: inherit; text-decoration: inherit;">sensor_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str | <a href="#sensortype">Sensor<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of sensor{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ti_automatic_updates_python">
 <a href="#ti_automatic_updates_python" style="color: inherit; text-decoration: inherit;">ti_<wbr>automatic_<wbr>updates</a>
@@ -837,6 +837,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="sensortype">Sensor<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ot</dt>
+    <dd>Ot</dd><dt>Enterprise</dt>
+    <dd>Enterprise</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Sensor<wbr>Type<wbr>Ot</dt>
+    <dd>Ot</dd><dt>Sensor<wbr>Type<wbr>Enterprise</dt>
+    <dd>Enterprise</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ot</dt>
+    <dd>Ot</dd><dt>Enterprise</dt>
+    <dd>Enterprise</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OT</dt>
+    <dd>Ot</dd><dt>ENTERPRISE</dt>
+    <dd>Enterprise</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

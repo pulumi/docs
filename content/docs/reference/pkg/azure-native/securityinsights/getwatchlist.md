@@ -274,7 +274,7 @@ The following output properties are available:
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#watchlistuserinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Watchlist<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd><dt class="property-"
             title="">
@@ -354,7 +354,7 @@ The following output properties are available:
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#watchlistuserinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Watchlist<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd><dt class="property-"
             title="">
@@ -470,7 +470,7 @@ The following output properties are available:
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#watchlistuserinforesponse">Watchlist<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd><dt class="property-"
             title="">
@@ -550,7 +550,7 @@ The following output properties are available:
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#watchlistuserinforesponse">Watchlist<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd><dt class="property-"
             title="">
@@ -666,7 +666,7 @@ The following output properties are available:
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#watchlistuserinforesponse">Watchlist<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd><dt class="property-"
             title="">
@@ -746,7 +746,7 @@ The following output properties are available:
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#watchlistuserinforesponse">Watchlist<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd><dt class="property-"
             title="">
@@ -862,7 +862,7 @@ The following output properties are available:
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#watchlistuserinforesponse">Watchlist<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist{{% /md %}}</dd><dt class="property-"
             title="">
@@ -942,7 +942,7 @@ The following output properties are available:
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#watchlistuserinforesponse">Watchlist<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd><dt class="property-"
             title="">
@@ -993,7 +993,7 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="userinforesponse">User<wbr>Info<wbr>Response</h4>
+<h4 id="watchlistuserinforesponse">Watchlist<wbr>User<wbr>Info<wbr>Response</h4>
 
 
 

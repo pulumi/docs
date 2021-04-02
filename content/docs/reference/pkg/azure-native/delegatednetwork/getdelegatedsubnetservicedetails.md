@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.delegatednetwork.getDelegatedSubn
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of a orchestrator.
-API Version: 2020-08-08-preview.
+API Version: 2021-03-15.
 
 
 
@@ -59,7 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -79,7 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -99,7 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -119,7 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Resource group of which a given DelegatedNetwork resource is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -188,7 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Delegated<wbr>Network.<wbr>Outputs.<wbr>Controller<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -204,7 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Delegated<wbr>Network.<wbr>Outputs.<wbr>Subnet<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}orchestrator details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}subnet details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -264,7 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetailsresponse">Controller<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -280,7 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetdetailsresponse">Subnet<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}orchestrator details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}subnet details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -340,7 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetailsresponse">Controller<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -356,7 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetdetailsresponse">Subnet<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}orchestrator details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}subnet details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -416,7 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerdetailsresponse">Controller<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}controller details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -432,7 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetdetailsresponse">Subnet<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}orchestrator details{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}subnet details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

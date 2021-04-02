@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.getP2sVpnGatewayP2sVpnCon
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 P2S Vpn connection detailed health written to sas url.
-API Version: 2020-08-01.
+API Version: 2020-11-01.
 
 
 

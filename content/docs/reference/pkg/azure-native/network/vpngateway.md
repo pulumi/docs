@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.VpnGateway resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VpnGateway Resource.
-API Version: 2020-08-01.
+API Version: 2020-11-01.
 
 {{% examples %}}
 
@@ -3200,6 +3200,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="trafficselectorpolicy">Traffic<wbr>Selector<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_csharp">
+<a href="#localaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_csharp">
+<a href="#remoteaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_go">
+<a href="#localaddressranges_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_go">
+<a href="#remoteaddressranges_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_nodejs">
+<a href="#localaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_nodejs">
+<a href="#remoteaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="local_address_ranges_python">
+<a href="#local_address_ranges_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remote_address_ranges_python">
+<a href="#remote_address_ranges_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="trafficselectorpolicyresponse">Traffic<wbr>Selector<wbr>Policy<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_csharp">
+<a href="#localaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_csharp">
+<a href="#remoteaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_go">
+<a href="#localaddressranges_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_go">
+<a href="#remoteaddressranges_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="localaddressranges_nodejs">
+<a href="#localaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remoteaddressranges_nodejs">
+<a href="#remoteaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="local_address_ranges_python">
+<a href="#local_address_ranges_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="remote_address_ranges_python">
+<a href="#remote_address_ranges_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="virtualnetworkgatewayconnectionprotocol">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol</h4>
 
 {{% choosable language csharp %}}
@@ -3427,6 +3591,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trafficselectorpolicies_csharp">
+<a href="#trafficselectorpolicies_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="uselocalazureipaddress_csharp">
 <a href="#uselocalazureipaddress_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
 </span>
@@ -3558,6 +3730,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trafficselectorpolicies_go">
+<a href="#trafficselectorpolicies_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">[]Traffic<wbr>Selector<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uselocalazureipaddress_go">
 <a href="#uselocalazureipaddress_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
@@ -3691,6 +3871,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trafficselectorpolicies_nodejs">
+<a href="#trafficselectorpolicies_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">Traffic<wbr>Selector<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="uselocalazureipaddress_nodejs">
 <a href="#uselocalazureipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
 </span>
@@ -3822,6 +4010,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="traffic_selector_policies_python">
+<a href="#traffic_selector_policies_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">Sequence[Traffic<wbr>Selector<wbr>Policy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_local_azure_ip_address_python">
 <a href="#use_local_azure_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>azure_<wbr>ip_<wbr>address</a>
@@ -3997,6 +4193,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trafficselectorpolicies_csharp">
+<a href="#trafficselectorpolicies_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="uselocalazureipaddress_csharp">
 <a href="#uselocalazureipaddress_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
 </span>
@@ -4168,6 +4372,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trafficselectorpolicies_go">
+<a href="#trafficselectorpolicies_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicyresponse">[]Traffic<wbr>Selector<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uselocalazureipaddress_go">
 <a href="#uselocalazureipaddress_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
@@ -4341,6 +4553,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trafficselectorpolicies_nodejs">
+<a href="#trafficselectorpolicies_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicyresponse">Traffic<wbr>Selector<wbr>Policy<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="uselocalazureipaddress_nodejs">
 <a href="#uselocalazureipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
 </span>
@@ -4512,6 +4732,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="traffic_selector_policies_python">
+<a href="#traffic_selector_policies_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trafficselectorpolicyresponse">Sequence[Traffic<wbr>Selector<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_local_azure_ip_address_python">
 <a href="#use_local_azure_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>azure_<wbr>ip_<wbr>address</a>

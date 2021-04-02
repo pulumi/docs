@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.getEndpoint function with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a Traffic Manager endpoint.
-API Version: 2018-04-01.
+API Version: 2018-08-01.
 
 
 
@@ -262,6 +262,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="minchildendpointsipv4_csharp">
+<a href="#minchildendpointsipv4_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="minchildendpointsipv6_csharp">
+<a href="#minchildendpointsipv6_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -377,6 +393,22 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="minchildendpointsipv4_go">
+<a href="#minchildendpointsipv4_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="minchildendpointsipv6_go">
+<a href="#minchildendpointsipv6_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -494,6 +526,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="minchildendpointsipv4_nodejs">
+<a href="#minchildendpointsipv4_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="minchildendpointsipv6_nodejs">
+<a href="#minchildendpointsipv6_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -609,6 +657,22 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="min_child_endpoints_i_pv4_python">
+<a href="#min_child_endpoints_i_pv4_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="min_child_endpoints_i_pv6_python">
+<a href="#min_child_endpoints_i_pv6_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>

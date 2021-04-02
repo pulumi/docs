@@ -16,6 +16,7 @@ Explore the resources and functions of the azure-native.storage module.
     <li><a href="blobcontainerimmutabilitypolicy" title="BlobContainerImmutabilityPolicy"><span class="symbol resource"></span>BlobContainerImmutabilityPolicy</a></li>
     <li><a href="blobinventorypolicy" title="BlobInventoryPolicy"><span class="symbol resource"></span>BlobInventoryPolicy</a></li>
     <li><a href="blobserviceproperties" title="BlobServiceProperties"><span class="symbol resource"></span>BlobServiceProperties</a></li>
+    <li><a href="encryptionscope" title="EncryptionScope"><span class="symbol resource"></span>EncryptionScope</a></li>
     <li><a href="fileserviceproperties" title="FileServiceProperties"><span class="symbol resource"></span>FileServiceProperties</a></li>
     <li><a href="fileshare" title="FileShare"><span class="symbol resource"></span>FileShare</a></li>
     <li><a href="managementpolicy" title="ManagementPolicy"><span class="symbol resource"></span>ManagementPolicy</a></li>
@@ -35,6 +36,7 @@ Explore the resources and functions of the azure-native.storage module.
     <li><a href="getblobcontainerimmutabilitypolicy" title="GetBlobContainerImmutabilityPolicy"><span class="symbol function"></span>GetBlobContainerImmutabilityPolicy</a></li>
     <li><a href="getblobinventorypolicy" title="GetBlobInventoryPolicy"><span class="symbol function"></span>GetBlobInventoryPolicy</a></li>
     <li><a href="getblobserviceproperties" title="GetBlobServiceProperties"><span class="symbol function"></span>GetBlobServiceProperties</a></li>
+    <li><a href="getencryptionscope" title="GetEncryptionScope"><span class="symbol function"></span>GetEncryptionScope</a></li>
     <li><a href="getfileserviceproperties" title="GetFileServiceProperties"><span class="symbol function"></span>GetFileServiceProperties</a></li>
     <li><a href="getfileshare" title="GetFileShare"><span class="symbol function"></span>GetFileShare</a></li>
     <li><a href="getmanagementpolicy" title="GetManagementPolicy"><span class="symbol function"></span>GetManagementPolicy</a></li>
@@ -57,6 +59,6 @@ Explore the resources and functions of the azure-native.storage module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

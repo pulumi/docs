@@ -12,13 +12,136 @@ meta_desc: "Documentation for the azure-native.devtestlab.Environment resource w
 
 An environment, which is essentially an ARM template deployment.
 API Version: 2018-09-15.
-## Import
 
-An existing resource can be imported using its type token, name, and identifier, e.g.
+{{% examples %}}
 
-```sh
-$ pulumi import azure-native:devtestlab:Environment myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{userName}/environments/{name} 
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Environments_CreateOrUpdate
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var environment = new AzureNative.DevTestLab.Environment("environment", new AzureNative.DevTestLab.EnvironmentArgs
+        {
+            DeploymentProperties = new AzureNative.DevTestLab.Inputs.EnvironmentDeploymentPropertiesArgs
+            {
+                ArmTemplateId = "/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/artifactSources/{artifactSourceName}/armTemplates/{armTemplateName}",
+                Parameters = {},
+            },
+            LabName = "{labName}",
+            Name = "{environmentName}",
+            ResourceGroupName = "resourceGroupName",
+            UserName = "@me",
+        });
+    }
+
+}
+
 ```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewEnvironment(ctx, "environment", &devtestlab.EnvironmentArgs{
+			DeploymentProperties: &devtestlab.EnvironmentDeploymentPropertiesArgs{
+				ArmTemplateId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/artifactSources/{artifactSourceName}/armTemplates/{armTemplateName}"),
+				Parameters:    devtestlab.ArmTemplateParameterPropertiesArray{},
+			},
+			LabName:           pulumi.String("{labName}"),
+			Name:              pulumi.String("{environmentName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			UserName:          pulumi.String("@me"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+environment = azure_native.devtestlab.Environment("environment",
+    deployment_properties=azure_native.devtestlab.EnvironmentDeploymentPropertiesArgs(
+        arm_template_id="/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/artifactSources/{artifactSourceName}/armTemplates/{armTemplateName}",
+        parameters=[],
+    ),
+    lab_name="{labName}",
+    name="{environmentName}",
+    resource_group_name="resourceGroupName",
+    user_name="@me")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const environment = new azure_native.devtestlab.Environment("environment", {
+    deploymentProperties: {
+        armTemplateId: "/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/artifactSources/{artifactSourceName}/armTemplates/{armTemplateName}",
+        parameters: [],
+    },
+    labName: "{labName}",
+    name: "{environmentName}",
+    resourceGroupName: "resourceGroupName",
+    userName: "@me",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
 
 
 
@@ -995,6 +1118,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The parameters of the Azure Resource Manager template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:Environment {environmentName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/users/{uniqueIdentifier}/environments/{environmentName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

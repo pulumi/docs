@@ -35,6 +35,8 @@ class MyStack : Stack
     {
         var saasSubscriptionLevel = new AzureNative.SaaS.SaasSubscriptionLevel("saasSubscriptionLevel", new AzureNative.SaaS.SaasSubscriptionLevelArgs
         {
+            Location = "global",
+            Name = "MyContosoSubscription",
             Properties = new AzureNative.SaaS.Inputs.SaasCreationPropertiesArgs
             {
                 OfferId = "contosoOffer",
@@ -75,6 +77,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := saas.NewSaasSubscriptionLevel(ctx, "saasSubscriptionLevel", &saas.SaasSubscriptionLevelArgs{
+			Location: pulumi.String("global"),
+			Name:     pulumi.String("MyContosoSubscription"),
 			Properties: &saas.SaasCreationPropertiesArgs{
 				OfferId: pulumi.String("contosoOffer"),
 				PaymentChannelMetadata: pulumi.StringMap{
@@ -110,6 +114,8 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 saas_subscription_level = azure_native.saas.SaasSubscriptionLevel("saasSubscriptionLevel",
+    location="global",
+    name="MyContosoSubscription",
     properties=azure_native.saas.SaasCreationPropertiesArgs(
         offer_id="contosoOffer",
         payment_channel_metadata={
@@ -138,6 +144,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasSubscriptionLevel", {
+    location: "global",
+    name: "MyContosoSubscription",
     properties: {
         offerId: "contosoOffer",
         paymentChannelMetadata: {
@@ -176,7 +184,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SaasSubscriptionLevel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[SaasCreationPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SaasSubscriptionLevel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[SaasCreationPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -326,6 +334,14 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location. Only value allowed for SaaS is 'global'{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -369,6 +385,14 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location. Only value allowed for SaaS is 'global'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -414,6 +438,14 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location. Only value allowed for SaaS is 'global'{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -457,6 +489,14 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location. Only value allowed for SaaS is 'global'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>

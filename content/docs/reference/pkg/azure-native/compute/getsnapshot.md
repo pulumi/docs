@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.compute.getSnapshot function with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Snapshot resource.
-API Version: 2020-09-30.
+API Version: 2020-12-01.
 
 
 
@@ -318,6 +318,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="supportshibernation_csharp">
+<a href="#supportshibernation_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a snapshot supports hibernation.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -505,6 +513,14 @@ The following output properties are available:
         <span class="property-type"><a href="#snapshotskuresponse">Snapshot<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="supportshibernation_go">
+<a href="#supportshibernation_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a snapshot supports hibernation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -694,6 +710,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="supportshibernation_nodejs">
+<a href="#supportshibernation_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a snapshot supports hibernation.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -881,6 +905,14 @@ The following output properties are available:
         <span class="property-type"><a href="#snapshotskuresponse">Snapshot<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="supports_hibernation_python">
+<a href="#supports_hibernation_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>hibernation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates the OS on a snapshot supports hibernation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

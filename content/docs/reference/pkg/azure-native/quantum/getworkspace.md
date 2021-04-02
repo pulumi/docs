@@ -550,23 +550,15 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="applicationname_csharp">
 <a href="#applicationname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider's marketplace application display name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourceusageid_csharp">
-<a href="#resourceusageid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Usage<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id to track resource usage for the provider.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The provider's marketplace application display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceuri_csharp">
 <a href="#instanceuri_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Uri</a>
@@ -598,27 +590,27 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning status field{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning status field{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourceusageid_csharp">
+<a href="#resourceusageid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Usage<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id to track resource usage for the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="applicationname_go">
 <a href="#applicationname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider's marketplace application display name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourceusageid_go">
-<a href="#resourceusageid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Usage<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id to track resource usage for the provider.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The provider's marketplace application display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceuri_go">
 <a href="#instanceuri_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Uri</a>
@@ -650,27 +642,27 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning status field{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning status field{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourceusageid_go">
+<a href="#resourceusageid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Usage<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id to track resource usage for the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="applicationname_nodejs">
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider's marketplace application display name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resourceusageid_nodejs">
-<a href="#resourceusageid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Usage<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id to track resource usage for the provider.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The provider's marketplace application display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceuri_nodejs">
 <a href="#instanceuri_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Uri</a>
@@ -702,27 +694,27 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning status field{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning status field{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourceusageid_nodejs">
+<a href="#resourceusageid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Usage<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id to track resource usage for the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="application_name_python">
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider's marketplace application display name.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="resource_usage_id_python">
-<a href="#resource_usage_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>usage_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id to track resource usage for the provider.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The provider's marketplace application display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_uri_python">
 <a href="#instance_uri_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>uri</a>
@@ -754,7 +746,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning status field{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning status field{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_usage_id_python">
+<a href="#resource_usage_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>usage_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Id to track resource usage for the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="quantumworkspaceresponseidentity">Quantum<wbr>Workspace<wbr>Response<wbr>Identity</h4>

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.storagecache.Cache resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
-API Version: 2020-10-01.
+API Version: 2021-03-01.
 
 {{% examples %}}
 
@@ -106,7 +106,7 @@ class MyStack : Stack
             Subnet = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
             Tags = 
             {
-                { "Dept", "ContosoAds" },
+                { "Dept", "Contoso" },
             },
         });
     }
@@ -189,7 +189,7 @@ func main() {
 			},
 			Subnet: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1"),
 			Tags: pulumi.StringMap{
-				"Dept": pulumi.String("ContosoAds"),
+				"Dept": pulumi.String("Contoso"),
 			},
 		})
 		if err != nil {
@@ -265,7 +265,7 @@ cache = azure_native.storagecache.Cache("cache",
     ),
     subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
     tags={
-        "Dept": "ContosoAds",
+        "Dept": "Contoso",
     })
 
 ```
@@ -334,7 +334,7 @@ const cache = new azure_native.storagecache.Cache("cache", {
     },
     subnet: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
     tags: {
-        Dept: "ContosoAds",
+        Dept: "Contoso",
     },
 });
 
@@ -419,7 +419,7 @@ class MyStack : Stack
             Subnet = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
             Tags = 
             {
-                { "Dept", "ContosoAds" },
+                { "Dept", "Contoso" },
             },
         });
     }
@@ -491,7 +491,7 @@ func main() {
 			},
 			Subnet: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1"),
 			Tags: pulumi.StringMap{
-				"Dept": pulumi.String("ContosoAds"),
+				"Dept": pulumi.String("Contoso"),
 			},
 		})
 		if err != nil {
@@ -556,7 +556,7 @@ cache = azure_native.storagecache.Cache("cache",
     ),
     subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
     tags={
-        "Dept": "ContosoAds",
+        "Dept": "Contoso",
     })
 
 ```
@@ -614,7 +614,7 @@ const cache = new azure_native.storagecache.Cache("cache", {
     },
     subnet: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
     tags: {
-        Dept: "ContosoAds",
+        Dept: "Contoso",
     },
 });
 
@@ -641,7 +641,7 @@ const cache = new azure_native.storagecache.Cache("cache", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">directory_services_settings</span><span class="p">:</span> <span class="nx">Optional[CacheDirectorySettingsArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[CacheEncryptionSettingsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[CacheIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_settings</span><span class="p">:</span> <span class="nx">Optional[CacheNetworkSettingsArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisioningStateType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[CacheSecuritySettingsArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[CacheSkuArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">directory_services_settings</span><span class="p">:</span> <span class="nx">Optional[CacheDirectorySettingsArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[CacheEncryptionSettingsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[CacheIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_settings</span><span class="p">:</span> <span class="nx">Optional[CacheNetworkSettingsArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisioningStateType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[CacheSecuritySettingsArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[CacheSkuArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -883,9 +883,9 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}ARM tags as name/value pairs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -991,9 +991,9 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}ARM tags as name/value pairs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1099,9 +1099,9 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}ARM tags as name/value pairs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1207,9 +1207,9 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}ARM tags as name/value pairs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2352,7 +2352,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="cachehealthresponse">Cache<wbr>Health<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="conditions_csharp">
+<a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -2372,7 +2380,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="conditions_go">
+<a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponse">[]Condition<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -2392,7 +2408,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="conditions_nodejs">
+<a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2412,7 +2436,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="conditions_python">
+<a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponse">Sequence[Condition<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2626,17 +2658,57 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="dnssearchdomain_csharp">
+<a href="#dnssearchdomain_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Search<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_csharp">
+<a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mtu_csharp">
 <a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntpserver_csharp">
+<a href="#ntpserver_csharp" style="color: inherit; text-decoration: inherit;">Ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dnssearchdomain_go">
+<a href="#dnssearchdomain_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Search<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_go">
+<a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_go">
 <a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -2644,11 +2716,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntpserver_go">
+<a href="#ntpserver_go" style="color: inherit; text-decoration: inherit;">Ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dnssearchdomain_nodejs">
+<a href="#dnssearchdomain_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Search<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_nodejs">
+<a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_nodejs">
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -2656,11 +2752,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntpserver_nodejs">
+<a href="#ntpserver_nodejs" style="color: inherit; text-decoration: inherit;">ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dns_search_domain_python">
+<a href="#dns_search_domain_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>search_<wbr>domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_servers_python">
+<a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_python">
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -2668,7 +2788,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntp_server_python">
+<a href="#ntp_server_python" style="color: inherit; text-decoration: inherit;">ntp_<wbr>server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cachenetworksettingsresponse">Cache<wbr>Network<wbr>Settings<wbr>Response</h4>
@@ -2684,13 +2812,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Array of additional IP addresses used by this Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnssearchdomain_csharp">
+<a href="#dnssearchdomain_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Search<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_csharp">
+<a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mtu_csharp">
 <a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntpserver_csharp">
+<a href="#ntpserver_csharp" style="color: inherit; text-decoration: inherit;">Ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2704,13 +2856,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Array of additional IP addresses used by this Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnssearchdomain_go">
+<a href="#dnssearchdomain_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Search<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_go">
+<a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mtu_go">
 <a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntpserver_go">
+<a href="#ntpserver_go" style="color: inherit; text-decoration: inherit;">Ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2724,13 +2900,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Array of additional IP addresses used by this Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnssearchdomain_nodejs">
+<a href="#dnssearchdomain_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Search<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_nodejs">
+<a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mtu_nodejs">
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntpserver_nodejs">
+<a href="#ntpserver_nodejs" style="color: inherit; text-decoration: inherit;">ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2744,13 +2944,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Array of additional IP addresses used by this Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dns_search_domain_python">
+<a href="#dns_search_domain_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>search_<wbr>domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_servers_python">
+<a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mtu_python">
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntp_server_python">
+<a href="#ntp_server_python" style="color: inherit; text-decoration: inherit;">ntp_<wbr>server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cacheresponsesku">Cache<wbr>Response<wbr>Sku</h4>
@@ -4067,6 +4291,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="conditionresponse">Condition<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The issue requiring attention.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timestamp_csharp">
+<a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the condition was raised.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The issue requiring attention.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timestamp_go">
+<a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the condition was raised.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The issue requiring attention.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timestamp_nodejs">
+<a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the condition was raised.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The issue requiring attention.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timestamp_python">
+<a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time when the condition was raised.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
@@ -4522,7 +4828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymousuid_csharp">
 <a href="#anonymousuid_csharp" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>UID</a>
@@ -4530,7 +4836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4590,7 +4896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymousuid_go">
 <a href="#anonymousuid_go" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>UID</a>
@@ -4598,7 +4904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4658,7 +4964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymousuid_nodejs">
 <a href="#anonymousuid_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>UID</a>
@@ -4666,7 +4972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4726,7 +5032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymous_uid_python">
 <a href="#anonymous_uid_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>uid</a>
@@ -4734,7 +5040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4826,7 +5132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymousuid_csharp">
 <a href="#anonymousuid_csharp" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>UID</a>
@@ -4834,7 +5140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4894,7 +5200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymousuid_go">
 <a href="#anonymousuid_go" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>UID</a>
@@ -4902,7 +5208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4962,7 +5268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymousuid_nodejs">
 <a href="#anonymousuid_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>UID</a>
@@ -4970,7 +5276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -5030,7 +5336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymous_uid_python">
 <a href="#anonymous_uid_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>uid</a>
@@ -5038,7 +5344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>

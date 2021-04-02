@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.storagecache.StorageTarget resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Type of the Storage Target.
-API Version: 2020-10-01.
+API Version: 2021-03-01.
 
 {{% examples %}}
 
@@ -199,6 +199,144 @@ const storageTarget = new azure_native.storagecache.StorageTarget("storageTarget
 
 
 
+### StorageTargets_CreateOrUpdate_BlobNfs
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var storageTarget = new AzureNative.StorageCache.StorageTarget("storageTarget", new AzureNative.StorageCache.StorageTargetArgs
+        {
+            BlobNfs = new AzureNative.StorageCache.Inputs.BlobNfsTargetArgs
+            {
+                Target = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/blofnfs/blobServices/default/containers/blobnfs",
+                UsageModel = "WRITE_WORKLOAD_15",
+            },
+            CacheName = "sc1",
+            Junctions = 
+            {
+                new AzureNative.StorageCache.Inputs.NamespaceJunctionArgs
+                {
+                    NamespacePath = "/blobnfs",
+                },
+            },
+            ResourceGroupName = "scgroup",
+            StorageTargetName = "st1",
+            TargetType = "blobNfs",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storagecache.NewStorageTarget(ctx, "storageTarget", &storagecache.StorageTargetArgs{
+			BlobNfs: &storagecache.BlobNfsTargetArgs{
+				Target:     pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/blofnfs/blobServices/default/containers/blobnfs"),
+				UsageModel: pulumi.String("WRITE_WORKLOAD_15"),
+			},
+			CacheName: pulumi.String("sc1"),
+			Junctions: storagecache.NamespaceJunctionArray{
+				&storagecache.NamespaceJunctionArgs{
+					NamespacePath: pulumi.String("/blobnfs"),
+				},
+			},
+			ResourceGroupName: pulumi.String("scgroup"),
+			StorageTargetName: pulumi.String("st1"),
+			TargetType:        pulumi.String("blobNfs"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+storage_target = azure_native.storagecache.StorageTarget("storageTarget",
+    blob_nfs=azure_native.storagecache.BlobNfsTargetArgs(
+        target="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/blofnfs/blobServices/default/containers/blobnfs",
+        usage_model="WRITE_WORKLOAD_15",
+    ),
+    cache_name="sc1",
+    junctions=[azure_native.storagecache.NamespaceJunctionArgs(
+        namespace_path="/blobnfs",
+    )],
+    resource_group_name="scgroup",
+    storage_target_name="st1",
+    target_type="blobNfs")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const storageTarget = new azure_native.storagecache.StorageTarget("storageTarget", {
+    blobNfs: {
+        target: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/blofnfs/blobServices/default/containers/blobnfs",
+        usageModel: "WRITE_WORKLOAD_15",
+    },
+    cacheName: "sc1",
+    junctions: [{
+        namespacePath: "/blobnfs",
+    }],
+    resourceGroupName: "scgroup",
+    storageTargetName: "st1",
+    targetType: "blobNfs",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
 ### StorageTargets_CreateOrUpdate_NoJunctions
 
 
@@ -334,7 +472,7 @@ const storageTarget = new azure_native.storagecache.StorageTarget("storageTarget
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">clfs</span><span class="p">:</span> <span class="nx">Optional[ClfsTargetArgs]</span> = None<span class="p">, </span><span class="nx">junctions</span><span class="p">:</span> <span class="nx">Optional[Sequence[NamespaceJunctionArgs]]</span> = None<span class="p">, </span><span class="nx">nfs3</span><span class="p">:</span> <span class="nx">Optional[Nfs3TargetArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisioningStateType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_target_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageTargetType]]</span> = None<span class="p">, </span><span class="nx">unknown</span><span class="p">:</span> <span class="nx">Optional[UnknownTargetArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blob_nfs</span><span class="p">:</span> <span class="nx">Optional[BlobNfsTargetArgs]</span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">clfs</span><span class="p">:</span> <span class="nx">Optional[ClfsTargetArgs]</span> = None<span class="p">, </span><span class="nx">junctions</span><span class="p">:</span> <span class="nx">Optional[Sequence[NamespaceJunctionArgs]]</span> = None<span class="p">, </span><span class="nx">nfs3</span><span class="p">:</span> <span class="nx">Optional[Nfs3TargetArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisioningStateType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_target_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageTargetType]]</span> = None<span class="p">, </span><span class="nx">unknown</span><span class="p">:</span> <span class="nx">Optional[UnknownTargetArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -500,6 +638,14 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}Type of the Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="blobnfs_csharp">
+<a href="#blobnfs_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Nfs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobnfstarget">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Blob<wbr>Nfs<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Properties when targetType is blobNfs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clfs_csharp">
 <a href="#clfs_csharp" style="color: inherit; text-decoration: inherit;">Clfs</a>
 </span>
@@ -538,7 +684,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_csharp">
 <a href="#unknown_csharp" style="color: inherit; text-decoration: inherit;">Unknown</a>
@@ -575,6 +721,14 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string | <a href="#storagetargettype">Storage<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the Storage Target.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="blobnfs_go">
+<a href="#blobnfs_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Nfs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobnfstarget">Blob<wbr>Nfs<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}Properties when targetType is blobNfs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clfs_go">
 <a href="#clfs_go" style="color: inherit; text-decoration: inherit;">Clfs</a>
@@ -614,7 +768,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_go">
 <a href="#unknown_go" style="color: inherit; text-decoration: inherit;">Unknown</a>
@@ -651,6 +805,14 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string | <a href="#storagetargettype">Storage<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the Storage Target.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="blobnfs_nodejs">
+<a href="#blobnfs_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Nfs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobnfstarget">Blob<wbr>Nfs<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}Properties when targetType is blobNfs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clfs_nodejs">
 <a href="#clfs_nodejs" style="color: inherit; text-decoration: inherit;">clfs</a>
@@ -690,7 +852,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_nodejs">
 <a href="#unknown_nodejs" style="color: inherit; text-decoration: inherit;">unknown</a>
@@ -727,6 +889,14 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str | <a href="#storagetargettype">Storage<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the Storage Target.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="blob_nfs_python">
+<a href="#blob_nfs_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>nfs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobnfstarget">Blob<wbr>Nfs<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Properties when targetType is blobNfs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clfs_python">
 <a href="#clfs_python" style="color: inherit; text-decoration: inherit;">clfs</a>
@@ -766,7 +936,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of Storage Target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_python">
 <a href="#unknown_python" style="color: inherit; text-decoration: inherit;">unknown</a>
@@ -969,6 +1139,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="blobnfstarget">Blob<wbr>Nfs<wbr>Target</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_csharp">
+<a href="#usagemodel_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_go">
+<a href="#usagemodel_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_nodejs">
+<a href="#usagemodel_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usage_model_python">
+<a href="#usage_model_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="blobnfstargetresponse">Blob<wbr>Nfs<wbr>Target<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_csharp">
+<a href="#usagemodel_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_go">
+<a href="#usagemodel_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_nodejs">
+<a href="#usagemodel_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the storage container.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usage_model_python">
+<a href="#usage_model_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="clfstarget">Clfs<wbr>Target</h4>
 
@@ -1381,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1401,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1421,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1441,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nfs3targetresponse">Nfs3Target<wbr>Response</h4>
@@ -1463,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1483,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1503,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1523,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the StorageCache usage model to be used for this storage target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="provisioningstatetype">Provisioning<wbr>State<wbr>Type</h4>
@@ -1574,28 +1908,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>Nfs3</dt>
     <dd>nfs3</dd><dt>Clfs</dt>
     <dd>clfs</dd><dt>Unknown</dt>
-    <dd>unknown</dd></dl>
+    <dd>unknown</dd><dt>Blob<wbr>Nfs</dt>
+    <dd>blobNfs</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Storage<wbr>Target<wbr>Type<wbr>Nfs3</dt>
     <dd>nfs3</dd><dt>Storage<wbr>Target<wbr>Type<wbr>Clfs</dt>
     <dd>clfs</dd><dt>Storage<wbr>Target<wbr>Type<wbr>Unknown</dt>
-    <dd>unknown</dd></dl>
+    <dd>unknown</dd><dt>Storage<wbr>Target<wbr>Type<wbr>Blob<wbr>Nfs</dt>
+    <dd>blobNfs</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Nfs3</dt>
     <dd>nfs3</dd><dt>Clfs</dt>
     <dd>clfs</dd><dt>Unknown</dt>
-    <dd>unknown</dd></dl>
+    <dd>unknown</dd><dt>Blob<wbr>Nfs</dt>
+    <dd>blobNfs</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>NFS3</dt>
     <dd>nfs3</dd><dt>CLFS</dt>
     <dd>clfs</dd><dt>UNKNOWN</dt>
-    <dd>unknown</dd></dl>
+    <dd>unknown</dd><dt>BLOB_NFS</dt>
+    <dd>blobNfs</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
@@ -1813,8 +2151,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknownmap_csharp">
-<a href="#unknownmap_csharp" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Map</a>
+        <span id="attributes_csharp">
+<a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
@@ -1825,8 +2163,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknownmap_go">
-<a href="#unknownmap_go" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Map</a>
+        <span id="attributes_go">
+<a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
@@ -1837,8 +2175,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknownmap_nodejs">
-<a href="#unknownmap_nodejs" style="color: inherit; text-decoration: inherit;">unknown<wbr>Map</a>
+        <span id="attributes_nodejs">
+<a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
@@ -1849,8 +2187,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknown_map_python">
-<a href="#unknown_map_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>map</a>
+        <span id="attributes_python">
+<a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
@@ -1863,8 +2201,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknownmap_csharp">
-<a href="#unknownmap_csharp" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Map</a>
+        <span id="attributes_csharp">
+<a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
@@ -1875,8 +2213,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknownmap_go">
-<a href="#unknownmap_go" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Map</a>
+        <span id="attributes_go">
+<a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
@@ -1887,8 +2225,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknownmap_nodejs">
-<a href="#unknownmap_nodejs" style="color: inherit; text-decoration: inherit;">unknown<wbr>Map</a>
+        <span id="attributes_nodejs">
+<a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
@@ -1899,8 +2237,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="unknown_map_python">
-<a href="#unknown_map_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>map</a>
+        <span id="attributes_python">
+<a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>

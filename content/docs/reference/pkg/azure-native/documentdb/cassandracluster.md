@@ -1388,14 +1388,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="initialcassandraadminpassword_csharp">
-<a href="#initialcassandraadminpassword_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Cassandra<wbr>Admin<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="prometheusendpoint_csharp">
 <a href="#prometheusendpoint_csharp" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>Endpoint</a>
 </span>
@@ -1418,15 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="restorefrombackupid_csharp">
-<a href="#restorefrombackupid_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>From<wbr>Backup<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}To create an empty cluster, omit this field or set it to null. To restore a backup into a new cluster, set this field to the resource id of the backup.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1512,14 +1496,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="initialcassandraadminpassword_go">
-<a href="#initialcassandraadminpassword_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Cassandra<wbr>Admin<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="prometheusendpoint_go">
 <a href="#prometheusendpoint_go" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>Endpoint</a>
 </span>
@@ -1542,15 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="restorefrombackupid_go">
-<a href="#restorefrombackupid_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>From<wbr>Backup<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}To create an empty cluster, omit this field or set it to null. To restore a backup into a new cluster, set this field to the resource id of the backup.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1636,14 +1604,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="initialcassandraadminpassword_nodejs">
-<a href="#initialcassandraadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Cassandra<wbr>Admin<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="prometheusendpoint_nodejs">
 <a href="#prometheusendpoint_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>Endpoint</a>
 </span>
@@ -1666,15 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="restorefrombackupid_nodejs">
-<a href="#restorefrombackupid_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>From<wbr>Backup<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}To create an empty cluster, omit this field or set it to null. To restore a backup into a new cluster, set this field to the resource id of the backup.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1760,14 +1712,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="initial_cassandra_admin_password_python">
-<a href="#initial_cassandra_admin_password_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>cassandra_<wbr>admin_<wbr>password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="prometheus_endpoint_python">
 <a href="#prometheus_endpoint_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>endpoint</a>
 </span>
@@ -1790,15 +1734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="restore_from_backup_id_python">
-<a href="#restore_from_backup_id_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>from_<wbr>backup_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}To create an empty cluster, omit this field or set it to null. To restore a backup into a new cluster, set this field to the resource id of the backup.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedcassandraprovisioningstate">Managed<wbr>Cassandra<wbr>Provisioning<wbr>State</h4>

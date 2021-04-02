@@ -39,11 +39,23 @@ class MyStack : Stack
             Location = "WestUS",
             Properties = new AzureNative.ConfidentialLedger.Inputs.LedgerPropertiesArgs
             {
-                CertUsers = 
+                AadBasedSecurityPrincipals = 
                 {
-                    new AzureNative.ConfidentialLedger.Inputs.ConfidentialLedgerCertUserArgs
+                    new AzureNative.ConfidentialLedger.Inputs.AADBasedSecurityPrincipalArgs
                     {
-                        Cert = "MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd",
+                        LedgerRoleName = "Administrator",
+                        PrincipalId = "34621747-6fc8-4771-a2eb-72f31c461f2e",
+                        TenantId = "bce123b9-2b7b-4975-8360-5ca0b9b1cd08",
+                    },
+                },
+                CertBasedSecurityPrincipals = 
+                {
+                    new AzureNative.ConfidentialLedger.Inputs.CertBasedSecurityPrincipalArgs
+                    {
+                        Cert = @"-----BEGIN CERTIFICATE-----
+MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd
+-----END CERTIFICATE-----",
+                        LedgerRoleName = "Reader",
                     },
                 },
                 LedgerStorageAccount = "dummyStorageAccount",
@@ -82,9 +94,17 @@ func main() {
 			LedgerName: pulumi.String("DummyLedgerName"),
 			Location:   pulumi.String("WestUS"),
 			Properties: &confidentialledger.LedgerPropertiesArgs{
-				CertUsers: confidentialledger.ConfidentialLedgerCertUserArray{
-					&confidentialledger.ConfidentialLedgerCertUserArgs{
-						Cert: pulumi.String("MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd"),
+				AadBasedSecurityPrincipals: confidentialledger.AADBasedSecurityPrincipalArray{
+					&confidentialledger.AADBasedSecurityPrincipalArgs{
+						LedgerRoleName: pulumi.String("Administrator"),
+						PrincipalId:    pulumi.String("34621747-6fc8-4771-a2eb-72f31c461f2e"),
+						TenantId:       pulumi.String("bce123b9-2b7b-4975-8360-5ca0b9b1cd08"),
+					},
+				},
+				CertBasedSecurityPrincipals: confidentialledger.CertBasedSecurityPrincipalArray{
+					&confidentialledger.CertBasedSecurityPrincipalArgs{
+						Cert:           pulumi.String("-----BEGIN CERTIFICATE-----\nMIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd\n-----END CERTIFICATE-----"),
+						LedgerRoleName: pulumi.String("Reader"),
 					},
 				},
 				LedgerStorageAccount: pulumi.String("dummyStorageAccount"),
@@ -119,8 +139,16 @@ ledger = azure_native.confidentialledger.Ledger("ledger",
     ledger_name="DummyLedgerName",
     location="WestUS",
     properties=azure_native.confidentialledger.LedgerPropertiesArgs(
-        cert_users=[azure_native.confidentialledger.ConfidentialLedgerCertUserArgs(
-            cert="MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd",
+        aad_based_security_principals=[azure_native.confidentialledger.AADBasedSecurityPrincipalArgs(
+            ledger_role_name="Administrator",
+            principal_id="34621747-6fc8-4771-a2eb-72f31c461f2e",
+            tenant_id="bce123b9-2b7b-4975-8360-5ca0b9b1cd08",
+        )],
+        cert_based_security_principals=[azure_native.confidentialledger.CertBasedSecurityPrincipalArgs(
+            cert="""-----BEGIN CERTIFICATE-----
+MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd
+-----END CERTIFICATE-----""",
+            ledger_role_name="Reader",
         )],
         ledger_storage_account="dummyStorageAccount",
         ledger_type="Public",
@@ -147,8 +175,16 @@ const ledger = new azure_native.confidentialledger.Ledger("ledger", {
     ledgerName: "DummyLedgerName",
     location: "WestUS",
     properties: {
-        certUsers: [{
-            cert: "MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd",
+        aadBasedSecurityPrincipals: [{
+            ledgerRoleName: "Administrator",
+            principalId: "34621747-6fc8-4771-a2eb-72f31c461f2e",
+            tenantId: "bce123b9-2b7b-4975-8360-5ca0b9b1cd08",
+        }],
+        certBasedSecurityPrincipals: [{
+            cert: `-----BEGIN CERTIFICATE-----
+MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd
+-----END CERTIFICATE-----`,
+            ledgerRoleName: "Reader",
         }],
         ledgerStorageAccount: "dummyStorageAccount",
         ledgerType: "Public",
@@ -658,7 +694,235 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="confidentialledgercertuser">Confidential<wbr>Ledger<wbr>Cert<wbr>User</h4>
+<h4 id="aadbasedsecurityprincipal">AADBased<wbr>Security<wbr>Principal</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_csharp">
+<a href="#ledgerrolename_csharp" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ledgerrolename">Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Ledger<wbr>Role<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_go">
+<a href="#ledgerrolename_go" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ledgerrolename">Ledger<wbr>Role<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_nodejs">
+<a href="#ledgerrolename_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ledgerrolename">Ledger<wbr>Role<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ledger_role_name_python">
+<a href="#ledger_role_name_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>role_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#ledgerrolename">Ledger<wbr>Role<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="aadbasedsecurityprincipalresponse">AADBased<wbr>Security<wbr>Principal<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_csharp">
+<a href="#ledgerrolename_csharp" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_go">
+<a href="#ledgerrolename_go" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_nodejs">
+<a href="#ledgerrolename_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ledger_role_name_python">
+<a href="#ledger_role_name_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>role_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="certbasedsecurityprincipal">Cert<wbr>Based<wbr>Security<wbr>Principal</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -669,7 +933,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_csharp">
+<a href="#ledgerrolename_csharp" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ledgerrolename">Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Ledger<wbr>Role<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -681,7 +953,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_go">
+<a href="#ledgerrolename_go" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ledgerrolename">Ledger<wbr>Role<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -693,7 +973,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_nodejs">
+<a href="#ledgerrolename_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ledgerrolename">Ledger<wbr>Role<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -705,10 +993,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ledger_role_name_python">
+<a href="#ledger_role_name_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>role_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#ledgerrolename">Ledger<wbr>Role<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="confidentialledgercertuserresponse">Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Response</h4>
+<h4 id="certbasedsecurityprincipalresponse">Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -719,7 +1015,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_csharp">
+<a href="#ledgerrolename_csharp" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -731,7 +1035,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_go">
+<a href="#ledgerrolename_go" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -743,7 +1055,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ledgerrolename_nodejs">
+<a href="#ledgerrolename_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Role<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -755,7 +1075,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ledger_role_name_python">
+<a href="#ledger_role_name_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>role_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ledgerproperties">Ledger<wbr>Properties</h4>
@@ -763,13 +1091,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="certusers_csharp">
-<a href="#certusers_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Users</a>
+        <span id="aadbasedsecurityprincipals_csharp">
+<a href="#aadbasedsecurityprincipals_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialledgercertuser">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipal">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>AADBased<wbr>Security<wbr>Principal<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of all the cert based users who can access Confidential Ledger{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certbasedsecurityprincipals_csharp">
+<a href="#certbasedsecurityprincipals_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Based<wbr>Security<wbr>Principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipal">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ledgerstorageaccount_csharp">
 <a href="#ledgerstorageaccount_csharp" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Storage<wbr>Account</a>
@@ -791,13 +1127,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="certusers_go">
-<a href="#certusers_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Users</a>
+        <span id="aadbasedsecurityprincipals_go">
+<a href="#aadbasedsecurityprincipals_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialledgercertuser">[]Confidential<wbr>Ledger<wbr>Cert<wbr>User</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipal">[]AADBased<wbr>Security<wbr>Principal</a></span>
     </dt>
-    <dd>{{% md %}}Array of all the cert based users who can access Confidential Ledger{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certbasedsecurityprincipals_go">
+<a href="#certbasedsecurityprincipals_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Based<wbr>Security<wbr>Principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipal">[]Cert<wbr>Based<wbr>Security<wbr>Principal</a></span>
+    </dt>
+    <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ledgerstorageaccount_go">
 <a href="#ledgerstorageaccount_go" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Storage<wbr>Account</a>
@@ -819,13 +1163,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="certusers_nodejs">
-<a href="#certusers_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Users</a>
+        <span id="aadbasedsecurityprincipals_nodejs">
+<a href="#aadbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialledgercertuser">Confidential<wbr>Ledger<wbr>Cert<wbr>User[]</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipal">AADBased<wbr>Security<wbr>Principal[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of all the cert based users who can access Confidential Ledger{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certbasedsecurityprincipals_nodejs">
+<a href="#certbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Based<wbr>Security<wbr>Principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipal">Cert<wbr>Based<wbr>Security<wbr>Principal[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ledgerstorageaccount_nodejs">
 <a href="#ledgerstorageaccount_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Storage<wbr>Account</a>
@@ -847,13 +1199,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="cert_users_python">
-<a href="#cert_users_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>users</a>
+        <span id="aad_based_security_principals_python">
+<a href="#aad_based_security_principals_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>based_<wbr>security_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialledgercertuser">Sequence[Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipal">Sequence[AADBased<wbr>Security<wbr>Principal<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of all the cert based users who can access Confidential Ledger{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cert_based_security_principals_python">
+<a href="#cert_based_security_principals_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>based_<wbr>security_<wbr>principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipal">Sequence[Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ledger_storage_account_python">
 <a href="#ledger_storage_account_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>storage_<wbr>account</a>
@@ -917,13 +1277,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Provisioning state of Ledger Resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="certusers_csharp">
-<a href="#certusers_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Users</a>
+        <span id="aadbasedsecurityprincipals_csharp">
+<a href="#aadbasedsecurityprincipals_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialledgercertuserresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>AADBased<wbr>Security<wbr>Principal<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of all the cert based users who can access Confidential Ledger{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certbasedsecurityprincipals_csharp">
+<a href="#certbasedsecurityprincipals_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Based<wbr>Security<wbr>Principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ledgerstorageaccount_csharp">
 <a href="#ledgerstorageaccount_csharp" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Storage<wbr>Account</a>
@@ -985,13 +1353,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Provisioning state of Ledger Resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="certusers_go">
-<a href="#certusers_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Users</a>
+        <span id="aadbasedsecurityprincipals_go">
+<a href="#aadbasedsecurityprincipals_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialledgercertuserresponse">[]Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Response</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">[]AADBased<wbr>Security<wbr>Principal<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Array of all the cert based users who can access Confidential Ledger{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certbasedsecurityprincipals_go">
+<a href="#certbasedsecurityprincipals_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Based<wbr>Security<wbr>Principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">[]Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ledgerstorageaccount_go">
 <a href="#ledgerstorageaccount_go" style="color: inherit; text-decoration: inherit;">Ledger<wbr>Storage<wbr>Account</a>
@@ -1053,13 +1429,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Provisioning state of Ledger Resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="certusers_nodejs">
-<a href="#certusers_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Users</a>
+        <span id="aadbasedsecurityprincipals_nodejs">
+<a href="#aadbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialledgercertuserresponse">Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">AADBased<wbr>Security<wbr>Principal<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of all the cert based users who can access Confidential Ledger{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certbasedsecurityprincipals_nodejs">
+<a href="#certbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Based<wbr>Security<wbr>Principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ledgerstorageaccount_nodejs">
 <a href="#ledgerstorageaccount_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Storage<wbr>Account</a>
@@ -1121,13 +1505,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Provisioning state of Ledger Resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="cert_users_python">
-<a href="#cert_users_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>users</a>
+        <span id="aad_based_security_principals_python">
+<a href="#aad_based_security_principals_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>based_<wbr>security_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialledgercertuserresponse">Sequence[Confidential<wbr>Ledger<wbr>Cert<wbr>User<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">Sequence[AADBased<wbr>Security<wbr>Principal<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of all the cert based users who can access Confidential Ledger{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cert_based_security_principals_python">
+<a href="#cert_based_security_principals_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>based_<wbr>security_<wbr>principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">Sequence[Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ledger_storage_account_python">
 <a href="#ledger_storage_account_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>storage_<wbr>account</a>
@@ -1144,6 +1536,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Confidential Ledger{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ledgerrolename">Ledger<wbr>Role<wbr>Name</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Reader</dt>
+    <dd>Reader</dd><dt>Contributor</dt>
+    <dd>Contributor</dd><dt>Administrator</dt>
+    <dd>Administrator</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ledger<wbr>Role<wbr>Name<wbr>Reader</dt>
+    <dd>Reader</dd><dt>Ledger<wbr>Role<wbr>Name<wbr>Contributor</dt>
+    <dd>Contributor</dd><dt>Ledger<wbr>Role<wbr>Name<wbr>Administrator</dt>
+    <dd>Administrator</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Reader</dt>
+    <dd>Reader</dd><dt>Contributor</dt>
+    <dd>Contributor</dd><dt>Administrator</dt>
+    <dd>Administrator</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>READER</dt>
+    <dd>Reader</dd><dt>CONTRIBUTOR</dt>
+    <dd>Contributor</dd><dt>ADMINISTRATOR</dt>
+    <dd>Administrator</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ledgertype">Ledger<wbr>Type</h4>
@@ -1391,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:confidentialledger:Ledger DummyLedgerName /subscriptions/00000000-0000-0000-0000-000000000001/providers/Microsoft.ConfidentialLedger/ledgers/DummyLedgerName 
+$ pulumi import azure-native:confidentialledger:Ledger DummyLedgerName /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/TestRG/providers/Microsoft.ConfidentialLedger/ledgers/DummyLedgerName 
 ```
 
 

@@ -18,6 +18,7 @@ Explore the resources and functions of the azure-native.datafactory module.
     <li><a href="linkedservice" title="LinkedService"><span class="symbol resource"></span>LinkedService</a></li>
     <li><a href="managedprivateendpoint" title="ManagedPrivateEndpoint"><span class="symbol resource"></span>ManagedPrivateEndpoint</a></li>
     <li><a href="pipeline" title="Pipeline"><span class="symbol resource"></span>Pipeline</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
 </ul>
 
@@ -37,6 +38,7 @@ Explore the resources and functions of the azure-native.datafactory module.
     <li><a href="getlinkedservice" title="GetLinkedService"><span class="symbol function"></span>GetLinkedService</a></li>
     <li><a href="getmanagedprivateendpoint" title="GetManagedPrivateEndpoint"><span class="symbol function"></span>GetManagedPrivateEndpoint</a></li>
     <li><a href="getpipeline" title="GetPipeline"><span class="symbol function"></span>GetPipeline</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="gettrigger" title="GetTrigger"><span class="symbol function"></span>GetTrigger</a></li>
     <li><a href="gettriggereventsubscriptionstatus" title="GetTriggerEventSubscriptionStatus"><span class="symbol function"></span>GetTriggerEventSubscriptionStatus</a></li>
     <li><a href="listintegrationruntimeauthkeys" title="ListIntegrationRuntimeAuthKeys"><span class="symbol function"></span>ListIntegrationRuntimeAuthKeys</a></li>
@@ -49,6 +51,6 @@ Explore the resources and functions of the azure-native.datafactory module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 

@@ -1015,7 +1015,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Short error code{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="errorinnermessage_csharp">
+<a href="#errorinnermessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Inner<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External Provider error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1031,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1043,7 +1051,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Short error code{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="errorinnermessage_go">
+<a href="#errorinnermessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Inner<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External Provider error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1059,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1071,7 +1087,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Short error code{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="errorinnermessage_nodejs">
+<a href="#errorinnermessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Inner<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External Provider error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -1087,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1099,7 +1123,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Short error code{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="error_inner_message_python">
+<a href="#error_inner_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>inner_<wbr>message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}External Provider error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -1115,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</h4>
@@ -1123,13 +1155,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="lastrun_csharp">
-<a href="#lastrun_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
+        <span id="lastchecked_csharp">
+<a href="#lastchecked_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Checked</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_csharp">
 <a href="#lastupdated_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
@@ -1159,13 +1191,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="lastrun_go">
-<a href="#lastrun_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
+        <span id="lastchecked_go">
+<a href="#lastchecked_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Checked</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_go">
 <a href="#lastupdated_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
@@ -1195,13 +1227,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="lastrun_nodejs">
-<a href="#lastrun_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run</a>
+        <span id="lastchecked_nodejs">
+<a href="#lastchecked_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Checked</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_nodejs">
 <a href="#lastupdated_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated</a>
@@ -1231,13 +1263,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="last_run_python">
-<a href="#last_run_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run</a>
+        <span id="last_checked_python">
+<a href="#last_checked_python" style="color: inherit; text-decoration: inherit;">last_<wbr>checked</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_updated_python">
 <a href="#last_updated_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated</a>

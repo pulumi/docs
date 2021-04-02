@@ -179,7 +179,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WatchlistItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">entity_mapping</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_deleted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">items_key_value</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">watchlist_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchlist_item_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchlist_item_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WatchlistItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[WatchlistUserInfoArgs]</span> = None<span class="p">, </span><span class="nx">entity_mapping</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_deleted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">items_key_value</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_by</span><span class="p">:</span> <span class="nx">Optional[WatchlistUserInfoArgs]</span> = None<span class="p">, </span><span class="nx">watchlist_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchlist_item_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchlist_item_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -373,7 +373,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#watchlistuserinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Watchlist<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -421,7 +421,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#watchlistuserinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Watchlist<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -497,7 +497,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
+        <span class="property-type"><a href="#watchlistuserinfo">Watchlist<wbr>User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -545,7 +545,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
+        <span class="property-type"><a href="#watchlistuserinfo">Watchlist<wbr>User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +621,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
+        <span class="property-type"><a href="#watchlistuserinfo">Watchlist<wbr>User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +669,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
+        <span class="property-type"><a href="#watchlistuserinfo">Watchlist<wbr>User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -745,7 +745,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#watchlistuserinfo">Watchlist<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +793,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#watchlistuserinfo">Watchlist<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="userinfo">User<wbr>Info</h4>
+<h4 id="watchlistuserinfo">Watchlist<wbr>User<wbr>Info</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -993,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="userinforesponse">User<wbr>Info<wbr>Response</h4>
+<h4 id="watchlistuserinforesponse">Watchlist<wbr>User<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

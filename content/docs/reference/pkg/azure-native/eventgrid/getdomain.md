@@ -182,6 +182,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privateendpointconnections_csharp">
+<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of private endpoint connections.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -229,14 +237,6 @@ The following output properties are available:
         <span class="property-type"><a href="#jsoninputschemamappingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the InputSchemaMapping which specified the info about mapping event payload.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="privateendpointconnections_csharp">
-<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -299,6 +299,14 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privateendpointconnections_go">
+<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of private endpoint connections.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -346,14 +354,6 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
         <span class="property-type"><a href="#jsoninputschemamappingresponse">Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the InputSchemaMapping which specified the info about mapping event payload.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="privateendpointconnections_go">
-<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -416,6 +416,14 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privateendpointconnections_nodejs">
+<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of private endpoint connections.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
@@ -463,14 +471,6 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
         <span class="property-type"><a href="#jsoninputschemamappingresponse">Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the InputSchemaMapping which specified the info about mapping event payload.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="privateendpointconnections_nodejs">
-<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -533,6 +533,14 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="private_endpoint_connections_python">
+<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of private endpoint connections.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
@@ -580,14 +588,6 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
         <span class="property-type"><a href="#jsoninputschemamappingresponse">Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the InputSchemaMapping which specified the info about mapping event payload.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="private_endpoint_connections_python">
-<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
