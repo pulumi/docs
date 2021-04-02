@@ -71,6 +71,33 @@ require (
 
 Then run `go mod download`
 
+### Go SDK removes Apply<TypeName>
+
+In order to improve the performance of our Go SDK, we have removed:
+
+* Apply<TypeName>
+* Apply
+* ApplyWithContext
+
+We now suggest that you use:
+
+* ApplyT
+* ApplyTWithContext
+
+```go
+//before
+containerDef := image.ImageName.ApplyString(func(name string) (string, error) {
+    return name, nil
+})
+
+//after
+containerDef := image.ImageName.ApplyT(func(name string) (string, error) {
+    return name, nil
+}).(pulumi.StringOutput)
+```
+
+When using ApplyT, remember to cast the result to the Output type
+
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
