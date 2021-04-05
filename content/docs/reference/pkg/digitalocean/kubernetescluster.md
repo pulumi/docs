@@ -1904,6 +1904,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_csharp">
+<a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusternodepooltaint">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Taint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A block representing a taint applied to all nodes in the pool. Each taint exports the following attributes (taints must be unique by key and effect pair):
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2007,6 +2016,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_go">
+<a href="#taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusternodepooltaint">[]Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Taint</a></span>
+    </dt>
+    <dd>{{% md %}}A block representing a taint applied to all nodes in the pool. Each taint exports the following attributes (taints must be unique by key and effect pair):
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2110,6 +2128,15 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_nodejs">
+<a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusternodepooltaint">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Taint[]</a></span>
+    </dt>
+    <dd>{{% md %}}A block representing a taint applied to all nodes in the pool. Each taint exports the following attributes (taints must be unique by key and effect pair):
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2213,6 +2240,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_python">
+<a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusternodepooltaint">Sequence[Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Taint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A block representing a taint applied to all nodes in the pool. Each taint exports the following attributes (taints must be unique by key and effect pair):
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2447,6 +2483,132 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclusternodepooltaint">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Taint</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_csharp">
+<a href="#effect_csharp" style="color: inherit; text-decoration: inherit;">Effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How the node reacts to pods that it won't tolerate. Available effect values are: "NoSchedule", "PreferNoSchedule", "NoExecute".
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An arbitrary string. The "key" and "value" fields of the "taint" object form a key-value pair.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An arbitrary string. The "key" and "value" fields of the "taint" object form a key-value pair.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_go">
+<a href="#effect_go" style="color: inherit; text-decoration: inherit;">Effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How the node reacts to pods that it won't tolerate. Available effect values are: "NoSchedule", "PreferNoSchedule", "NoExecute".
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An arbitrary string. The "key" and "value" fields of the "taint" object form a key-value pair.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An arbitrary string. The "key" and "value" fields of the "taint" object form a key-value pair.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_nodejs">
+<a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How the node reacts to pods that it won't tolerate. Available effect values are: "NoSchedule", "PreferNoSchedule", "NoExecute".
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An arbitrary string. The "key" and "value" fields of the "taint" object form a key-value pair.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An arbitrary string. The "key" and "value" fields of the "taint" object form a key-value pair.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effect_python">
+<a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}How the node reacts to pods that it won't tolerate. Available effect values are: "NoSchedule", "PreferNoSchedule", "NoExecute".
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An arbitrary string. The "key" and "value" fields of the "taint" object form a key-value pair.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An arbitrary string. The "key" and "value" fields of the "taint" object form a key-value pair.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
