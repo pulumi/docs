@@ -105,7 +105,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DefaultPrivileges</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">privileges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DefaultPrivileges</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">privileges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_grant_option</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,8 +290,8 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role to which grant default privileges on.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="schema_csharp">
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
@@ -299,6 +299,15 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database schema to set default privileges for this role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="withgrantoption_csharp">
+<a href="#withgrantoption_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Grant<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Permit the grant recipient to grant it to others
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -348,8 +357,8 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role to which grant default privileges on.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="schema_go">
 <a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
@@ -357,6 +366,15 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database schema to set default privileges for this role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="withgrantoption_go">
+<a href="#withgrantoption_go" style="color: inherit; text-decoration: inherit;">With<wbr>Grant<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Permit the grant recipient to grant it to others
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -406,8 +424,8 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role to which grant default privileges on.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="schema_nodejs">
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
@@ -415,6 +433,15 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database schema to set default privileges for this role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="withgrantoption_nodejs">
+<a href="#withgrantoption_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Grant<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Permit the grant recipient to grant it to others
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -464,8 +491,8 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role to which grant default privileges on.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="schema_python">
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
@@ -473,6 +500,15 @@ The DefaultPrivileges resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database schema to set default privileges for this role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="with_grant_option_python">
+<a href="#with_grant_option_python" style="color: inherit; text-decoration: inherit;">with_<wbr>grant_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Permit the grant recipient to grant it to others
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -544,7 +580,7 @@ Get an existing DefaultPrivileges resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">privileges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DefaultPrivileges</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">privileges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_grant_option</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> DefaultPrivileges</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -709,6 +745,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database schema to set default privileges for this role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_withgrantoption_csharp">
+<a href="#state_withgrantoption_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Grant<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Permit the grant recipient to grant it to others
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -767,6 +812,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database schema to set default privileges for this role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_withgrantoption_go">
+<a href="#state_withgrantoption_go" style="color: inherit; text-decoration: inherit;">With<wbr>Grant<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Permit the grant recipient to grant it to others
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -825,6 +879,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database schema to set default privileges for this role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_withgrantoption_nodejs">
+<a href="#state_withgrantoption_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Grant<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Permit the grant recipient to grant it to others
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -883,6 +946,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database schema to set default privileges for this role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_with_grant_option_python">
+<a href="#state_with_grant_option_python" style="color: inherit; text-decoration: inherit;">with_<wbr>grant_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Permit the grant recipient to grant it to others
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -899,6 +971,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/cyrilgdn/terraform-provider-postgresql).{{% /md %}}</dd>
 </dl>
 

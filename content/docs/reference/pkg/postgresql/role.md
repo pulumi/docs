@@ -22,7 +22,7 @@ meta_desc: "Documentation for the postgresql.Role resource with examples, input 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Role</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bypass_row_level_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">create_database</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">create_role</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inherit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">search_paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">skip_drop_role</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_reassign_owned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">statement_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">superuser</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Role</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bypass_row_level_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">create_database</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">create_role</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">idle_in_transaction_session_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">inherit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">search_paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">skip_drop_role</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_reassign_owned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">statement_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">superuser</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -225,6 +225,15 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idleintransactionsessiontimeout_csharp">
+<a href="#idleintransactionsessiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>In<wbr>Transaction<wbr>Session<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Terminate any session with an open transaction that has been idle for longer than the specified duration in milliseconds
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inherit_csharp">
@@ -430,6 +439,15 @@ behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="idleintransactionsessiontimeout_go">
+<a href="#idleintransactionsessiontimeout_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>In<wbr>Transaction<wbr>Session<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Terminate any session with an open transaction that has been idle for longer than the specified duration in milliseconds
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inherit_go">
 <a href="#inherit_go" style="color: inherit; text-decoration: inherit;">Inherit</a>
 </span>
@@ -633,6 +651,15 @@ behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="idleintransactionsessiontimeout_nodejs">
+<a href="#idleintransactionsessiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>In<wbr>Transaction<wbr>Session<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Terminate any session with an open transaction that has been idle for longer than the specified duration in milliseconds
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inherit_nodejs">
 <a href="#inherit_nodejs" style="color: inherit; text-decoration: inherit;">inherit</a>
 </span>
@@ -834,6 +861,15 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idle_in_transaction_session_timeout_python">
+<a href="#idle_in_transaction_session_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>in_<wbr>transaction_<wbr>session_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Terminate any session with an open transaction that has been idle for longer than the specified duration in milliseconds
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inherit_python">
@@ -1041,7 +1077,7 @@ Get an existing Role resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bypass_row_level_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">create_database</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">create_role</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inherit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">search_paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">skip_drop_role</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_reassign_owned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">statement_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">superuser</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Role</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bypass_row_level_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">create_database</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">create_role</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">idle_in_transaction_session_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">inherit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">search_paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">skip_drop_role</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_reassign_owned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">statement_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">superuser</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Role</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1215,6 +1251,15 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_idleintransactionsessiontimeout_csharp">
+<a href="#state_idleintransactionsessiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>In<wbr>Transaction<wbr>Session<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Terminate any session with an open transaction that has been idle for longer than the specified duration in milliseconds
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inherit_csharp">
@@ -1420,6 +1465,15 @@ behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_idleintransactionsessiontimeout_go">
+<a href="#state_idleintransactionsessiontimeout_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>In<wbr>Transaction<wbr>Session<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Terminate any session with an open transaction that has been idle for longer than the specified duration in milliseconds
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inherit_go">
 <a href="#state_inherit_go" style="color: inherit; text-decoration: inherit;">Inherit</a>
 </span>
@@ -1621,6 +1675,15 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_idleintransactionsessiontimeout_nodejs">
+<a href="#state_idleintransactionsessiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>In<wbr>Transaction<wbr>Session<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Terminate any session with an open transaction that has been idle for longer than the specified duration in milliseconds
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inherit_nodejs">
@@ -1826,6 +1889,15 @@ behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_idle_in_transaction_session_timeout_python">
+<a href="#state_idle_in_transaction_session_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>in_<wbr>transaction_<wbr>session_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Terminate any session with an open transaction that has been idle for longer than the specified duration in milliseconds
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inherit_python">
 <a href="#state_inherit_python" style="color: inherit; text-decoration: inherit;">inherit</a>
 </span>
@@ -1976,6 +2048,6 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/cyrilgdn/terraform-provider-postgresql).{{% /md %}}</dd>
 </dl>
 
