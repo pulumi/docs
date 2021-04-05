@@ -35,6 +35,7 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
 <ul class="api">
     <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
     <li><a href="getdevicebgpneighbors" title="GetDeviceBgpNeighbors"><span class="symbol function"></span>GetDeviceBgpNeighbors</a></li>
+    <li><a href="getfacility" title="GetFacility"><span class="symbol function"></span>GetFacility</a></li>
     <li><a href="getipblockranges" title="GetIpBlockRanges"><span class="symbol function"></span>GetIpBlockRanges</a></li>
     <li><a href="getoperatingsystem" title="GetOperatingSystem"><span class="symbol function"></span>GetOperatingSystem</a></li>
     <li><a href="getorganization" title="GetOrganization"><span class="symbol function"></span>GetOrganization</a></li>
@@ -55,6 +56,6 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.2.1</dd>
+	<dd>1.3.0</dd>
 </dl>
 
