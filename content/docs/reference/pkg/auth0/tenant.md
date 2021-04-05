@@ -368,7 +368,8 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorpage_csharp">
 <a href="#errorpage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Page</a>
@@ -524,7 +525,8 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorpage_go">
 <a href="#errorpage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Page</a>
@@ -680,7 +682,8 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorpage_nodejs">
 <a href="#errorpage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Page</a>
@@ -836,7 +839,8 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_page_python">
 <a href="#error_page_python" style="color: inherit; text-decoration: inherit;">error_<wbr>page</a>
@@ -1170,7 +1174,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errorpage_csharp">
 <a href="#state_errorpage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Page</a>
@@ -1326,7 +1331,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errorpage_go">
 <a href="#state_errorpage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Page</a>
@@ -1482,7 +1488,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errorpage_nodejs">
 <a href="#state_errorpage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Page</a>
@@ -1638,7 +1645,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List(String). Supported locales for the user interface. The first locale in the list will be used to set the default locale.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_error_page_python">
 <a href="#state_error_page_python" style="color: inherit; text-decoration: inherit;">error_<wbr>page</a>

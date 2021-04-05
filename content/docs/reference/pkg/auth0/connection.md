@@ -3657,7 +3657,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook client ID.
+    <dd>{{% md %}}Google client ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientprotocol_csharp">
@@ -3686,7 +3686,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook client ID.
+    <dd>{{% md %}}Google client ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientprotocol_go">
@@ -3715,7 +3715,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook client ID.
+    <dd>{{% md %}}Google client ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientprotocol_nodejs">
@@ -3744,7 +3744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Facebook client ID.
+    <dd>{{% md %}}Google client ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_protocol_python">
