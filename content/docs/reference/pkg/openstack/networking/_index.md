@@ -16,6 +16,7 @@ Explore the resources and functions of the openstack.networking module.
     <li><a href="floatingipassociate" title="FloatingIpAssociate"><span class="symbol resource"></span>FloatingIpAssociate</a></li>
     <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
     <li><a href="port" title="Port"><span class="symbol resource"></span>Port</a></li>
+    <li><a href="portforwardingv2" title="PortForwardingV2"><span class="symbol resource"></span>PortForwardingV2</a></li>
     <li><a href="portsecgroupassociate" title="PortSecGroupAssociate"><span class="symbol resource"></span>PortSecGroupAssociate</a></li>
     <li><a href="qosbandwidthlimitrule" title="QosBandwidthLimitRule"><span class="symbol resource"></span>QosBandwidthLimitRule</a></li>
     <li><a href="qosdscpmarkingrule" title="QosDscpMarkingRule"><span class="symbol resource"></span>QosDscpMarkingRule</a></li>
@@ -62,6 +63,6 @@ Explore the resources and functions of the openstack.networking module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.17.1</dd>
+	<dd>2.18.0</dd>
 </dl>
 
