@@ -26,6 +26,7 @@ Explore the resources and functions of the aws.cloudwatch module.
     <li><a href="logstream" title="LogStream"><span class="symbol resource"></span>LogStream</a></li>
     <li><a href="logsubscriptionfilter" title="LogSubscriptionFilter"><span class="symbol resource"></span>LogSubscriptionFilter</a></li>
     <li><a href="metricalarm" title="MetricAlarm"><span class="symbol resource"></span>MetricAlarm</a></li>
+    <li><a href="querydefinition" title="QueryDefinition"><span class="symbol resource"></span>QueryDefinition</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -42,6 +43,6 @@ Explore the resources and functions of the aws.cloudwatch module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.35.0</dd>
+	<dd>3.36.0</dd>
 </dl>
 

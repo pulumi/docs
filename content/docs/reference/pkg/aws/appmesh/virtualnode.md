@@ -2189,7 +2189,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context.
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_csharp">
+<a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_csharp">
@@ -2220,7 +2229,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context.
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_go">
+<a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_go">
@@ -2251,7 +2269,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context.
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_nodejs">
+<a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_nodejs">
@@ -2282,7 +2309,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context.
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_python">
+<a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_python">
@@ -2304,6 +2340,240 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="virtualnodespecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_csharp">
+<a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_go">
+<a href="#sds_go" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_nodejs">
+<a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_python">
+<a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatechain_csharp">
+<a href="#certificatechain_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privatekey_csharp">
+<a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatechain_go">
+<a href="#certificatechain_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privatekey_go">
+<a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatechain_nodejs">
+<a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privatekey_nodejs">
+<a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificate_chain_python">
+<a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</h4>
 
 {{% choosable language csharp %}}
@@ -2316,6 +2586,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subjectalternativenames_csharp">
+<a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2329,6 +2608,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subjectalternativenames_go">
+<a href="#subjectalternativenames_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2342,6 +2630,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subjectalternativenames_nodejs">
+<a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2355,6 +2652,123 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_alternative_names_python">
+<a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_csharp">
+<a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_go">
+<a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_nodejs">
+<a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_python">
+<a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_csharp">
+<a href="#exacts_csharp" style="color: inherit; text-decoration: inherit;">Exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_go">
+<a href="#exacts_go" style="color: inherit; text-decoration: inherit;">Exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_nodejs">
+<a href="#exacts_nodejs" style="color: inherit; text-decoration: inherit;">exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_python">
+<a href="#exacts_python" style="color: inherit; text-decoration: inherit;">exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2378,7 +2792,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for a local file.
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_csharp">
+<a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2400,7 +2823,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for a local file.
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_go">
+<a href="#sds_go" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2422,7 +2854,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for a local file.
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_nodejs">
+<a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2444,7 +2885,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for a local file.
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_python">
+<a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2513,7 +2963,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2526,7 +2976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2539,7 +2989,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2552,7 +3002,61 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2711,7 +3215,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context.
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_csharp">
+<a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_csharp">
@@ -2742,7 +3255,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context.
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_go">
+<a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_go">
@@ -2773,7 +3295,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context.
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_nodejs">
+<a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_nodejs">
@@ -2804,7 +3335,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context.
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_python">
+<a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_python">
@@ -2826,6 +3366,240 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_csharp">
+<a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_go">
+<a href="#sds_go" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_nodejs">
+<a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_python">
+<a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatechain_csharp">
+<a href="#certificatechain_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privatekey_csharp">
+<a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatechain_go">
+<a href="#certificatechain_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privatekey_go">
+<a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatechain_nodejs">
+<a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privatekey_nodejs">
+<a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificate_chain_python">
+<a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</h4>
 
 {{% choosable language csharp %}}
@@ -2838,6 +3612,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subjectalternativenames_csharp">
+<a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2851,6 +3634,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subjectalternativenames_go">
+<a href="#subjectalternativenames_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2864,6 +3656,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subjectalternativenames_nodejs">
+<a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2877,6 +3678,123 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_alternative_names_python">
+<a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_csharp">
+<a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_go">
+<a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_nodejs">
+<a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_python">
+<a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_csharp">
+<a href="#exacts_csharp" style="color: inherit; text-decoration: inherit;">Exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_go">
+<a href="#exacts_go" style="color: inherit; text-decoration: inherit;">Exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_nodejs">
+<a href="#exacts_nodejs" style="color: inherit; text-decoration: inherit;">exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_python">
+<a href="#exacts_python" style="color: inherit; text-decoration: inherit;">exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2900,7 +3818,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for a local file.
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_csharp">
+<a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2922,7 +3849,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for a local file.
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_go">
+<a href="#sds_go" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2944,7 +3880,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for a local file.
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_nodejs">
+<a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2966,7 +3911,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for a local file.
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_python">
+<a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3035,7 +3989,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3048,7 +4002,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3061,7 +4015,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3074,7 +4028,61 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5569,6 +6577,15 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validation_csharp">
+<a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5591,6 +6608,15 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validation_go">
+<a href="#validation_go" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5613,6 +6639,15 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validation_nodejs">
+<a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5635,6 +6670,15 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validation_python">
+<a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5659,6 +6703,15 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_csharp">
+<a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5681,6 +6734,15 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_go">
+<a href="#sds_go" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5703,6 +6765,15 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_nodejs">
+<a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5725,6 +6796,15 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_python">
+<a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5793,7 +6873,7 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_csharp">
@@ -5815,7 +6895,7 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_go">
@@ -5837,7 +6917,7 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_nodejs">
@@ -5859,7 +6939,7 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_python">
@@ -5869,6 +6949,456 @@ Minimum value of `0`. Maximum value of `100`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespeclistenertlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespeclistenertlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="trust_csharp">
+<a href="#trust_csharp" style="color: inherit; text-decoration: inherit;">Trust</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subjectalternativenames_csharp">
+<a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="trust_go">
+<a href="#trust_go" style="color: inherit; text-decoration: inherit;">Trust</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subjectalternativenames_go">
+<a href="#subjectalternativenames_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="trust_nodejs">
+<a href="#trust_nodejs" style="color: inherit; text-decoration: inherit;">trust</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subjectalternativenames_nodejs">
+<a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="trust_python">
+<a href="#trust_python" style="color: inherit; text-decoration: inherit;">trust</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subject_alternative_names_python">
+<a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The SANs for a TLS validation context.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_csharp">
+<a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_go">
+<a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_nodejs">
+<a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_python">
+<a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining a SAN's match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_csharp">
+<a href="#exacts_csharp" style="color: inherit; text-decoration: inherit;">Exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_go">
+<a href="#exacts_go" style="color: inherit; text-decoration: inherit;">Exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_nodejs">
+<a href="#exacts_nodejs" style="color: inherit; text-decoration: inherit;">exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exacts_python">
+<a href="#exacts_python" style="color: inherit; text-decoration: inherit;">exacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The values sent must match the specified values exactly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespeclistenertlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_csharp">
+<a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_go">
+<a href="#sds_go" style="color: inherit; text-decoration: inherit;">Sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_nodejs">
+<a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sds_python">
+<a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespeclistenertlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatechain_csharp">
+<a href="#certificatechain_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatechain_go">
+<a href="#certificatechain_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatechain_nodejs">
+<a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificate_chain_python">
+<a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnodespeclistenertlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

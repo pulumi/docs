@@ -337,7 +337,7 @@ const lambda_example = new aws.lb.TargetGroup("lambda-example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TargetGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deregistration_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[TargetGroupHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">lambda_multi_value_headers_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancing_algorithm_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_protocol_v2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slow_start</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">stickiness</span><span class="p">:</span> <span class="nx">Optional[TargetGroupStickinessArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TargetGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deregistration_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[TargetGroupHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">lambda_multi_value_headers_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancing_algorithm_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preserve_client_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_protocol_v2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slow_start</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">stickiness</span><span class="p">:</span> <span class="nx">Optional[TargetGroupStickinessArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -485,7 +485,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
+    <dd>{{% md %}}Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_csharp">
@@ -494,7 +494,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Health Check block. Health Check blocks are documented below.
+    <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdamultivalueheadersenabled_csharp">
@@ -503,7 +503,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingalgorithmtype_csharp">
@@ -521,7 +521,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the target group. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the Target Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
@@ -539,7 +539,16 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preserveclientip_csharp">
+<a href="#preserveclientip_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Client<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether client IP preservation is enabled. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#client-ip-preservation) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
@@ -548,7 +557,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolversion_csharp">
@@ -557,7 +566,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Only applicable when `protocol` is `HTTP` or `HTTPS`. The protocol version. Specify GRPC to send requests to targets using gRPC. Specify HTTP2 to send requests to targets using HTTP/2. The default is HTTP1, which sends requests to targets using HTTP/1.1
+    <dd>{{% md %}}Protocol version. Defaults to `HTTP1`. Specify GRPC to send requests to targets using GRPC, HTTP2 to send requests to targets using HTTP/2, HTTP1 to send requests to targets using HTTP/1.1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocolv2_csharp">
@@ -566,7 +575,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information.
+    <dd>{{% md %}}Whether to enable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slowstart_csharp">
@@ -575,7 +584,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
+    <dd>{{% md %}}Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_csharp">
@@ -584,7 +593,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
+    <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -593,7 +602,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targettype_csharp">
@@ -602,12 +611,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of target that you must specify when registering targets with this target group.
-The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn).
-The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses.
-If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group,
-the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10).
-You can't specify publicly routable IP addresses.
+    <dd>{{% md %}}Type of target that you must specify when registering targets with this target group. The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn). The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses. If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group, the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10). You can't specify publicly routable IP addresses.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_csharp">
@@ -616,7 +620,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -629,7 +633,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
+    <dd>{{% md %}}Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_go">
@@ -638,7 +642,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A Health Check block. Health Check blocks are documented below.
+    <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdamultivalueheadersenabled_go">
@@ -647,7 +651,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingalgorithmtype_go">
@@ -665,7 +669,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the target group. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the Target Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
@@ -683,7 +687,16 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preserveclientip_go">
+<a href="#preserveclientip_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Client<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether client IP preservation is enabled. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#client-ip-preservation) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
@@ -692,7 +705,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolversion_go">
@@ -701,7 +714,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Only applicable when `protocol` is `HTTP` or `HTTPS`. The protocol version. Specify GRPC to send requests to targets using gRPC. Specify HTTP2 to send requests to targets using HTTP/2. The default is HTTP1, which sends requests to targets using HTTP/1.1
+    <dd>{{% md %}}Protocol version. Defaults to `HTTP1`. Specify GRPC to send requests to targets using GRPC, HTTP2 to send requests to targets using HTTP/2, HTTP1 to send requests to targets using HTTP/1.1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocolv2_go">
@@ -710,7 +723,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information.
+    <dd>{{% md %}}Whether to enable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slowstart_go">
@@ -719,7 +732,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
+    <dd>{{% md %}}Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_go">
@@ -728,7 +741,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
+    <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -737,7 +750,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targettype_go">
@@ -746,12 +759,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of target that you must specify when registering targets with this target group.
-The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn).
-The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses.
-If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group,
-the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10).
-You can't specify publicly routable IP addresses.
+    <dd>{{% md %}}Type of target that you must specify when registering targets with this target group. The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn). The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses. If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group, the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10). You can't specify publicly routable IP addresses.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_go">
@@ -760,7 +768,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -773,7 +781,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
+    <dd>{{% md %}}Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_nodejs">
@@ -782,7 +790,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A Health Check block. Health Check blocks are documented below.
+    <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdamultivalueheadersenabled_nodejs">
@@ -791,7 +799,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingalgorithmtype_nodejs">
@@ -809,7 +817,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the target group. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the Target Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
@@ -827,7 +835,16 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preserveclientip_nodejs">
+<a href="#preserveclientip_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Client<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether client IP preservation is enabled. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#client-ip-preservation) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
@@ -836,7 +853,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolversion_nodejs">
@@ -845,7 +862,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Only applicable when `protocol` is `HTTP` or `HTTPS`. The protocol version. Specify GRPC to send requests to targets using gRPC. Specify HTTP2 to send requests to targets using HTTP/2. The default is HTTP1, which sends requests to targets using HTTP/1.1
+    <dd>{{% md %}}Protocol version. Defaults to `HTTP1`. Specify GRPC to send requests to targets using GRPC, HTTP2 to send requests to targets using HTTP/2, HTTP1 to send requests to targets using HTTP/1.1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocolv2_nodejs">
@@ -854,7 +871,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information.
+    <dd>{{% md %}}Whether to enable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slowstart_nodejs">
@@ -863,7 +880,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
+    <dd>{{% md %}}Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_nodejs">
@@ -872,7 +889,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
+    <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -881,7 +898,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targettype_nodejs">
@@ -890,12 +907,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of target that you must specify when registering targets with this target group.
-The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn).
-The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses.
-If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group,
-the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10).
-You can't specify publicly routable IP addresses.
+    <dd>{{% md %}}Type of target that you must specify when registering targets with this target group. The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn). The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses. If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group, the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10). You can't specify publicly routable IP addresses.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_nodejs">
@@ -904,7 +916,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -917,7 +929,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
+    <dd>{{% md %}}Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_python">
@@ -926,7 +938,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Health Check block. Health Check blocks are documented below.
+    <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambda_multi_value_headers_enabled_python">
@@ -935,7 +947,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancing_algorithm_type_python">
@@ -953,7 +965,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the target group. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the Target Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
@@ -971,7 +983,16 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preserve_client_ip_python">
+<a href="#preserve_client_ip_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>client_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Whether client IP preservation is enabled. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#client-ip-preservation) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
@@ -980,7 +1001,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_version_python">
@@ -989,7 +1010,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Only applicable when `protocol` is `HTTP` or `HTTPS`. The protocol version. Specify GRPC to send requests to targets using gRPC. Specify HTTP2 to send requests to targets using HTTP/2. The default is HTTP1, which sends requests to targets using HTTP/1.1
+    <dd>{{% md %}}Protocol version. Defaults to `HTTP1`. Specify GRPC to send requests to targets using GRPC, HTTP2 to send requests to targets using HTTP/2, HTTP1 to send requests to targets using HTTP/1.1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_protocol_v2_python">
@@ -998,7 +1019,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information.
+    <dd>{{% md %}}Whether to enable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slow_start_python">
@@ -1007,7 +1028,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
+    <dd>{{% md %}}Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_python">
@@ -1016,7 +1037,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
+    <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1025,7 +1046,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_type_python">
@@ -1034,12 +1055,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of target that you must specify when registering targets with this target group.
-The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn).
-The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses.
-If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group,
-the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10).
-You can't specify publicly routable IP addresses.
+    <dd>{{% md %}}Type of target that you must specify when registering targets with this target group. The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn). The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses. If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group, the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10). You can't specify publicly routable IP addresses.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_id_python">
@@ -1048,7 +1064,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1068,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group (matches `id`)
+    <dd>{{% md %}}ARN of the Target Group (matches `id`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arnsuffix_csharp">
@@ -1077,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
+    <dd>{{% md %}}ARN suffix for use with CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1098,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group (matches `id`)
+    <dd>{{% md %}}ARN of the Target Group (matches `id`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arnsuffix_go">
@@ -1107,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
+    <dd>{{% md %}}ARN suffix for use with CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -1128,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group (matches `id`)
+    <dd>{{% md %}}ARN of the Target Group (matches `id`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arnsuffix_nodejs">
@@ -1137,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
+    <dd>{{% md %}}ARN suffix for use with CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1158,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group (matches `id`)
+    <dd>{{% md %}}ARN of the Target Group (matches `id`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_suffix_python">
@@ -1167,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
+    <dd>{{% md %}}ARN suffix for use with CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -1192,7 +1208,7 @@ Get an existing TargetGroup resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deregistration_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[TargetGroupHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">lambda_multi_value_headers_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancing_algorithm_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_protocol_v2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slow_start</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">stickiness</span><span class="p">:</span> <span class="nx">Optional[TargetGroupStickinessArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TargetGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deregistration_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[TargetGroupHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">lambda_multi_value_headers_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancing_algorithm_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preserve_client_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_protocol_v2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slow_start</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">stickiness</span><span class="p">:</span> <span class="nx">Optional[TargetGroupStickinessArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TargetGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1311,7 +1327,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group (matches `id`)
+    <dd>{{% md %}}ARN of the Target Group (matches `id`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arnsuffix_csharp">
@@ -1320,7 +1336,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
+    <dd>{{% md %}}ARN suffix for use with CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deregistrationdelay_csharp">
@@ -1329,7 +1345,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
+    <dd>{{% md %}}Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_csharp">
@@ -1338,7 +1354,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Health Check block. Health Check blocks are documented below.
+    <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdamultivalueheadersenabled_csharp">
@@ -1347,7 +1363,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingalgorithmtype_csharp">
@@ -1365,7 +1381,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the target group. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the Target Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_csharp">
@@ -1383,7 +1399,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_preserveclientip_csharp">
+<a href="#state_preserveclientip_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Client<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether client IP preservation is enabled. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#client-ip-preservation) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
@@ -1392,7 +1417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocolversion_csharp">
@@ -1401,7 +1426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Only applicable when `protocol` is `HTTP` or `HTTPS`. The protocol version. Specify GRPC to send requests to targets using gRPC. Specify HTTP2 to send requests to targets using HTTP/2. The default is HTTP1, which sends requests to targets using HTTP/1.1
+    <dd>{{% md %}}Protocol version. Defaults to `HTTP1`. Specify GRPC to send requests to targets using GRPC, HTTP2 to send requests to targets using HTTP/2, HTTP1 to send requests to targets using HTTP/1.1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocolv2_csharp">
@@ -1410,7 +1435,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information.
+    <dd>{{% md %}}Whether to enable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slowstart_csharp">
@@ -1419,7 +1444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
+    <dd>{{% md %}}Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stickiness_csharp">
@@ -1428,7 +1453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
+    <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -1437,7 +1462,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettype_csharp">
@@ -1446,12 +1471,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of target that you must specify when registering targets with this target group.
-The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn).
-The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses.
-If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group,
-the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10).
-You can't specify publicly routable IP addresses.
+    <dd>{{% md %}}Type of target that you must specify when registering targets with this target group. The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn). The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses. If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group, the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10). You can't specify publicly routable IP addresses.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
@@ -1460,7 +1480,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1473,7 +1493,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group (matches `id`)
+    <dd>{{% md %}}ARN of the Target Group (matches `id`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arnsuffix_go">
@@ -1482,7 +1502,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
+    <dd>{{% md %}}ARN suffix for use with CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deregistrationdelay_go">
@@ -1491,7 +1511,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
+    <dd>{{% md %}}Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_go">
@@ -1500,7 +1520,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A Health Check block. Health Check blocks are documented below.
+    <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdamultivalueheadersenabled_go">
@@ -1509,7 +1529,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingalgorithmtype_go">
@@ -1527,7 +1547,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the target group. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the Target Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_go">
@@ -1545,7 +1565,16 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_preserveclientip_go">
+<a href="#state_preserveclientip_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Client<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether client IP preservation is enabled. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#client-ip-preservation) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
@@ -1554,7 +1583,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocolversion_go">
@@ -1563,7 +1592,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Only applicable when `protocol` is `HTTP` or `HTTPS`. The protocol version. Specify GRPC to send requests to targets using gRPC. Specify HTTP2 to send requests to targets using HTTP/2. The default is HTTP1, which sends requests to targets using HTTP/1.1
+    <dd>{{% md %}}Protocol version. Defaults to `HTTP1`. Specify GRPC to send requests to targets using GRPC, HTTP2 to send requests to targets using HTTP/2, HTTP1 to send requests to targets using HTTP/1.1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocolv2_go">
@@ -1572,7 +1601,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information.
+    <dd>{{% md %}}Whether to enable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slowstart_go">
@@ -1581,7 +1610,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
+    <dd>{{% md %}}Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stickiness_go">
@@ -1590,7 +1619,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
+    <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1599,7 +1628,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettype_go">
@@ -1608,12 +1637,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of target that you must specify when registering targets with this target group.
-The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn).
-The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses.
-If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group,
-the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10).
-You can't specify publicly routable IP addresses.
+    <dd>{{% md %}}Type of target that you must specify when registering targets with this target group. The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn). The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses. If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group, the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10). You can't specify publicly routable IP addresses.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
@@ -1622,7 +1646,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1635,7 +1659,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group (matches `id`)
+    <dd>{{% md %}}ARN of the Target Group (matches `id`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arnsuffix_nodejs">
@@ -1644,7 +1668,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
+    <dd>{{% md %}}ARN suffix for use with CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deregistrationdelay_nodejs">
@@ -1653,7 +1677,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
+    <dd>{{% md %}}Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_nodejs">
@@ -1662,7 +1686,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A Health Check block. Health Check blocks are documented below.
+    <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdamultivalueheadersenabled_nodejs">
@@ -1671,7 +1695,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingalgorithmtype_nodejs">
@@ -1689,7 +1713,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the target group. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the Target Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_nodejs">
@@ -1707,7 +1731,16 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_preserveclientip_nodejs">
+<a href="#state_preserveclientip_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Client<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether client IP preservation is enabled. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#client-ip-preservation) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
@@ -1716,7 +1749,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocolversion_nodejs">
@@ -1725,7 +1758,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Only applicable when `protocol` is `HTTP` or `HTTPS`. The protocol version. Specify GRPC to send requests to targets using gRPC. Specify HTTP2 to send requests to targets using HTTP/2. The default is HTTP1, which sends requests to targets using HTTP/1.1
+    <dd>{{% md %}}Protocol version. Defaults to `HTTP1`. Specify GRPC to send requests to targets using GRPC, HTTP2 to send requests to targets using HTTP/2, HTTP1 to send requests to targets using HTTP/1.1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocolv2_nodejs">
@@ -1734,7 +1767,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information.
+    <dd>{{% md %}}Whether to enable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slowstart_nodejs">
@@ -1743,7 +1776,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
+    <dd>{{% md %}}Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stickiness_nodejs">
@@ -1752,7 +1785,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
+    <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1761,7 +1794,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettype_nodejs">
@@ -1770,12 +1803,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of target that you must specify when registering targets with this target group.
-The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn).
-The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses.
-If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group,
-the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10).
-You can't specify publicly routable IP addresses.
+    <dd>{{% md %}}Type of target that you must specify when registering targets with this target group. The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn). The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses. If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group, the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10). You can't specify publicly routable IP addresses.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
@@ -1784,7 +1812,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1797,7 +1825,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group (matches `id`)
+    <dd>{{% md %}}ARN of the Target Group (matches `id`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_suffix_python">
@@ -1806,7 +1834,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
+    <dd>{{% md %}}ARN suffix for use with CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deregistration_delay_python">
@@ -1815,7 +1843,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
+    <dd>{{% md %}}Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_python">
@@ -1824,7 +1852,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Health Check block. Health Check blocks are documented below.
+    <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambda_multi_value_headers_enabled_python">
@@ -1833,7 +1861,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+    <dd>{{% md %}}Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancing_algorithm_type_python">
@@ -1851,7 +1879,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the target group. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the Target Group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_prefix_python">
@@ -1869,7 +1897,16 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_preserve_client_ip_python">
+<a href="#state_preserve_client_ip_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>client_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Whether client IP preservation is enabled. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#client-ip-preservation) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
@@ -1878,7 +1915,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_version_python">
@@ -1887,7 +1924,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Only applicable when `protocol` is `HTTP` or `HTTPS`. The protocol version. Specify GRPC to send requests to targets using gRPC. Specify HTTP2 to send requests to targets using HTTP/2. The default is HTTP1, which sends requests to targets using HTTP/1.1
+    <dd>{{% md %}}Protocol version. Defaults to `HTTP1`. Specify GRPC to send requests to targets using GRPC, HTTP2 to send requests to targets using HTTP/2, HTTP1 to send requests to targets using HTTP/1.1.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_protocol_v2_python">
@@ -1896,7 +1933,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information.
+    <dd>{{% md %}}Whether to enable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slow_start_python">
@@ -1905,7 +1942,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
+    <dd>{{% md %}}Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stickiness_python">
@@ -1914,7 +1951,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
+    <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -1923,7 +1960,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_type_python">
@@ -1932,12 +1969,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of target that you must specify when registering targets with this target group.
-The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn).
-The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses.
-If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group,
-the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10).
-You can't specify publicly routable IP addresses.
+    <dd>{{% md %}}Type of target that you must specify when registering targets with this target group. The possible values are `instance` (targets are specified by instance ID) or `ip` (targets are specified by IP address) or `lambda` (targets are specified by lambda arn). The default is `instance`. Note that you can't specify targets for a target group using both instance IDs and IP addresses. If the target type is `ip`, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group, the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10). You can't specify publicly routable IP addresses.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
@@ -1946,7 +1978,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1970,7 +2002,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`
+    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_csharp">
@@ -1979,7 +2011,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
+    <dd>{{% md %}}Number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
@@ -1988,7 +2020,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
+    <dd>{{% md %}}Approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matcher_csharp">
@@ -1997,7 +2029,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, "200,202" for HTTP(s) or "0,12" for GRPC) or a range of values (for example, "200-299" or "0-99"). Applies to Application Load Balancers only (HTTP/HTTPS/GRPC), not Network Load Balancers (TCP).
+    <dd>{{% md %}}Response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, "200,202" for HTTP(s) or "0,12" for GRPC) or a range of values (for example, "200-299" or "0-99"). Required for HTTP/HTTPS/GRPC ALB. Only applies to Application Load Balancers (i.e., HTTP/HTTPS/GRPC) not Network Load Balancers (i.e., TCP).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
@@ -2006,7 +2038,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination for the health check request. Applies to only HTTP/HTTPS.
+    <dd>{{% md %}}Destination for the health check request. Required for HTTP/HTTPS ALB and HTTP NLB. Only applies to HTTP/HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
@@ -2015,7 +2047,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
@@ -2024,7 +2056,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
@@ -2033,7 +2065,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
+    <dd>{{% md %}}Amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthythreshold_csharp">
@@ -2042,7 +2074,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
+    <dd>{{% md %}}Number of consecutive health check failures required before considering the target unhealthy. For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2055,7 +2087,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`
+    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_go">
@@ -2064,7 +2096,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
+    <dd>{{% md %}}Number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
@@ -2073,7 +2105,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
+    <dd>{{% md %}}Approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matcher_go">
@@ -2082,7 +2114,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, "200,202" for HTTP(s) or "0,12" for GRPC) or a range of values (for example, "200-299" or "0-99"). Applies to Application Load Balancers only (HTTP/HTTPS/GRPC), not Network Load Balancers (TCP).
+    <dd>{{% md %}}Response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, "200,202" for HTTP(s) or "0,12" for GRPC) or a range of values (for example, "200-299" or "0-99"). Required for HTTP/HTTPS/GRPC ALB. Only applies to Application Load Balancers (i.e., HTTP/HTTPS/GRPC) not Network Load Balancers (i.e., TCP).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -2091,7 +2123,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination for the health check request. Applies to only HTTP/HTTPS.
+    <dd>{{% md %}}Destination for the health check request. Required for HTTP/HTTPS ALB and HTTP NLB. Only applies to HTTP/HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
@@ -2100,7 +2132,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
@@ -2109,7 +2141,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
@@ -2118,7 +2150,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
+    <dd>{{% md %}}Amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthythreshold_go">
@@ -2127,7 +2159,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
+    <dd>{{% md %}}Number of consecutive health check failures required before considering the target unhealthy. For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2140,7 +2172,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`
+    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_nodejs">
@@ -2149,7 +2181,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
+    <dd>{{% md %}}Number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
@@ -2158,7 +2190,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
+    <dd>{{% md %}}Approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matcher_nodejs">
@@ -2167,7 +2199,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, "200,202" for HTTP(s) or "0,12" for GRPC) or a range of values (for example, "200-299" or "0-99"). Applies to Application Load Balancers only (HTTP/HTTPS/GRPC), not Network Load Balancers (TCP).
+    <dd>{{% md %}}Response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, "200,202" for HTTP(s) or "0,12" for GRPC) or a range of values (for example, "200-299" or "0-99"). Required for HTTP/HTTPS/GRPC ALB. Only applies to Application Load Balancers (i.e., HTTP/HTTPS/GRPC) not Network Load Balancers (i.e., TCP).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
@@ -2176,7 +2208,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination for the health check request. Applies to only HTTP/HTTPS.
+    <dd>{{% md %}}Destination for the health check request. Required for HTTP/HTTPS ALB and HTTP NLB. Only applies to HTTP/HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
@@ -2185,7 +2217,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
@@ -2194,7 +2226,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
@@ -2203,7 +2235,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
+    <dd>{{% md %}}Amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthythreshold_nodejs">
@@ -2212,7 +2244,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
+    <dd>{{% md %}}Number of consecutive health check failures required before considering the target unhealthy. For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2225,7 +2257,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`
+    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthy_threshold_python">
@@ -2234,7 +2266,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
+    <dd>{{% md %}}Number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
@@ -2243,7 +2275,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
+    <dd>{{% md %}}Approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matcher_python">
@@ -2252,7 +2284,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, "200,202" for HTTP(s) or "0,12" for GRPC) or a range of values (for example, "200-299" or "0-99"). Applies to Application Load Balancers only (HTTP/HTTPS/GRPC), not Network Load Balancers (TCP).
+    <dd>{{% md %}}Response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, "200,202" for HTTP(s) or "0,12" for GRPC) or a range of values (for example, "200-299" or "0-99"). Required for HTTP/HTTPS/GRPC ALB. Only applies to Application Load Balancers (i.e., HTTP/HTTPS/GRPC) not Network Load Balancers (i.e., TCP).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -2261,7 +2293,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The destination for the health check request. Applies to only HTTP/HTTPS.
+    <dd>{{% md %}}Destination for the health check request. Required for HTTP/HTTPS ALB and HTTP NLB. Only applies to HTTP/HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
@@ -2270,7 +2302,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The port on which targets receive traffic, unless overridden when registering a specific target. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
@@ -2279,7 +2311,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+    <dd>{{% md %}}Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
@@ -2288,7 +2320,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
+    <dd>{{% md %}}Amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthy_threshold_python">
@@ -2297,7 +2329,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
+    <dd>{{% md %}}Number of consecutive health check failures required before considering the target unhealthy. For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2312,7 +2344,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
+    <dd>{{% md %}}Type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieduration_csharp">
@@ -2330,7 +2362,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether  health checks are enabled. Defaults to true.
+    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2343,7 +2375,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
+    <dd>{{% md %}}Type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieduration_go">
@@ -2361,7 +2393,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether  health checks are enabled. Defaults to true.
+    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2374,7 +2406,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
+    <dd>{{% md %}}Type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieduration_nodejs">
@@ -2392,7 +2424,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether  health checks are enabled. Defaults to true.
+    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2405,7 +2437,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
+    <dd>{{% md %}}Type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookie_duration_python">
@@ -2423,7 +2455,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether  health checks are enabled. Defaults to true.
+    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

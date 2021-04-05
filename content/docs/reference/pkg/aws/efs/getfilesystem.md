@@ -300,6 +300,24 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name of the file system.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="availabilityzoneid_csharp">
+<a href="#availabilityzoneid_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="availabilityzonename_csharp">
+<a href="#availabilityzonename_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Availability Zone name in which the file system's One Zone storage classes exist.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="creationtoken_csharp">
 <a href="#creationtoken_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Token</a>
 </span>
@@ -417,6 +435,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="availabilityzoneid_go">
+<a href="#availabilityzoneid_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="availabilityzonename_go">
+<a href="#availabilityzonename_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Availability Zone name in which the file system's One Zone storage classes exist.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtoken_go">
@@ -538,6 +574,24 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name of the file system.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="availabilityzoneid_nodejs">
+<a href="#availabilityzoneid_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="availabilityzonename_nodejs">
+<a href="#availabilityzonename_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Availability Zone name in which the file system's One Zone storage classes exist.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="creationtoken_nodejs">
 <a href="#creationtoken_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Token</a>
 </span>
@@ -655,6 +709,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="availability_zone_id_python">
+<a href="#availability_zone_id_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="availability_zone_name_python">
+<a href="#availability_zone_name_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Availability Zone name in which the file system's One Zone storage classes exist.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_token_python">
