@@ -138,7 +138,7 @@ const example = new okta.group.Rule("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">expression_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expression_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_assignments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">expression_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expression_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_assignments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remove_assigned_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -304,7 +304,8 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression type to use to invoke the rule. The default is `"urn:okta:expression:1.0"`.
+    <dd>{{% md %}}The expression type to use to invoke the rule. The default
+is `"urn:okta:expression:1.0"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -314,6 +315,16 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Group Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="removeassignedusers_csharp">
+<a href="#removeassignedusers_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Assigned<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This tells the provider to remove users added by this rule from the assigned
+group after destroying this resource. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
@@ -353,7 +364,8 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression type to use to invoke the rule. The default is `"urn:okta:expression:1.0"`.
+    <dd>{{% md %}}The expression type to use to invoke the rule. The default
+is `"urn:okta:expression:1.0"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -363,6 +375,16 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Group Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="removeassignedusers_go">
+<a href="#removeassignedusers_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Assigned<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This tells the provider to remove users added by this rule from the assigned
+group after destroying this resource. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
@@ -402,7 +424,8 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression type to use to invoke the rule. The default is `"urn:okta:expression:1.0"`.
+    <dd>{{% md %}}The expression type to use to invoke the rule. The default
+is `"urn:okta:expression:1.0"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -412,6 +435,16 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Group Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="removeassignedusers_nodejs">
+<a href="#removeassignedusers_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Assigned<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This tells the provider to remove users added by this rule from the assigned
+group after destroying this resource. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
@@ -451,7 +484,8 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The expression type to use to invoke the rule. The default is `"urn:okta:expression:1.0"`.
+    <dd>{{% md %}}The expression type to use to invoke the rule. The default
+is `"urn:okta:expression:1.0"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -461,6 +495,16 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Group Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="remove_assigned_users_python">
+<a href="#remove_assigned_users_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>assigned_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This tells the provider to remove users added by this rule from the assigned
+group after destroying this resource. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
@@ -541,7 +585,7 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">expression_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expression_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_assignments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Rule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">expression_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expression_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_assignments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remove_assigned_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Rule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -660,7 +704,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression type to use to invoke the rule. The default is `"urn:okta:expression:1.0"`.
+    <dd>{{% md %}}The expression type to use to invoke the rule. The default
+is `"urn:okta:expression:1.0"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressionvalue_csharp">
@@ -690,6 +735,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Group Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_removeassignedusers_csharp">
+<a href="#state_removeassignedusers_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Assigned<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This tells the provider to remove users added by this rule from the assigned
+group after destroying this resource. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -709,7 +764,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression type to use to invoke the rule. The default is `"urn:okta:expression:1.0"`.
+    <dd>{{% md %}}The expression type to use to invoke the rule. The default
+is `"urn:okta:expression:1.0"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressionvalue_go">
@@ -739,6 +795,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Group Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_removeassignedusers_go">
+<a href="#state_removeassignedusers_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Assigned<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This tells the provider to remove users added by this rule from the assigned
+group after destroying this resource. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -758,7 +824,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression type to use to invoke the rule. The default is `"urn:okta:expression:1.0"`.
+    <dd>{{% md %}}The expression type to use to invoke the rule. The default
+is `"urn:okta:expression:1.0"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressionvalue_nodejs">
@@ -788,6 +855,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Group Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_removeassignedusers_nodejs">
+<a href="#state_removeassignedusers_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Assigned<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This tells the provider to remove users added by this rule from the assigned
+group after destroying this resource. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -807,7 +884,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The expression type to use to invoke the rule. The default is `"urn:okta:expression:1.0"`.
+    <dd>{{% md %}}The expression type to use to invoke the rule. The default
+is `"urn:okta:expression:1.0"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expression_value_python">
@@ -835,6 +913,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Group Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_remove_assigned_users_python">
+<a href="#state_remove_assigned_users_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>assigned_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This tells the provider to remove users added by this rule from the assigned
+group after destroying this resource. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
@@ -870,6 +958,6 @@ An Okta Group Rule can be imported via the Okta ID.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/okta/terraform-provider-okta).{{% /md %}}</dd>
 </dl>
 
