@@ -658,17 +658,82 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="appobjectid_csharp">
+<a href="#appobjectid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="azspnroleassignmentid_csharp">
+<a href="#azspnroleassignmentid_csharp" style="color: inherit; text-decoration: inherit;">Az<wbr>Spn<wbr>Role<wbr>Assignment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="azspnrolepermissions_csharp">
+<a href="#azspnrolepermissions_csharp" style="color: inherit; text-decoration: inherit;">Az<wbr>Spn<wbr>Role<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceprincipalid_csharp">
+<a href="#serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal ID.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spnobjectid_csharp">
+<a href="#spnobjectid_csharp" style="color: inherit; text-decoration: inherit;">Spn<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="appobjectid_go">
+<a href="#appobjectid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="azspnroleassignmentid_go">
+<a href="#azspnroleassignmentid_go" style="color: inherit; text-decoration: inherit;">Az<wbr>Spn<wbr>Role<wbr>Assignment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="azspnrolepermissions_go">
+<a href="#azspnrolepermissions_go" style="color: inherit; text-decoration: inherit;">Az<wbr>Spn<wbr>Role<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -676,11 +741,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceprincipalid_go">
+<a href="#serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal ID.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spnobjectid_go">
+<a href="#spnobjectid_go" style="color: inherit; text-decoration: inherit;">Spn<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="appobjectid_nodejs">
+<a href="#appobjectid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="azspnroleassignmentid_nodejs">
+<a href="#azspnroleassignmentid_nodejs" style="color: inherit; text-decoration: inherit;">az<wbr>Spn<wbr>Role<wbr>Assignment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="azspnrolepermissions_nodejs">
+<a href="#azspnrolepermissions_nodejs" style="color: inherit; text-decoration: inherit;">az<wbr>Spn<wbr>Role<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -688,11 +794,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceprincipalid_nodejs">
+<a href="#serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal ID.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spnobjectid_nodejs">
+<a href="#spnobjectid_nodejs" style="color: inherit; text-decoration: inherit;">spn<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="app_object_id_python">
+<a href="#app_object_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="az_spn_role_assignment_id_python">
+<a href="#az_spn_role_assignment_id_python" style="color: inherit; text-decoration: inherit;">az_<wbr>spn_<wbr>role_<wbr>assignment_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="az_spn_role_permissions_python">
+<a href="#az_spn_role_permissions_python" style="color: inherit; text-decoration: inherit;">az_<wbr>spn_<wbr>role_<wbr>permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -700,7 +847,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service principal ID.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spn_object_id_python">
+<a href="#spn_object_id_python" style="color: inherit; text-decoration: inherit;">spn_<wbr>object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -716,7 +880,7 @@ Get an existing ServiceEndpointAzureEcr resource's state with the given name, ID
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">azurecr_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azurecr_spn_tenantid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azurecr_subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azurecr_subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceEndpointAzureEcr</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">az_spn_role_assignment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">az_spn_role_permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azurecr_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azurecr_spn_tenantid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azurecr_subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azurecr_subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spn_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceEndpointAzureEcr</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -829,11 +993,35 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_appobjectid_csharp">
+<a href="#state_appobjectid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_authorization_csharp">
 <a href="#state_authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_azspnroleassignmentid_csharp">
+<a href="#state_azspnroleassignmentid_csharp" style="color: inherit; text-decoration: inherit;">Az<wbr>Spn<wbr>Role<wbr>Assignment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_azspnrolepermissions_csharp">
+<a href="#state_azspnrolepermissions_csharp" style="color: inherit; text-decoration: inherit;">Az<wbr>Spn<wbr>Role<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -907,17 +1095,58 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceprincipalid_csharp">
+<a href="#state_serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_spnobjectid_csharp">
+<a href="#state_spnobjectid_csharp" style="color: inherit; text-decoration: inherit;">Spn<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_appobjectid_go">
+<a href="#state_appobjectid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_go">
 <a href="#state_authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_azspnroleassignmentid_go">
+<a href="#state_azspnroleassignmentid_go" style="color: inherit; text-decoration: inherit;">Az<wbr>Spn<wbr>Role<wbr>Assignment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_azspnrolepermissions_go">
+<a href="#state_azspnrolepermissions_go" style="color: inherit; text-decoration: inherit;">Az<wbr>Spn<wbr>Role<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -991,17 +1220,58 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceprincipalid_go">
+<a href="#state_serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_spnobjectid_go">
+<a href="#state_spnobjectid_go" style="color: inherit; text-decoration: inherit;">Spn<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_appobjectid_nodejs">
+<a href="#state_appobjectid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_nodejs">
 <a href="#state_authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_azspnroleassignmentid_nodejs">
+<a href="#state_azspnroleassignmentid_nodejs" style="color: inherit; text-decoration: inherit;">az<wbr>Spn<wbr>Role<wbr>Assignment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_azspnrolepermissions_nodejs">
+<a href="#state_azspnrolepermissions_nodejs" style="color: inherit; text-decoration: inherit;">az<wbr>Spn<wbr>Role<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,17 +1345,58 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceprincipalid_nodejs">
+<a href="#state_serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_spnobjectid_nodejs">
+<a href="#state_spnobjectid_nodejs" style="color: inherit; text-decoration: inherit;">spn<wbr>Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_app_object_id_python">
+<a href="#state_app_object_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_python">
 <a href="#state_authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_az_spn_role_assignment_id_python">
+<a href="#state_az_spn_role_assignment_id_python" style="color: inherit; text-decoration: inherit;">az_<wbr>spn_<wbr>role_<wbr>assignment_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_az_spn_role_permissions_python">
+<a href="#state_az_spn_role_permissions_python" style="color: inherit; text-decoration: inherit;">az_<wbr>spn_<wbr>role_<wbr>permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1159,7 +1470,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_service_principal_id_python">
+<a href="#state_service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service principal ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_spn_object_id_python">
+<a href="#state_spn_object_id_python" style="color: inherit; text-decoration: inherit;">spn_<wbr>object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

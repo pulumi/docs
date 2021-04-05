@@ -15,7 +15,6 @@ Manages a git repository within Azure DevOps.
 
 - [Azure DevOps Service REST API 5.1 - Git Repositories](https://docs.microsoft.com/en-us/rest/api/azure/devops/git/repositories?view=azure-devops-rest-5.1)
 
-
 {{% examples %}}
 
 ## Example Usage
@@ -1642,6 +1641,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The URL of the source repository. Used if the `init_type` is `Import`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+Azure DevOps Repositories can be imported using the repo Guid e.g.
+
+```sh
+ $ pulumi import azuredevops:index/git:Git repository projectName/00000000-0000-0000-0000-000000000000
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
