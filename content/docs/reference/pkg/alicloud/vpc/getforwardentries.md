@@ -44,13 +44,14 @@ class MyStack : Stack
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/12",
+            VpcName = name,
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
             CidrBlock = "172.16.0.0/21",
             VpcId = defaultNetwork.Id,
             VswitchName = name,
+            ZoneId = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultNatGateway = new AliCloud.Vpc.NatGateway("defaultNatGateway", new AliCloud.Vpc.NatGatewayArgs
         {
@@ -116,15 +117,16 @@ func main() {
 		}
 		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("172.16.0.0/12"),
+			VpcName:   pulumi.String(name),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			CidrBlock:        pulumi.String("172.16.0.0/21"),
-			VpcId:            defaultNetwork.ID(),
-			VswitchName:      pulumi.String(name),
+			CidrBlock:   pulumi.String("172.16.0.0/21"),
+			VpcId:       defaultNetwork.ID(),
+			VswitchName: pulumi.String(name),
+			ZoneId:      pulumi.String(defaultZones.Zones[0].Id),
 		})
 		if err != nil {
 			return err
@@ -178,12 +180,14 @@ name = config.get("name")
 if name is None:
     name = "forward-entry-config-example-name"
 default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
+default_network = alicloud.vpc.Network("defaultNetwork",
+    cidr_block="172.16.0.0/12",
+    vpc_name=name)
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0].id,
     cidr_block="172.16.0.0/21",
     vpc_id=default_network.id,
-    vswitch_name=name)
+    vswitch_name=name,
+    zone_id=default_zones.zones[0].id)
 default_nat_gateway = alicloud.vpc.NatGateway("defaultNatGateway",
     specification="Small",
     vpc_id=default_network.id)
@@ -220,12 +224,13 @@ const defaultZones = pulumi.output(alicloud.getZones({
 }, { async: true }));
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/12",
+    vpcName: name,
 });
 const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "172.16.0.0/21",
     vpcId: defaultNetwork.id,
     vswitchName: name,
+    zoneId: defaultZones.zones[0].id,
 });
 const defaultNatGateway = new alicloud.vpc.NatGateway("default", {
     specification: "Small",
@@ -272,7 +277,7 @@ const defaultForwardEntries = defaultForwardEntry.forwardTableId.apply(forwardTa
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_forward_entries(</span><span class="nx">external_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">internal_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetForwardEntriesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_forward_entries(</span><span class="nx">external_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_entry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">internal_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetForwardEntriesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -316,6 +321,24 @@ The following arguments are supported:
     <dd>{{% md %}}The public IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="externalport_csharp">
+<a href="#externalport_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forwardentryname_csharp">
+<a href="#forwardentryname_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span>
@@ -334,6 +357,24 @@ The following arguments are supported:
     <dd>{{% md %}}The private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="internalport_csharp">
+<a href="#internalport_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internal port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipprotocol_csharp">
+<a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ip protocol. Valid values: `any`,`tcp` and `udp`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -343,22 +384,22 @@ The following arguments are supported:
     <dd>{{% md %}}A regex string to filter results by forward entry name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="names_csharp">
-<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of Forward Entries names.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of farward entry. Valid value `Available`, `Deleting` and `Pending`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -382,6 +423,24 @@ The following arguments are supported:
     <dd>{{% md %}}The public IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="externalport_go">
+<a href="#externalport_go" style="color: inherit; text-decoration: inherit;">External<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forwardentryname_go">
+<a href="#forwardentryname_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span>
@@ -400,6 +459,24 @@ The following arguments are supported:
     <dd>{{% md %}}The private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="internalport_go">
+<a href="#internalport_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internal port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipprotocol_go">
+<a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ip protocol. Valid values: `any`,`tcp` and `udp`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -409,22 +486,22 @@ The following arguments are supported:
     <dd>{{% md %}}A regex string to filter results by forward entry name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="names_go">
-<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of Forward Entries names.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of farward entry. Valid value `Available`, `Deleting` and `Pending`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -448,6 +525,24 @@ The following arguments are supported:
     <dd>{{% md %}}The public IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="externalport_nodejs">
+<a href="#externalport_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forwardentryname_nodejs">
+<a href="#forwardentryname_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
@@ -466,6 +561,24 @@ The following arguments are supported:
     <dd>{{% md %}}The private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="internalport_nodejs">
+<a href="#internalport_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internal port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipprotocol_nodejs">
+<a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ip protocol. Valid values: `any`,`tcp` and `udp`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
@@ -475,22 +588,22 @@ The following arguments are supported:
     <dd>{{% md %}}A regex string to filter results by forward entry name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="names_nodejs">
-<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of Forward Entries names.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of farward entry. Valid value `Available`, `Deleting` and `Pending`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -514,6 +627,24 @@ The following arguments are supported:
     <dd>{{% md %}}The public IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="external_port_python">
+<a href="#external_port_python" style="color: inherit; text-decoration: inherit;">external_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The public port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forward_entry_name_python">
+<a href="#forward_entry_name_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>entry_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
@@ -532,6 +663,24 @@ The following arguments are supported:
     <dd>{{% md %}}The private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="internal_port_python">
+<a href="#internal_port_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The internal port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_protocol_python">
+<a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ip protocol. Valid values: `any`,`tcp` and `udp`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
 </span>
@@ -541,22 +690,22 @@ The following arguments are supported:
     <dd>{{% md %}}A regex string to filter results by forward entry name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="names_python">
-<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of Forward Entries names.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of farward entry. Valid value `Available`, `Deleting` and `Pending`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -606,6 +755,15 @@ The following output properties are available:
     <dd>{{% md %}}A list of Forward Entries IDs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of Forward Entries names.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="externalip_csharp">
 <a href="#externalip_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Ip</a>
 </span>
@@ -613,6 +771,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externalport_csharp">
+<a href="#externalport_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public port.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="forwardentryname_csharp">
+<a href="#forwardentryname_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalip_csharp">
@@ -624,6 +800,24 @@ The following output properties are available:
     <dd>{{% md %}}The private IP address.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internalport_csharp">
+<a href="#internalport_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private port.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipprotocol_csharp">
+<a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -632,22 +826,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="names_csharp">
-<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of Forward Entries names.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of forward entry.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -688,6 +882,15 @@ The following output properties are available:
     <dd>{{% md %}}A list of Forward Entries IDs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of Forward Entries names.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="externalip_go">
 <a href="#externalip_go" style="color: inherit; text-decoration: inherit;">External<wbr>Ip</a>
 </span>
@@ -695,6 +898,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externalport_go">
+<a href="#externalport_go" style="color: inherit; text-decoration: inherit;">External<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public port.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="forwardentryname_go">
+<a href="#forwardentryname_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalip_go">
@@ -706,6 +927,24 @@ The following output properties are available:
     <dd>{{% md %}}The private IP address.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internalport_go">
+<a href="#internalport_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private port.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipprotocol_go">
+<a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -714,22 +953,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="names_go">
-<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of Forward Entries names.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of forward entry.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -770,6 +1009,15 @@ The following output properties are available:
     <dd>{{% md %}}A list of Forward Entries IDs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of Forward Entries names.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="externalip_nodejs">
 <a href="#externalip_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Ip</a>
 </span>
@@ -777,6 +1025,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externalport_nodejs">
+<a href="#externalport_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public port.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="forwardentryname_nodejs">
+<a href="#forwardentryname_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalip_nodejs">
@@ -788,6 +1054,24 @@ The following output properties are available:
     <dd>{{% md %}}The private IP address.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internalport_nodejs">
+<a href="#internalport_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private port.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipprotocol_nodejs">
+<a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
@@ -796,22 +1080,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="names_nodejs">
-<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of Forward Entries names.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of forward entry.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -852,6 +1136,15 @@ The following output properties are available:
     <dd>{{% md %}}A list of Forward Entries IDs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of Forward Entries names.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="external_ip_python">
 <a href="#external_ip_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ip</a>
 </span>
@@ -859,6 +1152,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="external_port_python">
+<a href="#external_port_python" style="color: inherit; text-decoration: inherit;">external_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The public port.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="forward_entry_name_python">
+<a href="#forward_entry_name_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>entry_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internal_ip_python">
@@ -870,6 +1181,24 @@ The following output properties are available:
     <dd>{{% md %}}The private IP address.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internal_port_python">
+<a href="#internal_port_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private port.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ip_protocol_python">
+<a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
 </span>
@@ -878,22 +1207,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="names_python">
-<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of Forward Entries names.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of forward entry.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -927,6 +1256,24 @@ The following output properties are available:
     <dd>{{% md %}}The public port.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="forwardentryid_csharp">
+<a href="#forwardentryid_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The forward entry ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwardentryname_csharp">
+<a href="#forwardentryname_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -951,7 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private port.
+    <dd>{{% md %}}The internal port.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipprotocol_csharp">
@@ -960,7 +1307,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol type.
+    <dd>{{% md %}}The ip protocol. Valid values: `any`,`tcp` and `udp`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -978,7 +1325,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the Forward Entry.
+    <dd>{{% md %}}The status of farward entry. Valid value `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1001,6 +1348,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public port.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwardentryid_go">
+<a href="#forwardentryid_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The forward entry ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwardentryname_go">
+<a href="#forwardentryname_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
@@ -1027,7 +1392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private port.
+    <dd>{{% md %}}The internal port.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipprotocol_go">
@@ -1036,7 +1401,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol type.
+    <dd>{{% md %}}The ip protocol. Valid values: `any`,`tcp` and `udp`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -1054,7 +1419,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the Forward Entry.
+    <dd>{{% md %}}The status of farward entry. Valid value `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1077,6 +1442,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public port.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwardentryid_nodejs">
+<a href="#forwardentryid_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Entry<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The forward entry ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwardentryname_nodejs">
+<a href="#forwardentryname_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
@@ -1103,7 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private port.
+    <dd>{{% md %}}The internal port.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipprotocol_nodejs">
@@ -1112,7 +1495,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol type.
+    <dd>{{% md %}}The ip protocol. Valid values: `any`,`tcp` and `udp`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -1130,7 +1513,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the Forward Entry.
+    <dd>{{% md %}}The status of farward entry. Valid value `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1153,6 +1536,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public port.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forward_entry_id_python">
+<a href="#forward_entry_id_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>entry_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The forward entry ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forward_entry_name_python">
+<a href="#forward_entry_name_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>entry_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
@@ -1179,7 +1580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The private port.
+    <dd>{{% md %}}The internal port.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_protocol_python">
@@ -1188,7 +1589,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol type.
+    <dd>{{% md %}}The ip protocol. Valid values: `any`,`tcp` and `udp`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -1206,7 +1607,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the Forward Entry.
+    <dd>{{% md %}}The status of farward entry. Valid value `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

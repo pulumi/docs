@@ -257,7 +257,7 @@ const fooSnatEntries = fooSnatEntry.snatTableId.apply(snatTableId => alicloud.vp
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_snat_entries(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSnatEntriesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_snat_entries(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_entry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSnatEntriesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -301,6 +301,15 @@ The following arguments are supported:
     <dd>{{% md %}}A list of Snat Entries IDs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nameregex_csharp">
+<a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by the resource name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span>
@@ -308,6 +317,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snatentryname_csharp">
+<a href="#snatentryname_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatip_csharp">
 <a href="#snatip_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
@@ -325,6 +343,24 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcevswitchid_csharp">
+<a href="#sourcevswitchid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Snat Entry. Valid values: `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -349,6 +385,15 @@ The following arguments are supported:
     <dd>{{% md %}}A list of Snat Entries IDs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nameregex_go">
+<a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by the resource name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span>
@@ -356,6 +401,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snatentryname_go">
+<a href="#snatentryname_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatip_go">
 <a href="#snatip_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
@@ -373,6 +427,24 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcevswitchid_go">
+<a href="#sourcevswitchid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Snat Entry. Valid values: `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -397,6 +469,15 @@ The following arguments are supported:
     <dd>{{% md %}}A list of Snat Entries IDs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nameregex_nodejs">
+<a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by the resource name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
 </span>
@@ -404,6 +485,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snatentryname_nodejs">
+<a href="#snatentryname_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatip_nodejs">
 <a href="#snatip_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Ip</a>
@@ -421,6 +511,24 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcevswitchid_nodejs">
+<a href="#sourcevswitchid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Snat Entry. Valid values: `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -445,6 +553,15 @@ The following arguments are supported:
     <dd>{{% md %}}A list of Snat Entries IDs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_regex_python">
+<a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by the resource name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
 </span>
@@ -452,6 +569,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snat_entry_name_python">
+<a href="#snat_entry_name_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snat_ip_python">
 <a href="#snat_ip_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>ip</a>
@@ -469,6 +595,24 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_vswitch_id_python">
+<a href="#source_vswitch_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vswitch_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of the Snat Entry. Valid values: `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -511,8 +655,24 @@ The following output properties are available:
     <dd>{{% md %}}(Optional) A list of Snat Entries IDs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="snattableid_csharp">
 <a href="#snattableid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="nameregex_csharp">
+<a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -526,6 +686,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="snatentryname_csharp">
+<a href="#snatentryname_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snatip_csharp">
 <a href="#snatip_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
@@ -543,6 +712,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sourcevswitchid_csharp">
+<a href="#sourcevswitchid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Snat Entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -576,8 +763,24 @@ The following output properties are available:
     <dd>{{% md %}}(Optional) A list of Snat Entries IDs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="snattableid_go">
 <a href="#snattableid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="nameregex_go">
+<a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -591,6 +794,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="snatentryname_go">
+<a href="#snatentryname_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snatip_go">
 <a href="#snatip_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
@@ -608,6 +820,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sourcevswitchid_go">
+<a href="#sourcevswitchid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Snat Entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -641,8 +871,24 @@ The following output properties are available:
     <dd>{{% md %}}(Optional) A list of Snat Entries IDs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="snattableid_nodejs">
 <a href="#snattableid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="nameregex_nodejs">
+<a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -656,6 +902,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="snatentryname_nodejs">
+<a href="#snatentryname_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snatip_nodejs">
 <a href="#snatip_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Ip</a>
@@ -673,6 +928,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sourcevswitchid_nodejs">
+<a href="#sourcevswitchid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Snat Entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -706,8 +979,24 @@ The following output properties are available:
     <dd>{{% md %}}(Optional) A list of Snat Entries IDs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="snat_table_id_python">
 <a href="#snat_table_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>table_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="name_regex_python">
+<a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -721,6 +1010,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="snat_entry_name_python">
+<a href="#snat_entry_name_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snat_ip_python">
 <a href="#snat_ip_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>ip</a>
@@ -738,6 +1036,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="source_vswitch_id_python">
+<a href="#source_vswitch_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vswitch_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of the Snat Entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -763,6 +1079,24 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the Snat Entry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="snatentryid_csharp">
+<a href="#snatentryid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of snat entry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snatentryname_csharp">
+<a href="#snatentryname_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="snatip_csharp">
 <a href="#snatip_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
 </span>
@@ -781,13 +1115,22 @@ The following output properties are available:
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="sourcevswitchid_csharp">
+<a href="#sourcevswitchid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the Snat Entry.
+    <dd>{{% md %}}The status of the Snat Entry. Valid values: `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -801,6 +1144,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Snat Entry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snatentryid_go">
+<a href="#snatentryid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of snat entry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snatentryname_go">
+<a href="#snatentryname_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snatip_go">
@@ -821,13 +1182,22 @@ The following output properties are available:
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="sourcevswitchid_go">
+<a href="#sourcevswitchid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the Snat Entry.
+    <dd>{{% md %}}The status of the Snat Entry. Valid values: `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -841,6 +1211,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Snat Entry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snatentryid_nodejs">
+<a href="#snatentryid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of snat entry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snatentryname_nodejs">
+<a href="#snatentryname_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snatip_nodejs">
@@ -861,13 +1249,22 @@ The following output properties are available:
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="sourcevswitchid_nodejs">
+<a href="#sourcevswitchid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the Snat Entry.
+    <dd>{{% md %}}The status of the Snat Entry. Valid values: `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -881,6 +1278,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Snat Entry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snat_entry_id_python">
+<a href="#snat_entry_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of snat entry.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snat_entry_name_python">
+<a href="#snat_entry_name_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of snat entry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snat_ip_python">
@@ -901,13 +1316,22 @@ The following output properties are available:
     <dd>{{% md %}}The source CIDR block of the Snat Entry.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="source_vswitch_id_python">
+<a href="#source_vswitch_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vswitch_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The source vswitch ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the Snat Entry.
+    <dd>{{% md %}}The status of the Snat Entry. Valid values: `Available`, `Deleting` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

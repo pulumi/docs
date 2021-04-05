@@ -40,10 +40,12 @@ class MyStack : Stack
         var fooNetwork = new AliCloud.Vpc.Network("fooNetwork", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/12",
+            VpcName = name,
         });
         var fooRouteTable = new AliCloud.Vpc.RouteTable("fooRouteTable", new AliCloud.Vpc.RouteTableArgs
         {
             Description = name,
+            RouteTableName = name,
             VpcId = fooNetwork.Id,
         });
         var fooRouteTables = fooRouteTable.Id.Apply(id => AliCloud.Vpc.GetRouteTables.InvokeAsync(new AliCloud.Vpc.GetRouteTablesArgs
@@ -82,9 +84,12 @@ config = pulumi.Config()
 name = config.get("name")
 if name is None:
     name = "route-tables-datasource-example-name"
-foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/12")
+foo_network = alicloud.vpc.Network("fooNetwork",
+    cidr_block="172.16.0.0/12",
+    vpc_name=name)
 foo_route_table = alicloud.vpc.RouteTable("fooRouteTable",
     description=name,
+    route_table_name=name,
     vpc_id=foo_network.id)
 foo_route_tables = foo_route_table.id.apply(lambda id: alicloud.vpc.get_route_tables(ids=[id]))
 pulumi.export("routeTableIds", foo_route_tables.ids)
@@ -106,9 +111,11 @@ const name = config.get("name") || "route-tables-datasource-example-name";
 
 const fooNetwork = new alicloud.vpc.Network("foo", {
     cidrBlock: "172.16.0.0/12",
+    vpcName: name,
 });
 const fooRouteTable = new alicloud.vpc.RouteTable("foo", {
     description: name,
+    routeTableName: name,
     vpcId: fooNetwork.id,
 });
 const fooRouteTables = fooRouteTable.id.apply(id => alicloud.vpc.getRouteTables({
@@ -141,7 +148,7 @@ export const routeTableIds = fooRouteTables.ids!;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_tables(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteTablesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_tables(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteTablesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -202,6 +209,42 @@ The following arguments are supported:
     <dd>{{% md %}}The Id of resource group which route tables belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routetablename_csharp">
+<a href="#routetablename_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routerid_csharp">
+<a href="#routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The router ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routertype_csharp">
+<a href="#routertype_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route type of route table. Valid values: `VRouter` and `VBR`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of resource. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -257,6 +300,42 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which route tables belongs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routetablename_go">
+<a href="#routetablename_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routerid_go">
+<a href="#routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The router ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routertype_go">
+<a href="#routertype_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route type of route table. Valid values: `VRouter` and `VBR`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of resource. Valid values: `Available` and `Pending`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -316,6 +395,42 @@ The following arguments are supported:
     <dd>{{% md %}}The Id of resource group which route tables belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="routetablename_nodejs">
+<a href="#routetablename_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routerid_nodejs">
+<a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The router ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routertype_nodejs">
+<a href="#routertype_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route type of route table. Valid values: `VRouter` and `VBR`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of resource. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -371,6 +486,42 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which route tables belongs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="route_table_name_python">
+<a href="#route_table_name_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="router_id_python">
+<a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The router ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="router_type_python">
+<a href="#router_type_python" style="color: inherit; text-decoration: inherit;">router_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The route type of route table. Valid values: `VRouter` and `VBR`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of resource. Valid values: `Available` and `Pending`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -465,6 +616,42 @@ The following output properties are available:
     <dd>{{% md %}}The Id of resource group which route tables belongs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="routetablename_csharp">
+<a href="#routetablename_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="routerid_csharp">
+<a href="#routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Router Id of the route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="routertype_csharp">
+<a href="#routertype_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -479,7 +666,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -546,6 +734,42 @@ The following output properties are available:
     <dd>{{% md %}}The Id of resource group which route tables belongs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="routetablename_go">
+<a href="#routetablename_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="routerid_go">
+<a href="#routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Router Id of the route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="routertype_go">
+<a href="#routertype_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -560,7 +784,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -627,6 +852,42 @@ The following output properties are available:
     <dd>{{% md %}}The Id of resource group which route tables belongs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="routetablename_nodejs">
+<a href="#routetablename_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="routerid_nodejs">
+<a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Router Id of the route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="routertype_nodejs">
+<a href="#routertype_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -641,7 +902,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -708,6 +970,42 @@ The following output properties are available:
     <dd>{{% md %}}The Id of resource group which route tables belongs.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="route_table_name_python">
+<a href="#route_table_name_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="router_id_python">
+<a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Router Id of the route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="router_type_python">
+<a href="#router_type_python" style="color: inherit; text-decoration: inherit;">router_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The route type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -722,7 +1020,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -737,15 +1036,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="creationtime_csharp">
-<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Time of creation.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -774,6 +1064,33 @@ The following output properties are available:
     <dd>{{% md %}}Name of the route table.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which route tables belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routetableid_csharp">
+<a href="#routetableid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table id.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routetablename_csharp">
+<a href="#routetablename_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="routetabletype_csharp">
 <a href="#routetabletype_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Type</a>
 </span>
@@ -789,21 +1106,57 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Router Id of the route table.
+    <dd>{{% md %}}The router ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routertype_csharp">
+<a href="#routertype_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route type of route table. Valid values: `VRouter` and `VBR`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of resource. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vpcid_csharp">
+<a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Vpc id of the route table.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchids_csharp">
+<a href="#vswitchids_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of vswitch id.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="creationtime_go">
-<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Time of creation.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -832,6 +1185,33 @@ The following output properties are available:
     <dd>{{% md %}}Name of the route table.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which route tables belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routetableid_go">
+<a href="#routetableid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table id.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routetablename_go">
+<a href="#routetablename_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="routetabletype_go">
 <a href="#routetabletype_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Type</a>
 </span>
@@ -847,21 +1227,57 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Router Id of the route table.
+    <dd>{{% md %}}The router ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routertype_go">
+<a href="#routertype_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route type of route table. Valid values: `VRouter` and `VBR`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of resource. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vpcid_go">
+<a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Vpc id of the route table.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchids_go">
+<a href="#vswitchids_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of vswitch id.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="creationtime_nodejs">
-<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Time of creation.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -890,6 +1306,33 @@ The following output properties are available:
     <dd>{{% md %}}Name of the route table.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which route tables belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routetableid_nodejs">
+<a href="#routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table id.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routetablename_nodejs">
+<a href="#routetablename_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="routetabletype_nodejs">
 <a href="#routetabletype_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Type</a>
 </span>
@@ -905,21 +1348,57 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Router Id of the route table.
+    <dd>{{% md %}}The router ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routertype_nodejs">
+<a href="#routertype_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The route type of route table. Valid values: `VRouter` and `VBR`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of resource. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vpcid_nodejs">
+<a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Vpc id of the route table.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchids_nodejs">
+<a href="#vswitchids_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of vswitch id.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="creation_time_python">
-<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Time of creation.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -948,6 +1427,33 @@ The following output properties are available:
     <dd>{{% md %}}Name of the route table.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which route tables belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="route_table_id_python">
+<a href="#route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The route table id.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="route_table_name_python">
+<a href="#route_table_name_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The route table name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="route_table_type_python">
 <a href="#route_table_type_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>type</a>
 </span>
@@ -963,7 +1469,52 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Router Id of the route table.
+    <dd>{{% md %}}The router ID.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="router_type_python">
+<a href="#router_type_python" style="color: inherit; text-decoration: inherit;">router_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The route type of route table. Valid values: `VRouter` and `VBR`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of resource. Valid values: `Available` and `Pending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vpc_id_python">
+<a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Vpc id of the route table.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitch_ids_python">
+<a href="#vswitch_ids_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of vswitch id.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

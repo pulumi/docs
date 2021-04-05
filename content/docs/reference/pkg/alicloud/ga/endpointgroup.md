@@ -42,6 +42,20 @@ class MyStack : Stack
             AutoUseCoupon = true,
             Spec = "1",
         });
+        var deBandwidthPackage = new AliCloud.Ga.BandwidthPackage("deBandwidthPackage", new AliCloud.Ga.BandwidthPackageArgs
+        {
+            Bandwidth = 100,
+            Type = "Basic",
+            BandwidthType = "Basic",
+            PaymentType = "PayAsYouGo",
+            BillingType = "PayBy95",
+            Ratio = 30,
+        });
+        var deBandwidthPackageAttachment = new AliCloud.Ga.BandwidthPackageAttachment("deBandwidthPackageAttachment", new AliCloud.Ga.BandwidthPackageAttachmentArgs
+        {
+            AcceleratorId = exampleAccelerator.Id,
+            BandwidthPackageId = deBandwidthPackage.Id,
+        });
         var exampleListener = new AliCloud.Ga.Listener("exampleListener", new AliCloud.Ga.ListenerArgs
         {
             AcceleratorId = exampleAccelerator.Id,
@@ -53,6 +67,12 @@ class MyStack : Stack
                     ToPort = 70,
                 },
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                deBandwidthPackageAttachment,
+            },
         });
         var exampleEip = new AliCloud.Ecs.Eip("exampleEip", new AliCloud.Ecs.EipArgs
         {
@@ -61,7 +81,7 @@ class MyStack : Stack
         });
         var exampleEndpointGroup = new AliCloud.Ga.EndpointGroup("exampleEndpointGroup", new AliCloud.Ga.EndpointGroupArgs
         {
-            AcceleratorId = alicloud_ga_accelerators.Example.Id,
+            AcceleratorId = exampleAccelerator.Id,
             EndpointConfigurations = 
             {
                 new AliCloud.Ga.Inputs.EndpointGroupEndpointConfigurationArgs
@@ -104,6 +124,24 @@ func main() {
 		if err != nil {
 			return err
 		}
+		deBandwidthPackage, err := ga.NewBandwidthPackage(ctx, "deBandwidthPackage", &ga.BandwidthPackageArgs{
+			Bandwidth:     pulumi.Int(100),
+			Type:          pulumi.String("Basic"),
+			BandwidthType: pulumi.String("Basic"),
+			PaymentType:   pulumi.String("PayAsYouGo"),
+			BillingType:   pulumi.String("PayBy95"),
+			Ratio:         pulumi.Int(30),
+		})
+		if err != nil {
+			return err
+		}
+		deBandwidthPackageAttachment, err := ga.NewBandwidthPackageAttachment(ctx, "deBandwidthPackageAttachment", &ga.BandwidthPackageAttachmentArgs{
+			AcceleratorId:      exampleAccelerator.ID(),
+			BandwidthPackageId: deBandwidthPackage.ID(),
+		})
+		if err != nil {
+			return err
+		}
 		exampleListener, err := ga.NewListener(ctx, "exampleListener", &ga.ListenerArgs{
 			AcceleratorId: exampleAccelerator.ID(),
 			PortRanges: ga.ListenerPortRangeArray{
@@ -112,7 +150,9 @@ func main() {
 					ToPort:   pulumi.Int(70),
 				},
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			deBandwidthPackageAttachment,
+		}))
 		if err != nil {
 			return err
 		}
@@ -124,7 +164,7 @@ func main() {
 			return err
 		}
 		_, err = ga.NewEndpointGroup(ctx, "exampleEndpointGroup", &ga.EndpointGroupArgs{
-			AcceleratorId: pulumi.Any(alicloud_ga_accelerators.Example.Id),
+			AcceleratorId: exampleAccelerator.ID(),
 			EndpointConfigurations: ga.EndpointGroupEndpointConfigurationArray{
 				&ga.EndpointGroupEndpointConfigurationArgs{
 					Endpoint: exampleEip.IpAddress,
@@ -157,17 +197,28 @@ example_accelerator = alicloud.ga.Accelerator("exampleAccelerator",
     duration=1,
     auto_use_coupon=True,
     spec="1")
+de_bandwidth_package = alicloud.ga.BandwidthPackage("deBandwidthPackage",
+    bandwidth=100,
+    type="Basic",
+    bandwidth_type="Basic",
+    payment_type="PayAsYouGo",
+    billing_type="PayBy95",
+    ratio=30)
+de_bandwidth_package_attachment = alicloud.ga.BandwidthPackageAttachment("deBandwidthPackageAttachment",
+    accelerator_id=example_accelerator.id,
+    bandwidth_package_id=de_bandwidth_package.id)
 example_listener = alicloud.ga.Listener("exampleListener",
     accelerator_id=example_accelerator.id,
     port_ranges=[alicloud.ga.ListenerPortRangeArgs(
         from_port=60,
         to_port=70,
-    )])
+    )],
+    opts=pulumi.ResourceOptions(depends_on=[de_bandwidth_package_attachment]))
 example_eip = alicloud.ecs.Eip("exampleEip",
     bandwidth=10,
     internet_charge_type="PayByBandwidth")
 example_endpoint_group = alicloud.ga.EndpointGroup("exampleEndpointGroup",
-    accelerator_id=alicloud_ga_accelerators["example"]["id"],
+    accelerator_id=example_accelerator.id,
     endpoint_configurations=[alicloud.ga.EndpointGroupEndpointConfigurationArgs(
         endpoint=example_eip.ip_address,
         type="PublicIp",
@@ -193,19 +244,33 @@ const exampleAccelerator = new alicloud.ga.Accelerator("exampleAccelerator", {
     autoUseCoupon: true,
     spec: "1",
 });
+const deBandwidthPackage = new alicloud.ga.BandwidthPackage("deBandwidthPackage", {
+    bandwidth: "100",
+    type: "Basic",
+    bandwidthType: "Basic",
+    paymentType: "PayAsYouGo",
+    billingType: "PayBy95",
+    ratio: 30,
+});
+const deBandwidthPackageAttachment = new alicloud.ga.BandwidthPackageAttachment("deBandwidthPackageAttachment", {
+    acceleratorId: exampleAccelerator.id,
+    bandwidthPackageId: deBandwidthPackage.id,
+});
 const exampleListener = new alicloud.ga.Listener("exampleListener", {
     acceleratorId: exampleAccelerator.id,
     portRanges: [{
         fromPort: 60,
         toPort: 70,
     }],
+}, {
+    dependsOn: [deBandwidthPackageAttachment],
 });
 const exampleEip = new alicloud.ecs.Eip("exampleEip", {
     bandwidth: "10",
     internetChargeType: "PayByBandwidth",
 });
 const exampleEndpointGroup = new alicloud.ga.EndpointGroup("exampleEndpointGroup", {
-    acceleratorId: alicloud_ga_accelerators.example.id,
+    acceleratorId: exampleAccelerator.id,
     endpointConfigurations: [{
         endpoint: exampleEip.ipAddress,
         type: "PublicIp",
@@ -439,7 +504,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint request protocol.
+    <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckintervalseconds_csharp">
@@ -578,7 +643,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint request protocol.
+    <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckintervalseconds_go">
@@ -717,7 +782,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint request protocol.
+    <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckintervalseconds_nodejs">
@@ -856,7 +921,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The endpoint request protocol.
+    <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_interval_seconds_python">
@@ -1200,7 +1265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint request protocol.
+    <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckintervalseconds_csharp">
@@ -1348,7 +1413,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint request protocol.
+    <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckintervalseconds_go">
@@ -1496,7 +1561,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint request protocol.
+    <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckintervalseconds_nodejs">
@@ -1644,7 +1709,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The endpoint request protocol.
+    <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_interval_seconds_python">
@@ -1776,7 +1841,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight of Endpoint N in the endpoint group.
+    <dd>{{% md %}}The weight of Endpoint N in the endpoint group. Valid value is 0 to 255.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableclientippreservation_csharp">
@@ -1816,7 +1881,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight of Endpoint N in the endpoint group.
+    <dd>{{% md %}}The weight of Endpoint N in the endpoint group. Valid value is 0 to 255.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableclientippreservation_go">
@@ -1856,7 +1921,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The weight of Endpoint N in the endpoint group.
+    <dd>{{% md %}}The weight of Endpoint N in the endpoint group. Valid value is 0 to 255.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableclientippreservation_nodejs">
@@ -1896,7 +1961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight of Endpoint N in the endpoint group.
+    <dd>{{% md %}}The weight of Endpoint N in the endpoint group. Valid value is 0 to 255.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_clientip_preservation_python">

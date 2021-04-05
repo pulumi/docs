@@ -383,6 +383,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of snat entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -404,6 +413,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of snat entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -425,6 +443,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of snat entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -446,6 +473,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of snat entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -462,7 +498,7 @@ Get an existing SnatEntry resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">snat_entry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_entry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SnatEntry</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">snat_entry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_entry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SnatEntry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -627,6 +663,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of snat entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -685,6 +730,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of snat entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -743,6 +797,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of snat entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -801,6 +864,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of snat entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
