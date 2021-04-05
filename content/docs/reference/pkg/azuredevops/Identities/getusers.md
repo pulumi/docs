@@ -410,7 +410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getusersuser">List&lt;Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Identities.<wbr>Outputs.<wbr>Get<wbr>Users<wbr>User&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of existing users in your Azure DevOps Organization with details about every single user which includes:
+    <dd>{{% md %}}A set of existing users in your Azure DevOps Organization with details about every single user which includes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="origin_csharp">
@@ -467,7 +467,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getusersuser">[]Get<wbr>Users<wbr>User</a></span>
     </dt>
-    <dd>{{% md %}}A list of existing users in your Azure DevOps Organization with details about every single user which includes:
+    <dd>{{% md %}}A set of existing users in your Azure DevOps Organization with details about every single user which includes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="origin_go">
@@ -524,7 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getusersuser">Get<wbr>Users<wbr>User[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of existing users in your Azure DevOps Organization with details about every single user which includes:
+    <dd>{{% md %}}A set of existing users in your Azure DevOps Organization with details about every single user which includes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="origin_nodejs">
@@ -581,7 +581,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getusersuser">Get<wbr>Users<wbr>User]</a></span>
     </dt>
-    <dd>{{% md %}}A list of existing users in your Azure DevOps Organization with details about every single user which includes:
+    <dd>{{% md %}}A set of existing users in your Azure DevOps Organization with details about every single user which includes:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="origin_python">

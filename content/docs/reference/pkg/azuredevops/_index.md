@@ -32,6 +32,7 @@ A Pulumi package for creating and managing Azure DevOps.
     <li><a href="branchpolicyautoreviewers" title="BranchPolicyAutoReviewers"><span class="symbol resource"></span>BranchPolicyAutoReviewers</a></li>
     <li><a href="branchpolicybuildvalidation" title="BranchPolicyBuildValidation"><span class="symbol resource"></span>BranchPolicyBuildValidation</a></li>
     <li><a href="branchpolicycommentresolution" title="BranchPolicyCommentResolution"><span class="symbol resource"></span>BranchPolicyCommentResolution</a></li>
+    <li><a href="branchpolicymergetypes" title="BranchPolicyMergeTypes"><span class="symbol resource"></span>BranchPolicyMergeTypes</a></li>
     <li><a href="branchpolicyminreviewers" title="BranchPolicyMinReviewers"><span class="symbol resource"></span>BranchPolicyMinReviewers</a></li>
     <li><a href="branchpolicyworkitemlinking" title="BranchPolicyWorkItemLinking"><span class="symbol resource"></span>BranchPolicyWorkItemLinking</a></li>
     <li><a href="builddefinition" title="BuildDefinition"><span class="symbol resource"></span>BuildDefinition</a></li>
@@ -88,6 +89,6 @@ A Pulumi package for creating and managing Azure DevOps.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.3.1</dd>
+	<dd>1.3.2</dd>
 </dl>
 
