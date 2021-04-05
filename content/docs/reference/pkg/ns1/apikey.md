@@ -1301,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The apikeys authentication token.
+    <dd>{{% md %}}(Computed) The apikeys authentication token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1322,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The apikeys authentication token.
+    <dd>{{% md %}}(Computed) The apikeys authentication token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1343,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The apikeys authentication token.
+    <dd>{{% md %}}(Computed) The apikeys authentication token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1364,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The apikeys authentication token.
+    <dd>{{% md %}}(Computed) The apikeys authentication token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1711,7 +1711,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The apikeys authentication token.
+    <dd>{{% md %}}(Computed) The apikeys authentication token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagejobs_csharp">
@@ -1999,7 +1999,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The apikeys authentication token.
+    <dd>{{% md %}}(Computed) The apikeys authentication token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagejobs_go">
@@ -2287,7 +2287,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The apikeys authentication token.
+    <dd>{{% md %}}(Computed) The apikeys authentication token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagejobs_nodejs">
@@ -2575,7 +2575,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The apikeys authentication token.
+    <dd>{{% md %}}(Computed) The apikeys authentication token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_manage_jobs_python">
