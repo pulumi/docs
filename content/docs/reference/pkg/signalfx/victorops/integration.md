@@ -15,6 +15,108 @@ SignalFx VictorOps integration.
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vioctorOpsMyteam = new SignalFx.VictorOps.Integration("vioctorOpsMyteam", new SignalFx.VictorOps.IntegrationArgs
+        {
+            Enabled = true,
+            PostUrl = "https://alert.victorops.com/integrations/generic/1234/alert/$key/$routing_key",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/victorops"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := victorops.NewIntegration(ctx, "vioctorOpsMyteam", &victorops.IntegrationArgs{
+			Enabled: pulumi.Bool(true),
+			PostUrl: pulumi.String(fmt.Sprintf("%v%v%v%v%v", "https://alert.victorops.com/integrations/generic/1234/alert/", "$", "key/", "$", "routing_key")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+vioctor_ops_myteam = signalfx.victorops.Integration("vioctorOpsMyteam",
+    enabled=True,
+    post_url="https://alert.victorops.com/integrations/generic/1234/alert/$key/$routing_key")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const vioctorOpsMyteam = new signalfx.victorops.Integration("vioctor_ops_myteam", {
+    enabled: true,
+    postUrl: "https://alert.victorops.com/integrations/generic/1234/alert/$key/$routing_key",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Integration Resource {#create}
