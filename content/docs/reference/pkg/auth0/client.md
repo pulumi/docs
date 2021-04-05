@@ -1624,6 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. ID of the client.
+* `client_secret`<sup>1</sup> - String. Secret for the client; keep this private.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_csharp">
@@ -1632,8 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String. Secret for the client; keep this private.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1654,6 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. ID of the client.
+* `client_secret`<sup>1</sup> - String. Secret for the client; keep this private.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_go">
@@ -1662,8 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String. Secret for the client; keep this private.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1684,6 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. ID of the client.
+* `client_secret`<sup>1</sup> - String. Secret for the client; keep this private.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_nodejs">
@@ -1692,8 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String. Secret for the client; keep this private.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1714,6 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. ID of the client.
+* `client_secret`<sup>1</sup> - String. Secret for the client; keep this private.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_secret_python">
@@ -1722,8 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}String. Secret for the client; keep this private.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1912,6 +1912,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. ID of the client.
+* `client_secret`<sup>1</sup> - String. Secret for the client; keep this private.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientmetadata_csharp">
@@ -1929,8 +1930,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String. Secret for the client; keep this private.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecretrotationtrigger_csharp">
 <a href="#state_clientsecretrotationtrigger_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Rotation<wbr>Trigger</a>
@@ -2194,6 +2194,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. ID of the client.
+* `client_secret`<sup>1</sup> - String. Secret for the client; keep this private.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientmetadata_go">
@@ -2211,8 +2212,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String. Secret for the client; keep this private.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecretrotationtrigger_go">
 <a href="#state_clientsecretrotationtrigger_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Rotation<wbr>Trigger</a>
@@ -2476,6 +2476,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. ID of the client.
+* `client_secret`<sup>1</sup> - String. Secret for the client; keep this private.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientmetadata_nodejs">
@@ -2493,8 +2494,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String. Secret for the client; keep this private.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecretrotationtrigger_nodejs">
 <a href="#state_clientsecretrotationtrigger_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Rotation<wbr>Trigger</a>
@@ -2758,6 +2758,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. ID of the client.
+* `client_secret`<sup>1</sup> - String. Secret for the client; keep this private.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_metadata_python">
@@ -2775,8 +2776,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}String. Secret for the client; keep this private.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_secret_rotation_trigger_python">
 <a href="#state_client_secret_rotation_trigger_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>rotation_<wbr>trigger</a>

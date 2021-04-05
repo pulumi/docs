@@ -37,9 +37,13 @@ class MyStack : Stack
     {
         var myHook = new Auth0.Hook("myHook", new Auth0.HookArgs
         {
+            Dependencies = 
+            {
+                { "auth0", "2.30.0" },
+            },
             Enabled = true,
-            Script = @"function (user, context, callback) { 
-  callback(null, { user }); 
+            Script = @"function (user, context, callback) {
+  callback(null, { user });
 }
 
 ",
@@ -69,8 +73,11 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := auth0.NewHook(ctx, "myHook", &auth0.HookArgs{
+			Dependencies: pulumi.StringMap{
+				"auth0": pulumi.String("2.30.0"),
+			},
 			Enabled:   pulumi.Bool(true),
-			Script:    pulumi.String(fmt.Sprintf("%v%v%v%v", "function (user, context, callback) { \n", "  callback(null, { user }); \n", "}\n", "\n")),
+			Script:    pulumi.String(fmt.Sprintf("%v%v%v%v", "function (user, context, callback) {\n", "  callback(null, { user });\n", "}\n", "\n")),
 			TriggerId: pulumi.String("pre-user-registration"),
 		})
 		if err != nil {
@@ -92,9 +99,12 @@ import pulumi
 import pulumi_auth0 as auth0
 
 my_hook = auth0.Hook("myHook",
+    dependencies={
+        "auth0": "2.30.0",
+    },
     enabled=True,
-    script="""function (user, context, callback) { 
-  callback(null, { user }); 
+    script="""function (user, context, callback) {
+  callback(null, { user });
 }
 
 """,
@@ -113,9 +123,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as auth0 from "@pulumi/auth0";
 
 const myHook = new auth0.Hook("my_hook", {
+    dependencies: {
+        auth0: "2.30.0",
+    },
     enabled: true,
-    script: `function (user, context, callback) { 
-  callback(null, { user }); 
+    script: `function (user, context, callback) {
+  callback(null, { user });
 }
 `,
     triggerId: "pre-user-registration",
@@ -143,7 +156,7 @@ const myHook = new auth0.Hook("my_hook", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Hook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Hook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dependencies</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -303,6 +316,15 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Execution stage of this rule. Can be credentials-exchange, pre-user-registration, post-user-registration, post-change-password, or send-phone-message
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dependencies_csharp">
+<a href="#dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Dependencies of this hook used by webtask server
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -319,6 +341,15 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this hook
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secrets_csharp">
+<a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The secrets associated with the hook
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -343,6 +374,15 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Execution stage of this rule. Can be credentials-exchange, pre-user-registration, post-user-registration, post-change-password, or send-phone-message
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dependencies_go">
+<a href="#dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Dependencies of this hook used by webtask server
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -359,6 +399,15 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this hook
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secrets_go">
+<a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The secrets associated with the hook
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -383,6 +432,15 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Execution stage of this rule. Can be credentials-exchange, pre-user-registration, post-user-registration, post-change-password, or send-phone-message
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dependencies_nodejs">
+<a href="#dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Dependencies of this hook used by webtask server
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
@@ -399,6 +457,15 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this hook
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secrets_nodejs">
+<a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The secrets associated with the hook
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -423,6 +490,15 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Execution stage of this rule. Can be credentials-exchange, pre-user-registration, post-user-registration, post-change-password, or send-phone-message
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dependencies_python">
+<a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Dependencies of this hook used by webtask server
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
@@ -439,6 +515,15 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this hook
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secrets_python">
+<a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The secrets associated with the hook
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -510,7 +595,7 @@ Get an existing Hook resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Hook</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dependencies</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Hook</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -623,6 +708,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_dependencies_csharp">
+<a href="#state_dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Dependencies of this hook used by webtask server
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -650,6 +744,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Code to be executed when this hook runs
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_secrets_csharp">
+<a href="#state_secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The secrets associated with the hook
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_triggerid_csharp">
 <a href="#state_triggerid_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Id</a>
 </span>
@@ -662,6 +765,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_dependencies_go">
+<a href="#state_dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Dependencies of this hook used by webtask server
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -690,6 +802,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Code to be executed when this hook runs
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_secrets_go">
+<a href="#state_secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The secrets associated with the hook
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_triggerid_go">
 <a href="#state_triggerid_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Id</a>
 </span>
@@ -702,6 +823,15 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_dependencies_nodejs">
+<a href="#state_dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Dependencies of this hook used by webtask server
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -730,6 +860,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Code to be executed when this hook runs
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_secrets_nodejs">
+<a href="#state_secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The secrets associated with the hook
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_triggerid_nodejs">
 <a href="#state_triggerid_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Id</a>
 </span>
@@ -742,6 +881,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_dependencies_python">
+<a href="#state_dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Dependencies of this hook used by webtask server
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -768,6 +916,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Code to be executed when this hook runs
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secrets_python">
+<a href="#state_secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The secrets associated with the hook
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trigger_id_python">

@@ -119,7 +119,7 @@ const example = new auth0.Prompt("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Prompt</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">universal_login_experience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Prompt</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identifier_first</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">universal_login_experience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -261,6 +261,14 @@ The Prompt resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="identifierfirst_csharp">
+<a href="#identifierfirst_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>First</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="universalloginexperience_csharp">
 <a href="#universalloginexperience_csharp" style="color: inherit; text-decoration: inherit;">Universal<wbr>Login<wbr>Experience</a>
 </span>
@@ -273,6 +281,14 @@ The Prompt resource accepts the following [input]({{< relref "/docs/intro/concep
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identifierfirst_go">
+<a href="#identifierfirst_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>First</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="universalloginexperience_go">
 <a href="#universalloginexperience_go" style="color: inherit; text-decoration: inherit;">Universal<wbr>Login<wbr>Experience</a>
@@ -287,6 +303,14 @@ The Prompt resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="identifierfirst_nodejs">
+<a href="#identifierfirst_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>First</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="universalloginexperience_nodejs">
 <a href="#universalloginexperience_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Login<wbr>Experience</a>
 </span>
@@ -299,6 +323,14 @@ The Prompt resource accepts the following [input]({{< relref "/docs/intro/concep
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identifier_first_python">
+<a href="#identifier_first_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>first</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="universal_login_experience_python">
 <a href="#universal_login_experience_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>login_<wbr>experience</a>
@@ -378,7 +410,7 @@ Get an existing Prompt resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">universal_login_experience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Prompt</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identifier_first</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">universal_login_experience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Prompt</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -491,6 +523,14 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_identifierfirst_csharp">
+<a href="#state_identifierfirst_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>First</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_universalloginexperience_csharp">
 <a href="#state_universalloginexperience_csharp" style="color: inherit; text-decoration: inherit;">Universal<wbr>Login<wbr>Experience</a>
 </span>
@@ -503,6 +543,14 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_identifierfirst_go">
+<a href="#state_identifierfirst_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>First</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_universalloginexperience_go">
 <a href="#state_universalloginexperience_go" style="color: inherit; text-decoration: inherit;">Universal<wbr>Login<wbr>Experience</a>
@@ -517,6 +565,14 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_identifierfirst_nodejs">
+<a href="#state_identifierfirst_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>First</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_universalloginexperience_nodejs">
 <a href="#state_universalloginexperience_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Login<wbr>Experience</a>
 </span>
@@ -529,6 +585,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_identifier_first_python">
+<a href="#state_identifier_first_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>first</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_universal_login_experience_python">
 <a href="#state_universal_login_experience_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>login_<wbr>experience</a>
