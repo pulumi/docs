@@ -1,1 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,400,700|Ubuntu:400,700|Source+Code+Pro:400,700');
+@font-face{ 
+	font-family: 'GilroyMedium';
+	src: url('gilroy-medium-webfont.eot');
+	src: url('gilroy-medium-webfont?#iefix') format('embedded-opentype'),
+	     url('gilroy-medium-webfont.woff') format('woff'),
+	     url('gilroy-medium-webfont.ttf') format('truetype'),
+	     url('gilroy-medium-webfont.svg#webfont') format('svg');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Inter:wght@400;700|Ubuntu:400,700|Source+Code+Pro:400,700');

@@ -45,6 +45,7 @@
 @import "components/audio";
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'GilroyMedium' !important;
     @apply font-display text-gray-700 mb-2;
 
     &:not(:first-child) {
