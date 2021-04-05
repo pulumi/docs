@@ -60,6 +60,7 @@ class MyStack : Stack
             Trace = new Azure.AppPlatform.Inputs.SpringCloudServiceTraceArgs
             {
                 InstrumentationKey = exampleInsights.InstrumentationKey,
+                SampleRate = 10,
             },
             Tags = 
             {
@@ -117,6 +118,7 @@ func main() {
 			},
 			Trace: &appplatform.SpringCloudServiceTraceArgs{
 				InstrumentationKey: exampleInsights.InstrumentationKey,
+				SampleRate:         pulumi.Float64(10),
 			},
 			Tags: pulumi.StringMap{
 				"Env": pulumi.String("staging"),
@@ -159,6 +161,7 @@ example_spring_cloud_service = azure.appplatform.SpringCloudService("exampleSpri
     ),
     trace=azure.appplatform.SpringCloudServiceTraceArgs(
         instrumentation_key=example_insights.instrumentation_key,
+        sample_rate=10,
     ),
     tags={
         "Env": "staging",
@@ -196,6 +199,7 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
     },
     trace: {
         instrumentationKey: exampleInsights.instrumentationKey,
+        sampleRate: 10,
     },
     tags: {
         Env: "staging",
@@ -2448,6 +2452,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key used for Application Insights.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="samplerate_csharp">
+<a href="#samplerate_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate of Application Insights Agent. Must be between `0.0` and `100.0`. Defaults to `10.0`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2461,6 +2474,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key used for Application Insights.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="samplerate_go">
+<a href="#samplerate_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate of Application Insights Agent. Must be between `0.0` and `100.0`. Defaults to `10.0`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2474,6 +2496,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key used for Application Insights.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="samplerate_nodejs">
+<a href="#samplerate_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate of Application Insights Agent. Must be between `0.0` and `100.0`. Defaults to `10.0`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2487,6 +2518,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key used for Application Insights.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sample_rate_python">
+<a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate of Application Insights Agent. Must be between `0.0` and `100.0`. Defaults to `10.0`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

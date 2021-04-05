@@ -4428,6 +4428,15 @@ for more information. Defaults to `true`.
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="containerdeleteretentionpolicy_csharp">
+<a href="#containerdeleteretentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Delete<wbr>Retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `container_delete_retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="corsrules_csharp">
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
@@ -4449,6 +4458,15 @@ for more information. Defaults to `true`.
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="containerdeleteretentionpolicy_go">
+<a href="#containerdeleteretentionpolicy_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Delete<wbr>Retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `container_delete_retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsrules_go">
 <a href="#corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
@@ -4472,6 +4490,15 @@ for more information. Defaults to `true`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="containerdeleteretentionpolicy_nodejs">
+<a href="#containerdeleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Delete<wbr>Retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `container_delete_retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="corsrules_nodejs">
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
@@ -4494,6 +4521,15 @@ for more information. Defaults to `true`.
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="container_delete_retention_policy_python">
+<a href="#container_delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">container_<wbr>delete_<wbr>retention_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `container_delete_retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cors_rules_python">
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
@@ -4510,6 +4546,60 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="days_csharp">
+<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days that the container should be retained, between `1` and `365` days. Defaults to `7`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="days_go">
+<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days that the container should be retained, between `1` and `365` days. Defaults to `7`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="days_nodejs">
+<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days that the container should be retained, between `1` and `365` days. Defaults to `7`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="days_python">
+<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days that the container should be retained, between `1` and `365` days. Defaults to `7`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

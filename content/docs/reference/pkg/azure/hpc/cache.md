@@ -209,7 +209,7 @@ const exampleCache = new azure.hpc.Cache("exampleCache", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_access_policy</span><span class="p">:</span> <span class="nx">Optional[CacheDefaultAccessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -387,6 +387,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The ID of the Subnet for the HPC Cache. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="defaultaccesspolicy_csharp">
+<a href="#defaultaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `default_access_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -412,16 +421,16 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="rootsquashenabled_csharp">
 <a href="#rootsquashenabled_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether root squash property is enabled for this HPC Cache.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not functional and will be deprecated in favor of `default_access_policy.0.access_rule.x.root_squash_enabled`, where the scope of access_rule is `default`.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -463,6 +472,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The ID of the Subnet for the HPC Cache. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="defaultaccesspolicy_go">
+<a href="#defaultaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `default_access_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -488,16 +506,16 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="rootsquashenabled_go">
 <a href="#rootsquashenabled_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether root squash property is enabled for this HPC Cache.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not functional and will be deprecated in favor of `default_access_policy.0.access_rule.x.root_squash_enabled`, where the scope of access_rule is `default`.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -539,6 +557,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The ID of the Subnet for the HPC Cache. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="defaultaccesspolicy_nodejs">
+<a href="#defaultaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `default_access_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -564,16 +591,16 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="rootsquashenabled_nodejs">
 <a href="#rootsquashenabled_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Squash<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether root squash property is enabled for this HPC Cache.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not functional and will be deprecated in favor of `default_access_policy.0.access_rule.x.root_squash_enabled`, where the scope of access_rule is `default`.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -615,6 +642,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The ID of the Subnet for the HPC Cache. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="default_access_policy_python">
+<a href="#default_access_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>access_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `default_access_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -640,16 +676,16 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="root_squash_enabled_python">
 <a href="#root_squash_enabled_python" style="color: inherit; text-decoration: inherit;">root_<wbr>squash_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether root squash property is enabled for this HPC Cache.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not functional and will be deprecated in favor of `default_access_policy.0.access_rule.x.root_squash_enabled`, where the scope of access_rule is `default`.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -756,7 +792,7 @@ Get an existing Cache resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cache</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_access_policy</span><span class="p">:</span> <span class="nx">Optional[CacheDefaultAccessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cache</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -878,6 +914,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The size of the HPC Cache, in GB. Possible values are `3072`, `6144`, `12288`, `24576`, and `49152`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_defaultaccesspolicy_csharp">
+<a href="#state_defaultaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `default_access_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -921,16 +966,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_rootsquashenabled_csharp">
 <a href="#state_rootsquashenabled_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether root squash property is enabled for this HPC Cache.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not functional and will be deprecated in favor of `default_access_policy.0.access_rule.x.root_squash_enabled`, where the scope of access_rule is `default`.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_csharp">
 <a href="#state_skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -961,6 +1006,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the HPC Cache, in GB. Possible values are `3072`, `6144`, `12288`, `24576`, and `49152`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_defaultaccesspolicy_go">
+<a href="#state_defaultaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -1006,16 +1060,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_rootsquashenabled_go">
 <a href="#state_rootsquashenabled_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether root squash property is enabled for this HPC Cache.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not functional and will be deprecated in favor of `default_access_policy.0.access_rule.x.root_squash_enabled`, where the scope of access_rule is `default`.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_go">
 <a href="#state_skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -1046,6 +1100,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the HPC Cache, in GB. Possible values are `3072`, `6144`, `12288`, `24576`, and `49152`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_defaultaccesspolicy_nodejs">
+<a href="#state_defaultaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -1091,16 +1154,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_rootsquashenabled_nodejs">
 <a href="#state_rootsquashenabled_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Squash<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether root squash property is enabled for this HPC Cache.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not functional and will be deprecated in favor of `default_access_policy.0.access_rule.x.root_squash_enabled`, where the scope of access_rule is `default`.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_nodejs">
 <a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -1131,6 +1194,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the HPC Cache, in GB. Possible values are `3072`, `6144`, `12288`, `24576`, and `49152`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_default_access_policy_python">
+<a href="#state_default_access_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>access_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -1176,16 +1248,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_root_squash_enabled_python">
 <a href="#state_root_squash_enabled_python" style="color: inherit; text-decoration: inherit;">root_<wbr>squash_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether root squash property is enabled for this HPC Cache.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not functional and will be deprecated in favor of `default_access_policy.0.access_rule.x.root_squash_enabled`, where the scope of access_rule is `default`.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_name_python">
 <a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -1210,6 +1282,370 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accessrules_csharp">
+<a href="#accessrules_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicyaccessrule">List&lt;Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One to three `access_rule` blocks as defined above.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accessrules_go">
+<a href="#accessrules_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicyaccessrule">[]Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}One to three `access_rule` blocks as defined above.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accessrules_nodejs">
+<a href="#accessrules_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicyaccessrule">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}One to three `access_rule` blocks as defined above.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="access_rules_python">
+<a href="#access_rules_python" style="color: inherit; text-decoration: inherit;">access_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicyaccessrule">Sequence[Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One to three `access_rule` blocks as defined above.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cachedefaultaccesspolicyaccessrule">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="access_csharp">
+<a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The access level for this rule. Possible values are: `rw`, `ro`, `no`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scope of this rule. The `scope` and (potentially) the `filter` determine which clients match the rule. Possible values are: `default`, `network`, `host`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="anonymousgid_csharp">
+<a href="#anonymousgid_csharp" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>Gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The anonymous GID used when `root_squash_enabled` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="anonymousuid_csharp">
+<a href="#anonymousuid_csharp" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The anonymous UID used when `root_squash_enabled` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter applied to the `scope` for this rule. The filter's format depends on its scope: `default` scope matches all clients and has no filter value; `network` scope takes a CIDR format; `host` takes an IP address or fully qualified domain name. If a client does not match any filter rule and there is no default rule, access is denied.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rootsquashenabled_csharp">
+<a href="#rootsquashenabled_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="submountaccessenabled_csharp">
+<a href="#submountaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Submount<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether allow access to subdirectories under the root export? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suidenabled_csharp">
+<a href="#suidenabled_csharp" style="color: inherit; text-decoration: inherit;">Suid<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether [SUID](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#suid) is allowed? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="access_go">
+<a href="#access_go" style="color: inherit; text-decoration: inherit;">Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The access level for this rule. Possible values are: `rw`, `ro`, `no`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scope of this rule. The `scope` and (potentially) the `filter` determine which clients match the rule. Possible values are: `default`, `network`, `host`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="anonymousgid_go">
+<a href="#anonymousgid_go" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>Gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The anonymous GID used when `root_squash_enabled` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="anonymousuid_go">
+<a href="#anonymousuid_go" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The anonymous UID used when `root_squash_enabled` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter applied to the `scope` for this rule. The filter's format depends on its scope: `default` scope matches all clients and has no filter value; `network` scope takes a CIDR format; `host` takes an IP address or fully qualified domain name. If a client does not match any filter rule and there is no default rule, access is denied.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rootsquashenabled_go">
+<a href="#rootsquashenabled_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="submountaccessenabled_go">
+<a href="#submountaccessenabled_go" style="color: inherit; text-decoration: inherit;">Submount<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether allow access to subdirectories under the root export? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suidenabled_go">
+<a href="#suidenabled_go" style="color: inherit; text-decoration: inherit;">Suid<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether [SUID](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#suid) is allowed? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="access_nodejs">
+<a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The access level for this rule. Possible values are: `rw`, `ro`, `no`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scope of this rule. The `scope` and (potentially) the `filter` determine which clients match the rule. Possible values are: `default`, `network`, `host`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="anonymousgid_nodejs">
+<a href="#anonymousgid_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>Gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The anonymous GID used when `root_squash_enabled` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="anonymousuid_nodejs">
+<a href="#anonymousuid_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The anonymous UID used when `root_squash_enabled` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filter applied to the `scope` for this rule. The filter's format depends on its scope: `default` scope matches all clients and has no filter value; `network` scope takes a CIDR format; `host` takes an IP address or fully qualified domain name. If a client does not match any filter rule and there is no default rule, access is denied.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rootsquashenabled_nodejs">
+<a href="#rootsquashenabled_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Squash<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="submountaccessenabled_nodejs">
+<a href="#submountaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">submount<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether allow access to subdirectories under the root export? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suidenabled_nodejs">
+<a href="#suidenabled_nodejs" style="color: inherit; text-decoration: inherit;">suid<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether [SUID](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#suid) is allowed? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="access_python">
+<a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The access level for this rule. Possible values are: `rw`, `ro`, `no`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The scope of this rule. The `scope` and (potentially) the `filter` determine which clients match the rule. Possible values are: `default`, `network`, `host`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="anonymous_gid_python">
+<a href="#anonymous_gid_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The anonymous GID used when `root_squash_enabled` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="anonymous_uid_python">
+<a href="#anonymous_uid_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The anonymous UID used when `root_squash_enabled` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The filter applied to the `scope` for this rule. The filter's format depends on its scope: `default` scope matches all clients and has no filter value; `network` scope takes a CIDR format; `host` takes an IP address or fully qualified domain name. If a client does not match any filter rule and there is no default rule, access is denied.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="root_squash_enabled_python">
+<a href="#root_squash_enabled_python" style="color: inherit; text-decoration: inherit;">root_<wbr>squash_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable [root squash](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#root-squash)? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="submount_access_enabled_python">
+<a href="#submount_access_enabled_python" style="color: inherit; text-decoration: inherit;">submount_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether allow access to subdirectories under the root export? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suid_enabled_python">
+<a href="#suid_enabled_python" style="color: inherit; text-decoration: inherit;">suid_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether [SUID](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#suid) is allowed? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

@@ -6815,6 +6815,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">List&lt;Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `response_header_configuration` blocks as defined above.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One `url` block as defined above
+---
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6864,6 +6874,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">[]Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}One or more `response_header_configuration` blocks as defined above.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url</a></span>
+    </dt>
+    <dd>{{% md %}}One `url` block as defined above
+---
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6913,6 +6933,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response_header_configuration` blocks as defined above.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url</a></span>
+    </dt>
+    <dd>{{% md %}}One `url` block as defined above
+---
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6962,6 +6992,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response_header_configuration` blocks as defined above.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One `url` block as defined above
+---
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7304,6 +7344,132 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header value of the header configuration. To delete a response header set this property to an empty string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL path to rewrite.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="querystring_csharp">
+<a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string to rewrite.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reroute_csharp">
+<a href="#reroute_csharp" style="color: inherit; text-decoration: inherit;">Reroute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the URL path map should be reevaluated after this rewrite has been applied. [More info on rewrite configutation](https://docs.microsoft.com/en-us/azure/application-gateway/rewrite-http-headers-url#rewrite-configuration)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL path to rewrite.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="querystring_go">
+<a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string to rewrite.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reroute_go">
+<a href="#reroute_go" style="color: inherit; text-decoration: inherit;">Reroute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the URL path map should be reevaluated after this rewrite has been applied. [More info on rewrite configutation](https://docs.microsoft.com/en-us/azure/application-gateway/rewrite-http-headers-url#rewrite-configuration)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL path to rewrite.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="querystring_nodejs">
+<a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string to rewrite.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reroute_nodejs">
+<a href="#reroute_nodejs" style="color: inherit; text-decoration: inherit;">reroute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the URL path map should be reevaluated after this rewrite has been applied. [More info on rewrite configutation](https://docs.microsoft.com/en-us/azure/application-gateway/rewrite-http-headers-url#rewrite-configuration)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL path to rewrite.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The query string to rewrite.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reroute_python">
+<a href="#reroute_python" style="color: inherit; text-decoration: inherit;">reroute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the URL path map should be reevaluated after this rewrite has been applied. [More info on rewrite configutation](https://docs.microsoft.com/en-us/azure/application-gateway/rewrite-http-headers-url#rewrite-configuration)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

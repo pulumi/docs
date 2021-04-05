@@ -403,7 +403,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_csharp">
@@ -621,7 +621,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_go">
@@ -839,7 +839,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_nodejs">
@@ -1057,7 +1057,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_id_python">
@@ -1678,7 +1678,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultnodepool_csharp">
@@ -1959,7 +1959,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultnodepool_go">
@@ -2240,7 +2240,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultnodepool_nodejs">
@@ -2521,7 +2521,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `none`, `patch`, `rapid`, and `stable`. The default value is `none`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_node_pool_python">
@@ -3290,7 +3290,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
+    <dd>{{% md %}}An `oms_agent_identity` block is exported. The exported attributes are defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3321,7 +3321,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">[]Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
+    <dd>{{% md %}}An `oms_agent_identity` block is exported. The exported attributes are defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3352,7 +3352,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity[]</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
+    <dd>{{% md %}}An `oms_agent_identity` block is exported. The exported attributes are defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3383,7 +3383,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">Sequence[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
+    <dd>{{% md %}}An `oms_agent_identity` block is exported. The exported attributes are defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
