@@ -12,6 +12,7 @@ Explore the resources and functions of the azure.hpc module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="cache" title="Cache"><span class="symbol resource"></span>Cache</a></li>
+    <li><a href="cacheaccesspolicy" title="CacheAccessPolicy"><span class="symbol resource"></span>CacheAccessPolicy</a></li>
     <li><a href="cacheblobtarget" title="CacheBlobTarget"><span class="symbol resource"></span>CacheBlobTarget</a></li>
     <li><a href="cachenfstarget" title="CacheNfsTarget"><span class="symbol resource"></span>CacheNfsTarget</a></li>
 </ul>
@@ -25,6 +26,6 @@ Explore the resources and functions of the azure.hpc module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.53.0</dd>
+	<dd>3.54.0</dd>
 </dl>
 

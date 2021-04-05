@@ -2824,22 +2824,13 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="certificatepassword_csharp">
-<a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="encodedcertificate_csharp">
 <a href="#encodedcertificate_csharp" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Base64 Encoded PFX Certificate.
+    <dd>{{% md %}}The Base64 Encoded PFX or Base64 Encoded X.509 Certificate.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storename_csharp">
@@ -2849,20 +2840,20 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="certificatepassword_go">
-<a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificatepassword_csharp">
+<a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encodedcertificate_go">
 <a href="#encodedcertificate_go" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Certificate</a>
@@ -2870,7 +2861,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Base64 Encoded PFX Certificate.
+    <dd>{{% md %}}The Base64 Encoded PFX or Base64 Encoded X.509 Certificate.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storename_go">
@@ -2880,20 +2871,20 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="certificatepassword_nodejs">
-<a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificatepassword_go">
+<a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encodedcertificate_nodejs">
 <a href="#encodedcertificate_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Certificate</a>
@@ -2901,7 +2892,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Base64 Encoded PFX Certificate.
+    <dd>{{% md %}}The Base64 Encoded PFX or Base64 Encoded X.509 Certificate.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storename_nodejs">
@@ -2911,20 +2902,20 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificatepassword_nodejs">
+<a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="certificate_password_python">
-<a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encoded_certificate_python">
 <a href="#encoded_certificate_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>certificate</a>
@@ -2932,7 +2923,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Base64 Encoded PFX Certificate.
+    <dd>{{% md %}}The Base64 Encoded PFX or Base64 Encoded X.509 Certificate.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="store_name_python">
@@ -2942,6 +2933,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_password_python">
+<a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

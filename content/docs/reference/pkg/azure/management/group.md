@@ -12,6 +12,8 @@ meta_desc: "Documentation for the azure.management.Group resource with examples,
 
 Manages a Management Group.
 
+!> **Note:** Configuring `subscription_ids` is not supported when using the `azure.management.GroupSubscriptionAssociation` resource, results will be unpredictable.
+
 {{% examples %}}
 
 ## Example Usage

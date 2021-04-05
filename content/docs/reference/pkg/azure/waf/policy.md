@@ -499,7 +499,7 @@ const examplePolicy = new azure.waf.Policy("examplePolicy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyCustomRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[PolicyManagedRulesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[PolicyPolicySettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyCustomRuleArgs]]</span> = None<span class="p">, </span><span class="nx">http_listener_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[PolicyManagedRulesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_based_rule_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[PolicyPolicySettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -668,6 +668,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="httplistenerids_csharp">
+<a href="#httplistenerids_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Listener<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of HTTP Listener IDs from an `azure.network.ApplicationGateway`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -684,6 +693,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathbasedruleids_csharp">
+<a href="#pathbasedruleids_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Based<wbr>Rule<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of URL Path Map Path Rule IDs from an `azure.network.ApplicationGateway`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policysettings_csharp">
@@ -735,6 +753,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="httplistenerids_go">
+<a href="#httplistenerids_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Listener<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of HTTP Listener IDs from an `azure.network.ApplicationGateway`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -751,6 +778,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathbasedruleids_go">
+<a href="#pathbasedruleids_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Based<wbr>Rule<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of URL Path Map Path Rule IDs from an `azure.network.ApplicationGateway`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policysettings_go">
@@ -802,6 +838,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="httplistenerids_nodejs">
+<a href="#httplistenerids_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Listener<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of HTTP Listener IDs from an `azure.network.ApplicationGateway`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -818,6 +863,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathbasedruleids_nodejs">
+<a href="#pathbasedruleids_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Based<wbr>Rule<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of URL Path Map Path Rule IDs from an `azure.network.ApplicationGateway`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policysettings_nodejs">
@@ -869,6 +923,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="http_listener_ids_python">
+<a href="#http_listener_ids_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listener_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of HTTP Listener IDs from an `azure.network.ApplicationGateway`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -885,6 +948,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_based_rule_ids_python">
+<a href="#path_based_rule_ids_python" style="color: inherit; text-decoration: inherit;">path_<wbr>based_<wbr>rule_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of URL Path Map Path Rule IDs from an `azure.network.ApplicationGateway`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_settings_python">
@@ -974,7 +1046,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyCustomRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[PolicyManagedRulesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[PolicyPolicySettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyCustomRuleArgs]]</span> = None<span class="p">, </span><span class="nx">http_listener_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[PolicyManagedRulesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_based_rule_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[PolicyPolicySettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1096,6 +1168,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_httplistenerids_csharp">
+<a href="#state_httplistenerids_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Listener<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of HTTP Listener IDs from an `azure.network.ApplicationGateway`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1121,6 +1202,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_pathbasedruleids_csharp">
+<a href="#state_pathbasedruleids_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Based<wbr>Rule<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of URL Path Map Path Rule IDs from an `azure.network.ApplicationGateway`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policysettings_csharp">
@@ -1163,6 +1253,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_httplistenerids_go">
+<a href="#state_httplistenerids_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Listener<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of HTTP Listener IDs from an `azure.network.ApplicationGateway`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1188,6 +1287,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_pathbasedruleids_go">
+<a href="#state_pathbasedruleids_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Based<wbr>Rule<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of URL Path Map Path Rule IDs from an `azure.network.ApplicationGateway`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policysettings_go">
@@ -1230,6 +1338,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_httplistenerids_nodejs">
+<a href="#state_httplistenerids_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Listener<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of HTTP Listener IDs from an `azure.network.ApplicationGateway`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1255,6 +1372,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_pathbasedruleids_nodejs">
+<a href="#state_pathbasedruleids_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Based<wbr>Rule<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of URL Path Map Path Rule IDs from an `azure.network.ApplicationGateway`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policysettings_nodejs">
@@ -1297,6 +1423,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_http_listener_ids_python">
+<a href="#state_http_listener_ids_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listener_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of HTTP Listener IDs from an `azure.network.ApplicationGateway`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1322,6 +1457,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_path_based_rule_ids_python">
+<a href="#state_path_based_rule_ids_python" style="color: inherit; text-decoration: inherit;">path_<wbr>based_<wbr>rule_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of URL Path Map Path Rule IDs from an `azure.network.ApplicationGateway`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_settings_python">

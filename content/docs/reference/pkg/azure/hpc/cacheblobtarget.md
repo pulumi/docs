@@ -340,7 +340,7 @@ const exampleCacheBlobTarget = new azure.hpc.CacheBlobTarget("exampleCacheBlobTa
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CacheBlobTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CacheBlobTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -518,6 +518,15 @@ The CacheBlobTarget resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The Resource Manager ID of the Storage Container used as the HPC Cache Blob Target. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accesspolicyname_csharp">
+<a href="#accesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -565,6 +574,15 @@ The CacheBlobTarget resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Resource Manager ID of the Storage Container used as the HPC Cache Blob Target. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accesspolicyname_go">
+<a href="#accesspolicyname_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -616,6 +634,15 @@ The CacheBlobTarget resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The Resource Manager ID of the Storage Container used as the HPC Cache Blob Target. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accesspolicyname_nodejs">
+<a href="#accesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -663,6 +690,15 @@ The CacheBlobTarget resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Resource Manager ID of the Storage Container used as the HPC Cache Blob Target. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="access_policy_name_python">
+<a href="#access_policy_name_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policy_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -743,7 +779,7 @@ Get an existing CacheBlobTarget resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CacheBlobTarget</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CacheBlobTarget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -856,6 +892,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accesspolicyname_csharp">
+<a href="#state_accesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cachename_csharp">
 <a href="#state_cachename_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Name</a>
 </span>
@@ -904,6 +949,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_accesspolicyname_go">
+<a href="#state_accesspolicyname_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachename_go">
 <a href="#state_cachename_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Name</a>
@@ -954,6 +1008,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accesspolicyname_nodejs">
+<a href="#state_accesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cachename_nodejs">
 <a href="#state_cachename_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Name</a>
 </span>
@@ -1002,6 +1065,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_access_policy_name_python">
+<a href="#state_access_policy_name_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policy_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cache_name_python">
 <a href="#state_cache_name_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>name</a>

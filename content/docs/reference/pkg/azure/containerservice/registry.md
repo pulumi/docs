@@ -161,7 +161,7 @@ const acr = new azure.containerservice.Registry("acr", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">georeplication_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[RegistryNetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">georeplication_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[RegistryNetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">quarantine_policy_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -366,6 +366,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Whether public network access is allowed for the container registry. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="quarantinepolicyenabled_csharp">
+<a href="#quarantinepolicyenabled_csharp" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Policy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether quarantine policy is enabled. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
@@ -476,6 +485,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether public network access is allowed for the container registry. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quarantinepolicyenabled_go">
+<a href="#quarantinepolicyenabled_go" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Policy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether quarantine policy is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
@@ -590,6 +608,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Whether public network access is allowed for the container registry. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="quarantinepolicyenabled_nodejs">
+<a href="#quarantinepolicyenabled_nodejs" style="color: inherit; text-decoration: inherit;">quarantine<wbr>Policy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether quarantine policy is enabled. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
@@ -700,6 +727,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether public network access is allowed for the container registry. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quarantine_policy_enabled_python">
+<a href="#quarantine_policy_enabled_python" style="color: inherit; text-decoration: inherit;">quarantine_<wbr>policy_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether quarantine policy is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
@@ -924,7 +960,7 @@ Get an existing Registry resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">georeplication_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[RegistryNetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">) -&gt;</span> Registry</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">georeplication_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[RegistryNetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">quarantine_policy_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">) -&gt;</span> Registry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1118,6 +1154,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether public network access is allowed for the container registry. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_quarantinepolicyenabled_csharp">
+<a href="#state_quarantinepolicyenabled_csharp" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Policy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether quarantine policy is enabled. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1255,6 +1300,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether public network access is allowed for the container registry. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_quarantinepolicyenabled_go">
+<a href="#state_quarantinepolicyenabled_go" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Policy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether quarantine policy is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1396,6 +1450,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether public network access is allowed for the container registry. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_quarantinepolicyenabled_nodejs">
+<a href="#state_quarantinepolicyenabled_nodejs" style="color: inherit; text-decoration: inherit;">quarantine<wbr>Policy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether quarantine policy is enabled. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1533,6 +1596,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether public network access is allowed for the container registry. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_quarantine_policy_enabled_python">
+<a href="#state_quarantine_policy_enabled_python" style="color: inherit; text-decoration: inherit;">quarantine_<wbr>policy_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether quarantine policy is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
