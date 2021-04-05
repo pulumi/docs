@@ -126,7 +126,7 @@ const example = new github.Repository("example", {
 
 
 
-### With Github Pages Enabled
+### With GitHub Pages Enabled
 
 
 {{< example csharp >}}
@@ -570,7 +570,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
+    <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="private_csharp">
@@ -795,7 +795,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages</a></span>
     </dt>
-    <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
+    <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="private_go">
@@ -1020,7 +1020,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages</a></span>
     </dt>
-    <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
+    <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="private_nodejs">
@@ -1245,7 +1245,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
+    <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="private_python">
@@ -1337,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpcloneurl_csharp">
@@ -1372,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshcloneurl_csharp">
@@ -1429,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpcloneurl_go">
@@ -1464,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshcloneurl_go">
@@ -1521,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpcloneurl_nodejs">
@@ -1556,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshcloneurl_nodejs">
@@ -1613,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_clone_url_python">
@@ -1648,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssh_clone_url_python">
@@ -1967,7 +1967,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpcloneurl_csharp">
@@ -2021,7 +2021,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
+    <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_private_csharp">
@@ -2040,7 +2040,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshcloneurl_csharp">
@@ -2272,7 +2272,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpcloneurl_go">
@@ -2326,7 +2326,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages</a></span>
     </dt>
-    <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
+    <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_private_go">
@@ -2345,7 +2345,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshcloneurl_go">
@@ -2577,7 +2577,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpcloneurl_nodejs">
@@ -2631,7 +2631,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages</a></span>
     </dt>
-    <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
+    <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_private_nodejs">
@@ -2650,7 +2650,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshcloneurl_nodejs">
@@ -2882,7 +2882,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_clone_url_python">
@@ -2936,7 +2936,7 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
+    <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_private_python">
@@ -2955,7 +2955,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssh_clone_url_python">
@@ -3033,7 +3033,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypagessource">Repository<wbr>Pages<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source branch and directory for the rendered Pages site. See Github Pages Source below for details.
+    <dd>{{% md %}}The source branch and directory for the rendered Pages site. See GitHub Pages Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_csharp">
@@ -3051,7 +3051,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the rendered Github Pages site has a custom 404 page.
+    <dd>{{% md %}}Whether the rendered GitHub Pages site has a custom 404 page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="htmlurl_csharp">
@@ -3060,7 +3060,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
@@ -3069,7 +3069,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Github Pages site's build status e.g. `building` or `built`.
+    <dd>{{% md %}}The GitHub Pages site's build status e.g. `building` or `built`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
@@ -3090,7 +3090,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypagessource">Repository<wbr>Pages<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source branch and directory for the rendered Pages site. See Github Pages Source below for details.
+    <dd>{{% md %}}The source branch and directory for the rendered Pages site. See GitHub Pages Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_go">
@@ -3108,7 +3108,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the rendered Github Pages site has a custom 404 page.
+    <dd>{{% md %}}Whether the rendered GitHub Pages site has a custom 404 page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="htmlurl_go">
@@ -3117,7 +3117,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
@@ -3126,7 +3126,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Github Pages site's build status e.g. `building` or `built`.
+    <dd>{{% md %}}The GitHub Pages site's build status e.g. `building` or `built`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
@@ -3147,7 +3147,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypagessource">Repository<wbr>Pages<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source branch and directory for the rendered Pages site. See Github Pages Source below for details.
+    <dd>{{% md %}}The source branch and directory for the rendered Pages site. See GitHub Pages Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_nodejs">
@@ -3165,7 +3165,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the rendered Github Pages site has a custom 404 page.
+    <dd>{{% md %}}Whether the rendered GitHub Pages site has a custom 404 page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="htmlurl_nodejs">
@@ -3174,7 +3174,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
@@ -3183,7 +3183,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Github Pages site's build status e.g. `building` or `built`.
+    <dd>{{% md %}}The GitHub Pages site's build status e.g. `building` or `built`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
@@ -3204,7 +3204,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorypagessource">Repository<wbr>Pages<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source branch and directory for the rendered Pages site. See Github Pages Source below for details.
+    <dd>{{% md %}}The source branch and directory for the rendered Pages site. See GitHub Pages Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_python">
@@ -3222,7 +3222,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the rendered Github Pages site has a custom 404 page.
+    <dd>{{% md %}}Whether the rendered GitHub Pages site has a custom 404 page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="html_url_python">
@@ -3231,7 +3231,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
+    <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
@@ -3240,7 +3240,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Github Pages site's build status e.g. `building` or `built`.
+    <dd>{{% md %}}The GitHub Pages site's build status e.g. `building` or `built`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">

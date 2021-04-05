@@ -12,7 +12,7 @@ meta_desc: "Documentation for the github.RepositoryMilestone resource with examp
 
 Provides a GitHub repository milestone resource.
 
-This resource allows you to create and manage milestones for a Github Repository within an organization or user account.
+This resource allows you to create and manage milestones for a GitHub Repository within an organization or user account.
 
 {{% examples %}}
 
@@ -280,7 +280,7 @@ The RepositoryMilestone resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner of the Github Repository.
+    <dd>{{% md %}}The owner of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_csharp">
@@ -289,7 +289,7 @@ The RepositoryMilestone resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Github Repository.
+    <dd>{{% md %}}The name of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_csharp">
@@ -338,7 +338,7 @@ The RepositoryMilestone resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner of the Github Repository.
+    <dd>{{% md %}}The owner of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_go">
@@ -347,7 +347,7 @@ The RepositoryMilestone resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Github Repository.
+    <dd>{{% md %}}The name of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_go">
@@ -396,7 +396,7 @@ The RepositoryMilestone resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner of the Github Repository.
+    <dd>{{% md %}}The owner of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_nodejs">
@@ -405,7 +405,7 @@ The RepositoryMilestone resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Github Repository.
+    <dd>{{% md %}}The name of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_nodejs">
@@ -454,7 +454,7 @@ The RepositoryMilestone resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The owner of the Github Repository.
+    <dd>{{% md %}}The owner of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_python">
@@ -463,7 +463,7 @@ The RepositoryMilestone resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Github Repository.
+    <dd>{{% md %}}The name of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_python">
@@ -753,7 +753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner of the Github Repository.
+    <dd>{{% md %}}The owner of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_csharp">
@@ -762,7 +762,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Github Repository.
+    <dd>{{% md %}}The name of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
@@ -820,7 +820,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner of the Github Repository.
+    <dd>{{% md %}}The owner of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_go">
@@ -829,7 +829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Github Repository.
+    <dd>{{% md %}}The name of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
@@ -887,7 +887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner of the Github Repository.
+    <dd>{{% md %}}The owner of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_nodejs">
@@ -896,7 +896,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Github Repository.
+    <dd>{{% md %}}The name of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
@@ -954,7 +954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The owner of the Github Repository.
+    <dd>{{% md %}}The owner of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_python">
@@ -963,7 +963,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Github Repository.
+    <dd>{{% md %}}The name of the GitHub Repository.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
