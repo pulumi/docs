@@ -309,7 +309,9 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to pay automatically. Valid values:
+`false`: If automatic payment is not enabled, you need to go to the order center to complete the payment after the order is generated.
+`true`: Enable automatic payment, automatic payment order.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autousecoupon_csharp">
@@ -318,7 +320,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether use vouchers. Default value is `false`. Valid values: `false`: Not used, `true`: Use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthpackagename_csharp">
@@ -430,7 +432,9 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to pay automatically. Valid values:
+`false`: If automatic payment is not enabled, you need to go to the order center to complete the payment after the order is generated.
+`true`: Enable automatic payment, automatic payment order.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autousecoupon_go">
@@ -439,7 +443,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether use vouchers. Default value is `false`. Valid values: `false`: Not used, `true`: Use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthpackagename_go">
@@ -551,7 +555,9 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to pay automatically. Valid values:
+`false`: If automatic payment is not enabled, you need to go to the order center to complete the payment after the order is generated.
+`true`: Enable automatic payment, automatic payment order.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autousecoupon_nodejs">
@@ -560,7 +566,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether use vouchers. Default value is `false`. Valid values: `false`: Not used, `true`: Use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthpackagename_nodejs">
@@ -672,7 +678,9 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to pay automatically. Valid values:
+`false`: If automatic payment is not enabled, you need to go to the order center to complete the payment after the order is generated.
+`true`: Enable automatic payment, automatic payment order.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_use_coupon_python">
@@ -681,7 +689,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether use vouchers. Default value is `false`. Valid values: `false`: Not used, `true`: Use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_package_name_python">
@@ -989,7 +997,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to pay automatically. Valid values:
+`false`: If automatic payment is not enabled, you need to go to the order center to complete the payment after the order is generated.
+`true`: Enable automatic payment, automatic payment order.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autousecoupon_csharp">
@@ -998,7 +1008,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether use vouchers. Default value is `false`. Valid values: `false`: Not used, `true`: Use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_csharp">
@@ -1119,7 +1129,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to pay automatically. Valid values:
+`false`: If automatic payment is not enabled, you need to go to the order center to complete the payment after the order is generated.
+`true`: Enable automatic payment, automatic payment order.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autousecoupon_go">
@@ -1128,7 +1140,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether use vouchers. Default value is `false`. Valid values: `false`: Not used, `true`: Use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_go">
@@ -1249,7 +1261,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to pay automatically. Valid values:
+`false`: If automatic payment is not enabled, you need to go to the order center to complete the payment after the order is generated.
+`true`: Enable automatic payment, automatic payment order.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autousecoupon_nodejs">
@@ -1258,7 +1272,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether use vouchers. Default value is `false`. Valid values: `false`: Not used, `true`: Use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_nodejs">
@@ -1379,7 +1393,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether to pay automatically. Valid values:
+`false`: If automatic payment is not enabled, you need to go to the order center to complete the payment after the order is generated.
+`true`: Enable automatic payment, automatic payment order.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_use_coupon_python">
@@ -1388,7 +1404,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
+    <dd>{{% md %}}Whether use vouchers. Default value is `false`. Valid values: `false`: Not used, `true`: Use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_python">

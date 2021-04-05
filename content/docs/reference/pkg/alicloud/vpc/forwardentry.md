@@ -40,13 +40,15 @@ class MyStack : Stack
         }));
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
         {
+            VpcName = name,
             CidrBlock = "172.16.0.0/12",
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
             VpcId = defaultNetwork.Id,
             CidrBlock = "172.16.0.0/21",
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            ZoneId = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            VswitchName = name,
         });
         var defaultNatGateway = new AliCloud.Vpc.NatGateway("defaultNatGateway", new AliCloud.Vpc.NatGatewayArgs
         {
@@ -107,15 +109,17 @@ func main() {
 			return err
 		}
 		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			VpcName:   pulumi.String(name),
 			CidrBlock: pulumi.String("172.16.0.0/12"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			VpcId:            defaultNetwork.ID(),
-			CidrBlock:        pulumi.String("172.16.0.0/21"),
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+			VpcId:       defaultNetwork.ID(),
+			CidrBlock:   pulumi.String("172.16.0.0/21"),
+			ZoneId:      pulumi.String(defaultZones.Zones[0].Id),
+			VswitchName: pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -169,11 +173,14 @@ name = config.get("name")
 if name is None:
     name = "forward-entry-example-name"
 default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
-default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
+default_network = alicloud.vpc.Network("defaultNetwork",
+    vpc_name=name,
+    cidr_block="172.16.0.0/12")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     vpc_id=default_network.id,
     cidr_block="172.16.0.0/21",
-    availability_zone=default_zones.zones[0].id)
+    zone_id=default_zones.zones[0].id,
+    vswitch_name=name)
 default_nat_gateway = alicloud.vpc.NatGateway("defaultNatGateway",
     vpc_id=default_network.id,
     specification="Small")
@@ -206,11 +213,15 @@ const name = config.get("name") || "forward-entry-example-name";
 const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
 });
-const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {
+    vpcName: name,
+    cidrBlock: "172.16.0.0/12",
+});
 const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/21",
-    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    zoneId: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    vswitchName: name,
 });
 const defaultNatGateway = new alicloud.vpc.NatGateway("defaultNatGateway", {
     vpcId: defaultNetwork.id,
@@ -252,7 +263,7 @@ const defaultForwardEntry = new alicloud.vpc.ForwardEntry("defaultForwardEntry",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ForwardEntry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">external_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ForwardEntry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">external_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_entry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_break</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -448,13 +459,31 @@ The ForwardEntry resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="forwardentryname_csharp">
+<a href="#forwardentryname_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of forward entry.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.1. New field `forward_entry_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.1. New field &#39;forward_entry_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="portbreak_csharp">
+<a href="#portbreak_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Break</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to remove limits on the port range. Default value is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -515,13 +544,31 @@ The ForwardEntry resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="forwardentryname_go">
+<a href="#forwardentryname_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of forward entry.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.1. New field `forward_entry_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.1. New field &#39;forward_entry_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="portbreak_go">
+<a href="#portbreak_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Break</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to remove limits on the port range. Default value is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -582,13 +629,31 @@ The ForwardEntry resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="forwardentryname_nodejs">
+<a href="#forwardentryname_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of forward entry.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.1. New field `forward_entry_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.1. New field &#39;forward_entry_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="portbreak_nodejs">
+<a href="#portbreak_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Break</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to remove limits on the port range. Default value is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -649,13 +714,31 @@ The ForwardEntry resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="forward_entry_name_python">
+<a href="#forward_entry_name_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>entry_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of forward entry.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.1. New field `forward_entry_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.1. New field &#39;forward_entry_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_break_python">
+<a href="#port_break_python" style="color: inherit; text-decoration: inherit;">port_<wbr>break</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to remove limits on the port range. Default value is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -684,7 +767,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of forward entry.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -705,7 +797,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of forward entry.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -726,7 +827,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of forward entry.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -747,7 +857,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of forward entry.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -763,7 +882,7 @@ Get an existing ForwardEntry resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">external_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_entry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ForwardEntry</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">external_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_entry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_entry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forward_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_break</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ForwardEntry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -903,6 +1022,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The id of the forward entry on the server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_forwardentryname_csharp">
+<a href="#state_forwardentryname_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forwardtableid_csharp">
 <a href="#state_forwardtableid_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Table<wbr>Id</a>
 </span>
@@ -937,15 +1065,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of forward entry.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.1. New field `forward_entry_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.1. New field &#39;forward_entry_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_portbreak_csharp">
+<a href="#state_portbreak_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Break</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to remove limits on the port range. Default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of forward entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -977,6 +1123,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the forward entry on the server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_forwardentryname_go">
+<a href="#state_forwardentryname_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forwardtableid_go">
@@ -1013,15 +1168,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of forward entry.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.1. New field `forward_entry_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.1. New field &#39;forward_entry_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_portbreak_go">
+<a href="#state_portbreak_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Break</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to remove limits on the port range. Default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of forward entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1053,6 +1226,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the forward entry on the server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_forwardentryname_nodejs">
+<a href="#state_forwardentryname_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Entry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forwardtableid_nodejs">
@@ -1089,15 +1271,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of forward entry.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.1. New field `forward_entry_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.1. New field &#39;forward_entry_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_portbreak_nodejs">
+<a href="#state_portbreak_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Break</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to remove limits on the port range. Default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of forward entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1129,6 +1329,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the forward entry on the server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_forward_entry_name_python">
+<a href="#state_forward_entry_name_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>entry_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forward_table_id_python">
@@ -1165,15 +1374,33 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of forward entry.
+    <dd>{{% md %}}Field `name` has been deprecated from provider version 1.119.1. New field `forward_entry_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.119.1. New field &#39;forward_entry_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_port_break_python">
+<a href="#state_port_break_python" style="color: inherit; text-decoration: inherit;">port_<wbr>break</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to remove limits on the port range. Default value is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.119.1+) The status of forward entry.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

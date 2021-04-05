@@ -12,7 +12,6 @@ meta_desc: "Documentation for the alicloud.ecs.DiskAttachment resource with exam
 
 Provides an Alicloud ECS Disk Attachment as a resource, to attach and detach disks from ECS Instances.
 
-
 {{% examples %}}
 
 ## Example Usage
@@ -791,6 +790,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+The disk attachment can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ecs/diskAttachment:DiskAttachment example d-abc12345678:i-abc12355
+```
 
 
 

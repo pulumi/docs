@@ -42,6 +42,20 @@ class MyStack : Stack
             AutoUseCoupon = true,
             Spec = "1",
         });
+        var deBandwidthPackage = new AliCloud.Ga.BandwidthPackage("deBandwidthPackage", new AliCloud.Ga.BandwidthPackageArgs
+        {
+            Bandwidth = 100,
+            Type = "Basic",
+            BandwidthType = "Basic",
+            PaymentType = "PayAsYouGo",
+            BillingType = "PayBy95",
+            Ratio = 30,
+        });
+        var deBandwidthPackageAttachment = new AliCloud.Ga.BandwidthPackageAttachment("deBandwidthPackageAttachment", new AliCloud.Ga.BandwidthPackageAttachmentArgs
+        {
+            AcceleratorId = exampleAccelerator.Id,
+            BandwidthPackageId = deBandwidthPackage.Id,
+        });
         var exampleListener = new AliCloud.Ga.Listener("exampleListener", new AliCloud.Ga.ListenerArgs
         {
             AcceleratorId = exampleAccelerator.Id,
@@ -52,6 +66,12 @@ class MyStack : Stack
                     FromPort = 60,
                     ToPort = 70,
                 },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                deBandwidthPackageAttachment,
             },
         });
     }
@@ -83,6 +103,24 @@ func main() {
 		if err != nil {
 			return err
 		}
+		deBandwidthPackage, err := ga.NewBandwidthPackage(ctx, "deBandwidthPackage", &ga.BandwidthPackageArgs{
+			Bandwidth:     pulumi.Int(100),
+			Type:          pulumi.String("Basic"),
+			BandwidthType: pulumi.String("Basic"),
+			PaymentType:   pulumi.String("PayAsYouGo"),
+			BillingType:   pulumi.String("PayBy95"),
+			Ratio:         pulumi.Int(30),
+		})
+		if err != nil {
+			return err
+		}
+		deBandwidthPackageAttachment, err := ga.NewBandwidthPackageAttachment(ctx, "deBandwidthPackageAttachment", &ga.BandwidthPackageAttachmentArgs{
+			AcceleratorId:      exampleAccelerator.ID(),
+			BandwidthPackageId: deBandwidthPackage.ID(),
+		})
+		if err != nil {
+			return err
+		}
 		_, err = ga.NewListener(ctx, "exampleListener", &ga.ListenerArgs{
 			AcceleratorId: exampleAccelerator.ID(),
 			PortRanges: ga.ListenerPortRangeArray{
@@ -91,7 +129,9 @@ func main() {
 					ToPort:   pulumi.Int(70),
 				},
 			},
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			deBandwidthPackageAttachment,
+		}))
 		if err != nil {
 			return err
 		}
@@ -114,12 +154,23 @@ example_accelerator = alicloud.ga.Accelerator("exampleAccelerator",
     duration=1,
     auto_use_coupon=True,
     spec="1")
+de_bandwidth_package = alicloud.ga.BandwidthPackage("deBandwidthPackage",
+    bandwidth=100,
+    type="Basic",
+    bandwidth_type="Basic",
+    payment_type="PayAsYouGo",
+    billing_type="PayBy95",
+    ratio=30)
+de_bandwidth_package_attachment = alicloud.ga.BandwidthPackageAttachment("deBandwidthPackageAttachment",
+    accelerator_id=example_accelerator.id,
+    bandwidth_package_id=de_bandwidth_package.id)
 example_listener = alicloud.ga.Listener("exampleListener",
     accelerator_id=example_accelerator.id,
     port_ranges=[alicloud.ga.ListenerPortRangeArgs(
         from_port=60,
         to_port=70,
-    )])
+    )],
+    opts=pulumi.ResourceOptions(depends_on=[de_bandwidth_package_attachment]))
 ```
 
 
@@ -138,12 +189,26 @@ const exampleAccelerator = new alicloud.ga.Accelerator("exampleAccelerator", {
     autoUseCoupon: true,
     spec: "1",
 });
+const deBandwidthPackage = new alicloud.ga.BandwidthPackage("deBandwidthPackage", {
+    bandwidth: "100",
+    type: "Basic",
+    bandwidthType: "Basic",
+    paymentType: "PayAsYouGo",
+    billingType: "PayBy95",
+    ratio: 30,
+});
+const deBandwidthPackageAttachment = new alicloud.ga.BandwidthPackageAttachment("deBandwidthPackageAttachment", {
+    acceleratorId: exampleAccelerator.id,
+    bandwidthPackageId: deBandwidthPackage.id,
+});
 const exampleListener = new alicloud.ga.Listener("exampleListener", {
     acceleratorId: exampleAccelerator.id,
     portRanges: [{
         fromPort: 60,
         toPort: 70,
     }],
+}, {
+    dependsOn: [deBandwidthPackageAttachment],
 });
 ```
 
@@ -372,7 +437,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
+    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`, `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_csharp">
@@ -381,7 +446,9 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The proxy protocol of the listener.
+    <dd>{{% md %}}The proxy protocol of the listener. Default value is `false`. Valid value:
+`true`: Turn on the keep client source IP function. After it is turned on, the back-end service is supported to view the original IP address of the client.
+`false`: keep client source IP function is not turned on.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -450,7 +517,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
+    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`, `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_go">
@@ -459,7 +526,9 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The proxy protocol of the listener.
+    <dd>{{% md %}}The proxy protocol of the listener. Default value is `false`. Valid value:
+`true`: Turn on the keep client source IP function. After it is turned on, the back-end service is supported to view the original IP address of the client.
+`false`: keep client source IP function is not turned on.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -528,7 +597,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
+    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`, `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_nodejs">
@@ -537,7 +606,9 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The proxy protocol of the listener.
+    <dd>{{% md %}}The proxy protocol of the listener. Default value is `false`. Valid value:
+`true`: Turn on the keep client source IP function. After it is turned on, the back-end service is supported to view the original IP address of the client.
+`false`: keep client source IP function is not turned on.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -606,7 +677,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
+    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`, `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_protocol_python">
@@ -615,7 +686,9 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The proxy protocol of the listener.
+    <dd>{{% md %}}The proxy protocol of the listener. Default value is `false`. Valid value:
+`true`: Turn on the keep client source IP function. After it is turned on, the back-end service is supported to view the original IP address of the client.
+`false`: keep client source IP function is not turned on.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -898,7 +971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
+    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`, `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_csharp">
@@ -907,7 +980,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The proxy protocol of the listener.
+    <dd>{{% md %}}The proxy protocol of the listener. Default value is `false`. Valid value:
+`true`: Turn on the keep client source IP function. After it is turned on, the back-end service is supported to view the original IP address of the client.
+`false`: keep client source IP function is not turned on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
@@ -985,7 +1060,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
+    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`, `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_go">
@@ -994,7 +1069,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The proxy protocol of the listener.
+    <dd>{{% md %}}The proxy protocol of the listener. Default value is `false`. Valid value:
+`true`: Turn on the keep client source IP function. After it is turned on, the back-end service is supported to view the original IP address of the client.
+`false`: keep client source IP function is not turned on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
@@ -1072,7 +1149,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
+    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`, `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_nodejs">
@@ -1081,7 +1158,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The proxy protocol of the listener.
+    <dd>{{% md %}}The proxy protocol of the listener. Default value is `false`. Valid value:
+`true`: Turn on the keep client source IP function. After it is turned on, the back-end service is supported to view the original IP address of the client.
+`false`: keep client source IP function is not turned on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
@@ -1159,7 +1238,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
+    <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`, `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_protocol_python">
@@ -1168,7 +1247,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The proxy protocol of the listener.
+    <dd>{{% md %}}The proxy protocol of the listener. Default value is `false`. Valid value:
+`true`: Turn on the keep client source IP function. After it is turned on, the back-end service is supported to view the original IP address of the client.
+`false`: keep client source IP function is not turned on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">

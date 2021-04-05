@@ -312,7 +312,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon.
+    <dd>{{% md %}}Use coupons to pay bills automatically. Default value is `false`. Valid value: `true`: Use, `false`: Not used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -367,7 +367,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon.
+    <dd>{{% md %}}Use coupons to pay bills automatically. Default value is `false`. Valid value: `true`: Use, `false`: Not used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -422,7 +422,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon.
+    <dd>{{% md %}}Use coupons to pay bills automatically. Default value is `false`. Valid value: `true`: Use, `false`: Not used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -477,7 +477,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon.
+    <dd>{{% md %}}Use coupons to pay bills automatically. Default value is `false`. Valid value: `true`: Use, `false`: Not used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -722,7 +722,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon.
+    <dd>{{% md %}}Use coupons to pay bills automatically. Default value is `false`. Valid value: `true`: Use, `false`: Not used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -786,7 +786,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon.
+    <dd>{{% md %}}Use coupons to pay bills automatically. Default value is `false`. Valid value: `true`: Use, `false`: Not used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -850,7 +850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon.
+    <dd>{{% md %}}Use coupons to pay bills automatically. Default value is `false`. Valid value: `true`: Use, `false`: Not used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -914,7 +914,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The auto use coupon.
+    <dd>{{% md %}}Use coupons to pay bills automatically. Default value is `false`. Valid value: `true`: Use, `false`: Not used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">

@@ -12,7 +12,7 @@ meta_desc: "Documentation for the alicloud.ecs.EipAssociation resource with exam
 
 ## Import
 
-Elastic IP address can be imported using the id, e.g.
+Elastic IP address association can be imported using the id, e.g.
 
 ```sh
  $ pulumi import alicloud:ecs/eipAssociation:EipAssociation example eip-abc12345678:i-abc12355
@@ -187,7 +187,7 @@ The EipAssociation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway.
+    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway or NetworkInterface or HaVip.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_csharp">
@@ -205,7 +205,7 @@ The EipAssociation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of cloud product that the eip instance to bind.
+    <dd>{{% md %}}The type of cloud product that the eip instance to bind. Valid values: `EcsInstance`, `SlbInstance`, `Nat`, `NetworkInterface` and `HaVip`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_csharp">
@@ -236,7 +236,7 @@ The EipAssociation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway.
+    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway or NetworkInterface or HaVip.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_go">
@@ -254,7 +254,7 @@ The EipAssociation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of cloud product that the eip instance to bind.
+    <dd>{{% md %}}The type of cloud product that the eip instance to bind. Valid values: `EcsInstance`, `SlbInstance`, `Nat`, `NetworkInterface` and `HaVip`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_go">
@@ -285,7 +285,7 @@ The EipAssociation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway.
+    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway or NetworkInterface or HaVip.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_nodejs">
@@ -303,7 +303,7 @@ The EipAssociation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of cloud product that the eip instance to bind.
+    <dd>{{% md %}}The type of cloud product that the eip instance to bind. Valid values: `EcsInstance`, `SlbInstance`, `Nat`, `NetworkInterface` and `HaVip`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_nodejs">
@@ -334,7 +334,7 @@ The EipAssociation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway.
+    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway or NetworkInterface or HaVip.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_python">
@@ -352,7 +352,7 @@ The EipAssociation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of cloud product that the eip instance to bind.
+    <dd>{{% md %}}The type of cloud product that the eip instance to bind. Valid values: `EcsInstance`, `SlbInstance`, `Nat`, `NetworkInterface` and `HaVip`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_address_python">
@@ -570,7 +570,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway.
+    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway or NetworkInterface or HaVip.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_csharp">
@@ -579,7 +579,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of cloud product that the eip instance to bind.
+    <dd>{{% md %}}The type of cloud product that the eip instance to bind. Valid values: `EcsInstance`, `SlbInstance`, `Nat`, `NetworkInterface` and `HaVip`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddress_csharp">
@@ -619,7 +619,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway.
+    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway or NetworkInterface or HaVip.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_go">
@@ -628,7 +628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of cloud product that the eip instance to bind.
+    <dd>{{% md %}}The type of cloud product that the eip instance to bind. Valid values: `EcsInstance`, `SlbInstance`, `Nat`, `NetworkInterface` and `HaVip`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddress_go">
@@ -668,7 +668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway.
+    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway or NetworkInterface or HaVip.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_nodejs">
@@ -677,7 +677,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of cloud product that the eip instance to bind.
+    <dd>{{% md %}}The type of cloud product that the eip instance to bind. Valid values: `EcsInstance`, `SlbInstance`, `Nat`, `NetworkInterface` and `HaVip`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddress_nodejs">
@@ -717,7 +717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway.
+    <dd>{{% md %}}The ID of the ECS or SLB instance or Nat Gateway or NetworkInterface or HaVip.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_type_python">
@@ -726,7 +726,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of cloud product that the eip instance to bind.
+    <dd>{{% md %}}The type of cloud product that the eip instance to bind. Valid values: `EcsInstance`, `SlbInstance`, `Nat`, `NetworkInterface` and `HaVip`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_ip_address_python">
