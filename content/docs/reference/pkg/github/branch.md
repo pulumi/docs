@@ -292,7 +292,7 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name to start from. Defaults to `master`.
+    <dd>{{% md %}}The branch name to start from. Defaults to `main`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesha_csharp">
@@ -332,7 +332,7 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name to start from. Defaults to `master`.
+    <dd>{{% md %}}The branch name to start from. Defaults to `main`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesha_go">
@@ -372,7 +372,7 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name to start from. Defaults to `master`.
+    <dd>{{% md %}}The branch name to start from. Defaults to `main`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesha_nodejs">
@@ -412,7 +412,7 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The branch name to start from. Defaults to `master`.
+    <dd>{{% md %}}The branch name to start from. Defaults to `main`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_sha_python">
@@ -765,7 +765,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name to start from. Defaults to `master`.
+    <dd>{{% md %}}The branch name to start from. Defaults to `main`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesha_csharp">
@@ -832,7 +832,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name to start from. Defaults to `master`.
+    <dd>{{% md %}}The branch name to start from. Defaults to `main`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesha_go">
@@ -899,7 +899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name to start from. Defaults to `master`.
+    <dd>{{% md %}}The branch name to start from. Defaults to `main`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesha_nodejs">
@@ -966,7 +966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The branch name to start from. Defaults to `master`.
+    <dd>{{% md %}}The branch name to start from. Defaults to `main`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_sha_python">

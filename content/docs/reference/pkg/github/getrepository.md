@@ -413,7 +413,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshcloneurl_csharp">
@@ -640,7 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshcloneurl_go">
@@ -867,7 +867,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshcloneurl_nodejs">
@@ -1094,7 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Github ID for the repository
+    <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssh_clone_url_python">
