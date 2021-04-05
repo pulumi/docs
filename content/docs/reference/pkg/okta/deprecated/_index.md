@@ -43,8 +43,8 @@ Explore the resources and functions of the okta.deprecated module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/okta/terraform-provider-okta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.12.1</dd>
+	<dd>2.13.0</dd>
 </dl>
 
