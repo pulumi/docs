@@ -38,16 +38,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var defaultRouteTable = new Aws.Ec2.DefaultRouteTable("defaultRouteTable", new Aws.Ec2.DefaultRouteTableArgs
+        var example = new Aws.Ec2.DefaultRouteTable("example", new Aws.Ec2.DefaultRouteTableArgs
         {
-            DefaultRouteTableId = aws_vpc.Foo.Default_route_table_id,
+            DefaultRouteTableId = aws_vpc.Example.Default_route_table_id,
             Routes = 
             {
-                ,
+                new Aws.Ec2.Inputs.DefaultRouteTableRouteArgs
+                {
+                    CidrBlock = "10.0.1.0/24",
+                    GatewayId = aws_internet_gateway.Example.Id,
+                },
+                new Aws.Ec2.Inputs.DefaultRouteTableRouteArgs
+                {
+                    Ipv6CidrBlock = "::/0",
+                    EgressOnlyGatewayId = aws_egress_only_internet_gateway.Example.Id,
+                },
             },
             Tags = 
             {
-                { "Name", "default table" },
+                { "Name", "example" },
             },
         });
     }
@@ -71,13 +80,20 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ec2.NewDefaultRouteTable(ctx, "defaultRouteTable", &ec2.DefaultRouteTableArgs{
-			DefaultRouteTableId: pulumi.Any(aws_vpc.Foo.Default_route_table_id),
+		_, err := ec2.NewDefaultRouteTable(ctx, "example", &ec2.DefaultRouteTableArgs{
+			DefaultRouteTableId: pulumi.Any(aws_vpc.Example.Default_route_table_id),
 			Routes: ec2.DefaultRouteTableRouteArray{
-				nil,
+				&ec2.DefaultRouteTableRouteArgs{
+					CidrBlock: pulumi.String("10.0.1.0/24"),
+					GatewayId: pulumi.Any(aws_internet_gateway.Example.Id),
+				},
+				&ec2.DefaultRouteTableRouteArgs{
+					Ipv6CidrBlock:       pulumi.String("::/0"),
+					EgressOnlyGatewayId: pulumi.Any(aws_egress_only_internet_gateway.Example.Id),
+				},
 			},
 			Tags: pulumi.StringMap{
-				"Name": pulumi.String("default table"),
+				"Name": pulumi.String("example"),
 			},
 		})
 		if err != nil {
@@ -98,11 +114,20 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-default_route_table = aws.ec2.DefaultRouteTable("defaultRouteTable",
-    default_route_table_id=aws_vpc["foo"]["default_route_table_id"],
-    routes=[aws.ec2.DefaultRouteTableRouteArgs()],
+example = aws.ec2.DefaultRouteTable("example",
+    default_route_table_id=aws_vpc["example"]["default_route_table_id"],
+    routes=[
+        aws.ec2.DefaultRouteTableRouteArgs(
+            cidr_block="10.0.1.0/24",
+            gateway_id=aws_internet_gateway["example"]["id"],
+        ),
+        aws.ec2.DefaultRouteTableRouteArgs(
+            ipv6_cidr_block="::/0",
+            egress_only_gateway_id=aws_egress_only_internet_gateway["example"]["id"],
+        ),
+    ],
     tags={
-        "Name": "default table",
+        "Name": "example",
     })
 ```
 
@@ -117,11 +142,20 @@ default_route_table = aws.ec2.DefaultRouteTable("defaultRouteTable",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultRouteTable = new aws.ec2.DefaultRouteTable("defaultRouteTable", {
-    defaultRouteTableId: aws_vpc.foo.default_route_table_id,
-    routes: [{}],
+const example = new aws.ec2.DefaultRouteTable("example", {
+    defaultRouteTableId: aws_vpc.example.default_route_table_id,
+    routes: [
+        {
+            cidrBlock: "10.0.1.0/24",
+            gatewayId: aws_internet_gateway.example.id,
+        },
+        {
+            ipv6CidrBlock: "::/0",
+            egressOnlyGatewayId: aws_egress_only_internet_gateway.example.id,
+        },
+    ],
     tags: {
-        Name: "default table",
+        Name: "example",
     },
 });
 ```
@@ -313,8 +347,7 @@ The DefaultRouteTable resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultroutetableroute">List&lt;Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of routes. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -353,8 +386,7 @@ The DefaultRouteTable resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultroutetableroute">[]Default<wbr>Route<wbr>Table<wbr>Route</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of routes. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -393,8 +425,7 @@ The DefaultRouteTable resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultroutetableroute">Default<wbr>Route<wbr>Table<wbr>Route[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of routes. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -433,8 +464,7 @@ The DefaultRouteTable resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultroutetableroute">Sequence[Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of routes. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -455,6 +485,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -486,6 +525,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -516,6 +564,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -545,6 +602,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -586,7 +652,7 @@ Get an existing DefaultRouteTable resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagating_vgws</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultRouteTableRouteArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DefaultRouteTable</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagating_vgws</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultRouteTableRouteArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DefaultRouteTable</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -699,6 +765,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_defaultroutetableid_csharp">
 <a href="#state_defaultroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Table<wbr>Id</a>
 </span>
@@ -732,8 +807,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultroutetableroute">List&lt;Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of routes. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -756,6 +830,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultroutetableid_go">
 <a href="#state_defaultroutetableid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Table<wbr>Id</a>
@@ -790,8 +873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultroutetableroute">[]Default<wbr>Route<wbr>Table<wbr>Route</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of routes. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -814,6 +896,15 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultroutetableid_nodejs">
 <a href="#state_defaultroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Table<wbr>Id</a>
@@ -848,8 +939,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultroutetableroute">Default<wbr>Route<wbr>Table<wbr>Route[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of routes. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -872,6 +962,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_route_table_id_python">
 <a href="#state_default_route_table_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>table_<wbr>id</a>
@@ -906,8 +1005,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultroutetableroute">Sequence[Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block of routes. Detailed below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -949,6 +1047,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationprefixlistid_csharp">
+<a href="#destinationprefixlistid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressonlygatewayid_csharp">
@@ -1045,6 +1152,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The CIDR block of the route.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destinationprefixlistid_go">
+<a href="#destinationprefixlistid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="egressonlygatewayid_go">
 <a href="#egressonlygatewayid_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Only<wbr>Gateway<wbr>Id</a>
 </span>
@@ -1139,6 +1255,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The CIDR block of the route.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destinationprefixlistid_nodejs">
+<a href="#destinationprefixlistid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="egressonlygatewayid_nodejs">
 <a href="#egressonlygatewayid_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Only<wbr>Gateway<wbr>Id</a>
 </span>
@@ -1231,6 +1356,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_prefix_list_id_python">
+<a href="#destination_prefix_list_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>prefix_<wbr>list_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egress_only_gateway_id_python">

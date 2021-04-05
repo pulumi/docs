@@ -281,7 +281,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_key_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">authorization_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">model_selection_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_models</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">route_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_response_selection_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_key_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">authorization_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">model_selection_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_models</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouteRequestParameterArgs]]</span> = None<span class="p">, </span><span class="nx">route_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_response_selection_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -507,6 +507,15 @@ Defaults to `NONE`.
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestparameters_csharp">
+<a href="#requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routerequestparameter">List&lt;Route<wbr>Request<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The request parameters for the route. Supported only for WebSocket APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="routeresponseselectionexpression_csharp">
 <a href="#routeresponseselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Response<wbr>Selection<wbr>Expression</a>
 </span>
@@ -611,6 +620,15 @@ Defaults to `NONE`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestparameters_go">
+<a href="#requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routerequestparameter">[]Route<wbr>Request<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}The request parameters for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeresponseselectionexpression_go">
@@ -719,6 +737,15 @@ Defaults to `NONE`.
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestparameters_nodejs">
+<a href="#requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routerequestparameter">Route<wbr>Request<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}The request parameters for the route. Supported only for WebSocket APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="routeresponseselectionexpression_nodejs">
 <a href="#routeresponseselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Response<wbr>Selection<wbr>Expression</a>
 </span>
@@ -825,6 +852,15 @@ Defaults to `NONE`.
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="request_parameters_python">
+<a href="#request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routerequestparameter">Sequence[Route<wbr>Request<wbr>Parameter<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The request parameters for the route. Supported only for WebSocket APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="route_response_selection_expression_python">
 <a href="#route_response_selection_expression_python" style="color: inherit; text-decoration: inherit;">route_<wbr>response_<wbr>selection_<wbr>expression</a>
 </span>
@@ -912,7 +948,7 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_key_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">authorization_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">model_selection_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_models</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">route_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_response_selection_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Route</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_key_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">authorization_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">model_selection_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_models</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouteRequestParameterArgs]]</span> = None<span class="p">, </span><span class="nx">route_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_response_selection_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Route</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1100,6 +1136,15 @@ Defaults to `NONE`.
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_requestparameters_csharp">
+<a href="#state_requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routerequestparameter">List&lt;Route<wbr>Request<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The request parameters for the route. Supported only for WebSocket APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_routekey_csharp">
 <a href="#state_routekey_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Key</a>
 </span>
@@ -1204,6 +1249,15 @@ Defaults to `NONE`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_requestparameters_go">
+<a href="#state_requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routerequestparameter">[]Route<wbr>Request<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}The request parameters for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routekey_go">
@@ -1312,6 +1366,15 @@ Defaults to `NONE`.
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_requestparameters_nodejs">
+<a href="#state_requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routerequestparameter">Route<wbr>Request<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}The request parameters for the route. Supported only for WebSocket APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_routekey_nodejs">
 <a href="#state_routekey_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Key</a>
 </span>
@@ -1418,6 +1481,15 @@ Defaults to `NONE`.
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_request_parameters_python">
+<a href="#state_request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routerequestparameter">Sequence[Route<wbr>Request<wbr>Parameter<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The request parameters for the route. Supported only for WebSocket APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_route_key_python">
 <a href="#state_route_key_python" style="color: inherit; text-decoration: inherit;">route_<wbr>key</a>
 </span>
@@ -1450,6 +1522,100 @@ Defaults to `NONE`.
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="routerequestparameter">Route<wbr>Request<wbr>Parameter</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="requestparameterkey_csharp">
+<a href="#requestparameterkey_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameter<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request parameter key. This is a [request data mapping parameter](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-data-mapping.html#websocket-mapping-request-parameters).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="required_csharp">
+<a href="#required_csharp" style="color: inherit; text-decoration: inherit;">Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean whether or not the parameter is required.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="requestparameterkey_go">
+<a href="#requestparameterkey_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameter<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request parameter key. This is a [request data mapping parameter](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-data-mapping.html#websocket-mapping-request-parameters).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="required_go">
+<a href="#required_go" style="color: inherit; text-decoration: inherit;">Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean whether or not the parameter is required.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="requestparameterkey_nodejs">
+<a href="#requestparameterkey_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameter<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Request parameter key. This is a [request data mapping parameter](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-data-mapping.html#websocket-mapping-request-parameters).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="required_nodejs">
+<a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean whether or not the parameter is required.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="request_parameter_key_python">
+<a href="#request_parameter_key_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameter_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Request parameter key. This is a [request data mapping parameter](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-data-mapping.html#websocket-mapping-request-parameters).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="required_python">
+<a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean whether or not the parameter is required.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

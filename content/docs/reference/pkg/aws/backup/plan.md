@@ -1093,6 +1093,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablecontinuousbackup_csharp">
+<a href="#enablecontinuousbackup_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Continuous<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable continuous backups for supported resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="lifecycle_csharp">
 <a href="#lifecycle_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
 </span>
@@ -1167,6 +1176,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulecopyaction">[]Plan<wbr>Rule<wbr>Copy<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablecontinuousbackup_go">
+<a href="#enablecontinuousbackup_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Continuous<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable continuous backups for supported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_go">
@@ -1245,6 +1263,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablecontinuousbackup_nodejs">
+<a href="#enablecontinuousbackup_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Continuous<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable continuous backups for supported resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="lifecycle_nodejs">
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
@@ -1319,6 +1346,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulecopyaction">Sequence[Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_continuous_backup_python">
+<a href="#enable_continuous_backup_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>continuous_<wbr>backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable continuous backups for supported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_python">

@@ -3392,15 +3392,42 @@ domain on every apply.
 <h4 id="domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customendpoint_csharp">
+<a href="#customendpoint_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified domain for your custom endpoint
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointcertificatearn_csharp">
+<a href="#customendpointcertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ACM certificate ARN for your custom endpoint
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointenabled_csharp">
+<a href="#customendpointenabled_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enforcehttps_csharp">
 <a href="#enforcehttps_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Https</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to require HTTPS
+    <dd>{{% md %}}Whether or not to require HTTPS. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlssecuritypolicy_csharp">
@@ -3414,15 +3441,42 @@ domain on every apply.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customendpoint_go">
+<a href="#customendpoint_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified domain for your custom endpoint
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointcertificatearn_go">
+<a href="#customendpointcertificatearn_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ACM certificate ARN for your custom endpoint
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointenabled_go">
+<a href="#customendpointenabled_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enforcehttps_go">
 <a href="#enforcehttps_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Https</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to require HTTPS
+    <dd>{{% md %}}Whether or not to require HTTPS. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlssecuritypolicy_go">
@@ -3436,15 +3490,42 @@ domain on every apply.
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customendpoint_nodejs">
+<a href="#customendpoint_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified domain for your custom endpoint
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointcertificatearn_nodejs">
+<a href="#customendpointcertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Endpoint<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ACM certificate ARN for your custom endpoint
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointenabled_nodejs">
+<a href="#customendpointenabled_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Endpoint<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enforcehttps_nodejs">
 <a href="#enforcehttps_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Https</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not to require HTTPS
+    <dd>{{% md %}}Whether or not to require HTTPS. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlssecuritypolicy_nodejs">
@@ -3458,15 +3539,42 @@ domain on every apply.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_endpoint_python">
+<a href="#custom_endpoint_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified domain for your custom endpoint
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_endpoint_certificate_arn_python">
+<a href="#custom_endpoint_certificate_arn_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>endpoint_<wbr>certificate_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ACM certificate ARN for your custom endpoint
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_endpoint_enabled_python">
+<a href="#custom_endpoint_enabled_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>endpoint_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enforce_https_python">
 <a href="#enforce_https_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>https</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to require HTTPS
+    <dd>{{% md %}}Whether or not to require HTTPS. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_security_policy_python">

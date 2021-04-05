@@ -1143,6 +1143,15 @@ The following output properties are available:
     <dd>{{% md %}}CIDR block of the route.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="destinationprefixlistid_csharp">
+<a href="#destinationprefixlistid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="egressonlygatewayid_csharp">
 <a href="#egressonlygatewayid_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Only<wbr>Gateway<wbr>Id</a>
 </span>
@@ -1253,6 +1262,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR block of the route.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="destinationprefixlistid_go">
+<a href="#destinationprefixlistid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="egressonlygatewayid_go">
@@ -1367,6 +1385,15 @@ The following output properties are available:
     <dd>{{% md %}}CIDR block of the route.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="destinationprefixlistid_nodejs">
+<a href="#destinationprefixlistid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="egressonlygatewayid_nodejs">
 <a href="#egressonlygatewayid_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Only<wbr>Gateway<wbr>Id</a>
 </span>
@@ -1477,6 +1504,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CIDR block of the route.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="destination_prefix_list_id_python">
+<a href="#destination_prefix_list_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>prefix_<wbr>list_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="egress_only_gateway_id_python">

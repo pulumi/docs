@@ -12,9 +12,7 @@ meta_desc: "Documentation for the aws.ec2.getRoute function with examples, input
 
 `aws.ec2.Route` provides details about a specific Route.
 
-This resource can prove useful when finding the resource
-associated with a CIDR. For example, finding the peering
-connection associated with a CIDR value.
+This resource can prove useful when finding the resource associated with a CIDR. For example, finding the peering connection associated with a CIDR value.
 
 
 {{% examples %}}
@@ -169,7 +167,7 @@ const interface = route.then(route => aws.ec2.getNetworkInterface({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route(</span><span class="nx">destination_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ipv6_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress_only_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_peering_connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route(</span><span class="nx">carrier_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ipv6_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_prefix_list_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress_only_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_peering_connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -201,7 +199,16 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table containing the Route entry.
+    <dd>{{% md %}}The ID of the specific Route Table containing the Route entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="carriergatewayid_csharp">
+<a href="#carriergatewayid_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}EC2 Carrier Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationcidrblock_csharp">
@@ -210,7 +217,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the Route belonging to the Route Table.
+    <dd>{{% md %}}CIDR block of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipv6cidrblock_csharp">
@@ -219,7 +226,16 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv6 CIDR block of the Route belonging to the Route Table.
+    <dd>{{% md %}}IPv6 CIDR block of the Route belonging to the Route Table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationprefixlistid_csharp">
+<a href="#destinationprefixlistid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressonlygatewayid_csharp">
@@ -228,7 +244,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Egress Only Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Egress Only Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayid_csharp">
@@ -237,7 +253,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_csharp">
@@ -246,7 +262,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instance ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Instance ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localgatewayid_csharp">
@@ -255,7 +271,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Local Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Local Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="natgatewayid_csharp">
@@ -264,7 +280,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The NAT Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}NAT Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaceid_csharp">
@@ -273,7 +289,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Network Interface ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Network Interface ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitgatewayid_csharp">
@@ -282,7 +298,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 Transit Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}EC2 Transit Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcpeeringconnectionid_csharp">
@@ -291,7 +307,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Peering Connection ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}VPC Peering Connection ID of the Route belonging to the Route Table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -304,7 +320,16 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table containing the Route entry.
+    <dd>{{% md %}}The ID of the specific Route Table containing the Route entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="carriergatewayid_go">
+<a href="#carriergatewayid_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}EC2 Carrier Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationcidrblock_go">
@@ -313,7 +338,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the Route belonging to the Route Table.
+    <dd>{{% md %}}CIDR block of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipv6cidrblock_go">
@@ -322,7 +347,16 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv6 CIDR block of the Route belonging to the Route Table.
+    <dd>{{% md %}}IPv6 CIDR block of the Route belonging to the Route Table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationprefixlistid_go">
+<a href="#destinationprefixlistid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressonlygatewayid_go">
@@ -331,7 +365,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Egress Only Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Egress Only Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayid_go">
@@ -340,7 +374,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_go">
@@ -349,7 +383,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instance ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Instance ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localgatewayid_go">
@@ -358,7 +392,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Local Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Local Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="natgatewayid_go">
@@ -367,7 +401,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The NAT Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}NAT Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaceid_go">
@@ -376,7 +410,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Network Interface ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Network Interface ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitgatewayid_go">
@@ -385,7 +419,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 Transit Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}EC2 Transit Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcpeeringconnectionid_go">
@@ -394,7 +428,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Peering Connection ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}VPC Peering Connection ID of the Route belonging to the Route Table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -407,7 +441,16 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table containing the Route entry.
+    <dd>{{% md %}}The ID of the specific Route Table containing the Route entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="carriergatewayid_nodejs">
+<a href="#carriergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}EC2 Carrier Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationcidrblock_nodejs">
@@ -416,7 +459,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the Route belonging to the Route Table.
+    <dd>{{% md %}}CIDR block of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipv6cidrblock_nodejs">
@@ -425,7 +468,16 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv6 CIDR block of the Route belonging to the Route Table.
+    <dd>{{% md %}}IPv6 CIDR block of the Route belonging to the Route Table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationprefixlistid_nodejs">
+<a href="#destinationprefixlistid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressonlygatewayid_nodejs">
@@ -434,7 +486,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Egress Only Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Egress Only Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayid_nodejs">
@@ -443,7 +495,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_nodejs">
@@ -452,7 +504,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instance ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Instance ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localgatewayid_nodejs">
@@ -461,7 +513,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Local Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Local Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="natgatewayid_nodejs">
@@ -470,7 +522,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The NAT Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}NAT Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaceid_nodejs">
@@ -479,7 +531,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Network Interface ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Network Interface ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitgatewayid_nodejs">
@@ -488,7 +540,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EC2 Transit Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}EC2 Transit Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcpeeringconnectionid_nodejs">
@@ -497,7 +549,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Peering Connection ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}VPC Peering Connection ID of the Route belonging to the Route Table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -510,7 +562,16 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the specific Route Table containing the Route entry.
+    <dd>{{% md %}}The ID of the specific Route Table containing the Route entry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="carrier_gateway_id_python">
+<a href="#carrier_gateway_id_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>gateway_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}EC2 Carrier Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_cidr_block_python">
@@ -519,7 +580,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the Route belonging to the Route Table.
+    <dd>{{% md %}}CIDR block of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_ipv6_cidr_block_python">
@@ -528,7 +589,16 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IPv6 CIDR block of the Route belonging to the Route Table.
+    <dd>{{% md %}}IPv6 CIDR block of the Route belonging to the Route Table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_prefix_list_id_python">
+<a href="#destination_prefix_list_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>prefix_<wbr>list_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egress_only_gateway_id_python">
@@ -537,7 +607,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Egress Only Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Egress Only Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_id_python">
@@ -546,7 +616,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_id_python">
@@ -555,7 +625,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Instance ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Instance ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_gateway_id_python">
@@ -564,7 +634,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Local Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Local Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nat_gateway_id_python">
@@ -573,7 +643,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The NAT Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}NAT Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_interface_id_python">
@@ -582,7 +652,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Network Interface ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}Network Interface ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transit_gateway_id_python">
@@ -591,7 +661,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The EC2 Transit Gateway ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}EC2 Transit Gateway ID of the Route belonging to the Route Table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_peering_connection_id_python">
@@ -600,7 +670,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VPC Peering Connection ID of the Route belonging to the Route Table.
+    <dd>{{% md %}}VPC Peering Connection ID of the Route belonging to the Route Table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -616,6 +686,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="carriergatewayid_csharp">
+<a href="#carriergatewayid_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="destinationcidrblock_csharp">
 <a href="#destinationcidrblock_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
 </span>
@@ -626,6 +704,14 @@ The following output properties are available:
             title="">
         <span id="destinationipv6cidrblock_csharp">
 <a href="#destinationipv6cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ipv6Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="destinationprefixlistid_csharp">
+<a href="#destinationprefixlistid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Prefix<wbr>List<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -717,6 +803,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="carriergatewayid_go">
+<a href="#carriergatewayid_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="destinationcidrblock_go">
 <a href="#destinationcidrblock_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
 </span>
@@ -727,6 +821,14 @@ The following output properties are available:
             title="">
         <span id="destinationipv6cidrblock_go">
 <a href="#destinationipv6cidrblock_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ipv6Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="destinationprefixlistid_go">
+<a href="#destinationprefixlistid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Prefix<wbr>List<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -818,6 +920,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="carriergatewayid_nodejs">
+<a href="#carriergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="destinationcidrblock_nodejs">
 <a href="#destinationcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Block</a>
 </span>
@@ -828,6 +938,14 @@ The following output properties are available:
             title="">
         <span id="destinationipv6cidrblock_nodejs">
 <a href="#destinationipv6cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ipv6Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="destinationprefixlistid_nodejs">
+<a href="#destinationprefixlistid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Prefix<wbr>List<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -919,6 +1037,14 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="carrier_gateway_id_python">
+<a href="#carrier_gateway_id_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>gateway_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="destination_cidr_block_python">
 <a href="#destination_cidr_block_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>block</a>
 </span>
@@ -929,6 +1055,14 @@ The following output properties are available:
             title="">
         <span id="destination_ipv6_cidr_block_python">
 <a href="#destination_ipv6_cidr_block_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ipv6_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="destination_prefix_list_id_python">
+<a href="#destination_prefix_list_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>prefix_<wbr>list_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

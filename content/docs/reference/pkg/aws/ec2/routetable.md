@@ -51,25 +51,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var routeTable = new Aws.Ec2.RouteTable("routeTable", new Aws.Ec2.RouteTableArgs
+        var example = new Aws.Ec2.RouteTable("example", new Aws.Ec2.RouteTableArgs
         {
-            VpcId = aws_vpc.Default.Id,
+            VpcId = aws_vpc.Example.Id,
             Routes = 
             {
                 new Aws.Ec2.Inputs.RouteTableRouteArgs
                 {
                     CidrBlock = "10.0.1.0/24",
-                    GatewayId = aws_internet_gateway.Main.Id,
+                    GatewayId = aws_internet_gateway.Example.Id,
                 },
                 new Aws.Ec2.Inputs.RouteTableRouteArgs
                 {
                     Ipv6CidrBlock = "::/0",
-                    EgressOnlyGatewayId = aws_egress_only_internet_gateway.Foo.Id,
+                    EgressOnlyGatewayId = aws_egress_only_internet_gateway.Example.Id,
                 },
             },
             Tags = 
             {
-                { "Name", "main" },
+                { "Name", "example" },
             },
         });
     }
@@ -93,20 +93,20 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ec2.NewRouteTable(ctx, "routeTable", &ec2.RouteTableArgs{
-			VpcId: pulumi.Any(aws_vpc.Default.Id),
+		_, err := ec2.NewRouteTable(ctx, "example", &ec2.RouteTableArgs{
+			VpcId: pulumi.Any(aws_vpc.Example.Id),
 			Routes: ec2.RouteTableRouteArray{
 				&ec2.RouteTableRouteArgs{
 					CidrBlock: pulumi.String("10.0.1.0/24"),
-					GatewayId: pulumi.Any(aws_internet_gateway.Main.Id),
+					GatewayId: pulumi.Any(aws_internet_gateway.Example.Id),
 				},
 				&ec2.RouteTableRouteArgs{
 					Ipv6CidrBlock:       pulumi.String("::/0"),
-					EgressOnlyGatewayId: pulumi.Any(aws_egress_only_internet_gateway.Foo.Id),
+					EgressOnlyGatewayId: pulumi.Any(aws_egress_only_internet_gateway.Example.Id),
 				},
 			},
 			Tags: pulumi.StringMap{
-				"Name": pulumi.String("main"),
+				"Name": pulumi.String("example"),
 			},
 		})
 		if err != nil {
@@ -127,20 +127,20 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-route_table = aws.ec2.RouteTable("routeTable",
-    vpc_id=aws_vpc["default"]["id"],
+example = aws.ec2.RouteTable("example",
+    vpc_id=aws_vpc["example"]["id"],
     routes=[
         aws.ec2.RouteTableRouteArgs(
             cidr_block="10.0.1.0/24",
-            gateway_id=aws_internet_gateway["main"]["id"],
+            gateway_id=aws_internet_gateway["example"]["id"],
         ),
         aws.ec2.RouteTableRouteArgs(
             ipv6_cidr_block="::/0",
-            egress_only_gateway_id=aws_egress_only_internet_gateway["foo"]["id"],
+            egress_only_gateway_id=aws_egress_only_internet_gateway["example"]["id"],
         ),
     ],
     tags={
-        "Name": "main",
+        "Name": "example",
     })
 ```
 
@@ -155,20 +155,20 @@ route_table = aws.ec2.RouteTable("routeTable",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const routeTable = new aws.ec2.RouteTable("routeTable", {
-    vpcId: aws_vpc["default"].id,
+const example = new aws.ec2.RouteTable("example", {
+    vpcId: aws_vpc.example.id,
     routes: [
         {
             cidrBlock: "10.0.1.0/24",
-            gatewayId: aws_internet_gateway.main.id,
+            gatewayId: aws_internet_gateway.example.id,
         },
         {
             ipv6CidrBlock: "::/0",
-            egressOnlyGatewayId: aws_egress_only_internet_gateway.foo.id,
+            egressOnlyGatewayId: aws_egress_only_internet_gateway.example.id,
         },
     ],
     tags: {
-        Name: "main",
+        Name: "example",
     },
 });
 ```
@@ -369,7 +369,7 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -409,7 +409,7 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -449,7 +449,7 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -489,7 +489,7 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -502,6 +502,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -524,6 +533,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -545,6 +563,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -565,6 +592,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -597,7 +633,7 @@ Get an existing RouteTable resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagating_vgws</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouteTableRouteArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RouteTable</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagating_vgws</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouteTableRouteArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RouteTable</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -710,6 +746,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ownerid_csharp">
 <a href="#state_ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
 </span>
@@ -743,7 +788,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
@@ -758,6 +803,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_go">
 <a href="#state_ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -792,7 +846,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
@@ -807,6 +861,15 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_nodejs">
 <a href="#state_ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
@@ -841,7 +904,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
@@ -856,6 +919,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the route table.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_id_python">
 <a href="#state_owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
@@ -890,7 +962,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
@@ -917,6 +989,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="carriergatewayid_csharp">
+<a href="#carriergatewayid_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a carrier gateway. This attribute can only be used when the VPC contains a subnet which is associated with a Wavelength Zone.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
 </span>
@@ -924,6 +1005,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationprefixlistid_csharp">
+<a href="#destinationprefixlistid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressonlygatewayid_csharp">
@@ -1020,6 +1110,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="carriergatewayid_go">
+<a href="#carriergatewayid_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a carrier gateway. This attribute can only be used when the VPC contains a subnet which is associated with a Wavelength Zone.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
 </span>
@@ -1027,6 +1126,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationprefixlistid_go">
+<a href="#destinationprefixlistid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressonlygatewayid_go">
@@ -1123,6 +1231,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="carriergatewayid_nodejs">
+<a href="#carriergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a carrier gateway. This attribute can only be used when the VPC contains a subnet which is associated with a Wavelength Zone.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
 </span>
@@ -1130,6 +1247,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationprefixlistid_nodejs">
+<a href="#destinationprefixlistid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Prefix<wbr>List<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressonlygatewayid_nodejs">
@@ -1226,6 +1352,15 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="carrier_gateway_id_python">
+<a href="#carrier_gateway_id_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>gateway_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a carrier gateway. This attribute can only be used when the VPC contains a subnet which is associated with a Wavelength Zone.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
 </span>
@@ -1233,6 +1368,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the route.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_prefix_list_id_python">
+<a href="#destination_prefix_list_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>prefix_<wbr>list_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of a managed prefix list destination of the route.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egress_only_gateway_id_python">
