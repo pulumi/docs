@@ -50,19 +50,24 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v1.0.1
         with:
           pulumi-version: ${{ env.PULUMI_VERSION }}
-      - name: setup go
+      - name: Install go
         uses: actions/setup-go@v2
         with:
           go-version: ${{ matrix.goversion }}
-      - name: setup node
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.82.0'
+          extended: true
+      - name: Install node
         uses: actions/setup-node@v2-beta
-      - name: setup python
+      - name: Install python
         uses: actions/setup-python@v2
         with:
           python-version: ${{matrix.pythonversion}}
       - name: Install Pipenv
         run:  pip3 install pipenv
-      - name: setup dotnet
+      - name: Install dotnet
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{matrix.dotnetverson}}
