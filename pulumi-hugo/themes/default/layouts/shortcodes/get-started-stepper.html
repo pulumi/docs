@@ -7,10 +7,12 @@
 
 {{/* Get the pages in the current directory. */}}
 {{ $unsortedPages := slice $currentPage }}
-{{ range $index, $element := readDir (printf "content/%s" $currentPage.File.Dir) }}
-    {{ $page := $currentPage.GetPage $element.Name }}
+{{ if eq $currentPage.Dir $currentPage.Parent.Dir }}
+    {{ $unsortedPages = $unsortedPages | append $currentPage.Parent }}
+{{ end }}
+{{ range $index, $page := .Page.CurrentSection.Pages }}
     {{ if and (gt $page.Weight 0) (ne $page.RelPermalink $currentPage.RelPermalink) }}
-        {{ $unsortedPages = $unsortedPages | append $page -}}
+        {{ $unsortedPages = $unsortedPages | append $page }}
     {{ end }}
 {{ end }}
 

@@ -148,7 +148,7 @@ main {
 }
 
 .tag {
-    @apply text-sm lowercase border border-gray-200 rounded py-1 px-2 mr-1 transition-all;
+    @apply text-sm lowercase border border-gray-200 rounded py-1 px-2 mr-1;
 
     &.tag-blog {
         @apply bg-white text-blue-600;
