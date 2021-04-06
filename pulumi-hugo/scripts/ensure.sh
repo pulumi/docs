@@ -5,7 +5,7 @@ set -o errexit -o pipefail
 source ./scripts/common.sh
 
 REQUIRED_GO="1.16"
-REQUIRED_HUGO="0.81"
+REQUIRED_HUGO="0.82"
 REQUIRED_NODE="$(cat .nvmrc)"
 
 # Check for the required versions of Go, Hugo, Node, and Yarn.
