@@ -188,7 +188,7 @@ bucketObject = s3.BucketObject(
     acl='public-read',
     content_type='text/html',
     bucket=bucket,
-    content=pulumi.FileAsset('index.html'),
+    source=pulumi.FileAsset('index.html'),
 )
 ```
 
