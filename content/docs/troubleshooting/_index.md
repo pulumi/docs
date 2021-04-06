@@ -491,16 +491,18 @@ There are two ways to fix this, one way if you have access to an Intel based com
 ### I don't have access to an Intel based computer
 
 1. Remove Pulumi - if you're using Homebrew, `brew remove pulumi` or simply `rm -rf ~/.pulumi`
-1. Download latest version of Pulumi: `https://get.pulumi.com/releases/sdk/pulumi-v{version}-darwin-x64.tar.gz` (current version is [https://get.pulumi.com/releases/sdk/pulumi-v2.24.0-darwin-x64.tar.gz](https://get.pulumi.com/releases/sdk/pulumi-v2.24.0-darwin-x64.tar.gz)) and extract to ~/.pulumi/bin
+1. Download latest version of Pulumi: `https://www.pulumi.com/docs/get-started/install/versions/` (current version is [https://get.pulumi.com/releases/sdk/pulumi-v2.24.0-darwin-x64.tar.gz](https://get.pulumi.com/releases/sdk/pulumi-v2.24.0-darwin-x64.tar.gz)) and extract to ~/.pulumi/bin
 1. Add Pulumi to path: `export PATH=$PATH:~/.pulumi/bin`
 1. Update packages in your Pulumi program to latest version (for example `npm install @pulumi/aws@latest)
-1. Install Pulumi provider: `arch -x86_64 pulumi plugin install resource {provider_name} v{version}` (where  {provider_name} is the name of the provider, i.e. aws and {version} is the same version number that your package has updated to)
+1. Install Pulumi provider: `arch -x86_64 pulumi plugin install resource {provider_name} v{version}` (where  {provider_name} is the name of the provider, i.e. aws and {version} is the same version number that your package has updated to) *
 1. Login to Pulumi using the appropriate backend (see [our docs](https://www.pulumi.com/docs/intro/concepts/state/#logging-in) for information)
 1. Run a Pulumi preview: `arch -x86_64 pulumi pre`
 1. Remove Pulumi again `rm -rf ~/.pulumi`
 1. Re-install Pulumi ([see docs](https://www.pulumi.com/docs/get-started/install/) for details)
 1. Login to Pulumi using the appropriate backend (see [our docs](https://www.pulumi.com/docs/intro/concepts/state/#logging-in) for information)
 1. Run a Pulumi preview to check everything is ok: `pulumi pre`
+
+* `arch` is used to run the selected architecture of a binary, in this case so that you can run the non-ARM64 version of Pulumi on your laptop.
 
 ### I'm seeing other errors, please help
 
