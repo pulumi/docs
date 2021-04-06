@@ -8,7 +8,7 @@ jobs:
     name: Do cleanup
     runs-on: ubuntu-18.04
     env:
-      GOPATH: ${{ github.workspace }}
+      GOPATH: ${{ github.workspace }}/go
     steps:
       - uses: actions/checkout@v2
 
@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/setup-go@v2
         with:
-          go-version: 1.13.x
+          go-version: 1.16.x
 
       - name: Install assume-role
         run: go get -u github.com/remind101/assume-role

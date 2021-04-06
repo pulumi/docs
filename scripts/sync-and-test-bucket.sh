@@ -39,15 +39,12 @@ destination_bucket_uri="s3://${destination_bucket}"
 # can be helpful for debugging purposes.
 node scripts/translate-redirects.js "$build_dir" "$(pulumi -C infrastructure config get redirectDomain 2>/dev/null || echo '')"
 
-# Read the region from the stack's config -- we use it below.
-aws_region="$(pulumi -C infrastructure config get 'aws:region')"
-
 # Make the bucket. If this fails, there are two explanations, given the way we're naming
 # our buckets: either a previous run failed at some point after creating the bucket, in
 # which case we should simply proceed (to repopulate it), or the bucket was somehow
 # created in another account, in which case subsequent operations on the bucket will also
 # fail, causing this script to exit nonzero. In either case, it's okay to continue.
-aws s3 mb $destination_bucket_uri --region $aws_region || true
+aws s3 mb $destination_bucket_uri --region "$(aws_region)" || true
 
 # Tag the bucket with ownership information for production buckets.
 if [ "$(pulumi -C infrastructure stack --show-name)" == "production" ]; then
@@ -64,7 +61,7 @@ echo "Synchronizing to $destination_bucket_uri..."
 aws s3 sync "$build_dir" "$destination_bucket_uri" --acl public-read --delete --quiet
 
 echo "Sync complete."
-s3_website_url="http://${destination_bucket}.s3-website.${aws_region}.amazonaws.com"
+s3_website_url="http://${destination_bucket}.s3-website.$(aws_region).amazonaws.com"
 echo "$s3_website_url"
 
 # Set the content-type of latest-version explicitly. (Otherwise, it'll be set as binary/octet-stream.)
@@ -100,10 +97,10 @@ metadata='{
 printf "$metadata" "$(current_time_in_ms)" "$(git_sha)" "$destination_bucket" "$s3_website_url" > "$metadata_file"
 
 # Copy the file to the destination bucket, for future reference.
-aws s3 cp "$metadata_file" "${destination_bucket_uri}/metadata.json" --region $aws_region --acl public-read
+aws s3 cp "$metadata_file" "${destination_bucket_uri}/metadata.json" --region "$(aws_region)" --acl public-read
 
 # Persist an association between the current commit and the bucket we just deployed to.
-set_bucket_for_commit "$(git_sha)" "$destination_bucket" "$aws_region"
+set_bucket_for_commit "$(git_sha)" "$destination_bucket" "$(aws_region)"
 
 # Finally, if it's a preview, post a comment to the PR that directs the user to the resulting bucket URL.
 if [ "$1" == "preview" ]; then

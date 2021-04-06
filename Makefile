@@ -15,7 +15,7 @@ clean:
 	./scripts/clean.sh
 
 .PHONY: ensure
-ensure:
+ensure: clean
 	./scripts/ensure.sh
 
 .PHONY: ensure_tools
@@ -25,25 +25,7 @@ ensure_tools:
 
 .PHONY: serve
 serve:
-	@echo -e "\033[0;32mSERVE:\033[0m"
-	$(MAKE) lint
 	./scripts/serve.sh
-
-.PHONY: serve_marketing
-serve_marketing:
-	@echo -e "\033[0;32mSERVE MARKETING:\033[0m"
-	$(MAKE) lint
-	HUGO_ENVIRONMENT=marketing-dev ./scripts/serve.sh
-
-.PHONY: serve_components
-serve_components:
-	@echo -e "\033[0;32mSERVE COMPONENTS:\033[0m"
-	yarn --cwd components run start
-
-.PHONY: build_components
-build_components:
-	@echo -e "\033[0;32mBUILD COMPONENTS:\033[0m"
-	yarn --cwd components run build
 
 .PHONY: generate
 generate:
@@ -56,7 +38,6 @@ generate:
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
-	$(MAKE) lint
 	./scripts/build-site.sh
 
 .PHONY: lint
