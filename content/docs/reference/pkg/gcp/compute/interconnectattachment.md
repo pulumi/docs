@@ -33,15 +33,24 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var foobar = new Gcp.Compute.Router("foobar", new Gcp.Compute.RouterArgs
+        var foobarNetwork = new Gcp.Compute.Network("foobarNetwork", new Gcp.Compute.NetworkArgs
         {
-            Network = google_compute_network.Foobar.Name,
+            AutoCreateSubnetworks = false,
+        });
+        var foobarRouter = new Gcp.Compute.Router("foobarRouter", new Gcp.Compute.RouterArgs
+        {
+            Network = foobarNetwork.Name,
+            Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+            {
+                Asn = 16550,
+            },
         });
         var onPrem = new Gcp.Compute.InterconnectAttachment("onPrem", new Gcp.Compute.InterconnectAttachmentArgs
         {
-            Interconnect = "my-interconnect-id",
-            Router = foobar.Id,
-            Mtu = 1500,
+            EdgeAvailabilityDomain = "AVAILABILITY_DOMAIN_1",
+            Type = "PARTNER",
+            Router = foobarRouter.Id,
+            Mtu = "1500",
         });
     }
 
@@ -64,16 +73,26 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		foobar, err := compute.NewRouter(ctx, "foobar", &compute.RouterArgs{
-			Network: pulumi.Any(google_compute_network.Foobar.Name),
+		foobarNetwork, err := compute.NewNetwork(ctx, "foobarNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		foobarRouter, err := compute.NewRouter(ctx, "foobarRouter", &compute.RouterArgs{
+			Network: foobarNetwork.Name,
+			Bgp: &compute.RouterBgpArgs{
+				Asn: pulumi.Int(16550),
+			},
 		})
 		if err != nil {
 			return err
 		}
 		_, err = compute.NewInterconnectAttachment(ctx, "onPrem", &compute.InterconnectAttachmentArgs{
-			Interconnect: pulumi.String("my-interconnect-id"),
-			Router:       foobar.ID(),
-			Mtu:          pulumi.Int(1500),
+			EdgeAvailabilityDomain: pulumi.String("AVAILABILITY_DOMAIN_1"),
+			Type:                   pulumi.String("PARTNER"),
+			Router:                 foobarRouter.ID(),
+			Mtu:                    pulumi.String("1500"),
 		})
 		if err != nil {
 			return err
@@ -93,11 +112,17 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-foobar = gcp.compute.Router("foobar", network=google_compute_network["foobar"]["name"])
+foobar_network = gcp.compute.Network("foobarNetwork", auto_create_subnetworks=False)
+foobar_router = gcp.compute.Router("foobarRouter",
+    network=foobar_network.name,
+    bgp=gcp.compute.RouterBgpArgs(
+        asn=16550,
+    ))
 on_prem = gcp.compute.InterconnectAttachment("onPrem",
-    interconnect="my-interconnect-id",
-    router=foobar.id,
-    mtu=1500)
+    edge_availability_domain="AVAILABILITY_DOMAIN_1",
+    type="PARTNER",
+    router=foobar_router.id,
+    mtu="1500")
 ```
 
 
@@ -111,10 +136,17 @@ on_prem = gcp.compute.InterconnectAttachment("onPrem",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const foobar = new gcp.compute.Router("foobar", {network: google_compute_network.foobar.name});
+const foobarNetwork = new gcp.compute.Network("foobarNetwork", {autoCreateSubnetworks: false});
+const foobarRouter = new gcp.compute.Router("foobarRouter", {
+    network: foobarNetwork.name,
+    bgp: {
+        asn: 16550,
+    },
+});
 const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
-    interconnect: "my-interconnect-id",
-    router: foobar.id,
+    edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_1",
+    type: "PARTNER",
+    router: foobarRouter.id,
     mtu: 1500,
 });
 ```
@@ -140,7 +172,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -371,7 +403,7 @@ be set if type is PARTNER.
 <a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -524,7 +556,7 @@ be set if type is PARTNER.
 <a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -677,7 +709,7 @@ be set if type is PARTNER.
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -830,7 +862,7 @@ be set if type is PARTNER.
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -1299,7 +1331,7 @@ Get an existing InterconnectAttachment resource's state with the given name, ID,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_interconnect_infos</span><span class="p">:</span> <span class="nx">Optional[Sequence[InterconnectAttachmentPrivateInterconnectInfoArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> InterconnectAttachment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_interconnect_infos</span><span class="p">:</span> <span class="nx">Optional[Sequence[InterconnectAttachmentPrivateInterconnectInfoArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> InterconnectAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1526,7 +1558,7 @@ be set if type is PARTNER.
 <a href="#state_mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -1764,7 +1796,7 @@ be set if type is PARTNER.
 <a href="#state_mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -2002,7 +2034,7 @@ be set if type is PARTNER.
 <a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -2240,7 +2272,7 @@ be set if type is PARTNER.
 <a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.

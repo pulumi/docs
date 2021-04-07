@@ -268,7 +268,7 @@ const primary = new gcp.container.Cluster("primary", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[ClusterConfidentialNodesArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[ClusterConfidentialNodesArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_l4_ilb_subsetting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -525,6 +525,18 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enableautopilot_csharp">
+<a href="#enableautopilot_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
+Note that when this option is enabled, certain features of Standard GKE are not available.
+See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+for available features.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablebinaryauthorization_csharp">
 <a href="#enablebinaryauthorization_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binary<wbr>Authorization</a>
 </span>
@@ -553,6 +565,16 @@ If enabled, all container images will be validated by Google Binary Authorizatio
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablel4ilbsubsetting_csharp">
+<a href="#enablel4ilbsubsetting_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>L4Ilb<wbr>Subsetting</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}})
+Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelegacyabac_csharp">
@@ -832,6 +854,15 @@ Structure is documented below.
 clusters with private nodes. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privateipv6googleaccess_csharp">
+<a href="#privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -1041,6 +1072,18 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enableautopilot_go">
+<a href="#enableautopilot_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
+Note that when this option is enabled, certain features of Standard GKE are not available.
+See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+for available features.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablebinaryauthorization_go">
 <a href="#enablebinaryauthorization_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binary<wbr>Authorization</a>
 </span>
@@ -1069,6 +1112,16 @@ If enabled, all container images will be validated by Google Binary Authorizatio
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablel4ilbsubsetting_go">
+<a href="#enablel4ilbsubsetting_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>L4Ilb<wbr>Subsetting</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}})
+Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelegacyabac_go">
@@ -1348,6 +1401,15 @@ Structure is documented below.
 clusters with private nodes. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privateipv6googleaccess_go">
+<a href="#privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -1557,6 +1619,18 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enableautopilot_nodejs">
+<a href="#enableautopilot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
+Note that when this option is enabled, certain features of Standard GKE are not available.
+See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+for available features.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablebinaryauthorization_nodejs">
 <a href="#enablebinaryauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binary<wbr>Authorization</a>
 </span>
@@ -1585,6 +1659,16 @@ If enabled, all container images will be validated by Google Binary Authorizatio
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablel4ilbsubsetting_nodejs">
+<a href="#enablel4ilbsubsetting_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>L4Ilb<wbr>Subsetting</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}})
+Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelegacyabac_nodejs">
@@ -1864,6 +1948,15 @@ Structure is documented below.
 clusters with private nodes. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privateipv6googleaccess_nodejs">
+<a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -2073,6 +2166,18 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enable_autopilot_python">
+<a href="#enable_autopilot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
+Note that when this option is enabled, certain features of Standard GKE are not available.
+See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+for available features.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_binary_authorization_python">
 <a href="#enable_binary_authorization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>binary_<wbr>authorization</a>
 </span>
@@ -2101,6 +2206,16 @@ If enabled, all container images will be validated by Google Binary Authorizatio
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_l4_ilb_subsetting_python">
+<a href="#enable_l4_ilb_subsetting_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>l4_<wbr>ilb_<wbr>subsetting</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}})
+Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_legacy_abac_python">
@@ -2378,6 +2493,15 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_ipv6_google_access_python">
+<a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
@@ -2855,7 +2979,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[ClusterConfidentialNodesArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[ClusterConfidentialNodesArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_l4_ilb_subsetting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3083,6 +3207,18 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enableautopilot_csharp">
+<a href="#state_enableautopilot_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
+Note that when this option is enabled, certain features of Standard GKE are not available.
+See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+for available features.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enablebinaryauthorization_csharp">
 <a href="#state_enablebinaryauthorization_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binary<wbr>Authorization</a>
 </span>
@@ -3111,6 +3247,16 @@ If enabled, all container images will be validated by Google Binary Authorizatio
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enablel4ilbsubsetting_csharp">
+<a href="#state_enablel4ilbsubsetting_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>L4Ilb<wbr>Subsetting</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}})
+Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelegacyabac_csharp">
@@ -3437,6 +3583,15 @@ Structure is documented below.
 clusters with private nodes. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_privateipv6googleaccess_csharp">
+<a href="#state_privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -3678,6 +3833,18 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enableautopilot_go">
+<a href="#state_enableautopilot_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
+Note that when this option is enabled, certain features of Standard GKE are not available.
+See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+for available features.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enablebinaryauthorization_go">
 <a href="#state_enablebinaryauthorization_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binary<wbr>Authorization</a>
 </span>
@@ -3706,6 +3873,16 @@ If enabled, all container images will be validated by Google Binary Authorizatio
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enablel4ilbsubsetting_go">
+<a href="#state_enablel4ilbsubsetting_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>L4Ilb<wbr>Subsetting</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}})
+Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelegacyabac_go">
@@ -4032,6 +4209,15 @@ Structure is documented below.
 clusters with private nodes. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_privateipv6googleaccess_go">
+<a href="#state_privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -4273,6 +4459,18 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enableautopilot_nodejs">
+<a href="#state_enableautopilot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
+Note that when this option is enabled, certain features of Standard GKE are not available.
+See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+for available features.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enablebinaryauthorization_nodejs">
 <a href="#state_enablebinaryauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binary<wbr>Authorization</a>
 </span>
@@ -4301,6 +4499,16 @@ If enabled, all container images will be validated by Google Binary Authorizatio
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enablel4ilbsubsetting_nodejs">
+<a href="#state_enablel4ilbsubsetting_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>L4Ilb<wbr>Subsetting</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}})
+Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelegacyabac_nodejs">
@@ -4627,6 +4835,15 @@ Structure is documented below.
 clusters with private nodes. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_privateipv6googleaccess_nodejs">
+<a href="#state_privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -4868,6 +5085,18 @@ for more information.
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enable_autopilot_python">
+<a href="#state_enable_autopilot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
+Note that when this option is enabled, certain features of Standard GKE are not available.
+See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+for available features.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enable_binary_authorization_python">
 <a href="#state_enable_binary_authorization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>binary_<wbr>authorization</a>
 </span>
@@ -4896,6 +5125,16 @@ If enabled, all container images will be validated by Google Binary Authorizatio
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_l4_ilb_subsetting_python">
+<a href="#state_enable_l4_ilb_subsetting_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>l4_<wbr>ilb_<wbr>subsetting</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}})
+Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_legacy_abac_python">
@@ -5220,6 +5459,15 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_private_ipv6_google_access_python">
+<a href="#state_private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">

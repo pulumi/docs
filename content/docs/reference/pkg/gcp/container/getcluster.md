@@ -421,6 +421,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enableautopilot_csharp">
+<a href="#enableautopilot_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enablebinaryauthorization_csharp">
 <a href="#enablebinaryauthorization_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binary<wbr>Authorization</a>
 </span>
@@ -439,6 +447,14 @@ The following output properties are available:
             title="">
         <span id="enablekubernetesalpha_csharp">
 <a href="#enablekubernetesalpha_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kubernetes<wbr>Alpha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enablel4ilbsubsetting_csharp">
+<a href="#enablel4ilbsubsetting_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>L4Ilb<wbr>Subsetting</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -670,6 +686,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privateipv6googleaccess_csharp">
+<a href="#privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="releasechannels_csharp">
 <a href="#releasechannels_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Channels</a>
 </span>
@@ -858,6 +882,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enableautopilot_go">
+<a href="#enableautopilot_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enablebinaryauthorization_go">
 <a href="#enablebinaryauthorization_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binary<wbr>Authorization</a>
 </span>
@@ -876,6 +908,14 @@ The following output properties are available:
             title="">
         <span id="enablekubernetesalpha_go">
 <a href="#enablekubernetesalpha_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kubernetes<wbr>Alpha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enablel4ilbsubsetting_go">
+<a href="#enablel4ilbsubsetting_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>L4Ilb<wbr>Subsetting</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1107,6 +1147,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privateipv6googleaccess_go">
+<a href="#privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="releasechannels_go">
 <a href="#releasechannels_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Channels</a>
 </span>
@@ -1295,6 +1343,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enableautopilot_nodejs">
+<a href="#enableautopilot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enablebinaryauthorization_nodejs">
 <a href="#enablebinaryauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binary<wbr>Authorization</a>
 </span>
@@ -1313,6 +1369,14 @@ The following output properties are available:
             title="">
         <span id="enablekubernetesalpha_nodejs">
 <a href="#enablekubernetesalpha_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kubernetes<wbr>Alpha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enablel4ilbsubsetting_nodejs">
+<a href="#enablel4ilbsubsetting_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>L4Ilb<wbr>Subsetting</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -1544,6 +1608,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privateipv6googleaccess_nodejs">
+<a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="releasechannels_nodejs">
 <a href="#releasechannels_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Channels</a>
 </span>
@@ -1732,6 +1804,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enable_autopilot_python">
+<a href="#enable_autopilot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>autopilot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enable_binary_authorization_python">
 <a href="#enable_binary_authorization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>binary_<wbr>authorization</a>
 </span>
@@ -1750,6 +1830,14 @@ The following output properties are available:
             title="">
         <span id="enable_kubernetes_alpha_python">
 <a href="#enable_kubernetes_alpha_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kubernetes_<wbr>alpha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enable_l4_ilb_subsetting_python">
+<a href="#enable_l4_ilb_subsetting_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>l4_<wbr>ilb_<wbr>subsetting</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1978,6 +2066,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusterprivateclusterconfig">Sequence[Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="private_ipv6_google_access_python">
+<a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">

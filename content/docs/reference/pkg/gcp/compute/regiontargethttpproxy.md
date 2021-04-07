@@ -52,6 +52,7 @@ class MyStack : Stack
             Region = "us-central1",
             Protocol = "HTTP",
             TimeoutSec = 10,
+            LoadBalancingScheme = "INTERNAL_MANAGED",
             HealthChecks = 
             {
                 defaultRegionHealthCheck.Id,
@@ -128,9 +129,10 @@ func main() {
 			return err
 		}
 		defaultRegionBackendService, err := compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
-			Region:     pulumi.String("us-central1"),
-			Protocol:   pulumi.String("HTTP"),
-			TimeoutSec: pulumi.Int(10),
+			Region:              pulumi.String("us-central1"),
+			Protocol:            pulumi.String("HTTP"),
+			TimeoutSec:          pulumi.Int(10),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
 			HealthChecks: pulumi.String(pulumi.String{
 				defaultRegionHealthCheck.ID(),
 			}),
@@ -198,6 +200,7 @@ default_region_backend_service = gcp.compute.RegionBackendService("defaultRegion
     region="us-central1",
     protocol="HTTP",
     timeout_sec=10,
+    load_balancing_scheme="INTERNAL_MANAGED",
     health_checks=[default_region_health_check.id])
 default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
     region="us-central1",
@@ -240,6 +243,7 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
     region: "us-central1",
     protocol: "HTTP",
     timeoutSec: 10,
+    loadBalancingScheme: "INTERNAL_MANAGED",
     healthChecks: [defaultRegionHealthCheck.id],
 });
 const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", {

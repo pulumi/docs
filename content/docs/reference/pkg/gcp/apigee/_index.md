@@ -14,6 +14,7 @@ Explore the resources and functions of the gcp.apigee module.
     <li><a href="envgroup" title="EnvGroup"><span class="symbol resource"></span>EnvGroup</a></li>
     <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="instanceattachment" title="InstanceAttachment"><span class="symbol resource"></span>InstanceAttachment</a></li>
     <li><a href="organization" title="Organization"><span class="symbol resource"></span>Organization</a></li>
 </ul>
 
@@ -26,6 +27,6 @@ Explore the resources and functions of the gcp.apigee module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.18.0</dd>
+	<dd>4.19.0</dd>
 </dl>
 
