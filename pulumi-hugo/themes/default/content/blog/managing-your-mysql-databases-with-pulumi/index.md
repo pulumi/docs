@@ -72,7 +72,7 @@ const user = new mysql.User('jdoe', {
 
 new mysql.Grant('jdoe', {
   user: user.user,
-  host: user.host.apply(h => h.toString()),
+  host: user.host,
   database: database.name,
   privileges: ['SELECT', 'UPDATE'],
 });
@@ -89,7 +89,7 @@ $ pulumi up
 In this scenario, the following configuration is required:
 
 ```bash
-$ pulumi config set mysqlUsername rooUser
+$ pulumi config set mysqlUsername rootUser
 $ pulumi config set --secret mysqlPassword rootPassword
 ```
 
@@ -102,10 +102,11 @@ this user `SELECT` and `UPDATE` access to it:
 ```javascript
 import * as mysql from '@pulumi/mysql';
 import * as aws from '@pulumi/aws';
+import * as pulumi from '@pulumi/pulumi';
 
 const config = new pulumi.Config();
-const mysqlUser = config.require(mysqlUser);
-const mysqlPassword = config.requireSecret(mysqlPassword);
+const mysqlUser = config.require('mysqlUser');
+const mysqlPassword = config.requireSecret('mysqlPassword');
 
 const rds = new aws.rds.Instance('sample', {
   engine: 'mysql',
@@ -124,7 +125,7 @@ const rds = new aws.rds.Instance('sample', {
 const mysqlProvider = new mysql.Provider('mysql', {
   endpoint: rds.endpoint,
   username: rds.username,
-  password: rds.password.apply(p => p.toString()),
+  password: rds.password,
 });
 
 const database = new mysql.Database('sample', {
@@ -143,7 +144,7 @@ const user = new mysql.User('jdoe', {
 
 new mysql.Grant('jdoe', {
   user: user.user,
-  host: user.host.apply(h => h.toString()),
+  host: user.host,
   database: database.name,
   privileges: ["SELECT", "UPDATE"],
 }, {
