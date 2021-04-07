@@ -55,7 +55,7 @@ In this example, we will create a database in the previously configured MySQL se
 
 ```javascript
 import * as mysql from '@pulumi/mysql';
-import * as pulumi from ‘@pulumi/pulumi’;
+import * as pulumi from '@pulumi/pulumi';
 
 const config = new pulumi.Config();
 const jdoePassword = config.requireSecret(‘jdoePassword’);
