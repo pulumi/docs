@@ -2395,6 +2395,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfig_csharp">
+<a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Inputs.<wbr>Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fargateprofile_csharp">
 <a href="#fargateprofile_csharp" style="color: inherit; text-decoration: inherit;">Fargate<wbr>Profile</a>
 </span>
@@ -2548,6 +2556,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Config<wbr>Map</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionconfig_go">
+<a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2707,6 +2723,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfig_nodejs">
+<a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">awstypesinputeks<wbr>Cluster<wbr>Encryption<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fargateprofile_nodejs">
 <a href="#fargateprofile_nodejs" style="color: inherit; text-decoration: inherit;">fargate<wbr>Profile</a>
 </span>
@@ -2860,6 +2884,14 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Config<wbr>Map</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryption_config_python">
+<a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

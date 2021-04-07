@@ -30,6 +30,6 @@ Pulumi Amazon Web Services (AWS) EKS Components.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.22.0</dd>
+	<dd>0.23.0</dd>
 </dl>
 
