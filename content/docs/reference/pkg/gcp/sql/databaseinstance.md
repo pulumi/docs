@@ -4577,7 +4577,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}True if Query Insights feature is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringlength_csharp">
 <a href="#querystringlength_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
@@ -4585,7 +4586,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordapplicationtags_csharp">
 <a href="#recordapplicationtags_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Application<wbr>Tags</a>
@@ -4593,7 +4595,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordclientaddress_csharp">
 <a href="#recordclientaddress_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Client<wbr>Address</a>
@@ -4601,7 +4604,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}True if Query Insights will record client address when enabled.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4613,7 +4617,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}True if Query Insights feature is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringlength_go">
 <a href="#querystringlength_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
@@ -4621,7 +4626,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordapplicationtags_go">
 <a href="#recordapplicationtags_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Application<wbr>Tags</a>
@@ -4629,7 +4635,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordclientaddress_go">
 <a href="#recordclientaddress_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Client<wbr>Address</a>
@@ -4637,7 +4644,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}True if Query Insights will record client address when enabled.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4649,7 +4657,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}True if Query Insights feature is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringlength_nodejs">
 <a href="#querystringlength_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Length</a>
@@ -4657,7 +4666,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordapplicationtags_nodejs">
 <a href="#recordapplicationtags_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Application<wbr>Tags</a>
@@ -4665,7 +4675,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordclientaddress_nodejs">
 <a href="#recordclientaddress_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Client<wbr>Address</a>
@@ -4673,7 +4684,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}True if Query Insights will record client address when enabled.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4685,7 +4697,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}True if Query Insights feature is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_string_length_python">
 <a href="#query_string_length_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>length</a>
@@ -4693,7 +4706,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="record_application_tags_python">
 <a href="#record_application_tags_python" style="color: inherit; text-decoration: inherit;">record_<wbr>application_<wbr>tags</a>
@@ -4701,7 +4715,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="record_client_address_python">
 <a href="#record_client_address_python" style="color: inherit; text-decoration: inherit;">record_<wbr>client_<wbr>address</a>
@@ -4709,7 +4724,8 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}True if Query Insights will record client address when enabled.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration</h4>

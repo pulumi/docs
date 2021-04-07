@@ -284,7 +284,7 @@ The SourceRepresentationInstance resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_csharp">
@@ -346,7 +346,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_go">
@@ -408,7 +408,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
@@ -470,7 +470,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_python">
@@ -710,7 +710,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_csharp">
@@ -772,7 +772,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_go">
@@ -834,7 +834,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_nodejs">
@@ -896,7 +896,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_python">

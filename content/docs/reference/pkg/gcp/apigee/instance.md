@@ -236,7 +236,6 @@ Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Default value is `SLASH_16`.
 Possible values are `SLASH_16` and `SLASH_20`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -309,7 +308,6 @@ Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Default value is `SLASH_16`.
 Possible values are `SLASH_16` and `SLASH_20`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -382,7 +380,6 @@ Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Default value is `SLASH_16`.
 Possible values are `SLASH_16` and `SLASH_20`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -455,7 +452,6 @@ Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Default value is `SLASH_16`.
 Possible values are `SLASH_16` and `SLASH_20`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -787,7 +783,6 @@ in the format `organizations/{{org_name}}`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Default value is `SLASH_16`.
 Possible values are `SLASH_16` and `SLASH_20`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +873,6 @@ in the format `organizations/{{org_name}}`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Default value is `SLASH_16`.
 Possible values are `SLASH_16` and `SLASH_20`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,7 +963,6 @@ in the format `organizations/{{org_name}}`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Default value is `SLASH_16`.
 Possible values are `SLASH_16` and `SLASH_20`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1060,7 +1053,6 @@ in the format `organizations/{{org_name}}`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Default value is `SLASH_16`.
 Possible values are `SLASH_16` and `SLASH_20`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

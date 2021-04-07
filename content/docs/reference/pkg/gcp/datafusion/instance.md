@@ -133,6 +133,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var @default = Output.Create(Gcp.AppEngine.GetDefaultServiceAccount.InvokeAsync());
         var extendedInstance = new Gcp.DataFusion.Instance("extendedInstance", new Gcp.DataFusion.InstanceArgs
         {
             Description = "My Data Fusion instance",
@@ -150,7 +151,8 @@ class MyStack : Stack
                 Network = "default",
                 IpAllocation = "10.89.48.0/22",
             },
-            Version = "6.1.1",
+            Version = "6.3.0",
+            DataprocServiceAccount = @default.Apply(@default => @default.Email),
         }, new CustomResourceOptions
         {
             Provider = google_beta,
@@ -170,13 +172,18 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine"
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datafusion"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datafusion.NewInstance(ctx, "extendedInstance", &datafusion.InstanceArgs{
+		_default, err := appengine.GetDefaultServiceAccount(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = datafusion.NewInstance(ctx, "extendedInstance", &datafusion.InstanceArgs{
 			Description:                 pulumi.String("My Data Fusion instance"),
 			Region:                      pulumi.String("us-central1"),
 			Type:                        pulumi.String("BASIC"),
@@ -190,7 +197,8 @@ func main() {
 				Network:      pulumi.String("default"),
 				IpAllocation: pulumi.String("10.89.48.0/22"),
 			},
-			Version: pulumi.String("6.1.1"),
+			Version:                pulumi.String("6.3.0"),
+			DataprocServiceAccount: pulumi.String(_default.Email),
 		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
@@ -210,6 +218,7 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
+default = gcp.appengine.get_default_service_account()
 extended_instance = gcp.datafusion.Instance("extendedInstance",
     description="My Data Fusion instance",
     region="us-central1",
@@ -224,7 +233,8 @@ extended_instance = gcp.datafusion.Instance("extendedInstance",
         network="default",
         ip_allocation="10.89.48.0/22",
     ),
-    version="6.1.1",
+    version="6.3.0",
+    dataproc_service_account=default.email,
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
@@ -239,6 +249,7 @@ extended_instance = gcp.datafusion.Instance("extendedInstance",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
+const default = gcp.appengine.getDefaultServiceAccount({});
 const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
     description: "My Data Fusion instance",
     region: "us-central1",
@@ -253,7 +264,8 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
         network: "default",
         ipAllocation: "10.89.48.0/22",
     },
-    version: "6.1.1",
+    version: "6.3.0",
+    dataprocServiceAccount: _default.then(_default => _default.email),
 }, {
     provider: google_beta,
 });
@@ -280,7 +292,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_config</span><span class="p">:</span> <span class="nx">Optional[InstanceNetworkConfigArgs]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">private_instance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataproc_service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_config</span><span class="p">:</span> <span class="nx">Optional[InstanceNetworkConfigArgs]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">private_instance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -441,6 +453,15 @@ pipelines at low cost.
 Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dataprocserviceaccount_csharp">
+<a href="#dataprocserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -566,6 +587,15 @@ available, such as support for streaming pipelines, higher number of concurrent 
 with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
 pipelines at low cost.
 Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataprocserviceaccount_go">
+<a href="#dataprocserviceaccount_go" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -695,6 +725,15 @@ pipelines at low cost.
 Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dataprocserviceaccount_nodejs">
+<a href="#dataprocserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">dataproc<wbr>Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -820,6 +859,15 @@ available, such as support for streaming pipelines, higher number of concurrent 
 with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
 pipelines at low cost.
 Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataproc_service_account_python">
+<a href="#dataproc_service_account_python" style="color: inherit; text-decoration: inherit;">dataproc_<wbr>service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1219,7 +1267,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_config</span><span class="p">:</span> <span class="nx">Optional[InstanceNetworkConfigArgs]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">private_instance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dataproc_service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_config</span><span class="p">:</span> <span class="nx">Optional[InstanceNetworkConfigArgs]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">private_instance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1339,6 +1387,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dataprocserviceaccount_csharp">
+<a href="#state_dataprocserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1524,6 +1581,15 @@ Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dataprocserviceaccount_go">
+<a href="#state_dataprocserviceaccount_go" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -1707,6 +1773,15 @@ Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dataprocserviceaccount_nodejs">
+<a href="#state_dataprocserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">dataproc<wbr>Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1888,6 +1963,15 @@ Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dataproc_service_account_python">
+<a href="#state_dataproc_service_account_python" style="color: inherit; text-decoration: inherit;">dataproc_<wbr>service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">

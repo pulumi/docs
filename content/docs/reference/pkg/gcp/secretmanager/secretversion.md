@@ -316,6 +316,16 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secret Manager secret resource
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretdata_csharp">
+<a href="#secretdata_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -325,16 +335,6 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The current state of the SecretVersion.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="secretdata_csharp">
-<a href="#secretdata_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
-**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -348,6 +348,16 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secret Manager secret resource
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretdata_go">
+<a href="#secretdata_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -357,16 +367,6 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The current state of the SecretVersion.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="secretdata_go">
-<a href="#secretdata_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
-**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -380,6 +380,16 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secret Manager secret resource
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretdata_nodejs">
+<a href="#secretdata_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -389,16 +399,6 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The current state of the SecretVersion.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="secretdata_nodejs">
-<a href="#secretdata_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
-**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -412,6 +412,16 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secret Manager secret resource
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_data_python">
+<a href="#secret_data_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -421,16 +431,6 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The current state of the SecretVersion.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="secret_data_python">
-<a href="#secret_data_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
-**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
