@@ -22,7 +22,8 @@ pulumi-audio {
         }
 
         .audio-button {
-            @apply btn btn-orange inline-block;
+            @apply btn btn-orange inline-block rounded border-orange-600;
+            box-shadow: 0 0 15px, 0 0 2px, 0 0 1em $orange600, 0 0 0.5em $orange600, 0 0 0.1em $orange600;
         }
     }
 }

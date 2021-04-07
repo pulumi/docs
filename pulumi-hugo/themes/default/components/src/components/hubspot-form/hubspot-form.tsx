@@ -1,5 +1,5 @@
 import { Component, Element, h, Prop, State, } from '@stencil/core';
-import { parseCookie, parseUTMCookieString } from "../../util/util";
+import { parseCookie, parseUTMCookieString, getQueryVariable } from "../../util/util";
 
 interface UTMData {
     campaign: string;
@@ -114,6 +114,9 @@ export class HubspotForm {
             if (utmMediumInput) {
                 utmMediumInput.value = utmData.medium;
             }
+
+            // Set the internal ad id.
+            this.setInternalAdId();
         }
 
         // When the form is submitted, notify Segment.
@@ -144,6 +147,17 @@ export class HubspotForm {
             };
 
             analytics.track("form-submission", submissionData);
+        }
+    }
+
+    // Get the Internal Ad ID query param and update the corresponding form field.
+    private setInternalAdId() {
+        const internalAdId = getQueryVariable("iaid");
+        if (internalAdId) {
+            const internalAdIdInput: HTMLInputElement = this.el.querySelector(`input[name="last_internal_ad_conversion"]`);
+            if (internalAdIdInput) {
+                internalAdIdInput.value = internalAdId;
+            }
         }
     }
 
