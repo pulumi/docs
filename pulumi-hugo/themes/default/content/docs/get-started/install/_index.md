@@ -227,7 +227,7 @@ or visit https://pulumi.com/docs/reference/install/ for manual instructions and 
 
 If you are upgrading to Pulumi 3.0, please see our [migration guide]({{< relref "/docs/get-started/install/migrating-3.0.md" >}}).
 
-## Installing Previous Versions
+## Installing Betas and Previous Versions
 
 You can find the list of versions on the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
 

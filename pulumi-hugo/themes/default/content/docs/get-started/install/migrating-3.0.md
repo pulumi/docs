@@ -6,7 +6,7 @@ no_on_this_page: true
 
 ## Upgrading to Pulumi 3.0
 
-Pulumi 3.0 is currently in beta. If you'd like to try the beta and provide feedback, it's simple to upgrade. First, [install the 3.0 CLI]({{< relref "/docs/get-started/install" >}}). Then, update each of your Pulumi programs to utilize the new SDK.
+Pulumi 3.0 is currently in beta. If you'd like to try the beta and provide feedback, it's simple to upgrade. First, [install the 3.0 CLI]({{< relref "/docs/get-started/install#installing-betas-and-previous-versions" >}}). Then, update each of your Pulumi programs to utilize the new SDK.
 
 ## CLI behavior changes in Pulumi 3.0
 
@@ -33,7 +33,7 @@ Previously, when using the `--stack` option on CLI commands, Pulumi would incons
 ### Update Dependencies
 
 ```bash
-npm install @pulumi/pulumi@^3.0.0
+npm install @pulumi/pulumi@^3.0.0-beta
 ```
 
 {{% /choosable %}}
@@ -45,8 +45,8 @@ npm install @pulumi/pulumi@^3.0.0
 Modify your `requirements.txt` file to update the Pulumi SDK and related providers as below:
 
 ```
-pulumi>=3.0.0,<4.0.0
-pulumi-aws>=4.0.0,<5.0.0
+pulumi>=3.0.0b,<4.0.0
+pulumi-aws>=4.0.0b,<5.0.0
 ```
 
 Then run `pip install`:
@@ -64,8 +64,8 @@ In `go.mod`, you can depend on the Pulumi SDK and related providers as below:
 
 ```
 require (
-    github.com/pulumi/pulumi/sdk/v3 v3.0.0
-    github.com/pulumi/pulumi-aws/sdk/v4/go/aws v3.0.0
+    github.com/pulumi/pulumi/sdk/v3 v3.0.0-beta.1
+    github.com/pulumi/pulumi-aws/sdk/v4 v4.0.0-beta.1
 )
 ```
 
@@ -106,7 +106,7 @@ When using ApplyT, remember to cast the result to the Output type
 Update your package reference to the latest version of the SDK:
 
 ```csharp
-<PackageReference Include="Pulumi" Version="3.*" />
+<PackageReference Include="Pulumi" Version="3.0.*-*" />
 ```
 
 {{% /choosable %}}
