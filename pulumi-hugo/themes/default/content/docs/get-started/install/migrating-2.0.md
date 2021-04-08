@@ -4,8 +4,6 @@ meta_desc: This page provides instructions for migrating to Pulumi 2.0
 no_on_this_page: true
 ---
 
-## Migrating to 2.0
-
 Upgrading to 2.0 is simple. First, you will [install the 2.0 CLI]({{< relref "/docs/get-started/install" >}}). Then, update each of your Pulumi programs to utilize the new SDK. If you're using JavaScript or TypeScript, you'll also need to ensure you're using invokes asynchronously. We provide detailed instructions on each of these steps below.
 
 ## Update CLI Scripts

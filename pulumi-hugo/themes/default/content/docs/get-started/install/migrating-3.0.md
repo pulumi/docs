@@ -4,8 +4,6 @@ meta_desc: This page provides instructions for upgrading to Pulumi 3.0
 no_on_this_page: true
 ---
 
-## Upgrading to Pulumi 3.0
-
 Pulumi 3.0 is currently in beta. If you'd like to try the beta and provide feedback, it's simple to upgrade. First, [install the 3.0 CLI]({{< relref "/docs/get-started/install#installing-betas-and-previous-versions" >}}). Then, update each of your Pulumi programs to utilize the new SDK.
 
 ## CLI behavior changes in Pulumi 3.0
@@ -53,6 +51,29 @@ Then run `pip install`:
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Dictionary snake_case/camelCase Key Translation Fixes in Provider Python SDKs
+
+Providers are being updated to address `dict` key translation issues. Prior versions of provider Python SDKs would unintentionally translate keys of user-defined `dict` inputs (e.g. AWS `tags`) from snake_case to camelCase (and vice versa for outputs) if the key happened to exist in the provider's internal translation tables. Additionally, some provider SDKs did not consistently translate keys of nested data structures.
+
+The 3.0-based provider Python SDKs have addressed these issues:
+
+ - Dictionary keys in user-defined `dict`s are no longer modified.
+
+ - Dictionary keys in nested outputs are now consistently snake_case. If accessing camelCase keys from such output classes, move to accessing the values via the class's snake_case property getters. A warning will be logged when accessing values from output classes using camelCase keys.
+
+```python
+from pulumi import export
+from pulumi_gcp import compute
+
+instance = compute.Instance("instance", ...)
+
+# before
+export("ip", instance.network_interfaces[0]["accessConfigs"][0]["natIp"])
+
+# after
+export("ip", instance.network_interfaces[0].access_configs[0].nat_ip)
 ```
 
 {{% /choosable %}}
