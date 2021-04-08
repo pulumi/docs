@@ -766,6 +766,8 @@ github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210407070317-b9f99eff5f09 
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210407070317-b9f99eff5f09/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210407224813-f288a4e0dc1d h1:j7LLXLmlDwo34a1TmIyd2goJapShYEQ+Nd4KOM37+ak=
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210407224813-f288a4e0dc1d/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
+github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210408153557-7088a708b73d h1:MMgdJMwuBz6BuvGSgTBFakBV0GoZS+dJQmpP1sqMgBA=
+github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210408153557-7088a708b73d/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
 github.com/quasilyte/go-consistent v0.0.0-20190521200055-c6f3937de18c h1:JoUA0uz9U0FVFq5p4LjEq4C0VgQ0El320s3Ms0V4eww=
 github.com/quasilyte/go-consistent v0.0.0-20190521200055-c6f3937de18c/go.mod h1:5STLWrekHfjyYwxBRVRXNOSewLJ3PWfDJd1VyTS21fI=
 github.com/quasilyte/go-ruleguard v0.1.2-0.20200318202121-b00d7a75d3d8/go.mod h1:CGFX09Ci3pq9QZdj86B+VGIdNj4VyCo2iPOGS9esB/k=
