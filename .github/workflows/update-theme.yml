@@ -1,4 +1,4 @@
-name: Update pulumi-hugo
+name: "Scheduled jobs: Update pulumi-hugo"
 on:
   schedule:
     - cron:  '*/60 * * * *'
