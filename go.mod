@@ -4,12 +4,11 @@ go 1.16
 
 require (
 	github.com/Djarvur/go-err113 v0.1.0 // indirect
-	github.com/cbroglie/mustache v1.2.0 // indirect
+	github.com/cbroglie/mustache v1.2.0
 	github.com/chavacava/garif v0.0.0-20210405164556-e8a0a408d6af // indirect
 	github.com/gobuffalo/envy v1.9.0 // indirect
 	github.com/gobuffalo/packd v1.0.0 // indirect
-	github.com/gobuffalo/packr v1.30.1 // indirect
-	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/gobuffalo/packr v1.30.1
 	github.com/golangci/golangci-lint v1.39.0 // indirect
 	github.com/google/go-cmp v0.5.5 // indirect
 	github.com/gostaticanalysis/analysisutil v0.7.1 // indirect
@@ -21,9 +20,7 @@ require (
 	github.com/mgechev/revive v1.0.6 // indirect
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
 	github.com/pelletier/go-toml v1.9.0 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
-	github.com/pulumi/pulumi-hugo/themes/current v0.0.0-20210401204950-a55b707cca76
-	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210408153557-7088a708b73d // indirect
+	github.com/pkg/errors v0.9.1
 	github.com/quasilyte/go-ruleguard v0.3.3 // indirect
 	github.com/quasilyte/regex/syntax v0.0.0-20200805063351-8f842688393c // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
@@ -38,5 +35,4 @@ require (
 	golang.org/x/text v0.3.6 // indirect
 	gopkg.in/ini.v1 v1.62.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
-	sourcegraph.com/sqs/pbtypes v1.0.0 // indirect
 )

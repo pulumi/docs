@@ -18,9 +18,9 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/pulumi/pulumi/pkg/v2/codegen/dotnet"
-	go_gen "github.com/pulumi/pulumi/pkg/v2/codegen/go"
-	"github.com/pulumi/pulumi/pkg/v2/codegen/nodejs"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/dotnet"
+	go_gen "github.com/pulumi/pulumi/pkg/v3/codegen/go"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/nodejs"
 	"io/ioutil"
 	"os"
 	"path"
@@ -28,10 +28,10 @@ import (
 	"github.com/golang/glog"
 	"github.com/pkg/errors"
 
-	docsgen "github.com/pulumi/pulumi/pkg/v2/codegen/docs"
-	pschema "github.com/pulumi/pulumi/pkg/v2/codegen/schema"
-	"github.com/pulumi/pulumi/sdk/v2/go/common/tools"
-	"github.com/pulumi/pulumi/sdk/v2/go/common/util/contract"
+	docsgen "github.com/pulumi/pulumi/pkg/v3/codegen/docs"
+	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/tools"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 )
 
 func main() {
