@@ -33,6 +33,7 @@ REPOS=(
     "fastly"
     "f5bigip"
     "gcp"
+    "gcp-native"
     "github"
     "gitlab"
     "hcloud"
