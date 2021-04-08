@@ -107,3 +107,19 @@ Then reload your shell:
 ```shell
 exec $SHELL -l
 ```
+  
+### Fish
+
+The `pulumi gen-completion fish` command self-generates its own CLI script. You can save the output to a file or use it in the current session:
+
+```shell
+pulumi gen-completion fish | source
+```
+
+To load the completions for each session, you need to save the completion to a file:
+
+```bash
+pulumi gen-completion fish > ~/.config/fish/completions/yourprogram.fish
+```
+
+Finally, after saving the `pulumi` fish completion script, you need to reopen your terminal for the scripts to take effect.
