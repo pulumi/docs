@@ -23,7 +23,7 @@ require (
 	github.com/pelletier/go-toml v1.9.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pulumi/pulumi-hugo/themes/current v0.0.0-20210401204950-a55b707cca76
-	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210408223338-4fc8e1121f7d // indirect
+	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210409102228-8b0e4c5741cb // indirect
 	github.com/quasilyte/go-ruleguard v0.3.3 // indirect
 	github.com/quasilyte/regex/syntax v0.0.0-20200805063351-8f842688393c // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
