@@ -779,9 +779,12 @@ github.com/quasilyte/go-ruleguard v0.3.1-0.20210203134552-1b5a410e1cc8/go.mod h1
 github.com/quasilyte/go-ruleguard v0.3.1/go.mod h1:s41wdpioTcgelE3dlTUgK57UaUxjihg/DBGUccoN5IU=
 github.com/quasilyte/go-ruleguard v0.3.3 h1:iE1BdA8Osf1CaxzKyjNsuZizIUJEPyL5R7YXplOiSpQ=
 github.com/quasilyte/go-ruleguard v0.3.3/go.mod h1:iOxxbmpryLVJwbJPHAa/0DsWXlBNCV3xY6rSVsDnDxY=
+github.com/quasilyte/go-ruleguard v0.3.4 h1:F6l5p6+7WBcTKS7foNQ4wqA39zjn2+RbdbyzGxIq1B0=
+github.com/quasilyte/go-ruleguard v0.3.4/go.mod h1:57FZgMnoo6jqxkYKmVj5Fc8vOt0rVzoE/UNAmFFIPqA=
 github.com/quasilyte/go-ruleguard/dsl v0.3.0/go.mod h1:KeCP03KrjuSO0H1kTuZQCWlQPulDV6YMIXmpQss17rU=
 github.com/quasilyte/go-ruleguard/dsl v0.3.1 h1:CHGOKP2LDz35P49TjW4Bx4BCfFI6ZZU/8zcneECD0q4=
 github.com/quasilyte/go-ruleguard/dsl v0.3.1/go.mod h1:KeCP03KrjuSO0H1kTuZQCWlQPulDV6YMIXmpQss17rU=
+github.com/quasilyte/go-ruleguard/dsl v0.3.2/go.mod h1:KeCP03KrjuSO0H1kTuZQCWlQPulDV6YMIXmpQss17rU=
 github.com/quasilyte/go-ruleguard/rules v0.0.0-20201231183845-9e62ed36efe1/go.mod h1:7JTjp89EGyU1d6XfBiXihJNG37wB2VRkd125Q1u7Plc=
 github.com/quasilyte/go-ruleguard/rules v0.0.0-20210203162857-b223e0831f88/go.mod h1:4cgAphtvu7Ftv7vOT2ZOYhC6CvBxZixcasr8qIOTA50=
 github.com/quasilyte/go-ruleguard/rules v0.0.0-20210221215616-dfcc94e3dffd h1:VBFuut4Lgw4o/pYHQZ0uM8KT1GDCtGZMMCBIPcrtjgk=
@@ -907,6 +910,8 @@ github.com/tenntenn/text/transform v0.0.0-20200319021203-7eef512accb3/go.mod h1:
 github.com/tetafro/godot v0.4.2/go.mod h1:/7NLHhv08H1+8DNj0MElpAACw1ajsCuf3TKNQxA5S+0=
 github.com/tetafro/godot v1.4.4 h1:VAtLEoAMmopIzHVWVBrztjVWDeYm1OD/DKqhqXR4828=
 github.com/tetafro/godot v1.4.4/go.mod h1:FVDd4JuKliW3UgjswZfJfHq4vAx0bD/Jd5brJjGeaz4=
+github.com/tetafro/godot v1.4.5 h1:VGxN2ACIRxhlD71tVf0spBr3Ieo9cemUWQP6ad7ul/A=
+github.com/tetafro/godot v1.4.5/go.mod h1:FVDd4JuKliW3UgjswZfJfHq4vAx0bD/Jd5brJjGeaz4=
 github.com/timakin/bodyclose v0.0.0-20190930140734-f7f2e9bca95e/go.mod h1:Qimiffbc6q9tBWlVV6x0P9sat/ao1xEkREYPPj9hphk=
 github.com/timakin/bodyclose v0.0.0-20200424151742-cb6215831a94 h1:ig99OeTyDwQWhPe2iw9lwfQVF1KB3Q4fpP3X7/2VBG8=
 github.com/timakin/bodyclose v0.0.0-20200424151742-cb6215831a94/go.mod h1:Qimiffbc6q9tBWlVV6x0P9sat/ao1xEkREYPPj9hphk=

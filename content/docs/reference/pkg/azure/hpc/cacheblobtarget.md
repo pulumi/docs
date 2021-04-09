@@ -524,7 +524,7 @@ The CacheBlobTarget resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the access policy applied to this target.
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -582,7 +582,7 @@ The CacheBlobTarget resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the access policy applied to this target.
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -640,7 +640,7 @@ The CacheBlobTarget resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the access policy applied to this target.
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -698,7 +698,7 @@ The CacheBlobTarget resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the access policy applied to this target.
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -898,7 +898,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the access policy applied to this target.
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachename_csharp">
@@ -956,7 +956,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the access policy applied to this target.
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachename_go">
@@ -1014,7 +1014,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the access policy applied to this target.
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachename_nodejs">
@@ -1072,7 +1072,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the access policy applied to this target.
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cache_name_python">
