@@ -45,8 +45,11 @@ hero:
 
 # Webinar pages support multiple session via the 'multiple' property.
 multiple:
-    - datetime: 2021-03-25T11:00:00+02:00
-      hubspot_form_id: 776a238e-e34c-4ac9-9af8-4d069fd303b3
+    - datetime: 2021-04-22T11:00:00+02:00
+      hubspot_form_id: e8be10d6-e362-43ee-879d-21f6c50edc1e
+
+    - datetime: 2021-05-04T11:00:00-07:00
+      hubspot_form_id: fc016af8-a997-456a-98ff-8d265b1ce68d
 
 # Content for the left hand side section of the page.
 main:
@@ -67,7 +70,8 @@ main:
         You do not need to register to join the session and can click the on one of the below links below to join the session when it starts
         or fill out the form to receive a reminder when the session is about to start.
 
-        - [March 25th, 20201](https://www.bigmarker.com/pulumi/Ask-the-Expert-Europe-bf66b52ecfc624bf77f9adc5)
+        - [April 22nd, 20201](https://www.bigmarker.com/pulumi/Ask-the-Expert)
+        - [May 4th, 2021](https://www.bigmarker.com/pulumi/Ask-the-Expert-NA-c3effec053b3a13ca2ea6772)
 
     # The webinar presenters
     presenters:

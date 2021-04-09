@@ -80,21 +80,6 @@
                     </div>
                 </div>
             </section>
-            <section id="sessions" class="mt-16">
-                <div class="flex flex-col lg:flex-row">
-                    <div class="w-full lg:w-1/2 p-4">
-                        <div data-title="Workshops" class="neon-callout-box-orange text-center">
-                            <p class="coming-soon-sign">Coming Soon</p>
-                        </div>
-                    </div>
-
-                    <div class="w-full lg:w-1/2 p-4">
-                        <div data-title="Binge Content" class="neon-callout-box-blue text-center">
-                            <p class="coming-soon-sign">Coming Soon</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section id="register" class="mb-0 py-16 text-white px-4 lg:px-0">
                 <div class="container mx-auto w-full lg:w-1/2 bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
                     {{ with .Params.register_form }}
@@ -105,6 +90,42 @@
                             </div>
                         </div>
                     {{ end }}
+                </div>
+            </section>
+            <section id="sessions" class="mt-16">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="w-full lg:w-1/2 p-4">
+                        <div data-title="Workshops" class="neon-callout-box-orange text-center">
+                            <ul class="list-none text-left">
+                                {{ range $item := .Params.workshops }}
+                                    <li class="mb-16">
+                                        <a class="section-title-green-link" href="{{ $item.url }}">{{ $item.title }}</a>
+                                        <pulumi-datetime class="plot-cast-title text-base mt-4" date="{{ $item.datetime }}"></pulumi-datetime>
+                                        <p>{{ $item.description }}</p>
+                                        <div class="my-8">
+                                            <a href="{{ $item.url }}" class="btn btn-lg btn-orange-translucent">Register Now</a>
+                                        </div>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 p-4">
+                        <div data-title="Binge Content" class="neon-callout-box-blue text-center">
+                            <ul class="list-none text-left">
+                                {{ range $item := .Params.binge }}
+                                    <li class="mb-16">
+                                        <a class="section-title-orange-link" href="{{ $item.url }}">{{ $item.title }}</a>
+                                        <p>{{ $item.description }}</p>
+                                        <div class="my-8">
+                                            <a href="{{ $item.url }}" class="btn btn-lg btn-orange-translucent">Watch Now</a>
+                                        </div>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

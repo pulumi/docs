@@ -152,6 +152,22 @@ $orange900: theme("colors.orange.900");
     @include neon-sign($green400, $green700, $green900, 1.75rem, "section-title-green", false, false);
 }
 
+.section-title-green-link {
+    @include neon-sign($green400, $green700, $green900, 1.75rem, "section-title-green", false, false);
+
+    &:hover {
+        @apply underline text-green-400;
+    }
+}
+
+.section-title-orange-link {
+    @include neon-sign($orange400, $orange700, $orange900, 1.75rem, "section-title-orange", false, false);
+
+    &:hover {
+        @apply underline text-orange-400;
+    }
+}
+
 .plot-cast-title {
     @include neon-sign($blue400, $blue700, $blue900, 1.25rem, "plot-cast-name", false, false);
 }
