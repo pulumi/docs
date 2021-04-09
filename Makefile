@@ -27,6 +27,10 @@ ensure_tools:
 serve:
 	./scripts/serve.sh
 
+.PHONY: serve-static
+serve-static:
+	yarn run http-server public
+
 .PHONY: generate
 generate:
 	@echo -e "\033[0;32mGENERATE:\033[0m"
