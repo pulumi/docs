@@ -39,6 +39,7 @@ The `Makefile` exposes a number of helpers:
 * `make ensure` resolves and installs dependencies, including the Hugo module containing website layouts and content
 * `make lint` checks all Markdown files for correctness
 * `make build` generates the website and writes it to `./public`
+* `make serve-static` runs a local HTTP server that serves the contents of `./public`
 * `make test` runs a script that checks for broken links
 * `make generate` builds the TypeScript, Python, and CLI documentation, and renders tutorials sourced from https://github.com/pulumi/examples.
 
