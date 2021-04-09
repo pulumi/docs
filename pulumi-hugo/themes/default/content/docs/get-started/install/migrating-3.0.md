@@ -59,9 +59,9 @@ Providers are being updated to address `dict` key translation issues. Prior vers
 
 The 3.0-based provider Python SDKs have addressed these issues:
 
- - Dictionary keys in user-defined `dict`s are no longer modified.
+* Dictionary keys in user-defined `dict`s are no longer modified.
 
- - Dictionary keys in nested outputs are now consistently snake_case. If accessing camelCase keys from such output classes, move to accessing the values via the class's snake_case property getters. A warning will be logged when accessing values from output classes using camelCase keys.
+* Dictionary keys in nested outputs are now consistently snake_case. If accessing camelCase keys from such output classes, move to accessing the values via the class's snake_case property getters. A warning will be logged when accessing values from output classes using camelCase keys.
 
 ```python
 from pulumi import export
