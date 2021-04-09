@@ -16,6 +16,7 @@
     "http-server": "^0.12.1",
     "js-yaml": "^3.13.1",
     "markdownlint": "^0.17.2",
+    "parse-diff": "^0.8.1",
     "typedoc": "^0.15.3"
   }
 }
