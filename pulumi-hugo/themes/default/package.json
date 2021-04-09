@@ -14,7 +14,7 @@
     "watch-js": "yarn run tsc --watch --preserveWatchOutput --outFile ${JS_BUNDLE}",
     "watch-components": "yarn --cwd components run start",
 
-    "build-css": "yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --output ${CSS_BUNDLE}",
+    "build-css": "yarn run --silent node-sass assets/sass/styles.scss | yarn run postcss --config assets/config --output ${CSS_BUNDLE}",
     "build-js": "yarn run tsc --outFile ${JS_BUNDLE}",
     "build-components": "yarn --cwd components run build"
   },
