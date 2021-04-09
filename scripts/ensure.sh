@@ -15,5 +15,4 @@ yarn install
 yarn --cwd infrastructure install
 
 # Fetch Hugo modules.
-hugo mod get -u github.com/pulumi/pulumi-hugo/themes/default
 hugo mod vendor
