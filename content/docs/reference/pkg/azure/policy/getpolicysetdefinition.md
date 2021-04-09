@@ -934,7 +934,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The list of names of the policy definition groups that this policy definition reference belongs to.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="referenceid_csharp">
 <a href="#referenceid_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
@@ -982,7 +983,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The list of names of the policy definition groups that this policy definition reference belongs to.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="referenceid_go">
 <a href="#referenceid_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
@@ -1030,7 +1032,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The list of names of the policy definition groups that this policy definition reference belongs to.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="referenceid_nodejs">
 <a href="#referenceid_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Id</a>
@@ -1078,7 +1081,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The list of names of the policy definition groups that this policy definition reference belongs to.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reference_id_python">
 <a href="#reference_id_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>id</a>

@@ -29,6 +29,6 @@ Explore the resources and functions of the azure.cdn module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.54.0</dd>
+	<dd>3.55.0</dd>
 </dl>
 

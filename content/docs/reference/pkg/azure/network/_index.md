@@ -19,6 +19,7 @@ Explore the resources and functions of the azure.network module.
     <li><a href="expressroutecircuitauthorization" title="ExpressRouteCircuitAuthorization"><span class="symbol resource"></span>ExpressRouteCircuitAuthorization</a></li>
     <li><a href="expressroutecircuitpeering" title="ExpressRouteCircuitPeering"><span class="symbol resource"></span>ExpressRouteCircuitPeering</a></li>
     <li><a href="expressroutegateway" title="ExpressRouteGateway"><span class="symbol resource"></span>ExpressRouteGateway</a></li>
+    <li><a href="expressrouteport" title="ExpressRoutePort"><span class="symbol resource"></span>ExpressRoutePort</a></li>
     <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
     <li><a href="firewallapplicationrulecollection" title="FirewallApplicationRuleCollection"><span class="symbol resource"></span>FirewallApplicationRuleCollection</a></li>
     <li><a href="firewallnatrulecollection" title="FirewallNatRuleCollection"><span class="symbol resource"></span>FirewallNatRuleCollection</a></li>
@@ -110,6 +111,6 @@ Explore the resources and functions of the azure.network module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.54.0</dd>
+	<dd>3.55.0</dd>
 </dl>
 
