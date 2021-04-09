@@ -168,7 +168,7 @@ pip install -r requirements.txt
 Prior versions of Pulumi provider Python SDKs would unintentionally translate keys of user-defined `dict` inputs (e.g. AWS `tags`) from snake_case to camelCase (and vice versa for outputs) if the key happened to exist in the provider's internal translation tables. Additionally, some provider SDKs did not consistently translate keys of nested data structures. All 3.0-based Pulumi provider Python SDKs have addressed these issues:
 
 * Dictionary keys in user-defined `dict`s are no longer modified.
-* Dictionary keys in nested outputs are now consistently snake_case. If you're accessing camelCase keys from such output classes, you need to update your cod eto access the values via the class's snake_case property getters. A warning will be logged when accessing values from output classes using camelCase keys.
+* Dictionary keys in nested outputs are now consistently snake_case. If you're accessing camelCase keys from such output classes, you need to update your code to access the values via the class's snake_case property getters. A warning will be logged when accessing values from output classes using camelCase keys.
 
 ```python
 from pulumi import export
