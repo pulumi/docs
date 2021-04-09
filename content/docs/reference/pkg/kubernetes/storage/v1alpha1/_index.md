@@ -11,6 +11,8 @@ Explore the resources and functions of the kubernetes.storage/v1alpha1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="csistoragecapacity" title="CSIStorageCapacity"><span class="symbol resource"></span>CSIStorageCapacity</a></li>
+    <li><a href="csistoragecapacitylist" title="CSIStorageCapacityList"><span class="symbol resource"></span>CSIStorageCapacityList</a></li>
     <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
     <li><a href="volumeattachmentlist" title="VolumeAttachmentList"><span class="symbol resource"></span>VolumeAttachmentList</a></li>
 </ul>
@@ -22,6 +24,6 @@ Explore the resources and functions of the kubernetes.storage/v1alpha1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.8.4</dd>
+	<dd>2.9.0</dd>
 </dl>
 
