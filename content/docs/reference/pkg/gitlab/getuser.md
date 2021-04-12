@@ -427,6 +427,14 @@ The following output properties are available:
     <dd>{{% md %}}The name of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="note_csharp">
+<a href="#note_csharp" style="color: inherit; text-decoration: inherit;">Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
 </span>
@@ -672,6 +680,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the user.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="note_go">
+<a href="#note_go" style="color: inherit; text-decoration: inherit;">Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -919,6 +935,14 @@ The following output properties are available:
     <dd>{{% md %}}The name of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="note_nodejs">
+<a href="#note_nodejs" style="color: inherit; text-decoration: inherit;">note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
@@ -1164,6 +1188,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the user.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="note_python">
+<a href="#note_python" style="color: inherit; text-decoration: inherit;">note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
