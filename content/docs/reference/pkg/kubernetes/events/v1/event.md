@@ -172,15 +172,7 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="metadata_csharp">
-<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -221,6 +213,14 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#eventsource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Event<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="note_csharp">
 <a href="#note_csharp" style="color: inherit; text-decoration: inherit;">Note</a>
@@ -296,15 +296,7 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="metadata_go">
-<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -345,6 +337,14 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#eventsource">Event<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="note_go">
 <a href="#note_go" style="color: inherit; text-decoration: inherit;">Note</a>
@@ -420,15 +420,7 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="metadata_nodejs">
-<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -469,6 +461,14 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#eventsource">core.v1.<wbr>Event<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="note_nodejs">
 <a href="#note_nodejs" style="color: inherit; text-decoration: inherit;">note</a>
@@ -544,15 +544,7 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="metadata_python">
-<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -593,6 +585,14 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#eventsource">Event<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="note_python">
 <a href="#note_python" style="color: inherit; text-decoration: inherit;">note</a>

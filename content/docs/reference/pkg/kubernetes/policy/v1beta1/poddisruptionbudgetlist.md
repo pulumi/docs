@@ -308,6 +308,216 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="condition">Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lasttransitiontime_csharp">
+<a href="#lasttransitiontime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Transition<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}message is a human readable message indicating details about the transition. This may be an empty string.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reason_csharp">
+<a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}reason contains a programmatic identifier indicating the reason for the condition's last transition. Producers of specific condition types may define expected values and meanings for this field, and whether the values are considered a guaranteed API. The value should be a CamelCase string. This field may not be empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}status of the condition, one of True, False, Unknown.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}type of condition in CamelCase or in foo.example.com/CamelCase.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="observedgeneration_csharp">
+<a href="#observedgeneration_csharp" style="color: inherit; text-decoration: inherit;">Observed<wbr>Generation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}observedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lasttransitiontime_go">
+<a href="#lasttransitiontime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Transition<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}message is a human readable message indicating details about the transition. This may be an empty string.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reason_go">
+<a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}reason contains a programmatic identifier indicating the reason for the condition's last transition. Producers of specific condition types may define expected values and meanings for this field, and whether the values are considered a guaranteed API. The value should be a CamelCase string. This field may not be empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}status of the condition, one of True, False, Unknown.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}type of condition in CamelCase or in foo.example.com/CamelCase.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="observedgeneration_go">
+<a href="#observedgeneration_go" style="color: inherit; text-decoration: inherit;">Observed<wbr>Generation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}observedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lasttransitiontime_nodejs">
+<a href="#lasttransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Transition<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}message is a human readable message indicating details about the transition. This may be an empty string.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reason_nodejs">
+<a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}reason contains a programmatic identifier indicating the reason for the condition's last transition. Producers of specific condition types may define expected values and meanings for this field, and whether the values are considered a guaranteed API. The value should be a CamelCase string. This field may not be empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}status of the condition, one of True, False, Unknown.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}type of condition in CamelCase or in foo.example.com/CamelCase.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="observedgeneration_nodejs">
+<a href="#observedgeneration_nodejs" style="color: inherit; text-decoration: inherit;">observed<wbr>Generation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}observedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="last_transition_time_python">
+<a href="#last_transition_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>transition_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}message is a human readable message indicating details about the transition. This may be an empty string.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reason_python">
+<a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}reason contains a programmatic identifier indicating the reason for the condition's last transition. Producers of specific condition types may define expected values and meanings for this field, and whether the values are considered a guaranteed API. The value should be a CamelCase string. This field may not be empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}status of the condition, one of True, False, Unknown.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}type of condition in CamelCase or in foo.example.com/CamelCase.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="observed_generation_python">
+<a href="#observed_generation_python" style="color: inherit; text-decoration: inherit;">observed_<wbr>generation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}observedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="labelselector">Label<wbr>Selector</h4>
 
 {{% choosable language csharp %}}
@@ -1813,7 +2023,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Label query over pods whose evictions are managed by the disruption budget.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Label query over pods whose evictions are managed by the disruption budget. A null selector selects no pods. An empty selector ({}) also selects no pods, which differs from standard behavior of selecting all pods. In policy/v1, an empty selector will select all pods in the namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1841,7 +2051,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Label query over pods whose evictions are managed by the disruption budget.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Label query over pods whose evictions are managed by the disruption budget. A null selector selects no pods. An empty selector ({}) also selects no pods, which differs from standard behavior of selecting all pods. In policy/v1, an empty selector will select all pods in the namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1869,7 +2079,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Label query over pods whose evictions are managed by the disruption budget.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Label query over pods whose evictions are managed by the disruption budget. A null selector selects no pods. An empty selector ({}) also selects no pods, which differs from standard behavior of selecting all pods. In policy/v1, an empty selector will select all pods in the namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1897,7 +2107,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Label query over pods whose evictions are managed by the disruption budget.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Label query over pods whose evictions are managed by the disruption budget. A null selector selects no pods. An empty selector ({}) also selects no pods, which differs from standard behavior of selecting all pods. In policy/v1, an empty selector will select all pods in the namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="poddisruptionbudgetstatus">Pod<wbr>Disruption<wbr>Budget<wbr>Status</h4>
@@ -1936,6 +2146,22 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}total number of pods counted by this disruption budget{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conditions_csharp">
+<a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#condition">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Condition<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller encountered an error and wasn't able to compute
+              the number of allowed disruptions. Therefore no disruptions are
+              allowed and the status of the condition will be False.
+- InsufficientPods: The number of pods are either at or below the number
+                    required by the PodDisruptionBudget. No disruptions are
+                    allowed and the status of the condition will be False.
+- SufficientPods: There are more pods than required by the PodDisruptionBudget.
+                  The condition will be True, and the number of allowed
+                  disruptions are provided by the disruptionsAllowed property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disruptedpods_csharp">
 <a href="#disruptedpods_csharp" style="color: inherit; text-decoration: inherit;">Disrupted<wbr>Pods</a>
@@ -1989,6 +2215,22 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}total number of pods counted by this disruption budget{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="conditions_go">
+<a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
+    </dt>
+    <dd>{{% md %}}Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller encountered an error and wasn't able to compute
+              the number of allowed disruptions. Therefore no disruptions are
+              allowed and the status of the condition will be False.
+- InsufficientPods: The number of pods are either at or below the number
+                    required by the PodDisruptionBudget. No disruptions are
+                    allowed and the status of the condition will be False.
+- SufficientPods: There are more pods than required by the PodDisruptionBudget.
+                  The condition will be True, and the number of allowed
+                  disruptions are provided by the disruptionsAllowed property.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disruptedpods_go">
 <a href="#disruptedpods_go" style="color: inherit; text-decoration: inherit;">Disrupted<wbr>Pods</a>
 </span>
@@ -2041,6 +2283,22 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}total number of pods counted by this disruption budget{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="conditions_nodejs">
+<a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#condition">meta.v1.<wbr>Condition[]</a></span>
+    </dt>
+    <dd>{{% md %}}Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller encountered an error and wasn't able to compute
+              the number of allowed disruptions. Therefore no disruptions are
+              allowed and the status of the condition will be False.
+- InsufficientPods: The number of pods are either at or below the number
+                    required by the PodDisruptionBudget. No disruptions are
+                    allowed and the status of the condition will be False.
+- SufficientPods: There are more pods than required by the PodDisruptionBudget.
+                  The condition will be True, and the number of allowed
+                  disruptions are provided by the disruptionsAllowed property.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disruptedpods_nodejs">
 <a href="#disruptedpods_nodejs" style="color: inherit; text-decoration: inherit;">disrupted<wbr>Pods</a>
 </span>
@@ -2092,6 +2350,22 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}total number of pods counted by this disruption budget{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conditions_python">
+<a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller encountered an error and wasn't able to compute
+              the number of allowed disruptions. Therefore no disruptions are
+              allowed and the status of the condition will be False.
+- InsufficientPods: The number of pods are either at or below the number
+                    required by the PodDisruptionBudget. No disruptions are
+                    allowed and the status of the condition will be False.
+- SufficientPods: There are more pods than required by the PodDisruptionBudget.
+                  The condition will be True, and the number of allowed
+                  disruptions are provided by the disruptionsAllowed property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disrupted_pods_python">
 <a href="#disrupted_pods_python" style="color: inherit; text-decoration: inherit;">disrupted_<wbr>pods</a>

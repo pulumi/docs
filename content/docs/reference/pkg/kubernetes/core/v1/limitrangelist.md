@@ -172,7 +172,7 @@ The LimitRangeList resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#limitrange">List&lt;Limit<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Items is a list of LimitRange objects. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Items is a list of LimitRange objects. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -192,7 +192,7 @@ The LimitRangeList resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#limitrange">[]Limit<wbr>Range<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Items is a list of LimitRange objects. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Items is a list of LimitRange objects. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -212,7 +212,7 @@ The LimitRangeList resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#limitrange">Limit<wbr>Range[]</a></span>
     </dt>
-    <dd>{{% md %}}Items is a list of LimitRange objects. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Items is a list of LimitRange objects. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -232,7 +232,7 @@ The LimitRangeList resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#limitrange">Limit<wbr>Range<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Items is a list of LimitRange objects. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Items is a list of LimitRange objects. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>

@@ -2184,7 +2184,7 @@ Unless the "IPv6DualStack" feature gate is enabled, this field is limited to one
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires Type to be{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires `type` to be "ExternalName".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externaltrafficpolicy_csharp">
 <a href="#externaltrafficpolicy_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Traffic<wbr>Policy</a>
@@ -2201,6 +2201,14 @@ Unless the "IPv6DualStack" feature gate is enabled, this field is limited to one
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}healthCheckNodePort specifies the healthcheck nodePort for the service. This only applies when type is set to LoadBalancer and externalTrafficPolicy is set to Local. If a value is specified, is in-range, and is not in use, it will be used.  If not specified, a value will be automatically allocated.  External systems (e.g. load-balancers) can use this port to determine if a given node holds endpoints for this service or not.  If this field is specified when creating a Service which does not need it, creation will fail. This field will be wiped when updating a Service to no longer need it (e.g. changing type).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internaltrafficpolicy_csharp">
+<a href="#internaltrafficpolicy_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Traffic<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}InternalTrafficPolicy specifies if the cluster internal traffic should be routed to all endpoints or node-local endpoints only. "Cluster" routes internal traffic to a Service to all endpoints. "Local" routes traffic to node-local endpoints only, traffic is dropped if no node-local endpoints are ready. The default value is "Cluster".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfamilies_csharp">
 <a href="#ipfamilies_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Families</a>
@@ -2227,6 +2235,14 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPFamilyPolicy represents the dual-stack-ness requested or required by this Service, and is gated by the "IPv6DualStack" feature gate.  If there is no value provided, then this field will be set to SingleStack. Services can be "SingleStack" (a single IP family), "PreferDualStack" (two IP families on dual-stack configured clusters or a single IP family on single-stack clusters), or "RequireDualStack" (two IP families on dual-stack configured clusters, otherwise fail). The ipFamilies and clusterIPs fields depend on the value of this field.  This field will be wiped when updating a service to type ExternalName.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerclass_csharp">
+<a href="#loadbalancerclass_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}loadBalancerClass is the class of the load balancer implementation this Service belongs to. If specified, the value of this field must be a label-style identifier, with an optional prefix, e.g. "internal-vip" or "example.com/internal-vip". Unprefixed names are reserved for end-users. This field can only be set when the Service type is 'LoadBalancer'. If not set, the default load balancer implementation is used, today this is typically done through the cloud provider integration, but should apply for any default implementation. If set, it is assumed that a load balancer implementation is watching for Services with a matching class. Any default load balancer implementation (e.g. cloud providers) should ignore Services that set this field. This field can only be set when creating or updating a Service to type 'LoadBalancer'. Once set, it can not be changed. This field will be wiped when a service is updated to a non 'LoadBalancer' type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerip_csharp">
 <a href="#loadbalancerip_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>IP</a>
@@ -2290,7 +2306,7 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value "*" may be used to mean "any topology". This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied. This field is alpha-level and is only honored by servers that enable the ServiceTopology feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value "*" may be used to mean "any topology". This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied. This field is alpha-level and is only honored by servers that enable the ServiceTopology feature. This field is deprecated and will be removed in a future version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2344,7 +2360,7 @@ Unless the "IPv6DualStack" feature gate is enabled, this field is limited to one
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires Type to be{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires `type` to be "ExternalName".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externaltrafficpolicy_go">
 <a href="#externaltrafficpolicy_go" style="color: inherit; text-decoration: inherit;">External<wbr>Traffic<wbr>Policy</a>
@@ -2361,6 +2377,14 @@ Unless the "IPv6DualStack" feature gate is enabled, this field is limited to one
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}healthCheckNodePort specifies the healthcheck nodePort for the service. This only applies when type is set to LoadBalancer and externalTrafficPolicy is set to Local. If a value is specified, is in-range, and is not in use, it will be used.  If not specified, a value will be automatically allocated.  External systems (e.g. load-balancers) can use this port to determine if a given node holds endpoints for this service or not.  If this field is specified when creating a Service which does not need it, creation will fail. This field will be wiped when updating a Service to no longer need it (e.g. changing type).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internaltrafficpolicy_go">
+<a href="#internaltrafficpolicy_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Traffic<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}InternalTrafficPolicy specifies if the cluster internal traffic should be routed to all endpoints or node-local endpoints only. "Cluster" routes internal traffic to a Service to all endpoints. "Local" routes traffic to node-local endpoints only, traffic is dropped if no node-local endpoints are ready. The default value is "Cluster".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfamilies_go">
 <a href="#ipfamilies_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Families</a>
@@ -2387,6 +2411,14 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPFamilyPolicy represents the dual-stack-ness requested or required by this Service, and is gated by the "IPv6DualStack" feature gate.  If there is no value provided, then this field will be set to SingleStack. Services can be "SingleStack" (a single IP family), "PreferDualStack" (two IP families on dual-stack configured clusters or a single IP family on single-stack clusters), or "RequireDualStack" (two IP families on dual-stack configured clusters, otherwise fail). The ipFamilies and clusterIPs fields depend on the value of this field.  This field will be wiped when updating a service to type ExternalName.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerclass_go">
+<a href="#loadbalancerclass_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}loadBalancerClass is the class of the load balancer implementation this Service belongs to. If specified, the value of this field must be a label-style identifier, with an optional prefix, e.g. "internal-vip" or "example.com/internal-vip". Unprefixed names are reserved for end-users. This field can only be set when the Service type is 'LoadBalancer'. If not set, the default load balancer implementation is used, today this is typically done through the cloud provider integration, but should apply for any default implementation. If set, it is assumed that a load balancer implementation is watching for Services with a matching class. Any default load balancer implementation (e.g. cloud providers) should ignore Services that set this field. This field can only be set when creating or updating a Service to type 'LoadBalancer'. Once set, it can not be changed. This field will be wiped when a service is updated to a non 'LoadBalancer' type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerip_go">
 <a href="#loadbalancerip_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>IP</a>
@@ -2450,7 +2482,7 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value "*" may be used to mean "any topology". This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied. This field is alpha-level and is only honored by servers that enable the ServiceTopology feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value "*" may be used to mean "any topology". This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied. This field is alpha-level and is only honored by servers that enable the ServiceTopology feature. This field is deprecated and will be removed in a future version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2504,7 +2536,7 @@ Unless the "IPv6DualStack" feature gate is enabled, this field is limited to one
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires Type to be{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires `type` to be "ExternalName".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externaltrafficpolicy_nodejs">
 <a href="#externaltrafficpolicy_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Traffic<wbr>Policy</a>
@@ -2521,6 +2553,14 @@ Unless the "IPv6DualStack" feature gate is enabled, this field is limited to one
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}healthCheckNodePort specifies the healthcheck nodePort for the service. This only applies when type is set to LoadBalancer and externalTrafficPolicy is set to Local. If a value is specified, is in-range, and is not in use, it will be used.  If not specified, a value will be automatically allocated.  External systems (e.g. load-balancers) can use this port to determine if a given node holds endpoints for this service or not.  If this field is specified when creating a Service which does not need it, creation will fail. This field will be wiped when updating a Service to no longer need it (e.g. changing type).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internaltrafficpolicy_nodejs">
+<a href="#internaltrafficpolicy_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Traffic<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}InternalTrafficPolicy specifies if the cluster internal traffic should be routed to all endpoints or node-local endpoints only. "Cluster" routes internal traffic to a Service to all endpoints. "Local" routes traffic to node-local endpoints only, traffic is dropped if no node-local endpoints are ready. The default value is "Cluster".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfamilies_nodejs">
 <a href="#ipfamilies_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Families</a>
@@ -2547,6 +2587,14 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPFamilyPolicy represents the dual-stack-ness requested or required by this Service, and is gated by the "IPv6DualStack" feature gate.  If there is no value provided, then this field will be set to SingleStack. Services can be "SingleStack" (a single IP family), "PreferDualStack" (two IP families on dual-stack configured clusters or a single IP family on single-stack clusters), or "RequireDualStack" (two IP families on dual-stack configured clusters, otherwise fail). The ipFamilies and clusterIPs fields depend on the value of this field.  This field will be wiped when updating a service to type ExternalName.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerclass_nodejs">
+<a href="#loadbalancerclass_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}loadBalancerClass is the class of the load balancer implementation this Service belongs to. If specified, the value of this field must be a label-style identifier, with an optional prefix, e.g. "internal-vip" or "example.com/internal-vip". Unprefixed names are reserved for end-users. This field can only be set when the Service type is 'LoadBalancer'. If not set, the default load balancer implementation is used, today this is typically done through the cloud provider integration, but should apply for any default implementation. If set, it is assumed that a load balancer implementation is watching for Services with a matching class. Any default load balancer implementation (e.g. cloud providers) should ignore Services that set this field. This field can only be set when creating or updating a Service to type 'LoadBalancer'. Once set, it can not be changed. This field will be wiped when a service is updated to a non 'LoadBalancer' type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerip_nodejs">
 <a href="#loadbalancerip_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>IP</a>
@@ -2610,7 +2658,7 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value "*" may be used to mean "any topology". This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied. This field is alpha-level and is only honored by servers that enable the ServiceTopology feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value "*" may be used to mean "any topology". This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied. This field is alpha-level and is only honored by servers that enable the ServiceTopology feature. This field is deprecated and will be removed in a future version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2664,7 +2712,7 @@ Unless the "IPv6DualStack" feature gate is enabled, this field is limited to one
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires Type to be{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires `type` to be "ExternalName".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_traffic_policy_python">
 <a href="#external_traffic_policy_python" style="color: inherit; text-decoration: inherit;">external_<wbr>traffic_<wbr>policy</a>
@@ -2681,6 +2729,14 @@ Unless the "IPv6DualStack" feature gate is enabled, this field is limited to one
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}healthCheckNodePort specifies the healthcheck nodePort for the service. This only applies when type is set to LoadBalancer and externalTrafficPolicy is set to Local. If a value is specified, is in-range, and is not in use, it will be used.  If not specified, a value will be automatically allocated.  External systems (e.g. load-balancers) can use this port to determine if a given node holds endpoints for this service or not.  If this field is specified when creating a Service which does not need it, creation will fail. This field will be wiped when updating a Service to no longer need it (e.g. changing type).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="internal_traffic_policy_python">
+<a href="#internal_traffic_policy_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>traffic_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}InternalTrafficPolicy specifies if the cluster internal traffic should be routed to all endpoints or node-local endpoints only. "Cluster" routes internal traffic to a Service to all endpoints. "Local" routes traffic to node-local endpoints only, traffic is dropped if no node-local endpoints are ready. The default value is "Cluster".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_families_python">
 <a href="#ip_families_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>families</a>
@@ -2707,6 +2763,14 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPFamilyPolicy represents the dual-stack-ness requested or required by this Service, and is gated by the "IPv6DualStack" feature gate.  If there is no value provided, then this field will be set to SingleStack. Services can be "SingleStack" (a single IP family), "PreferDualStack" (two IP families on dual-stack configured clusters or a single IP family on single-stack clusters), or "RequireDualStack" (two IP families on dual-stack configured clusters, otherwise fail). The ipFamilies and clusterIPs fields depend on the value of this field.  This field will be wiped when updating a service to type ExternalName.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="load_balancer_class_python">
+<a href="#load_balancer_class_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}loadBalancerClass is the class of the load balancer implementation this Service belongs to. If specified, the value of this field must be a label-style identifier, with an optional prefix, e.g. "internal-vip" or "example.com/internal-vip". Unprefixed names are reserved for end-users. This field can only be set when the Service type is 'LoadBalancer'. If not set, the default load balancer implementation is used, today this is typically done through the cloud provider integration, but should apply for any default implementation. If set, it is assumed that a load balancer implementation is watching for Services with a matching class. Any default load balancer implementation (e.g. cloud providers) should ignore Services that set this field. This field can only be set when creating or updating a Service to type 'LoadBalancer'. Once set, it can not be changed. This field will be wiped when a service is updated to a non 'LoadBalancer' type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancer_ip_python">
 <a href="#load_balancer_ip_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>ip</a>
@@ -2770,7 +2834,7 @@ This field may hold a maximum of two entries (dual-stack families, in either ord
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value "*" may be used to mean "any topology". This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied. This field is alpha-level and is only honored by servers that enable the ServiceTopology feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value "*" may be used to mean "any topology". This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied. This field is alpha-level and is only honored by servers that enable the ServiceTopology feature. This field is deprecated and will be removed in a future version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>

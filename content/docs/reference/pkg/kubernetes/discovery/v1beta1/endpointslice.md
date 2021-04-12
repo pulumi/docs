@@ -393,6 +393,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}conditions contains information about the current status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hints_csharp">
+<a href="#hints_csharp" style="color: inherit; text-decoration: inherit;">Hints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointhints">Endpoint<wbr>Hints<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}hints contains information associated with how an endpoint should be consumed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
 </span>
@@ -451,6 +459,14 @@ This field is deprecated and will be removed in future api versions.{{% /md %}}<
         <span class="property-type"><a href="#endpointconditions">Endpoint<wbr>Conditions</a></span>
     </dt>
     <dd>{{% md %}}conditions contains information about the current status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hints_go">
+<a href="#hints_go" style="color: inherit; text-decoration: inherit;">Hints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointhints">Endpoint<wbr>Hints</a></span>
+    </dt>
+    <dd>{{% md %}}hints contains information associated with how an endpoint should be consumed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -511,6 +527,14 @@ This field is deprecated and will be removed in future api versions.{{% /md %}}<
     </dt>
     <dd>{{% md %}}conditions contains information about the current status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hints_nodejs">
+<a href="#hints_nodejs" style="color: inherit; text-decoration: inherit;">hints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointhints">Endpoint<wbr>Hints</a></span>
+    </dt>
+    <dd>{{% md %}}hints contains information associated with how an endpoint should be consumed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
@@ -569,6 +593,14 @@ This field is deprecated and will be removed in future api versions.{{% /md %}}<
         <span class="property-type"><a href="#endpointconditions">Endpoint<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions contains information about the current status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hints_python">
+<a href="#hints_python" style="color: inherit; text-decoration: inherit;">hints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointhints">Endpoint<wbr>Hints<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}hints contains information associated with how an endpoint should be consumed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -724,6 +756,56 @@ This field is deprecated and will be removed in future api versions.{{% /md %}}<
     <dd>{{% md %}}terminating indicates that this endpoint is terminating. A nil value indicates an unknown state. Consumers should interpret this unknown state to mean that the endpoint is not terminating. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="endpointhints">Endpoint<wbr>Hints</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="forzones_csharp">
+<a href="#forzones_csharp" style="color: inherit; text-decoration: inherit;">For<wbr>Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#forzone">List&lt;For<wbr>Zone<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="forzones_go">
+<a href="#forzones_go" style="color: inherit; text-decoration: inherit;">For<wbr>Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#forzone">[]For<wbr>Zone</a></span>
+    </dt>
+    <dd>{{% md %}}forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="forzones_nodejs">
+<a href="#forzones_nodejs" style="color: inherit; text-decoration: inherit;">for<wbr>Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#forzone">For<wbr>Zone[]</a></span>
+    </dt>
+    <dd>{{% md %}}forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="for_zones_python">
+<a href="#for_zones_python" style="color: inherit; text-decoration: inherit;">for_<wbr>zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#forzone">For<wbr>Zone<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="endpointport">Endpoint<wbr>Port</h4>
 
 {{% choosable language csharp %}}
@@ -868,6 +950,56 @@ This field is deprecated and will be removed in future api versions.{{% /md %}}<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="forzone">For<wbr>Zone</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}name represents the name of the zone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}name represents the name of the zone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}name represents the name of the zone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}name represents the name of the zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>

@@ -1095,13 +1095,21 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="endport_csharp">
+<a href="#endport_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Alpha state and should be enabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int | string</span>
     </dt>
-    <dd>{{% md %}}The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1115,13 +1123,21 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="endport_go">
+<a href="#endport_go" style="color: inherit; text-decoration: inherit;">End<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Alpha state and should be enabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int | string</span>
     </dt>
-    <dd>{{% md %}}The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1135,13 +1151,21 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="endport_nodejs">
+<a href="#endport_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Alpha state and should be enabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number | string</span>
     </dt>
-    <dd>{{% md %}}The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1155,13 +1179,21 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="end_port_python">
+<a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Alpha state and should be enabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int | str</span>
     </dt>
-    <dd>{{% md %}}The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1207,7 +1239,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of rule types that the NetworkPolicy relates to. Valid options are "Ingress", "Egress", or "Ingress,Egress". If this field is not specified, it will default based on the existence of Ingress or Egress rules; policies that contain an Egress section are assumed to affect Egress, and all policies (whether or not they contain an Ingress section) are assumed to affect Ingress. If you want to write an egress-only policy, you must explicitly specify policyTypes [ "Egress" ]. Likewise, if you want to write a policy that specifies that no egress is allowed, you must specify a policyTypes value that include "Egress" (since such a policy would not include an Egress section and would otherwise default to just [ "Ingress" ]). This field is beta-level in 1.8{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of rule types that the NetworkPolicy relates to. Valid options are ["Ingress"], ["Egress"], or ["Ingress", "Egress"]. If this field is not specified, it will default based on the existence of Ingress or Egress rules; policies that contain an Egress section are assumed to affect Egress, and all policies (whether or not they contain an Ingress section) are assumed to affect Ingress. If you want to write an egress-only policy, you must explicitly specify policyTypes [ "Egress" ]. Likewise, if you want to write a policy that specifies that no egress is allowed, you must specify a policyTypes value that include "Egress" (since such a policy would not include an Egress section and would otherwise default to just [ "Ingress" ]). This field is beta-level in 1.8{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1243,7 +1275,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of rule types that the NetworkPolicy relates to. Valid options are "Ingress", "Egress", or "Ingress,Egress". If this field is not specified, it will default based on the existence of Ingress or Egress rules; policies that contain an Egress section are assumed to affect Egress, and all policies (whether or not they contain an Ingress section) are assumed to affect Ingress. If you want to write an egress-only policy, you must explicitly specify policyTypes [ "Egress" ]. Likewise, if you want to write a policy that specifies that no egress is allowed, you must specify a policyTypes value that include "Egress" (since such a policy would not include an Egress section and would otherwise default to just [ "Ingress" ]). This field is beta-level in 1.8{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of rule types that the NetworkPolicy relates to. Valid options are ["Ingress"], ["Egress"], or ["Ingress", "Egress"]. If this field is not specified, it will default based on the existence of Ingress or Egress rules; policies that contain an Egress section are assumed to affect Egress, and all policies (whether or not they contain an Ingress section) are assumed to affect Ingress. If you want to write an egress-only policy, you must explicitly specify policyTypes [ "Egress" ]. Likewise, if you want to write a policy that specifies that no egress is allowed, you must specify a policyTypes value that include "Egress" (since such a policy would not include an Egress section and would otherwise default to just [ "Ingress" ]). This field is beta-level in 1.8{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1279,7 +1311,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of rule types that the NetworkPolicy relates to. Valid options are "Ingress", "Egress", or "Ingress,Egress". If this field is not specified, it will default based on the existence of Ingress or Egress rules; policies that contain an Egress section are assumed to affect Egress, and all policies (whether or not they contain an Ingress section) are assumed to affect Ingress. If you want to write an egress-only policy, you must explicitly specify policyTypes [ "Egress" ]. Likewise, if you want to write a policy that specifies that no egress is allowed, you must specify a policyTypes value that include "Egress" (since such a policy would not include an Egress section and would otherwise default to just [ "Ingress" ]). This field is beta-level in 1.8{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of rule types that the NetworkPolicy relates to. Valid options are ["Ingress"], ["Egress"], or ["Ingress", "Egress"]. If this field is not specified, it will default based on the existence of Ingress or Egress rules; policies that contain an Egress section are assumed to affect Egress, and all policies (whether or not they contain an Ingress section) are assumed to affect Ingress. If you want to write an egress-only policy, you must explicitly specify policyTypes [ "Egress" ]. Likewise, if you want to write a policy that specifies that no egress is allowed, you must specify a policyTypes value that include "Egress" (since such a policy would not include an Egress section and would otherwise default to just [ "Ingress" ]). This field is beta-level in 1.8{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1315,7 +1347,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of rule types that the NetworkPolicy relates to. Valid options are "Ingress", "Egress", or "Ingress,Egress". If this field is not specified, it will default based on the existence of Ingress or Egress rules; policies that contain an Egress section are assumed to affect Egress, and all policies (whether or not they contain an Ingress section) are assumed to affect Ingress. If you want to write an egress-only policy, you must explicitly specify policyTypes [ "Egress" ]. Likewise, if you want to write a policy that specifies that no egress is allowed, you must specify a policyTypes value that include "Egress" (since such a policy would not include an Egress section and would otherwise default to just [ "Ingress" ]). This field is beta-level in 1.8{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of rule types that the NetworkPolicy relates to. Valid options are ["Ingress"], ["Egress"], or ["Ingress", "Egress"]. If this field is not specified, it will default based on the existence of Ingress or Egress rules; policies that contain an Egress section are assumed to affect Egress, and all policies (whether or not they contain an Ingress section) are assumed to affect Ingress. If you want to write an egress-only policy, you must explicitly specify policyTypes [ "Egress" ]. Likewise, if you want to write a policy that specifies that no egress is allowed, you must specify a policyTypes value that include "Egress" (since such a policy would not include an Egress section and would otherwise default to just [ "Ingress" ]). This field is beta-level in 1.8{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="objectmeta">Object<wbr>Meta</h4>
