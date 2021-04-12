@@ -12,6 +12,8 @@ Explore the resources and functions of the spotinst.azure module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="elastigroup" title="Elastigroup"><span class="symbol resource"></span>Elastigroup</a></li>
+    <li><a href="ocean" title="Ocean"><span class="symbol resource"></span>Ocean</a></li>
+    <li><a href="oceanvirtualnodegroup" title="OceanVirtualNodeGroup"><span class="symbol resource"></span>OceanVirtualNodeGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,6 +25,6 @@ Explore the resources and functions of the spotinst.azure module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.19.1</dd>
+	<dd>2.20.0</dd>
 </dl>
 

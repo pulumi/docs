@@ -7684,7 +7684,8 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationecsbatch">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Batch configuration object:
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7768,7 +7769,8 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationecsbatch">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Batch configuration object:
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -7852,7 +7854,8 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationecsbatch">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Batch configuration object:
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -7936,7 +7939,8 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationecsbatch">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Batch configuration object:
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationecsautoscaleattribute">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute</h4>
@@ -8256,7 +8260,8 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Array of strings.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -8268,7 +8273,8 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Array of strings.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -8280,7 +8286,8 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Array of strings.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -8292,7 +8299,8 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Array of strings.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab</h4>
