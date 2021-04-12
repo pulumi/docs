@@ -42,30 +42,30 @@ class MyStack : Stack
         });
         var foo = new Pagerduty.Schedule("foo", new Pagerduty.ScheduleArgs
         {
+            TimeZone = "America/New_York",
             Layers = 
             {
                 new Pagerduty.Inputs.ScheduleLayerArgs
                 {
                     Name = "Night Shift",
-                    Restrictions = 
-                    {
-                        new Pagerduty.Inputs.ScheduleLayerRestrictionArgs
-                        {
-                            DurationSeconds = 32400,
-                            StartTimeOfDay = "08:00:00",
-                            Type = "daily_restriction",
-                        },
-                    },
-                    RotationTurnLengthSeconds = 86400,
-                    RotationVirtualStart = "2015-11-06T20:00:00-05:00",
                     Start = "2015-11-06T20:00:00-05:00",
+                    RotationVirtualStart = "2015-11-06T20:00:00-05:00",
+                    RotationTurnLengthSeconds = 86400,
                     Users = 
                     {
                         pagerduty_user.Foo.Id,
                     },
+                    Restrictions = 
+                    {
+                        new Pagerduty.Inputs.ScheduleLayerRestrictionArgs
+                        {
+                            Type = "daily_restriction",
+                            StartTimeOfDay = "08:00:00",
+                            DurationSeconds = 32400,
+                        },
+                    },
                 },
             },
-            TimeZone = "America/New_York",
         });
     }
 
@@ -93,19 +93,19 @@ example = pagerduty.User("example",
     email="125.greenholt.earline@graham.name",
     teams=[pagerduty_team["example"]["id"]])
 foo = pagerduty.Schedule("foo",
+    time_zone="America/New_York",
     layers=[pagerduty.ScheduleLayerArgs(
         name="Night Shift",
-        restrictions=[pagerduty.ScheduleLayerRestrictionArgs(
-            duration_seconds=32400,
-            start_time_of_day="08:00:00",
-            type="daily_restriction",
-        )],
-        rotation_turn_length_seconds=86400,
-        rotation_virtual_start="2015-11-06T20:00:00-05:00",
         start="2015-11-06T20:00:00-05:00",
+        rotation_virtual_start="2015-11-06T20:00:00-05:00",
+        rotation_turn_length_seconds=86400,
         users=[pagerduty_user["foo"]["id"]],
-    )],
-    time_zone="America/New_York")
+        restrictions=[pagerduty.ScheduleLayerRestrictionArgs(
+            type="daily_restriction",
+            start_time_of_day="08:00:00",
+            duration_seconds=32400,
+        )],
+    )])
 ```
 
 
@@ -121,22 +121,22 @@ import * as pagerduty from "@pulumi/pagerduty";
 
 const example = new pagerduty.User("example", {
     email: "125.greenholt.earline@graham.name",
-    teams: [pagerduty_team_example.id],
+    teams: [pagerduty_team.example.id],
 });
 const foo = new pagerduty.Schedule("foo", {
+    timeZone: "America/New_York",
     layers: [{
         name: "Night Shift",
-        restrictions: [{
-            durationSeconds: 32400,
-            startTimeOfDay: "08:00:00",
-            type: "daily_restriction",
-        }],
-        rotationTurnLengthSeconds: 86400,
-        rotationVirtualStart: "2015-11-06T20:00:00-05:00",
         start: "2015-11-06T20:00:00-05:00",
-        users: [pagerduty_user_foo.id],
+        rotationVirtualStart: "2015-11-06T20:00:00-05:00",
+        rotationTurnLengthSeconds: 86400,
+        users: [pagerduty_user.foo.id],
+        restrictions: [{
+            type: "daily_restriction",
+            startTimeOfDay: "08:00:00",
+            durationSeconds: 32400,
+        }],
     }],
-    timeZone: "America/New_York",
 });
 ```
 
@@ -1381,6 +1381,6 @@ Schedules can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 </dl>
 

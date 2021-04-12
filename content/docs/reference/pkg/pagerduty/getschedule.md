@@ -49,8 +49,8 @@ class MyStack : Stack
                     {
                         new Pagerduty.Inputs.EscalationPolicyRuleTargetArgs
                         {
-                            Id = test.Apply(test => test.Id),
                             Type = "schedule",
+                            Id = test.Apply(test => test.Id),
                         },
                     },
                 },
@@ -90,8 +90,8 @@ func main() {
 					EscalationDelayInMinutes: pulumi.Int(10),
 					Targets: pagerduty.EscalationPolicyRuleTargetArray{
 						&pagerduty.EscalationPolicyRuleTargetArgs{
-							Id:   pulumi.String(test.Id),
 							Type: pulumi.String("schedule"),
+							Id:   pulumi.String(test.Id),
 						},
 					},
 				},
@@ -121,8 +121,8 @@ foo = pagerduty.EscalationPolicy("foo",
     rules=[pagerduty.EscalationPolicyRuleArgs(
         escalation_delay_in_minutes=10,
         targets=[pagerduty.EscalationPolicyRuleTargetArgs(
-            id=test.id,
             type="schedule",
+            id=test.id,
         )],
     )])
 ```
@@ -138,16 +138,16 @@ foo = pagerduty.EscalationPolicy("foo",
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
 
-const test = pulumi.output(pagerduty.getSchedule({
+const test = pagerduty.getSchedule({
     name: "Daily Engineering Rotation",
-}, { async: true }));
+});
 const foo = new pagerduty.EscalationPolicy("foo", {
     numLoops: 2,
     rules: [{
         escalationDelayInMinutes: 10,
         targets: [{
-            id: test.id,
             type: "schedule",
+            id: test.then(test => test.id),
         }],
     }],
 });
@@ -359,6 +359,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 </dl>
 

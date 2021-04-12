@@ -21,11 +21,13 @@ A Pulumi package for creating and managing pagerduty cloud resources.
     <li><a href="extension" title="Extension"><span class="symbol resource"></span>Extension</a></li>
     <li><a href="maintenancewindow" title="MaintenanceWindow"><span class="symbol resource"></span>MaintenanceWindow</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="responseplay" title="ResponsePlay"><span class="symbol resource"></span>ResponsePlay</a></li>
     <li><a href="ruleset" title="Ruleset"><span class="symbol resource"></span>Ruleset</a></li>
     <li><a href="rulesetrule" title="RulesetRule"><span class="symbol resource"></span>RulesetRule</a></li>
     <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
     <li><a href="servicedependency" title="ServiceDependency"><span class="symbol resource"></span>ServiceDependency</a></li>
+    <li><a href="serviceeventrule" title="ServiceEventRule"><span class="symbol resource"></span>ServiceEventRule</a></li>
     <li><a href="serviceintegration" title="ServiceIntegration"><span class="symbol resource"></span>ServiceIntegration</a></li>
     <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
     <li><a href="teammembership" title="TeamMembership"><span class="symbol resource"></span>TeamMembership</a></li>
@@ -40,10 +42,12 @@ A Pulumi package for creating and managing pagerduty cloud resources.
     <li><a href="getescalationpolicy" title="GetEscalationPolicy"><span class="symbol function"></span>GetEscalationPolicy</a></li>
     <li><a href="getextensionschema" title="GetExtensionSchema"><span class="symbol function"></span>GetExtensionSchema</a></li>
     <li><a href="getpriority" title="GetPriority"><span class="symbol function"></span>GetPriority</a></li>
+    <li><a href="getruleset" title="GetRuleset"><span class="symbol function"></span>GetRuleset</a></li>
     <li><a href="getschedule" title="GetSchedule"><span class="symbol function"></span>GetSchedule</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="getteam" title="GetTeam"><span class="symbol function"></span>GetTeam</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="getusercontactmethod" title="GetUserContactMethod"><span class="symbol function"></span>GetUserContactMethod</a></li>
     <li><a href="getvendor" title="GetVendor"><span class="symbol function"></span>GetVendor</a></li>
 </ul>
 
@@ -54,8 +58,8 @@ A Pulumi package for creating and managing pagerduty cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.4.1</dd>
+	<dd>1.5.0</dd>
 </dl>
 

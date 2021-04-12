@@ -42,9 +42,9 @@ class MyStack : Stack
         });
         var fooTeamMembership = new Pagerduty.TeamMembership("fooTeamMembership", new Pagerduty.TeamMembershipArgs
         {
-            Role = "manager",
-            TeamId = fooTeam.Id,
             UserId = fooUser.Id,
+            TeamId = fooTeam.Id,
+            Role = "manager",
         });
     }
 
@@ -80,9 +80,9 @@ func main() {
 			return err
 		}
 		_, err = pagerduty.NewTeamMembership(ctx, "fooTeamMembership", &pagerduty.TeamMembershipArgs{
-			Role:   pulumi.String("manager"),
-			TeamId: fooTeam.ID(),
 			UserId: fooUser.ID(),
+			TeamId: fooTeam.ID(),
+			Role:   pulumi.String("manager"),
 		})
 		if err != nil {
 			return err
@@ -105,9 +105,9 @@ import pulumi_pagerduty as pagerduty
 foo_user = pagerduty.User("fooUser", email="foo@bar.com")
 foo_team = pagerduty.Team("fooTeam", description="foo")
 foo_team_membership = pagerduty.TeamMembership("fooTeamMembership",
-    role="manager",
+    user_id=foo_user.id,
     team_id=foo_team.id,
-    user_id=foo_user.id)
+    role="manager")
 ```
 
 
@@ -121,16 +121,12 @@ foo_team_membership = pagerduty.TeamMembership("fooTeamMembership",
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
 
-const fooUser = new pagerduty.User("foo", {
-    email: "foo@bar.com",
-});
-const fooTeam = new pagerduty.Team("foo", {
-    description: "foo",
-});
-const fooTeamMembership = new pagerduty.TeamMembership("foo", {
-    role: "manager",
-    teamId: fooTeam.id,
+const fooUser = new pagerduty.User("fooUser", {email: "foo@bar.com"});
+const fooTeam = new pagerduty.Team("fooTeam", {description: "foo"});
+const fooTeamMembership = new pagerduty.TeamMembership("fooTeamMembership", {
     userId: fooUser.id,
+    teamId: fooTeam.id,
+    role: "manager",
 });
 ```
 
@@ -321,7 +317,9 @@ The TeamMembership resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`.
+    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`. These roles match up to user roles in the following ways:
+* User role of `user` is a Team role of `manager`
+* User role of `limited_user` is a Team role of `responder`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -352,7 +350,9 @@ The TeamMembership resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`.
+    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`. These roles match up to user roles in the following ways:
+* User role of `user` is a Team role of `manager`
+* User role of `limited_user` is a Team role of `responder`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -383,7 +383,9 @@ The TeamMembership resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`.
+    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`. These roles match up to user roles in the following ways:
+* User role of `user` is a Team role of `manager`
+* User role of `limited_user` is a Team role of `responder`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -414,7 +416,9 @@ The TeamMembership resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`.
+    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`. These roles match up to user roles in the following ways:
+* User role of `user` is a Team role of `manager`
+* User role of `limited_user` is a Team role of `responder`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -605,7 +609,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`.
+    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`. These roles match up to user roles in the following ways:
+* User role of `user` is a Team role of `manager`
+* User role of `limited_user` is a Team role of `responder`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_csharp">
@@ -636,7 +642,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`.
+    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`. These roles match up to user roles in the following ways:
+* User role of `user` is a Team role of `manager`
+* User role of `limited_user` is a Team role of `responder`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_go">
@@ -667,7 +675,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`.
+    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`. These roles match up to user roles in the following ways:
+* User role of `user` is a Team role of `manager`
+* User role of `limited_user` is a Team role of `responder`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_nodejs">
@@ -698,7 +708,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`.
+    <dd>{{% md %}}The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`. These roles match up to user roles in the following ways:
+* User role of `user` is a Team role of `manager`
+* User role of `limited_user` is a Team role of `responder`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_team_id_python">
@@ -743,6 +755,6 @@ Team memberships can be imported using the `user_id` and `team_id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 </dl>
 

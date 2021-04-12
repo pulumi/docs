@@ -39,8 +39,8 @@ class MyStack : Stack
         }));
         var testService = new Pagerduty.Service("testService", new Pagerduty.ServiceArgs
         {
-            AcknowledgementTimeout = "600",
             AutoResolveTimeout = "14400",
+            AcknowledgementTimeout = "600",
             EscalationPolicy = testEscalationPolicy.Apply(testEscalationPolicy => testEscalationPolicy.Id),
         });
     }
@@ -71,8 +71,8 @@ func main() {
 			return err
 		}
 		_, err = pagerduty.NewService(ctx, "testService", &pagerduty.ServiceArgs{
-			AcknowledgementTimeout: pulumi.String("600"),
 			AutoResolveTimeout:     pulumi.String("14400"),
+			AcknowledgementTimeout: pulumi.String("600"),
 			EscalationPolicy:       pulumi.String(testEscalationPolicy.Id),
 		})
 		if err != nil {
@@ -95,8 +95,8 @@ import pulumi_pagerduty as pagerduty
 
 test_escalation_policy = pagerduty.get_escalation_policy(name="Engineering Escalation Policy")
 test_service = pagerduty.Service("testService",
-    acknowledgement_timeout="600",
     auto_resolve_timeout="14400",
+    acknowledgement_timeout="600",
     escalation_policy=test_escalation_policy.id)
 ```
 
@@ -111,13 +111,13 @@ test_service = pagerduty.Service("testService",
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
 
-const testEscalationPolicy = pulumi.output(pagerduty.getEscalationPolicy({
+const testEscalationPolicy = pagerduty.getEscalationPolicy({
     name: "Engineering Escalation Policy",
-}, { async: true }));
-const testService = new pagerduty.Service("test", {
-    acknowledgementTimeout: "600",
-    autoResolveTimeout: "14400",
-    escalationPolicy: testEscalationPolicy.id,
+});
+const testService = new pagerduty.Service("testService", {
+    autoResolveTimeout: 14400,
+    acknowledgementTimeout: 600,
+    escalationPolicy: testEscalationPolicy.then(testEscalationPolicy => testEscalationPolicy.id),
 });
 ```
 
@@ -327,6 +327,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 </dl>
 
