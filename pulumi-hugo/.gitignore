@@ -4,3 +4,4 @@ node_modules
 themes/*/resources
 public
 .idea/
+.DS_Store

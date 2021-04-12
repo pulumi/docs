@@ -1,22 +1,31 @@
 {{ define "hero" }}
-    <div>
-        <header class="header-hero-dark py-0 pt-16 px-4">
-            {{ with .Params.hero }}
-                <div class="container mx-auto text-white md:flex justify-around items-center">
-                    <div class="md:w-1/2">
-                        <h1 class="text-white">{{ .title }}</h1>
-                    </div>
-                    <div class="md:w-1/2 md:ml-8">
-                        <div class="text-center">
-                            <img class="inline-block w-56" src="{{ .image }}">
+    {{ if eq .Params.aws_dev_day true }}
+        <header class="aws-dev-day-header relative w-full py-32 px-16 overflow-hidden">
+            <div class="flex flex-col justify-center items-center">
+                <img src="/images/webinar/aws-dev-day/devdaywhite.png" alt="AWS Dev Day" />
+                <h1 class="text-white">{{ .Params.hero.title }}</h1>
+            </div>
+        </header>
+    {{ else }}
+        <div>
+            <header class="header-hero-dark py-0 pt-16 px-4">
+                {{ with .Params.hero }}
+                    <div class="container mx-auto text-white md:flex justify-around items-center">
+                        <div class="md:w-1/2">
+                            <h1 class="text-white">{{ .title }}</h1>
+                        </div>
+                        <div class="md:w-1/2 md:ml-8">
+                            <div class="text-center">
+                                <img class="inline-block w-56" src="{{ .image }}">
+                            </div>
                         </div>
                     </div>
-                </div>
-            {{ end }}
-        </header>
+                {{ end }}
+            </header>
 
-        <img class="w-full h-20" src="/images/waves.svg">
-    </div>
+            <img class="w-full h-20" src="/images/waves.svg">
+        </div>
+    {{ end }}
 {{ end }}
 
 {{ define "main" }}
