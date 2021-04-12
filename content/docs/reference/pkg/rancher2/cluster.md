@@ -1898,6 +1898,209 @@ const fooCluster = new rancher2.Cluster("fooCluster", {
 
 
 
+### Creating EKS cluster from Rancher v2, using `eks_config_v2` and launch template. For Rancher v2.5.6 or above.
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooCloudCredential = new Rancher2.CloudCredential("fooCloudCredential", new Rancher2.CloudCredentialArgs
+        {
+            Description = "foo test",
+            Amazonec2CredentialConfig = new Rancher2.Inputs.CloudCredentialAmazonec2CredentialConfigArgs
+            {
+                AccessKey = "<AWS_ACCESS_KEY>",
+                SecretKey = "<AWS_SECRET_KEY>",
+            },
+        });
+        var fooCluster = new Rancher2.Cluster("fooCluster", new Rancher2.ClusterArgs
+        {
+            Description = "Terraform EKS cluster",
+            EksConfigV2 = new Rancher2.Inputs.ClusterEksConfigV2Args
+            {
+                CloudCredentialId = fooCloudCredential.Id,
+                Region = "<EKS_REGION>",
+                KubernetesVersion = "1.17",
+                LoggingTypes = 
+                {
+                    "audit",
+                    "api",
+                },
+                NodeGroups = 
+                {
+                    new Rancher2.Inputs.ClusterEksConfigV2NodeGroupArgs
+                    {
+                        DesiredSize = 3,
+                        MaxSize = 5,
+                        Name = "node_group1",
+                        LaunchTemplates = 
+                        {
+                            new Rancher2.Inputs.ClusterEksConfigV2NodeGroupLaunchTemplateArgs
+                            {
+                                Id = "<EC2_LAUNCH_TEMPLATE_ID>",
+                                Version = 1,
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooCloudCredential, err := rancher2.NewCloudCredential(ctx, "fooCloudCredential", &rancher2.CloudCredentialArgs{
+			Description: pulumi.String("foo test"),
+			Amazonec2CredentialConfig: &rancher2.CloudCredentialAmazonec2CredentialConfigArgs{
+				AccessKey: pulumi.String("<AWS_ACCESS_KEY>"),
+				SecretKey: pulumi.String("<AWS_SECRET_KEY>"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rancher2.NewCluster(ctx, "fooCluster", &rancher2.ClusterArgs{
+			Description: pulumi.String("Terraform EKS cluster"),
+			EksConfigV2: &rancher2.ClusterEksConfigV2Args{
+				CloudCredentialId: fooCloudCredential.ID(),
+				Region:            pulumi.String("<EKS_REGION>"),
+				KubernetesVersion: pulumi.String("1.17"),
+				LoggingTypes: pulumi.StringArray{
+					pulumi.String("audit"),
+					pulumi.String("api"),
+				},
+				NodeGroups: rancher2.ClusterEksConfigV2NodeGroupArray{
+					&rancher2.ClusterEksConfigV2NodeGroupArgs{
+						DesiredSize: pulumi.Int(3),
+						MaxSize:     pulumi.Int(5),
+						Name:        pulumi.String("node_group1"),
+						LaunchTemplates: rancher2.ClusterEksConfigV2NodeGroupLaunchTemplateArray{
+							&rancher2.ClusterEksConfigV2NodeGroupLaunchTemplateArgs{
+								Id:      pulumi.String("<EC2_LAUNCH_TEMPLATE_ID>"),
+								Version: pulumi.Int(1),
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_rancher2 as rancher2
+
+foo_cloud_credential = rancher2.CloudCredential("fooCloudCredential",
+    description="foo test",
+    amazonec2_credential_config=rancher2.CloudCredentialAmazonec2CredentialConfigArgs(
+        access_key="<AWS_ACCESS_KEY>",
+        secret_key="<AWS_SECRET_KEY>",
+    ))
+foo_cluster = rancher2.Cluster("fooCluster",
+    description="Terraform EKS cluster",
+    eks_config_v2=rancher2.ClusterEksConfigV2Args(
+        cloud_credential_id=foo_cloud_credential.id,
+        region="<EKS_REGION>",
+        kubernetes_version="1.17",
+        logging_types=[
+            "audit",
+            "api",
+        ],
+        node_groups=[rancher2.ClusterEksConfigV2NodeGroupArgs(
+            desired_size=3,
+            max_size=5,
+            name="node_group1",
+            launch_templates=[rancher2.ClusterEksConfigV2NodeGroupLaunchTemplateArgs(
+                id="<EC2_LAUNCH_TEMPLATE_ID>",
+                version=1,
+            )],
+        )],
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+const fooCloudCredential = new rancher2.CloudCredential("fooCloudCredential", {
+    description: "foo test",
+    amazonec2CredentialConfig: {
+        accessKey: "<AWS_ACCESS_KEY>",
+        secretKey: "<AWS_SECRET_KEY>",
+    },
+});
+const fooCluster = new rancher2.Cluster("fooCluster", {
+    description: "Terraform EKS cluster",
+    eksConfigV2: {
+        cloudCredentialId: fooCloudCredential.id,
+        region: "<EKS_REGION>",
+        kubernetesVersion: "1.17",
+        loggingTypes: [
+            "audit",
+            "api",
+        ],
+        nodeGroups: [{
+            desiredSize: 3,
+            maxSize: 5,
+            name: "node_group1",
+            launchTemplates: [{
+                id: "<EC2_LAUNCH_TEMPLATE_ID>",
+                version: 1,
+            }],
+        }],
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -6359,7 +6562,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The ID of the resource (string)
+    <dd>{{% md %}}The EKS node group launch template ID (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecurecommand_csharp">
@@ -6462,7 +6665,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The ID of the resource (string)
+    <dd>{{% md %}}The EKS node group launch template ID (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecurecommand_go">
@@ -6565,7 +6768,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Computed) The ID of the resource (string)
+    <dd>{{% md %}}The EKS node group launch template ID (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecurecommand_nodejs">
@@ -6668,7 +6871,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Computed) The ID of the resource (string)
+    <dd>{{% md %}}The EKS node group launch template ID (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_command_python">
@@ -7177,7 +7380,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+    <dd>{{% md %}}The EKS node group subnets (list string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
@@ -7186,7 +7389,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pass user-data to the nodes to perform automated configuration tasks (string)
+    <dd>{{% md %}}The EKS node group user data (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetwork_csharp">
@@ -7351,7 +7554,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+    <dd>{{% md %}}The EKS node group subnets (list string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
@@ -7360,7 +7563,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pass user-data to the nodes to perform automated configuration tasks (string)
+    <dd>{{% md %}}The EKS node group user data (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetwork_go">
@@ -7525,7 +7728,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+    <dd>{{% md %}}The EKS node group subnets (list string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
@@ -7534,7 +7737,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pass user-data to the nodes to perform automated configuration tasks (string)
+    <dd>{{% md %}}The EKS node group user data (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetwork_nodejs">
@@ -7699,7 +7902,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+    <dd>{{% md %}}The EKS node group subnets (list string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_python">
@@ -7708,7 +7911,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pass user-data to the nodes to perform automated configuration tasks (string)
+    <dd>{{% md %}}The EKS node group user data (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_python">
@@ -7858,7 +8061,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+    <dd>{{% md %}}The EKS node group subnets (list string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -8006,7 +8209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+    <dd>{{% md %}}The EKS node group subnets (list string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -8154,7 +8357,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+    <dd>{{% md %}}The EKS node group subnets (list string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -8302,7 +8505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of subnets in the virtual network to use (list)
+    <dd>{{% md %}}The EKS node group subnets (list string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -8365,6 +8568,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Set true to EKS use gpu. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="imageid_csharp">
+<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group image ID (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
@@ -8381,6 +8593,15 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplates_csharp">
+<a href="#launchtemplates_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2nodegrouplaunchtemplate">List&lt;Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group<wbr>Launch<wbr>Template<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node groups launch template (list Maxitem: 1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_csharp">
@@ -8401,6 +8622,42 @@ The following state arguments are supported:
     <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestspotinstances_csharp">
+<a href="#requestspotinstances_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Spot<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable EKS node group request spot instances (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetags_csharp">
+<a href="#resourcetags_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group resource tags (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotinstancetypes_csharp">
+<a href="#spotinstancetypes_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group sport instace types (list string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnets_csharp">
+<a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group subnets (list string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -8408,6 +8665,24 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The EKS cluster tags (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userdata_csharp">
+<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group user data (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8459,6 +8734,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Set true to EKS use gpu. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="imageid_go">
+<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group image ID (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
@@ -8475,6 +8759,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplates_go">
+<a href="#launchtemplates_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2nodegrouplaunchtemplate">[]Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group<wbr>Launch<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node groups launch template (list Maxitem: 1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_go">
@@ -8495,6 +8788,42 @@ The following state arguments are supported:
     <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestspotinstances_go">
+<a href="#requestspotinstances_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Spot<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable EKS node group request spot instances (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetags_go">
+<a href="#resourcetags_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group resource tags (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotinstancetypes_go">
+<a href="#spotinstancetypes_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group sport instace types (list string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnets_go">
+<a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group subnets (list string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -8502,6 +8831,24 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The EKS cluster tags (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userdata_go">
+<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group user data (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8553,6 +8900,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Set true to EKS use gpu. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="imageid_nodejs">
+<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group image ID (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
@@ -8569,6 +8925,15 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplates_nodejs">
+<a href="#launchtemplates_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2nodegrouplaunchtemplate">Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group<wbr>Launch<wbr>Template[]</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node groups launch template (list Maxitem: 1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_nodejs">
@@ -8589,6 +8954,42 @@ The following state arguments are supported:
     <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestspotinstances_nodejs">
+<a href="#requestspotinstances_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Spot<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable EKS node group request spot instances (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetags_nodejs">
+<a href="#resourcetags_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group resource tags (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotinstancetypes_nodejs">
+<a href="#spotinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group sport instace types (list string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnets_nodejs">
+<a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group subnets (list string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -8596,6 +8997,24 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The EKS cluster tags (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userdata_nodejs">
+<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group user data (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8647,6 +9066,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Set true to EKS use gpu. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group image ID (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
@@ -8663,6 +9091,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for cluster registration token object (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launch_templates_python">
+<a href="#launch_templates_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustereksconfigv2nodegrouplaunchtemplate">Sequence[Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group<wbr>Launch<wbr>Template<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The EKS node groups launch template (list Maxitem: 1)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_size_python">
@@ -8683,6 +9120,42 @@ The following state arguments are supported:
     <dd>{{% md %}}The EKS node group maximum size. Default `2` (int)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="request_spot_instances_python">
+<a href="#request_spot_instances_python" style="color: inherit; text-decoration: inherit;">request_<wbr>spot_<wbr>instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable EKS node group request spot instances (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_tags_python">
+<a href="#resource_tags_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group resource tags (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spot_instance_types_python">
+<a href="#spot_instance_types_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group sport instace types (list string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnets_python">
+<a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group subnets (list string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -8690,6 +9163,150 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The EKS cluster tags (map)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_data_python">
+<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group user data (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustereksconfigv2nodegrouplaunchtemplate">Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group<wbr>Launch<wbr>Template</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group launch template ID (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group launch template ID (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group launch template ID (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The EKS node group launch template ID (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of cluster registration token (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}rancher-monitoring chart version (string)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

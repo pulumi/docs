@@ -62,6 +62,7 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="registry" title="Registry"><span class="symbol resource"></span>Registry</a></li>
     <li><a href="roletempalte" title="RoleTempalte"><span class="symbol resource"></span>RoleTempalte</a></li>
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
+    <li><a href="secretv2" title="SecretV2"><span class="symbol resource"></span>SecretV2</a></li>
     <li><a href="setting" title="Setting"><span class="symbol resource"></span>Setting</a></li>
     <li><a href="token" title="Token"><span class="symbol resource"></span>Token</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
@@ -102,6 +103,7 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="getroletempalte" title="GetRoleTempalte"><span class="symbol function"></span>GetRoleTempalte</a></li>
     <li><a href="getroletemplate" title="GetRoleTemplate"><span class="symbol function"></span>GetRoleTemplate</a></li>
     <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
+    <li><a href="getsecretv2" title="GetSecretV2"><span class="symbol function"></span>GetSecretV2</a></li>
     <li><a href="getsetting" title="GetSetting"><span class="symbol function"></span>GetSetting</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
 </ul>
@@ -115,6 +117,6 @@ A Pulumi package for creating and managing rancher2 resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.9.1</dd>
+	<dd>2.10.0</dd>
 </dl>
 
