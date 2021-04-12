@@ -43,7 +43,7 @@ by setting the 'customTimeouts' option on the resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -106,7 +106,7 @@ by setting the 'customTimeouts' option on the resource.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -130,7 +130,7 @@ by setting the 'customTimeouts' option on the resource.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -2110,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontext_csharp">
 <a href="#securitycontext_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
@@ -2290,7 +2290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontext_go">
 <a href="#securitycontext_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
@@ -2470,7 +2470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">core.v1.<wbr>Resource<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontext_nodejs">
 <a href="#securitycontext_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context</a>
@@ -2650,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_context_python">
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
@@ -4404,14 +4404,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="readonly_csharp">
-<a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="volumeclaimtemplate_csharp">
 <a href="#volumeclaimtemplate_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Claim<wbr>Template</a>
 </span>
@@ -4429,14 +4421,6 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="readonly_go">
-<a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeclaimtemplate_go">
 <a href="#volumeclaimtemplate_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Claim<wbr>Template</a>
@@ -4456,14 +4440,6 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="readonly_nodejs">
-<a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="volumeclaimtemplate_nodejs">
 <a href="#volumeclaimtemplate_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Claim<wbr>Template</a>
 </span>
@@ -4481,14 +4457,6 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="read_only_python">
-<a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_claim_template_python">
 <a href="#volume_claim_template_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>claim_<wbr>template</a>
@@ -6504,7 +6472,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the duration in seconds relative to the startTime that the job may be active before the system tries to terminate it; value must be positive integer{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the duration in seconds relative to the startTime that the job may be continuously active before the system tries to terminate it; value must be positive integer. If a Job is suspended (at creation or through an update), this timer will effectively be stopped and reset when the Job is resumed again.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backofflimit_csharp">
 <a href="#backofflimit_csharp" style="color: inherit; text-decoration: inherit;">Backoff<wbr>Limit</a>
@@ -6513,6 +6481,20 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of retries before marking this job failed. Defaults to 6{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="completionmode_csharp">
+<a href="#completionmode_csharp" style="color: inherit; text-decoration: inherit;">Completion<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CompletionMode specifies how Pod completions are tracked. It can be `NonIndexed` (default) or `Indexed`.
+
+`NonIndexed` means that the Job is considered complete when there have been .spec.completions successfully completed Pods. Each Pod completion is homologous to each other.
+
+`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5.
+
+This field is alpha-level and is only honored by servers that enable the IndexedJob feature gate. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completions_csharp">
 <a href="#completions_csharp" style="color: inherit; text-decoration: inherit;">Completions</a>
@@ -6546,6 +6528,14 @@ Required, must not be nil.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}A label query over pods that should match the pod count. Normally, the system sets this field for you. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="suspend_csharp">
+<a href="#suspend_csharp" style="color: inherit; text-decoration: inherit;">Suspend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. This is an alpha field and requires the SuspendJob feature gate to be enabled; otherwise this field may not be set to true. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ttlsecondsafterfinished_csharp">
 <a href="#ttlsecondsafterfinished_csharp" style="color: inherit; text-decoration: inherit;">Ttl<wbr>Seconds<wbr>After<wbr>Finished</a>
 </span>
@@ -6572,7 +6562,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the duration in seconds relative to the startTime that the job may be active before the system tries to terminate it; value must be positive integer{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the duration in seconds relative to the startTime that the job may be continuously active before the system tries to terminate it; value must be positive integer. If a Job is suspended (at creation or through an update), this timer will effectively be stopped and reset when the Job is resumed again.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backofflimit_go">
 <a href="#backofflimit_go" style="color: inherit; text-decoration: inherit;">Backoff<wbr>Limit</a>
@@ -6581,6 +6571,20 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of retries before marking this job failed. Defaults to 6{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="completionmode_go">
+<a href="#completionmode_go" style="color: inherit; text-decoration: inherit;">Completion<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CompletionMode specifies how Pod completions are tracked. It can be `NonIndexed` (default) or `Indexed`.
+
+`NonIndexed` means that the Job is considered complete when there have been .spec.completions successfully completed Pods. Each Pod completion is homologous to each other.
+
+`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5.
+
+This field is alpha-level and is only honored by servers that enable the IndexedJob feature gate. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completions_go">
 <a href="#completions_go" style="color: inherit; text-decoration: inherit;">Completions</a>
@@ -6614,6 +6618,14 @@ Required, must not be nil.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}A label query over pods that should match the pod count. Normally, the system sets this field for you. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="suspend_go">
+<a href="#suspend_go" style="color: inherit; text-decoration: inherit;">Suspend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. This is an alpha field and requires the SuspendJob feature gate to be enabled; otherwise this field may not be set to true. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ttlsecondsafterfinished_go">
 <a href="#ttlsecondsafterfinished_go" style="color: inherit; text-decoration: inherit;">Ttl<wbr>Seconds<wbr>After<wbr>Finished</a>
 </span>
@@ -6640,7 +6652,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the duration in seconds relative to the startTime that the job may be active before the system tries to terminate it; value must be positive integer{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the duration in seconds relative to the startTime that the job may be continuously active before the system tries to terminate it; value must be positive integer. If a Job is suspended (at creation or through an update), this timer will effectively be stopped and reset when the Job is resumed again.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backofflimit_nodejs">
 <a href="#backofflimit_nodejs" style="color: inherit; text-decoration: inherit;">backoff<wbr>Limit</a>
@@ -6649,6 +6661,20 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of retries before marking this job failed. Defaults to 6{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="completionmode_nodejs">
+<a href="#completionmode_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CompletionMode specifies how Pod completions are tracked. It can be `NonIndexed` (default) or `Indexed`.
+
+`NonIndexed` means that the Job is considered complete when there have been .spec.completions successfully completed Pods. Each Pod completion is homologous to each other.
+
+`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5.
+
+This field is alpha-level and is only honored by servers that enable the IndexedJob feature gate. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completions_nodejs">
 <a href="#completions_nodejs" style="color: inherit; text-decoration: inherit;">completions</a>
@@ -6682,6 +6708,14 @@ Required, must not be nil.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}A label query over pods that should match the pod count. Normally, the system sets this field for you. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="suspend_nodejs">
+<a href="#suspend_nodejs" style="color: inherit; text-decoration: inherit;">suspend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. This is an alpha field and requires the SuspendJob feature gate to be enabled; otherwise this field may not be set to true. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ttlsecondsafterfinished_nodejs">
 <a href="#ttlsecondsafterfinished_nodejs" style="color: inherit; text-decoration: inherit;">ttl<wbr>Seconds<wbr>After<wbr>Finished</a>
 </span>
@@ -6708,7 +6742,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the duration in seconds relative to the startTime that the job may be active before the system tries to terminate it; value must be positive integer{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the duration in seconds relative to the startTime that the job may be continuously active before the system tries to terminate it; value must be positive integer. If a Job is suspended (at creation or through an update), this timer will effectively be stopped and reset when the Job is resumed again.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backoff_limit_python">
 <a href="#backoff_limit_python" style="color: inherit; text-decoration: inherit;">backoff_<wbr>limit</a>
@@ -6717,6 +6751,20 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of retries before marking this job failed. Defaults to 6{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="completion_mode_python">
+<a href="#completion_mode_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}CompletionMode specifies how Pod completions are tracked. It can be `NonIndexed` (default) or `Indexed`.
+
+`NonIndexed` means that the Job is considered complete when there have been .spec.completions successfully completed Pods. Each Pod completion is homologous to each other.
+
+`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5.
+
+This field is alpha-level and is only honored by servers that enable the IndexedJob feature gate. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completions_python">
 <a href="#completions_python" style="color: inherit; text-decoration: inherit;">completions</a>
@@ -6750,6 +6798,14 @@ Required, must not be nil.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}A label query over pods that should match the pod count. Normally, the system sets this field for you. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="suspend_python">
+<a href="#suspend_python" style="color: inherit; text-decoration: inherit;">suspend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. This is an alpha field and requires the SuspendJob feature gate to be enabled; otherwise this field may not be set to true. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ttl_seconds_after_finished_python">
 <a href="#ttl_seconds_after_finished_python" style="color: inherit; text-decoration: inherit;">ttl_<wbr>seconds_<wbr>after_<wbr>finished</a>
 </span>
@@ -6772,6 +6828,14 @@ Required, must not be nil.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The number of actively running pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="completedindexes_csharp">
+<a href="#completedindexes_csharp" style="color: inherit; text-decoration: inherit;">Completed<wbr>Indexes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CompletedIndexes holds the completed indexes when .spec.completionMode = "Indexed" in a text format. The indexes are represented as decimal integers separated by commas. The numbers are listed in increasing order. Three or more consecutive numbers are compressed and represented by the first and last element of the series, separated by a hyphen. For example, if the completed indexes are 1, 3, 4, 5 and 7, they are represented as "1,3-5,7".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="completiontime_csharp">
 <a href="#completiontime_csharp" style="color: inherit; text-decoration: inherit;">Completion<wbr>Time</a>
 </span>
@@ -6786,7 +6850,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcondition">List&lt;Job<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The latest available observations of an object's current state. When a job fails, one of the conditions will have type == "Failed". More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The latest available observations of an object's current state. When a Job fails, one of the conditions will have type "Failed" and status true. When a Job is suspended, one of the conditions will have type "Suspended" and status true; when the Job is resumed, the status of this condition will become false. When a Job is completed, one of the conditions will have type "Complete" and status true. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failed_csharp">
 <a href="#failed_csharp" style="color: inherit; text-decoration: inherit;">Failed</a>
@@ -6802,7 +6866,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Represents time when the job controller started processing a job. When a Job is created in the suspended state, this field is not set until the first time it is resumed. This field is reset every time a Job is resumed from suspension. It is represented in RFC3339 form and is in UTC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="succeeded_csharp">
 <a href="#succeeded_csharp" style="color: inherit; text-decoration: inherit;">Succeeded</a>
@@ -6824,6 +6888,14 @@ Required, must not be nil.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The number of actively running pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="completedindexes_go">
+<a href="#completedindexes_go" style="color: inherit; text-decoration: inherit;">Completed<wbr>Indexes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CompletedIndexes holds the completed indexes when .spec.completionMode = "Indexed" in a text format. The indexes are represented as decimal integers separated by commas. The numbers are listed in increasing order. Three or more consecutive numbers are compressed and represented by the first and last element of the series, separated by a hyphen. For example, if the completed indexes are 1, 3, 4, 5 and 7, they are represented as "1,3-5,7".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="completiontime_go">
 <a href="#completiontime_go" style="color: inherit; text-decoration: inherit;">Completion<wbr>Time</a>
 </span>
@@ -6838,7 +6910,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcondition">[]Job<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}The latest available observations of an object's current state. When a job fails, one of the conditions will have type == "Failed". More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The latest available observations of an object's current state. When a Job fails, one of the conditions will have type "Failed" and status true. When a Job is suspended, one of the conditions will have type "Suspended" and status true; when the Job is resumed, the status of this condition will become false. When a Job is completed, one of the conditions will have type "Complete" and status true. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failed_go">
 <a href="#failed_go" style="color: inherit; text-decoration: inherit;">Failed</a>
@@ -6854,7 +6926,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Represents time when the job controller started processing a job. When a Job is created in the suspended state, this field is not set until the first time it is resumed. This field is reset every time a Job is resumed from suspension. It is represented in RFC3339 form and is in UTC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="succeeded_go">
 <a href="#succeeded_go" style="color: inherit; text-decoration: inherit;">Succeeded</a>
@@ -6876,6 +6948,14 @@ Required, must not be nil.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The number of actively running pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="completedindexes_nodejs">
+<a href="#completedindexes_nodejs" style="color: inherit; text-decoration: inherit;">completed<wbr>Indexes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CompletedIndexes holds the completed indexes when .spec.completionMode = "Indexed" in a text format. The indexes are represented as decimal integers separated by commas. The numbers are listed in increasing order. Three or more consecutive numbers are compressed and represented by the first and last element of the series, separated by a hyphen. For example, if the completed indexes are 1, 3, 4, 5 and 7, they are represented as "1,3-5,7".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="completiontime_nodejs">
 <a href="#completiontime_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Time</a>
 </span>
@@ -6890,7 +6970,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcondition">Job<wbr>Condition[]</a></span>
     </dt>
-    <dd>{{% md %}}The latest available observations of an object's current state. When a job fails, one of the conditions will have type == "Failed". More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The latest available observations of an object's current state. When a Job fails, one of the conditions will have type "Failed" and status true. When a Job is suspended, one of the conditions will have type "Suspended" and status true; when the Job is resumed, the status of this condition will become false. When a Job is completed, one of the conditions will have type "Complete" and status true. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failed_nodejs">
 <a href="#failed_nodejs" style="color: inherit; text-decoration: inherit;">failed</a>
@@ -6906,7 +6986,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Represents time when the job controller started processing a job. When a Job is created in the suspended state, this field is not set until the first time it is resumed. This field is reset every time a Job is resumed from suspension. It is represented in RFC3339 form and is in UTC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="succeeded_nodejs">
 <a href="#succeeded_nodejs" style="color: inherit; text-decoration: inherit;">succeeded</a>
@@ -6928,6 +7008,14 @@ Required, must not be nil.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}The number of actively running pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="completed_indexes_python">
+<a href="#completed_indexes_python" style="color: inherit; text-decoration: inherit;">completed_<wbr>indexes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}CompletedIndexes holds the completed indexes when .spec.completionMode = "Indexed" in a text format. The indexes are represented as decimal integers separated by commas. The numbers are listed in increasing order. Three or more consecutive numbers are compressed and represented by the first and last element of the series, separated by a hyphen. For example, if the completed indexes are 1, 3, 4, 5 and 7, they are represented as "1,3-5,7".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="completion_time_python">
 <a href="#completion_time_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>time</a>
 </span>
@@ -6942,7 +7030,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcondition">Job<wbr>Condition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The latest available observations of an object's current state. When a job fails, one of the conditions will have type == "Failed". More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The latest available observations of an object's current state. When a Job fails, one of the conditions will have type "Failed" and status true. When a Job is suspended, one of the conditions will have type "Suspended" and status true; when the Job is resumed, the status of this condition will become false. When a Job is completed, one of the conditions will have type "Complete" and status true. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failed_python">
 <a href="#failed_python" style="color: inherit; text-decoration: inherit;">failed</a>
@@ -6958,7 +7046,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Represents time when the job controller started processing a job. When a Job is created in the suspended state, this field is not set until the first time it is resumed. This field is reset every time a Job is resumed from suspension. It is represented in RFC3339 form and is in UTC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="succeeded_python">
 <a href="#succeeded_python" style="color: inherit; text-decoration: inherit;">succeeded</a>
@@ -9540,13 +9628,21 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="namespaceselector_csharp">
+<a href="#namespaceselector_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="namespaces_csharp">
 <a href="#namespaces_csharp" style="color: inherit; text-decoration: inherit;">Namespaces</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means "this pod's namespace"{{% /md %}}</dd></dl>
+    <dd>{{% md %}}namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -9568,13 +9664,21 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="namespaceselector_go">
+<a href="#namespaceselector_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
+    </dt>
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="namespaces_go">
 <a href="#namespaces_go" style="color: inherit; text-decoration: inherit;">Namespaces</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means "this pod's namespace"{{% /md %}}</dd></dl>
+    <dd>{{% md %}}namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -9596,13 +9700,21 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="namespaceselector_nodejs">
+<a href="#namespaceselector_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
+    </dt>
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="namespaces_nodejs">
 <a href="#namespaces_nodejs" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means "this pod's namespace"{{% /md %}}</dd></dl>
+    <dd>{{% md %}}namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -9624,13 +9736,21 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="namespace_selector_python">
+<a href="#namespace_selector_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="namespaces_python">
 <a href="#namespaces_python" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means "this pod's namespace"{{% /md %}}</dd></dl>
+    <dd>{{% md %}}namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="podantiaffinity">Pod<wbr>Anti<wbr>Affinity</h4>
@@ -10574,7 +10694,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tolerations_csharp">
 <a href="#tolerations_csharp" style="color: inherit; text-decoration: inherit;">Tolerations</a>
@@ -10858,7 +10978,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tolerations_go">
 <a href="#tolerations_go" style="color: inherit; text-decoration: inherit;">Tolerations</a>
@@ -11142,7 +11262,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tolerations_nodejs">
 <a href="#tolerations_nodejs" style="color: inherit; text-decoration: inherit;">tolerations</a>
@@ -11426,7 +11546,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tolerations_python">
 <a href="#tolerations_python" style="color: inherit; text-decoration: inherit;">tolerations</a>
@@ -11792,6 +11912,14 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="terminationgraceperiodseconds_csharp">
+<a href="#terminationgraceperiodseconds_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timeoutseconds_csharp">
 <a href="#timeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
 </span>
@@ -11859,6 +11987,14 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminationgraceperiodseconds_go">
+<a href="#terminationgraceperiodseconds_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_go">
 <a href="#timeoutseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -11928,6 +12064,14 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="terminationgraceperiodseconds_nodejs">
+<a href="#terminationgraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timeoutseconds_nodejs">
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
 </span>
@@ -11995,6 +12139,14 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="termination_grace_period_seconds_python">
+<a href="#termination_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>grace_<wbr>period_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_seconds_python">
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
@@ -12696,7 +12848,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_csharp">
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
@@ -12704,7 +12856,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -12716,7 +12868,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_go">
 <a href="#requests_go" style="color: inherit; text-decoration: inherit;">Requests</a>
@@ -12724,7 +12876,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -12736,7 +12888,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_nodejs">
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
@@ -12744,7 +12896,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -12756,7 +12908,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_python">
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
@@ -12764,7 +12916,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="selinuxoptions">SELinux<wbr>Options</h4>
@@ -15164,7 +15316,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ephemeralvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Ephemeral<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver (Alpha feature). The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
 
 Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
    tracking are needed,
@@ -15177,7 +15329,9 @@ Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that pe
 
 Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
 
-A pod can use both types of ephemeral volumes and persistent volumes at the same time.{{% /md %}}</dd><dt class="property-optional"
+A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+
+This is a beta feature and only available when the GenericEphemeralVolume feature gate is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fc_csharp">
 <a href="#fc_csharp" style="color: inherit; text-decoration: inherit;">Fc</a>
@@ -15421,7 +15575,7 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ephemeralvolumesource">Ephemeral<wbr>Volume<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver (Alpha feature). The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
 
 Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
    tracking are needed,
@@ -15434,7 +15588,9 @@ Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that pe
 
 Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
 
-A pod can use both types of ephemeral volumes and persistent volumes at the same time.{{% /md %}}</dd><dt class="property-optional"
+A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+
+This is a beta feature and only available when the GenericEphemeralVolume feature gate is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fc_go">
 <a href="#fc_go" style="color: inherit; text-decoration: inherit;">Fc</a>
@@ -15678,7 +15834,7 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ephemeralvolumesource">core.v1.<wbr>Ephemeral<wbr>Volume<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver (Alpha feature). The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
 
 Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
    tracking are needed,
@@ -15691,7 +15847,9 @@ Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that pe
 
 Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
 
-A pod can use both types of ephemeral volumes and persistent volumes at the same time.{{% /md %}}</dd><dt class="property-optional"
+A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+
+This is a beta feature and only available when the GenericEphemeralVolume feature gate is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fc_nodejs">
 <a href="#fc_nodejs" style="color: inherit; text-decoration: inherit;">fc</a>
@@ -15935,7 +16093,7 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ephemeralvolumesource">Ephemeral<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver (Alpha feature). The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
 
 Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
    tracking are needed,
@@ -15948,7 +16106,9 @@ Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that pe
 
 Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
 
-A pod can use both types of ephemeral volumes and persistent volumes at the same time.{{% /md %}}</dd><dt class="property-optional"
+A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+
+This is a beta feature and only available when the GenericEphemeralVolume feature gate is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fc_python">
 <a href="#fc_python" style="color: inherit; text-decoration: inherit;">fc</a>

@@ -11,6 +11,8 @@ Explore the resources and functions of the kubernetes.batch/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="cronjob" title="CronJob"><span class="symbol resource"></span>CronJob</a></li>
+    <li><a href="cronjoblist" title="CronJobList"><span class="symbol resource"></span>CronJobList</a></li>
     <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
     <li><a href="joblist" title="JobList"><span class="symbol resource"></span>JobList</a></li>
 </ul>
@@ -22,6 +24,6 @@ Explore the resources and functions of the kubernetes.batch/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.8.4</dd>
+	<dd>3.0.0-beta.2</dd>
 </dl>
 

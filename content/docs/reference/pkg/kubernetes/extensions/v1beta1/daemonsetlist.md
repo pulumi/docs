@@ -28,7 +28,7 @@ DaemonSetList is a collection of daemon sets.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDaemonSetList</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DaemonSetListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DaemonSetList</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDaemonSetList</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DaemonSetListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DaemonSetList</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -91,7 +91,7 @@ DaemonSetList is a collection of daemon sets.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -115,7 +115,7 @@ DaemonSetList is a collection of daemon sets.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -2063,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontext_csharp">
 <a href="#securitycontext_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
@@ -2243,7 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontext_go">
 <a href="#securitycontext_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
@@ -2423,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">core.v1.<wbr>Resource<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontext_nodejs">
 <a href="#securitycontext_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context</a>
@@ -2603,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_context_python">
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
@@ -5279,14 +5279,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="readonly_csharp">
-<a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="volumeclaimtemplate_csharp">
 <a href="#volumeclaimtemplate_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Claim<wbr>Template</a>
 </span>
@@ -5304,14 +5296,6 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="readonly_go">
-<a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeclaimtemplate_go">
 <a href="#volumeclaimtemplate_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Claim<wbr>Template</a>
@@ -5331,14 +5315,6 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="readonly_nodejs">
-<a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="volumeclaimtemplate_nodejs">
 <a href="#volumeclaimtemplate_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Claim<wbr>Template</a>
 </span>
@@ -5356,14 +5332,6 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="read_only_python">
-<a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_claim_template_python">
 <a href="#volume_claim_template_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>claim_<wbr>template</a>
@@ -9875,13 +9843,21 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="namespaceselector_csharp">
+<a href="#namespaceselector_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="namespaces_csharp">
 <a href="#namespaces_csharp" style="color: inherit; text-decoration: inherit;">Namespaces</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means "this pod's namespace"{{% /md %}}</dd></dl>
+    <dd>{{% md %}}namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -9903,13 +9879,21 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="namespaceselector_go">
+<a href="#namespaceselector_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
+    </dt>
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="namespaces_go">
 <a href="#namespaces_go" style="color: inherit; text-decoration: inherit;">Namespaces</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means "this pod's namespace"{{% /md %}}</dd></dl>
+    <dd>{{% md %}}namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -9931,13 +9915,21 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="namespaceselector_nodejs">
+<a href="#namespaceselector_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
+    </dt>
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="namespaces_nodejs">
 <a href="#namespaces_nodejs" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means "this pod's namespace"{{% /md %}}</dd></dl>
+    <dd>{{% md %}}namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -9959,13 +9951,21 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="namespace_selector_python">
+<a href="#namespace_selector_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="namespaces_python">
 <a href="#namespaces_python" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means "this pod's namespace"{{% /md %}}</dd></dl>
+    <dd>{{% md %}}namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="podantiaffinity">Pod<wbr>Anti<wbr>Affinity</h4>
@@ -10909,7 +10909,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tolerations_csharp">
 <a href="#tolerations_csharp" style="color: inherit; text-decoration: inherit;">Tolerations</a>
@@ -11193,7 +11193,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tolerations_go">
 <a href="#tolerations_go" style="color: inherit; text-decoration: inherit;">Tolerations</a>
@@ -11477,7 +11477,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tolerations_nodejs">
 <a href="#tolerations_nodejs" style="color: inherit; text-decoration: inherit;">tolerations</a>
@@ -11761,7 +11761,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tolerations_python">
 <a href="#tolerations_python" style="color: inherit; text-decoration: inherit;">tolerations</a>
@@ -12127,6 +12127,14 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="terminationgraceperiodseconds_csharp">
+<a href="#terminationgraceperiodseconds_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timeoutseconds_csharp">
 <a href="#timeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
 </span>
@@ -12194,6 +12202,14 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminationgraceperiodseconds_go">
+<a href="#terminationgraceperiodseconds_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_go">
 <a href="#timeoutseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -12263,6 +12279,14 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="terminationgraceperiodseconds_nodejs">
+<a href="#terminationgraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timeoutseconds_nodejs">
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
 </span>
@@ -12330,6 +12354,14 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="termination_grace_period_seconds_python">
+<a href="#termination_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>grace_<wbr>period_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_seconds_python">
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
@@ -13031,7 +13063,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_csharp">
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
@@ -13039,7 +13071,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -13051,7 +13083,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_go">
 <a href="#requests_go" style="color: inherit; text-decoration: inherit;">Requests</a>
@@ -13059,7 +13091,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -13071,7 +13103,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_nodejs">
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
@@ -13079,7 +13111,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -13091,7 +13123,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_python">
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
@@ -13099,7 +13131,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rollingupdatedaemonset">Rolling<wbr>Update<wbr>Daemon<wbr>Set</h4>
@@ -15549,7 +15581,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ephemeralvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Ephemeral<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver (Alpha feature). The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
 
 Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
    tracking are needed,
@@ -15562,7 +15594,9 @@ Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that pe
 
 Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
 
-A pod can use both types of ephemeral volumes and persistent volumes at the same time.{{% /md %}}</dd><dt class="property-optional"
+A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+
+This is a beta feature and only available when the GenericEphemeralVolume feature gate is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fc_csharp">
 <a href="#fc_csharp" style="color: inherit; text-decoration: inherit;">Fc</a>
@@ -15806,7 +15840,7 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ephemeralvolumesource">Ephemeral<wbr>Volume<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver (Alpha feature). The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
 
 Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
    tracking are needed,
@@ -15819,7 +15853,9 @@ Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that pe
 
 Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
 
-A pod can use both types of ephemeral volumes and persistent volumes at the same time.{{% /md %}}</dd><dt class="property-optional"
+A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+
+This is a beta feature and only available when the GenericEphemeralVolume feature gate is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fc_go">
 <a href="#fc_go" style="color: inherit; text-decoration: inherit;">Fc</a>
@@ -16063,7 +16099,7 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ephemeralvolumesource">core.v1.<wbr>Ephemeral<wbr>Volume<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver (Alpha feature). The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
 
 Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
    tracking are needed,
@@ -16076,7 +16112,9 @@ Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that pe
 
 Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
 
-A pod can use both types of ephemeral volumes and persistent volumes at the same time.{{% /md %}}</dd><dt class="property-optional"
+A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+
+This is a beta feature and only available when the GenericEphemeralVolume feature gate is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fc_nodejs">
 <a href="#fc_nodejs" style="color: inherit; text-decoration: inherit;">fc</a>
@@ -16320,7 +16358,7 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ephemeralvolumesource">Ephemeral<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver (Alpha feature). The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+    <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
 
 Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
    tracking are needed,
@@ -16333,7 +16371,9 @@ Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that pe
 
 Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
 
-A pod can use both types of ephemeral volumes and persistent volumes at the same time.{{% /md %}}</dd><dt class="property-optional"
+A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+
+This is a beta feature and only available when the GenericEphemeralVolume feature gate is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fc_python">
 <a href="#fc_python" style="color: inherit; text-decoration: inherit;">fc</a>

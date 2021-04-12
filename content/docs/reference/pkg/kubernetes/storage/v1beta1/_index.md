@@ -15,6 +15,8 @@ Explore the resources and functions of the kubernetes.storage/v1beta1 module.
     <li><a href="csidriverlist" title="CSIDriverList"><span class="symbol resource"></span>CSIDriverList</a></li>
     <li><a href="csinode" title="CSINode"><span class="symbol resource"></span>CSINode</a></li>
     <li><a href="csinodelist" title="CSINodeList"><span class="symbol resource"></span>CSINodeList</a></li>
+    <li><a href="csistoragecapacity" title="CSIStorageCapacity"><span class="symbol resource"></span>CSIStorageCapacity</a></li>
+    <li><a href="csistoragecapacitylist" title="CSIStorageCapacityList"><span class="symbol resource"></span>CSIStorageCapacityList</a></li>
     <li><a href="storageclass" title="StorageClass"><span class="symbol resource"></span>StorageClass</a></li>
     <li><a href="storageclasslist" title="StorageClassList"><span class="symbol resource"></span>StorageClassList</a></li>
     <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
@@ -28,6 +30,6 @@ Explore the resources and functions of the kubernetes.storage/v1beta1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.8.4</dd>
+	<dd>3.0.0-beta.2</dd>
 </dl>
 

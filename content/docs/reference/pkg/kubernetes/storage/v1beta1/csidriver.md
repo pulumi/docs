@@ -28,7 +28,7 @@ CSIDriver captures information about a Container Storage Interface (CSI) volume 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCSIDriver</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CSIDriverArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CSIDriver</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCSIDriver</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CSIDriverArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CSIDriver</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -91,7 +91,7 @@ CSIDriver captures information about a Container Storage Interface (CSI) volume 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -115,7 +115,7 @@ CSIDriver captures information about a Container Storage Interface (CSI) volume 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -319,7 +319,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI ControllerPublishVolume() method), and that the Kubernetes attach detach controller should call the attach volume interface which checks the volumeattachment status and waits until the volume is attached before proceeding to mounting. The CSI external-attacher coordinates with CSI volume driver and updates the volumeattachment status when the attach operation is complete. If the CSIDriverRegistry feature gate is enabled and the value is specified to false, the attach operation will be skipped. Otherwise the attach operation will be called.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI ControllerPublishVolume() method), and that the Kubernetes attach detach controller should call the attach volume interface which checks the volumeattachment status and waits until the volume is attached before proceeding to mounting. The CSI external-attacher coordinates with CSI volume driver and updates the volumeattachment status when the attach operation is complete. If the CSIDriverRegistry feature gate is enabled and the value is specified to false, the attach operation will be skipped. Otherwise the attach operation will be called.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsgrouppolicy_csharp">
 <a href="#fsgrouppolicy_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Group<wbr>Policy</a>
@@ -327,7 +329,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podinfoonmount_csharp">
 <a href="#podinfoonmount_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Info<wbr>On<wbr>Mount</a>
@@ -335,10 +339,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, podInfoOnMount indicates this CSI volume driver requires additional pod information (like podName, podUID, etc.) during mount operations. If set to false, pod information will not be passed on mount. Default is false. The CSI driver specifies podInfoOnMount as part of driver deployment. If true, Kubelet will pass pod information as VolumeContext in the CSI NodePublishVolume() calls. The CSI driver is responsible for parsing and validating the information passed in as VolumeContext. The following VolumeConext will be passed if podInfoOnMount is set to true. This list might grow, but the prefix will be used. "csi.storage.k8s.io/pod.name": pod.Name "csi.storage.k8s.io/pod.namespace": pod.Namespace "csi.storage.k8s.io/pod.uid": string(pod.UID) "csi.storage.k8s.io/ephemeral": "true" iff the volume is an ephemeral inline volume
+    <dd>{{% md %}}If set to true, podInfoOnMount indicates this CSI volume driver requires additional pod information (like podName, podUID, etc.) during mount operations. If set to false, pod information will not be passed on mount. Default is false. The CSI driver specifies podInfoOnMount as part of driver deployment. If true, Kubelet will pass pod information as VolumeContext in the CSI NodePublishVolume() calls. The CSI driver is responsible for parsing and validating the information passed in as VolumeContext. The following VolumeConext will be passed if podInfoOnMount is set to true. This list might grow, but the prefix will be used. "csi.storage.k8s.io/pod.name": pod.Name "csi.storage.k8s.io/pod.namespace": pod.Namespace "csi.storage.k8s.io/pod.uid": string(pod.UID) "csi.storage.k8s.io/ephemeral": "true" if the volume is an ephemeral inline volume
                                 defined by a CSIVolumeSource, otherwise "false"
 
-"csi.storage.k8s.io/ephemeral" is a new feature in Kubernetes 1.16. It is only required for drivers which support both the "Persistent" and "Ephemeral" VolumeLifecycleMode. Other drivers can leave pod info disabled and/or ignore this field. As Kubernetes 1.15 doesn't support this field, drivers can only support one mode when deployed on such a cluster and the deployment determines which mode that is, for example via a command line parameter of the driver.{{% /md %}}</dd><dt class="property-optional"
+"csi.storage.k8s.io/ephemeral" is a new feature in Kubernetes 1.16. It is only required for drivers which support both the "Persistent" and "Ephemeral" VolumeLifecycleMode. Other drivers can leave pod info disabled and/or ignore this field. As Kubernetes 1.15 doesn't support this field, drivers can only support one mode when deployed on such a cluster and the deployment determines which mode that is, for example via a command line parameter of the driver.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresrepublish_csharp">
 <a href="#requiresrepublish_csharp" style="color: inherit; text-decoration: inherit;">Requires<wbr>Republish</a>
@@ -350,7 +356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
 
-This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecapacity_csharp">
 <a href="#storagecapacity_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Capacity</a>
@@ -364,7 +370,9 @@ The check can be enabled immediately when deploying a driver. In that case, prov
 
 Alternatively, the driver can be deployed with the field unset or false and it can be flipped later when storage capacity information has been published.
 
-This is an alpha field and only available when the CSIStorageCapacity feature is enabled. The default is false.{{% /md %}}</dd><dt class="property-optional"
+This field is immutable.
+
+This is a beta field and only available when the CSIStorageCapacity feature is enabled. The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenrequests_csharp">
 <a href="#tokenrequests_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Requests</a>
@@ -382,7 +390,7 @@ This is an alpha field and only available when the CSIStorageCapacity feature is
 
 Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
 
-This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumelifecyclemodes_csharp">
 <a href="#volumelifecyclemodes_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Lifecycle<wbr>Modes</a>
@@ -390,7 +398,9 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The default if the list is empty is "Persistent", which is the usage defined by the CSI specification and implemented in Kubernetes via the usual PV/PVC mechanism. The other mode is "Ephemeral". In this mode, volumes are defined inline inside the pod spec with CSIVolumeSource and their lifecycle is tied to the lifecycle of that pod. A driver has to be aware of this because it is only going to get a NodePublishVolume call for such a volume. For more information about implementing this mode, see https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and more modes may be added in the future.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The default if the list is empty is "Persistent", which is the usage defined by the CSI specification and implemented in Kubernetes via the usual PV/PVC mechanism. The other mode is "Ephemeral". In this mode, volumes are defined inline inside the pod spec with CSIVolumeSource and their lifecycle is tied to the lifecycle of that pod. A driver has to be aware of this because it is only going to get a NodePublishVolume call for such a volume. For more information about implementing this mode, see https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and more modes may be added in the future.
+
+This field is immutable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +412,9 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI ControllerPublishVolume() method), and that the Kubernetes attach detach controller should call the attach volume interface which checks the volumeattachment status and waits until the volume is attached before proceeding to mounting. The CSI external-attacher coordinates with CSI volume driver and updates the volumeattachment status when the attach operation is complete. If the CSIDriverRegistry feature gate is enabled and the value is specified to false, the attach operation will be skipped. Otherwise the attach operation will be called.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI ControllerPublishVolume() method), and that the Kubernetes attach detach controller should call the attach volume interface which checks the volumeattachment status and waits until the volume is attached before proceeding to mounting. The CSI external-attacher coordinates with CSI volume driver and updates the volumeattachment status when the attach operation is complete. If the CSIDriverRegistry feature gate is enabled and the value is specified to false, the attach operation will be skipped. Otherwise the attach operation will be called.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsgrouppolicy_go">
 <a href="#fsgrouppolicy_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Group<wbr>Policy</a>
@@ -410,7 +422,9 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podinfoonmount_go">
 <a href="#podinfoonmount_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Info<wbr>On<wbr>Mount</a>
@@ -418,10 +432,12 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, podInfoOnMount indicates this CSI volume driver requires additional pod information (like podName, podUID, etc.) during mount operations. If set to false, pod information will not be passed on mount. Default is false. The CSI driver specifies podInfoOnMount as part of driver deployment. If true, Kubelet will pass pod information as VolumeContext in the CSI NodePublishVolume() calls. The CSI driver is responsible for parsing and validating the information passed in as VolumeContext. The following VolumeConext will be passed if podInfoOnMount is set to true. This list might grow, but the prefix will be used. "csi.storage.k8s.io/pod.name": pod.Name "csi.storage.k8s.io/pod.namespace": pod.Namespace "csi.storage.k8s.io/pod.uid": string(pod.UID) "csi.storage.k8s.io/ephemeral": "true" iff the volume is an ephemeral inline volume
+    <dd>{{% md %}}If set to true, podInfoOnMount indicates this CSI volume driver requires additional pod information (like podName, podUID, etc.) during mount operations. If set to false, pod information will not be passed on mount. Default is false. The CSI driver specifies podInfoOnMount as part of driver deployment. If true, Kubelet will pass pod information as VolumeContext in the CSI NodePublishVolume() calls. The CSI driver is responsible for parsing and validating the information passed in as VolumeContext. The following VolumeConext will be passed if podInfoOnMount is set to true. This list might grow, but the prefix will be used. "csi.storage.k8s.io/pod.name": pod.Name "csi.storage.k8s.io/pod.namespace": pod.Namespace "csi.storage.k8s.io/pod.uid": string(pod.UID) "csi.storage.k8s.io/ephemeral": "true" if the volume is an ephemeral inline volume
                                 defined by a CSIVolumeSource, otherwise "false"
 
-"csi.storage.k8s.io/ephemeral" is a new feature in Kubernetes 1.16. It is only required for drivers which support both the "Persistent" and "Ephemeral" VolumeLifecycleMode. Other drivers can leave pod info disabled and/or ignore this field. As Kubernetes 1.15 doesn't support this field, drivers can only support one mode when deployed on such a cluster and the deployment determines which mode that is, for example via a command line parameter of the driver.{{% /md %}}</dd><dt class="property-optional"
+"csi.storage.k8s.io/ephemeral" is a new feature in Kubernetes 1.16. It is only required for drivers which support both the "Persistent" and "Ephemeral" VolumeLifecycleMode. Other drivers can leave pod info disabled and/or ignore this field. As Kubernetes 1.15 doesn't support this field, drivers can only support one mode when deployed on such a cluster and the deployment determines which mode that is, for example via a command line parameter of the driver.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresrepublish_go">
 <a href="#requiresrepublish_go" style="color: inherit; text-decoration: inherit;">Requires<wbr>Republish</a>
@@ -433,7 +449,7 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
 
 Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
 
-This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecapacity_go">
 <a href="#storagecapacity_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Capacity</a>
@@ -447,7 +463,9 @@ The check can be enabled immediately when deploying a driver. In that case, prov
 
 Alternatively, the driver can be deployed with the field unset or false and it can be flipped later when storage capacity information has been published.
 
-This is an alpha field and only available when the CSIStorageCapacity feature is enabled. The default is false.{{% /md %}}</dd><dt class="property-optional"
+This field is immutable.
+
+This is a beta field and only available when the CSIStorageCapacity feature is enabled. The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenrequests_go">
 <a href="#tokenrequests_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Requests</a>
@@ -465,7 +483,7 @@ This is an alpha field and only available when the CSIStorageCapacity feature is
 
 Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
 
-This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumelifecyclemodes_go">
 <a href="#volumelifecyclemodes_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Lifecycle<wbr>Modes</a>
@@ -473,7 +491,9 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The default if the list is empty is "Persistent", which is the usage defined by the CSI specification and implemented in Kubernetes via the usual PV/PVC mechanism. The other mode is "Ephemeral". In this mode, volumes are defined inline inside the pod spec with CSIVolumeSource and their lifecycle is tied to the lifecycle of that pod. A driver has to be aware of this because it is only going to get a NodePublishVolume call for such a volume. For more information about implementing this mode, see https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and more modes may be added in the future.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The default if the list is empty is "Persistent", which is the usage defined by the CSI specification and implemented in Kubernetes via the usual PV/PVC mechanism. The other mode is "Ephemeral". In this mode, volumes are defined inline inside the pod spec with CSIVolumeSource and their lifecycle is tied to the lifecycle of that pod. A driver has to be aware of this because it is only going to get a NodePublishVolume call for such a volume. For more information about implementing this mode, see https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and more modes may be added in the future.
+
+This field is immutable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -485,7 +505,9 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI ControllerPublishVolume() method), and that the Kubernetes attach detach controller should call the attach volume interface which checks the volumeattachment status and waits until the volume is attached before proceeding to mounting. The CSI external-attacher coordinates with CSI volume driver and updates the volumeattachment status when the attach operation is complete. If the CSIDriverRegistry feature gate is enabled and the value is specified to false, the attach operation will be skipped. Otherwise the attach operation will be called.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI ControllerPublishVolume() method), and that the Kubernetes attach detach controller should call the attach volume interface which checks the volumeattachment status and waits until the volume is attached before proceeding to mounting. The CSI external-attacher coordinates with CSI volume driver and updates the volumeattachment status when the attach operation is complete. If the CSIDriverRegistry feature gate is enabled and the value is specified to false, the attach operation will be skipped. Otherwise the attach operation will be called.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsgrouppolicy_nodejs">
 <a href="#fsgrouppolicy_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Group<wbr>Policy</a>
@@ -493,7 +515,9 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podinfoonmount_nodejs">
 <a href="#podinfoonmount_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Info<wbr>On<wbr>Mount</a>
@@ -501,10 +525,12 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, podInfoOnMount indicates this CSI volume driver requires additional pod information (like podName, podUID, etc.) during mount operations. If set to false, pod information will not be passed on mount. Default is false. The CSI driver specifies podInfoOnMount as part of driver deployment. If true, Kubelet will pass pod information as VolumeContext in the CSI NodePublishVolume() calls. The CSI driver is responsible for parsing and validating the information passed in as VolumeContext. The following VolumeConext will be passed if podInfoOnMount is set to true. This list might grow, but the prefix will be used. "csi.storage.k8s.io/pod.name": pod.Name "csi.storage.k8s.io/pod.namespace": pod.Namespace "csi.storage.k8s.io/pod.uid": string(pod.UID) "csi.storage.k8s.io/ephemeral": "true" iff the volume is an ephemeral inline volume
+    <dd>{{% md %}}If set to true, podInfoOnMount indicates this CSI volume driver requires additional pod information (like podName, podUID, etc.) during mount operations. If set to false, pod information will not be passed on mount. Default is false. The CSI driver specifies podInfoOnMount as part of driver deployment. If true, Kubelet will pass pod information as VolumeContext in the CSI NodePublishVolume() calls. The CSI driver is responsible for parsing and validating the information passed in as VolumeContext. The following VolumeConext will be passed if podInfoOnMount is set to true. This list might grow, but the prefix will be used. "csi.storage.k8s.io/pod.name": pod.Name "csi.storage.k8s.io/pod.namespace": pod.Namespace "csi.storage.k8s.io/pod.uid": string(pod.UID) "csi.storage.k8s.io/ephemeral": "true" if the volume is an ephemeral inline volume
                                 defined by a CSIVolumeSource, otherwise "false"
 
-"csi.storage.k8s.io/ephemeral" is a new feature in Kubernetes 1.16. It is only required for drivers which support both the "Persistent" and "Ephemeral" VolumeLifecycleMode. Other drivers can leave pod info disabled and/or ignore this field. As Kubernetes 1.15 doesn't support this field, drivers can only support one mode when deployed on such a cluster and the deployment determines which mode that is, for example via a command line parameter of the driver.{{% /md %}}</dd><dt class="property-optional"
+"csi.storage.k8s.io/ephemeral" is a new feature in Kubernetes 1.16. It is only required for drivers which support both the "Persistent" and "Ephemeral" VolumeLifecycleMode. Other drivers can leave pod info disabled and/or ignore this field. As Kubernetes 1.15 doesn't support this field, drivers can only support one mode when deployed on such a cluster and the deployment determines which mode that is, for example via a command line parameter of the driver.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresrepublish_nodejs">
 <a href="#requiresrepublish_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Republish</a>
@@ -516,7 +542,7 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
 
 Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
 
-This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecapacity_nodejs">
 <a href="#storagecapacity_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Capacity</a>
@@ -530,7 +556,9 @@ The check can be enabled immediately when deploying a driver. In that case, prov
 
 Alternatively, the driver can be deployed with the field unset or false and it can be flipped later when storage capacity information has been published.
 
-This is an alpha field and only available when the CSIStorageCapacity feature is enabled. The default is false.{{% /md %}}</dd><dt class="property-optional"
+This field is immutable.
+
+This is a beta field and only available when the CSIStorageCapacity feature is enabled. The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenrequests_nodejs">
 <a href="#tokenrequests_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Requests</a>
@@ -548,7 +576,7 @@ This is an alpha field and only available when the CSIStorageCapacity feature is
 
 Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
 
-This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumelifecyclemodes_nodejs">
 <a href="#volumelifecyclemodes_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Lifecycle<wbr>Modes</a>
@@ -556,7 +584,9 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The default if the list is empty is "Persistent", which is the usage defined by the CSI specification and implemented in Kubernetes via the usual PV/PVC mechanism. The other mode is "Ephemeral". In this mode, volumes are defined inline inside the pod spec with CSIVolumeSource and their lifecycle is tied to the lifecycle of that pod. A driver has to be aware of this because it is only going to get a NodePublishVolume call for such a volume. For more information about implementing this mode, see https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and more modes may be added in the future.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The default if the list is empty is "Persistent", which is the usage defined by the CSI specification and implemented in Kubernetes via the usual PV/PVC mechanism. The other mode is "Ephemeral". In this mode, volumes are defined inline inside the pod spec with CSIVolumeSource and their lifecycle is tied to the lifecycle of that pod. A driver has to be aware of this because it is only going to get a NodePublishVolume call for such a volume. For more information about implementing this mode, see https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and more modes may be added in the future.
+
+This field is immutable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -568,7 +598,9 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI ControllerPublishVolume() method), and that the Kubernetes attach detach controller should call the attach volume interface which checks the volumeattachment status and waits until the volume is attached before proceeding to mounting. The CSI external-attacher coordinates with CSI volume driver and updates the volumeattachment status when the attach operation is complete. If the CSIDriverRegistry feature gate is enabled and the value is specified to false, the attach operation will be skipped. Otherwise the attach operation will be called.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI ControllerPublishVolume() method), and that the Kubernetes attach detach controller should call the attach volume interface which checks the volumeattachment status and waits until the volume is attached before proceeding to mounting. The CSI external-attacher coordinates with CSI volume driver and updates the volumeattachment status when the attach operation is complete. If the CSIDriverRegistry feature gate is enabled and the value is specified to false, the attach operation will be skipped. Otherwise the attach operation will be called.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fs_group_policy_python">
 <a href="#fs_group_policy_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>group_<wbr>policy</a>
@@ -576,7 +608,9 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pod_info_on_mount_python">
 <a href="#pod_info_on_mount_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>info_<wbr>on_<wbr>mount</a>
@@ -584,10 +618,12 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, podInfoOnMount indicates this CSI volume driver requires additional pod information (like podName, podUID, etc.) during mount operations. If set to false, pod information will not be passed on mount. Default is false. The CSI driver specifies podInfoOnMount as part of driver deployment. If true, Kubelet will pass pod information as VolumeContext in the CSI NodePublishVolume() calls. The CSI driver is responsible for parsing and validating the information passed in as VolumeContext. The following VolumeConext will be passed if podInfoOnMount is set to true. This list might grow, but the prefix will be used. "csi.storage.k8s.io/pod.name": pod.Name "csi.storage.k8s.io/pod.namespace": pod.Namespace "csi.storage.k8s.io/pod.uid": string(pod.UID) "csi.storage.k8s.io/ephemeral": "true" iff the volume is an ephemeral inline volume
+    <dd>{{% md %}}If set to true, podInfoOnMount indicates this CSI volume driver requires additional pod information (like podName, podUID, etc.) during mount operations. If set to false, pod information will not be passed on mount. Default is false. The CSI driver specifies podInfoOnMount as part of driver deployment. If true, Kubelet will pass pod information as VolumeContext in the CSI NodePublishVolume() calls. The CSI driver is responsible for parsing and validating the information passed in as VolumeContext. The following VolumeConext will be passed if podInfoOnMount is set to true. This list might grow, but the prefix will be used. "csi.storage.k8s.io/pod.name": pod.Name "csi.storage.k8s.io/pod.namespace": pod.Namespace "csi.storage.k8s.io/pod.uid": string(pod.UID) "csi.storage.k8s.io/ephemeral": "true" if the volume is an ephemeral inline volume
                                 defined by a CSIVolumeSource, otherwise "false"
 
-"csi.storage.k8s.io/ephemeral" is a new feature in Kubernetes 1.16. It is only required for drivers which support both the "Persistent" and "Ephemeral" VolumeLifecycleMode. Other drivers can leave pod info disabled and/or ignore this field. As Kubernetes 1.15 doesn't support this field, drivers can only support one mode when deployed on such a cluster and the deployment determines which mode that is, for example via a command line parameter of the driver.{{% /md %}}</dd><dt class="property-optional"
+"csi.storage.k8s.io/ephemeral" is a new feature in Kubernetes 1.16. It is only required for drivers which support both the "Persistent" and "Ephemeral" VolumeLifecycleMode. Other drivers can leave pod info disabled and/or ignore this field. As Kubernetes 1.15 doesn't support this field, drivers can only support one mode when deployed on such a cluster and the deployment determines which mode that is, for example via a command line parameter of the driver.
+
+This field is immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_republish_python">
 <a href="#requires_republish_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>republish</a>
@@ -599,7 +635,7 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
 
 Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
 
-This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_capacity_python">
 <a href="#storage_capacity_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>capacity</a>
@@ -613,7 +649,9 @@ The check can be enabled immediately when deploying a driver. In that case, prov
 
 Alternatively, the driver can be deployed with the field unset or false and it can be flipped later when storage capacity information has been published.
 
-This is an alpha field and only available when the CSIStorageCapacity feature is enabled. The default is false.{{% /md %}}</dd><dt class="property-optional"
+This field is immutable.
+
+This is a beta field and only available when the CSIStorageCapacity feature is enabled. The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_requests_python">
 <a href="#token_requests_python" style="color: inherit; text-decoration: inherit;">token_<wbr>requests</a>
@@ -631,7 +669,7 @@ This is an alpha field and only available when the CSIStorageCapacity feature is
 
 Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
 
-This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_lifecycle_modes_python">
 <a href="#volume_lifecycle_modes_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>lifecycle_<wbr>modes</a>
@@ -639,7 +677,9 @@ This is an alpha feature and only available when the CSIServiceAccountToken feat
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The default if the list is empty is "Persistent", which is the usage defined by the CSI specification and implemented in Kubernetes via the usual PV/PVC mechanism. The other mode is "Ephemeral". In this mode, volumes are defined inline inside the pod spec with CSIVolumeSource and their lifecycle is tied to the lifecycle of that pod. A driver has to be aware of this because it is only going to get a NodePublishVolume call for such a volume. For more information about implementing this mode, see https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and more modes may be added in the future.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The default if the list is empty is "Persistent", which is the usage defined by the CSI specification and implemented in Kubernetes via the usual PV/PVC mechanism. The other mode is "Ephemeral". In this mode, volumes are defined inline inside the pod spec with CSIVolumeSource and their lifecycle is tied to the lifecycle of that pod. A driver has to be aware of this because it is only going to get a NodePublishVolume call for such a volume. For more information about implementing this mode, see https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and more modes may be added in the future.
+
+This field is immutable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
