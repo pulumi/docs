@@ -23,6 +23,6 @@ Explore the resources and functions of the okta.template module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/okta/terraform-provider-okta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
+	<dd>2.14.0</dd>
 </dl>
 
