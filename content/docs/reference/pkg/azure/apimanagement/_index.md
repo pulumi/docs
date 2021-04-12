@@ -23,6 +23,7 @@ Explore the resources and functions of the azure.apimanagement module.
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="customdomain" title="CustomDomain"><span class="symbol resource"></span>CustomDomain</a></li>
     <li><a href="diagnostic" title="Diagnostic"><span class="symbol resource"></span>Diagnostic</a></li>
+    <li><a href="emailtemplate" title="EmailTemplate"><span class="symbol resource"></span>EmailTemplate</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupuser" title="GroupUser"><span class="symbol resource"></span>GroupUser</a></li>
     <li><a href="identityprovideraad" title="IdentityProviderAad"><span class="symbol resource"></span>IdentityProviderAad</a></li>
@@ -64,6 +65,6 @@ Explore the resources and functions of the azure.apimanagement module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.54.0</dd>
+	<dd>3.56.0</dd>
 </dl>
 

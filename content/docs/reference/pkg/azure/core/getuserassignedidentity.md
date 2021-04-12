@@ -41,12 +41,15 @@ class MyStack : Stack
         }));
         this.UaiClientId = example.Apply(example => example.ClientId);
         this.UaiPrincipalId = example.Apply(example => example.PrincipalId);
+        this.UaiTenantId = example.Apply(example => example.TenantId);
     }
 
     [Output("uaiClientId")]
     public Output<string> UaiClientId { get; set; }
     [Output("uaiPrincipalId")]
     public Output<string> UaiPrincipalId { get; set; }
+    [Output("uaiTenantId")]
+    public Output<string> UaiTenantId { get; set; }
 }
 ```
 
@@ -75,6 +78,7 @@ func main() {
 		}
 		ctx.Export("uaiClientId", example.ClientId)
 		ctx.Export("uaiPrincipalId", example.PrincipalId)
+		ctx.Export("uaiTenantId", example.TenantId)
 		return nil
 	})
 }
@@ -94,6 +98,7 @@ example = azure.authorization.get_user_assigned_identity(name="name_of_user_assi
     resource_group_name="name_of_resource_group")
 pulumi.export("uaiClientId", example.client_id)
 pulumi.export("uaiPrincipalId", example.principal_id)
+pulumi.export("uaiTenantId", example.tenant_id)
 ```
 
 
@@ -113,6 +118,7 @@ const example = azure.authorization.getUserAssignedIdentity({
 });
 export const uaiClientId = example.then(example => example.clientId);
 export const uaiPrincipalId = example.then(example => example.principalId);
+export const uaiTenantId = example.then(example => example.tenantId);
 ```
 
 
@@ -320,6 +326,15 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the User Assigned Identity.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID of the User Assigned Identity.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -385,6 +400,15 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the User Assigned Identity.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID of the User Assigned Identity.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -450,6 +474,15 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the User Assigned Identity.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID of the User Assigned Identity.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -515,6 +548,15 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the User Assigned Identity.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Tenant ID of the User Assigned Identity.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

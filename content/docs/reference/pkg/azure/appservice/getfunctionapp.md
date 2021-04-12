@@ -298,6 +298,15 @@ The following output properties are available:
     <dd>{{% md %}}A key-value pair of App Settings.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="clientcertmode_csharp">
+<a href="#clientcertmode_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="connectionstrings_csharp">
 <a href="#connectionstrings_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
@@ -458,6 +467,15 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A key-value pair of App Settings.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="clientcertmode_go">
+<a href="#clientcertmode_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstrings_go">
@@ -622,6 +640,15 @@ The following output properties are available:
     <dd>{{% md %}}A key-value pair of App Settings.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="clientcertmode_nodejs">
+<a href="#clientcertmode_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="connectionstrings_nodejs">
 <a href="#connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
 </span>
@@ -782,6 +809,15 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key-value pair of App Settings.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="client_cert_mode_python">
+<a href="#client_cert_mode_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_strings_python">

@@ -209,7 +209,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
+    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target. Possible values are: `READ_HEAVY_INFREQ`, `READ_HEAVY_CHECK_180`, `WRITE_WORKLOAD_15`, `WRITE_AROUND`, `WRITE_WORKLOAD_CHECK_30`, `WRITE_WORKLOAD_CHECK_60` and `WRITE_WORKLOAD_CLOUDWS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -267,7 +267,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
+    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target. Possible values are: `READ_HEAVY_INFREQ`, `READ_HEAVY_CHECK_180`, `WRITE_WORKLOAD_15`, `WRITE_AROUND`, `WRITE_WORKLOAD_CHECK_30`, `WRITE_WORKLOAD_CHECK_60` and `WRITE_WORKLOAD_CLOUDWS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -325,7 +325,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
+    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target. Possible values are: `READ_HEAVY_INFREQ`, `READ_HEAVY_CHECK_180`, `WRITE_WORKLOAD_15`, `WRITE_AROUND`, `WRITE_WORKLOAD_CHECK_30`, `WRITE_WORKLOAD_CHECK_60` and `WRITE_WORKLOAD_CLOUDWS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -383,7 +383,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
+    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target. Possible values are: `READ_HEAVY_INFREQ`, `READ_HEAVY_CHECK_180`, `WRITE_WORKLOAD_15`, `WRITE_AROUND`, `WRITE_WORKLOAD_CHECK_30`, `WRITE_WORKLOAD_CHECK_60` and `WRITE_WORKLOAD_CLOUDWS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -628,7 +628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
+    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target. Possible values are: `READ_HEAVY_INFREQ`, `READ_HEAVY_CHECK_180`, `WRITE_WORKLOAD_15`, `WRITE_AROUND`, `WRITE_WORKLOAD_CHECK_30`, `WRITE_WORKLOAD_CHECK_60` and `WRITE_WORKLOAD_CLOUDWS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -686,7 +686,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
+    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target. Possible values are: `READ_HEAVY_INFREQ`, `READ_HEAVY_CHECK_180`, `WRITE_WORKLOAD_15`, `WRITE_AROUND`, `WRITE_WORKLOAD_CHECK_30`, `WRITE_WORKLOAD_CHECK_60` and `WRITE_WORKLOAD_CLOUDWS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -744,7 +744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
+    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target. Possible values are: `READ_HEAVY_INFREQ`, `READ_HEAVY_CHECK_180`, `WRITE_WORKLOAD_15`, `WRITE_AROUND`, `WRITE_WORKLOAD_CHECK_30`, `WRITE_WORKLOAD_CHECK_60` and `WRITE_WORKLOAD_CLOUDWS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -802,7 +802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
+    <dd>{{% md %}}The type of usage of the HPC Cache NFS Target. Possible values are: `READ_HEAVY_INFREQ`, `READ_HEAVY_CHECK_180`, `WRITE_WORKLOAD_15`, `WRITE_AROUND`, `WRITE_WORKLOAD_CHECK_30`, `WRITE_WORKLOAD_CHECK_60` and `WRITE_WORKLOAD_CLOUDWS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -838,6 +838,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The NFS export of this NFS target within the HPC Cache NFS Target.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accesspolicyname_csharp">
+<a href="#accesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="targetpath_csharp">
 <a href="#targetpath_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Path</a>
 </span>
@@ -867,6 +876,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The NFS export of this NFS target within the HPC Cache NFS Target.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accesspolicyname_go">
+<a href="#accesspolicyname_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpath_go">
@@ -900,6 +918,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The NFS export of this NFS target within the HPC Cache NFS Target.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accesspolicyname_nodejs">
+<a href="#accesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="targetpath_nodejs">
 <a href="#targetpath_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Path</a>
 </span>
@@ -929,6 +956,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The NFS export of this NFS target within the HPC Cache NFS Target.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="access_policy_name_python">
+<a href="#access_policy_name_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policy_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the access policy applied to this target. Defaults to `default`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_path_python">
