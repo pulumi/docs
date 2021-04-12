@@ -587,7 +587,7 @@ const exampleFunctionApp = new azure.appservice.FunctionApp("exampleFunctionApp"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FunctionApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[FunctionAppAuthSettingsArgs]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FunctionAppConnectionStringArgs]]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_builtin_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FunctionAppIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSourceControlArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FunctionApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[FunctionAppAuthSettingsArgs]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FunctionAppConnectionStringArgs]]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_builtin_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FunctionAppIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSourceControlArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -772,6 +772,15 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertmode_csharp">
+<a href="#clientcertmode_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests. Possible values are `Required` and `Optional`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstrings_csharp">
@@ -966,6 +975,15 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientcertmode_go">
+<a href="#clientcertmode_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests. Possible values are `Required` and `Optional`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="connectionstrings_go">
 <a href="#connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
@@ -1158,6 +1176,15 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientcertmode_nodejs">
+<a href="#clientcertmode_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests. Possible values are `Required` and `Optional`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="connectionstrings_nodejs">
 <a href="#connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
 </span>
@@ -1348,6 +1375,15 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_cert_mode_python">
+<a href="#client_cert_mode_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests. Possible values are `Required` and `Optional`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_strings_python">
@@ -1778,7 +1814,7 @@ Get an existing FunctionApp resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[FunctionAppAuthSettingsArgs]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FunctionAppConnectionStringArgs]]</span> = None<span class="p">, </span><span class="nx">custom_domain_verification_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_builtin_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FunctionAppIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">possible_outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">site_credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[FunctionAppSiteCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSourceControlArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FunctionApp</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[FunctionAppAuthSettingsArgs]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FunctionAppConnectionStringArgs]]</span> = None<span class="p">, </span><span class="nx">custom_domain_verification_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_builtin_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FunctionAppIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">possible_outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">site_credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[FunctionAppSiteCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSourceControlArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FunctionApp</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1925,6 +1961,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_clientcertmode_csharp">
+<a href="#state_clientcertmode_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests. Possible values are `Required` and `Optional`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_csharp">
@@ -2173,6 +2218,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_clientcertmode_go">
+<a href="#state_clientcertmode_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests. Possible values are `Required` and `Optional`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_connectionstrings_go">
 <a href="#state_connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
@@ -2419,6 +2473,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_clientcertmode_nodejs">
+<a href="#state_clientcertmode_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests. Possible values are `Required` and `Optional`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_connectionstrings_nodejs">
 <a href="#state_connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
 </span>
@@ -2663,6 +2726,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_client_cert_mode_python">
+<a href="#state_client_cert_mode_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The mode of the Function App's client certificates requirement for incoming requests. Possible values are `Required` and `Optional`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_strings_python">

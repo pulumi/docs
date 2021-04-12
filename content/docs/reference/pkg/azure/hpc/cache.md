@@ -209,7 +209,7 @@ const exampleCache = new azure.hpc.Cache("exampleCache", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_access_policy</span><span class="p">:</span> <span class="nx">Optional[CacheDefaultAccessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_access_policy</span><span class="p">:</span> <span class="nx">Optional[CacheDefaultAccessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[CacheDnsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ntp_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -396,6 +396,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dns_csharp">
+<a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dns` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -421,6 +430,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntpserver_csharp">
+<a href="#ntpserver_csharp" style="color: inherit; text-decoration: inherit;">Ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NTP server IP Address or FQDN for the HPC Cache. Defaults to `time.windows.com`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="rootsquashenabled_csharp">
@@ -481,6 +499,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dns_go">
+<a href="#dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns</a></span>
+    </dt>
+    <dd>{{% md %}}A `dns` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -506,6 +533,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntpserver_go">
+<a href="#ntpserver_go" style="color: inherit; text-decoration: inherit;">Ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NTP server IP Address or FQDN for the HPC Cache. Defaults to `time.windows.com`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="rootsquashenabled_go">
@@ -566,6 +602,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dns_nodejs">
+<a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns</a></span>
+    </dt>
+    <dd>{{% md %}}A `dns` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -591,6 +636,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntpserver_nodejs">
+<a href="#ntpserver_nodejs" style="color: inherit; text-decoration: inherit;">ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NTP server IP Address or FQDN for the HPC Cache. Defaults to `time.windows.com`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="rootsquashenabled_nodejs">
@@ -651,6 +705,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dns_python">
+<a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dns` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -676,6 +739,15 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ntp_server_python">
+<a href="#ntp_server_python" style="color: inherit; text-decoration: inherit;">ntp_<wbr>server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The NTP server IP Address or FQDN for the HPC Cache. Defaults to `time.windows.com`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="root_squash_enabled_python">
@@ -792,7 +864,7 @@ Get an existing Cache resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_access_policy</span><span class="p">:</span> <span class="nx">Optional[CacheDefaultAccessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cache</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_access_policy</span><span class="p">:</span> <span class="nx">Optional[CacheDefaultAccessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[CacheDnsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ntp_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_squash_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cache</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -923,6 +995,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dns_csharp">
+<a href="#state_dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dns` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -957,6 +1038,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ntpserver_csharp">
+<a href="#state_ntpserver_csharp" style="color: inherit; text-decoration: inherit;">Ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NTP server IP Address or FQDN for the HPC Cache. Defaults to `time.windows.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
@@ -1017,6 +1107,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dns_go">
+<a href="#state_dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns</a></span>
+    </dt>
+    <dd>{{% md %}}A `dns` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1051,6 +1150,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ntpserver_go">
+<a href="#state_ntpserver_go" style="color: inherit; text-decoration: inherit;">Ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NTP server IP Address or FQDN for the HPC Cache. Defaults to `time.windows.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1111,6 +1219,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dns_nodejs">
+<a href="#state_dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns</a></span>
+    </dt>
+    <dd>{{% md %}}A `dns` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1145,6 +1262,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ntpserver_nodejs">
+<a href="#state_ntpserver_nodejs" style="color: inherit; text-decoration: inherit;">ntp<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NTP server IP Address or FQDN for the HPC Cache. Defaults to `time.windows.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -1205,6 +1331,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dns_python">
+<a href="#state_dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `dns` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1239,6 +1374,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ntp_server_python">
+<a href="#state_ntp_server_python" style="color: inherit; text-decoration: inherit;">ntp_<wbr>server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The NTP server IP Address or FQDN for the HPC Cache. Defaults to `time.windows.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
@@ -1644,6 +1788,96 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether [SUID](https://docs.microsoft.com/en-us/azure/hpc-cache/access-policies#suid) is allowed? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cachedns">Cache<wbr>Dns</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servers_csharp">
+<a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of DNS servers for the HPC Cache. At most three IP(s) are allowed to set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="searchdomain_csharp">
+<a href="#searchdomain_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS search domain for the HPC Cache.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servers_go">
+<a href="#servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of DNS servers for the HPC Cache. At most three IP(s) are allowed to set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="searchdomain_go">
+<a href="#searchdomain_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS search domain for the HPC Cache.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servers_nodejs">
+<a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of DNS servers for the HPC Cache. At most three IP(s) are allowed to set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="searchdomain_nodejs">
+<a href="#searchdomain_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS search domain for the HPC Cache.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servers_python">
+<a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of DNS servers for the HPC Cache. At most three IP(s) are allowed to set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="search_domain_python">
+<a href="#search_domain_python" style="color: inherit; text-decoration: inherit;">search_<wbr>domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS search domain for the HPC Cache.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

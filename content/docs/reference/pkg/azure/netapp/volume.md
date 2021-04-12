@@ -1962,6 +1962,14 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of allowed protocols. Valid values include `CIFS`, `NFSv3`, or `NFSv4.1`. Only one value is supported at this time. This replaces the previous arguments: `cifs_enabled`, `nfsv3_enabled` and `nfsv4_enabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="rootaccessenabled_csharp">
+<a href="#rootaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="unixreadonly_csharp">
 <a href="#unixreadonly_csharp" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Only</a>
 </span>
@@ -2037,6 +2045,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of allowed protocols. Valid values include `CIFS`, `NFSv3`, or `NFSv4.1`. Only one value is supported at this time. This replaces the previous arguments: `cifs_enabled`, `nfsv3_enabled` and `nfsv4_enabled`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rootaccessenabled_go">
+<a href="#rootaccessenabled_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unixreadonly_go">
 <a href="#unixreadonly_go" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Only</a>
@@ -2114,6 +2130,14 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of allowed protocols. Valid values include `CIFS`, `NFSv3`, or `NFSv4.1`. Only one value is supported at this time. This replaces the previous arguments: `cifs_enabled`, `nfsv3_enabled` and `nfsv4_enabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="rootaccessenabled_nodejs">
+<a href="#rootaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="unixreadonly_nodejs">
 <a href="#unixreadonly_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Only</a>
 </span>
@@ -2189,6 +2213,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of allowed protocols. Valid values include `CIFS`, `NFSv3`, or `NFSv4.1`. Only one value is supported at this time. This replaces the previous arguments: `cifs_enabled`, `nfsv3_enabled` and `nfsv4_enabled`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="root_access_enabled_python">
+<a href="#root_access_enabled_python" style="color: inherit; text-decoration: inherit;">root_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unix_read_only_python">
 <a href="#unix_read_only_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>only</a>
