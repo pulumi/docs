@@ -54,6 +54,6 @@ A Pulumi package for creating and managing wavefront cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.8.1</dd>
+	<dd>0.9.0</dd>
 </dl>
 
