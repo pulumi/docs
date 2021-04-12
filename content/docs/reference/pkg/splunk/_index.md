@@ -36,6 +36,7 @@ A Pulumi package for creating and managing splunk cloud resources.
     <li><a href="outputstcpsyslog" title="OutputsTcpSyslog"><span class="symbol resource"></span>OutputsTcpSyslog</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="savedsearches" title="SavedSearches"><span class="symbol resource"></span>SavedSearches</a></li>
+    <li><a href="shindexesmanager" title="ShIndexesManager"><span class="symbol resource"></span>ShIndexesManager</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -47,6 +48,6 @@ A Pulumi package for creating and managing splunk cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.3.2</dd>
+	<dd>0.4.0</dd>
 </dl>
 
