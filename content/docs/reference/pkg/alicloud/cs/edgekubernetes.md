@@ -30,7 +30,7 @@ Kubernetes cluster can be imported using the id, e.g. Then complete the main.tf 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EdgeKubernetes</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rds_instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EdgeKubernetes</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rds_instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_performance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_disk_snapshot_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -410,6 +410,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Whether to create internet load balancer for API Server. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span>
@@ -435,13 +444,6 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#edgekubernetesworkerdatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
-* `category`: the type of the data disks. Valid values:
-* cloud : basic disks.
-* cloud_efficiency : ultra disks.
-* cloud_ssd : SSDs.
-* cloud_essd : ESSDs.
-* `size`: the size of a data disk, at least 40. Unit: GiB.
-* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerdiskcategory_csharp">
@@ -453,6 +455,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="workerdiskperformancelevel_csharp">
+<a href="#workerdiskperformancelevel_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Performance<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workerdisksize_csharp">
 <a href="#workerdisksize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Size</a>
 </span>
@@ -460,6 +471,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workerdisksnapshotpolicyid_csharp">
+<a href="#workerdisksnapshotpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerinstancechargetype_csharp">
@@ -712,6 +732,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Whether to create internet load balancer for API Server. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span>
@@ -737,13 +766,6 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#edgekubernetesworkerdatadisk">[]Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
-* `category`: the type of the data disks. Valid values:
-* cloud : basic disks.
-* cloud_efficiency : ultra disks.
-* cloud_ssd : SSDs.
-* cloud_essd : ESSDs.
-* `size`: the size of a data disk, at least 40. Unit: GiB.
-* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerdiskcategory_go">
@@ -755,6 +777,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="workerdiskperformancelevel_go">
+<a href="#workerdiskperformancelevel_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Performance<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workerdisksize_go">
 <a href="#workerdisksize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Size</a>
 </span>
@@ -762,6 +793,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workerdisksnapshotpolicyid_go">
+<a href="#workerdisksnapshotpolicyid_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerinstancechargetype_go">
@@ -1014,6 +1054,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Whether to create internet load balancer for API Server. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
@@ -1039,13 +1088,6 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
-* `category`: the type of the data disks. Valid values:
-* cloud : basic disks.
-* cloud_efficiency : ultra disks.
-* cloud_ssd : SSDs.
-* cloud_essd : ESSDs.
-* `size`: the size of a data disk, at least 40. Unit: GiB.
-* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerdiskcategory_nodejs">
@@ -1057,6 +1099,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="workerdiskperformancelevel_nodejs">
+<a href="#workerdiskperformancelevel_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Performance<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workerdisksize_nodejs">
 <a href="#workerdisksize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Size</a>
 </span>
@@ -1064,6 +1115,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workerdisksnapshotpolicyid_nodejs">
+<a href="#workerdisksnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerinstancechargetype_nodejs">
@@ -1316,6 +1376,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Whether to create internet load balancer for API Server. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="user_data_python">
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
@@ -1341,13 +1410,6 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Sequence[Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
-* `category`: the type of the data disks. Valid values:
-* cloud : basic disks.
-* cloud_efficiency : ultra disks.
-* cloud_ssd : SSDs.
-* cloud_essd : ESSDs.
-* `size`: the size of a data disk, at least 40. Unit: GiB.
-* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_disk_category_python">
@@ -1359,6 +1421,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="worker_disk_performance_level_python">
+<a href="#worker_disk_performance_level_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>performance_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="worker_disk_size_python">
 <a href="#worker_disk_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>size</a>
 </span>
@@ -1366,6 +1437,15 @@ The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="worker_disk_snapshot_policy_id_python">
+<a href="#worker_disk_snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>snapshot_<wbr>policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_instance_charge_type_python">
@@ -1689,7 +1769,7 @@ Get an existing EdgeKubernetes resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesCertificateAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesConnectionsArgs]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rds_instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slb_intranet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerNodeArgs]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> EdgeKubernetes</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesCertificateAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesConnectionsArgs]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rds_instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slb_intranet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_performance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_disk_snapshot_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerNodeArgs]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> EdgeKubernetes</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2057,6 +2137,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of private load balancer where the current cluster master node is located.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userdata_csharp">
 <a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span>
@@ -2091,13 +2180,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#edgekubernetesworkerdatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
-* `category`: the type of the data disks. Valid values:
-* cloud : basic disks.
-* cloud_efficiency : ultra disks.
-* cloud_ssd : SSDs.
-* cloud_essd : ESSDs.
-* `size`: the size of a data disk, at least 40. Unit: GiB.
-* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerdiskcategory_csharp">
@@ -2109,6 +2191,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_workerdiskperformancelevel_csharp">
+<a href="#state_workerdiskperformancelevel_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Performance<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_workerdisksize_csharp">
 <a href="#state_workerdisksize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Size</a>
 </span>
@@ -2116,6 +2207,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_workerdisksnapshotpolicyid_csharp">
+<a href="#state_workerdisksnapshotpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerinstancechargetype_csharp">
@@ -2420,6 +2520,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of private load balancer where the current cluster master node is located.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userdata_go">
 <a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span>
@@ -2454,13 +2563,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#edgekubernetesworkerdatadisk">[]Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
-* `category`: the type of the data disks. Valid values:
-* cloud : basic disks.
-* cloud_efficiency : ultra disks.
-* cloud_ssd : SSDs.
-* cloud_essd : ESSDs.
-* `size`: the size of a data disk, at least 40. Unit: GiB.
-* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerdiskcategory_go">
@@ -2472,6 +2574,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_workerdiskperformancelevel_go">
+<a href="#state_workerdiskperformancelevel_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Performance<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_workerdisksize_go">
 <a href="#state_workerdisksize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Size</a>
 </span>
@@ -2479,6 +2590,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_workerdisksnapshotpolicyid_go">
+<a href="#state_workerdisksnapshotpolicyid_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerinstancechargetype_go">
@@ -2783,6 +2903,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of private load balancer where the current cluster master node is located.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userdata_nodejs">
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
@@ -2817,13 +2946,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
-* `category`: the type of the data disks. Valid values:
-* cloud : basic disks.
-* cloud_efficiency : ultra disks.
-* cloud_ssd : SSDs.
-* cloud_essd : ESSDs.
-* `size`: the size of a data disk, at least 40. Unit: GiB.
-* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerdiskcategory_nodejs">
@@ -2835,6 +2957,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_workerdiskperformancelevel_nodejs">
+<a href="#state_workerdiskperformancelevel_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Performance<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_workerdisksize_nodejs">
 <a href="#state_workerdisksize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Size</a>
 </span>
@@ -2842,6 +2973,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_workerdisksnapshotpolicyid_nodejs">
+<a href="#state_workerdisksnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Snapshot<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerinstancechargetype_nodejs">
@@ -3146,6 +3286,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of private load balancer where the current cluster master node is located.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_user_data_python">
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
@@ -3180,13 +3329,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Sequence[Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
-* `category`: the type of the data disks. Valid values:
-* cloud : basic disks.
-* cloud_efficiency : ultra disks.
-* cloud_ssd : SSDs.
-* cloud_essd : ESSDs.
-* `size`: the size of a data disk, at least 40. Unit: GiB.
-* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_worker_disk_category_python">
@@ -3198,6 +3340,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_efficiency`, `cloud_ssd` and `cloud_essd` and . Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_worker_disk_performance_level_python">
+<a href="#state_worker_disk_performance_level_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>performance_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk performance level, when `worker_disk_category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_worker_disk_size_python">
 <a href="#state_worker_disk_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>size</a>
 </span>
@@ -3205,6 +3356,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_worker_disk_snapshot_policy_id_python">
+<a href="#state_worker_disk_snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>snapshot_<wbr>policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Worker node system disk auto snapshot policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_worker_instance_charge_type_python">
@@ -3743,7 +3903,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Worker node data disk auto snapshot policy.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -3751,7 +3912,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of the data disks. Valid values: `cloud`, `cloud_efficiency`, `cloud_ssd` and `cloud_essd`. Default to `cloud_efficiency`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_csharp">
 <a href="#device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -3767,7 +3929,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether to encrypt data disks. Valid values: true and false. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -3786,13 +3949,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="performancelevel_csharp">
+<a href="#performancelevel_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node data disk performance level, when `category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The size of a data disk, at least 40. Unit: GiB.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -3812,7 +3985,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Worker node data disk auto snapshot policy.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -3820,7 +3994,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of the data disks. Valid values: `cloud`, `cloud_efficiency`, `cloud_ssd` and `cloud_essd`. Default to `cloud_efficiency`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_go">
 <a href="#device_go" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -3836,7 +4011,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether to encrypt data disks. Valid values: true and false. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -3855,13 +4031,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="performancelevel_go">
+<a href="#performancelevel_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node data disk performance level, when `category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The size of a data disk, at least 40. Unit: GiB.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -3881,7 +4067,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Worker node data disk auto snapshot policy.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
@@ -3889,7 +4076,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of the data disks. Valid values: `cloud`, `cloud_efficiency`, `cloud_ssd` and `cloud_essd`. Default to `cloud_efficiency`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_nodejs">
 <a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
@@ -3905,7 +4093,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether to encrypt data disks. Valid values: true and false. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -3924,13 +4113,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="performancelevel_nodejs">
+<a href="#performancelevel_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Worker node data disk performance level, when `category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The size of a data disk, at least 40. Unit: GiB.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -3950,7 +4149,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Worker node data disk auto snapshot policy.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
@@ -3958,7 +4158,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of the data disks. Valid values: `cloud`, `cloud_efficiency`, `cloud_ssd` and `cloud_essd`. Default to `cloud_efficiency`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_python">
 <a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
@@ -3974,7 +4175,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether to encrypt data disks. Valid values: true and false. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -3993,13 +4195,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The kubernetes cluster's name. It is unique in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="performance_level_python">
+<a href="#performance_level_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Worker node data disk performance level, when `category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The size of a data disk, at least 40. Unit: GiB.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>

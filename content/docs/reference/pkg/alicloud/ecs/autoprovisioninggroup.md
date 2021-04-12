@@ -71,7 +71,7 @@ class MyStack : Stack
             MostRecent = true,
             Owners = "system",
         }));
-        var template = new AliCloud.Ecs.LaunchTemplate("template", new AliCloud.Ecs.LaunchTemplateArgs
+        var template = new AliCloud.Ecs.EcsLaunchTemplate("template", new AliCloud.Ecs.EcsLaunchTemplateArgs
         {
             ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
             InstanceType = "ecs.n1.tiny",
@@ -165,7 +165,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		template, err := ecs.NewLaunchTemplate(ctx, "template", &ecs.LaunchTemplateArgs{
+		template, err := ecs.NewEcsLaunchTemplate(ctx, "template", &ecs.EcsLaunchTemplateArgs{
 			ImageId:         pulumi.String(defaultImages.Images[0].Id),
 			InstanceType:    pulumi.String("ecs.n1.tiny"),
 			SecurityGroupId: defaultSecurityGroup.ID(),
@@ -223,7 +223,7 @@ default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_
 default_images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
     most_recent=True,
     owners="system")
-template = alicloud.ecs.LaunchTemplate("template",
+template = alicloud.ecs.EcsLaunchTemplate("template",
     image_id=default_images.images[0].id,
     instance_type="ecs.n1.tiny",
     security_group_id=default_security_group.id)
@@ -273,7 +273,7 @@ const defaultImages = alicloud.ecs.getImages({
     mostRecent: true,
     owners: "system",
 });
-const template = new alicloud.ecs.LaunchTemplate("template", {
+const template = new alicloud.ecs.EcsLaunchTemplate("template", {
     imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),
     instanceType: "ecs.n1.tiny",
     securityGroupId: defaultSecurityGroup.id,

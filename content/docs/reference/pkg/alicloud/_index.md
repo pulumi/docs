@@ -71,6 +71,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="resourcemanager/" title="resourcemanager"><span class="symbol module"></span>resourcemanager</a></li>
     <li><a href="rocketmq/" title="rocketmq"><span class="symbol module"></span>rocketmq</a></li>
     <li><a href="ros/" title="ros"><span class="symbol module"></span>ros</a></li>
+    <li><a href="sae/" title="sae"><span class="symbol module"></span>sae</a></li>
     <li><a href="sag/" title="sag"><span class="symbol module"></span>sag</a></li>
     <li><a href="slb/" title="slb"><span class="symbol module"></span>slb</a></li>
     <li><a href="tsdb/" title="tsdb"><span class="symbol module"></span>tsdb</a></li>
@@ -104,6 +105,6 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.38.1</dd>
+	<dd>2.39.0</dd>
 </dl>
 

@@ -19,6 +19,7 @@ This data source provides a list of Common Bandwidth Packages owned by an Alibab
 
   * `ip_address`   - The address of the EIP.
   * `allocation_id` - The ID of the EIP instance.
+  * `bandwidth_package_ip_relation_status` - The IP relation status of bandwidth package.
 
 
 {{% examples %}}
@@ -43,7 +44,7 @@ class MyStack : Stack
     {
         var fooCommonBandwithPackage = new AliCloud.Vpc.CommonBandwithPackage("fooCommonBandwithPackage", new AliCloud.Vpc.CommonBandwithPackageArgs
         {
-            Bandwidth = 2,
+            Bandwidth = "2",
             Description = "tf-testAcc-CommonBandwidthPackage",
         });
         var fooCommonBandwidthPackages = fooCommonBandwithPackage.Id.Apply(id => AliCloud.Vpc.GetCommonBandwidthPackages.InvokeAsync(new AliCloud.Vpc.GetCommonBandwidthPackagesArgs
@@ -76,7 +77,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		fooCommonBandwithPackage, err := vpc.NewCommonBandwithPackage(ctx, "fooCommonBandwithPackage", &vpc.CommonBandwithPackageArgs{
-			Bandwidth:   pulumi.Int(2),
+			Bandwidth:   pulumi.String("2"),
 			Description: pulumi.String("tf-testAcc-CommonBandwidthPackage"),
 		})
 		if err != nil {
@@ -98,7 +99,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 foo_common_bandwith_package = alicloud.vpc.CommonBandwithPackage("fooCommonBandwithPackage",
-    bandwidth=2,
+    bandwidth="2",
     description="tf-testAcc-CommonBandwidthPackage")
 foo_common_bandwidth_packages = foo_common_bandwith_package.id.apply(lambda id: alicloud.vpc.get_common_bandwidth_packages(ids=[id],
     name_regex="^tf-testAcc.*"))
@@ -116,7 +117,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const fooCommonBandwithPackage = new alicloud.vpc.CommonBandwithPackage("foo", {
-    bandwidth: 2,
+    bandwidth: "2",
     description: "tf-testAcc-CommonBandwidthPackage",
 });
 const fooCommonBandwidthPackages = fooCommonBandwithPackage.id.apply(id => alicloud.vpc.getCommonBandwidthPackages({
@@ -148,7 +149,7 @@ const fooCommonBandwidthPackages = fooCommonBandwithPackage.id.apply(id => alicl
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_common_bandwidth_packages(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCommonBandwidthPackagesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_common_bandwidth_packages(</span><span class="nx">bandwidth_package_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">include_reservation_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCommonBandwidthPackagesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -174,6 +175,24 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="bandwidthpackagename_csharp">
+<a href="#bandwidthpackagename_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_csharp">
+<a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck only the request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span>
@@ -181,6 +200,15 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Common Bandwidth Packages IDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includereservationdata_csharp">
+<a href="#includereservationdata_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Reservation<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to return data of orders that have not taken effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
@@ -207,11 +235,38 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of bandwidth package. Valid values: `Available` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthpackagename_go">
+<a href="#bandwidthpackagename_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_go">
+<a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck only the request.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -220,6 +275,15 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Common Bandwidth Packages IDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includereservationdata_go">
+<a href="#includereservationdata_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Reservation<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to return data of orders that have not taken effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
@@ -246,11 +310,38 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of bandwidth package. Valid values: `Available` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthpackagename_nodejs">
+<a href="#bandwidthpackagename_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_nodejs">
+<a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck only the request.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -259,6 +350,15 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Common Bandwidth Packages IDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includereservationdata_nodejs">
+<a href="#includereservationdata_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Reservation<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to return data of orders that have not taken effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
@@ -285,11 +385,38 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of bandwidth package. Valid values: `Available` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidth_package_name_python">
+<a href="#bandwidth_package_name_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>package_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dry_run_python">
+<a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck only the request.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -298,6 +425,15 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Common Bandwidth Packages IDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_reservation_data_python">
+<a href="#include_reservation_data_python" style="color: inherit; text-decoration: inherit;">include_<wbr>reservation_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to return data of orders that have not taken effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
@@ -324,6 +460,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of bandwidth package. Valid values: `Available` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -375,6 +520,31 @@ The following output properties are available:
     <dd>{{% md %}}A list of Common Bandwidth Packages. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="bandwidthpackagename_csharp">
+<a href="#bandwidthpackagename_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dryrun_csharp">
+<a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="includereservationdata_csharp">
+<a href="#includereservationdata_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Reservation<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -398,6 +568,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the Common Bandwidth Package.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -440,6 +619,31 @@ The following output properties are available:
     <dd>{{% md %}}A list of Common Bandwidth Packages. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="bandwidthpackagename_go">
+<a href="#bandwidthpackagename_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dryrun_go">
+<a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="includereservationdata_go">
+<a href="#includereservationdata_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Reservation<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -463,6 +667,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the Common Bandwidth Package.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -505,6 +718,31 @@ The following output properties are available:
     <dd>{{% md %}}A list of Common Bandwidth Packages. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="bandwidthpackagename_nodejs">
+<a href="#bandwidthpackagename_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dryrun_nodejs">
+<a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="includereservationdata_nodejs">
+<a href="#includereservationdata_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Reservation<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
@@ -528,6 +766,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the Common Bandwidth Package.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -570,6 +817,31 @@ The following output properties are available:
     <dd>{{% md %}}A list of Common Bandwidth Packages. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="bandwidth_package_name_python">
+<a href="#bandwidth_package_name_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>package_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dry_run_python">
+<a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="include_reservation_data_python">
+<a href="#include_reservation_data_python" style="color: inherit; text-decoration: inherit;">include_<wbr>reservation_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
 </span>
@@ -593,6 +865,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of the Common Bandwidth Package.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -618,6 +899,24 @@ The following output properties are available:
     <dd>{{% md %}}The peak bandwidth of the Internet Shared Bandwidth instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="bandwidthpackageid_csharp">
+<a href="#bandwidthpackageid_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="bandwidthpackagename_csharp">
+<a href="#bandwidthpackagename_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="businessstatus_csharp">
 <a href="#businessstatus_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Status</a>
 </span>
@@ -627,13 +926,13 @@ The following output properties are available:
     <dd>{{% md %}}The business status of the Common Bandwidth Package instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="creationtime_csharp">
-<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Time of creation.
+    <dd>{{% md %}}The deletion protection of bandwidth package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
@@ -645,6 +944,24 @@ The following output properties are available:
     <dd>{{% md %}}The description of the Common Bandwidth Package instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="expiredtime_csharp">
+<a href="#expiredtime_csharp" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The expired time of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hasreservationdata_csharp">
+<a href="#hasreservationdata_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Reservation<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is has reservation data.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -652,6 +969,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Common Bandwidth Package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internetchargetype_csharp">
+<a href="#internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type of bandwidth package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isp_csharp">
@@ -672,6 +998,15 @@ The following output properties are available:
     <dd>{{% md %}}Name of the Common Bandwidth Package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="paymenttype_csharp">
+<a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The payment type of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="publicipaddresses_csharp">
 <a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
 </span>
@@ -681,15 +1016,51 @@ The following output properties are available:
     <dd>{{% md %}}Public ip addresses that in the Common Bandwidth Pakcage.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+        <span id="ratio_csharp">
+<a href="#ratio_csharp" style="color: inherit; text-decoration: inherit;">Ratio</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ratio of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationactivetime_csharp">
+<a href="#reservationactivetime_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Active<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the Common Bandwidth Package.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The active time of reservation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationbandwidth_csharp">
+<a href="#reservationbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Bandwidth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth of reservation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationinternetchargetype_csharp">
+<a href="#reservationinternetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The charge type of reservation internet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationordertype_csharp">
+<a href="#reservationordertype_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of reservation order.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
 </span>
@@ -697,6 +1068,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="servicemanaged_csharp">
+<a href="#servicemanaged_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The service managed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of bandwidth package. Valid values: `Available` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -712,6 +1101,24 @@ The following output properties are available:
     <dd>{{% md %}}The peak bandwidth of the Internet Shared Bandwidth instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="bandwidthpackageid_go">
+<a href="#bandwidthpackageid_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="bandwidthpackagename_go">
+<a href="#bandwidthpackagename_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="businessstatus_go">
 <a href="#businessstatus_go" style="color: inherit; text-decoration: inherit;">Business<wbr>Status</a>
 </span>
@@ -721,13 +1128,13 @@ The following output properties are available:
     <dd>{{% md %}}The business status of the Common Bandwidth Package instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="creationtime_go">
-<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Time of creation.
+    <dd>{{% md %}}The deletion protection of bandwidth package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
@@ -739,6 +1146,24 @@ The following output properties are available:
     <dd>{{% md %}}The description of the Common Bandwidth Package instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="expiredtime_go">
+<a href="#expiredtime_go" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The expired time of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hasreservationdata_go">
+<a href="#hasreservationdata_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Reservation<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is has reservation data.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -746,6 +1171,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Common Bandwidth Package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internetchargetype_go">
+<a href="#internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type of bandwidth package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isp_go">
@@ -766,6 +1200,15 @@ The following output properties are available:
     <dd>{{% md %}}Name of the Common Bandwidth Package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="paymenttype_go">
+<a href="#paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The payment type of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="publicipaddresses_go">
 <a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
 </span>
@@ -775,15 +1218,51 @@ The following output properties are available:
     <dd>{{% md %}}Public ip addresses that in the Common Bandwidth Pakcage.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+        <span id="ratio_go">
+<a href="#ratio_go" style="color: inherit; text-decoration: inherit;">Ratio</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ratio of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationactivetime_go">
+<a href="#reservationactivetime_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Active<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the Common Bandwidth Package.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The active time of reservation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationbandwidth_go">
+<a href="#reservationbandwidth_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Bandwidth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth of reservation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationinternetchargetype_go">
+<a href="#reservationinternetchargetype_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The charge type of reservation internet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationordertype_go">
+<a href="#reservationordertype_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of reservation order.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
 </span>
@@ -791,6 +1270,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="servicemanaged_go">
+<a href="#servicemanaged_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The service managed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of bandwidth package. Valid values: `Available` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -806,6 +1303,24 @@ The following output properties are available:
     <dd>{{% md %}}The peak bandwidth of the Internet Shared Bandwidth instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="bandwidthpackageid_nodejs">
+<a href="#bandwidthpackageid_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Package<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="bandwidthpackagename_nodejs">
+<a href="#bandwidthpackagename_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="businessstatus_nodejs">
 <a href="#businessstatus_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Status</a>
 </span>
@@ -815,13 +1330,13 @@ The following output properties are available:
     <dd>{{% md %}}The business status of the Common Bandwidth Package instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="creationtime_nodejs">
-<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Time of creation.
+    <dd>{{% md %}}The deletion protection of bandwidth package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
@@ -833,6 +1348,24 @@ The following output properties are available:
     <dd>{{% md %}}The description of the Common Bandwidth Package instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="expiredtime_nodejs">
+<a href="#expiredtime_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The expired time of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hasreservationdata_nodejs">
+<a href="#hasreservationdata_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Reservation<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is has reservation data.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -840,6 +1373,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Common Bandwidth Package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internetchargetype_nodejs">
+<a href="#internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type of bandwidth package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isp_nodejs">
@@ -860,6 +1402,15 @@ The following output properties are available:
     <dd>{{% md %}}Name of the Common Bandwidth Package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="paymenttype_nodejs">
+<a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The payment type of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="publicipaddresses_nodejs">
 <a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
 </span>
@@ -869,15 +1420,51 @@ The following output properties are available:
     <dd>{{% md %}}Public ip addresses that in the Common Bandwidth Pakcage.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+        <span id="ratio_nodejs">
+<a href="#ratio_nodejs" style="color: inherit; text-decoration: inherit;">ratio</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The ratio of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationactivetime_nodejs">
+<a href="#reservationactivetime_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Active<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the Common Bandwidth Package.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The active time of reservation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationbandwidth_nodejs">
+<a href="#reservationbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Bandwidth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth of reservation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationinternetchargetype_nodejs">
+<a href="#reservationinternetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The charge type of reservation internet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservationordertype_nodejs">
+<a href="#reservationordertype_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Order<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of reservation order.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
@@ -885,6 +1472,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="servicemanaged_nodejs">
+<a href="#servicemanaged_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The service managed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of bandwidth package. Valid values: `Available` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -900,6 +1505,24 @@ The following output properties are available:
     <dd>{{% md %}}The peak bandwidth of the Internet Shared Bandwidth instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="bandwidth_package_id_python">
+<a href="#bandwidth_package_id_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>package_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="bandwidth_package_name_python">
+<a href="#bandwidth_package_name_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>package_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="business_status_python">
 <a href="#business_status_python" style="color: inherit; text-decoration: inherit;">business_<wbr>status</a>
 </span>
@@ -909,13 +1532,13 @@ The following output properties are available:
     <dd>{{% md %}}The business status of the Common Bandwidth Package instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="creation_time_python">
-<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Time of creation.
+    <dd>{{% md %}}The deletion protection of bandwidth package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
@@ -927,6 +1550,24 @@ The following output properties are available:
     <dd>{{% md %}}The description of the Common Bandwidth Package instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="expired_time_python">
+<a href="#expired_time_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The expired time of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="has_reservation_data_python">
+<a href="#has_reservation_data_python" style="color: inherit; text-decoration: inherit;">has_<wbr>reservation_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is has reservation data.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -934,6 +1575,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the Common Bandwidth Package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internet_charge_type_python">
+<a href="#internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The internet charge type of bandwidth package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isp_python">
@@ -954,6 +1604,15 @@ The following output properties are available:
     <dd>{{% md %}}Name of the Common Bandwidth Package.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="payment_type_python">
+<a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The payment type of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="public_ip_addresses_python">
 <a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
 </span>
@@ -963,15 +1622,51 @@ The following output properties are available:
     <dd>{{% md %}}Public ip addresses that in the Common Bandwidth Pakcage.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+        <span id="ratio_python">
+<a href="#ratio_python" style="color: inherit; text-decoration: inherit;">ratio</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ratio of bandwidth package.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservation_active_time_python">
+<a href="#reservation_active_time_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>active_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the Common Bandwidth Package.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The active time of reservation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservation_bandwidth_python">
+<a href="#reservation_bandwidth_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>bandwidth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth of reservation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservation_internet_charge_type_python">
+<a href="#reservation_internet_charge_type_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>internet_<wbr>charge_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The charge type of reservation internet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reservation_order_type_python">
+<a href="#reservation_order_type_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>order_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of reservation order.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
@@ -979,6 +1674,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the common bandwidth package belongs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="service_managed_python">
+<a href="#service_managed_python" style="color: inherit; text-decoration: inherit;">service_<wbr>managed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The service managed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of bandwidth package. Valid values: `Available` and `Pending`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -991,6 +1704,14 @@ The following output properties are available:
             title="Required">
         <span id="allocationid_csharp">
 <a href="#allocationid_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="bandwidthpackageiprelationstatus_csharp">
+<a href="#bandwidthpackageiprelationstatus_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Ip<wbr>Relation<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1017,6 +1738,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="bandwidthpackageiprelationstatus_go">
+<a href="#bandwidthpackageiprelationstatus_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Ip<wbr>Relation<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
 </span>
@@ -1037,6 +1766,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="bandwidthpackageiprelationstatus_nodejs">
+<a href="#bandwidthpackageiprelationstatus_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Package<wbr>Ip<wbr>Relation<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
@@ -1051,6 +1788,14 @@ The following output properties are available:
             title="Required">
         <span id="allocation_id_python">
 <a href="#allocation_id_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="bandwidth_package_ip_relation_status_python">
+<a href="#bandwidth_package_ip_relation_status_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>package_<wbr>ip_<wbr>relation_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
