@@ -22,7 +22,7 @@ meta_desc: "Documentation for the rancher2.ClusterSync resource with examples, i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ClusterSync</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">state_confirm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">synced</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ClusterSync</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">state_confirm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">synced</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_catalogs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -199,6 +199,15 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="waitcatalogs_csharp">
+<a href="#waitcatalogs_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="waitmonitoring_csharp">
 <a href="#waitmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Monitoring</a>
 </span>
@@ -246,6 +255,15 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="waitcatalogs_go">
+<a href="#waitcatalogs_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitmonitoring_go">
 <a href="#waitmonitoring_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Monitoring</a>
@@ -295,6 +313,15 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="waitcatalogs_nodejs">
+<a href="#waitcatalogs_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="waitmonitoring_nodejs">
 <a href="#waitmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Monitoring</a>
 </span>
@@ -342,6 +369,15 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="wait_catalogs_python">
+<a href="#wait_catalogs_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_monitoring_python">
 <a href="#wait_monitoring_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>monitoring</a>
@@ -565,7 +601,7 @@ Get an existing ClusterSync resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterSyncNodeArgs]]</span> = None<span class="p">, </span><span class="nx">state_confirm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">synced</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ClusterSync</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterSyncNodeArgs]]</span> = None<span class="p">, </span><span class="nx">state_confirm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">synced</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_catalogs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ClusterSync</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -749,6 +785,15 @@ The following state arguments are supported:
     <dd>{{% md %}}(Computed) System project ID for the cluster sync (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_waitcatalogs_csharp">
+<a href="#state_waitcatalogs_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_waitmonitoring_csharp">
 <a href="#state_waitmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Monitoring</a>
 </span>
@@ -831,6 +876,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) System project ID for the cluster sync (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_waitcatalogs_go">
+<a href="#state_waitcatalogs_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitmonitoring_go">
@@ -917,6 +971,15 @@ The following state arguments are supported:
     <dd>{{% md %}}(Computed) System project ID for the cluster sync (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_waitcatalogs_nodejs">
+<a href="#state_waitcatalogs_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_waitmonitoring_nodejs">
 <a href="#state_waitmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Monitoring</a>
 </span>
@@ -999,6 +1062,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) System project ID for the cluster sync (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_wait_catalogs_python">
+<a href="#state_wait_catalogs_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>catalogs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_monitoring_python">

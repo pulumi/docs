@@ -5319,8 +5319,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Hetzner Cloud server type. Default `cx11` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="useprivatenetworks_csharp">
-<a href="#useprivatenetworks_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Networks</a>
+        <span id="useprivatenetwork_csharp">
+<a href="#useprivatenetwork_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -5395,8 +5395,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Hetzner Cloud server type. Default `cx11` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="useprivatenetworks_go">
-<a href="#useprivatenetworks_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Networks</a>
+        <span id="useprivatenetwork_go">
+<a href="#useprivatenetwork_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -5471,8 +5471,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Hetzner Cloud server type. Default `cx11` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="useprivatenetworks_nodejs">
-<a href="#useprivatenetworks_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Networks</a>
+        <span id="useprivatenetwork_nodejs">
+<a href="#useprivatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -5547,8 +5547,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Hetzner Cloud server type. Default `cx11` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="use_private_networks_python">
-<a href="#use_private_networks_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>networks</a>
+        <span id="use_private_network_python">
+<a href="#use_private_network_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
