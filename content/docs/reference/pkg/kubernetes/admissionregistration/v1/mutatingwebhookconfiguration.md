@@ -749,7 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SideEffects states whether this webhook has side effects. Acceptable values are: None, NoneOnDryRun (webhooks created via v1beta1 may also specify Some or Unknown). Webhooks with side effects MUST implement a reconciliation system, since a request may be rejected by a future step in the admission change and the side effects therefore need to be undone. Requests with the dryRun attribute will be auto-rejected if they match a webhook with sideEffects == Unknown or Some.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SideEffects states whether this webhook has side effects. Acceptable values are: None, NoneOnDryRun (webhooks created via v1beta1 may also specify Some or Unknown). Webhooks with side effects MUST implement a reconciliation system, since a request may be rejected by a future step in the admission chain and the side effects therefore need to be undone. Requests with the dryRun attribute will be auto-rejected if they match a webhook with sideEffects == Unknown or Some.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurepolicy_csharp">
 <a href="#failurepolicy_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Policy</a>
@@ -883,7 +883,7 @@ Defaults to "Never".{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SideEffects states whether this webhook has side effects. Acceptable values are: None, NoneOnDryRun (webhooks created via v1beta1 may also specify Some or Unknown). Webhooks with side effects MUST implement a reconciliation system, since a request may be rejected by a future step in the admission change and the side effects therefore need to be undone. Requests with the dryRun attribute will be auto-rejected if they match a webhook with sideEffects == Unknown or Some.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SideEffects states whether this webhook has side effects. Acceptable values are: None, NoneOnDryRun (webhooks created via v1beta1 may also specify Some or Unknown). Webhooks with side effects MUST implement a reconciliation system, since a request may be rejected by a future step in the admission chain and the side effects therefore need to be undone. Requests with the dryRun attribute will be auto-rejected if they match a webhook with sideEffects == Unknown or Some.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurepolicy_go">
 <a href="#failurepolicy_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Policy</a>
@@ -1017,7 +1017,7 @@ Defaults to "Never".{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SideEffects states whether this webhook has side effects. Acceptable values are: None, NoneOnDryRun (webhooks created via v1beta1 may also specify Some or Unknown). Webhooks with side effects MUST implement a reconciliation system, since a request may be rejected by a future step in the admission change and the side effects therefore need to be undone. Requests with the dryRun attribute will be auto-rejected if they match a webhook with sideEffects == Unknown or Some.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SideEffects states whether this webhook has side effects. Acceptable values are: None, NoneOnDryRun (webhooks created via v1beta1 may also specify Some or Unknown). Webhooks with side effects MUST implement a reconciliation system, since a request may be rejected by a future step in the admission chain and the side effects therefore need to be undone. Requests with the dryRun attribute will be auto-rejected if they match a webhook with sideEffects == Unknown or Some.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurepolicy_nodejs">
 <a href="#failurepolicy_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Policy</a>
@@ -1151,7 +1151,7 @@ Defaults to "Never".{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SideEffects states whether this webhook has side effects. Acceptable values are: None, NoneOnDryRun (webhooks created via v1beta1 may also specify Some or Unknown). Webhooks with side effects MUST implement a reconciliation system, since a request may be rejected by a future step in the admission change and the side effects therefore need to be undone. Requests with the dryRun attribute will be auto-rejected if they match a webhook with sideEffects == Unknown or Some.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SideEffects states whether this webhook has side effects. Acceptable values are: None, NoneOnDryRun (webhooks created via v1beta1 may also specify Some or Unknown). Webhooks with side effects MUST implement a reconciliation system, since a request may be rejected by a future step in the admission chain and the side effects therefore need to be undone. Requests with the dryRun attribute will be auto-rejected if they match a webhook with sideEffects == Unknown or Some.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failure_policy_python">
 <a href="#failure_policy_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>policy</a>
