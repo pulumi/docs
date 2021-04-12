@@ -132,7 +132,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProfileServerSsl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate_depth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ca_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cache_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ciphers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expire_cert_response_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">full_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">generic_alert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">handshake_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mod_ssl_methods</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_cert_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ssl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retain_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secure_renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_mirroring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_ticket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_default</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_require</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy_bypass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_sign_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_resume</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tm_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">unclean_shutdown</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">untrusted_cert_response_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProfileServerSsl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate_depth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">c3d_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">c3d_ca_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">c3d_ca_passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">c3d_cert_extension_custom_oids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">c3d_cert_extension_includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">c3d_cert_lifespan</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">c3d_certificate_extensions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ca_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cache_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ciphers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expire_cert_response_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">full_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">generic_alert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">handshake_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mod_ssl_methods</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_cert_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ssl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retain_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secure_renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_mirroring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_ticket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_default</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_require</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_c3d</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy_bypass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_sign_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_resume</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tm_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">unclean_shutdown</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">untrusted_cert_response_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -280,7 +280,7 @@ The ProfileServerSsl resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
+    <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path,full path is the combination of the `partition + profile name`. For example `/Common/test-serverssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttimeout_csharp">
@@ -298,7 +298,8 @@ The ProfileServerSsl resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
+    <dd>{{% md %}}Specifies the frequency of server authentication for an SSL session.When `once`,specifies that the system authenticates the server once for an SSL session.
+When `always`, specifies that the system authenticates the server once for an SSL session and also upon reuse of that session.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatedepth_csharp">
@@ -308,6 +309,69 @@ The ProfileServerSsl resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcacert_csharp">
+<a href="#c3dcacert_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate file that is used as the certification authority certificate when SSL client certificate constrained delegation is enabled. The certificate should be generated and installed by you on the system. When selecting this option, type a certificate file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcakey_csharp">
+<a href="#c3dcakey_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the key file that is used as the certification authority key when SSL client certificate constrained delegation is enabled. The key should be generated and installed by you on the system. When selecting this option, type a key file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcapassphrase_csharp">
+<a href="#c3dcapassphrase_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertextensioncustomoids_csharp">
+<a href="#c3dcertextensioncustomoids_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Extension<wbr>Custom<wbr>Oids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Certificate Extensions List. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertextensionincludes_csharp">
+<a href="#c3dcertextensionincludes_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Extension<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies the extensions of the client certificates to be included in the generated certificates using SSL client certificate constrained delegation. For example, { basic-constraints }. The default value is { basic-constraints extended-key-usage key-usage subject-alternative-name }. The extensions are:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertlifespan_csharp">
+<a href="#c3dcertlifespan_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Certificate Lifespan. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertificateextensions_csharp">
+<a href="#c3dcertificateextensions_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Certificate<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default enabled
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cafile_csharp">
@@ -451,7 +515,7 @@ The ProfileServerSsl resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
+    <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passphrase_csharp">
@@ -593,6 +657,16 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sslc3d_csharp">
+<a href="#sslc3d_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>C3d</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables SSL forward proxy bypass on receiving
+handshake_failure, protocol_version or unsupported_extension alert message during the serverside SSL handshake. When enabled and there is an SSL handshake_failure, protocol_version or unsupported_extension alert during the serverside SSL handshake, SSL traffic bypasses the BIG-IP system untouched, without decryption/encryption. The default value is disabled. Conversely, you can specify enabled to use this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sslforwardproxy_csharp">
 <a href="#sslforwardproxy_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Forward<wbr>Proxy</a>
 </span>
@@ -635,7 +709,9 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
+Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncleanshutdown_csharp">
 <a href="#uncleanshutdown_csharp" style="color: inherit; text-decoration: inherit;">Unclean<wbr>Shutdown</a>
@@ -665,7 +741,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
+    <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path,full path is the combination of the `partition + profile name`. For example `/Common/test-serverssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttimeout_go">
@@ -683,7 +759,8 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
+    <dd>{{% md %}}Specifies the frequency of server authentication for an SSL session.When `once`,specifies that the system authenticates the server once for an SSL session.
+When `always`, specifies that the system authenticates the server once for an SSL session and also upon reuse of that session.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatedepth_go">
@@ -693,6 +770,69 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcacert_go">
+<a href="#c3dcacert_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate file that is used as the certification authority certificate when SSL client certificate constrained delegation is enabled. The certificate should be generated and installed by you on the system. When selecting this option, type a certificate file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcakey_go">
+<a href="#c3dcakey_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the key file that is used as the certification authority key when SSL client certificate constrained delegation is enabled. The key should be generated and installed by you on the system. When selecting this option, type a key file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcapassphrase_go">
+<a href="#c3dcapassphrase_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertextensioncustomoids_go">
+<a href="#c3dcertextensioncustomoids_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Extension<wbr>Custom<wbr>Oids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Certificate Extensions List. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertextensionincludes_go">
+<a href="#c3dcertextensionincludes_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Extension<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the extensions of the client certificates to be included in the generated certificates using SSL client certificate constrained delegation. For example, { basic-constraints }. The default value is { basic-constraints extended-key-usage key-usage subject-alternative-name }. The extensions are:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertlifespan_go">
+<a href="#c3dcertlifespan_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Certificate Lifespan. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertificateextensions_go">
+<a href="#c3dcertificateextensions_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Certificate<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default enabled
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cafile_go">
@@ -836,7 +976,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
+    <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passphrase_go">
@@ -978,6 +1118,16 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sslc3d_go">
+<a href="#sslc3d_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>C3d</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables SSL forward proxy bypass on receiving
+handshake_failure, protocol_version or unsupported_extension alert message during the serverside SSL handshake. When enabled and there is an SSL handshake_failure, protocol_version or unsupported_extension alert during the serverside SSL handshake, SSL traffic bypasses the BIG-IP system untouched, without decryption/encryption. The default value is disabled. Conversely, you can specify enabled to use this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sslforwardproxy_go">
 <a href="#sslforwardproxy_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Forward<wbr>Proxy</a>
 </span>
@@ -1020,7 +1170,9 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
+Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncleanshutdown_go">
 <a href="#uncleanshutdown_go" style="color: inherit; text-decoration: inherit;">Unclean<wbr>Shutdown</a>
@@ -1050,7 +1202,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
+    <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path,full path is the combination of the `partition + profile name`. For example `/Common/test-serverssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttimeout_nodejs">
@@ -1068,7 +1220,8 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
+    <dd>{{% md %}}Specifies the frequency of server authentication for an SSL session.When `once`,specifies that the system authenticates the server once for an SSL session.
+When `always`, specifies that the system authenticates the server once for an SSL session and also upon reuse of that session.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatedepth_nodejs">
@@ -1078,6 +1231,69 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcacert_nodejs">
+<a href="#c3dcacert_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate file that is used as the certification authority certificate when SSL client certificate constrained delegation is enabled. The certificate should be generated and installed by you on the system. When selecting this option, type a certificate file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcakey_nodejs">
+<a href="#c3dcakey_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Ca<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the key file that is used as the certification authority key when SSL client certificate constrained delegation is enabled. The key should be generated and installed by you on the system. When selecting this option, type a key file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcapassphrase_nodejs">
+<a href="#c3dcapassphrase_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Ca<wbr>Passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertextensioncustomoids_nodejs">
+<a href="#c3dcertextensioncustomoids_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Cert<wbr>Extension<wbr>Custom<wbr>Oids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Certificate Extensions List. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertextensionincludes_nodejs">
+<a href="#c3dcertextensionincludes_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Cert<wbr>Extension<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the extensions of the client certificates to be included in the generated certificates using SSL client certificate constrained delegation. For example, { basic-constraints }. The default value is { basic-constraints extended-key-usage key-usage subject-alternative-name }. The extensions are:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertlifespan_nodejs">
+<a href="#c3dcertlifespan_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Cert<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Certificate Lifespan. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3dcertificateextensions_nodejs">
+<a href="#c3dcertificateextensions_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Certificate<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default enabled
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cafile_nodejs">
@@ -1221,7 +1437,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
+    <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passphrase_nodejs">
@@ -1363,6 +1579,16 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sslc3d_nodejs">
+<a href="#sslc3d_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>C3d</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables SSL forward proxy bypass on receiving
+handshake_failure, protocol_version or unsupported_extension alert message during the serverside SSL handshake. When enabled and there is an SSL handshake_failure, protocol_version or unsupported_extension alert during the serverside SSL handshake, SSL traffic bypasses the BIG-IP system untouched, without decryption/encryption. The default value is disabled. Conversely, you can specify enabled to use this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sslforwardproxy_nodejs">
 <a href="#sslforwardproxy_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Forward<wbr>Proxy</a>
 </span>
@@ -1405,7 +1631,9 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
+Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncleanshutdown_nodejs">
 <a href="#uncleanshutdown_nodejs" style="color: inherit; text-decoration: inherit;">unclean<wbr>Shutdown</a>
@@ -1435,7 +1663,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
+    <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path,full path is the combination of the `partition + profile name`. For example `/Common/test-serverssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_timeout_python">
@@ -1453,7 +1681,8 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
+    <dd>{{% md %}}Specifies the frequency of server authentication for an SSL session.When `once`,specifies that the system authenticates the server once for an SSL session.
+When `always`, specifies that the system authenticates the server once for an SSL session and also upon reuse of that session.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticate_depth_python">
@@ -1463,6 +1692,69 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3d_ca_cert_python">
+<a href="#c3d_ca_cert_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>ca_<wbr>cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate file that is used as the certification authority certificate when SSL client certificate constrained delegation is enabled. The certificate should be generated and installed by you on the system. When selecting this option, type a certificate file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3d_ca_key_python">
+<a href="#c3d_ca_key_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>ca_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the key file that is used as the certification authority key when SSL client certificate constrained delegation is enabled. The key should be generated and installed by you on the system. When selecting this option, type a key file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3d_ca_passphrase_python">
+<a href="#c3d_ca_passphrase_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>ca_<wbr>passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3d_cert_extension_custom_oids_python">
+<a href="#c3d_cert_extension_custom_oids_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>cert_<wbr>extension_<wbr>custom_<wbr>oids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Certificate Extensions List. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3d_cert_extension_includes_python">
+<a href="#c3d_cert_extension_includes_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>cert_<wbr>extension_<wbr>includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the extensions of the client certificates to be included in the generated certificates using SSL client certificate constrained delegation. For example, { basic-constraints }. The default value is { basic-constraints extended-key-usage key-usage subject-alternative-name }. The extensions are:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3d_cert_lifespan_python">
+<a href="#c3d_cert_lifespan_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>cert_<wbr>lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Certificate Lifespan. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c3d_certificate_extensions_python">
+<a href="#c3d_certificate_extensions_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>certificate_<wbr>extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default enabled
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ca_file_python">
@@ -1606,7 +1898,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
+    <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passphrase_python">
@@ -1748,6 +2040,16 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ssl_c3d_python">
+<a href="#ssl_c3d_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>c3d</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables SSL forward proxy bypass on receiving
+handshake_failure, protocol_version or unsupported_extension alert message during the serverside SSL handshake. When enabled and there is an SSL handshake_failure, protocol_version or unsupported_extension alert during the serverside SSL handshake, SSL traffic bypasses the BIG-IP system untouched, without decryption/encryption. The default value is disabled. Conversely, you can specify enabled to use this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ssl_forward_proxy_python">
 <a href="#ssl_forward_proxy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>forward_<wbr>proxy</a>
 </span>
@@ -1790,7 +2092,9 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
+Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unclean_shutdown_python">
 <a href="#unclean_shutdown_python" style="color: inherit; text-decoration: inherit;">unclean_<wbr>shutdown</a>
@@ -1879,7 +2183,7 @@ Get an existing ProfileServerSsl resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate_depth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ca_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cache_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ciphers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expire_cert_response_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">full_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">generic_alert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">handshake_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mod_ssl_methods</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_cert_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ssl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retain_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secure_renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_mirroring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_ticket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_default</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_require</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy_bypass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_sign_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_resume</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tm_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">unclean_shutdown</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">untrusted_cert_response_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ProfileServerSsl</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate_depth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">c3d_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">c3d_ca_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">c3d_ca_passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">c3d_cert_extension_custom_oids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">c3d_cert_extension_includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">c3d_cert_lifespan</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">c3d_certificate_extensions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ca_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cache_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ciphers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expire_cert_response_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">full_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">generic_alert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">handshake_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mod_ssl_methods</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_cert_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ca_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_ssl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiate_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retain_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secure_renegotiation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_mirroring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_ticket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_default</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sni_require</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_c3d</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_forward_proxy_bypass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_sign_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_resume</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tm_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">unclean_shutdown</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">untrusted_cert_response_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ProfileServerSsl</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2007,7 +2311,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
+    <dd>{{% md %}}Specifies the frequency of server authentication for an SSL session.When `once`,specifies that the system authenticates the server once for an SSL session.
+When `always`, specifies that the system authenticates the server once for an SSL session and also upon reuse of that session.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticatedepth_csharp">
@@ -2017,6 +2322,69 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcacert_csharp">
+<a href="#state_c3dcacert_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate file that is used as the certification authority certificate when SSL client certificate constrained delegation is enabled. The certificate should be generated and installed by you on the system. When selecting this option, type a certificate file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcakey_csharp">
+<a href="#state_c3dcakey_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the key file that is used as the certification authority key when SSL client certificate constrained delegation is enabled. The key should be generated and installed by you on the system. When selecting this option, type a key file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcapassphrase_csharp">
+<a href="#state_c3dcapassphrase_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertextensioncustomoids_csharp">
+<a href="#state_c3dcertextensioncustomoids_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Extension<wbr>Custom<wbr>Oids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Certificate Extensions List. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertextensionincludes_csharp">
+<a href="#state_c3dcertextensionincludes_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Extension<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies the extensions of the client certificates to be included in the generated certificates using SSL client certificate constrained delegation. For example, { basic-constraints }. The default value is { basic-constraints extended-key-usage key-usage subject-alternative-name }. The extensions are:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertlifespan_csharp">
+<a href="#state_c3dcertlifespan_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Certificate Lifespan. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertificateextensions_csharp">
+<a href="#state_c3dcertificateextensions_csharp" style="color: inherit; text-decoration: inherit;">C3d<wbr>Certificate<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default enabled
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cafile_csharp">
@@ -2160,7 +2528,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
+    <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path,full path is the combination of the `partition + profile name`. For example `/Common/test-serverssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_csharp">
@@ -2169,7 +2537,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
+    <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passphrase_csharp">
@@ -2311,6 +2679,16 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sslc3d_csharp">
+<a href="#state_sslc3d_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>C3d</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables SSL forward proxy bypass on receiving
+handshake_failure, protocol_version or unsupported_extension alert message during the serverside SSL handshake. When enabled and there is an SSL handshake_failure, protocol_version or unsupported_extension alert during the serverside SSL handshake, SSL traffic bypasses the BIG-IP system untouched, without decryption/encryption. The default value is disabled. Conversely, you can specify enabled to use this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sslforwardproxy_csharp">
 <a href="#state_sslforwardproxy_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Forward<wbr>Proxy</a>
 </span>
@@ -2353,7 +2731,9 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
+Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uncleanshutdown_csharp">
 <a href="#state_uncleanshutdown_csharp" style="color: inherit; text-decoration: inherit;">Unclean<wbr>Shutdown</a>
@@ -2392,7 +2772,8 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
+    <dd>{{% md %}}Specifies the frequency of server authentication for an SSL session.When `once`,specifies that the system authenticates the server once for an SSL session.
+When `always`, specifies that the system authenticates the server once for an SSL session and also upon reuse of that session.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticatedepth_go">
@@ -2402,6 +2783,69 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcacert_go">
+<a href="#state_c3dcacert_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate file that is used as the certification authority certificate when SSL client certificate constrained delegation is enabled. The certificate should be generated and installed by you on the system. When selecting this option, type a certificate file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcakey_go">
+<a href="#state_c3dcakey_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the key file that is used as the certification authority key when SSL client certificate constrained delegation is enabled. The key should be generated and installed by you on the system. When selecting this option, type a key file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcapassphrase_go">
+<a href="#state_c3dcapassphrase_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Ca<wbr>Passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertextensioncustomoids_go">
+<a href="#state_c3dcertextensioncustomoids_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Extension<wbr>Custom<wbr>Oids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Certificate Extensions List. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertextensionincludes_go">
+<a href="#state_c3dcertextensionincludes_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Extension<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the extensions of the client certificates to be included in the generated certificates using SSL client certificate constrained delegation. For example, { basic-constraints }. The default value is { basic-constraints extended-key-usage key-usage subject-alternative-name }. The extensions are:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertlifespan_go">
+<a href="#state_c3dcertlifespan_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Cert<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Certificate Lifespan. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertificateextensions_go">
+<a href="#state_c3dcertificateextensions_go" style="color: inherit; text-decoration: inherit;">C3d<wbr>Certificate<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default enabled
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cafile_go">
@@ -2545,7 +2989,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
+    <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path,full path is the combination of the `partition + profile name`. For example `/Common/test-serverssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_go">
@@ -2554,7 +2998,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
+    <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passphrase_go">
@@ -2696,6 +3140,16 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sslc3d_go">
+<a href="#state_sslc3d_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>C3d</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables SSL forward proxy bypass on receiving
+handshake_failure, protocol_version or unsupported_extension alert message during the serverside SSL handshake. When enabled and there is an SSL handshake_failure, protocol_version or unsupported_extension alert during the serverside SSL handshake, SSL traffic bypasses the BIG-IP system untouched, without decryption/encryption. The default value is disabled. Conversely, you can specify enabled to use this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sslforwardproxy_go">
 <a href="#state_sslforwardproxy_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Forward<wbr>Proxy</a>
 </span>
@@ -2738,7 +3192,9 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
+Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uncleanshutdown_go">
 <a href="#state_uncleanshutdown_go" style="color: inherit; text-decoration: inherit;">Unclean<wbr>Shutdown</a>
@@ -2777,7 +3233,8 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
+    <dd>{{% md %}}Specifies the frequency of server authentication for an SSL session.When `once`,specifies that the system authenticates the server once for an SSL session.
+When `always`, specifies that the system authenticates the server once for an SSL session and also upon reuse of that session.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticatedepth_nodejs">
@@ -2787,6 +3244,69 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcacert_nodejs">
+<a href="#state_c3dcacert_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate file that is used as the certification authority certificate when SSL client certificate constrained delegation is enabled. The certificate should be generated and installed by you on the system. When selecting this option, type a certificate file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcakey_nodejs">
+<a href="#state_c3dcakey_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Ca<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the key file that is used as the certification authority key when SSL client certificate constrained delegation is enabled. The key should be generated and installed by you on the system. When selecting this option, type a key file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcapassphrase_nodejs">
+<a href="#state_c3dcapassphrase_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Ca<wbr>Passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertextensioncustomoids_nodejs">
+<a href="#state_c3dcertextensioncustomoids_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Cert<wbr>Extension<wbr>Custom<wbr>Oids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Certificate Extensions List. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertextensionincludes_nodejs">
+<a href="#state_c3dcertextensionincludes_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Cert<wbr>Extension<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the extensions of the client certificates to be included in the generated certificates using SSL client certificate constrained delegation. For example, { basic-constraints }. The default value is { basic-constraints extended-key-usage key-usage subject-alternative-name }. The extensions are:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertlifespan_nodejs">
+<a href="#state_c3dcertlifespan_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Cert<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Certificate Lifespan. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3dcertificateextensions_nodejs">
+<a href="#state_c3dcertificateextensions_nodejs" style="color: inherit; text-decoration: inherit;">c3d<wbr>Certificate<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default enabled
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cafile_nodejs">
@@ -2930,7 +3450,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
+    <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path,full path is the combination of the `partition + profile name`. For example `/Common/test-serverssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_nodejs">
@@ -2939,7 +3459,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
+    <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passphrase_nodejs">
@@ -3081,6 +3601,16 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sslc3d_nodejs">
+<a href="#state_sslc3d_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>C3d</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables SSL forward proxy bypass on receiving
+handshake_failure, protocol_version or unsupported_extension alert message during the serverside SSL handshake. When enabled and there is an SSL handshake_failure, protocol_version or unsupported_extension alert during the serverside SSL handshake, SSL traffic bypasses the BIG-IP system untouched, without decryption/encryption. The default value is disabled. Conversely, you can specify enabled to use this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sslforwardproxy_nodejs">
 <a href="#state_sslforwardproxy_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Forward<wbr>Proxy</a>
 </span>
@@ -3123,7 +3653,9 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
+Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uncleanshutdown_nodejs">
 <a href="#state_uncleanshutdown_nodejs" style="color: inherit; text-decoration: inherit;">unclean<wbr>Shutdown</a>
@@ -3162,7 +3694,8 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
+    <dd>{{% md %}}Specifies the frequency of server authentication for an SSL session.When `once`,specifies that the system authenticates the server once for an SSL session.
+When `always`, specifies that the system authenticates the server once for an SSL session and also upon reuse of that session.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticate_depth_python">
@@ -3172,6 +3705,69 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3d_ca_cert_python">
+<a href="#state_c3d_ca_cert_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>ca_<wbr>cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate file that is used as the certification authority certificate when SSL client certificate constrained delegation is enabled. The certificate should be generated and installed by you on the system. When selecting this option, type a certificate file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3d_ca_key_python">
+<a href="#state_c3d_ca_key_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>ca_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the key file that is used as the certification authority key when SSL client certificate constrained delegation is enabled. The key should be generated and installed by you on the system. When selecting this option, type a key file name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3d_ca_passphrase_python">
+<a href="#state_c3d_ca_passphrase_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>ca_<wbr>passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3d_cert_extension_custom_oids_python">
+<a href="#state_c3d_cert_extension_custom_oids_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>cert_<wbr>extension_<wbr>custom_<wbr>oids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Certificate Extensions List. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3d_cert_extension_includes_python">
+<a href="#state_c3d_cert_extension_includes_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>cert_<wbr>extension_<wbr>includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the extensions of the client certificates to be included in the generated certificates using SSL client certificate constrained delegation. For example, { basic-constraints }. The default value is { basic-constraints extended-key-usage key-usage subject-alternative-name }. The extensions are:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3d_cert_lifespan_python">
+<a href="#state_c3d_cert_lifespan_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>cert_<wbr>lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Certificate Lifespan. Default
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_c3d_certificate_extensions_python">
+<a href="#state_c3d_certificate_extensions_python" style="color: inherit; text-decoration: inherit;">c3d_<wbr>certificate_<wbr>extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}CA Passphrase. Default enabled
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ca_file_python">
@@ -3315,7 +3911,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
+    <dd>{{% md %}}Specifies the name of the profile.Name of Profile should be full path,full path is the combination of the `partition + profile name`. For example `/Common/test-serverssl-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_python">
@@ -3324,7 +3920,7 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
+    <dd>{{% md %}}name of partition
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passphrase_python">
@@ -3466,6 +4062,16 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ssl_c3d_python">
+<a href="#state_ssl_c3d_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>c3d</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables SSL forward proxy bypass on receiving
+handshake_failure, protocol_version or unsupported_extension alert message during the serverside SSL handshake. When enabled and there is an SSL handshake_failure, protocol_version or unsupported_extension alert during the serverside SSL handshake, SSL traffic bypasses the BIG-IP system untouched, without decryption/encryption. The default value is disabled. Conversely, you can specify enabled to use this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ssl_forward_proxy_python">
 <a href="#state_ssl_forward_proxy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>forward_<wbr>proxy</a>
 </span>
@@ -3508,7 +4114,9 @@ There can be only one SSL profile with this setting enabled.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of Enabled selection from a set of industry standard options for handling SSL processing.By default,
+Don't insert empty fragments and No TLSv1.3 are listed as Enabled Options. `Usage` : tm_options    = ["dont-insert-empty-fragments","no-tlsv1.3"]
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unclean_shutdown_python">
 <a href="#state_unclean_shutdown_python" style="color: inherit; text-decoration: inherit;">unclean_<wbr>shutdown</a>

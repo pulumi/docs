@@ -275,7 +275,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Partition on to SSL Certificate key to be imported
+    <dd>{{% md %}}Partition of ssl certificate key
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -306,7 +306,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Partition on to SSL Certificate key to be imported
+    <dd>{{% md %}}Partition of ssl certificate key
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -337,7 +337,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Partition on to SSL Certificate key to be imported
+    <dd>{{% md %}}Partition of ssl certificate key
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -368,7 +368,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Partition on to SSL Certificate key to be imported
+    <dd>{{% md %}}Partition of ssl certificate key
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -577,7 +577,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Partition on to SSL Certificate key to be imported
+    <dd>{{% md %}}Partition of ssl certificate key
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -608,7 +608,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Partition on to SSL Certificate key to be imported
+    <dd>{{% md %}}Partition of ssl certificate key
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -639,7 +639,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Partition on to SSL Certificate key to be imported
+    <dd>{{% md %}}Partition of ssl certificate key
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -670,7 +670,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Partition on to SSL Certificate key to be imported
+    <dd>{{% md %}}Partition of ssl certificate key
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

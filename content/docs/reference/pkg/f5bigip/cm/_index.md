@@ -24,6 +24,6 @@ Explore the resources and functions of the f5bigip.cm module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.10.1</dd>
+	<dd>2.11.0</dd>
 </dl>
 
