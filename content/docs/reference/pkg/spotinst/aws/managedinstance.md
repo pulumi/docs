@@ -54,6 +54,16 @@ import * as spotinst from "@pulumi/spotinst";
 // Create a Manged Instance
 const default_managed_instance = new spotinst.aws.ManagedInstance("default-managed-instance", {
     autoHealing: true,
+    blockDeviceMappings: [{
+        deviceName: "/dev/xvdcz",
+        ebs: {
+            deleteOnTermination: true,
+            iops: 100,
+            throughput: 125,
+            volumeSize: 50,
+            volumeType: "gp3",
+        },
+    }],
     blockDevicesMode: "reattach",
     cpuCredits: "standard",
     description: "created by Pulumi",
@@ -130,7 +140,7 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fall_back_to_od</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">life_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">optimization_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceTagArgs]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fall_back_to_od</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">life_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">optimization_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceTagArgs]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -334,6 +344,15 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="blockdevicemappings_csharp">
+<a href="#blockdevicemappings_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemapping">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Attributes controls a portion of the AWS:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="blockdevicesmode_csharp">
 <a href="#blockdevicesmode_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Devices<wbr>Mode</a>
 </span>
@@ -351,7 +370,6 @@ Default: `"onLaunch"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
-Default: unlimited
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -702,6 +720,15 @@ Default: `"false"`.
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="blockdevicemappings_go">
+<a href="#blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemapping">[]Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping</a></span>
+    </dt>
+    <dd>{{% md %}}Attributes controls a portion of the AWS:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="blockdevicesmode_go">
 <a href="#blockdevicesmode_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Devices<wbr>Mode</a>
 </span>
@@ -719,7 +746,6 @@ Default: `"onLaunch"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
-Default: unlimited
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -1070,6 +1096,15 @@ Default: `"false"`.
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="blockdevicemappings_nodejs">
+<a href="#blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemapping">Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
+    </dt>
+    <dd>{{% md %}}Attributes controls a portion of the AWS:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="blockdevicesmode_nodejs">
 <a href="#blockdevicesmode_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Devices<wbr>Mode</a>
 </span>
@@ -1087,7 +1122,6 @@ Default: `"onLaunch"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
-Default: unlimited
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -1438,6 +1472,15 @@ Default: `"false"`.
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="block_device_mappings_python">
+<a href="#block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemapping">Sequence[Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Attributes controls a portion of the AWS:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="block_devices_mode_python">
 <a href="#block_devices_mode_python" style="color: inherit; text-decoration: inherit;">block_<wbr>devices_<wbr>mode</a>
 </span>
@@ -1455,7 +1498,6 @@ Default: `"onLaunch"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
-Default: unlimited
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1809,7 +1851,7 @@ Get an existing ManagedInstance resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fall_back_to_od</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">life_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">optimization_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceTagArgs]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ManagedInstance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fall_back_to_od</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">life_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">optimization_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceTagArgs]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ManagedInstance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1931,6 +1973,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_blockdevicemappings_csharp">
+<a href="#state_blockdevicemappings_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemapping">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Attributes controls a portion of the AWS:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_blockdevicesmode_csharp">
 <a href="#state_blockdevicesmode_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Devices<wbr>Mode</a>
 </span>
@@ -1948,7 +1999,6 @@ Default: `"onLaunch"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
-Default: unlimited
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -2299,6 +2349,15 @@ Default: `"false"`.
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_blockdevicemappings_go">
+<a href="#state_blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemapping">[]Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping</a></span>
+    </dt>
+    <dd>{{% md %}}Attributes controls a portion of the AWS:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_blockdevicesmode_go">
 <a href="#state_blockdevicesmode_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Devices<wbr>Mode</a>
 </span>
@@ -2316,7 +2375,6 @@ Default: `"onLaunch"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
-Default: unlimited
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -2667,6 +2725,15 @@ Default: `"false"`.
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_blockdevicemappings_nodejs">
+<a href="#state_blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemapping">Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
+    </dt>
+    <dd>{{% md %}}Attributes controls a portion of the AWS:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_blockdevicesmode_nodejs">
 <a href="#state_blockdevicesmode_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Devices<wbr>Mode</a>
 </span>
@@ -2684,7 +2751,6 @@ Default: `"onLaunch"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
-Default: unlimited
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -3035,6 +3101,15 @@ Default: `"false"`.
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `"true"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_block_device_mappings_python">
+<a href="#state_block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemapping">Sequence[Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Attributes controls a portion of the AWS:
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_block_devices_mode_python">
 <a href="#state_block_devices_mode_python" style="color: inherit; text-decoration: inherit;">block_<wbr>devices_<wbr>mode</a>
 </span>
@@ -3052,7 +3127,6 @@ Default: `"onLaunch"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: `"unlimited"`, `"standard"`.
-Default: unlimited
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -3399,6 +3473,290 @@ Default: `"false"`.
 ## Supporting Types
 
 
+
+<h4 id="managedinstanceblockdevicemapping">Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="devicename_csharp">
+<a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the device to mount.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ebs_csharp">
+<a href="#ebs_csharp" style="color: inherit; text-decoration: inherit;">Ebs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemappingebs">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="devicename_go">
+<a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the device to mount.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ebs_go">
+<a href="#ebs_go" style="color: inherit; text-decoration: inherit;">Ebs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemappingebs">Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="devicename_nodejs">
+<a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the device to mount.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ebs_nodejs">
+<a href="#ebs_nodejs" style="color: inherit; text-decoration: inherit;">ebs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemappingebs">Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the device to mount.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ebs_python">
+<a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceblockdevicemappingebs">Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedinstanceblockdevicemappingebs">Managed<wbr>Instance<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="deleteontermination_csharp">
+<a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iops_csharp">
+<a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). This must be set with a `volume_type` of `"io1"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="throughput_csharp">
+<a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of data transferred to or from a storage device per second. Valid only if `volume_type` is set to `"gp3"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_csharp">
+<a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the volume in gigabytes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumetype_csharp">
+<a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"st1"` or `"sc1"`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="deleteontermination_go">
+<a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iops_go">
+<a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). This must be set with a `volume_type` of `"io1"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="throughput_go">
+<a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of data transferred to or from a storage device per second. Valid only if `volume_type` is set to `"gp3"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_go">
+<a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the volume in gigabytes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumetype_go">
+<a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"st1"` or `"sc1"`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="deleteontermination_nodejs">
+<a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iops_nodejs">
+<a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). This must be set with a `volume_type` of `"io1"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="throughput_nodejs">
+<a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of data transferred to or from a storage device per second. Valid only if `volume_type` is set to `"gp3"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_nodejs">
+<a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The size of the volume in gigabytes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumetype_nodejs">
+<a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"st1"` or `"sc1"`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iops_python">
+<a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). This must be set with a `volume_type` of `"io1"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="throughput_python">
+<a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of data transferred to or from a storage device per second. Valid only if `volume_type` is set to `"gp3"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volume_size_python">
+<a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the volume in gigabytes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"st1"` or `"sc1"`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53</h4>
 
