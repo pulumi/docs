@@ -36,12 +36,12 @@ class MyStack : Stack
     {
         var example = new Pagerduty.MaintenanceWindow("example", new Pagerduty.MaintenanceWindowArgs
         {
+            StartTime = "2015-11-09T20:00:00-05:00",
             EndTime = "2015-11-09T22:00:00-05:00",
             Services = 
             {
                 pagerduty_service.Example.Id,
             },
-            StartTime = "2015-11-09T20:00:00-05:00",
         });
     }
 
@@ -65,11 +65,11 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := pagerduty.NewMaintenanceWindow(ctx, "example", &pagerduty.MaintenanceWindowArgs{
-			EndTime: pulumi.String("2015-11-09T22:00:00-05:00"),
+			StartTime: pulumi.String("2015-11-09T20:00:00-05:00"),
+			EndTime:   pulumi.String("2015-11-09T22:00:00-05:00"),
 			Services: pulumi.StringArray{
 				pulumi.Any(pagerduty_service.Example.Id),
 			},
-			StartTime: pulumi.String("2015-11-09T20:00:00-05:00"),
 		})
 		if err != nil {
 			return err
@@ -90,9 +90,9 @@ import pulumi
 import pulumi_pagerduty as pagerduty
 
 example = pagerduty.MaintenanceWindow("example",
+    start_time="2015-11-09T20:00:00-05:00",
     end_time="2015-11-09T22:00:00-05:00",
-    services=[pagerduty_service["example"]["id"]],
-    start_time="2015-11-09T20:00:00-05:00")
+    services=[pagerduty_service["example"]["id"]])
 ```
 
 
@@ -107,9 +107,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
 
 const example = new pagerduty.MaintenanceWindow("example", {
-    endTime: "2015-11-09T22:00:00-05:00",
-    services: [pagerduty_service_example.id],
     startTime: "2015-11-09T20:00:00-05:00",
+    endTime: "2015-11-09T22:00:00-05:00",
+    services: [pagerduty_service.example.id],
 });
 ```
 
@@ -794,6 +794,6 @@ Maintenance windows can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 </dl>
 

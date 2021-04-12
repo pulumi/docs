@@ -52,8 +52,8 @@ class MyStack : Stack
                     {
                         new Pagerduty.Inputs.EscalationPolicyRuleTargetArgs
                         {
-                            Id = exampleUser.Id,
                             Type = "user",
+                            Id = exampleUser.Id,
                         },
                     },
                 },
@@ -61,10 +61,10 @@ class MyStack : Stack
         });
         var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
         {
-            AcknowledgementTimeout = "600",
-            AlertCreation = "create_incidents",
             AutoResolveTimeout = "14400",
+            AcknowledgementTimeout = "600",
             EscalationPolicy = pagerduty_escalation_policy.Example.Id,
+            AlertCreation = "create_alerts_and_incidents",
         });
     }
 
@@ -96,15 +96,15 @@ foo = pagerduty.EscalationPolicy("foo",
     rules=[pagerduty.EscalationPolicyRuleArgs(
         escalation_delay_in_minutes=10,
         targets=[pagerduty.EscalationPolicyRuleTargetArgs(
-            id=example_user.id,
             type="user",
+            id=example_user.id,
         )],
     )])
 example_service = pagerduty.Service("exampleService",
-    acknowledgement_timeout="600",
-    alert_creation="create_incidents",
     auto_resolve_timeout="14400",
-    escalation_policy=pagerduty_escalation_policy["example"]["id"])
+    acknowledgement_timeout="600",
+    escalation_policy=pagerduty_escalation_policy["example"]["id"],
+    alert_creation="create_alerts_and_incidents")
 ```
 
 
@@ -118,25 +118,25 @@ example_service = pagerduty.Service("exampleService",
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
 
-const exampleUser = new pagerduty.User("example", {
+const exampleUser = new pagerduty.User("exampleUser", {
     email: "125.greenholt.earline@graham.name",
-    teams: [pagerduty_team_example.id],
+    teams: [pagerduty_team.example.id],
 });
 const foo = new pagerduty.EscalationPolicy("foo", {
     numLoops: 2,
     rules: [{
         escalationDelayInMinutes: 10,
         targets: [{
-            id: exampleUser.id,
             type: "user",
+            id: exampleUser.id,
         }],
     }],
 });
-const exampleService = new pagerduty.Service("example", {
-    acknowledgementTimeout: "600",
-    alertCreation: "create_incidents",
-    autoResolveTimeout: "14400",
-    escalationPolicy: pagerduty_escalation_policy_example.id,
+const exampleService = new pagerduty.Service("exampleService", {
+    autoResolveTimeout: 14400,
+    acknowledgementTimeout: 600,
+    escalationPolicy: pagerduty_escalation_policy.example.id,
+    alertCreation: "create_alerts_and_incidents",
 });
 ```
 
@@ -327,7 +327,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged.
+    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertgrouping_csharp">
@@ -426,7 +426,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged.
+    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertgrouping_go">
@@ -525,7 +525,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged.
+    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertgrouping_nodejs">
@@ -624,7 +624,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged.
+    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_grouping_python">
@@ -1020,7 +1020,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged.
+    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertgrouping_csharp">
@@ -1151,7 +1151,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged.
+    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertgrouping_go">
@@ -1282,7 +1282,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged.
+    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertgrouping_nodejs">
@@ -1413,7 +1413,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged.
+    <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_grouping_python">
@@ -2313,6 +2313,6 @@ Services can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 </dl>
 

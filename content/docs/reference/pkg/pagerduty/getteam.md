@@ -44,6 +44,10 @@ class MyStack : Stack
         var foo = new Pagerduty.EscalationPolicy("foo", new Pagerduty.EscalationPolicyArgs
         {
             NumLoops = 2,
+            Teams = 
+            {
+                devops.Apply(devops => devops.Id),
+            },
             Rules = 
             {
                 new Pagerduty.Inputs.EscalationPolicyRuleArgs
@@ -53,15 +57,11 @@ class MyStack : Stack
                     {
                         new Pagerduty.Inputs.EscalationPolicyRuleTargetArgs
                         {
-                            Id = me.Apply(me => me.Id),
                             Type = "user",
+                            Id = me.Apply(me => me.Id),
                         },
                     },
                 },
-            },
-            Teams = 
-            {
-                devops.Apply(devops => devops.Id),
             },
         });
     }
@@ -99,19 +99,19 @@ func main() {
 		}
 		_, err = pagerduty.NewEscalationPolicy(ctx, "foo", &pagerduty.EscalationPolicyArgs{
 			NumLoops: pulumi.Int(2),
+			Teams: pulumi.StringArray{
+				pulumi.String(devops.Id),
+			},
 			Rules: pagerduty.EscalationPolicyRuleArray{
 				&pagerduty.EscalationPolicyRuleArgs{
 					EscalationDelayInMinutes: pulumi.Int(10),
 					Targets: pagerduty.EscalationPolicyRuleTargetArray{
 						&pagerduty.EscalationPolicyRuleTargetArgs{
-							Id:   pulumi.String(me.Id),
 							Type: pulumi.String("user"),
+							Id:   pulumi.String(me.Id),
 						},
 					},
 				},
-			},
-			Teams: pulumi.StringArray{
-				pulumi.String(devops.Id),
 			},
 		})
 		if err != nil {
@@ -136,14 +136,14 @@ me = pagerduty.get_user(email="me@example.com")
 devops = pagerduty.get_team(name="devops")
 foo = pagerduty.EscalationPolicy("foo",
     num_loops=2,
+    teams=[devops.id],
     rules=[pagerduty.EscalationPolicyRuleArgs(
         escalation_delay_in_minutes=10,
         targets=[pagerduty.EscalationPolicyRuleTargetArgs(
-            id=me.id,
             type="user",
+            id=me.id,
         )],
-    )],
-    teams=[devops.id])
+    )])
 ```
 
 
@@ -157,22 +157,22 @@ foo = pagerduty.EscalationPolicy("foo",
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
 
-const me = pulumi.output(pagerduty.getUser({
+const me = pagerduty.getUser({
     email: "me@example.com",
-}, { async: true }));
-const devops = pulumi.output(pagerduty.getTeam({
+});
+const devops = pagerduty.getTeam({
     name: "devops",
-}, { async: true }));
+});
 const foo = new pagerduty.EscalationPolicy("foo", {
     numLoops: 2,
+    teams: [devops.then(devops => devops.id)],
     rules: [{
         escalationDelayInMinutes: 10,
         targets: [{
-            id: me.id,
             type: "user",
+            id: me.then(me => me.id),
         }],
     }],
-    teams: [devops.id],
 });
 ```
 
@@ -199,7 +199,7 @@ const foo = new pagerduty.EscalationPolicy("foo", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_team(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTeamResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_team(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTeamResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -232,6 +232,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the team to find in the PagerDuty API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parent_csharp">
+<a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the parent team. This is available to accounts with the Team Hierarchy feature enabled. Please contact your account manager for more information.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -245,6 +254,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the team to find in the PagerDuty API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parent_go">
+<a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the parent team. This is available to accounts with the Team Hierarchy feature enabled. Please contact your account manager for more information.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -258,6 +276,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the team to find in the PagerDuty API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parent_nodejs">
+<a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the parent team. This is available to accounts with the Team Hierarchy feature enabled. Please contact your account manager for more information.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -271,6 +298,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the team to find in the PagerDuty API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parent_python">
+<a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the parent team. This is available to accounts with the Team Hierarchy feature enabled. Please contact your account manager for more information.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -311,6 +347,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the found team.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="parent_csharp">
+<a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the parent team. This is available to accounts with the Team Hierarchy feature enabled. Please contact your account manager for more information.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -342,6 +387,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the found team.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="parent_go">
+<a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the parent team. This is available to accounts with the Team Hierarchy feature enabled. Please contact your account manager for more information.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -373,6 +427,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the found team.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="parent_nodejs">
+<a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the parent team. This is available to accounts with the Team Hierarchy feature enabled. Please contact your account manager for more information.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -404,6 +467,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the found team.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="parent_python">
+<a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the parent team. This is available to accounts with the Team Hierarchy feature enabled. Please contact your account manager for more information.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -418,6 +490,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 </dl>
 

@@ -42,26 +42,26 @@ class MyStack : Stack
         });
         var email = new Pagerduty.UserContactMethod("email", new Pagerduty.UserContactMethodArgs
         {
+            UserId = example.Id,
+            Type = "email_contact_method",
             Address = "foo@bar.com",
             Label = "Work",
-            Type = "email_contact_method",
-            UserId = example.Id,
         });
         var phone = new Pagerduty.UserContactMethod("phone", new Pagerduty.UserContactMethodArgs
         {
-            Address = "2025550199",
-            CountryCode = 1,
-            Label = "Work",
-            Type = "phone_contact_method",
             UserId = example.Id,
+            Type = "phone_contact_method",
+            CountryCode = 1,
+            Address = "2025550199",
+            Label = "Work",
         });
         var sms = new Pagerduty.UserContactMethod("sms", new Pagerduty.UserContactMethodArgs
         {
-            Address = "2025550199",
-            CountryCode = 1,
-            Label = "Work",
-            Type = "sms_contact_method",
             UserId = example.Id,
+            Type = "sms_contact_method",
+            CountryCode = 1,
+            Address = "2025550199",
+            Label = "Work",
         });
     }
 
@@ -89,22 +89,22 @@ example = pagerduty.User("example",
     email="125.greenholt.earline@graham.name",
     teams=[pagerduty_team["example"]["id"]])
 email = pagerduty.UserContactMethod("email",
-    address="foo@bar.com",
-    label="Work",
+    user_id=example.id,
     type="email_contact_method",
-    user_id=example.id)
+    address="foo@bar.com",
+    label="Work")
 phone = pagerduty.UserContactMethod("phone",
-    address="2025550199",
-    country_code=1,
-    label="Work",
+    user_id=example.id,
     type="phone_contact_method",
-    user_id=example.id)
-sms = pagerduty.UserContactMethod("sms",
-    address="2025550199",
     country_code=1,
-    label="Work",
+    address="2025550199",
+    label="Work")
+sms = pagerduty.UserContactMethod("sms",
+    user_id=example.id,
     type="sms_contact_method",
-    user_id=example.id)
+    country_code=1,
+    address="2025550199",
+    label="Work")
 ```
 
 
@@ -120,27 +120,27 @@ import * as pagerduty from "@pulumi/pagerduty";
 
 const example = new pagerduty.User("example", {
     email: "125.greenholt.earline@graham.name",
-    teams: [pagerduty_team_example.id],
+    teams: [pagerduty_team.example.id],
 });
 const email = new pagerduty.UserContactMethod("email", {
+    userId: example.id,
+    type: "email_contact_method",
     address: "foo@bar.com",
     label: "Work",
-    type: "email_contact_method",
-    userId: example.id,
 });
 const phone = new pagerduty.UserContactMethod("phone", {
-    address: "2025550199",
-    countryCode: 1,
-    label: "Work",
-    type: "phone_contact_method",
     userId: example.id,
+    type: "phone_contact_method",
+    countryCode: "+1",
+    address: "2025550199",
+    label: "Work",
 });
 const sms = new pagerduty.UserContactMethod("sms", {
-    address: "2025550199",
-    countryCode: 1,
-    label: "Work",
-    type: "sms_contact_method",
     userId: example.id,
+    type: "sms_contact_method",
+    countryCode: "+1",
+    address: "2025550199",
+    label: "Work",
 });
 ```
 
@@ -1113,6 +1113,6 @@ Contact methods can be imported using the `user_id` and the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 </dl>
 

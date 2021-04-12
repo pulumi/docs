@@ -47,6 +47,10 @@ class MyStack : Stack
         var exampleEscalationPolicy = new Pagerduty.EscalationPolicy("exampleEscalationPolicy", new Pagerduty.EscalationPolicyArgs
         {
             NumLoops = 2,
+            Teams = 
+            {
+                exampleTeam.Id,
+            },
             Rules = 
             {
                 new Pagerduty.Inputs.EscalationPolicyRuleArgs
@@ -56,15 +60,16 @@ class MyStack : Stack
                     {
                         new Pagerduty.Inputs.EscalationPolicyRuleTargetArgs
                         {
-                            Id = exampleUser.Id,
                             Type = "user",
+                            Id = exampleUser.Id,
+                        },
+                        new Pagerduty.Inputs.EscalationPolicyRuleTargetArgs
+                        {
+                            Type = "user",
+                            Id = pagerduty_user.Example2.Id,
                         },
                     },
                 },
-            },
-            Teams = 
-            {
-                exampleTeam.Id,
             },
         });
     }
@@ -105,19 +110,23 @@ func main() {
 		}
 		_, err = pagerduty.NewEscalationPolicy(ctx, "exampleEscalationPolicy", &pagerduty.EscalationPolicyArgs{
 			NumLoops: pulumi.Int(2),
+			Teams: pulumi.StringArray{
+				exampleTeam.ID(),
+			},
 			Rules: pagerduty.EscalationPolicyRuleArray{
 				&pagerduty.EscalationPolicyRuleArgs{
 					EscalationDelayInMinutes: pulumi.Int(10),
 					Targets: pagerduty.EscalationPolicyRuleTargetArray{
 						&pagerduty.EscalationPolicyRuleTargetArgs{
-							Id:   exampleUser.ID(),
 							Type: pulumi.String("user"),
+							Id:   exampleUser.ID(),
+						},
+						&pagerduty.EscalationPolicyRuleTargetArgs{
+							Type: pulumi.String("user"),
+							Id:   pulumi.Any(pagerduty_user.Example2.Id),
 						},
 					},
 				},
-			},
-			Teams: pulumi.StringArray{
-				exampleTeam.ID(),
 			},
 		})
 		if err != nil {
@@ -144,14 +153,20 @@ example_user = pagerduty.User("exampleUser",
     teams=[example_team.id])
 example_escalation_policy = pagerduty.EscalationPolicy("exampleEscalationPolicy",
     num_loops=2,
+    teams=[example_team.id],
     rules=[pagerduty.EscalationPolicyRuleArgs(
         escalation_delay_in_minutes=10,
-        targets=[pagerduty.EscalationPolicyRuleTargetArgs(
-            id=example_user.id,
-            type="user",
-        )],
-    )],
-    teams=[example_team.id])
+        targets=[
+            pagerduty.EscalationPolicyRuleTargetArgs(
+                type="user",
+                id=example_user.id,
+            ),
+            pagerduty.EscalationPolicyRuleTargetArgs(
+                type="user",
+                id=pagerduty_user["example2"]["id"],
+            ),
+        ],
+    )])
 ```
 
 
@@ -165,23 +180,27 @@ example_escalation_policy = pagerduty.EscalationPolicy("exampleEscalationPolicy"
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
 
-const exampleTeam = new pagerduty.Team("example", {
-    description: "All engineering",
-});
-const exampleUser = new pagerduty.User("example", {
+const exampleTeam = new pagerduty.Team("exampleTeam", {description: "All engineering"});
+const exampleUser = new pagerduty.User("exampleUser", {
     email: "125.greenholt.earline@graham.name",
     teams: [exampleTeam.id],
 });
-const exampleEscalationPolicy = new pagerduty.EscalationPolicy("example", {
+const exampleEscalationPolicy = new pagerduty.EscalationPolicy("exampleEscalationPolicy", {
     numLoops: 2,
+    teams: [exampleTeam.id],
     rules: [{
         escalationDelayInMinutes: 10,
-        targets: [{
-            id: exampleUser.id,
-            type: "user",
-        }],
+        targets: [
+            {
+                type: "user",
+                id: exampleUser.id,
+            },
+            {
+                type: "user",
+                id: pagerduty_user.example2.id,
+            },
+        ],
     }],
-    teams: [exampleTeam.id],
 });
 ```
 
@@ -1058,7 +1077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be `user`, `schedule`, `user_reference` or `schedule_reference`. Defaults to `user_reference`
+    <dd>{{% md %}}Can be `user`, `schedule`, `user_reference` or `schedule_reference`. Defaults to `user_reference`. For multiple users as example, repeat the target.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1080,7 +1099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be `user`, `schedule`, `user_reference` or `schedule_reference`. Defaults to `user_reference`
+    <dd>{{% md %}}Can be `user`, `schedule`, `user_reference` or `schedule_reference`. Defaults to `user_reference`. For multiple users as example, repeat the target.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1102,7 +1121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be `user`, `schedule`, `user_reference` or `schedule_reference`. Defaults to `user_reference`
+    <dd>{{% md %}}Can be `user`, `schedule`, `user_reference` or `schedule_reference`. Defaults to `user_reference`. For multiple users as example, repeat the target.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1124,7 +1143,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Can be `user`, `schedule`, `user_reference` or `schedule_reference`. Defaults to `user_reference`
+    <dd>{{% md %}}Can be `user`, `schedule`, `user_reference` or `schedule_reference`. Defaults to `user_reference`. For multiple users as example, repeat the target.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
@@ -1146,6 +1165,6 @@ Escalation policies can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 </dl>
 
