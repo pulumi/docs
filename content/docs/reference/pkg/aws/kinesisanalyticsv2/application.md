@@ -1004,7 +1004,7 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationApplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[ApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_execution_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationApplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[ApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_stop</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_execution_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_application</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1191,6 +1191,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A summary description of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="forcestop_csharp">
+<a href="#forcestop_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to force stop an unresponsive Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1198,6 +1207,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startapplication_csharp">
+<a href="#startapplication_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -1258,6 +1276,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A summary description of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="forcestop_go">
+<a href="#forcestop_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to force stop an unresponsive Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1265,6 +1292,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startapplication_go">
+<a href="#startapplication_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1325,6 +1361,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A summary description of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="forcestop_nodejs">
+<a href="#forcestop_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to force stop an unresponsive Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1332,6 +1377,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startapplication_nodejs">
+<a href="#startapplication_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -1392,6 +1446,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A summary description of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="force_stop_python">
+<a href="#force_stop_python" style="color: inherit; text-decoration: inherit;">force_<wbr>stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to force stop an unresponsive Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1399,6 +1462,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_application_python">
+<a href="#start_application_python" style="color: inherit; text-decoration: inherit;">start_<wbr>application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1659,7 +1731,7 @@ Get an existing Application resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationApplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[ApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">create_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_update_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_execution_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationApplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[ApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">create_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_stop</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_update_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_execution_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_application</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1817,6 +1889,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A summary description of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_forcestop_csharp">
+<a href="#state_forcestop_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to force stop an unresponsive Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_lastupdatetimestamp_csharp">
 <a href="#state_lastupdatetimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Timestamp</a>
 </span>
@@ -1851,6 +1932,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_startapplication_csharp">
+<a href="#state_startapplication_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
@@ -1929,6 +2019,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A summary description of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_forcestop_go">
+<a href="#state_forcestop_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to force stop an unresponsive Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_lastupdatetimestamp_go">
 <a href="#state_lastupdatetimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Timestamp</a>
 </span>
@@ -1963,6 +2062,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_startapplication_go">
+<a href="#state_startapplication_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
@@ -2041,6 +2149,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A summary description of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_forcestop_nodejs">
+<a href="#state_forcestop_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to force stop an unresponsive Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_lastupdatetimestamp_nodejs">
 <a href="#state_lastupdatetimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Timestamp</a>
 </span>
@@ -2075,6 +2192,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_startapplication_nodejs">
+<a href="#state_startapplication_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
@@ -2153,6 +2279,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A summary description of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_force_stop_python">
+<a href="#state_force_stop_python" style="color: inherit; text-decoration: inherit;">force_<wbr>stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to force stop an unresponsive Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_last_update_timestamp_python">
 <a href="#state_last_update_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update_<wbr>timestamp</a>
 </span>
@@ -2187,6 +2322,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_start_application_python">
+<a href="#state_start_application_python" style="color: inherit; text-decoration: inherit;">start_<wbr>application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to start or stop the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
@@ -2267,6 +2411,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The configuration of a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="runconfiguration_csharp">
+<a href="#runconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the starting properties for a Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sqlapplicationconfiguration_csharp">
 <a href="#sqlapplicationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Application<wbr>Configuration</a>
 </span>
@@ -2323,6 +2476,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="runconfiguration_go">
+<a href="#runconfiguration_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the starting properties for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlapplicationconfiguration_go">
@@ -2383,6 +2545,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The configuration of a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="runconfiguration_nodejs">
+<a href="#runconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the starting properties for a Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sqlapplicationconfiguration_nodejs">
 <a href="#sqlapplicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Application<wbr>Configuration</a>
 </span>
@@ -2439,6 +2610,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a Flink-based application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="run_configuration_python">
+<a href="#run_configuration_python" style="color: inherit; text-decoration: inherit;">run_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the starting properties for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_application_configuration_python">
@@ -3552,6 +3732,240 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="applicationrestoreconfiguration_csharp">
+<a href="#applicationrestoreconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Restore<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The restore behavior of a restarting application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flinkrunconfiguration_csharp">
+<a href="#flinkrunconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Flink<wbr>Run<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The starting parameters for a Flink-based Kinesis Data Analytics application.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="applicationrestoreconfiguration_go">
+<a href="#applicationrestoreconfiguration_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Restore<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The restore behavior of a restarting application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flinkrunconfiguration_go">
+<a href="#flinkrunconfiguration_go" style="color: inherit; text-decoration: inherit;">Flink<wbr>Run<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The starting parameters for a Flink-based Kinesis Data Analytics application.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="applicationrestoreconfiguration_nodejs">
+<a href="#applicationrestoreconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Restore<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The restore behavior of a restarting application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flinkrunconfiguration_nodejs">
+<a href="#flinkrunconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">flink<wbr>Run<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The starting parameters for a Flink-based Kinesis Data Analytics application.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="application_restore_configuration_python">
+<a href="#application_restore_configuration_python" style="color: inherit; text-decoration: inherit;">application_<wbr>restore_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The restore behavior of a restarting application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flink_run_configuration_python">
+<a href="#flink_run_configuration_python" style="color: inherit; text-decoration: inherit;">flink_<wbr>run_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The starting parameters for a Flink-based Kinesis Data Analytics application.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="applicationrestoretype_csharp">
+<a href="#applicationrestoretype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Restore<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies how the application should be restored. Valid values: `RESTORE_FROM_CUSTOM_SNAPSHOT`, `RESTORE_FROM_LATEST_SNAPSHOT`, `SKIP_RESTORE_FROM_SNAPSHOT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snapshotname_csharp">
+<a href="#snapshotname_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier of an existing snapshot of application state to use to restart an application. The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for `application_restore_type`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="applicationrestoretype_go">
+<a href="#applicationrestoretype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Restore<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies how the application should be restored. Valid values: `RESTORE_FROM_CUSTOM_SNAPSHOT`, `RESTORE_FROM_LATEST_SNAPSHOT`, `SKIP_RESTORE_FROM_SNAPSHOT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snapshotname_go">
+<a href="#snapshotname_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier of an existing snapshot of application state to use to restart an application. The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for `application_restore_type`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="applicationrestoretype_nodejs">
+<a href="#applicationrestoretype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Restore<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies how the application should be restored. Valid values: `RESTORE_FROM_CUSTOM_SNAPSHOT`, `RESTORE_FROM_LATEST_SNAPSHOT`, `SKIP_RESTORE_FROM_SNAPSHOT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snapshotname_nodejs">
+<a href="#snapshotname_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier of an existing snapshot of application state to use to restart an application. The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for `application_restore_type`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="application_restore_type_python">
+<a href="#application_restore_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>restore_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies how the application should be restored. Valid values: `RESTORE_FROM_CUSTOM_SNAPSHOT`, `RESTORE_FROM_LATEST_SNAPSHOT`, `SKIP_RESTORE_FROM_SNAPSHOT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snapshot_name_python">
+<a href="#snapshot_name_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identifier of an existing snapshot of application state to use to restart an application. The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for `application_restore_type`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allownonrestoredstate_csharp">
+<a href="#allownonrestoredstate_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Non<wbr>Restored<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that cannot be mapped to the new program. Default is `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allownonrestoredstate_go">
+<a href="#allownonrestoredstate_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Non<wbr>Restored<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that cannot be mapped to the new program. Default is `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allownonrestoredstate_nodejs">
+<a href="#allownonrestoredstate_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Non<wbr>Restored<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that cannot be mapped to the new program. Default is `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allow_non_restored_state_python">
+<a href="#allow_non_restored_state_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>non_<wbr>restored_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that cannot be mapped to the new program. Default is `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
@@ -3742,7 +4156,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesisfirehoseinput_csharp">
 <a href="#kinesisfirehoseinput_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Firehose<wbr>Input</a>
@@ -3825,7 +4240,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">[]Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesisfirehoseinput_go">
 <a href="#kinesisfirehoseinput_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Firehose<wbr>Input</a>
@@ -3908,7 +4324,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesisfirehoseinput_nodejs">
 <a href="#kinesisfirehoseinput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Firehose<wbr>Input</a>
@@ -3991,7 +4408,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesis_firehose_input_python">
 <a href="#kinesis_firehose_input_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>firehose_<wbr>input</a>
@@ -4761,7 +5179,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4773,7 +5192,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4785,7 +5205,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4797,7 +5218,8 @@ An input processor transforms records as they are received from the stream, befo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input</h4>

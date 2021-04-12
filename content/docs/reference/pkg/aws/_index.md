@@ -101,6 +101,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="mediastore/" title="mediastore"><span class="symbol module"></span>mediastore</a></li>
     <li><a href="mq/" title="mq"><span class="symbol module"></span>mq</a></li>
     <li><a href="msk/" title="msk"><span class="symbol module"></span>msk</a></li>
+    <li><a href="mwaa/" title="mwaa"><span class="symbol module"></span>mwaa</a></li>
     <li><a href="neptune/" title="neptune"><span class="symbol module"></span>neptune</a></li>
     <li><a href="networkfirewall/" title="networkfirewall"><span class="symbol module"></span>networkfirewall</a></li>
     <li><a href="opsworks/" title="opsworks"><span class="symbol module"></span>opsworks</a></li>
@@ -179,6 +180,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.36.0</dd>
+	<dd>3.37.0</dd>
 </dl>
 

@@ -35,7 +35,7 @@ class MyStack : Stack
         var bar = new Aws.Rds.Instance("bar", new Aws.Rds.InstanceArgs
         {
             AllocatedStorage = 10,
-            Engine = "MySQL",
+            Engine = "mysql",
             EngineVersion = "5.6.21",
             InstanceClass = "db.t2.micro",
             Name = "baz",
@@ -73,7 +73,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		bar, err := rds.NewInstance(ctx, "bar", &rds.InstanceArgs{
 			AllocatedStorage:      pulumi.Int(10),
-			Engine:                pulumi.String("MySQL"),
+			Engine:                pulumi.String("mysql"),
 			EngineVersion:         pulumi.String("5.6.21"),
 			InstanceClass:         pulumi.String("db.t2.micro"),
 			Name:                  pulumi.String("baz"),
@@ -110,7 +110,7 @@ import pulumi_aws as aws
 
 bar = aws.rds.Instance("bar",
     allocated_storage=10,
-    engine="MySQL",
+    engine="mysql",
     engine_version="5.6.21",
     instance_class="db.t2.micro",
     name="baz",
@@ -137,7 +137,7 @@ import * as aws from "@pulumi/aws";
 
 const bar = new aws.rds.Instance("bar", {
     allocatedStorage: 10,
-    engine: "MySQL",
+    engine: "mysql",
     engineVersion: "5.6.21",
     instanceClass: "db.t2.micro",
     name: "baz",

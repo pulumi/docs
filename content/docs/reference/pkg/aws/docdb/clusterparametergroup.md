@@ -329,7 +329,7 @@ The ClusterParameterGroup resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterparametergroupparameter">List&lt;Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of documentDB parameters to apply.
+    <dd>{{% md %}}A list of documentDB parameters to apply. Setting parameters to system default values may show a difference on imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -387,7 +387,7 @@ The ClusterParameterGroup resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterparametergroupparameter">[]Cluster<wbr>Parameter<wbr>Group<wbr>Parameter</a></span>
     </dt>
-    <dd>{{% md %}}A list of documentDB parameters to apply.
+    <dd>{{% md %}}A list of documentDB parameters to apply. Setting parameters to system default values may show a difference on imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -445,7 +445,7 @@ The ClusterParameterGroup resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterparametergroupparameter">Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of documentDB parameters to apply.
+    <dd>{{% md %}}A list of documentDB parameters to apply. Setting parameters to system default values may show a difference on imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -503,7 +503,7 @@ The ClusterParameterGroup resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterparametergroupparameter">Sequence[Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of documentDB parameters to apply.
+    <dd>{{% md %}}A list of documentDB parameters to apply. Setting parameters to system default values may show a difference on imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -784,7 +784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterparametergroupparameter">List&lt;Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of documentDB parameters to apply.
+    <dd>{{% md %}}A list of documentDB parameters to apply. Setting parameters to system default values may show a difference on imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -851,7 +851,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterparametergroupparameter">[]Cluster<wbr>Parameter<wbr>Group<wbr>Parameter</a></span>
     </dt>
-    <dd>{{% md %}}A list of documentDB parameters to apply.
+    <dd>{{% md %}}A list of documentDB parameters to apply. Setting parameters to system default values may show a difference on imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -918,7 +918,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterparametergroupparameter">Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of documentDB parameters to apply.
+    <dd>{{% md %}}A list of documentDB parameters to apply. Setting parameters to system default values may show a difference on imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -985,7 +985,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterparametergroupparameter">Sequence[Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of documentDB parameters to apply.
+    <dd>{{% md %}}A list of documentDB parameters to apply. Setting parameters to system default values may show a difference on imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">

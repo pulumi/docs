@@ -24,7 +24,7 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pulumi/pulumi-hugo/themes/current v0.0.0-20210401204950-a55b707cca76
 	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210409212343-31fdf2d2fa33 // indirect
-	github.com/quasilyte/go-ruleguard v0.3.3 // indirect
+	github.com/quasilyte/go-ruleguard v0.3.4 // indirect
 	github.com/quasilyte/regex/syntax v0.0.0-20200805063351-8f842688393c // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/rogpeppe/go-internal v1.8.0 // indirect
@@ -32,6 +32,7 @@ require (
 	github.com/spf13/cast v1.3.1 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/stretchr/objx v0.3.0 // indirect
+	github.com/tetafro/godot v1.4.5 // indirect
 	github.com/tomarrell/wrapcheck v1.1.0 // indirect
 	golang.org/x/mod v0.4.2 // indirect
 	golang.org/x/sys v0.0.0-20210403161142-5e06dd20ab57 // indirect
