@@ -14,9 +14,7 @@ meta_desc: "Documentation for the aws.alb.getListener function with examples, in
 
 Provides information about a Load Balancer Listener.
 
-This data source can prove useful when a module accepts an LB Listener as an
-input variable and needs to know the LB it is attached to, or other
-information specific to the listener in question.
+This data source can prove useful when a module accepts an LB Listener as an input variable and needs to know the LB it is attached to, or other information specific to the listener in question.
 
 
 {{% examples %}}
@@ -204,7 +202,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+    <dd>{{% md %}}ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerarn_csharp">
@@ -213,7 +211,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arn of the load balancer. Required if `arn` is not set.
+    <dd>{{% md %}}ARN of the load balancer. Required if `arn` is not set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
@@ -222,7 +220,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port of the listener. Required if `arn` is not set.
+    <dd>{{% md %}}Port of the listener. Required if `arn` is not set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -235,7 +233,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+    <dd>{{% md %}}ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerarn_go">
@@ -244,7 +242,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arn of the load balancer. Required if `arn` is not set.
+    <dd>{{% md %}}ARN of the load balancer. Required if `arn` is not set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
@@ -253,7 +251,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port of the listener. Required if `arn` is not set.
+    <dd>{{% md %}}Port of the listener. Required if `arn` is not set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -266,7 +264,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+    <dd>{{% md %}}ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerarn_nodejs">
@@ -275,7 +273,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arn of the load balancer. Required if `arn` is not set.
+    <dd>{{% md %}}ARN of the load balancer. Required if `arn` is not set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
@@ -284,7 +282,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port of the listener. Required if `arn` is not set.
+    <dd>{{% md %}}Port of the listener. Required if `arn` is not set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -297,7 +295,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+    <dd>{{% md %}}ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancer_arn_python">
@@ -306,7 +304,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The arn of the load balancer. Required if `arn` is not set.
+    <dd>{{% md %}}ARN of the load balancer. Required if `arn` is not set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
@@ -315,7 +313,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port of the listener. Required if `arn` is not set.
+    <dd>{{% md %}}Port of the listener. Required if `arn` is not set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -330,6 +328,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="alpnpolicy_csharp">
+<a href="#alpnpolicy_csharp" style="color: inherit; text-decoration: inherit;">Alpn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -400,6 +406,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="alpnpolicy_go">
+<a href="#alpnpolicy_go" style="color: inherit; text-decoration: inherit;">Alpn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
@@ -469,6 +483,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="alpnpolicy_nodejs">
+<a href="#alpnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">alpn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
@@ -537,6 +559,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="alpn_policy_python">
+<a href="#alpn_policy_python" style="color: inherit; text-decoration: inherit;">alpn_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1831,7 +1861,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+    <dd>{{% md %}}ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_csharp">
@@ -1852,7 +1882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+    <dd>{{% md %}}ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_go">
@@ -1873,7 +1903,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+    <dd>{{% md %}}ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_nodejs">
@@ -1894,7 +1924,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+    <dd>{{% md %}}ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_python">
@@ -1935,7 +1965,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port of the listener. Required if `arn` is not set.
+    <dd>{{% md %}}Port of the listener. Required if `arn` is not set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
@@ -1988,7 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port of the listener. Required if `arn` is not set.
+    <dd>{{% md %}}Port of the listener. Required if `arn` is not set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
@@ -2041,7 +2071,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port of the listener. Required if `arn` is not set.
+    <dd>{{% md %}}Port of the listener. Required if `arn` is not set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
@@ -2094,7 +2124,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The port of the listener. Required if `arn` is not set.
+    <dd>{{% md %}}Port of the listener. Required if `arn` is not set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">

@@ -24,21 +24,87 @@ Provides a CloudWatch Logs query definition resource.
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.CloudWatch.QueryDefinition("example", new Aws.CloudWatch.QueryDefinitionArgs
+        {
+            LogGroupNames = 
+            {
+                "/aws/logGroup1",
+                "/aws/logGroup2",
+            },
+            QueryString = @"fields @timestamp, @message
+| sort @timestamp desc
+| limit 25
+
+",
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudwatch.NewQueryDefinition(ctx, "example", &cloudwatch.QueryDefinitionArgs{
+			LogGroupNames: pulumi.StringArray{
+				pulumi.String("/aws/logGroup1"),
+				pulumi.String("/aws/logGroup2"),
+			},
+			QueryString: pulumi.String(fmt.Sprintf("%v%v%v%v", "fields @timestamp, @message\n", "| sort @timestamp desc\n", "| limit 25\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.cloudwatch.QueryDefinition("example",
+    log_group_names=[
+        "/aws/logGroup1",
+        "/aws/logGroup2",
+    ],
+    query_string="""fields @timestamp, @message
+| sort @timestamp desc
+| limit 25
+
+""")
+```
+
 
 {{< /example >}}
 
@@ -51,11 +117,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.cloudwatch.QueryDefinition("example", {
-    logGroups: [
+    logGroupNames: [
         "/aws/logGroup1",
         "/aws/logGroup2",
     ],
-    query: `fields @timestamp, @message
+    queryString: `fields @timestamp, @message
 | sort @timestamp desc
 | limit 25
 `,

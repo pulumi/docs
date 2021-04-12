@@ -22,109 +22,6 @@ a conflict of rule settings and will overwrite rules.
 > **NOTE:** Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html).
 
 > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.
-## Usage with prefix list IDs
-
-Prefix Lists are either managed by AWS internally, or created by the customer using a
-Prefix List resource. Prefix Lists provided by
-AWS are associated with a prefix list name, or service name, that is linked to a specific region.
-Prefix list IDs are exported on VPC Endpoints, so you can use this format:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const myEndpoint = new aws.ec2.VpcEndpoint("myEndpoint", {});
-// ... other configuration ...
-// ... other configuration ...
-const example = new aws.ec2.SecurityGroup("example", {egress: [{
-    fromPort: 0,
-    toPort: 0,
-    protocol: "-1",
-    prefixListIds: [myEndpoint.prefixListId],
-}]});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
-# ... other configuration ...
-# ... other configuration ...
-example = aws.ec2.SecurityGroup("example", egress=[aws.ec2.SecurityGroupEgressArgs(
-    from_port=0,
-    to_port=0,
-    protocol="-1",
-    prefix_list_ids=[my_endpoint.prefix_list_id],
-)])
-```
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myEndpoint = new Aws.Ec2.VpcEndpoint("myEndpoint", new Aws.Ec2.VpcEndpointArgs
-        {
-        });
-        // ... other configuration ...
-        // ... other configuration ...
-        var example = new Aws.Ec2.SecurityGroup("example", new Aws.Ec2.SecurityGroupArgs
-        {
-            Egress = 
-            {
-                new Aws.Ec2.Inputs.SecurityGroupEgressArgs
-                {
-                    FromPort = 0,
-                    ToPort = 0,
-                    Protocol = "-1",
-                    PrefixListIds = 
-                    {
-                        myEndpoint.PrefixListId,
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		myEndpoint, err := ec2.NewVpcEndpoint(ctx, "myEndpoint", nil)
-		if err != nil {
-			return err
-		}
-		_, err = ec2.NewSecurityGroup(ctx, "example", &ec2.SecurityGroupArgs{
-			Egress: ec2.SecurityGroupEgressArray{
-				&ec2.SecurityGroupEgressArgs{
-					FromPort: pulumi.Int(0),
-					ToPort:   pulumi.Int(0),
-					Protocol: pulumi.String("-1"),
-					PrefixListIds: pulumi.StringArray{
-						myEndpoint.PrefixListId,
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-You can also find a specific Prefix List using the `aws.ec2.getPrefixList` data source.
 
 {{% examples %}}
 
@@ -133,7 +30,7 @@ You can also find a specific Prefix List using the `aws.ec2.getPrefixList` data 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
+### Basic usage
 
 
 {{< example csharp >}}
@@ -255,6 +152,142 @@ const allowTls = new aws.ec2.SecurityGroup("allowTls", {
     tags: {
         Name: "allow_tls",
     },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Usage with prefix list IDs
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myEndpoint = new Aws.Ec2.VpcEndpoint("myEndpoint", new Aws.Ec2.VpcEndpointArgs
+        {
+        });
+        // ... other configuration ...
+        var example = new Aws.Ec2.SecurityGroup("example", new Aws.Ec2.SecurityGroupArgs
+        {
+            Description = "Allow TLS inbound traffic",
+            VpcId = aws_vpc.Main.Id,
+            Egress = 
+            {
+                new Aws.Ec2.Inputs.SecurityGroupEgressArgs
+                {
+                    FromPort = 0,
+                    ToPort = 0,
+                    Protocol = "-1",
+                    PrefixListIds = 
+                    {
+                        myEndpoint.PrefixListId,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myEndpoint, err := ec2.NewVpcEndpoint(ctx, "myEndpoint", nil)
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewSecurityGroup(ctx, "example", &ec2.SecurityGroupArgs{
+			Description: pulumi.String("Allow TLS inbound traffic"),
+			VpcId:       pulumi.Any(aws_vpc.Main.Id),
+			Egress: ec2.SecurityGroupEgressArray{
+				&ec2.SecurityGroupEgressArgs{
+					FromPort: pulumi.Int(0),
+					ToPort:   pulumi.Int(0),
+					Protocol: pulumi.String("-1"),
+					PrefixListIds: pulumi.StringArray{
+						myEndpoint.PrefixListId,
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
+# ... other configuration ...
+example = aws.ec2.SecurityGroup("example",
+    description="Allow TLS inbound traffic",
+    vpc_id=aws_vpc["main"]["id"],
+    egress=[aws.ec2.SecurityGroupEgressArgs(
+        from_port=0,
+        to_port=0,
+        protocol="-1",
+        prefix_list_ids=[my_endpoint.prefix_list_id],
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const myEndpoint = new aws.ec2.VpcEndpoint("myEndpoint", {});
+// ... other configuration ...
+const example = new aws.ec2.SecurityGroup("example", {
+    description: "Allow TLS inbound traffic",
+    vpcId: aws_vpc.main.id,
+    egress: [{
+        fromPort: 0,
+        toPort: 0,
+        protocol: "-1",
+        prefixListIds: [myEndpoint.prefixListId],
+    }],
 });
 ```
 

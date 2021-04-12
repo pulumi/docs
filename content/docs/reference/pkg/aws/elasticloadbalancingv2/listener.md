@@ -671,7 +671,7 @@ const frontEndListener = new aws.lb.Listener("frontEndListener", {
 
 
 
-### Authenticate-oidc Action
+### Authenticate-OIDC Action
 
 
 {{< example csharp >}}
@@ -1055,7 +1055,7 @@ const exampleListener = new aws.lb.Listener("exampleListener", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Listener</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerDefaultActionArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Listener</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alpn_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerDefaultActionArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1203,7 +1203,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultaction">List&lt;Listener<wbr>Default<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An Action block. Action blocks are documented below.
+    <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancerarn_csharp">
@@ -1212,7 +1212,16 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the load balancer.
+    <dd>{{% md %}}ARN of the load balancer.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alpnpolicy_csharp">
+<a href="#alpnpolicy_csharp" style="color: inherit; text-decoration: inherit;">Alpn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatearn_csharp">
@@ -1221,7 +1230,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
+    <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
@@ -1230,7 +1239,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
@@ -1239,7 +1248,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslpolicy_csharp">
@@ -1248,7 +1257,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
+    <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1261,7 +1270,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultaction">[]Listener<wbr>Default<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}An Action block. Action blocks are documented below.
+    <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancerarn_go">
@@ -1270,7 +1279,16 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the load balancer.
+    <dd>{{% md %}}ARN of the load balancer.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alpnpolicy_go">
+<a href="#alpnpolicy_go" style="color: inherit; text-decoration: inherit;">Alpn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatearn_go">
@@ -1279,7 +1297,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
+    <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
@@ -1288,7 +1306,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
@@ -1297,7 +1315,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslpolicy_go">
@@ -1306,7 +1324,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
+    <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1319,7 +1337,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultaction">Listener<wbr>Default<wbr>Action[]</a></span>
     </dt>
-    <dd>{{% md %}}An Action block. Action blocks are documented below.
+    <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancerarn_nodejs">
@@ -1328,7 +1346,16 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the load balancer.
+    <dd>{{% md %}}ARN of the load balancer.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alpnpolicy_nodejs">
+<a href="#alpnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">alpn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatearn_nodejs">
@@ -1337,7 +1364,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
+    <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
@@ -1346,7 +1373,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
@@ -1355,7 +1382,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslpolicy_nodejs">
@@ -1364,7 +1391,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
+    <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1377,7 +1404,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultaction">Sequence[Listener<wbr>Default<wbr>Action<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An Action block. Action blocks are documented below.
+    <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="load_balancer_arn_python">
@@ -1386,7 +1413,16 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the load balancer.
+    <dd>{{% md %}}ARN of the load balancer.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alpn_policy_python">
+<a href="#alpn_policy_python" style="color: inherit; text-decoration: inherit;">alpn_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_arn_python">
@@ -1395,7 +1431,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
+    <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
@@ -1404,7 +1440,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
@@ -1413,7 +1449,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_policy_python">
@@ -1422,7 +1458,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
+    <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1442,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1463,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -1484,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1505,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -1530,7 +1566,7 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerDefaultActionArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Listener</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alpn_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerDefaultActionArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Listener</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1643,13 +1679,22 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_alpnpolicy_csharp">
+<a href="#state_alpnpolicy_csharp" style="color: inherit; text-decoration: inherit;">Alpn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatearn_csharp">
@@ -1658,7 +1703,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
+    <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultactions_csharp">
@@ -1667,7 +1712,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultaction">List&lt;Listener<wbr>Default<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An Action block. Action blocks are documented below.
+    <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerarn_csharp">
@@ -1676,7 +1721,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the load balancer.
+    <dd>{{% md %}}ARN of the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
@@ -1685,7 +1730,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
@@ -1694,7 +1739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslpolicy_csharp">
@@ -1703,12 +1748,21 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
+    <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_alpnpolicy_go">
+<a href="#state_alpnpolicy_go" style="color: inherit; text-decoration: inherit;">Alpn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1716,7 +1770,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatearn_go">
@@ -1725,7 +1779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
+    <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultactions_go">
@@ -1734,7 +1788,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultaction">[]Listener<wbr>Default<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}An Action block. Action blocks are documented below.
+    <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerarn_go">
@@ -1743,7 +1797,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the load balancer.
+    <dd>{{% md %}}ARN of the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
@@ -1752,7 +1806,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
@@ -1761,7 +1815,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslpolicy_go">
@@ -1770,12 +1824,21 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
+    <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_alpnpolicy_nodejs">
+<a href="#state_alpnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">alpn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1783,7 +1846,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatearn_nodejs">
@@ -1792,7 +1855,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
+    <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultactions_nodejs">
@@ -1801,7 +1864,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultaction">Listener<wbr>Default<wbr>Action[]</a></span>
     </dt>
-    <dd>{{% md %}}An Action block. Action blocks are documented below.
+    <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerarn_nodejs">
@@ -1810,7 +1873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the load balancer.
+    <dd>{{% md %}}ARN of the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
@@ -1819,7 +1882,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
@@ -1828,7 +1891,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslpolicy_nodejs">
@@ -1837,12 +1900,21 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
+    <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_alpn_policy_python">
+<a href="#state_alpn_policy_python" style="color: inherit; text-decoration: inherit;">alpn_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1850,7 +1922,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_arn_python">
@@ -1859,7 +1931,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
+    <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_actions_python">
@@ -1868,7 +1940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultaction">Sequence[Listener<wbr>Default<wbr>Action<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An Action block. Action blocks are documented below.
+    <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_arn_python">
@@ -1877,7 +1949,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the load balancer.
+    <dd>{{% md %}}ARN of the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
@@ -1886,7 +1958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
@@ -1895,7 +1967,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_policy_python">
@@ -1904,7 +1976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
+    <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1928,7 +2000,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
+    <dd>{{% md %}}Type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatecognito_csharp">
@@ -1937,7 +2009,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block for using Amazon Cognito to authenticate users. Specify only when `type` is `authenticate-cognito`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticateoidc_csharp">
 <a href="#authenticateoidc_csharp" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>Oidc</a>
@@ -1945,7 +2018,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when `type` is `authenticate-oidc`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedresponse_csharp">
 <a href="#fixedresponse_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Response</a>
@@ -1962,7 +2036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
+    <dd>{{% md %}}Configuration block for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
@@ -1971,7 +2045,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Order for the action. This value is required for rules with multiple actions. The action with the lowest value for order is performed first. Valid values are between `1` and `50000`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_csharp">
 <a href="#redirect_csharp" style="color: inherit; text-decoration: inherit;">Redirect</a>
@@ -1979,7 +2054,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information for creating a redirect action. Required if `type` is `redirect`.
+    <dd>{{% md %}}Configuration block for creating a redirect action. Required if `type` is `redirect`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparn_csharp">
@@ -1988,7 +2063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
+    <dd>{{% md %}}ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2001,7 +2076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
+    <dd>{{% md %}}Type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatecognito_go">
@@ -2010,7 +2085,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block for using Amazon Cognito to authenticate users. Specify only when `type` is `authenticate-cognito`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticateoidc_go">
 <a href="#authenticateoidc_go" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>Oidc</a>
@@ -2018,7 +2094,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when `type` is `authenticate-oidc`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedresponse_go">
 <a href="#fixedresponse_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Response</a>
@@ -2035,7 +2112,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward</a></span>
     </dt>
-    <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
+    <dd>{{% md %}}Configuration block for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
@@ -2044,7 +2121,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Order for the action. This value is required for rules with multiple actions. The action with the lowest value for order is performed first. Valid values are between `1` and `50000`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_go">
 <a href="#redirect_go" style="color: inherit; text-decoration: inherit;">Redirect</a>
@@ -2052,7 +2130,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}Information for creating a redirect action. Required if `type` is `redirect`.
+    <dd>{{% md %}}Configuration block for creating a redirect action. Required if `type` is `redirect`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparn_go">
@@ -2061,7 +2139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
+    <dd>{{% md %}}ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2074,7 +2152,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
+    <dd>{{% md %}}Type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatecognito_nodejs">
@@ -2083,7 +2161,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block for using Amazon Cognito to authenticate users. Specify only when `type` is `authenticate-cognito`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticateoidc_nodejs">
 <a href="#authenticateoidc_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Oidc</a>
@@ -2091,7 +2170,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when `type` is `authenticate-oidc`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedresponse_nodejs">
 <a href="#fixedresponse_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Response</a>
@@ -2108,7 +2188,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward</a></span>
     </dt>
-    <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
+    <dd>{{% md %}}Configuration block for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
@@ -2117,7 +2197,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Order for the action. This value is required for rules with multiple actions. The action with the lowest value for order is performed first. Valid values are between `1` and `50000`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_nodejs">
 <a href="#redirect_nodejs" style="color: inherit; text-decoration: inherit;">redirect</a>
@@ -2125,7 +2206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}Information for creating a redirect action. Required if `type` is `redirect`.
+    <dd>{{% md %}}Configuration block for creating a redirect action. Required if `type` is `redirect`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparn_nodejs">
@@ -2134,7 +2215,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
+    <dd>{{% md %}}ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2147,7 +2228,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
+    <dd>{{% md %}}Type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticate_cognito_python">
@@ -2156,7 +2237,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block for using Amazon Cognito to authenticate users. Specify only when `type` is `authenticate-cognito`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticate_oidc_python">
 <a href="#authenticate_oidc_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>oidc</a>
@@ -2164,7 +2246,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when `type` is `authenticate-oidc`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixed_response_python">
 <a href="#fixed_response_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>response</a>
@@ -2181,7 +2264,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
+    <dd>{{% md %}}Configuration block for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
@@ -2190,7 +2273,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Order for the action. This value is required for rules with multiple actions. The action with the lowest value for order is performed first. Valid values are between `1` and `50000`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_python">
 <a href="#redirect_python" style="color: inherit; text-decoration: inherit;">redirect</a>
@@ -2198,7 +2282,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information for creating a redirect action. Required if `type` is `redirect`.
+    <dd>{{% md %}}Configuration block for creating a redirect action. Required if `type` is `redirect`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_group_arn_python">
@@ -2207,7 +2291,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
+    <dd>{{% md %}}ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2222,7 +2306,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Cognito user pool.
+    <dd>{{% md %}}ARN of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpoolclientid_csharp">
@@ -2231,7 +2315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Cognito user pool client.
+    <dd>{{% md %}}ID of the Cognito user pool client.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpooldomain_csharp">
@@ -2240,7 +2324,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain prefix or fully-qualified domain name of the Cognito user pool.
+    <dd>{{% md %}}Domain prefix or fully-qualified domain name of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationrequestextraparams_csharp">
@@ -2249,7 +2333,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+    <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onunauthenticatedrequest_csharp">
@@ -2258,7 +2342,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+    <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
@@ -2267,7 +2351,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The set of user claims to be requested from the IdP.
+    <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessioncookiename_csharp">
@@ -2276,7 +2360,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cookie used to maintain session information.
+    <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontimeout_csharp">
@@ -2285,7 +2369,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
+    <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2298,7 +2382,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Cognito user pool.
+    <dd>{{% md %}}ARN of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpoolclientid_go">
@@ -2307,7 +2391,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Cognito user pool client.
+    <dd>{{% md %}}ID of the Cognito user pool client.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpooldomain_go">
@@ -2316,7 +2400,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain prefix or fully-qualified domain name of the Cognito user pool.
+    <dd>{{% md %}}Domain prefix or fully-qualified domain name of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationrequestextraparams_go">
@@ -2325,7 +2409,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+    <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onunauthenticatedrequest_go">
@@ -2334,7 +2418,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+    <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
@@ -2343,7 +2427,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The set of user claims to be requested from the IdP.
+    <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessioncookiename_go">
@@ -2352,7 +2436,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cookie used to maintain session information.
+    <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontimeout_go">
@@ -2361,7 +2445,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
+    <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2374,7 +2458,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Cognito user pool.
+    <dd>{{% md %}}ARN of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpoolclientid_nodejs">
@@ -2383,7 +2467,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Cognito user pool client.
+    <dd>{{% md %}}ID of the Cognito user pool client.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpooldomain_nodejs">
@@ -2392,7 +2476,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain prefix or fully-qualified domain name of the Cognito user pool.
+    <dd>{{% md %}}Domain prefix or fully-qualified domain name of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationrequestextraparams_nodejs">
@@ -2401,7 +2485,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+    <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onunauthenticatedrequest_nodejs">
@@ -2410,7 +2494,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+    <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
@@ -2419,7 +2503,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The set of user claims to be requested from the IdP.
+    <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessioncookiename_nodejs">
@@ -2428,7 +2512,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cookie used to maintain session information.
+    <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontimeout_nodejs">
@@ -2437,7 +2521,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
+    <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2450,7 +2534,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Cognito user pool.
+    <dd>{{% md %}}ARN of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_pool_client_id_python">
@@ -2459,7 +2543,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Cognito user pool client.
+    <dd>{{% md %}}ID of the Cognito user pool client.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_pool_domain_python">
@@ -2468,7 +2552,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The domain prefix or fully-qualified domain name of the Cognito user pool.
+    <dd>{{% md %}}Domain prefix or fully-qualified domain name of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_request_extra_params_python">
@@ -2477,7 +2561,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+    <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_unauthenticated_request_python">
@@ -2486,7 +2570,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+    <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
@@ -2495,7 +2579,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The set of user claims to be requested from the IdP.
+    <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_cookie_name_python">
@@ -2504,7 +2588,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the cookie used to maintain session information.
+    <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_timeout_python">
@@ -2513,7 +2597,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
+    <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2528,7 +2612,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization endpoint of the IdP.
+    <dd>{{% md %}}Authorization endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
@@ -2537,7 +2621,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OAuth 2.0 client identifier.
+    <dd>{{% md %}}OAuth 2.0 client identifier.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_csharp">
@@ -2546,7 +2630,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OAuth 2.0 client secret.
+    <dd>{{% md %}}OAuth 2.0 client secret.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issuer_csharp">
@@ -2555,7 +2639,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OIDC issuer identifier of the IdP.
+    <dd>{{% md %}}OIDC issuer identifier of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenendpoint_csharp">
@@ -2564,7 +2648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token endpoint of the IdP.
+    <dd>{{% md %}}Token endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userinfoendpoint_csharp">
@@ -2573,7 +2657,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user info endpoint of the IdP.
+    <dd>{{% md %}}User info endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationrequestextraparams_csharp">
@@ -2582,7 +2666,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+    <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onunauthenticatedrequest_csharp">
@@ -2591,7 +2675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+    <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
@@ -2600,7 +2684,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The set of user claims to be requested from the IdP.
+    <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessioncookiename_csharp">
@@ -2609,7 +2693,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cookie used to maintain session information.
+    <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontimeout_csharp">
@@ -2618,7 +2702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
+    <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2631,7 +2715,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization endpoint of the IdP.
+    <dd>{{% md %}}Authorization endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_go">
@@ -2640,7 +2724,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OAuth 2.0 client identifier.
+    <dd>{{% md %}}OAuth 2.0 client identifier.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_go">
@@ -2649,7 +2733,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OAuth 2.0 client secret.
+    <dd>{{% md %}}OAuth 2.0 client secret.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issuer_go">
@@ -2658,7 +2742,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OIDC issuer identifier of the IdP.
+    <dd>{{% md %}}OIDC issuer identifier of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenendpoint_go">
@@ -2667,7 +2751,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token endpoint of the IdP.
+    <dd>{{% md %}}Token endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userinfoendpoint_go">
@@ -2676,7 +2760,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user info endpoint of the IdP.
+    <dd>{{% md %}}User info endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationrequestextraparams_go">
@@ -2685,7 +2769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+    <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onunauthenticatedrequest_go">
@@ -2694,7 +2778,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+    <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
@@ -2703,7 +2787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The set of user claims to be requested from the IdP.
+    <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessioncookiename_go">
@@ -2712,7 +2796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cookie used to maintain session information.
+    <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontimeout_go">
@@ -2721,7 +2805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
+    <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2734,7 +2818,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization endpoint of the IdP.
+    <dd>{{% md %}}Authorization endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
@@ -2743,7 +2827,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OAuth 2.0 client identifier.
+    <dd>{{% md %}}OAuth 2.0 client identifier.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_nodejs">
@@ -2752,7 +2836,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OAuth 2.0 client secret.
+    <dd>{{% md %}}OAuth 2.0 client secret.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issuer_nodejs">
@@ -2761,7 +2845,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OIDC issuer identifier of the IdP.
+    <dd>{{% md %}}OIDC issuer identifier of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenendpoint_nodejs">
@@ -2770,7 +2854,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token endpoint of the IdP.
+    <dd>{{% md %}}Token endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userinfoendpoint_nodejs">
@@ -2779,7 +2863,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user info endpoint of the IdP.
+    <dd>{{% md %}}User info endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationrequestextraparams_nodejs">
@@ -2788,7 +2872,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+    <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onunauthenticatedrequest_nodejs">
@@ -2797,7 +2881,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+    <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
@@ -2806,7 +2890,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The set of user claims to be requested from the IdP.
+    <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessioncookiename_nodejs">
@@ -2815,7 +2899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cookie used to maintain session information.
+    <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontimeout_nodejs">
@@ -2824,7 +2908,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
+    <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2837,7 +2921,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authorization endpoint of the IdP.
+    <dd>{{% md %}}Authorization endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_id_python">
@@ -2846,7 +2930,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The OAuth 2.0 client identifier.
+    <dd>{{% md %}}OAuth 2.0 client identifier.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_secret_python">
@@ -2855,7 +2939,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The OAuth 2.0 client secret.
+    <dd>{{% md %}}OAuth 2.0 client secret.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issuer_python">
@@ -2864,7 +2948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The OIDC issuer identifier of the IdP.
+    <dd>{{% md %}}OIDC issuer identifier of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_endpoint_python">
@@ -2873,7 +2957,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The token endpoint of the IdP.
+    <dd>{{% md %}}Token endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_info_endpoint_python">
@@ -2882,7 +2966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user info endpoint of the IdP.
+    <dd>{{% md %}}User info endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_request_extra_params_python">
@@ -2891,7 +2975,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+    <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_unauthenticated_request_python">
@@ -2900,7 +2984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+    <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
@@ -2909,7 +2993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The set of user claims to be requested from the IdP.
+    <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_cookie_name_python">
@@ -2918,7 +3002,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the cookie used to maintain session information.
+    <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_timeout_python">
@@ -2927,7 +3011,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
+    <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2942,7 +3026,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
+    <dd>{{% md %}}Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagebody_csharp">
@@ -2951,7 +3035,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message body.
+    <dd>{{% md %}}Message body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuscode_csharp">
@@ -2960,7 +3044,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
+    <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2973,7 +3057,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
+    <dd>{{% md %}}Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagebody_go">
@@ -2982,7 +3066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message body.
+    <dd>{{% md %}}Message body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuscode_go">
@@ -2991,7 +3075,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
+    <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3004,7 +3088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
+    <dd>{{% md %}}Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagebody_nodejs">
@@ -3013,7 +3097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message body.
+    <dd>{{% md %}}Message body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuscode_nodejs">
@@ -3022,7 +3106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
+    <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3035,7 +3119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
+    <dd>{{% md %}}Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_body_python">
@@ -3044,7 +3128,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message body.
+    <dd>{{% md %}}Message body.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_code_python">
@@ -3053,7 +3137,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
+    <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3068,7 +3152,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">List&lt;Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more target groups block.
+    <dd>{{% md %}}Set of 1-5 target group blocks. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_csharp">
@@ -3077,7 +3161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The target group stickiness for the rule.
+    <dd>{{% md %}}Configuration block for target group stickiness for the rule. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3090,7 +3174,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">[]Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}One or more target groups block.
+    <dd>{{% md %}}Set of 1-5 target group blocks. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_go">
@@ -3099,7 +3183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness</a></span>
     </dt>
-    <dd>{{% md %}}The target group stickiness for the rule.
+    <dd>{{% md %}}Configuration block for target group stickiness for the rule. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3112,7 +3196,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more target groups block.
+    <dd>{{% md %}}Set of 1-5 target group blocks. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_nodejs">
@@ -3121,7 +3205,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness</a></span>
     </dt>
-    <dd>{{% md %}}The target group stickiness for the rule.
+    <dd>{{% md %}}Configuration block for target group stickiness for the rule. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3134,7 +3218,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">Sequence[Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}One or more target groups block.
+    <dd>{{% md %}}Set of 1-5 target group blocks. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_python">
@@ -3143,7 +3227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The target group stickiness for the rule.
+    <dd>{{% md %}}Configuration block for target group stickiness for the rule. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3158,7 +3242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
+    <dd>{{% md %}}Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -3167,7 +3251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether target group stickiness is enabled.
+    <dd>{{% md %}}Whether target group stickiness is enabled. Default is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3180,7 +3264,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
+    <dd>{{% md %}}Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -3189,7 +3273,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether target group stickiness is enabled.
+    <dd>{{% md %}}Whether target group stickiness is enabled. Default is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3202,7 +3286,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
+    <dd>{{% md %}}Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -3211,7 +3295,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether target group stickiness is enabled.
+    <dd>{{% md %}}Whether target group stickiness is enabled. Default is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3224,7 +3308,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
+    <dd>{{% md %}}Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -3233,7 +3317,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether target group stickiness is enabled.
+    <dd>{{% md %}}Whether target group stickiness is enabled. Default is `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3248,7 +3332,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
@@ -3257,7 +3341,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight. The range is 0 to 999.
+    <dd>{{% md %}}Weight. The range is 0 to 999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3270,7 +3354,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
@@ -3279,7 +3363,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight. The range is 0 to 999.
+    <dd>{{% md %}}Weight. The range is 0 to 999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3292,7 +3376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
@@ -3301,7 +3385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The weight. The range is 0 to 999.
+    <dd>{{% md %}}Weight. The range is 0 to 999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3314,7 +3398,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+    <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
@@ -3323,7 +3407,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight. The range is 0 to 999.
+    <dd>{{% md %}}Weight. The range is 0 to 999.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3338,7 +3422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+    <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
@@ -3347,7 +3431,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
+    <dd>{{% md %}}Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
@@ -3356,7 +3440,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+    <dd>{{% md %}}Absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
@@ -3365,7 +3449,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
@@ -3374,7 +3458,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
@@ -3383,7 +3467,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
+    <dd>{{% md %}}Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3396,7 +3480,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+    <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
@@ -3405,7 +3489,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
+    <dd>{{% md %}}Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -3414,7 +3498,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+    <dd>{{% md %}}Absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
@@ -3423,7 +3507,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
@@ -3432,7 +3516,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_go">
@@ -3441,7 +3525,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
+    <dd>{{% md %}}Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3454,7 +3538,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+    <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
@@ -3463,7 +3547,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
+    <dd>{{% md %}}Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
@@ -3472,7 +3556,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+    <dd>{{% md %}}Absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
@@ -3481,7 +3565,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
@@ -3490,7 +3574,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
@@ -3499,7 +3583,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
+    <dd>{{% md %}}Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3512,7 +3596,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+    <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
@@ -3521,7 +3605,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
+    <dd>{{% md %}}Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -3530,7 +3614,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+    <dd>{{% md %}}Absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
@@ -3539,7 +3623,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+    <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
@@ -3548,7 +3632,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+    <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_python">
@@ -3557,7 +3641,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
+    <dd>{{% md %}}Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
