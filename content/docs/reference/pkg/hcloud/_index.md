@@ -22,6 +22,7 @@ A Pulumi package for creating and managing hcloud cloud resources.
     <li><a href="loadbalancernetwork" title="LoadBalancerNetwork"><span class="symbol resource"></span>LoadBalancerNetwork</a></li>
     <li><a href="loadbalancerservice" title="LoadBalancerService"><span class="symbol resource"></span>LoadBalancerService</a></li>
     <li><a href="loadbalancertarget" title="LoadBalancerTarget"><span class="symbol resource"></span>LoadBalancerTarget</a></li>
+    <li><a href="managedcertificate" title="ManagedCertificate"><span class="symbol resource"></span>ManagedCertificate</a></li>
     <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
     <li><a href="networkroute" title="NetworkRoute"><span class="symbol resource"></span>NetworkRoute</a></li>
     <li><a href="networksubnet" title="NetworkSubnet"><span class="symbol resource"></span>NetworkSubnet</a></li>
@@ -31,6 +32,7 @@ A Pulumi package for creating and managing hcloud cloud resources.
     <li><a href="servernetwork" title="ServerNetwork"><span class="symbol resource"></span>ServerNetwork</a></li>
     <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
     <li><a href="sshkey" title="SshKey"><span class="symbol resource"></span>SshKey</a></li>
+    <li><a href="uploadedcertificate" title="UploadedCertificate"><span class="symbol resource"></span>UploadedCertificate</a></li>
     <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
     <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
 </ul>
@@ -64,6 +66,6 @@ A Pulumi package for creating and managing hcloud cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.8.0</dd>
 </dl>
 
