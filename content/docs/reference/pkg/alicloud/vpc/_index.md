@@ -39,6 +39,7 @@ Explore the resources and functions of the alicloud.vpc module.
     <li><a href="getcommonbandwidthpackages" title="GetCommonBandwidthPackages"><span class="symbol function"></span>GetCommonBandwidthPackages</a></li>
     <li><a href="getenhancednatavailablezones" title="GetEnhancedNatAvailableZones"><span class="symbol function"></span>GetEnhancedNatAvailableZones</a></li>
     <li><a href="getforwardentries" title="GetForwardEntries"><span class="symbol function"></span>GetForwardEntries</a></li>
+    <li><a href="gethavips" title="GetHavips"><span class="symbol function"></span>GetHavips</a></li>
     <li><a href="getnatgateways" title="GetNatGateways"><span class="symbol function"></span>GetNatGateways</a></li>
     <li><a href="getnetworks" title="GetNetworks"><span class="symbol function"></span>GetNetworks</a></li>
     <li><a href="getrouteentries" title="GetRouteEntries"><span class="symbol function"></span>GetRouteEntries</a></li>
@@ -59,6 +60,6 @@ Explore the resources and functions of the alicloud.vpc module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.38.1</dd>
+	<dd>2.39.0</dd>
 </dl>
 

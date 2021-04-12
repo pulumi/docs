@@ -12,6 +12,8 @@ Explore the resources and functions of the alicloud.resourcemanager module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="controlpolicy" title="ControlPolicy"><span class="symbol resource"></span>ControlPolicy</a></li>
+    <li><a href="controlpolicyattachment" title="ControlPolicyAttachment"><span class="symbol resource"></span>ControlPolicyAttachment</a></li>
     <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
     <li><a href="handshake" title="Handshake"><span class="symbol resource"></span>Handshake</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
@@ -28,6 +30,8 @@ Explore the resources and functions of the alicloud.resourcemanager module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccounts" title="GetAccounts"><span class="symbol function"></span>GetAccounts</a></li>
+    <li><a href="getcontrolpolicies" title="GetControlPolicies"><span class="symbol function"></span>GetControlPolicies</a></li>
+    <li><a href="getcontrolpolicyattachments" title="GetControlPolicyAttachments"><span class="symbol function"></span>GetControlPolicyAttachments</a></li>
     <li><a href="getfolders" title="GetFolders"><span class="symbol function"></span>GetFolders</a></li>
     <li><a href="gethandshakes" title="GetHandshakes"><span class="symbol function"></span>GetHandshakes</a></li>
     <li><a href="getpolicies" title="GetPolicies"><span class="symbol function"></span>GetPolicies</a></li>
@@ -50,6 +54,6 @@ Explore the resources and functions of the alicloud.resourcemanager module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.38.1</dd>
+	<dd>2.39.0</dd>
 </dl>
 

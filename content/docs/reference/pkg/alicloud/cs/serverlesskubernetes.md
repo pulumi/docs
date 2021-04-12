@@ -322,7 +322,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
@@ -506,7 +506,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
@@ -690,7 +690,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
@@ -874,7 +874,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
@@ -1227,7 +1227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
@@ -1411,7 +1411,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
@@ -1595,7 +1595,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
@@ -1779,7 +1779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
+    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
