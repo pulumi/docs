@@ -1,0 +1,58 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../../pulumi/sdk/dotnet",
+          "files": ["Pulumi/Pulumi.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi",
+      "filter": "filterConfig.yml"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi/sdk/dotnet",
+          "files": ["Pulumi.FSharp/Pulumi.FSharp.fsproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.FSharp"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi/sdk/dotnet",
+          "files": ["Pulumi.Automation/Pulumi.Automation.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Automation"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "src": "metadata",
+        "files": ["**/*.yml"],
+        "dest": "."
+      }
+    ],
+    "overwrite": [],
+    "dest": "../static-prebuilt/docs/reference/pkg/dotnet",
+    "globalMetadata": {
+      "_appFooter": "Copyright 2016-2021, Pulumi Corporation."
+    },
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "./pulumi-template"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}

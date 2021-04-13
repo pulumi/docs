@@ -1,0 +1,1550 @@
+{
+  "homepages": [],
+  "source_base_path": "/Users/stack72/code/go/src/github.com/pulumi/docs/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.CommandException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.CommandException.html",
+          "hash": "9PnByOibIZ2WyV0sRK+zpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.ConcurrentUpdateException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.ConcurrentUpdateException.html",
+          "hash": "C9IEx+AKVkn4h+PJ26QNCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackAlreadyExistsException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackAlreadyExistsException.html",
+          "hash": "idAFtAlaOX0OAbAJuVz/TA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackNotFoundException.html",
+          "hash": "5oUPuhN124r8YwBkMXzoKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.html",
+          "hash": "M7+z03/gxYOFst0MXpieYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ConfigValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.ConfigValue.html",
+          "hash": "Qz3EaxJNFoHZX9IN1bp+DQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.DestroyOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.DestroyOptions.html",
+          "hash": "8Ofe59C+RgmPU+a3+htBqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.CancelEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.CancelEvent.html",
+          "hash": "tzlWH7YcLI1TRIXtFEORDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.DiagnosticEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.DiagnosticEvent.html",
+          "hash": "sY/oPu+Ei6XZcZmo6WWkAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.DiffKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.DiffKind.html",
+          "hash": "SNZKzoJ1P97jfQh31+XiFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.EngineEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.EngineEvent.html",
+          "hash": "MGfgOwBYf3elDhot/SnDNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.PolicyEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.PolicyEvent.html",
+          "hash": "61KOHOsibXSzjrNsOP7zMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.PreludeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.PreludeEvent.html",
+          "hash": "MvtAHKcZ+cKy3xpf1fYRdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.PropertyDiff.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.PropertyDiff.html",
+          "hash": "YcxPchvlhjGB14Yr3i4TVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourceOperationFailedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.ResourceOperationFailedEvent.html",
+          "hash": "VyE83oV4A91T37+9gZIrcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourceOutputsEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.ResourceOutputsEvent.html",
+          "hash": "T6F4C007Fe6OyN1PDxVHjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourcePreEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.ResourcePreEvent.html",
+          "hash": "S4OsIWAPqgdPMAISEzKf2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.StandardOutputEngineEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.StandardOutputEngineEvent.html",
+          "hash": "tHSsX8VNCQ2hH26O9P/wqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.StepEventMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.StepEventMetadata.html",
+          "hash": "ILLY3i/kmcvHn4hGnV8stg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.StepEventStateMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.StepEventStateMetadata.html",
+          "hash": "bnLNVDtKSSrp2w2F2G7TYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.SummaryEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.SummaryEvent.html",
+          "hash": "gt7CHnhZvM+WqiX45/vPwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.html",
+          "hash": "fkLKQ+gqGi0ynD1YhHWMNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.MissingExpectedEventException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.MissingExpectedEventException.html",
+          "hash": "iLgcDIYCUvsCt58miDrddg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.NoSummaryEventException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.NoSummaryEventException.html",
+          "hash": "Cwxji/s93h8fW38itzEHGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.ProjectSettingsConflictException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.ProjectSettingsConflictException.html",
+          "hash": "OYikXrf3bNYlLv5lNGEA0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.html",
+          "hash": "5ecAxetb2ID6l9U/6k9nnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.HistoryOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.HistoryOptions.html",
+          "hash": "2CtRoKSgvGvIMZ7/0wxw2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.InlineProgramArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.InlineProgramArgs.html",
+          "hash": "0iax2dKiOsMJJ4enOEJEYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.LocalProgramArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.LocalProgramArgs.html",
+          "hash": "4O8q8iMXnxDzlNg60P3fyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.LocalWorkspace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.LocalWorkspace.html",
+          "hash": "cxNLzz2KoNMfw7AoBQyS1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.LocalWorkspaceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.LocalWorkspaceOptions.html",
+          "hash": "UcWQPOmvQGyb5XfZ2M5f7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.OperationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.OperationType.html",
+          "hash": "fX0e2ZXm8N/8EBaZcKQLew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.OutputValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.OutputValue.html",
+          "hash": "dJk3Vku6dsErh1dhV8WNcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PluginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.PluginInfo.html",
+          "hash": "wl3Fui9M4ymVyq0q72TqSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PluginKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.PluginKind.html",
+          "hash": "+HSPlWkJEfA+3XDYPU+84g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PreviewOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.PreviewOptions.html",
+          "hash": "w/iLc6b2fowUvd4Y/gI/JQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PreviewResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.PreviewResult.html",
+          "hash": "oISzUyLg4KwarvSyJl0uHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectBackend.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectBackend.html",
+          "hash": "edB5MrFCUHDhwzV2sB+ObQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectRuntime.html",
+          "hash": "9fmXPATOzaTF2e6NiKic8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntimeName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectRuntimeName.html",
+          "hash": "dD1v/Q1T5ZOQOQlWJ6ih1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntimeOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectRuntimeOptions.html",
+          "hash": "o1U6eIsaXpVmhXH6PebcuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectSettings.html",
+          "hash": "+aXz+Gc6me0WnUV5VKoTVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectTemplate.html",
+          "hash": "qmCF7OohbYbCqU/9SqGyGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectTemplateConfigValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectTemplateConfigValue.html",
+          "hash": "ier17eD6geyWdZUNn+EzYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PulumiFn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.PulumiFn.html",
+          "hash": "vsl+HW4+k/p7PT8oVYVTJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RefreshOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.RefreshOptions.html",
+          "hash": "+Xg44W2xmBqRWXOIYFXrMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.StackSettings.html",
+          "hash": "lR/SkZRIGn9HV8DHGIFPcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackSettingsConfigValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.StackSettingsConfigValue.html",
+          "hash": "hMJuOlCZE0uAILg2Nf/Gog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackSummary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.StackSummary.html",
+          "hash": "affxDe6BTSVnQjGSs6mIZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpOptions.html",
+          "hash": "YdT3Qvv7f2LFe/lnYOnAlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpResult.html",
+          "hash": "Z0N6dWWSzuS1cFNT4WV17w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateKind.html",
+          "hash": "LS2CD5kHKy9Tu6JPzyOSxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateOptions.html",
+          "hash": "ePqlxe7nwf/NYEHxy9cSwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateResult.html",
+          "hash": "bxG+duWiHiRZc4ieKj5olw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateState.html",
+          "hash": "2/HL2LW+MepGo6oniyBnqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateSummary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateSummary.html",
+          "hash": "KF+4vucGg5HeN8d7vBRyBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.WhoAmIResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.WhoAmIResult.html",
+          "hash": "OA96t9zXPDtYYJ79gqu7kQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Workspace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.Workspace.html",
+          "hash": "QDLpDnbZkZ0qpzA2FFR0WA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.WorkspaceStack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html",
+          "hash": "fRbbTwQsOq7kvBpdMwwIVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.html",
+          "hash": "7HsUwlJCT/VOXcpCHkBD7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "metadata/Pulumi.Automation/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/toc.html",
+          "hash": "NjfQ8MM3dwvuBnWuxzEJuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.FSharp/Pulumi.FSharp.Deployment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.FSharp/Pulumi.FSharp.Deployment.html",
+          "hash": "/f2EhGOLENnhmUfHdvwOpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.FSharp/Pulumi.FSharp.Ops.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.FSharp/Pulumi.FSharp.Ops.html",
+          "hash": "sJyOR1ZmF7b7k+gZsk/QzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.FSharp/Pulumi.FSharp.Outputs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.FSharp/Pulumi.FSharp.Outputs.html",
+          "hash": "xOfWmHXcsKOc8RtpudZsPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.FSharp/Pulumi.FSharp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.FSharp/Pulumi.FSharp.html",
+          "hash": "vBUqOLhMJyz20u4THinFlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "metadata/Pulumi.FSharp/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.FSharp/toc.html",
+          "hash": "Pu0tK9E+YczGR2G0Knkz3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Alias.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Alias.html",
+          "hash": "B0LHn8reNVAXlLQY3HtYYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Archive.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Archive.html",
+          "hash": "6E0LJjgfDB7oTccgk+uB6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Asset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Asset.html",
+          "hash": "gA9HvES/aXaQXZ5JnDWNHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.AssetArchive.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.AssetArchive.html",
+          "hash": "00eTJJw3RZo6Pke+DPaZ6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.AssetOrArchive.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.AssetOrArchive.html",
+          "hash": "gVuTurxCEYttfxzwfp9VtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ComponentResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.ComponentResource.html",
+          "hash": "7Xf8PZj+qHo6nIx3kMx58g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ComponentResourceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.ComponentResourceOptions.html",
+          "hash": "uPSS4jXno0sqlliNvGh1Rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Config.html",
+          "hash": "GwgY8T2uLBRjarNiy76hNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.CustomResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.CustomResource.html",
+          "hash": "I2quqVKIlYVLyKq1de/z1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.CustomResourceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.CustomResourceOptions.html",
+          "hash": "WAcXbFaHHZa0Rh34/lQ64g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.CustomTimeouts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.CustomTimeouts.html",
+          "hash": "mm8edJ4U3T/EOStEPD98iA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Deployment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Deployment.html",
+          "hash": "Ye6y5eHc5/szme7rQQCKrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.DeploymentInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.DeploymentInstance.html",
+          "hash": "Gk2advFYzZ9B02Na7VGbHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.DictionaryResourceArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.DictionaryResourceArgs.html",
+          "hash": "CgEg0Cnvv2pQZ9ezXClbOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.EnumTypeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.EnumTypeAttribute.html",
+          "hash": "BseFwXhYQCrgkPY/SD7jJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.FileArchive.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.FileArchive.html",
+          "hash": "REmQVXcpHIe2vXTsoMcH3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.FileAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.FileAsset.html",
+          "hash": "hDf3wUv6JUV1arwzp/e1Vg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Input-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Input-1.html",
+          "hash": "lUnS0/bE1lVSVj0yciK6TQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InputArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.InputArgs.html",
+          "hash": "UoxkKebTS/CtMNV9UIHf+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InputAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.InputAttribute.html",
+          "hash": "wH+/8I7pd6hn9tNQBzBuuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InputExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.InputExtensions.html",
+          "hash": "uVD5Ke8oFy1+JXQEeJqpEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InputJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.InputJson.html",
+          "hash": "qrZ57inHFvBKEUEDhn6u/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InputList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.InputList-1.html",
+          "hash": "0ARIIHzmPgceDklaClpxkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InputListExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.InputListExtensions.html",
+          "hash": "yb5f+YaGc9LwSCNN9MQRxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InputMap-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.InputMap-1.html",
+          "hash": "KPOrHlIdXLT6IaxcZHVeSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InputMapExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.InputMapExtensions.html",
+          "hash": "3YVZ0lLXR1wOM5tTyGDycw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InputUnion-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.InputUnion-2.html",
+          "hash": "XYihCFM7vQv5HhEIRQtkXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InvokeArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.InvokeArgs.html",
+          "hash": "MPBEH78R8wBp1GHR9F5yuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InvokeOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.InvokeOptions.html",
+          "hash": "+PhVQ1UFIswKC8wINfOHrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Log.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Log.html",
+          "hash": "tsz3+x+IitO4iP3FjBbEZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Output-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Output-1.html",
+          "hash": "ea7QzXxM2/DotCda7o1sEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Output.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Output.html",
+          "hash": "u7s3KSEsFK5QS7gXA4kUiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.OutputAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.OutputAttribute.html",
+          "hash": "sjs40CKCi15vi2Qia7aeCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.OutputConstructorAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.OutputConstructorAttribute.html",
+          "hash": "R87PCC8lXAgLjRs1wCTuAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.OutputExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.OutputExtensions.html",
+          "hash": "H8BP67RansWU+Dx5E+327w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.OutputTypeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.OutputTypeAttribute.html",
+          "hash": "pjoqAEJGnAA5M0j3dqkjOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ProviderResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.ProviderResource.html",
+          "hash": "/C0oxVtFlfXa756xCN1+dA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.RemoteArchive.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.RemoteArchive.html",
+          "hash": "tcoiDiLGiH5mz9iJnuDY+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.RemoteAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.RemoteAsset.html",
+          "hash": "mjGvMLWk6nTsjthKRayAMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Resource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Resource.html",
+          "hash": "wfS3wAAw3IftDQ4+EyVPuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.ResourceArgs.html",
+          "hash": "TwMf4lwgnVQnPyqYbSpvcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.ResourceException.html",
+          "hash": "pSCRGPQXLM0iMcUA2JfEDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.ResourceOptions.html",
+          "hash": "VunQQMNK9dgEBWb/MQD3QQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.ResourceTransformation.html",
+          "hash": "Nu5vCTFCpfgodHd4Dxz4jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransformationArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.ResourceTransformationArgs.html",
+          "hash": "qxfgXvcSpAsVTD+hNQLxbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransformationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.ResourceTransformationResult.html",
+          "hash": "ctDN1xH2hZVKAk49tz/CiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTypeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.ResourceTypeAttribute.html",
+          "hash": "L5fP5ga9HBecwlO3fHdTBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Stack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Stack.html",
+          "hash": "YpKnZpi3v0JJ7+G5JbA+XA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.StackOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.StackOptions.html",
+          "hash": "ShxBpvmpLyHWMxZRpU5hGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.StackReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.StackReference.html",
+          "hash": "3razUZ9PjONIeuqdqAhXNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.StackReferenceArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.StackReferenceArgs.html",
+          "hash": "UCS378kMd6U5M8aBnjceEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.StringAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.StringAsset.html",
+          "hash": "qyjWYYgeKI1uyOvQ8dYBSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Testing.IMocks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Testing.IMocks.html",
+          "hash": "aCir4a/oTKWoYefMKpbZRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Testing.TestOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Testing.TestOptions.html",
+          "hash": "8/lVagsuXddfhGqolEOZQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Testing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Testing.html",
+          "hash": "S7oh40m0T6HtL1YF8fFnOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Union-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Union-2.html",
+          "hash": "y8DQuxdujRNw+P9LmQ+rHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Urn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Urn.html",
+          "hash": "QWuYxYmWOXeE7KcMFR31wg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.html",
+          "hash": "h2918PVjByG6r2e3yqmv+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "metadata/Pulumi/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/toc.html",
+          "hash": "cFmkADLJ28iu2FKKiW7Agg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 122,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

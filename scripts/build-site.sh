@@ -22,6 +22,9 @@ export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 export REPO_THEME_PATH="themes/default/"
 export LOCAL_THEME_PATH="_vendor/$(hugo_theme_path)/"
 
+printf "Copying prebuilt docs...\n\n"
+make copy_static_prebuilt
+
 # Themes are expected to manage their own dependencies and to expose `ensure`, `test`, and `build` scripts.
 pushd $LOCAL_THEME_PATH
     yarn run ensure
