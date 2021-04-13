@@ -1,0 +1,9 @@
+id = "kimberley-mackenzie"
+name = "Kimberley Mackenzie"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "kimberleyamackenzie"
