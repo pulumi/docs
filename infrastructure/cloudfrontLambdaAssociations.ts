@@ -199,22 +199,18 @@ function dotnetSDKRedirect(uri: string): string | undefined {
         "/docs/reference/pkg/dotnet/Pulumi.:provider/Pulumi.:providerRepeated(.:service)(.*).html"
     );
     const match = pattern.match(uri);
-    // const exceptions = [
-    //     "Automation",
-    //     "FSharp",
-    // ];
-    // && !exceptions.includes(match.provider)
+    const exceptions = [
+        "Automation",
+        "FSharp",
+    ];
 
-    if (match && match.provider) {
+    if (match && match.provider && !exceptions.includes(match.provider)) {
         if (match.service && !match.service.match(/Types|Config/)) {
             // tslint:disable-next-line:max-line-length
             return `/docs/reference/pkg/${match.provider.toLowerCase()}/${match.service.toLowerCase()}/?language=csharp`;
         }
         return `/docs/reference/pkg/${match.provider.toLowerCase()}/?language=csharp`;
 
-    // If the URI matches /dotnet/anything-else, we'll just direct you to the GitHub repo.
-    } else if (uri.startsWith("/docs/reference/pkg/dotnet/")) {
-        return "/docs/reference/pkg";
     }
 
     return undefined;
