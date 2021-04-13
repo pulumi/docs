@@ -147,7 +147,7 @@ class MyStack : Stack
                     DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs
                     {
                         BootDiskType = "pd-ssd",
-                        BootDiskSizeGb = 15,
+                        BootDiskSizeGb = 30,
                     },
                 },
                 WorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs
@@ -157,7 +157,7 @@ class MyStack : Stack
                     MinCpuPlatform = "Intel Skylake",
                     DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs
                     {
-                        BootDiskSizeGb = 15,
+                        BootDiskSizeGb = 30,
                         NumLocalSsds = 1,
                     },
                 },
@@ -238,7 +238,7 @@ func main() {
 					MachineType:  pulumi.String("e2-medium"),
 					DiskConfig: &dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs{
 						BootDiskType:   pulumi.String("pd-ssd"),
-						BootDiskSizeGb: pulumi.Int(15),
+						BootDiskSizeGb: pulumi.Int(30),
 					},
 				},
 				WorkerConfig: &dataproc.ClusterClusterConfigWorkerConfigArgs{
@@ -246,7 +246,7 @@ func main() {
 					MachineType:    pulumi.String("e2-medium"),
 					MinCpuPlatform: pulumi.String("Intel Skylake"),
 					DiskConfig: &dataproc.ClusterClusterConfigWorkerConfigDiskConfigArgs{
-						BootDiskSizeGb: pulumi.Int(15),
+						BootDiskSizeGb: pulumi.Int(30),
 						NumLocalSsds:   pulumi.Int(1),
 					},
 				},
@@ -311,7 +311,7 @@ mycluster = gcp.dataproc.Cluster("mycluster",
             machine_type="e2-medium",
             disk_config=gcp.dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs(
                 boot_disk_type="pd-ssd",
-                boot_disk_size_gb=15,
+                boot_disk_size_gb=30,
             ),
         ),
         worker_config={
@@ -319,7 +319,7 @@ mycluster = gcp.dataproc.Cluster("mycluster",
             "machine_type": "e2-medium",
             "min_cpu_platform": "Intel Skylake",
             "diskConfig": {
-                "boot_disk_size_gb": 15,
+                "boot_disk_size_gb": 30,
                 "numLocalSsds": 1,
             },
         },
@@ -375,7 +375,7 @@ const mycluster = new gcp.dataproc.Cluster("mycluster", {
             machineType: "e2-medium",
             diskConfig: {
                 bootDiskType: "pd-ssd",
-                bootDiskSizeGb: 15,
+                bootDiskSizeGb: 30,
             },
         },
         workerConfig: {
@@ -383,7 +383,7 @@ const mycluster = new gcp.dataproc.Cluster("mycluster", {
             machineType: "e2-medium",
             minCpuPlatform: "Intel Skylake",
             diskConfig: {
-                bootDiskSizeGb: 15,
+                bootDiskSizeGb: 30,
                 numLocalSsds: 1,
             },
         },

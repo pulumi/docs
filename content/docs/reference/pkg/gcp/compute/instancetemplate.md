@@ -3775,6 +3775,15 @@ Use `network` attribute for Legacy or Auto subnetted networks and
 empty, the address will be automatically assigned.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nictype_csharp">
+<a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
@@ -3854,6 +3863,15 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     </dt>
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nictype_go">
+<a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_go">
@@ -3937,6 +3955,15 @@ Use `network` attribute for Legacy or Auto subnetted networks and
 empty, the address will be automatically assigned.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nictype_nodejs">
+<a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
@@ -4016,6 +4043,15 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     </dt>
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_python">

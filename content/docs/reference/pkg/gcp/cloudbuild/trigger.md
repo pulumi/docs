@@ -3023,7 +3023,7 @@ Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ON
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.
-Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, and `N1_HIGHCPU_32`.
+Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_8`, and `E2_HIGHCPU_32`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedverifyoption_csharp">
@@ -3160,7 +3160,7 @@ Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ON
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.
-Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, and `N1_HIGHCPU_32`.
+Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_8`, and `E2_HIGHCPU_32`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedverifyoption_go">
@@ -3297,7 +3297,7 @@ Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ON
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.
-Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, and `N1_HIGHCPU_32`.
+Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_8`, and `E2_HIGHCPU_32`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedverifyoption_nodejs">
@@ -3434,7 +3434,7 @@ Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ON
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.
-Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, and `N1_HIGHCPU_32`.
+Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_8`, and `E2_HIGHCPU_32`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requested_verify_option_python">

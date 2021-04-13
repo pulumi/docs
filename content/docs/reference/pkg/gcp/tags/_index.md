@@ -11,8 +11,15 @@ Explore the resources and functions of the gcp.tags module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="tagbinding" title="TagBinding"><span class="symbol resource"></span>TagBinding</a></li>
     <li><a href="tagkey" title="TagKey"><span class="symbol resource"></span>TagKey</a></li>
+    <li><a href="tagkeyiambinding" title="TagKeyIamBinding"><span class="symbol resource"></span>TagKeyIamBinding</a></li>
+    <li><a href="tagkeyiammember" title="TagKeyIamMember"><span class="symbol resource"></span>TagKeyIamMember</a></li>
+    <li><a href="tagkeyiampolicy" title="TagKeyIamPolicy"><span class="symbol resource"></span>TagKeyIamPolicy</a></li>
     <li><a href="tagvalue" title="TagValue"><span class="symbol resource"></span>TagValue</a></li>
+    <li><a href="tagvalueiambinding" title="TagValueIamBinding"><span class="symbol resource"></span>TagValueIamBinding</a></li>
+    <li><a href="tagvalueiammember" title="TagValueIamMember"><span class="symbol resource"></span>TagValueIamMember</a></li>
+    <li><a href="tagvalueiampolicy" title="TagValueIamPolicy"><span class="symbol resource"></span>TagValueIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +31,6 @@ Explore the resources and functions of the gcp.tags module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.19.0</dd>
+	<dd>4.21.0</dd>
 </dl>
 
