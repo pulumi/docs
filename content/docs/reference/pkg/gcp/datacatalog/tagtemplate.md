@@ -1204,6 +1204,15 @@ If it is not provided, the provider project is used.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description for this field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
@@ -1264,6 +1273,15 @@ Multiple fields can have the same order, and field orders within a tag do not ha
     </dt>
     <dd>{{% md %}}The type of value this tag field can contain.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description for this field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
@@ -1328,6 +1346,15 @@ Multiple fields can have the same order, and field orders within a tag do not ha
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description for this field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
@@ -1388,6 +1415,15 @@ Multiple fields can have the same order, and field orders within a tag do not ha
     </dt>
     <dd>{{% md %}}The type of value this tag field can contain.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A description for this field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">

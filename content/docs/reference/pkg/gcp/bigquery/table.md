@@ -3664,6 +3664,17 @@ Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
 * CUSTOM: when set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requirepartitionfilter_csharp">
+<a href="#requirepartitionfilter_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Partition<wbr>Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, queries over this table
+require a partition filter that can be used for partition elimination to be
+specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourceuriprefix_csharp">
 <a href="#sourceuriprefix_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri<wbr>Prefix</a>
 </span>
@@ -3698,6 +3709,17 @@ Not all storage formats support hive partitioning. Requesting hive
 partitioning on an unsupported format will lead to an error.
 Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
 * CUSTOM: when set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requirepartitionfilter_go">
+<a href="#requirepartitionfilter_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Partition<wbr>Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, queries over this table
+require a partition filter that can be used for partition elimination to be
+specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuriprefix_go">
@@ -3736,6 +3758,17 @@ Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
 * CUSTOM: when set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requirepartitionfilter_nodejs">
+<a href="#requirepartitionfilter_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Partition<wbr>Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, queries over this table
+require a partition filter that can be used for partition elimination to be
+specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourceuriprefix_nodejs">
 <a href="#sourceuriprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri<wbr>Prefix</a>
 </span>
@@ -3770,6 +3803,17 @@ Not all storage formats support hive partitioning. Requesting hive
 partitioning on an unsupported format will lead to an error.
 Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
 * CUSTOM: when set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="require_partition_filter_python">
+<a href="#require_partition_filter_python" style="color: inherit; text-decoration: inherit;">require_<wbr>partition_<wbr>filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, queries over this table
+require a partition filter that can be used for partition elimination to be
+specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_uri_prefix_python">
