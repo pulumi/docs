@@ -64,6 +64,10 @@ check_links:
 new_learn_module:
 	./scripts/new-learn-module.sh
 
+.PHONY: copy_static_prebuilt
+copy_static_prebuilt:
+	mkdir -p public && cp -R static-prebuilt/* public/
+
 .PHONY: new_learn_topic
 new_learn_topic:
 	./scripts/new-learn-topic.sh

@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Automation
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Automation
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>    </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Automation">
+  
+  <h1 id="Pulumi_Automation" data-uid="Pulumi.Automation" class="text-break">Namespace Pulumi.Automation
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Automation.ConfigValue.html">ConfigValue</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.DestroyOptions.html">DestroyOptions</a></h4>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_DestroyAsync_Pulumi_Automation_DestroyOptions_System_Threading_CancellationToken_">DestroyAsync(DestroyOptions, CancellationToken)</a> operation.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.HistoryOptions.html">HistoryOptions</a></h4>
+      <section><p>Options controlling the behavior of a <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_GetHistoryAsync_Pulumi_Automation_HistoryOptions_System_Threading_CancellationToken_">GetHistoryAsync(HistoryOptions, CancellationToken)</a> operation.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.InlineProgramArgs.html">InlineProgramArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.LocalProgramArgs.html">LocalProgramArgs</a></h4>
+      <section><p>Description of a stack backed by pre-existing local Pulumi CLI program.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.LocalWorkspace.html">LocalWorkspace</a></h4>
+      <section><p>LocalWorkspace is a default implementation of the Workspace interface.</p>
+<p>
+A Workspace is the execution context containing a single Pulumi project, a program,
+and multiple stacks.Workspaces are used to manage the execution environment,
+providing various utilities such as plugin installation, environment configuration
+($PULUMI_HOME), and creation, deletion, and listing of Stacks.
+<p>
+LocalWorkspace relies on Pulumi.yaml and Pulumi.{stack}.yaml as the intermediate format
+for Project and Stack settings.Modifying ProjectSettings will
+alter the Workspace Pulumi.yaml file, and setting config on a Stack will modify the Pulumi.{stack}.yaml file.
+This is identical to the behavior of Pulumi CLI driven workspaces.
+<p>
+If not provided a working directory - causing LocalWorkspace to create a temp directory,
+than the temp directory will be cleaned up on <a class="xref" href="Pulumi.Automation.LocalWorkspace.html#Pulumi_Automation_LocalWorkspace_Dispose">Dispose()</a>.
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.LocalWorkspaceOptions.html">LocalWorkspaceOptions</a></h4>
+      <section><p>Extensibility options to configure a LocalWorkspace; e.g: settings to seed
+and environment variables to pass through to every command.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.OutputValue.html">OutputValue</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.PluginInfo.html">PluginInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.PreviewOptions.html">PreviewOptions</a></h4>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_PreviewAsync_Pulumi_Automation_PreviewOptions_System_Threading_CancellationToken_">PreviewAsync(PreviewOptions, CancellationToken)</a> operation.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.PreviewResult.html">PreviewResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.ProjectBackend.html">ProjectBackend</a></h4>
+      <section><p>Configuration for the project's Pulumi state storage backend.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.ProjectRuntime.html">ProjectRuntime</a></h4>
+      <section><p>A description of the Project's program runtime and associated metadata.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.ProjectRuntimeOptions.html">ProjectRuntimeOptions</a></h4>
+      <section><p>Various configuration options that apply to different language runtimes.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.ProjectSettings.html">ProjectSettings</a></h4>
+      <section><p>A Pulumi project manifest. It describes metadata applying to all sub-stacks created from the project.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.ProjectTemplate.html">ProjectTemplate</a></h4>
+      <section><p>A template used to seed new stacks created from this project.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.ProjectTemplateConfigValue.html">ProjectTemplateConfigValue</a></h4>
+      <section><p>A placeholder config value for a project template.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.PulumiFn.html">PulumiFn</a></h4>
+      <section><p>A Pulumi program as an inline function (in process).</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.RefreshOptions.html">RefreshOptions</a></h4>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_RefreshAsync_Pulumi_Automation_RefreshOptions_System_Threading_CancellationToken_">RefreshAsync(RefreshOptions, CancellationToken)</a> operation.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.StackSettings.html">StackSettings</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.StackSettingsConfigValue.html">StackSettingsConfigValue</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.StackSummary.html">StackSummary</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.UpdateOptions.html">UpdateOptions</a></h4>
+      <section><p>Common options controlling the behavior of update actions taken
+against an instance of <a class="xref" href="Pulumi.Automation.WorkspaceStack.html">WorkspaceStack</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.UpdateResult.html">UpdateResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.UpdateSummary.html">UpdateSummary</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.UpOptions.html">UpOptions</a></h4>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_UpAsync_Pulumi_Automation_UpOptions_System_Threading_CancellationToken_">UpAsync(UpOptions, CancellationToken)</a> operation.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.UpResult.html">UpResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.WhoAmIResult.html">WhoAmIResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.Workspace.html">Workspace</a></h4>
+      <section><p>Workspace is the execution context containing a single Pulumi project, a program, and multiple stacks.</p>
+<p>
+Workspaces are used to manage the execution environment, providing various utilities such as plugin
+installation, environment configuration ($PULUMI_HOME), and creation, deletion, and listing of Stacks.
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.WorkspaceStack.html">WorkspaceStack</a></h4>
+      <section><p><a class="xref" href="Pulumi.Automation.WorkspaceStack.html">WorkspaceStack</a> is an isolated, independently configurable instance of a
+Pulumi program. <a class="xref" href="Pulumi.Automation.WorkspaceStack.html">WorkspaceStack</a> exposes methods for the full pulumi lifecycle
+(up/preview/refresh/destroy), as well as managing configuration.</p>
+<p>
+Multiple stacks are commonly used to denote different phases of development
+(such as development, staging, and production) or feature branches (such as
+feature-x-dev, jane-feature-x-dev).
+<p>
+Will dispose the <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_Workspace">Workspace</a> on <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_Dispose">Dispose()</a>.
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Pulumi.Automation.OperationType.html">OperationType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.PluginKind.html">PluginKind</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.ProjectRuntimeName.html">ProjectRuntimeName</a></h4>
+      <section><p>Supported Pulumi program language runtimes.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Automation.UpdateKind.html">UpdateKind</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Automation.UpdateState.html">UpdateState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2021, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

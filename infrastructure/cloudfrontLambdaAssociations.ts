@@ -199,6 +199,11 @@ function dotnetSDKRedirect(uri: string): string | undefined {
         "/docs/reference/pkg/dotnet/Pulumi.:provider/Pulumi.:providerRepeated(.:service)(.*).html"
     );
     const match = pattern.match(uri);
+    // const exceptions = [
+    //     "Automation",
+    //     "FSharp",
+    // ];
+    // && !exceptions.includes(match.provider)
 
     if (match && match.provider) {
         if (match.service && !match.service.match(/Types|Config/)) {
