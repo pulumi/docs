@@ -1,6 +1,12 @@
 ---
 title: Audit Logs
 meta_desc: "This is a guide on how to audit your organization's infrastructure as code activity"
+menu:
+  intro:
+    parent: console
+    weight: 8
+aliases:
+- /docs/intro/console/collaboration/auditing/
 ---
 
 <div class="note note-info" role="alert">

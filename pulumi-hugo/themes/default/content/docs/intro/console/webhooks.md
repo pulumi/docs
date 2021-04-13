@@ -1,9 +1,14 @@
 ---
 title: Webhooks
 meta_desc: An overview of how to use Webhooks within the Pulumi Cloud Service.
+menu:
+  intro:
+    parent: console
+    weight: 9
 aliases:
 - /docs/reference/service/webhooks/
 - /docs/console/extensions/webhooks/
+- /docs/intro/console/extensions/webhooks/
 ---
 
 > Pulumi Webhooks is a feature available on the Pulumi Team and Enterprise editions.
@@ -271,6 +276,6 @@ the stack update or performed the action.
 }
 ```
 
-## Next Steps
+## Related Blogs
 
-- ["Deploy with Pulumi" Button]({{< relref "pulumi-button" >}})
+* [Managing Github Webhooks with Pulumi]({{< ref "/blog/managing-github-webhooks-with-pulumi" >}})

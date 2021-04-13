@@ -1,6 +1,10 @@
 ---
 title: Project and Stack Management
 meta_desc: An overivew of Project and Stack Management within the Pulumi Cloud Service.
+menu:
+  intro:
+    parent: console
+    weight: 4
 ---
 
 > While you can create projects within the individual organization created for your account, instructions in this document apply to members of an organization with sufficient [stack permissions]({{< relref "stack-permissions" >}}).
@@ -98,8 +102,8 @@ Select an individual resources to view its list of properties and dependencies.
 
 ### Deleting a stack
 
-When drilling into a specific stack, organization members with [sufficient permissions]({{< relref "/docs/intro/console/collaboration/organization-roles#stack-deletion" >}}) have the additional option of being able to delete the stack. Note that this removes the stack entirely from the Pulumi Service, along with all of its update history.
+When drilling into a specific stack, organization members with [sufficient permissions]({{< relref "/docs/intro/console/organization-roles#stack-deletion" >}}) have the additional option of being able to delete the stack. Note that this removes the stack entirely from the Pulumi Service, along with all of its update history.
 
-## Next Steps
+## Related Blogs
 
-* [Continuous Delivery]({{< relref "/docs/guides/continuous-delivery" >}})
+* [Building New Pulumi Projects and Stacks From Templates]({{< ref "/blog/building-new-pulumi-projects-and-stacks-from-templates" >}})

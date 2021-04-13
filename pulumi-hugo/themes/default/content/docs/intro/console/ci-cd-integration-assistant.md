@@ -1,6 +1,13 @@
 ---
 title: CI/CD Integration Assistant
 meta_desc: An overview of the CI/CD integration assistant in the Pulumi Console.
+menu:
+  intro:
+    parent: console
+    weight: 7
+aliases:
+- /docs/intro/console/extensions/
+- /docs/intro/console/extensions/ci-cd-integration-assistant/
 ---
 
 > This feature is available on the Pulumi Team Pro and Enterprise editions.
@@ -79,7 +86,7 @@ The **Configure CI/CD** step will help you configure secrets that will be used b
 For supported services, the wizard will provide a convenient link to the respective location
 where you can configure the secrets.
 
-The wizard provides a convenient way to create a [Pulumi Access Token]({{< relref "/docs/intro/console/accounts-and-organizations/accounts#access-tokens" >}})
+The wizard provides a convenient way to create a [Pulumi Access Token]({{< relref "/docs/intro/console/accounts#access-tokens" >}})
 without needing to leave the page.
 
 ![Pulumi Access Token](/images/docs/reference/console/pulumi-access-token.png)

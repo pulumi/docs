@@ -1,6 +1,10 @@
 ---
 title: Organizations
 meta_desc: An overview of Organizations within the Pulumi Cloud Service.
+menu:
+  intro:
+    parent: console
+    weight: 2
 aliases:
 - /docs/reference/service/orgs/
 - /docs/console/accounts/organizations/
@@ -8,8 +12,8 @@ aliases:
 ---
 
 An organization is the primary grouping unit for stacks within the Pulumi Console.
-When you sign into the Pulumi Console, an individual organization is automatically
-created for you and subscribed to the Pulumi Community edition.
+When you sign into the Pulumi Console, a personal account is automatically
+created for you and subscribed to the Pulumi Community plan.
 
 You can however be a member of multiple Pulumi organizations, and collaborate
 with other developers.
@@ -17,10 +21,10 @@ with other developers.
 If you're a Pulumi organization admin, you have the
 ability to:
 
-* [Invite users]({{< relref "/docs/intro/console/collaboration/organization-roles#organization-membership" >}})
+* [Invite users]({{< relref "/docs/intro/console/organization-roles#organization-membership" >}})
 * Manage default stack permissions for the organization
-* Create [teams]({{< relref "/docs/intro/console/collaboration/teams" >}}) and manage their permissions
-* Assign [organization roles]({{< relref "/docs/intro/console/collaboration/organization-roles" >}}) for role-based access control (RBAC)
+* [Create teams]({{< relref "/docs/intro/console/teams#creating-a-team" >}}) and manage their permissions
+* Assign [organization roles]({{< relref "/docs/intro/console/organization-roles" >}}) for role-based access control (RBAC)
 to your organization's stacks
 
 ## Creating a New Organization
@@ -29,7 +33,7 @@ You can create a new Pulumi organization directly from the Pulumi Console.
 
 <a class="btn btn-secondary" href="https://app.pulumi.com/site/trial"
 target="_blank">
-    CREATE ORGANIZATION
+    Create organziation
 </a>
 
 ## Organization Types
@@ -50,8 +54,8 @@ Similarly, as soon as someone loses access to the GitHub organization, they will
 longer have access to the Pulumi organization it is backing.
 
 {{% notes %}}
-See [Organization Roles]({{< relref "/docs/intro/console/collaboration/organization-roles" >}}) or
-[Adding New Identities]({{< relref "/docs/intro/console/accounts-and-organizations/accounts#adding-new-identities" >}})
+See [Organization Roles]({{< relref "/docs/intro/console/organization-roles" >}}) or
+[Adding New Identities]({{< relref "/docs/intro/console/accounts#adding-new-identities" >}})
 for more information.
 {{% /notes %}}
 
@@ -142,12 +146,8 @@ and Settings tabs.
 | Console Tab | Description |
 |--------|--------|
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
-| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management" >}}). |
+| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/project-and-stack-management" >}}). |
 | Members | A list of active members of the Pulumi organization. |
 | Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
 | Settings | Organization settings including subscription and payment information and history, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
-
-## Next Steps
-
-* [Organization Roles]({{< relref "/docs/intro/console/collaboration/organization-roles" >}})
