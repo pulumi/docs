@@ -59,6 +59,6 @@ A Pulumi package for creating and managing SignalFx resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.5.2</dd>
+	<dd>4.6.0</dd>
 </dl>
 

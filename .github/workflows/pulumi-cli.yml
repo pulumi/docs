@@ -27,7 +27,7 @@ jobs:
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
 
   build-pulumi-cli-docs:
-    runs-on: ubuntu-18.04
+    runs-on: macos-latest
     steps:
       - name: set the pulumi version
         run: |
@@ -80,6 +80,8 @@ jobs:
           go get -u github.com/pkg/errors
           go get -u github.com/russross/blackfriday/v2
         working-directory: docs
+      - name: Install docfx
+        run: brew install docfx
       - name: run yarn install in nodejs sdk
         run: yarn install && yarn run tsc
         working-directory: pulumi/sdk/nodejs
@@ -88,6 +90,9 @@ jobs:
         working-directory: docs
       - name: generate python docs
         run: ./scripts/generate_python_docs.sh "pulumi"
+        working-directory: docs
+      - name: generate docfx
+        run: ./scripts/run_docfx.sh
         working-directory: docs
       - name: generate markdown
         run: |

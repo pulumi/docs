@@ -87,66 +87,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		frontendInstance, err := compute.NewInstance(ctx, "frontendInstance", &compute.InstanceArgs{
-			MachineType: pulumi.String("g1-small"),
-			Zone:        pulumi.String("us-central1-b"),
-			BootDisk: &compute.InstanceBootDiskArgs{
-				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
-					Image: pulumi.String("debian-cloud/debian-9"),
-				},
-			},
-			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
-				&compute.InstanceNetworkInterfaceArgs{
-					Network: pulumi.String("default"),
-					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
-						nil,
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		prod, err := dns.NewManagedZone(ctx, "prod", &dns.ManagedZoneArgs{
-			DnsName: pulumi.String("prod.mydomain.com."),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = dns.NewRecordSet(ctx, "frontendRecordSet", &dns.RecordSetArgs{
-			Name: prod.DnsName.ApplyT(func(dnsName string) (string, error) {
-				return fmt.Sprintf("%v%v", "frontend.", dnsName), nil
-			}).(pulumi.StringOutput),
-			Type:        pulumi.String("A"),
-			Ttl:         pulumi.Int(300),
-			ManagedZone: prod.Name,
-			Rrdatas: pulumi.StringArray{
-				pulumi.String(frontendInstance.NetworkInterfaces.ApplyT(func(networkInterfaces []compute.InstanceNetworkInterface) (string, error) {
-					return networkInterfaces[0].AccessConfigs[0].NatIp, nil
-				}).(pulumi.StringOutput)),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -898,25 +839,6 @@ reside.
     <dd>{{% md %}}The DNS name this record set will apply to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rrdatas_csharp">
-<a href="#rrdatas_csharp" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The string data for the records in this record set
-whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\" \"` inside the provider configuration string (e.g. `"first255characters\" \"morecharacters"`).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ttl_csharp">
-<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -934,6 +856,25 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rrdatas_csharp">
+<a href="#rrdatas_csharp" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The string data for the records in this record set
+whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\" \"` inside the provider configuration string (e.g. `"first255characters\" \"morecharacters"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time-to-live of this record set (seconds).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -959,25 +900,6 @@ reside.
     <dd>{{% md %}}The DNS name this record set will apply to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rrdatas_go">
-<a href="#rrdatas_go" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The string data for the records in this record set
-whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\" \"` inside the provider configuration string (e.g. `"first255characters\" \"morecharacters"`).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ttl_go">
-<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -995,6 +917,25 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rrdatas_go">
+<a href="#rrdatas_go" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The string data for the records in this record set
+whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\" \"` inside the provider configuration string (e.g. `"first255characters\" \"morecharacters"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time-to-live of this record set (seconds).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1020,25 +961,6 @@ reside.
     <dd>{{% md %}}The DNS name this record set will apply to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rrdatas_nodejs">
-<a href="#rrdatas_nodejs" style="color: inherit; text-decoration: inherit;">rrdatas</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The string data for the records in this record set
-whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\" \"` inside the provider configuration string (e.g. `"first255characters\" \"morecharacters"`).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ttl_nodejs">
-<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -1056,6 +978,25 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rrdatas_nodejs">
+<a href="#rrdatas_nodejs" style="color: inherit; text-decoration: inherit;">rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The string data for the records in this record set
+whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\" \"` inside the provider configuration string (e.g. `"first255characters\" \"morecharacters"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The time-to-live of this record set (seconds).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1081,25 +1022,6 @@ reside.
     <dd>{{% md %}}The DNS name this record set will apply to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rrdatas_python">
-<a href="#rrdatas_python" style="color: inherit; text-decoration: inherit;">rrdatas</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The string data for the records in this record set
-whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\" \"` inside the provider configuration string (e.g. `"first255characters\" \"morecharacters"`).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ttl_python">
-<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -1117,6 +1039,25 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rrdatas_python">
+<a href="#rrdatas_python" style="color: inherit; text-decoration: inherit;">rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The string data for the records in this record set
+whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\" \"` inside the provider configuration string (e.g. `"first255characters\" \"morecharacters"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time-to-live of this record set (seconds).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

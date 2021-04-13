@@ -546,7 +546,7 @@ The DatabaseInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during 
+    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
 resource creation, the provider will attempt to clone another instance as indicated in the context. The
 configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -642,7 +642,7 @@ make sure you understand this.
         <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
-configuration is detailed below.
+configuration is detailed below. Valid only for MySQL instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorebackupcontext_csharp">
@@ -686,7 +686,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during 
+    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
 resource creation, the provider will attempt to clone another instance as indicated in the context. The
 configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +782,7 @@ make sure you understand this.
         <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
-configuration is detailed below.
+configuration is detailed below. Valid only for MySQL instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorebackupcontext_go">
@@ -826,7 +826,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during 
+    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
 resource creation, the provider will attempt to clone another instance as indicated in the context. The
 configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -922,7 +922,7 @@ make sure you understand this.
         <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
-configuration is detailed below.
+configuration is detailed below. Valid only for MySQL instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorebackupcontext_nodejs">
@@ -966,7 +966,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during 
+    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
 resource creation, the provider will attempt to clone another instance as indicated in the context. The
 configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1062,7 +1062,7 @@ make sure you understand this.
         <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
-configuration is detailed below.
+configuration is detailed below. Valid only for MySQL instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restore_backup_context_python">
@@ -1572,7 +1572,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during 
+    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
 resource creation, the provider will attempt to clone another instance as indicated in the context. The
 configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1713,7 @@ make sure you understand this.
         <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
-configuration is detailed below.
+configuration is detailed below. Valid only for MySQL instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorebackupcontext_csharp">
@@ -1784,7 +1784,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during 
+    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
 resource creation, the provider will attempt to clone another instance as indicated in the context. The
 configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1925,7 @@ make sure you understand this.
         <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
-configuration is detailed below.
+configuration is detailed below. Valid only for MySQL instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorebackupcontext_go">
@@ -1996,7 +1996,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during 
+    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
 resource creation, the provider will attempt to clone another instance as indicated in the context. The
 configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2137,7 +2137,7 @@ make sure you understand this.
         <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
-configuration is detailed below.
+configuration is detailed below. Valid only for MySQL instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorebackupcontext_nodejs">
@@ -2208,7 +2208,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during 
+    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
 resource creation, the provider will attempt to clone another instance as indicated in the context. The
 configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2349,7 +2349,7 @@ make sure you understand this.
         <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
-configuration is detailed below.
+configuration is detailed below. Valid only for MySQL instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restore_backup_context_python">
@@ -4748,7 +4748,7 @@ the whitelist to become active.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned
-a public IPV4 address. Either `ipv4_enabled` must be enabled or a
+a public IPV4 address. At least `ipv4_enabled` must be enabled or a
 `private_network` must be configured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4761,7 +4761,7 @@ a public IPV4 address. Either `ipv4_enabled` must be enabled or a
     <dd>{{% md %}}The VPC network from which the Cloud SQL
 instance is accessible for private IP. For example, projects/myProject/global/networks/default.
 Specifying a network enables private IP.
-Either `ipv4_enabled` must be enabled or a `private_network` must be configured.
+At least `ipv4_enabled` must be enabled or a `private_network` must be configured.
 This setting can be updated, but it cannot be removed after it is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4793,7 +4793,7 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned
-a public IPV4 address. Either `ipv4_enabled` must be enabled or a
+a public IPV4 address. At least `ipv4_enabled` must be enabled or a
 `private_network` must be configured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4806,7 +4806,7 @@ a public IPV4 address. Either `ipv4_enabled` must be enabled or a
     <dd>{{% md %}}The VPC network from which the Cloud SQL
 instance is accessible for private IP. For example, projects/myProject/global/networks/default.
 Specifying a network enables private IP.
-Either `ipv4_enabled` must be enabled or a `private_network` must be configured.
+At least `ipv4_enabled` must be enabled or a `private_network` must be configured.
 This setting can be updated, but it cannot be removed after it is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4838,7 +4838,7 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned
-a public IPV4 address. Either `ipv4_enabled` must be enabled or a
+a public IPV4 address. At least `ipv4_enabled` must be enabled or a
 `private_network` must be configured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4851,7 +4851,7 @@ a public IPV4 address. Either `ipv4_enabled` must be enabled or a
     <dd>{{% md %}}The VPC network from which the Cloud SQL
 instance is accessible for private IP. For example, projects/myProject/global/networks/default.
 Specifying a network enables private IP.
-Either `ipv4_enabled` must be enabled or a `private_network` must be configured.
+At least `ipv4_enabled` must be enabled or a `private_network` must be configured.
 This setting can be updated, but it cannot be removed after it is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4883,7 +4883,7 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned
-a public IPV4 address. Either `ipv4_enabled` must be enabled or a
+a public IPV4 address. At least `ipv4_enabled` must be enabled or a
 `private_network` must be configured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4896,7 +4896,7 @@ a public IPV4 address. Either `ipv4_enabled` must be enabled or a
     <dd>{{% md %}}The VPC network from which the Cloud SQL
 instance is accessible for private IP. For example, projects/myProject/global/networks/default.
 Specifying a network enables private IP.
-Either `ipv4_enabled` must be enabled or a `private_network` must be configured.
+At least `ipv4_enabled` must be enabled or a `private_network` must be configured.
 This setting can be updated, but it cannot be removed after it is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
