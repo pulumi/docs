@@ -82,6 +82,8 @@ jobs:
         working-directory: docs
       - name: Install docfx
         run: brew install docfx
+        env:
+          MONO_GAC_PREFIX: "/usr/local"
       - name: run yarn install in nodejs sdk
         run: yarn install && yarn run tsc
         working-directory: pulumi/sdk/nodejs
