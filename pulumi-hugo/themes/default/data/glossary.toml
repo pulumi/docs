@@ -46,7 +46,7 @@ link = "https://en.wikipedia.org/wiki/SAML_Metadata#Introduction_to_SAML_Metadat
 [[entries]]
 term = "Organization"
 description = "An organization is the primary grouping unit for stacks within the Pulumi Console."
-link = "/docs/intro/console/accounts-and-organizations/organizations"
+link = "/docs/intro/console/organizations"
 
 [[entries]]
 term = "Language Host"

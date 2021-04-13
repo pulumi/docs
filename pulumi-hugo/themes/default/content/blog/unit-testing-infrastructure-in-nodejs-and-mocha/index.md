@@ -453,7 +453,7 @@ And if we click into it, we'll see the complete Mocha test output:
 
 ![Failed Deployment Details](./failed-deployment-details.png)
 
-We could even [use webhooks]({{< relref "/docs/intro/console/extensions/webhooks" >}}) to
+We could even [use webhooks]({{< relref "/docs/intro/console/webhooks" >}}) to
 fire off a Slack alarm so that nobody misses the issue. This is often very helpful in
 unattended scenarios, like [continuous deployment]({{< relref "/docs/guides/continuous-delivery" >}}).
 

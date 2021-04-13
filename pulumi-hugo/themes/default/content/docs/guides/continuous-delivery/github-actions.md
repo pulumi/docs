@@ -26,7 +26,7 @@ between different environments by merging or directly committing changes.
 Let's see how to get started -- it's easy!
 
 {{% notes type="info" %}}
-Pulumi Team Pro customers can try the new streamlined [CI/CD Integration Assistant with GitHub Actions]({{< relref "docs/intro/console/extensions/ci-cd-integration-assistant" >}})
+Pulumi Team Pro customers can try the new streamlined [CI/CD Integration Assistant with GitHub Actions]({{< relref "docs/intro/console/ci-cd-integration-assistant" >}})
 {{% /notes %}}
 
 ## Pre-Requisites

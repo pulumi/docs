@@ -65,7 +65,7 @@ jobs:
 
 ## Announcing the New Pulumi CI/CD Integration Assistant
 
-We often hear from developers who want to setup CI/CD automation for their stacks but don’t have the time to figure out how to configure a working pipeline. Today, we are happy to announce the launch of the [CI/CD Integration Assistant]({{< relref "/docs/intro/console/extensions/ci-cd-integration-assistant" >}}) to make setting up CI/CD automation more straightforward. You can easily get started using popular CI/CD services without the hassle of the initial setup.
+We often hear from developers who want to setup CI/CD automation for their stacks but don’t have the time to figure out how to configure a working pipeline. Today, we are happy to announce the launch of the [CI/CD Integration Assistant]({{< relref "/docs/intro/console/ci-cd-integration-assistant" >}}) to make setting up CI/CD automation more straightforward. You can easily get started using popular CI/CD services without the hassle of the initial setup.
 
 The integration assistant guides you with instructions based on your preferred CI/CD service and provides the customized pipeline configuration for CI/CD services that you can add to your Version Control System (VCS) repository.
 
@@ -81,6 +81,6 @@ You may already be familiar with Git-based services such as [GitHub](https://git
 The Assistant also goes beyond helping you get started with an automated pipeline. It works throughout the Pulumi Console providing hints for configuring a VCS for projects that are not already configured. It can also help identify updates to stacks that were not run in an automated pipeline (in the activity tab). These additions will help you quickly identify the stacks where best practices are not followed and take corrective actions.
 You can access the Assistant in the Integrations option of your stack’s settings page to help you through the whole process of configuring a VCS to setting up a working automated pipeline.
 
-Learn more about the [CI/CD Integration Assistant in our user guide]({{< relref "/docs/intro/console/extensions/ci-cd-integration-assistant" >}}).
+Learn more about the [CI/CD Integration Assistant in our user guide]({{< relref "/docs/intro/console/ci-cd-integration-assistant" >}}).
 
 We are eager to hear your feedback on how we can improve your experience with this feature. If you haven’t already signed up for our [Community Slack](https://slack.pulumi.com/), it’s quick and easy! You can join in on conversations you like and get help from other community members, as well as the Pulumi Team. That’s it for now! 👋
