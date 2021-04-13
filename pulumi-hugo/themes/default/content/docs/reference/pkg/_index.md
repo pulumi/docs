@@ -94,7 +94,11 @@ SDK reference documentation, organized by language.
 {{% choosable language csharp %}}
 <dl class="tabular">
     <dt>Pulumi SDK</dt>
-    <dd><a href="https://github.com/pulumi/pulumi/tree/master/sdk/dotnet">Pulumi</a></dd>
+    <dd><a href="{{< relref "/docs/reference/pkg/dotnet/Pulumi/Pulumi.html" >}}">Pulumi</a></dd>
+    <dt>Pulumi FSharp SDK</dt>
+    <dd><a href="{{< relref "/docs/reference/pkg/dotnet/Pulumi.FSharp/Pulumi.FSharp.html" >}}">Pulumi.FSharp</a></dd>
+    <dt>Pulumi Automation API</dt>
+    <dd><a href="{{< relref "/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.html" >}}">Pulumi.Automation</a></dd>
 </dl>
 {{% /choosable %}}
 
