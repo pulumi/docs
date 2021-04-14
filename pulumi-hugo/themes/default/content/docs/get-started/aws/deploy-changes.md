@@ -219,7 +219,7 @@ _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
     Acl:         pulumi.String("public-read"),
     ContentType: pulumi.String("text/html"),
     Bucket:      bucket.ID(),
-    Source:      pulumi.NewFileAsset("index.html")
+    Source:      pulumi.NewFileAsset("index.html"),
 })
 ```
 
