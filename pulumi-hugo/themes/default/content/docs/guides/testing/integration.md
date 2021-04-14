@@ -20,17 +20,14 @@ By running a program through integration tests, you can ensure:
 - Your project can be successfully updated from its starting state to other states.
 - Your project can be successfully destroyed and removed from your cloud provider.
 
-In principle, integration tests can be written in any general-purpose programming language. Tests do not interact with the program-under-test directly: instead, they shell out to the Pulumi CLI commands to create, update, and delete cloud infrastructure.
-
+In principle, integration tests can be written in any general-purpose programming language. Tests do not interact with the program-under-test directly: instead, they utilize Pulumi to create, update, and delete cloud infrastructure.
 ## Pulumi's Integration Test Framework
 
-At Pulumi, we maintain an extensive suite of integration tests to validate the functionality of the core CLI and providers. Pulumi's integration test framework is written in Go.
+At Pulumi, we maintain an extensive suite of integration tests to validate the functionality of the core CLI and providers. To facilitate this testing, Pulumi has an integration test framework written in Go.
 
 This framework has been built to take a directory containing a full Pulumi program and drive various lifecycle operations against it: deploying a new stack from scratch, updating it with variations, and tearing it down afterwards, potentially multiple times. We run these tests for each pull request, regularly (such as nightly), and as stress tests.
 
-While we don't currently provide first-party integration test frameworks for other languages, we encourage the community to do so. [Pitfall](https://github.com/bincyber/pitfall) is an example of a community-driven framework written in Python.
-
-The rest of this guide shows you how to leverage the Pulumi integration test framework. You can use the Go test framework no matter the language your Pulumi program is written in.
+Below, we provide walk through leveraging the Pulumi integration test framework. You can use the Go test framework no matter the language your Pulumi program is written in. At the end of this guide, we discuss using Pulumi's Automation API, which is available in all Pulumi-supported languages, as an alternative to the integration test framework.
 
 ### A Basic Integration Test
 
@@ -149,8 +146,34 @@ If you are using GitHub, Pulumi offers a [GitHub App]({{< relref "/docs/guides/c
 By leveraging Pulumi for your core acceptance test workflow, you'll
 unlock new automation capabilities that improve your team's productivity and confidence in the quality of changes.
 
+## Using Automation API for Integration Tests
+
+Pulumi's Automation API provides another option for writing end-to-end integration tests. It is not a purpose-built integration testing framework as with above, but you can still accomplish the same objectives of basic correctness testing, resource validation, and runtime testing. Automation API is available in the Node, Python, .NET, and Go SDKs.
+
+At a high level, you will want to create a stack, setup stack config, deploy the stack, perform any resource validation or runtime checks, and finally teardown the stack. The [`localProgram-tsnode-mochatests` example](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/localProgram-tsnode-mochatests) provides one example for how to setup a stack, perform runtime validation checks, and then tear down the stack as part of a test.
+
+In order to perform resource validation, you can export the stack and examine the resulting resources. For example:
+
+**automation.ts**
+```typescript
+export async function getDeployment(): Promise<Deployment> {
+  const stack = await LocalWorkspace.createOrSelectStack(args);
+  
+  return stack.exportStack();
+}
+```
+
+You can then iterate through the `Deployment` object to check that the expected resources and property values are present.
+
 ## Full Examples
 
 A minimal example of using Pulumi's Go integration test framework is available in the examples repository: [Integration Testing in Go](https://github.com/pulumi/examples/tree/05ae8e1803d7f44cecac69589175e416e421cdfe/testing-integration).
 
 Our own [integration test suite](https://github.com/pulumi/examples/blob/05ae8e1803d7f44cecac69589175e416e421cdfe/misc/test/examples_test.go) can be a source of further inspiration.
+
+We even write tests inside Pulumi using Automation API and language-specific test frameworks like `mocha`. Take a look at the source for yourself:
+
+* [NodeJS tests](https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/automation/localWorkspace.spec.ts)
+* [Go tests](https://github.com/pulumi/pulumi/blob/master/sdk/go/auto/local_workspace_test.go)
+* [Python tests](https://github.com/pulumi/pulumi/blob/master/sdk/python/lib/test/automation/test_local_workspace.py)
+* [C# tests](https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation.Tests/LocalWorkspaceTests.cs)
