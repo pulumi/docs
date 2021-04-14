@@ -14,6 +14,249 @@ Protects a GitHub branch.
 
 This resource allows you to configure branch protection for repositories in your organization. When applied, the branch will be protected from forced pushes and deletion. Additional constraints, such as required status checks or restrictions on users, teams, and apps, can also be configured.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleRepository = new Github.Repository("exampleRepository", new Github.RepositoryArgs
+        {
+        });
+        var exampleUser = Output.Create(Github.GetUser.InvokeAsync(new Github.GetUserArgs
+        {
+            Username = "example",
+        }));
+        var exampleTeam = new Github.Team("exampleTeam", new Github.TeamArgs
+        {
+        });
+        // Protect the master branch of the foo repository. Additionally, require that
+        // the "ci/travis" context to be passing and only allow the engineers team merge
+        // to the branch.
+        var exampleBranchProtection = new Github.BranchProtection("exampleBranchProtection", new Github.BranchProtectionArgs
+        {
+            RepositoryId = exampleRepository.NodeId,
+            Pattern = "main",
+            EnforceAdmins = true,
+            AllowsDeletions = true,
+            RequiredStatusChecks = 
+            {
+                new Github.Inputs.BranchProtectionRequiredStatusCheckArgs
+                {
+                    Strict = false,
+                    Contexts = 
+                    {
+                        "ci/travis",
+                    },
+                },
+            },
+            RequiredPullRequestReviews = 
+            {
+                new Github.Inputs.BranchProtectionRequiredPullRequestReviewArgs
+                {
+                    DismissStaleReviews = true,
+                    DismissalRestrictions = 
+                    {
+                        exampleUser.Apply(exampleUser => exampleUser.NodeId),
+                        exampleTeam.NodeId,
+                    },
+                },
+            },
+            PushRestrictions = 
+            {
+                exampleUser.Apply(exampleUser => exampleUser.NodeId),
+            },
+        });
+        var exampleTeamRepository = new Github.TeamRepository("exampleTeamRepository", new Github.TeamRepositoryArgs
+        {
+            TeamId = exampleTeam.Id,
+            Repository = exampleRepository.Name,
+            Permission = "pull",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-github/sdk/v3/go/github"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleRepository, err := github.NewRepository(ctx, "exampleRepository", nil)
+		if err != nil {
+			return err
+		}
+		exampleUser, err := github.GetUser(ctx, &github.GetUserArgs{
+			Username: "example",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleTeam, err := github.NewTeam(ctx, "exampleTeam", nil)
+		if err != nil {
+			return err
+		}
+		_, err = github.NewBranchProtection(ctx, "exampleBranchProtection", &github.BranchProtectionArgs{
+			RepositoryId:    exampleRepository.NodeId,
+			Pattern:         pulumi.String("main"),
+			EnforceAdmins:   pulumi.Bool(true),
+			AllowsDeletions: pulumi.Bool(true),
+			RequiredStatusChecks: github.BranchProtectionRequiredStatusCheckArray{
+				&github.BranchProtectionRequiredStatusCheckArgs{
+					Strict: pulumi.Bool(false),
+					Contexts: pulumi.StringArray{
+						pulumi.String("ci/travis"),
+					},
+				},
+			},
+			RequiredPullRequestReviews: github.BranchProtectionRequiredPullRequestReviewArray{
+				&github.BranchProtectionRequiredPullRequestReviewArgs{
+					DismissStaleReviews: pulumi.Bool(true),
+					DismissalRestrictions: pulumi.Array{
+						pulumi.String(exampleUser.NodeId),
+						exampleTeam.NodeId,
+					},
+				},
+			},
+			PushRestrictions: pulumi.StringArray{
+				pulumi.String(exampleUser.NodeId),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = github.NewTeamRepository(ctx, "exampleTeamRepository", &github.TeamRepositoryArgs{
+			TeamId:     exampleTeam.ID(),
+			Repository: exampleRepository.Name,
+			Permission: pulumi.String("pull"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_github as github
+
+example_repository = github.Repository("exampleRepository")
+example_user = github.get_user(username="example")
+example_team = github.Team("exampleTeam")
+# Protect the master branch of the foo repository. Additionally, require that
+# the "ci/travis" context to be passing and only allow the engineers team merge
+# to the branch.
+example_branch_protection = github.BranchProtection("exampleBranchProtection",
+    repository_id=example_repository.node_id,
+    pattern="main",
+    enforce_admins=True,
+    allows_deletions=True,
+    required_status_checks=[github.BranchProtectionRequiredStatusCheckArgs(
+        strict=False,
+        contexts=["ci/travis"],
+    )],
+    required_pull_request_reviews=[github.BranchProtectionRequiredPullRequestReviewArgs(
+        dismiss_stale_reviews=True,
+        dismissal_restrictions=[
+            example_user.node_id,
+            example_team.node_id,
+        ],
+    )],
+    push_restrictions=[example_user.node_id])
+example_team_repository = github.TeamRepository("exampleTeamRepository",
+    team_id=example_team.id,
+    repository=example_repository.name,
+    permission="pull")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as github from "@pulumi/github";
+
+const exampleRepository = new github.Repository("exampleRepository", {});
+const exampleUser = github.getUser({
+    username: "example",
+});
+const exampleTeam = new github.Team("exampleTeam", {});
+// Protect the master branch of the foo repository. Additionally, require that
+// the "ci/travis" context to be passing and only allow the engineers team merge
+// to the branch.
+const exampleBranchProtection = new github.BranchProtection("exampleBranchProtection", {
+    repositoryId: exampleRepository.nodeId,
+    pattern: "main",
+    enforceAdmins: true,
+    allowsDeletions: true,
+    requiredStatusChecks: [{
+        strict: false,
+        contexts: ["ci/travis"],
+    }],
+    requiredPullRequestReviews: [{
+        dismissStaleReviews: true,
+        dismissalRestrictions: [
+            exampleUser.then(exampleUser => exampleUser.nodeId),
+            exampleTeam.nodeId,
+        ],
+    }],
+    pushRestrictions: [exampleUser.then(exampleUser => exampleUser.nodeId)],
+});
+const exampleTeamRepository = new github.TeamRepository("exampleTeamRepository", {
+    teamId: exampleTeam.id,
+    repository: exampleRepository.name,
+    permission: "pull",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a BranchProtection Resource {#create}

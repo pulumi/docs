@@ -185,8 +185,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable `insecure` mode for testing purposes
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
 </span>
@@ -194,7 +194,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub organization name to manage. Use this field instead of `owner` when managing organization accounts.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use owner (or GITHUB_OWNER) instead of organization (or GITHUB_ORGANIZATION){{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -234,8 +234,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable `insecure` mode for testing purposes
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
 </span>
@@ -243,7 +243,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub organization name to manage. Use this field instead of `owner` when managing organization accounts.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use owner (or GITHUB_OWNER) instead of organization (or GITHUB_ORGANIZATION){{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -283,8 +283,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable `insecure` mode for testing purposes
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
@@ -292,7 +292,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub organization name to manage. Use this field instead of `owner` when managing organization accounts.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use owner (or GITHUB_OWNER) instead of organization (or GITHUB_ORGANIZATION){{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -332,8 +332,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable `insecure` mode for testing purposes
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
@@ -341,7 +341,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GitHub organization name to manage. Use this field instead of `owner` when managing organization accounts.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use owner (or GITHUB_OWNER) instead of organization (or GITHUB_ORGANIZATION){{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>

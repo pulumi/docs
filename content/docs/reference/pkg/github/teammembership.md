@@ -40,8 +40,8 @@ class MyStack : Stack
         // Add a user to the organization
         var membershipForSomeUser = new Github.Membership("membershipForSomeUser", new Github.MembershipArgs
         {
-            Role = "member",
             Username = "SomeUser",
+            Role = "member",
         });
         var someTeam = new Github.Team("someTeam", new Github.TeamArgs
         {
@@ -49,9 +49,9 @@ class MyStack : Stack
         });
         var someTeamMembership = new Github.TeamMembership("someTeamMembership", new Github.TeamMembershipArgs
         {
-            Role = "member",
             TeamId = someTeam.Id,
             Username = "SomeUser",
+            Role = "member",
         });
     }
 
@@ -75,8 +75,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := github.NewMembership(ctx, "membershipForSomeUser", &github.MembershipArgs{
-			Role:     pulumi.String("member"),
 			Username: pulumi.String("SomeUser"),
+			Role:     pulumi.String("member"),
 		})
 		if err != nil {
 			return err
@@ -88,9 +88,9 @@ func main() {
 			return err
 		}
 		_, err = github.NewTeamMembership(ctx, "someTeamMembership", &github.TeamMembershipArgs{
-			Role:     pulumi.String("member"),
 			TeamId:   someTeam.ID(),
 			Username: pulumi.String("SomeUser"),
+			Role:     pulumi.String("member"),
 		})
 		if err != nil {
 			return err
@@ -112,13 +112,13 @@ import pulumi_github as github
 
 # Add a user to the organization
 membership_for_some_user = github.Membership("membershipForSomeUser",
-    role="member",
-    username="SomeUser")
+    username="SomeUser",
+    role="member")
 some_team = github.Team("someTeam", description="Some cool team")
 some_team_membership = github.TeamMembership("someTeamMembership",
-    role="member",
     team_id=some_team.id,
-    username="SomeUser")
+    username="SomeUser",
+    role="member")
 ```
 
 
@@ -133,17 +133,15 @@ import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
 // Add a user to the organization
-const membershipForSomeUser = new github.Membership("membership_for_some_user", {
-    role: "member",
+const membershipForSomeUser = new github.Membership("membershipForSomeUser", {
     username: "SomeUser",
-});
-const someTeam = new github.Team("some_team", {
-    description: "Some cool team",
-});
-const someTeamMembership = new github.TeamMembership("some_team_membership", {
     role: "member",
+});
+const someTeam = new github.Team("someTeam", {description: "Some cool team"});
+const someTeamMembership = new github.TeamMembership("someTeamMembership", {
     teamId: someTeam.id,
     username: "SomeUser",
+    role: "member",
 });
 ```
 

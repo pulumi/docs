@@ -50,9 +50,9 @@ class MyStack : Stack
         });
         var someTeamRepo = new Github.TeamRepository("someTeamRepo", new Github.TeamRepositoryArgs
         {
-            Permission = "pull",
-            Repository = someRepo.Name,
             TeamId = someTeam.Id,
+            Repository = someRepo.Name,
+            Permission = "pull",
         });
     }
 
@@ -86,9 +86,9 @@ func main() {
 			return err
 		}
 		_, err = github.NewTeamRepository(ctx, "someTeamRepo", &github.TeamRepositoryArgs{
-			Permission: pulumi.String("pull"),
-			Repository: someRepo.Name,
 			TeamId:     someTeam.ID(),
+			Repository: someRepo.Name,
+			Permission: pulumi.String("pull"),
 		})
 		if err != nil {
 			return err
@@ -112,9 +112,9 @@ import pulumi_github as github
 some_team = github.Team("someTeam", description="Some cool team")
 some_repo = github.Repository("someRepo")
 some_team_repo = github.TeamRepository("someTeamRepo",
-    permission="pull",
+    team_id=some_team.id,
     repository=some_repo.name,
-    team_id=some_team.id)
+    permission="pull")
 ```
 
 
@@ -129,14 +129,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
 // Add a repository to the team
-const someTeam = new github.Team("some_team", {
-    description: "Some cool team",
-});
-const someRepo = new github.Repository("some_repo", {});
-const someTeamRepo = new github.TeamRepository("some_team_repo", {
-    permission: "pull",
-    repository: someRepo.name,
+const someTeam = new github.Team("someTeam", {description: "Some cool team"});
+const someRepo = new github.Repository("someRepo", {});
+const someTeamRepo = new github.TeamRepository("someTeamRepo", {
     teamId: someTeam.id,
+    repository: someRepo.name,
+    permission: "pull",
 });
 ```
 

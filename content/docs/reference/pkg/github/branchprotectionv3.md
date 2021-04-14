@@ -39,8 +39,8 @@ class MyStack : Stack
         // Protect the main branch of the foo repository. Only allow a specific user to merge to the branch.
         var example = new Github.BranchProtectionV3("example", new Github.BranchProtectionV3Args
         {
-            Branch = "main",
             Repository = github_repository.Example.Name,
+            Branch = "main",
             Restrictions = new Github.Inputs.BranchProtectionV3RestrictionsArgs
             {
                 Users = 
@@ -71,8 +71,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := github.NewBranchProtectionV3(ctx, "example", &github.BranchProtectionV3Args{
-			Branch:     pulumi.String("main"),
 			Repository: pulumi.Any(github_repository.Example.Name),
+			Branch:     pulumi.String("main"),
 			Restrictions: &github.BranchProtectionV3RestrictionsArgs{
 				Users: pulumi.StringArray{
 					pulumi.String("foo-user"),
@@ -99,8 +99,8 @@ import pulumi_github as github
 
 # Protect the main branch of the foo repository. Only allow a specific user to merge to the branch.
 example = github.BranchProtectionV3("example",
-    branch="main",
     repository=github_repository["example"]["name"],
+    branch="main",
     restrictions=github.BranchProtectionV3RestrictionsArgs(
         users=["foo-user"],
     ))
@@ -119,8 +119,8 @@ import * as github from "@pulumi/github";
 
 // Protect the main branch of the foo repository. Only allow a specific user to merge to the branch.
 const example = new github.BranchProtectionV3("example", {
+    repository: github_repository.example.name,
     branch: "main",
-    repository: github_repository_example.name,
     restrictions: {
         users: ["foo-user"],
     },

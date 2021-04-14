@@ -326,7 +326,7 @@ The RepositoryFile resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The repository name
+    <dd>{{% md %}}The repository to create the file in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_csharp">
@@ -403,7 +403,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The repository name
+    <dd>{{% md %}}The repository to create the file in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_go">
@@ -480,7 +480,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The repository name
+    <dd>{{% md %}}The repository to create the file in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_nodejs">
@@ -557,7 +557,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The repository name
+    <dd>{{% md %}}The repository to create the file in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_python">
@@ -939,7 +939,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The repository name
+    <dd>{{% md %}}The repository to create the file in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sha_csharp">
@@ -1034,7 +1034,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The repository name
+    <dd>{{% md %}}The repository to create the file in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sha_go">
@@ -1129,7 +1129,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The repository name
+    <dd>{{% md %}}The repository to create the file in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sha_nodejs">
@@ -1224,7 +1224,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The repository name
+    <dd>{{% md %}}The repository to create the file in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sha_python">
