@@ -62,6 +62,13 @@ workshops:
       description: |
         Join our Ask the Expert session with Pulumi engineers. Come with your Pulumi-based questions --- we'll be here to answer any questions that are Cloud Engineering related. Have a project you're currently working on? Bring it --- we love sharing!
 
+    - title: "AWS DevDay: Building a Kubernetes Platform in Amazon EKS"
+      url: /resources/aws-dev-day-building-a-kubernetes-platform
+      datetime: 2021-05-04T09:00:00-07:00
+      description: |
+        In this dev day workshop, you will examine how Pulumi interacts with Kubernetes, and build real-world examples
+        of managing Amazon EKS clusters.
+
     - title: Ask The Expert
       url: /resources/ask-the-expert/?date=2021/05/04
       datetime: 2021-05-04T11:00:00-07:00

@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Getting Started with Automation API"
+title: "Automation API: Build a Self-Service Infrastructure Platform with Python + Flask"
 meta_desc: "In this workshop, you’ll build a Python & Flask web application that lets you and your developers deploy applications at the click of a button."
 
 # A featured webinar will display first in the list.
@@ -39,14 +39,14 @@ url_slug: "getting-started-with-automation-api"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Getting Started with Automation API"
+    title: "Automation API: Build a Self-Service Infrastructure Platform with Python + Flask"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Automation API"
+    title: "Automation API: Build a Self-Service Infrastructure Platform with Python + Flask"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.

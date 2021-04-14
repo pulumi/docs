@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Getting Started with Azure Native"
+title: "Azure: Unlocking Azure with Infrastructure as Software with TypeScript"
 meta_desc: "In this workshop, you’ll use the Azure native provider to build infrastructure using TypeScript SDK and examine some of the features not previously possible."
 
 # A featured webinar will display first in the list.
@@ -39,14 +39,14 @@ url_slug: "getting-started-with-azure-native"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Getting Started with Azure Native"
+    title: "Azure: Unlocking Azure with Infrastructure as Software with TypeScript"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Azure Native"
+    title: "Azure: Unlocking Azure with Infrastructure as Software with TypeScript"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.

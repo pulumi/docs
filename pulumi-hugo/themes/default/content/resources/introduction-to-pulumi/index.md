@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Introduction to Pulumi"
+title: "Intro to Pulumi: Deploy your First Pulumi Application"
 meta_desc: In this bi-monthly workshop, you will learn the fundamentals of Infrastructure as Code through guided exercises using Pulumi's Cloud Engineering platform.
 
 # A featured webinar will display first in the list.
@@ -47,14 +47,14 @@ multiple:
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Introduction to Pulumi"
+    title: "Intro to Pulumi: Deploy your First Pulumi Application"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Introduction to Pulumi"
+    title: "Intro to Pulumi: Deploy your First Pulumi Application"
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/YfdFxae8Bxc"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
