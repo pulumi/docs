@@ -27,121 +27,21 @@ This data source provides a list of Nat Gateways owned by an Alibaba Cloud accou
 
 {{< example csharp >}}
 
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var config = new Config();
-        var name = config.Get("name") ?? "natGatewaysDatasource";
-        var @default = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
-        {
-            AvailableResourceCreation = "VSwitch",
-        }));
-        var fooNetwork = new AliCloud.Vpc.Network("fooNetwork", new AliCloud.Vpc.NetworkArgs
-        {
-            CidrBlock = "172.16.0.0/12",
-        });
-        var fooNatGateway = new AliCloud.Vpc.NatGateway("fooNatGateway", new AliCloud.Vpc.NatGatewayArgs
-        {
-            Specification = "Small",
-            VpcId = fooNetwork.Id,
-        });
-        var fooNatGateways = Output.Tuple(fooNatGateway.Id, fooNatGateway.Name, fooNetwork.Id).Apply(values =>
-        {
-            var fooNatGatewayId = values.Item1;
-            var name = values.Item2;
-            var fooNetworkId = values.Item3;
-            return AliCloud.Vpc.GetNatGateways.InvokeAsync(new AliCloud.Vpc.GetNatGatewaysArgs
-            {
-                Ids = 
-                {
-                    fooNatGatewayId,
-                },
-                NameRegex = name,
-                VpcId = fooNetworkId,
-            });
-        });
-    }
-
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		cfg := config.New(ctx, "")
-		name := "natGatewaysDatasource"
-		if param := cfg.Get("name"); param != "" {
-			name = param
-		}
-		opt0 := "VSwitch"
-		_, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
-			AvailableResourceCreation: &opt0,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		fooNetwork, err := vpc.NewNetwork(ctx, "fooNetwork", &vpc.NetworkArgs{
-			CidrBlock: pulumi.String("172.16.0.0/12"),
-		})
-		if err != nil {
-			return err
-		}
-		fooNatGateway, err := vpc.NewNatGateway(ctx, "fooNatGateway", &vpc.NatGatewayArgs{
-			Specification: pulumi.String("Small"),
-			VpcId:         fooNetwork.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-config = pulumi.Config()
-name = config.get("name")
-if name is None:
-    name = "natGatewaysDatasource"
-default = alicloud.get_zones(available_resource_creation="VSwitch")
-foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/12")
-foo_nat_gateway = alicloud.vpc.NatGateway("fooNatGateway",
-    specification="Small",
-    vpc_id=foo_network.id)
-foo_nat_gateways = pulumi.Output.all(foo_nat_gateway.id, foo_nat_gateway.name, foo_network.id).apply(lambda fooNatGatewayId, name, fooNetworkId: alicloud.vpc.get_nat_gateways(ids=[foo_nat_gateway_id],
-    name_regex=name,
-    vpc_id=foo_network_id))
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -161,8 +61,10 @@ const defaultZones = pulumi.output(alicloud.getZones({
 }, { async: true }));
 const fooNetwork = new alicloud.vpc.Network("foo", {
     cidrBlock: "172.16.0.0/12",
+    vpcName: name,
 });
 const fooNatGateway = new alicloud.vpc.NatGateway("foo", {
+    natGateName: name,
     specification: "Small",
     vpcId: fooNetwork.id,
 });
@@ -196,7 +98,7 @@ const fooNatGateways = pulumi.all([fooNatGateway.id, fooNatGateway.name, fooNetw
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_nat_gateways(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNatGatewaysResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_nat_gateways(</span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specification</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNatGatewaysResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -222,6 +124,24 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="dryrun_csharp">
+<a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to only precheck the request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span>
@@ -240,6 +160,24 @@ The following arguments are supported:
     <dd>{{% md %}}A regex string to filter nat gateways by name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="natgatewayname_csharp">
+<a href="#natgatewayname_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nattype_csharp">
+<a href="#nattype_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span>
@@ -247,6 +185,51 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="paymenttype_csharp">
+<a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The payment type of NAT gateway. Valid values `PayAsYouGo` and `Subscription`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource group id of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specification_csharp">
+<a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specification of NAT gateway. Valid values `Middle`, `Large`, `Small` and `XLarge.1`. Default value is `Small`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of NAT gateway. Valid values `Available`, `Converting`, `Creating`, `Deleting` and `Modifying`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -260,6 +243,24 @@ The following arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_go">
+<a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to only precheck the request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -279,6 +280,24 @@ The following arguments are supported:
     <dd>{{% md %}}A regex string to filter nat gateways by name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="natgatewayname_go">
+<a href="#natgatewayname_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nattype_go">
+<a href="#nattype_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span>
@@ -286,6 +305,51 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="paymenttype_go">
+<a href="#paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The payment type of NAT gateway. Valid values `PayAsYouGo` and `Subscription`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource group id of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specification_go">
+<a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specification of NAT gateway. Valid values `Middle`, `Large`, `Small` and `XLarge.1`. Default value is `Small`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of NAT gateway. Valid values `Available`, `Converting`, `Creating`, `Deleting` and `Modifying`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -299,6 +363,24 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_nodejs">
+<a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to only precheck the request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -318,6 +400,24 @@ The following arguments are supported:
     <dd>{{% md %}}A regex string to filter nat gateways by name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="natgatewayname_nodejs">
+<a href="#natgatewayname_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nattype_nodejs">
+<a href="#nattype_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
 </span>
@@ -325,6 +425,51 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="paymenttype_nodejs">
+<a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The payment type of NAT gateway. Valid values `PayAsYouGo` and `Subscription`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource group id of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specification_nodejs">
+<a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specification of NAT gateway. Valid values `Middle`, `Large`, `Small` and `XLarge.1`. Default value is `Small`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of NAT gateway. Valid values `Available`, `Converting`, `Creating`, `Deleting` and `Modifying`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -338,6 +483,24 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dry_run_python">
+<a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to only precheck the request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -357,6 +520,24 @@ The following arguments are supported:
     <dd>{{% md %}}A regex string to filter nat gateways by name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nat_gateway_name_python">
+<a href="#nat_gateway_name_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nat_type_python">
+<a href="#nat_type_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
 </span>
@@ -364,6 +545,51 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="payment_type_python">
+<a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The payment type of NAT gateway. Valid values `PayAsYouGo` and `Subscription`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource group id of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specification_python">
+<a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The specification of NAT gateway. Valid values `Middle`, `Large`, `Small` and `XLarge.1`. Default value is `Small`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of NAT gateway. Valid values `Available`, `Converting`, `Creating`, `Deleting` and `Modifying`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -423,6 +649,22 @@ The following output properties are available:
     <dd>{{% md %}}A list of Nat gateways names.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dryrun_csharp">
+<a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -431,6 +673,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="natgatewayname_csharp">
+<a href="#natgatewayname_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="nattype_csharp">
+<a href="#nattype_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span>
@@ -438,6 +698,51 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="paymenttype_csharp">
+<a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="specification_csharp">
+<a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specification of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -488,6 +793,22 @@ The following output properties are available:
     <dd>{{% md %}}A list of Nat gateways names.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dryrun_go">
+<a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -496,6 +817,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="natgatewayname_go">
+<a href="#natgatewayname_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="nattype_go">
+<a href="#nattype_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span>
@@ -503,6 +842,51 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="paymenttype_go">
+<a href="#paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="specification_go">
+<a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specification of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -553,6 +937,22 @@ The following output properties are available:
     <dd>{{% md %}}A list of Nat gateways names.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dryrun_nodejs">
+<a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
@@ -561,6 +961,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="natgatewayname_nodejs">
+<a href="#natgatewayname_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="nattype_nodejs">
+<a href="#nattype_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
 </span>
@@ -568,6 +986,51 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="paymenttype_nodejs">
+<a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="specification_nodejs">
+<a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specification of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -618,6 +1081,22 @@ The following output properties are available:
     <dd>{{% md %}}A list of Nat gateways names.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dry_run_python">
+<a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
 </span>
@@ -626,6 +1105,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="nat_gateway_name_python">
+<a href="#nat_gateway_name_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="nat_type_python">
+<a href="#nat_type_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
 </span>
@@ -633,6 +1130,51 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="payment_type_python">
+<a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="specification_python">
+<a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The specification of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of the NAT gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -657,13 +1199,22 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="creationtime_csharp">
-<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+        <span id="businessstatus_csharp">
+<a href="#businessstatus_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time of creation.
+    <dd>{{% md %}}The state of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether deletion protection is enabled.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
@@ -675,13 +1226,31 @@ The following output properties are available:
     <dd>{{% md %}}The description of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="forwardtableid_csharp">
-<a href="#forwardtableid_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Table<wbr>Id</a>
+        <span id="ecsmetricenabled_csharp">
+<a href="#ecsmetricenabled_csharp" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Metric<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the traffic monitoring feature is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expiredtime_csharp">
+<a href="#expiredtime_csharp" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The forward table id.
+    <dd>{{% md %}}The time when the NAT gateway expires.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwardtableids_csharp">
+<a href="#forwardtableids_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Table<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The ID of the DNAT table.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
@@ -693,11 +1262,20 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="internetchargetype_csharp">
+<a href="#internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metering method of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="iplists_csharp">
 <a href="#iplists_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#getnatgatewaysgatewayiplist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Get<wbr>Nat<wbr>Gateways<wbr>Gateway<wbr>Ip<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ip address of the bind eip.
 {{% /md %}}</dd><dt class="property-required"
@@ -711,13 +1289,58 @@ The following output properties are available:
     <dd>{{% md %}}Name of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="snattableid_csharp">
-<a href="#snattableid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+        <span id="natgatewayid_csharp">
+<a href="#natgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The snat table id.
+    <dd>{{% md %}}The ID of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="natgatewayname_csharp">
+<a href="#natgatewayname_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nattype_csharp">
+<a href="#nattype_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="paymenttype_csharp">
+<a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The payment type of NAT gateway. Valid values `PayAsYouGo` and `Subscription`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource group id of NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snattableids_csharp">
+<a href="#snattableids_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The ID of the SNAT table that is associated with the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_csharp">
@@ -729,13 +1352,31 @@ The following output properties are available:
     <dd>{{% md %}}The specification of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="specification_csharp">
+<a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specification of NAT gateway. Valid values `Middle`, `Large`, `Small` and `XLarge.1`. Default value is `Small`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the NAT gateway.
+    <dd>{{% md %}}The status of NAT gateway. Valid values `Available`, `Converting`, `Creating`, `Deleting` and `Modifying`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
@@ -745,19 +1386,37 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchid_csharp">
+<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the vSwitch to which the NAT gateway belongs.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="creationtime_go">
-<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+        <span id="businessstatus_go">
+<a href="#businessstatus_go" style="color: inherit; text-decoration: inherit;">Business<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time of creation.
+    <dd>{{% md %}}The state of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether deletion protection is enabled.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
@@ -769,13 +1428,31 @@ The following output properties are available:
     <dd>{{% md %}}The description of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="forwardtableid_go">
-<a href="#forwardtableid_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Table<wbr>Id</a>
+        <span id="ecsmetricenabled_go">
+<a href="#ecsmetricenabled_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Metric<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the traffic monitoring feature is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expiredtime_go">
+<a href="#expiredtime_go" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The forward table id.
+    <dd>{{% md %}}The time when the NAT gateway expires.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwardtableids_go">
+<a href="#forwardtableids_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Table<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the DNAT table.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
@@ -787,11 +1464,20 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="internetchargetype_go">
+<a href="#internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metering method of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="iplists_go">
 <a href="#iplists_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#getnatgatewaysgatewayiplist">[]Get<wbr>Nat<wbr>Gateways<wbr>Gateway<wbr>Ip<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}The ip address of the bind eip.
 {{% /md %}}</dd><dt class="property-required"
@@ -805,13 +1491,58 @@ The following output properties are available:
     <dd>{{% md %}}Name of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="snattableid_go">
-<a href="#snattableid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+        <span id="natgatewayid_go">
+<a href="#natgatewayid_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The snat table id.
+    <dd>{{% md %}}The ID of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="natgatewayname_go">
+<a href="#natgatewayname_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nattype_go">
+<a href="#nattype_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="paymenttype_go">
+<a href="#paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The payment type of NAT gateway. Valid values `PayAsYouGo` and `Subscription`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource group id of NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snattableids_go">
+<a href="#snattableids_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the SNAT table that is associated with the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_go">
@@ -823,13 +1554,31 @@ The following output properties are available:
     <dd>{{% md %}}The specification of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="specification_go">
+<a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specification of NAT gateway. Valid values `Middle`, `Large`, `Small` and `XLarge.1`. Default value is `Small`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the NAT gateway.
+    <dd>{{% md %}}The status of NAT gateway. Valid values `Available`, `Converting`, `Creating`, `Deleting` and `Modifying`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_go">
@@ -839,19 +1588,37 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchid_go">
+<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the vSwitch to which the NAT gateway belongs.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="creationtime_nodejs">
-<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+        <span id="businessstatus_nodejs">
+<a href="#businessstatus_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time of creation.
+    <dd>{{% md %}}The state of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether deletion protection is enabled.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
@@ -863,13 +1630,31 @@ The following output properties are available:
     <dd>{{% md %}}The description of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="forwardtableid_nodejs">
-<a href="#forwardtableid_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Table<wbr>Id</a>
+        <span id="ecsmetricenabled_nodejs">
+<a href="#ecsmetricenabled_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Metric<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the traffic monitoring feature is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expiredtime_nodejs">
+<a href="#expiredtime_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The forward table id.
+    <dd>{{% md %}}The time when the NAT gateway expires.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwardtableids_nodejs">
+<a href="#forwardtableids_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Table<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The ID of the DNAT table.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
@@ -881,11 +1666,20 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="internetchargetype_nodejs">
+<a href="#internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metering method of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="iplists_nodejs">
 <a href="#iplists_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#getnatgatewaysgatewayiplist">Get<wbr>Nat<wbr>Gateways<wbr>Gateway<wbr>Ip<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}The ip address of the bind eip.
 {{% /md %}}</dd><dt class="property-required"
@@ -899,13 +1693,58 @@ The following output properties are available:
     <dd>{{% md %}}Name of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="snattableid_nodejs">
-<a href="#snattableid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Table<wbr>Id</a>
+        <span id="natgatewayid_nodejs">
+<a href="#natgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The snat table id.
+    <dd>{{% md %}}The ID of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="natgatewayname_nodejs">
+<a href="#natgatewayname_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nattype_nodejs">
+<a href="#nattype_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="paymenttype_nodejs">
+<a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The payment type of NAT gateway. Valid values `PayAsYouGo` and `Subscription`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource group id of NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snattableids_nodejs">
+<a href="#snattableids_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Table<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The ID of the SNAT table that is associated with the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_nodejs">
@@ -917,13 +1756,31 @@ The following output properties are available:
     <dd>{{% md %}}The specification of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="specification_nodejs">
+<a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specification of NAT gateway. Valid values `Middle`, `Large`, `Small` and `XLarge.1`. Default value is `Small`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the NAT gateway.
+    <dd>{{% md %}}The status of NAT gateway. Valid values `Available`, `Converting`, `Creating`, `Deleting` and `Modifying`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
@@ -933,19 +1790,37 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitchid_nodejs">
+<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the vSwitch to which the NAT gateway belongs.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="creation_time_python">
-<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+        <span id="business_status_python">
+<a href="#business_status_python" style="color: inherit; text-decoration: inherit;">business_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time of creation.
+    <dd>{{% md %}}The state of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether deletion protection is enabled.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
@@ -957,13 +1832,31 @@ The following output properties are available:
     <dd>{{% md %}}The description of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="forward_table_id_python">
-<a href="#forward_table_id_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>table_<wbr>id</a>
+        <span id="ecs_metric_enabled_python">
+<a href="#ecs_metric_enabled_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>metric_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the traffic monitoring feature is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expired_time_python">
+<a href="#expired_time_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The forward table id.
+    <dd>{{% md %}}The time when the NAT gateway expires.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forward_table_ids_python">
+<a href="#forward_table_ids_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>table_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The ID of the DNAT table.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
@@ -975,11 +1868,20 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="internet_charge_type_python">
+<a href="#internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The metering method of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ip_lists_python">
 <a href="#ip_lists_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#getnatgatewaysgatewayiplist">Sequence[Get<wbr>Nat<wbr>Gateways<wbr>Gateway<wbr>Ip<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ip address of the bind eip.
 {{% /md %}}</dd><dt class="property-required"
@@ -993,13 +1895,58 @@ The following output properties are available:
     <dd>{{% md %}}Name of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="snat_table_id_python">
-<a href="#snat_table_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>table_<wbr>id</a>
+        <span id="nat_gateway_id_python">
+<a href="#nat_gateway_id_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The snat table id.
+    <dd>{{% md %}}The ID of the NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nat_gateway_name_python">
+<a href="#nat_gateway_name_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nat_type_python">
+<a href="#nat_type_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="payment_type_python">
+<a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The payment type of NAT gateway. Valid values `PayAsYouGo` and `Subscription`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource group id of NAT gateway.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snat_table_ids_python">
+<a href="#snat_table_ids_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>table_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The ID of the SNAT table that is associated with the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_python">
@@ -1011,13 +1958,31 @@ The following output properties are available:
     <dd>{{% md %}}The specification of the NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="specification_python">
+<a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The specification of NAT gateway. Valid values `Middle`, `Large`, `Small` and `XLarge.1`. Default value is `Small`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the NAT gateway.
+    <dd>{{% md %}}The status of NAT gateway. Valid values `Available`, `Converting`, `Creating`, `Deleting` and `Modifying`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The tags of NAT gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
@@ -1027,7 +1992,100 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vswitch_id_python">
+<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the vSwitch to which the NAT gateway belongs.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getnatgatewaysgatewayiplist">Get<wbr>Nat<wbr>Gateways<wbr>Gateway<wbr>Ip<wbr>List</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snatentryenabled_csharp">
+<a href="#snatentryenabled_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snatentryenabled_go">
+<a href="#snatentryenabled_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snatentryenabled_nodejs">
+<a href="#snatentryenabled_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="snat_entry_enabled_python">
+<a href="#snat_entry_enabled_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
