@@ -38,9 +38,9 @@ class MyStack : Stack
         });
         var exampleRepositoryCollaborator = new Github.RepositoryCollaborator("exampleRepositoryCollaborator", new Github.RepositoryCollaboratorArgs
         {
-            Permission = "push",
             Repository = exampleRepository.Name,
             Username = "example-username",
+            Permission = "push",
         });
         var invitee = new Github.Provider("invitee", new Github.ProviderArgs
         {
@@ -80,9 +80,9 @@ func main() {
 			return err
 		}
 		exampleRepositoryCollaborator, err := github.NewRepositoryCollaborator(ctx, "exampleRepositoryCollaborator", &github.RepositoryCollaboratorArgs{
-			Permission: pulumi.String("push"),
 			Repository: exampleRepository.Name,
 			Username:   pulumi.String("example-username"),
+			Permission: pulumi.String("push"),
 		})
 		if err != nil {
 			return err
@@ -117,9 +117,9 @@ import pulumi_pulumi as pulumi
 
 example_repository = github.Repository("exampleRepository")
 example_repository_collaborator = github.RepositoryCollaborator("exampleRepositoryCollaborator",
-    permission="push",
     repository=example_repository.name,
-    username="example-username")
+    username="example-username",
+    permission="push")
 invitee = pulumi.providers.Github("invitee", token=var["invitee_token"])
 example_user_invitation_accepter = github.UserInvitationAccepter("exampleUserInvitationAccepter", invitation_id=example_repository_collaborator.invitation_id,
 opts=pulumi.ResourceOptions(provider="github.invitee"))
@@ -136,18 +136,16 @@ opts=pulumi.ResourceOptions(provider="github.invitee"))
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
-const exampleRepository = new github.Repository("example", {});
-const exampleRepositoryCollaborator = new github.RepositoryCollaborator("example", {
-    permission: "push",
+const exampleRepository = new github.Repository("exampleRepository", {});
+const exampleRepositoryCollaborator = new github.RepositoryCollaborator("exampleRepositoryCollaborator", {
     repository: exampleRepository.name,
     username: "example-username",
+    permission: "push",
 });
-const invitee = new github.Provider("invitee", {
-    token: var_invitee_token,
+const invitee = new github.Provider("invitee", {token: _var.invitee_token});
+const exampleUserInvitationAccepter = new github.UserInvitationAccepter("exampleUserInvitationAccepter", {invitationId: exampleRepositoryCollaborator.invitationId}, {
+    provider: "github.invitee",
 });
-const exampleUserInvitationAccepter = new github.UserInvitationAccepter("example", {
-    invitationId: exampleRepositoryCollaborator.invitationId,
-}, { provider: invitee });
 ```
 
 

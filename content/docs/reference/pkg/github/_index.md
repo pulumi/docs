@@ -54,6 +54,7 @@ A Pulumi package for creating and managing github cloud resources.
     <li><a href="getmembership" title="GetMembership"><span class="symbol function"></span>GetMembership</a></li>
     <li><a href="getorganization" title="GetOrganization"><span class="symbol function"></span>GetOrganization</a></li>
     <li><a href="getorganizationteamsyncgroups" title="GetOrganizationTeamSyncGroups"><span class="symbol function"></span>GetOrganizationTeamSyncGroups</a></li>
+    <li><a href="getorganizationteams" title="GetOrganizationTeams"><span class="symbol function"></span>GetOrganizationTeams</a></li>
     <li><a href="getrelease" title="GetRelease"><span class="symbol function"></span>GetRelease</a></li>
     <li><a href="getrepositories" title="GetRepositories"><span class="symbol function"></span>GetRepositories</a></li>
     <li><a href="getrepository" title="GetRepository"><span class="symbol function"></span>GetRepository</a></li>
@@ -71,6 +72,6 @@ A Pulumi package for creating and managing github cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 

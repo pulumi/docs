@@ -37,8 +37,8 @@ class MyStack : Stack
     {
         var example = new Github.UserSshKey("example", new Github.UserSshKeyArgs
         {
-            Key = File.ReadAllText("~/.ssh/id_rsa.pub"),
             Title = "example title",
+            Key = File.ReadAllText("~/.ssh/id_rsa.pub"),
         });
     }
 
@@ -63,8 +63,8 @@ import pulumi
 import pulumi_github as github
 
 example = github.UserSshKey("example",
-    key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"),
-    title="example title")
+    title="example title",
+    key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"))
 ```
 
 
@@ -76,12 +76,12 @@ example = github.UserSshKey("example",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as fs from "fs";
 import * as github from "@pulumi/github";
+import * from "fs";
 
 const example = new github.UserSshKey("example", {
-    key: fs.readFileSync("~/.ssh/id_rsa.pub", "utf-8"),
     title: "example title",
+    key: fs.readFileSync("~/.ssh/id_rsa.pub"),
 });
 ```
 

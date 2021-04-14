@@ -41,18 +41,18 @@ class MyStack : Stack
         });
         var foo = new Github.RepositoryWebhook("foo", new Github.RepositoryWebhookArgs
         {
-            Active = false,
+            Repository = repo.Name,
             Configuration = new Github.Inputs.RepositoryWebhookConfigurationArgs
             {
+                Url = "https://google.de/",
                 ContentType = "form",
                 InsecureSsl = false,
-                Url = "https://google.de/",
             },
+            Active = false,
             Events = 
             {
                 "issues",
             },
-            Repository = repo.Name,
         });
     }
 
@@ -84,16 +84,16 @@ func main() {
 			return err
 		}
 		_, err = github.NewRepositoryWebhook(ctx, "foo", &github.RepositoryWebhookArgs{
-			Active: pulumi.Bool(false),
+			Repository: repo.Name,
 			Configuration: &github.RepositoryWebhookConfigurationArgs{
+				Url:         pulumi.String("https://google.de/"),
 				ContentType: pulumi.String("form"),
 				InsecureSsl: pulumi.Bool(false),
-				Url:         pulumi.String("https://google.de/"),
 			},
+			Active: pulumi.Bool(false),
 			Events: pulumi.StringArray{
 				pulumi.String("issues"),
 			},
-			Repository: repo.Name,
 		})
 		if err != nil {
 			return err
@@ -118,14 +118,14 @@ repo = github.Repository("repo",
     homepage_url="http://example.com/",
     private=False)
 foo = github.RepositoryWebhook("foo",
-    active=False,
+    repository=repo.name,
     configuration=github.RepositoryWebhookConfigurationArgs(
+        url="https://google.de/",
         content_type="form",
         insecure_ssl=False,
-        url="https://google.de/",
     ),
-    events=["issues"],
-    repository=repo.name)
+    active=False,
+    events=["issues"])
 ```
 
 
@@ -142,17 +142,17 @@ import * as github from "@pulumi/github";
 const repo = new github.Repository("repo", {
     description: "Terraform acceptance tests",
     homepageUrl: "http://example.com/",
-    private: false,
+    "private": false,
 });
 const foo = new github.RepositoryWebhook("foo", {
-    active: false,
+    repository: repo.name,
     configuration: {
+        url: "https://google.de/",
         contentType: "form",
         insecureSsl: false,
-        url: "https://google.de/",
     },
+    active: false,
     events: ["issues"],
-    repository: repo.name,
 });
 ```
 
