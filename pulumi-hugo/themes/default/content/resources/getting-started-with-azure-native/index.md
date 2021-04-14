@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Azure: Unlocking Azure with Infrastructure as Software with TypeScript"
+title: "Azure Infrastructure as Software with TypeScript"
 meta_desc: "In this workshop, you’ll use the Azure native provider to build infrastructure using TypeScript SDK and examine some of the features not previously possible."
 
 # A featured webinar will display first in the list.

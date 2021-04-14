@@ -10,6 +10,10 @@ ensure: clean
 lint:
 	./scripts/lint.sh
 
+.PHONY: test
+test:
+	./scripts/test.sh
+
 .PHONY: build
 build:
 	./scripts/build.sh
@@ -23,7 +27,7 @@ serve-all:
 	./scripts/serve.sh all
 
 .PHONY: ci-pull-request
-ci-pull-request: ensure
+ci-pull-request: ensure lint test
 	./scripts/ci/pull-request.sh
 
 .PHONY: ci-pull-request-closed

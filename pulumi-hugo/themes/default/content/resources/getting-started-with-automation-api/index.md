@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Automation API: Build a Self-Service Infrastructure Platform with Python + Flask"
+title: "Build a Self-Service Infrastructure Platform with Python"
 meta_desc: "In this workshop, you’ll build a Python & Flask web application that lets you and your developers deploy applications at the click of a button."
 
 # A featured webinar will display first in the list.

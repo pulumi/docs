@@ -56,6 +56,14 @@ make serve-all
 
 The `serve-all` target runs Hugo, node-sass, and the Stencil development server concurrently, allowing you to make changes to Sass files, Stencil components, or TypeScript/JavaScript source files, and have those changes compiled and reloaded automatically as well.
 
+## Linting and testing
+
+To check your code and your Markdown files for issues before submitting, run:
+
+```
+make lint test
+```
+
 ## Tidying up
 
 To clear away any module caches or build artifacts, run:

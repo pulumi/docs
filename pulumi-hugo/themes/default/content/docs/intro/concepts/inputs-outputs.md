@@ -115,7 +115,7 @@ let connectionString = pulumi.all([sqlServer.name, database.name])
 {{% /choosable %}}
 {{% choosable language python %}}
 
-In python, you can pass in unnamed arguments to `Output.all` to create an Output list, for example: 
+In python, you can pass in unnamed arguments to `Output.all` to create an Output list, for example:
 
 ```python
 from pulumi import Output
