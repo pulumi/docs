@@ -1873,6 +1873,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="datadogtags_csharp">
+<a href="#datadogtags_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfigdatadogtag">List&lt;Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="excludeconsumergroups_csharp">
 <a href="#excludeconsumergroups_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Consumer<wbr>Groups</a>
 </span>
@@ -1916,6 +1924,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datadogtags_go">
+<a href="#datadogtags_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfigdatadogtag">[]Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludeconsumergroups_go">
 <a href="#excludeconsumergroups_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Consumer<wbr>Groups</a>
@@ -1961,6 +1977,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="datadogtags_nodejs">
+<a href="#datadogtags_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfigdatadogtag">Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="excludeconsumergroups_nodejs">
 <a href="#excludeconsumergroups_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Consumer<wbr>Groups</a>
 </span>
@@ -2005,6 +2029,14 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="datadog_tags_python">
+<a href="#datadog_tags_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfigdatadogtag">Sequence[Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="exclude_consumer_groups_python">
 <a href="#exclude_consumer_groups_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>consumer_<wbr>groups</a>
 </span>
@@ -2042,6 +2074,90 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceintegrationdatadoguserconfigdatadogtag">Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

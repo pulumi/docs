@@ -3075,8 +3075,8 @@ creation of indices. Defaults to true
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls the number of shards allowed in the 
-cluster per data node
+    <dd>{{% md %}}Controls the number of shards allowed in the
+cluster per data node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxcontentlength_csharp">
@@ -3340,8 +3340,8 @@ creation of indices. Defaults to true
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls the number of shards allowed in the 
-cluster per data node
+    <dd>{{% md %}}Controls the number of shards allowed in the
+cluster per data node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxcontentlength_go">
@@ -3605,8 +3605,8 @@ creation of indices. Defaults to true
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls the number of shards allowed in the 
-cluster per data node
+    <dd>{{% md %}}Controls the number of shards allowed in the
+cluster per data node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxcontentlength_nodejs">
@@ -3870,8 +3870,8 @@ creation of indices. Defaults to true
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Controls the number of shards allowed in the 
-cluster per data node
+    <dd>{{% md %}}Controls the number of shards allowed in the
+cluster per data node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_max_content_length_python">

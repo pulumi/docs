@@ -3867,14 +3867,24 @@ actions. Minus-one (the default) disables logging autovacuum actions.
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loglineprefix_csharp">
+<a href="#loglineprefix_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Line<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Choose from one of the available log-formats. These can support 
+popular log analyzers like pgbadger, pganalyze etc.
+milliseconds to run, -1 disables
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logmindurationstatement_csharp">
 <a href="#logmindurationstatement_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Min<wbr>Duration<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log statements that take more than this number of 
-milliseconds to run, -1 disables
+    <dd>{{% md %}}Log statements that take more than this number of
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfilesperprocess_csharp">
@@ -4245,14 +4255,24 @@ actions. Minus-one (the default) disables logging autovacuum actions.
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loglineprefix_go">
+<a href="#loglineprefix_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Line<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Choose from one of the available log-formats. These can support 
+popular log analyzers like pgbadger, pganalyze etc.
+milliseconds to run, -1 disables
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logmindurationstatement_go">
 <a href="#logmindurationstatement_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Min<wbr>Duration<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log statements that take more than this number of 
-milliseconds to run, -1 disables
+    <dd>{{% md %}}Log statements that take more than this number of
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfilesperprocess_go">
@@ -4623,14 +4643,24 @@ actions. Minus-one (the default) disables logging autovacuum actions.
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loglineprefix_nodejs">
+<a href="#loglineprefix_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Line<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Choose from one of the available log-formats. These can support 
+popular log analyzers like pgbadger, pganalyze etc.
+milliseconds to run, -1 disables
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logmindurationstatement_nodejs">
 <a href="#logmindurationstatement_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Min<wbr>Duration<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log statements that take more than this number of 
-milliseconds to run, -1 disables
+    <dd>{{% md %}}Log statements that take more than this number of
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfilesperprocess_nodejs">
@@ -5001,14 +5031,24 @@ actions. Minus-one (the default) disables logging autovacuum actions.
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="log_line_prefix_python">
+<a href="#log_line_prefix_python" style="color: inherit; text-decoration: inherit;">log_<wbr>line_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Choose from one of the available log-formats. These can support 
+popular log analyzers like pgbadger, pganalyze etc.
+milliseconds to run, -1 disables
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="log_min_duration_statement_python">
 <a href="#log_min_duration_statement_python" style="color: inherit; text-decoration: inherit;">log_<wbr>min_<wbr>duration_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Log statements that take more than this number of 
-milliseconds to run, -1 disables
+    <dd>{{% md %}}Log statements that take more than this number of
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_files_per_process_python">
