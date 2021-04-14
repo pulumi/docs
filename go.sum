@@ -756,6 +756,10 @@ github.com/pseudomuto/protoc-gen-doc v1.3.2 h1:61vWZuxYa8D7Rn4h+2dgoTNqnluBmJya2
 github.com/pseudomuto/protoc-gen-doc v1.3.2/go.mod h1:y5+P6n3iGrbKG+9O04V5ld71in3v/bX88wUwgt+U8EA=
 github.com/pseudomuto/protokit v0.2.0 h1:hlnBDcy3YEDXH7kc9gV+NLaN0cDzhDvD1s7Y6FZ8RpM=
 github.com/pseudomuto/protokit v0.2.0/go.mod h1:2PdH30hxVHsup8KpBTOXTBeMVhJZVio3Q8ViKSAXT0Q=
+github.com/pulumi/pulumi-hugo-internal/themes/default v0.0.0-20210420004642-8c9b5e954183 h1:o80TnIiWyyDayuWYU3ddMRD0tnuQs7aHYUT0AYTZ7D8=
+github.com/pulumi/pulumi-hugo-internal/themes/default v0.0.0-20210420004642-8c9b5e954183/go.mod h1:zCQIRWMId2fbzUnfb2v5sbgvBSeFElHbvBIGFcUSBUg=
+github.com/pulumi/pulumi-hugo-internal/themes/default v0.0.0-20210420051511-254e60382661 h1:/4oPccgW7xxemVGonzWgLc11c4iKffIcQn7xSXTFanc=
+github.com/pulumi/pulumi-hugo-internal/themes/default v0.0.0-20210420051511-254e60382661/go.mod h1:zCQIRWMId2fbzUnfb2v5sbgvBSeFElHbvBIGFcUSBUg=
 github.com/pulumi/pulumi-hugo/themes/current v0.0.0-20210401204950-a55b707cca76 h1:MAQ87f7bddCK8UuY5rzFEiDWdWKZ1K7L9TaPMYxIhrg=
 github.com/pulumi/pulumi-hugo/themes/current v0.0.0-20210401204950-a55b707cca76/go.mod h1:lv+YMmKqt5Y94U2ZwKselGglAGiVqF1oKKHNOa9U+Qk=
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210416145459-fce03a33b079 h1:Iw/8gROCgXURILNX278tcT/YB7nXX4lbI8mgxp13EEI=
@@ -764,6 +768,8 @@ github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210416164152-4ca68d21a62f 
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210416164152-4ca68d21a62f/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210419225943-3431f32ed55e h1:EfHZHQ+Emivik/q8GNnCkPns8AROw/9QOwzWDVpmq34=
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210419225943-3431f32ed55e/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
+github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210420015507-f4d9a5ebea36 h1:4EGtl93d5IWuuSOygbbH0EiUgK8nmfcmktY0QqoaGUM=
+github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210420015507-f4d9a5ebea36/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
 github.com/quasilyte/go-consistent v0.0.0-20190521200055-c6f3937de18c h1:JoUA0uz9U0FVFq5p4LjEq4C0VgQ0El320s3Ms0V4eww=
 github.com/quasilyte/go-consistent v0.0.0-20190521200055-c6f3937de18c/go.mod h1:5STLWrekHfjyYwxBRVRXNOSewLJ3PWfDJd1VyTS21fI=
 github.com/quasilyte/go-ruleguard v0.1.2-0.20200318202121-b00d7a75d3d8/go.mod h1:CGFX09Ci3pq9QZdj86B+VGIdNj4VyCo2iPOGS9esB/k=
