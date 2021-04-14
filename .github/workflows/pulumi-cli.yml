@@ -82,8 +82,7 @@ jobs:
         working-directory: docs
       - name: Install docfx
         run: |
-          brew install docfx
-          brew link --overwrite mono
+          brew install --ignore-dependencies docfx --force
       - name: run yarn install in nodejs sdk
         run: yarn install && yarn run tsc
         working-directory: pulumi/sdk/nodejs
