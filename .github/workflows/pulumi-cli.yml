@@ -80,20 +80,6 @@ jobs:
           go get -u github.com/pkg/errors
           go get -u github.com/russross/blackfriday/v2
         working-directory: docs
-      - name: Install docfx
-        run: |
-          sudo apt install gnupg ca-certificates
-          sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-          echo "deb https://download.mono-project.com/repo/ubuntu stable-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
-          sudo apt update
-          sudo apt install mono-devel
-          mono --version
-          cd /tmp/docfix
-          wget https://github.com/dotnet/docfx/releases/download/v2.56.7/docfx.zip
-          unzip docfx.zip
-          echo "/tmp/docfix" >> $GITHUB_PATH
-      - name: ensure docfx
-        run: docfx --version
       - name: run yarn install in nodejs sdk
         run: yarn install && yarn run tsc
         working-directory: pulumi/sdk/nodejs
@@ -103,9 +89,6 @@ jobs:
       - name: generate python docs
         run: ./scripts/generate_python_docs.sh "pulumi"
         working-directory: docs
-      - name: generate docfx
-        run: mono docfx.exe
-        working-directory: docs/docfx
       - name: generate markdown
         run: |
           pulumi gen-markdown ./content/docs/reference/cli
