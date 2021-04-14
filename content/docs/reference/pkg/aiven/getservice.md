@@ -9453,6 +9453,22 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="emitcheckpointsenabled_csharp">
+<a href="#emitcheckpointsenabled_csharp" style="color: inherit; text-decoration: inherit;">Emit<wbr>Checkpoints<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emitcheckpointsintervalseconds_csharp">
+<a href="#emitcheckpointsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Emit<wbr>Checkpoints<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="refreshgroupsenabled_csharp">
 <a href="#refreshgroupsenabled_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Groups<wbr>Enabled</a>
 </span>
@@ -9483,11 +9499,43 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_csharp">
+<a href="#syncgroupoffsetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_csharp">
+<a href="#syncgroupoffsetsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="emitcheckpointsenabled_go">
+<a href="#emitcheckpointsenabled_go" style="color: inherit; text-decoration: inherit;">Emit<wbr>Checkpoints<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emitcheckpointsintervalseconds_go">
+<a href="#emitcheckpointsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Emit<wbr>Checkpoints<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshgroupsenabled_go">
 <a href="#refreshgroupsenabled_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Groups<wbr>Enabled</a>
@@ -9519,11 +9567,43 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_go">
+<a href="#syncgroupoffsetsenabled_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_go">
+<a href="#syncgroupoffsetsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="emitcheckpointsenabled_nodejs">
+<a href="#emitcheckpointsenabled_nodejs" style="color: inherit; text-decoration: inherit;">emit<wbr>Checkpoints<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emitcheckpointsintervalseconds_nodejs">
+<a href="#emitcheckpointsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">emit<wbr>Checkpoints<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshgroupsenabled_nodejs">
 <a href="#refreshgroupsenabled_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Groups<wbr>Enabled</a>
@@ -9555,11 +9635,43 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_nodejs">
+<a href="#syncgroupoffsetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_nodejs">
+<a href="#syncgroupoffsetsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="emit_checkpoints_enabled_python">
+<a href="#emit_checkpoints_enabled_python" style="color: inherit; text-decoration: inherit;">emit_<wbr>checkpoints_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emit_checkpoints_interval_seconds_python">
+<a href="#emit_checkpoints_interval_seconds_python" style="color: inherit; text-decoration: inherit;">emit_<wbr>checkpoints_<wbr>interval_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_groups_enabled_python">
 <a href="#refresh_groups_enabled_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>groups_<wbr>enabled</a>
@@ -9587,6 +9699,22 @@ The following output properties are available:
             title="Optional">
         <span id="refresh_topics_interval_seconds_python">
 <a href="#refresh_topics_interval_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>topics_<wbr>interval_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_group_offsets_enabled_python">
+<a href="#sync_group_offsets_enabled_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_group_offsets_interval_seconds_python">
+<a href="#sync_group_offsets_interval_seconds_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>interval_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -15545,6 +15673,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loglineprefix_csharp">
+<a href="#loglineprefix_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Line<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logmindurationstatement_csharp">
 <a href="#logmindurationstatement_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Min<wbr>Duration<wbr>Statement</a>
 </span>
@@ -15657,16 +15793,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pgpartmanbgwdotinterval_csharp">
-<a href="#pgpartmanbgwdotinterval_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Interval</a>
+        <span id="pgpartmanbgwinterval_csharp">
+<a href="#pgpartmanbgwinterval_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pgpartmanbgwdotrole_csharp">
-<a href="#pgpartmanbgwdotrole_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Role</a>
+        <span id="pgpartmanbgwrole_csharp">
+<a href="#pgpartmanbgwrole_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15853,6 +15989,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loglineprefix_go">
+<a href="#loglineprefix_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Line<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logmindurationstatement_go">
 <a href="#logmindurationstatement_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Min<wbr>Duration<wbr>Statement</a>
 </span>
@@ -15965,16 +16109,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pgpartmanbgwdotinterval_go">
-<a href="#pgpartmanbgwdotinterval_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Interval</a>
+        <span id="pgpartmanbgwinterval_go">
+<a href="#pgpartmanbgwinterval_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pgpartmanbgwdotrole_go">
-<a href="#pgpartmanbgwdotrole_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Role</a>
+        <span id="pgpartmanbgwrole_go">
+<a href="#pgpartmanbgwrole_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -16161,6 +16305,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loglineprefix_nodejs">
+<a href="#loglineprefix_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Line<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logmindurationstatement_nodejs">
 <a href="#logmindurationstatement_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Min<wbr>Duration<wbr>Statement</a>
 </span>
@@ -16273,16 +16425,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pgpartmanbgwdotinterval_nodejs">
-<a href="#pgpartmanbgwdotinterval_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Interval</a>
+        <span id="pgpartmanbgwinterval_nodejs">
+<a href="#pgpartmanbgwinterval_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Partman<wbr>Bgw<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pgpartmanbgwdotrole_nodejs">
-<a href="#pgpartmanbgwdotrole_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Role</a>
+        <span id="pgpartmanbgwrole_nodejs">
+<a href="#pgpartmanbgwrole_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Partman<wbr>Bgw<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -16469,6 +16621,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="log_line_prefix_python">
+<a href="#log_line_prefix_python" style="color: inherit; text-decoration: inherit;">log_<wbr>line_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="log_min_duration_statement_python">
 <a href="#log_min_duration_statement_python" style="color: inherit; text-decoration: inherit;">log_<wbr>min_<wbr>duration_<wbr>statement</a>
 </span>
@@ -16581,16 +16741,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pg_partman_bgw_dot_interval_python">
-<a href="#pg_partman_bgw_dot_interval_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>partman_<wbr>bgw_<wbr>dot_<wbr>interval</a>
+        <span id="pg_partman_bgw_interval_python">
+<a href="#pg_partman_bgw_interval_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>partman_<wbr>bgw_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pg_partman_bgw_dot_role_python">
-<a href="#pg_partman_bgw_dot_role_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>partman_<wbr>bgw_<wbr>dot_<wbr>role</a>
+        <span id="pg_partman_bgw_role_python">
+<a href="#pg_partman_bgw_role_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>partman_<wbr>bgw_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

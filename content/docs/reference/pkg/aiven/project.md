@@ -195,7 +195,8 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available credits
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingaddress_csharp">
@@ -294,7 +295,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default cloud for new services
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technicalemails_csharp">
@@ -303,7 +306,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Technical contact emails of the project
+    <dd>{{% md %}}defines the email addresses that will receive alerts about 
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vatid_csharp">
@@ -346,7 +351,8 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available credits
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingaddress_go">
@@ -445,7 +451,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default cloud for new services
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technicalemails_go">
@@ -454,7 +462,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Technical contact emails of the project
+    <dd>{{% md %}}defines the email addresses that will receive alerts about 
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vatid_go">
@@ -497,7 +507,8 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available credits
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingaddress_nodejs">
@@ -596,7 +607,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default cloud for new services
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technicalemails_nodejs">
@@ -605,7 +618,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Technical contact emails of the project
+    <dd>{{% md %}}defines the email addresses that will receive alerts about 
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vatid_nodejs">
@@ -648,7 +663,8 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Available credits
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billing_address_python">
@@ -747,7 +763,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Default cloud for new services
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technical_emails_python">
@@ -756,7 +774,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Technical contact emails of the project
+    <dd>{{% md %}}defines the email addresses that will receive alerts about 
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vat_id_python">
@@ -794,7 +814,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Estimated balance
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this 
+project in the current billing period.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -811,7 +832,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Payment method
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -833,7 +855,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Estimated balance
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this 
+project in the current billing period.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -850,7 +873,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Payment method
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -872,7 +896,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Estimated balance
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this 
+project in the current billing period.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -889,7 +914,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Payment method
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -911,7 +937,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Estimated balance
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this 
+project in the current billing period.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -928,7 +955,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Payment method
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1074,7 +1102,8 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available credits
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingaddress_csharp">
@@ -1182,7 +1211,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default cloud for new services
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimatedbalance_csharp">
@@ -1191,7 +1222,8 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Estimated balance
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this 
+project in the current billing period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paymentmethod_csharp">
@@ -1200,7 +1232,8 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Payment method
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectname_csharp">
@@ -1220,7 +1253,9 @@ project, including all sub-resources.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Technical contact emails of the project
+    <dd>{{% md %}}defines the email addresses that will receive alerts about 
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vatid_csharp">
@@ -1252,7 +1287,8 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available credits
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingaddress_go">
@@ -1360,7 +1396,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default cloud for new services
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimatedbalance_go">
@@ -1369,7 +1407,8 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Estimated balance
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this 
+project in the current billing period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paymentmethod_go">
@@ -1378,7 +1417,8 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Payment method
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1398,7 +1438,9 @@ project, including all sub-resources.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Technical contact emails of the project
+    <dd>{{% md %}}defines the email addresses that will receive alerts about 
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vatid_go">
@@ -1430,7 +1472,8 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available credits
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingaddress_nodejs">
@@ -1538,7 +1581,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default cloud for new services
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimatedbalance_nodejs">
@@ -1547,7 +1592,8 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Estimated balance
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this 
+project in the current billing period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paymentmethod_nodejs">
@@ -1556,7 +1602,8 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Payment method
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -1576,7 +1623,9 @@ project, including all sub-resources.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Technical contact emails of the project
+    <dd>{{% md %}}defines the email addresses that will receive alerts about 
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vatid_nodejs">
@@ -1608,7 +1657,8 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Available credits
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billing_address_python">
@@ -1716,7 +1766,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Default cloud for new services
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimated_balance_python">
@@ -1725,7 +1777,8 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Estimated balance
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this 
+project in the current billing period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payment_method_python">
@@ -1734,7 +1787,8 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Payment method
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -1754,7 +1808,9 @@ project, including all sub-resources.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Technical contact emails of the project
+    <dd>{{% md %}}defines the email addresses that will receive alerts about 
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vat_id_python">

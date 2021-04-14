@@ -2128,6 +2128,25 @@ deletion is done.
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="emitcheckpointsenabled_csharp">
+<a href="#emitcheckpointsenabled_csharp" style="color: inherit; text-decoration: inherit;">Emit<wbr>Checkpoints<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether to periodically write the translated offsets
+of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
+as long as no active consumers in that group are connected to the target cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emitcheckpointsintervalseconds_csharp">
+<a href="#emitcheckpointsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Emit<wbr>Checkpoints<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="refreshgroupsenabled_csharp">
 <a href="#refreshgroupsenabled_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Groups<wbr>Enabled</a>
 </span>
@@ -2164,11 +2183,48 @@ partitions. Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Frequency of topic and partitions refresh in 
 seconds. Defaults to 600 seconds (10 minutes).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_csharp">
+<a href="#syncgroupoffsetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_csharp">
+<a href="#syncgroupoffsetsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Frequency at which consumer group offsets
+are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="emitcheckpointsenabled_go">
+<a href="#emitcheckpointsenabled_go" style="color: inherit; text-decoration: inherit;">Emit<wbr>Checkpoints<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether to periodically write the translated offsets
+of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
+as long as no active consumers in that group are connected to the target cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emitcheckpointsintervalseconds_go">
+<a href="#emitcheckpointsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Emit<wbr>Checkpoints<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshgroupsenabled_go">
 <a href="#refreshgroupsenabled_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Groups<wbr>Enabled</a>
@@ -2206,11 +2262,48 @@ partitions. Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Frequency of topic and partitions refresh in 
 seconds. Defaults to 600 seconds (10 minutes).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_go">
+<a href="#syncgroupoffsetsenabled_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_go">
+<a href="#syncgroupoffsetsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Frequency at which consumer group offsets
+are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="emitcheckpointsenabled_nodejs">
+<a href="#emitcheckpointsenabled_nodejs" style="color: inherit; text-decoration: inherit;">emit<wbr>Checkpoints<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether to periodically write the translated offsets
+of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
+as long as no active consumers in that group are connected to the target cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emitcheckpointsintervalseconds_nodejs">
+<a href="#emitcheckpointsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">emit<wbr>Checkpoints<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshgroupsenabled_nodejs">
 <a href="#refreshgroupsenabled_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Groups<wbr>Enabled</a>
@@ -2248,11 +2341,48 @@ partitions. Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Frequency of topic and partitions refresh in 
 seconds. Defaults to 600 seconds (10 minutes).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsenabled_nodejs">
+<a href="#syncgroupoffsetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncgroupoffsetsintervalseconds_nodejs">
+<a href="#syncgroupoffsetsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Frequency at which consumer group offsets
+are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="emit_checkpoints_enabled_python">
+<a href="#emit_checkpoints_enabled_python" style="color: inherit; text-decoration: inherit;">emit_<wbr>checkpoints_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Whether to periodically write the translated offsets
+of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
+as long as no active consumers in that group are connected to the target cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emit_checkpoints_interval_seconds_python">
+<a href="#emit_checkpoints_interval_seconds_python" style="color: inherit; text-decoration: inherit;">emit_<wbr>checkpoints_<wbr>interval_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_groups_enabled_python">
 <a href="#refresh_groups_enabled_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>groups_<wbr>enabled</a>
@@ -2290,6 +2420,24 @@ partitions. Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Frequency of topic and partitions refresh in 
 seconds. Defaults to 600 seconds (10 minutes).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_group_offsets_enabled_python">
+<a href="#sync_group_offsets_enabled_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_group_offsets_interval_seconds_python">
+<a href="#sync_group_offsets_interval_seconds_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>interval_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Frequency at which consumer group offsets
+are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

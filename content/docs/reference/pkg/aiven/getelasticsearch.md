@@ -2709,7 +2709,7 @@ creation of indices. Defaults to true
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls the number of shards allowed in the 
+    <dd>{{% md %}}Controls the number of shards allowed in the
 cluster per data node
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2974,7 +2974,7 @@ creation of indices. Defaults to true
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls the number of shards allowed in the 
+    <dd>{{% md %}}Controls the number of shards allowed in the
 cluster per data node
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3239,7 +3239,7 @@ creation of indices. Defaults to true
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls the number of shards allowed in the 
+    <dd>{{% md %}}Controls the number of shards allowed in the
 cluster per data node
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3504,7 +3504,7 @@ creation of indices. Defaults to true
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Controls the number of shards allowed in the 
+    <dd>{{% md %}}Controls the number of shards allowed in the
 cluster per data node
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

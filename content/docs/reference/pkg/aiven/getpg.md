@@ -3682,6 +3682,16 @@ actions. Minus-one (the default) disables logging autovacuum actions.
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loglineprefix_csharp">
+<a href="#loglineprefix_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Line<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Choose from one of the available log-formats. These can support
+popular log analyzers like pgbadger, pganalyze etc.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logmindurationstatement_csharp">
 <a href="#logmindurationstatement_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Min<wbr>Duration<wbr>Statement</a>
 </span>
@@ -4058,6 +4068,16 @@ actions. Minus-one (the default) disables logging autovacuum actions.
     </dt>
     <dd>{{% md %}}Controls the amount of detail written in the server log for 
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loglineprefix_go">
+<a href="#loglineprefix_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Line<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Choose from one of the available log-formats. These can support
+popular log analyzers like pgbadger, pganalyze etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmindurationstatement_go">
@@ -4438,6 +4458,16 @@ actions. Minus-one (the default) disables logging autovacuum actions.
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loglineprefix_nodejs">
+<a href="#loglineprefix_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Line<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Choose from one of the available log-formats. These can support
+popular log analyzers like pgbadger, pganalyze etc.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logmindurationstatement_nodejs">
 <a href="#logmindurationstatement_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Min<wbr>Duration<wbr>Statement</a>
 </span>
@@ -4814,6 +4844,16 @@ actions. Minus-one (the default) disables logging autovacuum actions.
     </dt>
     <dd>{{% md %}}Controls the amount of detail written in the server log for 
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="log_line_prefix_python">
+<a href="#log_line_prefix_python" style="color: inherit; text-decoration: inherit;">log_<wbr>line_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Choose from one of the available log-formats. These can support
+popular log analyzers like pgbadger, pganalyze etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_min_duration_statement_python">

@@ -2128,6 +2128,17 @@ effect only when a new service is being created.
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="rules_csharp">
+<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrules">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping rules allow more granular use of aggregation, not simply sending
+everything to a namespace. If mapping rules exist that target a namespace, only data matching mapping
+rules will be sent to it and nothing else.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="servicetoforkfrom_csharp">
 <a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -2232,6 +2243,17 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#getm3dbm3dbuserconfigpublicaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rules_go">
+<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrules">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping rules allow more granular use of aggregation, not simply sending
+everything to a namespace. If mapping rules exist that target a namespace, only data matching mapping
+rules will be sent to it and nothing else.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_go">
@@ -2340,6 +2362,17 @@ effect only when a new service is being created.
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="rules_nodejs">
+<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrules">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping rules allow more granular use of aggregation, not simply sending
+everything to a namespace. If mapping rules exist that target a namespace, only data matching mapping
+rules will be sent to it and nothing else.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="servicetoforkfrom_nodejs">
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -2444,6 +2477,17 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#getm3dbm3dbuserconfigpublicaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rules_python">
+<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrules">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping rules allow more granular use of aggregation, not simply sending
+everything to a namespace. If mapping rules exist that target a namespace, only data matching mapping
+rules will be sent to it and nothing else.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_to_fork_from_python">
@@ -3258,6 +3302,358 @@ for service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to m3coordinator from the public internet 
 for service nodes that are in a project VPC or another type of private network.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getm3dbm3dbuserconfigrules">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mappings_csharp">
+<a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmapping">List&lt;Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mappings_go">
+<a href="#mappings_go" style="color: inherit; text-decoration: inherit;">Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmapping">[]Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mappings_nodejs">
+<a href="#mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmapping">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mappings_python">
+<a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmapping">Sequence[Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getm3dbm3dbuserconfigrulesmapping">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="aggregations_csharp">
+<a href="#aggregations_csharp" style="color: inherit; text-decoration: inherit;">Aggregations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of aggregations to be applied
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="drop_csharp">
+<a href="#drop_csharp" style="color: inherit; text-decoration: inherit;">Drop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Drop the matching metric; Only store the derived metric (as specified in the roll-up rules), if any.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metrics to be used with this particular rule; Matching metric names with wildcards (using
+__name__:wildcard) or matching tags and their (optionally wildcarded) values. For value, !
+can be used at start of value for negation, and multiple filters can be supplied using space as separator.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the namespace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmappingtag">List&lt;Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of tags to be appended to matching metrics.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="aggregations_go">
+<a href="#aggregations_go" style="color: inherit; text-decoration: inherit;">Aggregations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of aggregations to be applied
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="drop_go">
+<a href="#drop_go" style="color: inherit; text-decoration: inherit;">Drop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Drop the matching metric; Only store the derived metric (as specified in the roll-up rules), if any.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metrics to be used with this particular rule; Matching metric names with wildcards (using
+__name__:wildcard) or matching tags and their (optionally wildcarded) values. For value, !
+can be used at start of value for negation, and multiple filters can be supplied using space as separator.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the namespace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmappingtag">[]Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}List of tags to be appended to matching metrics.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="aggregations_nodejs">
+<a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of aggregations to be applied
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="drop_nodejs">
+<a href="#drop_nodejs" style="color: inherit; text-decoration: inherit;">drop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Drop the matching metric; Only store the derived metric (as specified in the roll-up rules), if any.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metrics to be used with this particular rule; Matching metric names with wildcards (using
+__name__:wildcard) or matching tags and their (optionally wildcarded) values. For value, !
+can be used at start of value for negation, and multiple filters can be supplied using space as separator.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the namespace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmappingtag">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of tags to be appended to matching metrics.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="aggregations_python">
+<a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of aggregations to be applied
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="drop_python">
+<a href="#drop_python" style="color: inherit; text-decoration: inherit;">drop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Drop the matching metric; Only store the derived metric (as specified in the roll-up rules), if any.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The metrics to be used with this particular rule; Matching metric names with wildcards (using
+__name__:wildcard) or matching tags and their (optionally wildcarded) values. For value, !
+can be used at start of value for negation, and multiple filters can be supplied using space as separator.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the namespace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmappingtag">Sequence[Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of tags to be appended to matching metrics.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getm3dbm3dbuserconfigrulesmappingtag">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the namespace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value of the tag.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the namespace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value of the tag.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the namespace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value of the tag.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the namespace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Value of the tag.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -176,7 +176,9 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingaddress_csharp">
 <a href="#billingaddress_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Address</a>
@@ -276,7 +278,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimatedbalance_csharp">
 <a href="#estimatedbalance_csharp" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Balance</a>
@@ -284,7 +289,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this
+project in the current billing period.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentmethod_csharp">
 <a href="#paymentmethod_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Method</a>
@@ -292,7 +299,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technicalemails_csharp">
 <a href="#technicalemails_csharp" style="color: inherit; text-decoration: inherit;">Technical<wbr>Emails</a>
@@ -300,7 +309,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}defines the email addresses that will receive alerts about
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vatid_csharp">
 <a href="#vatid_csharp" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
@@ -341,7 +353,9 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingaddress_go">
 <a href="#billingaddress_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Address</a>
@@ -441,7 +455,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimatedbalance_go">
 <a href="#estimatedbalance_go" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Balance</a>
@@ -449,7 +466,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this
+project in the current billing period.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentmethod_go">
 <a href="#paymentmethod_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Method</a>
@@ -457,7 +476,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technicalemails_go">
 <a href="#technicalemails_go" style="color: inherit; text-decoration: inherit;">Technical<wbr>Emails</a>
@@ -465,7 +486,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}defines the email addresses that will receive alerts about
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vatid_go">
 <a href="#vatid_go" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
@@ -506,7 +530,9 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingaddress_nodejs">
 <a href="#billingaddress_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Address</a>
@@ -606,7 +632,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimatedbalance_nodejs">
 <a href="#estimatedbalance_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Balance</a>
@@ -614,7 +643,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this
+project in the current billing period.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentmethod_nodejs">
 <a href="#paymentmethod_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Method</a>
@@ -622,7 +653,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technicalemails_nodejs">
 <a href="#technicalemails_nodejs" style="color: inherit; text-decoration: inherit;">technical<wbr>Emails</a>
@@ -630,7 +663,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}defines the email addresses that will receive alerts about
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vatid_nodejs">
 <a href="#vatid_nodejs" style="color: inherit; text-decoration: inherit;">vat<wbr>Id</a>
@@ -671,7 +707,9 @@ using account ID.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billing_address_python">
 <a href="#billing_address_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>address</a>
@@ -771,7 +809,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimated_balance_python">
 <a href="#estimated_balance_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>balance</a>
@@ -779,7 +820,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this
+project in the current billing period.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payment_method_python">
 <a href="#payment_method_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>method</a>
@@ -787,7 +830,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technical_emails_python">
 <a href="#technical_emails_python" style="color: inherit; text-decoration: inherit;">technical_<wbr>emails</a>
@@ -795,7 +840,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}defines the email addresses that will receive alerts about
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vat_id_python">
 <a href="#vat_id_python" style="color: inherit; text-decoration: inherit;">vat_<wbr>id</a>
@@ -824,7 +872,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cacert_csharp">
 <a href="#cacert_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -851,7 +901,9 @@ Kafka. This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this
+project in the current billing period.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -868,7 +920,9 @@ Kafka. This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -967,7 +1021,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="technicalemails_csharp">
 <a href="#technicalemails_csharp" style="color: inherit; text-decoration: inherit;">Technical<wbr>Emails</a>
@@ -975,7 +1032,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}defines the email addresses that will receive alerts about
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vatid_csharp">
 <a href="#vatid_csharp" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
@@ -995,7 +1055,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cacert_go">
 <a href="#cacert_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -1022,7 +1084,9 @@ Kafka. This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this
+project in the current billing period.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1039,7 +1103,9 @@ Kafka. This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1138,7 +1204,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="technicalemails_go">
 <a href="#technicalemails_go" style="color: inherit; text-decoration: inherit;">Technical<wbr>Emails</a>
@@ -1146,7 +1215,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}defines the email addresses that will receive alerts about
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vatid_go">
 <a href="#vatid_go" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
@@ -1166,7 +1238,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cacert_nodejs">
 <a href="#cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
@@ -1193,7 +1267,9 @@ Kafka. This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this
+project in the current billing period.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1210,7 +1286,9 @@ Kafka. This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1309,7 +1387,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="technicalemails_nodejs">
 <a href="#technicalemails_nodejs" style="color: inherit; text-decoration: inherit;">technical<wbr>Emails</a>
@@ -1317,7 +1398,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}defines the email addresses that will receive alerts about
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vatid_nodejs">
 <a href="#vatid_nodejs" style="color: inherit; text-decoration: inherit;">vat<wbr>Id</a>
@@ -1337,7 +1421,9 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the amount of platform credits available to
+the project. This could be your free trial or other promotional credits.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ca_cert_python">
 <a href="#ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
@@ -1364,7 +1450,9 @@ Kafka. This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the current accumulated bill for this
+project in the current billing period.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1381,7 +1469,9 @@ Kafka. This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
+this project, e.g. "card".
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1480,7 +1570,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}defines the default cloud provider and region where services are
+hosted. This can be changed freely after the project is created. This will not affect existing
+services.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="technical_emails_python">
 <a href="#technical_emails_python" style="color: inherit; text-decoration: inherit;">technical_<wbr>emails</a>
@@ -1488,7 +1581,10 @@ effect when the project is created.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}defines the email addresses that will receive alerts about
+upcoming maintenance updates or warnings about service instability. It is a good practice to keep
+this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vat_id_python">
 <a href="#vat_id_python" style="color: inherit; text-decoration: inherit;">vat_<wbr>id</a>
