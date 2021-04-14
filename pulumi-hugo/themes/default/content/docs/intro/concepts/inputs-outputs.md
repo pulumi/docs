@@ -115,11 +115,22 @@ let connectionString = pulumi.all([sqlServer.name, database.name])
 {{% /choosable %}}
 {{% choosable language python %}}
 
+In python, you can pass in unnamed arguments to `Output.all` to create an Output list, for example: 
+
 ```python
 from pulumi import Output
 # ...
 connection_string = Output.all(sql_server.name, database.name) \
     .apply(lambda args: f"Server=tcp:{args[0]}.database.windows.net;initial catalog={args[1]}...")
+```
+
+Or, you can pass in named (keyword) arguments to `Output.all` to create an Output dictionary, for example:
+
+```python
+from pulumi import Output
+# ...
+connection_string = Output.all(server=sql_server.name, db=database.name) \
+    .apply(lambda args: f"Server=tcp:{args['server']}.database.windows.net;initial catalog={args['db']}...")
 ```
 
 {{% /choosable %}}
