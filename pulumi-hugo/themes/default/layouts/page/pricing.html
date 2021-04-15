@@ -61,9 +61,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mt-6 lg:mt-16 lg:pt-3">
-                        <a href="{{ relref . "/docs/get-started" }}" class="btn btn-purple px-6 py-3 inline-block lg:hidden">GET STARTED</a>
-                        <a href="{{ relref . "/docs/get-started" }}" class="btn btn-purple-transparent px-6 py-3 hidden lg:inline-block">GET STARTED</a>
+                    <div class="lg:hidden mt-6">
+                        <a href="{{ relref . "/docs/get-started" }}" class="btn btn-purple px-6 py-3">GET STARTED</a>
+                    </div>
+                    <div class="w-full text-center hidden lg:inline-block lg:mt-10 lg:pt-2">
+                        <a href="{{ relref . "/docs/get-started" }}" class="btn btn-purple-transparent px-6 py-3">GET STARTED</a>
                     </div>
                 </div>
             </div>
@@ -95,6 +97,12 @@
                                     <span>
                                         <i class="fa fa-check text-green-500 mr-2"></i>
                                         <span>1 organization</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <i class="fa fa-check text-green-500 mr-2"></i>
+                                        <span>CI/CD Assistant</span>
                                     </span>
                                 </li>
                                 <li>
@@ -140,12 +148,6 @@
                                     <span>
                                         <i class="fa fa-check text-green-500 mr-2"></i>
                                         <span>APIs and webhooks</span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class="fa fa-check text-green-500 mr-2"></i>
-                                        <span>CI/CD Assistant</span>
                                     </span>
                                 </li>
                                 <li>
@@ -508,7 +510,7 @@
                     <span><a class="text-blue-500 underline" href="{{ relref . "/docs/intro/console/ci-cd-integration-assistant" }}">CI/CD Assistant</a></span>
                 </div>
                 <div class="compare-plans-table-row-item">
-                    <span></span>
+                    <span><i class="fa fa-check text-green-500 mr-2"></i></span>
                 </div>
                 <div class="compare-plans-table-row-item">
                     <span><i class="fa fa-check text-green-500 mr-2"></i></span>
